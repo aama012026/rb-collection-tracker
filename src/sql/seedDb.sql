@@ -20,13 +20,13 @@ ON DUPLICATE KEY UPDATE
 	name = VALUE(name)
 ;
 
-INSERT INTO domains (sort_order, name) VALUES
-	(1, 'fury'),
-	(2, 'calm'),
-	(3, 'mind'),
-	(4, 'body'),
-	(5, 'chaos'),
-	(6, 'order')
+INSERT INTO domains (sort_order, name, shorthand) VALUES
+	(1, 'fury', '[R]'),
+	(2, 'calm', '[G]'),
+	(3, 'mind', '[B]'),
+	(4, 'body', '[O]'),
+	(5, 'chaos', '[P]'),
+	(6, 'order', '[Y]')
 ON DUPLICATE KEY UPDATE
 	sort_order = VALUE(sort_order),
 	name = VALUE(name)

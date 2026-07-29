@@ -25,7 +25,8 @@ CREATE TABLE IF NOT EXISTS rarities (
 CREATE TABLE IF NOT EXISTS domains (
 	id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 	sort_order TINYINT UNSIGNED UNIQUE,
-	name VARCHAR(32) UNIQUE NOT NULL
+	name VARCHAR(32) UNIQUE NOT NULL,
+	shorthand varchar(8) UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS sets (
@@ -90,7 +91,7 @@ CREATE TABLE IF NOT EXISTS keywords (
 	formatting VARCHAR(32) UNIQUE,
 	color VARCHAR(8),
 	rules_description VARCHAR(255),
-	card_description VARCHAR(255),
+	card_description VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS card_keywords (
