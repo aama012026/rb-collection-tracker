@@ -14,7 +14,7 @@ export default [
 				stats: {energy: 5, might: 3, power: null},
 				tags: ["Yordle", "Noxus"],
 				keywords: [],
-				description: "I enter ready.:rb_exhaust:: Give a unit +3 :rb_might: this turn.",
+				description: "I enter ready.[E]: Give a unit +3 [M] this turn.",
 				flavorText: "Don't you dare suggest it's a hairpiece.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/db48f8c1da0e4f9804ae94398f0864859db0002a-744x1039.png?accountingTag=RB",
@@ -32,7 +32,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Bilgewater"],
 				keywords: [],
-				description: "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)[Assault 2] (+2 :rb_might: while I'm an attacker.)",
+				description: "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)[Assault 2] (+2 [M] while I'm an attacker.)",
 				flavorText: "Ironic, isn't it? Water all around us, but your boat's still gonna burn.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5db9d66fc22887e8686a13ffdfe480106cbd3b35-744x1039.png?accountingTag=RB",
@@ -50,7 +50,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Bilgewater"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When you play me to a battlefield, deal 2 to an enemy unit here.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When you play me to a battlefield, deal 2 to an enemy unit here.",
 				flavorText: "As fickle as the sea, and almost as destructive.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fb2e82cca7aa93c857ed1fe54de7344016779520-744x1039.png?accountingTag=RB",
@@ -68,7 +68,7 @@ export default [
 				stats: {energy: 3, might: 1, power: null},
 				tags: ["Shadow Isles"],
 				keywords: [],
-				description: "If you've spent :rb_energy_4: or more to play a spell this turn, I have +4 :rb_might:.",
+				description: "If you've spent [4] or more to play a spell this turn, I have +4 [M].",
 				flavorText: "Power begets power.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ad993e451437950e56935a7ecff44fea09e522b2-744x1039.png?accountingTag=RB",
@@ -86,7 +86,7 @@ export default [
 				stats: {energy: 7, might: 7, power: 1},
 				tags: ["Freljord"],
 				keywords: [],
-				description: "[Ganking] (I can move from battlefield to battlefield.)When you play a spell, if you spent :rb_energy_4: or more, ready me.",
+				description: "[Ganking] (I can move from battlefield to battlefield.)When you play a spell, if you spent [4] or more, ready me.",
 				flavorText: "Nothing stops us! Not cold, not death!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8e251eed411d614de504480181b357df3f78b133-744x1039.png?accountingTag=RB",
@@ -104,7 +104,7 @@ export default [
 				stats: {energy: 3, might: 1, power: null},
 				tags: ["Bilgewater"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)[Assault 4] (+4 :rb_might: while I'm an attacker.)",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)[Assault 4] (+4 [M] while I'm an attacker.)",
 				flavorText: "Don't worry, it's only a little one.\"\r\n \r\n- Common last words",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f2aa213fe1e54d0d6f1507c7ed8829c8ba2bc610-744x1039.png?accountingTag=RB",
@@ -140,7 +140,7 @@ export default [
 				stats: {energy: 6, might: 6, power: null},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "[Assault] (+1 :rb_might: while I'm an attacker.)If a unit died this turn, I enter ready.",
+				description: "[Assault] (+1 [M] while I'm an attacker.)If a unit died this turn, I enter ready.",
 				flavorText: "A pairofant never forgives.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/47ac3971efe67f7910771709b8bb9a5df5b63952-744x1039.png?accountingTag=RB",
@@ -158,7 +158,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Ready a unit.",
+				description: "[Repeat] [2] (You may pay the additional cost to repeat this spell's effect.)Ready a unit.",
 				flavorText: "Art is not always appreciated in its critic's lifetime.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4a636fcd682b32b41a4886c7383e781414139adb-744x1039.png?accountingTag=RB",
@@ -176,7 +176,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Give a unit [Assault 2] and [Ganking] this turn. (+2 :rb_might: while it's an attacker. It can move from battlefield to battlefield.)",
+				description: "[Action] (Play on your turn or in showdowns.)Give a unit [Assault 2] and [Ganking] this turn. (+2 [M] while it's an attacker. It can move from battlefield to battlefield.)",
 				flavorText: "If you hit a wall, hit it hard!\"\r\n \r\n- Vi",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8046c9f133be83268d7dc9788abea58f461914d8-744x1039.png?accountingTag=RB",
@@ -212,7 +212,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Noxus"],
 				keywords: [],
-				description: "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)When you play me, give your other units here [Assault] this turn. (+1 :rb_might: while they're attackers.)",
+				description: "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)When you play me, give your other units here [Assault] this turn. (+1 [M] while they're attackers.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f564001228383a27372c0ddc4d8c0ed4e4843dc7-744x1039.png?accountingTag=RB",
@@ -230,7 +230,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Reaction] (Play any time, even before spells and abilities resolve.)Choose a unit. Double all damage that would be dealt to it this turn.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Reaction] (Play any time, even before spells and abilities resolve.)Choose a unit. Double all damage that would be dealt to it this turn.",
 				flavorText: "Art shall blossom from your fear.\"\r\n - Jhin",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9490f8c80da1bf4467e14c39b66ae4262e5f7f7b-744x1039.png?accountingTag=RB",
@@ -284,7 +284,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Dog", "Noxus"],
 				keywords: [],
-				description: "[Hunt 2] (When I conquer or hold, gain 2 XP.)[Level 3][>] I have +1 :rb_might: and enter ready. (While you have 3+ XP, get the effect.)",
+				description: "[Hunt 2] (When I conquer or hold, gain 2 XP.)[Level 3][>] I have +1 [M] and enter ready. (While you have 3+ XP, get the effect.)",
 				flavorText: "Sit. Stay. Burn.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f69940824f8ce62a479df28988dcbdf6ea6d3960-744x1039.png?accountingTag=RB",
@@ -302,7 +302,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Repeat] — Discard 1 (You may pay the additional cost to repeat this spell's effect.)Give a unit [Assault 4] this turn. (+4 :rb_might: while it's an attacker.)",
+				description: "[Repeat] — Discard 1 (You may pay the additional cost to repeat this spell's effect.)Give a unit [Assault 4] this turn. (+4 [M] while it's an attacker.)",
 				flavorText: "Nothing like a good roar to work up an appetite for violence.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5e14c09db2f064e5f6986f500a04335d73d459dd-744x1039.png?accountingTag=RB",
@@ -320,7 +320,7 @@ export default [
 				stats: {energy: 6, might: 6, power: null},
 				tags: ["Noxus"],
 				keywords: [],
-				description: "When I conquer, if you assigned 3 or more excess damage, play two Gold gear tokens exhausted. (They have &quot;[Reaction][>] Kill this, :rb_exhaust:: [Add] [A].&quot;)",
+				description: "When I conquer, if you assigned 3 or more excess damage, play two Gold gear tokens exhausted. (They have &quot;[Reaction][>] Kill this, [E]: [Add] [A].&quot;)",
 				flavorText: "If you love your job, it's hardly work.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/38b59ae384ef6df8c94d5c51418101b2630b43a7-744x1039.png?accountingTag=RB",
@@ -338,7 +338,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_energy_1::rb_rune_fury: (:rb_energy_1::rb_rune_fury:: Attach this to a unit you control.)",
+				description: "[Equip] [1][R] ([1][R]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a6425462180dc6bc3396397cd491c0abae58f616-744x1039.png?accountingTag=RB",
@@ -392,7 +392,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Jhin", "Ionia"],
 				keywords: [],
-				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)[Ganking] (I can move from battlefield to battlefield.)When I move, [Add] :rb_energy_1:[A]. (Abilities that add resources can't be reacted to.)",
+				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)[Ganking] (I can move from battlefield to battlefield.)When I move, [Add] [1][A]. (Abilities that add resources can't be reacted to.)",
 				flavorText: "And now, the curtain rises.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8da724a842cf61cb24c3c02dd99adc93a9222e06-744x1039.png?accountingTag=RB",
@@ -410,7 +410,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Jhin", "Ionia"],
 				keywords: [],
-				description: "[Deflect][Ganking]When I move, [Add] :rb_energy_1:[A].",
+				description: "[Deflect][Ganking]When I move, [Add] [1][A].",
 				flavorText: "And now, the curtain rises.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0e67164270e12b8d91905e977a314c7248a343e9-744x1039.png?accountingTag=RB",
@@ -464,7 +464,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Cat", "Rengar", "Ixtal"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)[Assault 2] (+2 :rb_might: while I'm an attacker.)[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)[Ganking] (I can move from battlefield to battlefield.)",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)[Assault 2] (+2 [M] while I'm an attacker.)[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)[Ganking] (I can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/80c7d1c62301dd6e3ced910156f3fdeb8d34a621-744x1039.png?accountingTag=RB",
@@ -482,7 +482,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Spirit", "Shadow Isles"],
 				keywords: [],
-				description: "[Legion][>] You may play me from your trash for :rb_energy_3::rb_rune_fury:. (Get the effect if you've played another card this turn.)",
+				description: "[Legion][>] You may play me from your trash for [3][R]. (Get the effect if you've played another card this turn.)",
 				flavorText: "Choose carefully your oath, lest duty bind you even in death.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3a6955daff2982e0ba4417533052d5ea334232fb-744x1039.png?accountingTag=RB",
@@ -500,7 +500,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Shurima", "Xerath"],
 				keywords: [],
-				description: ":rb_rune_fury:, :rb_exhaust:: Deal 3 to a unit. Use this ability only while I'm at a battlefield.",
+				description: "[R], [E]: Deal 3 to a unit. Use this ability only while I'm at a battlefield.",
 				flavorText: "I stand at the brink of infinity.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ef52e66a137a80cf5df862f31a114bfc00914a93-744x1039.png?accountingTag=RB",
@@ -518,7 +518,7 @@ export default [
 				stats: {energy: 8, might: 8, power: 2},
 				tags: ["Dragon", "Mount Targon"],
 				keywords: [],
-				description: "When I conquer, give a friendly unit +8 :rb_might: this turn.",
+				description: "When I conquer, give a friendly unit +8 [M] this turn.",
 				flavorText: "Flee him, fight him, or worship him- it matters not!\r\nWe are but ashes in his flame.\"\r\n \r\n- Herald of Dragons",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9b742ef3dc17f5da03d41e3349839037183b5ea9-744x1039.png?accountingTag=RB",
@@ -536,7 +536,7 @@ export default [
 				stats: {energy: 3, might: 2, power: null},
 				tags: ["Pyke", "Bilgewater"],
 				keywords: [],
-				description: "[Hidden][Ganking]You may pay :rb_rune_fury: as an additional cost to play me.When you play me, if you paid the additional cost, ready me and give me +2 :rb_might: this turn.",
+				description: "[Hidden][Ganking]You may pay [R] as an additional cost to play me.When you play me, if you paid the additional cost, ready me and give me +2 [M] this turn.",
 				flavorText: "Hard day's killin' ahead.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/583f1c15c1bdc47c9d4ebb41a210c182262c8ee9-744x1039.png?accountingTag=RB",
@@ -554,7 +554,7 @@ export default [
 				stats: {energy: 3, might: 2, power: null},
 				tags: ["Pyke", "Bilgewater"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Ganking] (I can move from battlefield to battlefield.)You may pay :rb_rune_fury: as an additional cost to play me.When you play me, if you paid the additional cost, ready me and give me +2 :rb_might: this turn.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Ganking] (I can move from battlefield to battlefield.)You may pay [R] as an additional cost to play me.When you play me, if you paid the additional cost, ready me and give me +2 [M] this turn.",
 				flavorText: "Hard day's killin' ahead.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e0ce05148d7368070bcc8c0a43f66ece0834653a-744x1039.png?accountingTag=RB",
@@ -590,7 +590,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)Your conquer effects for conquering here trigger an additional time.When I conquer, [Buff] a friendly unit. (Give it a +1 :rb_might: buff if it doesn't have one.)",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)Your conquer effects for conquering here trigger an additional time.When I conquer, [Buff] a friendly unit. (Give it a +1 [M] buff if it doesn't have one.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/14e9d009985f6a0d8ab63416aee7570ede42c657-744x1039.png?accountingTag=RB",
@@ -608,7 +608,7 @@ export default [
 				stats: {energy: 4, might: 3, power: null},
 				tags: ["Vi", "Zaun"],
 				keywords: [],
-				description: "[Deflect]:rb_energy_2::rb_rune_fury:: Double my Might this turn.",
+				description: "[Deflect][2][R]: Double my Might this turn.",
 				flavorText: "Plan? I don't need a plan.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/646df8e81d42025a558112775fc1032c86cab2d0-744x1039.png?accountingTag=RB",
@@ -626,7 +626,7 @@ export default [
 				stats: {energy: 4, might: 3, power: null},
 				tags: ["Vi", "Zaun"],
 				keywords: [],
-				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.):rb_energy_2::rb_rune_fury:: Double my Might this turn.",
+				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)[2][R]: Double my Might this turn.",
 				flavorText: "Plan? I don't need a plan.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/03a55e8d494d7efe20da792365161f5c43c20779-744x1039.png?accountingTag=RB",
@@ -644,7 +644,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit +1 :rb_might: this turn.[Level 6][>] Give it +3 :rb_might: this turn instead. (While you have 6+ XP, get the effect.)",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit +1 [M] this turn.[Level 6][>] Give it +3 [M] this turn instead. (While you have 6+ XP, get the effect.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/537b66b5f0259f80bf25b1aafb78558f4db6886a-744x1039.png?accountingTag=RB",
@@ -662,7 +662,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Look at the top 3 cards of your Main Deck. You may reveal a unit from among them and draw it. Recycle the rest.",
+				description: "[Repeat] [2] (You may pay the additional cost to repeat this spell's effect.)Look at the top 3 cards of your Main Deck. You may reveal a unit from among them and draw it. Recycle the rest.",
 				flavorText: "Two heads pay better than one.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/64e977213f50471ad7b6e8664488fb9017693f71-744x1039.png?accountingTag=RB",
@@ -680,7 +680,7 @@ export default [
 				stats: {energy: 4, might: 3, power: null},
 				tags: ["Cat", "Zaun"],
 				keywords: [],
-				description: "When you play me, play a 1 :rb_might: Bird unit token with [Deflect] here. (Opponents must pay [A] to choose it with a spell or ability.)",
+				description: "When you play me, play a 1 [M] Bird unit token with [Deflect] here. (Opponents must pay [A] to choose it with a spell or ability.)",
 				flavorText: "Always following the scent of prey.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6bf8978ca42fa50a60067e74364b3caf78b3e928-744x1039.png?accountingTag=RB",
@@ -716,7 +716,7 @@ export default [
 				stats: {energy: 6, might: 6, power: null},
 				tags: ["Bandle City"],
 				keywords: [],
-				description: "If an opponent controls a stunned unit, I cost :rb_energy_2: less and enter ready.",
+				description: "If an opponent controls a stunned unit, I cost [2] less and enter ready.",
 				flavorText: "Just because it doesn't exist doesn't mean it can't hurt you.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ef10724add3b6d9e69415cb194e895f6ea9969b7-744x1039.png?accountingTag=RB",
@@ -734,7 +734,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Cat", "Bilgewater"],
 				keywords: [],
-				description: "[Shield 2] (+2 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)",
+				description: "[Shield 2] (+2 [M] while I'm a defender.)[Tank] (I must be assigned combat damage first.)",
 				flavorText: "One of the few cats that can scratch its own belly.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/20276519677a4d1ebe230aaad7692588e1e8d046-744x1039.png?accountingTag=RB",
@@ -788,7 +788,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
+				description: "[Equip] [G] ([G]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/519361230cb8554cdf0f5dd795e115ffbb5bb932-744x1039.png?accountingTag=RB",
@@ -842,7 +842,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)[Stun] a unit. (It doesn't deal combat damage this turn.)If you played this from your hand, draw 1.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Action] (Play on your turn or in showdowns.)[Stun] a unit. (It doesn't deal combat damage this turn.)If you played this from your hand, draw 1.",
 				flavorText: "Ew.\" - Vex",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a0e7f7fa55ae618f94fe48920f92406ddd7e3512-744x1039.png?accountingTag=RB",
@@ -860,7 +860,7 @@ export default [
 				stats: {energy: 3, might: 2, power: null},
 				tags: ["Yordle", "Bandle City"],
 				keywords: [],
-				description: "[Backline] (I must be assigned combat damage last.)When I hold, [Buff] all units here. (Give each a +1 :rb_might: buff if it doesn't have one.)",
+				description: "[Backline] (I must be assigned combat damage last.)When I hold, [Buff] all units here. (Give each a +1 [M] buff if it doesn't have one.)",
 				flavorText: "Step right up and see the Mechanized Menace versus the Midtown Mauler! Mmmm, it's gonna be good!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c03bdc371440cbf6de773b0b39010808bfdecea1-744x1039.png?accountingTag=RB",
@@ -878,7 +878,7 @@ export default [
 				stats: {energy: 4, might: null, power: 2},
 				tags: [],
 				keywords: [],
-				description: "[Reaction]Choose one —Counter a spell.Play four 1 :rb_might: Bird unit tokens with [Deflect]. (Opponents must pay [A] to choose them with a spell or ability.)",
+				description: "[Reaction]Choose one —Counter a spell.Play four 1 [M] Bird unit tokens with [Deflect]. (Opponents must pay [A] to choose them with a spell or ability.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/77bd864b29f4975868e557e31a39b94d06a4ecb2-744x1039.png?accountingTag=RB",
@@ -896,7 +896,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Action][>] Exhaust a unit you control, :rb_exhaust:: Move a different unit you control to the location of the unit you exhausted to pay for this ability.",
+				description: "[Action][>] Exhaust a unit you control, [E]: Move a different unit you control to the location of the unit you exhausted to pay for this ability.",
 				flavorText: "Great City of Demacia -  470\r\n \r\nImmortal Bastion -  2,105\r\n \r\nBandle City -  ????",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/edf248974d1d97ff5ff1c6745f663fa059dbc82d-744x1039.png?accountingTag=RB",
@@ -914,7 +914,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose a unit. Give it +1 :rb_might: this turn for each of the following tags among your units — Bird, Cat, Dog, and Poro.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose a unit. Give it +1 [M] this turn for each of the following tags among your units — Bird, Cat, Dog, and Poro.",
 				flavorText: "There's always time for scritches.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4a1a08ec8c23a2663babd2fc683481888347407a-744x1039.png?accountingTag=RB",
@@ -932,7 +932,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Dog", "Ixtal"],
 				keywords: [],
-				description: "[Hunt 2] (When I conquer or hold, gain 2 XP.)[Level 3][>] I have +1 :rb_might: and [Deflect]. (While you have 3+ XP, get the effect. Opponents must pay [A] to choose a [Deflect] unit with a spell or ability.)",
+				description: "[Hunt 2] (When I conquer or hold, gain 2 XP.)[Level 3][>] I have +1 [M] and [Deflect]. (While you have 3+ XP, get the effect. Opponents must pay [A] to choose a [Deflect] unit with a spell or ability.)",
 				flavorText: "Sometimes you gotta stomp some moss.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0ea32d0f6f49c0b48b1ea2cc98fe0a3c540bc9db-744x1039.png?accountingTag=RB",
@@ -950,7 +950,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Yordle", "Ionia"],
 				keywords: [],
-				description: "[Shield] (+1 :rb_might: while I'm a defender.)When I hold, play a ready 3 :rb_might: Sprite unit token with [Temporary] here. (Kill it at the start of its controller's next Beginning Phase, before scoring.)",
+				description: "[Shield] (+1 [M] while I'm a defender.)When I hold, play a ready 3 [M] Sprite unit token with [Temporary] here. (Kill it at the start of its controller's next Beginning Phase, before scoring.)",
 				flavorText: "He's raised sleepwalking to an art form.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fa843ee80d1a35416d61482bc1602279955a2c7f-744x1039.png?accountingTag=RB",
@@ -968,7 +968,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "This enters exhausted.[Reaction][>] :rb_exhaust:: [Add] [A]. (Abilities that add resources can't be reacted to.)[Level 6][>] [>>][Reaction][>] :rb_exhaust:: [Add] :rb_energy_1:[A]. (Use this ability only while you have 6+ XP.)",
+				description: "This enters exhausted.[Reaction][>] [E]: [Add] [A]. (Abilities that add resources can't be reacted to.)[Level 6][>] [>>][Reaction][>] [E]: [Add] [1][A]. (Use this ability only while you have 6+ XP.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4794052d16d88b12861b348a466673ace098c32e-744x1039.png?accountingTag=RB",
@@ -1022,7 +1022,7 @@ export default [
 				stats: {energy: 5, might: 4, power: 1},
 				tags: ["Ivern", "Ionia"],
 				keywords: [],
-				description: "When you play me or when I hold, look at the top 3 cards of your Main Deck. You may reveal a unit from among them and draw it. Recycle the rest. Then if you revealed a Bird, Cat, Dog, or Poro, do this: [Buff] a friendly unit. (Give it a +1 :rb_might: buff if it doesn't have one.)",
+				description: "When you play me or when I hold, look at the top 3 cards of your Main Deck. You may reveal a unit from among them and draw it. Recycle the rest. Then if you revealed a Bird, Cat, Dog, or Poro, do this: [Buff] a friendly unit. (Give it a +1 [M] buff if it doesn't have one.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a72b08dd57422d3441df88eb61c000cdb4ac688a-744x1039.png?accountingTag=RB",
@@ -1040,7 +1040,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Mount Targon", "Nami"],
 				keywords: [],
-				description: "You may pay :rb_rune_calm: as an additional cost to play me.When you play me, if you paid the additional cost, [Stun] an enemy unit. (It doesn't deal combat damage this turn.)When I hold, the next time you play a unit this turn, ready it and [Buff] it.",
+				description: "You may pay [G] as an additional cost to play me.When you play me, if you paid the additional cost, [Stun] an enemy unit. (It doesn't deal combat damage this turn.)When I hold, the next time you play a unit this turn, ready it and [Buff] it.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c65521065700f308689608fc6c4fa8963f3264c0-744x1039.png?accountingTag=RB",
@@ -1058,7 +1058,7 @@ export default [
 				stats: {energy: 2, might: 0, power: null},
 				tags: ["Bilgewater"],
 				keywords: [],
-				description: "(Units with 0 :rb_might: can conquer and hold.)When you play me, draw 1.[Deathknell][>] Choose an opponent. They reveal their hand. You can look at their facedown cards this turn. Gain 1 XP. (When I die, get the effects.)",
+				description: "(Units with 0 [M] can conquer and hold.)When you play me, draw 1.[Deathknell][>] Choose an opponent. They reveal their hand. You can look at their facedown cards this turn. Gain 1 XP. (When I die, get the effects.)",
 				flavorText: "As harmless as it is delicious.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8c9a251b2deb21716fba0ac83c6aac96563fa19d-744x1039.png?accountingTag=RB",
@@ -1112,7 +1112,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Yordle", "Vex", "Shadow Isles"],
 				keywords: [],
-				description: "[Shield] (+1 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)When you [Stun] an enemy unit at a battlefield, you may move me to that battlefield.",
+				description: "[Shield] (+1 [M] while I'm a defender.)[Tank] (I must be assigned combat damage first.)When you [Stun] an enemy unit at a battlefield, you may move me to that battlefield.",
 				flavorText: "Let's turn these smiles upside down.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ed2c20de6ceb7ff23f62ccb28a49fd305c5b15b7-744x1039.png?accountingTag=RB",
@@ -1130,7 +1130,7 @@ export default [
 				stats: {energy: 3, might: 1, power: 1},
 				tags: ["Fae", "Cat", "Bandle City", "Yuumi"],
 				keywords: [],
-				description: "When I attack or defend, give one of your other units here +3 :rb_might: and [Tank] this turn. (It must be assigned combat damage first.)",
+				description: "When I attack or defend, give one of your other units here +3 [M] and [Tank] this turn. (It must be assigned combat damage first.)",
 				flavorText: "Who's ready to risk our lives, defeat our foes, and maybe knock over some cups?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/588ddfeb01ab7b37110d8a7e656cf9f35530ce4e-744x1039.png?accountingTag=RB",
@@ -1166,7 +1166,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Fae", "Lillia", "Ionia"],
 				keywords: [],
-				description: "When you play a token unit, give me +1 :rb_might: this turn.Your token units have [Tank].",
+				description: "When you play a token unit, give me +1 [M] this turn.Your token units have [Tank].",
 				flavorText: "Nothing cries louder than loneliness.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/92cdae8b6bfef70d0a38761f1dc4aa771a37753a-744x1039.png?accountingTag=RB",
@@ -1184,7 +1184,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Fae", "Lillia", "Ionia"],
 				keywords: [],
-				description: "When you play a token unit, give me +1 :rb_might: this turn.Your token units have [Tank]. (They must be assigned combat damage first.)",
+				description: "When you play a token unit, give me +1 [M] this turn.Your token units have [Tank]. (They must be assigned combat damage first.)",
 				flavorText: "Nothing cries louder than loneliness.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/daa5fe15e0a1c14c8dbb8f858d8a6d444ea6096e-744x1039.png?accountingTag=RB",
@@ -1202,7 +1202,7 @@ export default [
 				stats: {energy: 12, might: 12, power: 3},
 				tags: ["Master Yi", "Ionia"],
 				keywords: [],
-				description: "[Level 3][>] I cost :rb_energy_2::rb_rune_calm: less.[Level 6][>] I cost :rb_energy_4::rb_rune_calm::rb_rune_calm: less instead.[Level 11][>] I cost :rb_energy_6::rb_rune_calm::rb_rune_calm::rb_rune_calm: less instead.[Level 16][>] I can't be chosen by enemy spells and abilities.",
+				description: "[Level 3][>] I cost [2][G] less.[Level 6][>] I cost [4][G][G] less instead.[Level 11][>] I cost [6][G][G][G] less instead.[Level 16][>] I can't be chosen by enemy spells and abilities.",
 				flavorText: "A true master is an eternal student.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cb53c3b70820fca73540223addbe5369b5267e15-744x1039.png?accountingTag=RB",
@@ -1220,7 +1220,7 @@ export default [
 				stats: {energy: 12, might: 12, power: 3},
 				tags: ["Master Yi", "Ionia"],
 				keywords: [],
-				description: "[Level 3][>] I cost :rb_energy_2::rb_rune_calm: less. (While you have 3+ XP, get the effect.)[Level 6][>] I cost :rb_energy_4::rb_rune_calm::rb_rune_calm: less instead.[Level 11][>] I cost :rb_energy_6::rb_rune_calm::rb_rune_calm::rb_rune_calm: less instead.[Level 16][>] I can't be chosen by enemy spells and abilities.",
+				description: "[Level 3][>] I cost [2][G] less. (While you have 3+ XP, get the effect.)[Level 6][>] I cost [4][G][G] less instead.[Level 11][>] I cost [6][G][G][G] less instead.[Level 16][>] I can't be chosen by enemy spells and abilities.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8a6d46d701eebaff0850a5b7400816517006d7e9-744x1039.png?accountingTag=RB",
@@ -1274,7 +1274,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Draw 1.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] [2] (You may pay the additional cost to repeat this spell's effect.)Draw 1.",
 				flavorText: "A true artist reveres both canvas and brush.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d76418eabcddbea148f3331913223b79a39aabda-744x1039.png?accountingTag=RB",
@@ -1310,7 +1310,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit -4 :rb_might: this turn.[Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit -4 [M] this turn.[Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
 				flavorText: "When sun and moon meet, darkness triumphs.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9fcef3d1d7de3c219aabcab88d0550c9d8cd4311-744x1039.png?accountingTag=RB",
@@ -1328,7 +1328,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "When you play me, look at the top 4 cards of your Main Deck. You may reveal a spell with Energy cost :rb_energy_4: or more from among them and draw it. Recycle the rest.",
+				description: "When you play me, look at the top 4 cards of your Main Deck. You may reveal a spell with Energy cost [4] or more from among them and draw it. Recycle the rest.",
 				flavorText: "Long or short, every thread must meet the shears in the end.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ab713d332b48a7526585b0be3718fea9e9f93622-744x1039.png?accountingTag=RB",
@@ -1346,7 +1346,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Freljord"],
 				keywords: [],
-				description: "When I attack, you may pay :rb_energy_1: to give a unit here -1 :rb_might: this turn.",
+				description: "When I attack, you may pay [1] to give a unit here -1 [M] this turn.",
 				flavorText: "He doesn't bother to shout \"Freeze!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c14db2ae064ccee80d8ec373f9fe9b4f44776e3e-744x1039.png?accountingTag=RB",
@@ -1364,7 +1364,7 @@ export default [
 				stats: {energy: 7, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit -10 :rb_might: this turn.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit -10 [M] this turn.",
 				flavorText: "Light can illuminate, or it can blind.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8f75280599fdb4d3b6191cf8e8443aadf33ad11e-744x1039.png?accountingTag=RB",
@@ -1400,7 +1400,7 @@ export default [
 				stats: {energy: 6, might: 5, power: null},
 				tags: ["Spirit", "Shadow Isles"],
 				keywords: [],
-				description: "When another friendly unit dies, give me +2 :rb_might: this turn.",
+				description: "When another friendly unit dies, give me +2 [M] this turn.",
 				flavorText: "Death provides him with an ever-growing herd.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/60fb267f2d0cd16714d35a0eefd0d5864304102b-744x1039.png?accountingTag=RB",
@@ -1418,7 +1418,7 @@ export default [
 				stats: {energy: 5, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Play two ready 3 :rb_might: Sprite unit tokens with [Temporary]. (Kill each at the start of its controller's Beginning Phase, before scoring.)",
+				description: "Play two ready 3 [M] Sprite unit tokens with [Temporary]. (Kill each at the start of its controller's Beginning Phase, before scoring.)",
 				flavorText: "They're lovely, while they last.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4427ceffae1c3e7b012167461ce7c080bb2c1fe4-744x1039.png?accountingTag=RB",
@@ -1454,7 +1454,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Bilgewater"],
 				keywords: [],
-				description: "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)When you play me, give your other units here [Shield] this turn. (+1 :rb_might: while they're defenders.)",
+				description: "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)When you play me, give your other units here [Shield] this turn. (+1 [M] while they're defenders.)",
 				flavorText: "Elegant. Effortless. Deadly.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/29abe06f1c16a9eed622a5060330116268b73b8c-744x1039.png?accountingTag=RB",
@@ -1490,7 +1490,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Deal 3 to an enemy unit. When it dies this turn, play a Gold gear token exhausted. (It has &quot;[Reaction][>] Kill this, :rb_exhaust:: [Add] [A].&quot;)",
+				description: "Deal 3 to an enemy unit. When it dies this turn, play a Gold gear token exhausted. (It has &quot;[Reaction][>] Kill this, [E]: [Add] [A].&quot;)",
 				flavorText: "The world is cruel. It does not have to be ugly.\r\n \r\n- Jhin",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/81195df7122beaba38ebc8b8212ceb0e7593afe9-744x1039.png?accountingTag=RB",
@@ -1508,7 +1508,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you draw your second card each turn, give a friendly unit +2 :rb_might: this turn.",
+				description: "When you draw your second card each turn, give a friendly unit +2 [M] this turn.",
 				flavorText: "The power of the Frejlord shines from every facet.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f1a6c28649bf4478b4728379b6d548058739f0e9-744x1039.png?accountingTag=RB",
@@ -1526,7 +1526,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Dog", "Ionia"],
 				keywords: [],
-				description: "[Hunt 2] (When I conquer or hold, gain 2 XP.)[Level 3][>] I have +1 :rb_might: and [Ganking]. (While you have 3+ XP, get the effect. A [Ganking] unit can move from battlefield to battlefield.)",
+				description: "[Hunt 2] (When I conquer or hold, gain 2 XP.)[Level 3][>] I have +1 [M] and [Ganking]. (While you have 3+ XP, get the effect. A [Ganking] unit can move from battlefield to battlefield.)",
 				flavorText: "An unconventional choice of pet.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3f314cea0c05d2ea274a81d723299e4e20b2ebde-744x1039.png?accountingTag=RB",
@@ -1544,7 +1544,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Fae", "Ionia"],
 				keywords: [],
-				description: "I have +1 :rb_might: for each of your units with [Temporary] at my battlefield.",
+				description: "I have +1 [M] for each of your units with [Temporary] at my battlefield.",
 				flavorText: "She savors fleeting moments of beauty, knowing none but herself will ever see them.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/68189fb5a6b3193e8925969ac0c545bc78b210c9-744x1039.png?accountingTag=RB",
@@ -1562,7 +1562,7 @@ export default [
 				stats: {energy: 5, might: 3, power: null},
 				tags: ["Shadow Isles"],
 				keywords: [],
-				description: "Your token units have +1 :rb_might:.",
+				description: "Your token units have +1 [M].",
 				flavorText: "A strange guardian for a stranger flock.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cb2a157e715ef103e688e094c21f772003775e45-744x1039.png?accountingTag=RB",
@@ -1580,7 +1580,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Temporary] (Kill this at the start of its controller's Beginning Phase, before scoring.)When you play this, play a ready 3 :rb_might: Sprite unit token with [Temporary] to your base.[Deathknell][>] Repeat this gear's play effect. (When this dies, get the effect.)",
+				description: "[Temporary] (Kill this at the start of its controller's Beginning Phase, before scoring.)When you play this, play a ready 3 [M] Sprite unit token with [Temporary] to your base.[Deathknell][>] Repeat this gear's play effect. (When this dies, get the effect.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fcb3ea3e8f829b8dc845fbf49080552d635bb47b-744x1039.png?accountingTag=RB",
@@ -1598,7 +1598,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Diana", "Mount Targon"],
 				keywords: [],
-				description: "When a showdown begins here, you may pay :rb_energy_1:. If you do, [Predict], then reveal the top card of your Main Deck. If it's a spell, draw it.",
+				description: "When a showdown begins here, you may pay [1]. If you do, [Predict], then reveal the top card of your Main Deck. If it's a spell, draw it.",
 				flavorText: "Follow no false light.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f538c2659c02af20a173503784989e39a0c291f6-744x1039.png?accountingTag=RB",
@@ -1616,7 +1616,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Diana", "Mount Targon"],
 				keywords: [],
-				description: "When a showdown begins here, you may pay :rb_energy_1:. If you do, [Predict], then reveal the top card of your Main Deck. If it's a spell, draw it. (To Predict, look at the top card of your Main Deck. You may recycle it.)",
+				description: "When a showdown begins here, you may pay [1]. If you do, [Predict], then reveal the top card of your Main Deck. If it's a spell, draw it. (To Predict, look at the top card of your Main Deck. You may recycle it.)",
 				flavorText: "Follow no false light.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3e284397713abb21d2c8d9b85202ab65d21689e9-744x1039.png?accountingTag=RB",
@@ -1634,7 +1634,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Ionia", "Hwei"],
 				keywords: [],
-				description: "When I move, draw 1, then discard 1. Then, do the following based on the discarded card's type:Spell — Draw 1.Gear — Ready up to 2 runes.Unit — Give me +3 :rb_might: this turn.",
+				description: "When I move, draw 1, then discard 1. Then, do the following based on the discarded card's type:Spell — Draw 1.Gear — Ready up to 2 runes.Unit — Give me +3 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ddbb13ba5617cc443b9a3a51485b1697da570121-744x1039.png?accountingTag=RB",
@@ -1652,7 +1652,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Temporary] (Kill me at the start of my controller's Beginning Phase, before scoring.)When you play me, play two Reflection unit tokens here. They become copies of me.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Temporary] (Kill me at the start of my controller's Beginning Phase, before scoring.)When you play me, play two Reflection unit tokens here. They become copies of me.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/67606d98bd3d8816e686dacacb91a56627d4b5f5-744x1039.png?accountingTag=RB",
@@ -1670,7 +1670,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Fae", "Lillia", "Ionia"],
 				keywords: [],
-				description: "[Accelerate]When I move from a location, play a 3 :rb_might: Sprite unit token with [Temporary] there.",
+				description: "[Accelerate]When I move from a location, play a 3 [M] Sprite unit token with [Temporary] there.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b06072002316a5b86f11750bbe21e9dfb94be08d-744x1039.png?accountingTag=RB",
@@ -1688,7 +1688,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Fae", "Lillia", "Ionia"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_mind: as an additional cost to have me enter ready.)When I move from a location, play a 3 :rb_might: Sprite unit token with [Temporary] there. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
+				description: "[Accelerate] (You may pay [1][B] as an additional cost to have me enter ready.)When I move from a location, play a 3 [M] Sprite unit token with [Temporary] there. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/65d0af5361b335a7e65c7aa03a099fc0de3431e6-744x1039.png?accountingTag=RB",
@@ -1706,7 +1706,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Choose a unit you control and another unit you control at a different location. If at least one of them has [Temporary], move each to the other's location. Draw 1.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Action] (Play on your turn or in showdowns.)Choose a unit you control and another unit you control at a different location. If at least one of them has [Temporary], move each to the other's location. Draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/38886634ee8646707d9c26020f977f14c934a4c0-744x1039.png?accountingTag=RB",
@@ -1724,7 +1724,7 @@ export default [
 				stats: {energy: 7, might: 6, power: 1},
 				tags: ["Fae", "Ionia"],
 				keywords: [],
-				description: "When you play me or at the start of your Beginning Phase, play a ready 3 :rb_might: Sprite unit token with [Temporary] to your base. (Kill them at the start of their controller's next Beginning Phase, before scoring.)",
+				description: "When you play me or at the start of your Beginning Phase, play a ready 3 [M] Sprite unit token with [Temporary] to your base. (Kill them at the start of their controller's next Beginning Phase, before scoring.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/64b7debe0dd3d7b644f627eba562187bc45dd313-744x1039.png?accountingTag=RB",
@@ -1796,7 +1796,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Mount Targon"],
 				keywords: [],
-				description: "[Shield 2] (+2 :rb_might: while I'm a defender.)Your hold effects for holding here trigger an additional time.When I hold, [Add] [A] at the start of your next Main Phase. (Abilities that add resources can't be reacted to.)",
+				description: "[Shield 2] (+2 [M] while I'm a defender.)Your hold effects for holding here trigger an additional time.When I hold, [Add] [A] at the start of your next Main Phase. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bec7e8f108fac2d9c94db01c85cf143133d13325-744x1039.png?accountingTag=RB",
@@ -1814,7 +1814,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "At the start of your Beginning Phase, if you have exactly 4 cards in hand and exactly 4 units at battlefields, you win the game.Discard 1, :rb_exhaust:: Play a 1 :rb_might: Bird unit token with [Deflect]. (Opponents must pay [A] to choose it with a spell or ability.)",
+				description: "At the start of your Beginning Phase, if you have exactly 4 cards in hand and exactly 4 units at battlefields, you win the game.Discard 1, [E]: Play a 1 [M] Bird unit token with [Deflect]. (Opponents must pay [A] to choose it with a spell or ability.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f1addf7bb3925871cbcf4615f5a449dc61f762da-744x1039.png?accountingTag=RB",
@@ -1832,7 +1832,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Jhin", "Ionia"],
 				keywords: [],
-				description: "[Vision]If you've spent :rb_energy_4: or more to play a spell this turn, you may play me for :rb_rune_mind:.",
+				description: "[Vision]If you've spent [4] or more to play a spell this turn, you may play me for [B].",
 				flavorText: "One, two, three, four. Two, two, three, four...",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/992e0a23ba7ad3fe88410f023bb1311195e1863a-744x1039.png?accountingTag=RB",
@@ -1850,7 +1850,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Jhin", "Ionia"],
 				keywords: [],
-				description: "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)If you've spent :rb_energy_4: or more to play a spell this turn, you may play me for :rb_rune_mind:.",
+				description: "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)If you've spent [4] or more to play a spell this turn, you may play me for [B].",
 				flavorText: "One, two, three, four. Two, two, three, four...",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/88fb6023ee9bd90fef3f36995ca27615dcd669f7-744x1039.png?accountingTag=RB",
@@ -1904,7 +1904,7 @@ export default [
 				stats: {energy: 5, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Draw 2.[Level 6][>] This costs :rb_energy_2: less. (While you have 6+ XP, get the effect.)[Level 11][>] This costs :rb_energy_4: less instead.",
+				description: "Draw 2.[Level 6][>] This costs [2] less. (While you have 6+ XP, get the effect.)[Level 11][>] This costs [4] less instead.",
 				flavorText: "Peace within, peace without.\"\r\n \r\n- Master Yi",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5e032420b6dcbdd96dca122b4d7875868feb82ed-744x1039.png?accountingTag=RB",
@@ -1940,7 +1940,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "[Reaction][>] :rb_exhaust:: [Add] :rb_energy_1:. (Abilities that add resources can't be reacted to.)",
+				description: "[Reaction][>] [E]: [Add] [1]. (Abilities that add resources can't be reacted to.)",
 				flavorText: "The Dragon's secrets are not mine to share. I can only share the gifts that it has given me.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2065a3b0fef9779fed8a3d42202606a31acf59ff-744x1039.png?accountingTag=RB",
@@ -1958,7 +1958,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Yordle", "Mount Targon"],
 				keywords: [],
-				description: "[Hunt] (When I conquer or hold, gain 1 XP.)[Level 6][>] I have +1 :rb_might:. (While you have 6+ XP, get the effect.)ambush",
+				description: "[Hunt] (When I conquer or hold, gain 1 XP.)[Level 6][>] I have +1 [M]. (While you have 6+ XP, get the effect.)ambush",
 				flavorText: "He's a yordle of many facets.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d824d666dc5f50c3c513c3f9722f6eafe21c6289-744x1039.png?accountingTag=RB",
@@ -1976,7 +1976,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Give a friendly unit +3 :rb_might: this turn. When it wins a combat this turn, gain 2 XP.",
+				description: "[Action] (Play on your turn or in showdowns.)Give a friendly unit +3 [M] this turn. When it wins a combat this turn, gain 2 XP.",
 				flavorText: "If you think losing is the best teacher, you should really give winning a try.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4705a4ef2589f2a82021f1b70dcdb7e289a88fdf-744x1039.png?accountingTag=RB",
@@ -1994,7 +1994,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)",
+				description: "[Equip] [O] ([O]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/374fd9220c204810c2b1abd48217b4d233362753-744x1039.png?accountingTag=RB",
@@ -2030,7 +2030,7 @@ export default [
 				stats: {energy: 6, might: 6, power: null},
 				tags: ["Mount Targon"],
 				keywords: [],
-				description: "[Level 11][>] I have +4 :rb_might:. (While you have 11+ XP, get the effect.)",
+				description: "[Level 11][>] I have +4 [M]. (While you have 11+ XP, get the effect.)",
 				flavorText: "She has seen the world before. She will see that world again.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fe645cecdd1f251218f5bf33225cde6c1e12b67e-744x1039.png?accountingTag=RB",
@@ -2048,7 +2048,7 @@ export default [
 				stats: {energy: 4, might: 3, power: null},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "[Shield 2] (+2 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)",
+				description: "[Shield 2] (+2 [M] while I'm a defender.)[Tank] (I must be assigned combat damage first.)",
 				flavorText: "Was this really your plan, pal?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2a2eefa9b85684489e97870145eb2f94b20b60ed-744x1039.png?accountingTag=RB",
@@ -2102,7 +2102,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Noxus"],
 				keywords: [],
-				description: "[Hunt] (When I conquer or hold, gain 1 XP.)Spend 2 XP: [Buff] me. (Give me a +1 :rb_might: buff if I don't have one.)",
+				description: "[Hunt] (When I conquer or hold, gain 1 XP.)Spend 2 XP: [Buff] me. (Give me a +1 [M] buff if I don't have one.)",
 				flavorText: "The crowd is a beast like any other. Hear it roar?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0031569ff123a8317e1be753f0bd895501bf838b-744x1039.png?accountingTag=RB",
@@ -2210,7 +2210,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Bilgewater"],
 				keywords: [],
-				description: "If you've gained XP this turn, I have +1 :rb_might: and [Ganking]. (I can move from battlefield to battlefield.)",
+				description: "If you've gained XP this turn, I have +1 [M] and [Ganking]. (I can move from battlefield to battlefield.)",
 				flavorText: "Half newt, half fish. All nuisance.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4a0b0ebe9f47dadeb3b5f0520ec566a528df9c94-744x1039.png?accountingTag=RB",
@@ -2228,7 +2228,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you play a unit, you may pay :rb_energy_1: to gain 1 XP.Spend 3 XP, :rb_exhaust:: Ready a unit.",
+				description: "When you play a unit, you may pay [1] to gain 1 XP.Spend 3 XP, [E]: Ready a unit.",
 				flavorText: "Anything to get the blood pumping.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/64067ebdbe3140e9a458da7ecf7253a5fae9a31b-744x1039.png?accountingTag=RB",
@@ -2354,7 +2354,7 @@ export default [
 				stats: {energy: 3, might: 4, power: 1},
 				tags: ["Nilah", "Kathkan", "Demon"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)[Ganking] (I can move from battlefield to battlefield.)When I move, gain 1 XP.",
+				description: "[Accelerate] (You may pay [1][O] as an additional cost to have me enter ready.)[Ganking] (I can move from battlefield to battlefield.)When I move, gain 1 XP.",
 				flavorText: "All I feel is joy! It is... difficult.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6138c519310f917461e09d90fe3f2a9480914947-744x1039.png?accountingTag=RB",
@@ -2552,7 +2552,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Mount Targon"],
 				keywords: [],
-				description: "If you've played a spell this turn, you may pay :rb_rune_chaos: as an additional cost to play me. If you do, I enter ready.",
+				description: "If you've played a spell this turn, you may pay [P] as an additional cost to play me. If you do, I enter ready.",
 				flavorText: "The Lunari have few allies among Targon's mortal denizens, but that doesn't mean they're alone.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0ff22e9a517d029fd17cfbbbc93ca2f90c2c676c-744x1039.png?accountingTag=RB",
@@ -2642,7 +2642,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Fae", "Ionia"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_chaos: as an additional cost to have me enter ready.)When I move to a battlefield, gain 2 XP.",
+				description: "[Accelerate] (You may pay [1][P] as an additional cost to have me enter ready.)When I move to a battlefield, gain 2 XP.",
 				flavorText: "Dreams themselves can dream as well.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c9bb7a8f5a1426a4af9843f2473ee6cc37dd24bd-744x1039.png?accountingTag=RB",
@@ -2696,7 +2696,7 @@ export default [
 				stats: {energy: 5, might: 6, power: null},
 				tags: ["Shadow Isles"],
 				keywords: [],
-				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)When you play me, choose an opponent. They play a 1 :rb_might: Bird unit token with [Deflect].",
+				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)When you play me, choose an opponent. They play a 1 [M] Bird unit token with [Deflect].",
 				flavorText: "They have to leave the nest eventually.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d9b344b4b29b2baab0a1dc2e16a6e946192edaf5-744x1039.png?accountingTag=RB",
@@ -2732,7 +2732,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Bilgewater"],
 				keywords: [],
-				description: "When you play me, return all units with 2 :rb_might: or less to their owners' hands.",
+				description: "When you play me, return all units with 2 [M] or less to their owners' hands.",
 				flavorText: "There's plenty of room for everyone at the bottom of the sea.\"\r\n - Pyke",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/68872e2119146768f8fa113376876fa64699297d-744x1039.png?accountingTag=RB",
@@ -2768,7 +2768,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)[Stun] an attacking enemy unit. If it's already stunned, return it to its owner's hand instead. (A stunned unit doesn't deal combat damage this turn.)",
+				description: "[Action] (Play on your turn or in showdowns.)[Repeat] [2] (You may pay the additional cost to repeat this spell's effect.)[Stun] an attacking enemy unit. If it's already stunned, return it to its owner's hand instead. (A stunned unit doesn't deal combat damage this turn.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0a197ec3bf96e10307859e2a152c1742288b2b09-744x1039.png?accountingTag=RB",
@@ -2804,7 +2804,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "This enters exhausted.Kill this, :rb_energy_1:, :rb_exhaust:: [Predict 2], then draw 1. Gain 1 XP.  (To Predict 2, look at the top two cards of your Main Deck. Recycle any of them and put the rest back in any order.)",
+				description: "This enters exhausted.Kill this, [1], [E]: [Predict 2], then draw 1. Gain 1 XP.  (To Predict 2, look at the top two cards of your Main Deck. Recycle any of them and put the rest back in any order.)",
 				flavorText: "Not all foliage conceals.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b10a544d24d3ae3e177d4791743bb2cfb742abcc-744x1039.png?accountingTag=RB",
@@ -2822,7 +2822,7 @@ export default [
 				stats: {energy: 2, might: 1, power: 1},
 				tags: ["Poro", "Shadow Isles"],
 				keywords: [],
-				description: "When I attack, you may pay :rb_energy_1: to move an enemy unit here to its base.",
+				description: "When I attack, you may pay [1] to move an enemy unit here to its base.",
 				flavorText: "Are you going to be the one to tell him he's not scary?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7f2a623a83556bafebfbe7cb280bdedcfe116531-744x1039.png?accountingTag=RB",
@@ -2840,7 +2840,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "As you play this, name a tag. (For example, Miss Fortune, Demacia, and Poro are tags.):rb_exhaust:: Give a unit with the named tag -2 :rb_might: this turn.",
+				description: "As you play this, name a tag. (For example, Miss Fortune, Demacia, and Poro are tags.)[E]: Give a unit with the named tag -2 [M] this turn.",
 				flavorText: "There are some lists you don't want to be on.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f35b49faeb444071445662c9af13710c00a4569c-744x1039.png?accountingTag=RB",
@@ -2858,7 +2858,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)Choose a battlefield. An opponent reveals their hand. You may choose a unit from it. They play that unit to that battlefield, ignoring any and all costs. When they do, [Stun] it. (It doesn't deal combat damage this turn.)",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)Choose a battlefield. An opponent reveals their hand. You may choose a unit from it. They play that unit to that battlefield, ignoring any and all costs. When they do, [Stun] it. (It doesn't deal combat damage this turn.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e06e3e3033640bc8a5bc98acd4e3a0925c6e2c9a-744x1039.png?accountingTag=RB",
@@ -2876,7 +2876,7 @@ export default [
 				stats: {energy: 5, might: null, power: 2},
 				tags: [],
 				keywords: [],
-				description: "You may spend 5 XP as an additional cost to play this.Choose an enemy unit at a battlefield with 3 :rb_might: or less. If you paid the additional cost, choose any enemy unit at a battlefield instead. Take control of it, exhaust it, and recall it.",
+				description: "You may spend 5 XP as an additional cost to play this.Choose an enemy unit at a battlefield with 3 [M] or less. If you paid the additional cost, choose any enemy unit at a battlefield instead. Take control of it, exhaust it, and recall it.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1c05bff48666586a2b3552b5638deaf20d9006f7-744x1039.png?accountingTag=RB",
@@ -2894,7 +2894,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Evelynn", "Demon"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Backline] (I must be assigned combat damage last.)When you play me from face down on your turn, you may move an enemy unit at a different location to my battlefield.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Backline] (I must be assigned combat damage last.)When you play me from face down on your turn, you may move an enemy unit at a different location to my battlefield.",
 				flavorText: "Girls just wanna tear your throat out with their teeth.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1cea41a2b9c3de59a1c95ceacc59950be1d01907-744x1039.png?accountingTag=RB",
@@ -2930,7 +2930,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Kha'Zix", "The Void"],
 				keywords: [],
-				description: "[Ambush]When I attack or defend, if an enemy unit is alone here, give me +2 :rb_might: this turn and gain 2 XP.",
+				description: "[Ambush]When I attack or defend, if an enemy unit is alone here, give me +2 [M] this turn and gain 2 XP.",
 				flavorText: "I sense worthy prey.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b1e7f8762aba8ecf571eb0c83bba8874703dc8be-744x1039.png?accountingTag=RB",
@@ -2948,7 +2948,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Kha'Zix", "The Void"],
 				keywords: [],
-				description: "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)When I attack or defend, if an enemy unit is alone here, give me +2 :rb_might: this turn and gain 2 XP.",
+				description: "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)When I attack or defend, if an enemy unit is alone here, give me +2 [M] this turn and gain 2 XP.",
 				flavorText: "I sense worthy prey.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8306abc5ffce45add8c75c2e215162b2d1aed320-744x1039.png?accountingTag=RB",
@@ -2966,7 +2966,7 @@ export default [
 				stats: {energy: 7, might: 6, power: 1},
 				tags: ["Bandle City"],
 				keywords: [],
-				description: "I can't be readied.:rb_rune_chaos:: Move me to an occupied enemy battlefield if my Might is greater than the total Might of enemy units there.",
+				description: "I can't be readied.[P]: Move me to an occupied enemy battlefield if my Might is greater than the total Might of enemy units there.",
 				flavorText: "... Made a song so eerie, thought I'd die.\"\r\n \r\n- Old Gaff's tale",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/20f1b46435845de99987e37125e0ef7bd61c00bb-744x1039.png?accountingTag=RB",
@@ -3002,7 +3002,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Pyke", "Bilgewater"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Backline] (I must be assigned combat damage last.)Once each turn, when an enemy unit dies while I'm at a battlefield, play a Gold gear token exhausted. (It has &quot;[Reaction][>] Kill this, :rb_exhaust:: [Add] [A].&quot;)",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Backline] (I must be assigned combat damage last.)Once each turn, when an enemy unit dies while I'm at a battlefield, play a Gold gear token exhausted. (It has &quot;[Reaction][>] Kill this, [E]: [Add] [A].&quot;)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2eaa5396b1cac9b245bde5a56b87314f8ae76a38-744x1039.png?accountingTag=RB",
@@ -3020,7 +3020,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Ionia", "Syndra"],
 				keywords: [],
-				description: "While I'm in a showdown, your spells have [Repeat] :rb_energy_2::rb_rune_chaos:. (You may pay the additional cost to repeat the spell's effect.)",
+				description: "While I'm in a showdown, your spells have [Repeat] [2][P]. (You may pay the additional cost to repeat the spell's effect.)",
 				flavorText: "This power is mine to command.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a3695d011175801aaf6ec5a6557b65b8d6341e81-744x1039.png?accountingTag=RB",
@@ -3038,7 +3038,7 @@ export default [
 				stats: {energy: 10, might: 12, power: 3},
 				tags: ["The Void"],
 				keywords: [],
-				description: "As you play me, add the Baron Pit battlefield token to the board if it's not there already. If you do, I enter there.I can't be chosen by enemy spells and abilities.Other friendly units have +2 :rb_might:.",
+				description: "As you play me, add the Baron Pit battlefield token to the board if it's not there already. If you do, I enter there.I can't be chosen by enemy spells and abilities.Other friendly units have +2 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/97d0f7aa81f67bf8f4a19099c648a23a2df169ae-744x1039.png?accountingTag=RB",
@@ -3056,7 +3056,7 @@ export default [
 				stats: {energy: 10, might: 12, power: 3},
 				tags: ["The Void"],
 				keywords: [],
-				description: "As you play me, add the Baron Pit battlefield token to the board if it's not there already. If you do, I enter there. (It has &quot;Units can move here from anywhere.&quot;)I can't be chosen by enemy spells and abilities.Other friendly units have +2 :rb_might:.",
+				description: "As you play me, add the Baron Pit battlefield token to the board if it's not there already. If you do, I enter there. (It has &quot;Units can move here from anywhere.&quot;)I can't be chosen by enemy spells and abilities.Other friendly units have +2 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/59946969e8d21869c3ffe801a3ffbdd8165a873f-744x1039.png?accountingTag=RB",
@@ -3074,7 +3074,7 @@ export default [
 				stats: {energy: 4, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "When you play this, banish all units from your trash.:rb_exhaust:: Play a unit banished with this. (You must pay its costs.)",
+				description: "When you play this, banish all units from your trash.[E]: Play a unit banished with this. (You must pay its costs.)",
 				flavorText: "Do not disturb.\"\r\n \r\n- Sarcophagus inscription",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ae3823d4109d9bbae8c7983ec1c1082ba5b4f190-744x1039.png?accountingTag=RB",
@@ -3092,7 +3092,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Diana", "Mount Targon"],
 				keywords: [],
-				description: "[Ambush]When you play a spell, give me +2 :rb_might: this turn.",
+				description: "[Ambush]When you play a spell, give me +2 [M] this turn.",
 				flavorText: "I cannot turn back.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d9082f75895c8645e05c0a38edc1b1c83c508d84-744x1039.png?accountingTag=RB",
@@ -3110,7 +3110,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Diana", "Mount Targon"],
 				keywords: [],
-				description: "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)When you play a spell, give me +2 :rb_might: this turn.",
+				description: "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)When you play a spell, give me +2 [M] this turn.",
 				flavorText: "I cannot turn back.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/37b015a64b6bc15e856c2d78e275b10e64db1de4-744x1039.png?accountingTag=RB",
@@ -3182,7 +3182,7 @@ export default [
 				stats: {energy: 3, might: 2, power: null},
 				tags: ["Noxus"],
 				keywords: [],
-				description: "[Assault] (+1 :rb_might: while I'm an attacker.)[Deathknell][>] Channel 1 rune exhausted. (When I die, get the effect.)",
+				description: "[Assault] (+1 [M] while I'm an attacker.)[Deathknell][>] Channel 1 rune exhausted. (When I die, get the effect.)",
 				flavorText: "The beauty of the petals hides the sting of the thorns.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b63912e07914c3ef7e2bcdb95d5521fc26c880f2-744x1039.png?accountingTag=RB",
@@ -3200,7 +3200,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Mech", "Zaun"],
 				keywords: [],
-				description: "[Deathknell][>] Play a 1 :rb_might: Bird unit token with [Deflect] to your base. (When I die, get the effect. Opponents must pay [A] to choose a [Deflect] unit with a spell or ability.)",
+				description: "[Deathknell][>] Play a 1 [M] Bird unit token with [Deflect] to your base. (When I die, get the effect. Opponents must pay [A] to choose a [Deflect] unit with a spell or ability.)",
 				flavorText: "The automaton paused and stared in wonder. Amidst the detritus sat a single unbroken egg.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/84d8b6d7a9cab2b78a465a8e0caf597f3ef5a175-744x1039.png?accountingTag=RB",
@@ -3218,7 +3218,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Bird", "Noxus"],
 				keywords: [],
-				description: "I have +2 :rb_might: while I'm attacking with another unit.",
+				description: "I have +2 [M] while I'm attacking with another unit.",
 				flavorText: "They deliver a message.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/68786cd39a886a586b401d6bf818a80bf9f9e2cd-744x1039.png?accountingTag=RB",
@@ -3236,7 +3236,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Give a friendly unit +1 :rb_might: this turn and [Stun] an enemy unit at its location. (A stunned unit doesn't deal combat damage this turn.)",
+				description: "[Action] (Play on your turn or in showdowns.)Give a friendly unit +1 [M] this turn and [Stun] an enemy unit at its location. (A stunned unit doesn't deal combat damage this turn.)",
 				flavorText: "Sometimes you just gotta do it yourself.\"\r\n - Poppy",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/944b89db8a7f7961a28e66ec4fb7d30bb863f324-744x1039.png?accountingTag=RB",
@@ -3308,7 +3308,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "Kill a unit at a battlefield with 3 :rb_might: or less.",
+				description: "Kill a unit at a battlefield with 3 [M] or less.",
 				flavorText: "It won't hurt a bit- it'll hurt a LOT.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/baee7644d00219dfa4160d59e6f6e78e55f5e619-744x1039.png?accountingTag=RB",
@@ -3326,7 +3326,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Poro", "Freljord"],
 				keywords: [],
-				description: ":rb_exhaust:: Play two :rb_energy_1: :rb_might: Bird unit tokens with [Deflect]. Use this ability only while I'm at a battlefield. (Opponents must pay [A] to choose a [Deflect] unit with a spell or ability.)",
+				description: "[E]: Play two [1] [M] Bird unit tokens with [Deflect]. Use this ability only while I'm at a battlefield. (Opponents must pay [A] to choose a [Deflect] unit with a spell or ability.)",
 				flavorText: "How? Magic. And conditioner.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/36900508e2ce61196450a4bf7e27722ae36521d9-744x1039.png?accountingTag=RB",
@@ -3344,7 +3344,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Vision] (When you play this, look at the top card of your Main Deck. You may recycle it.)[Action][>] Kill this, :rb_exhaust:: Give a unit +2 :rb_might: this turn.",
+				description: "[Vision] (When you play this, look at the top card of your Main Deck. You may recycle it.)[Action][>] Kill this, [E]: Give a unit +2 [M] this turn.",
 				flavorText: "Today's treasure is tomorrow's trash.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f2b626602f5db047b96cf9112474d42bf5b483e7-744x1039.png?accountingTag=RB",
@@ -3362,7 +3362,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Fae", "Ionia"],
 				keywords: [],
-				description: "[Hunt] (When I conquer or hold, gain 1 XP.)Spend 2 XP: [Buff] me. (Give me a +1 :rb_might: buff if I don't have one.)",
+				description: "[Hunt] (When I conquer or hold, gain 1 XP.)Spend 2 XP: [Buff] me. (Give me a +1 [M] buff if I don't have one.)",
 				flavorText: "Irresistible force indeed.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3fdfe3bc7c7f81b99aa715bf54b52930ad41dcfa-744x1039.png?accountingTag=RB",
@@ -3470,7 +3470,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "This costs :rb_energy_2: less if you choose a Bird, Cat, Dog, or Poro.Play a unit with cost no more than :rb_energy_2: and no more than [A] from your trash, ignoring its cost.",
+				description: "This costs [2] less if you choose a Bird, Cat, Dog, or Poro.Play a unit with cost no more than [2] and no more than [A] from your trash, ignoring its cost.",
 				flavorText: "We would call them all back, if we could.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/703b85f8284ed13865012289d03602e2cd24f4b2-744x1039.png?accountingTag=RB",
@@ -3506,7 +3506,7 @@ export default [
 				stats: {energy: 10, might: 7, power: 3},
 				tags: ["Noxus", "Demon"],
 				keywords: [],
-				description: "You may kill a friendly unit as an additional cost to play me. If you do, I cost :rb_energy_1: less for each Energy it costs and :rb_rune_order: less for each Power it costs.[Ganking] (I can move from battlefield to battlefield.)When I attack, the defender must kill one of their units here.",
+				description: "You may kill a friendly unit as an additional cost to play me. If you do, I cost [1] less for each Energy it costs and [Y] less for each Power it costs.[Ganking] (I can move from battlefield to battlefield.)When I attack, the defender must kill one of their units here.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a0b3994aad6b6c64ace14193c1363713e6b6ede2-744x1039.png?accountingTag=RB",
@@ -3560,7 +3560,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Noxus", "LeBlanc"],
 				keywords: [],
-				description: "[Assault] (+1 :rb_might: while I'm an attacker.)[Deathknell][>] Draw 1. If it's your Beginning Phase, draw 2 instead. (When I die, get the effect.)",
+				description: "[Assault] (+1 [M] while I'm an attacker.)[Deathknell][>] Draw 1. If it's your Beginning Phase, draw 2 instead. (When I die, get the effect.)",
 				flavorText: "My greatest strength is that there are so many of us...",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ee9f8d7a65e57c1d907edd4e5df2a3ea6966bff9-744x1039.png?accountingTag=RB",
@@ -3578,7 +3578,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)As an additional cost to play this, kill a friendly [Mighty] unit. (A unit is Mighty while it has 5+ :rb_might:.)Draw 2 and channel 1 rune exhausted.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)As an additional cost to play this, kill a friendly [Mighty] unit. (A unit is Mighty while it has 5+ [M].)Draw 2 and channel 1 rune exhausted.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/139153ae4b4f786442018c09765c67e35515df24-744x1039.png?accountingTag=RB",
@@ -3704,7 +3704,7 @@ export default [
 				stats: {energy: 6, might: 5, power: 1},
 				tags: ["Yordle", "Demacia", "Poppy"],
 				keywords: [],
-				description: "You may spend 3 XP as an additional cost to play me. If you do, I cost :rb_energy_3: less.[Ambush][Tank]",
+				description: "You may spend 3 XP as an additional cost to play me. If you do, I cost [3] less.[Ambush][Tank]",
 				flavorText: "I'm in, 100%! That's everything, right?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e171fc13d69ea7bafb03982cf0f8233d2830c1d2-744x1039.png?accountingTag=RB",
@@ -3722,7 +3722,7 @@ export default [
 				stats: {energy: 6, might: 5, power: 1},
 				tags: ["Yordle", "Demacia", "Poppy"],
 				keywords: [],
-				description: "You may spend 3 XP as an additional cost to play me. If you do, I cost :rb_energy_3: less.[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)[Tank] (I must be assigned combat damage first.)",
+				description: "You may spend 3 XP as an additional cost to play me. If you do, I cost [3] less.[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)[Tank] (I must be assigned combat damage first.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1a75c5322b2179e772af83b1fd16fed864c5bf24-744x1039.png?accountingTag=RB",
@@ -3794,7 +3794,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Jhin"],
 				keywords: [],
-				description: "When you play a spell, if you spent :rb_energy_4: or more, you may banish it. Then, if there are four spells banished with me, put each in its trash, channel 4 runes, and draw 1.",
+				description: "When you play a spell, if you spent [4] or more, you may banish it. Then, if there are four spells banished with me, put each in its trash, channel 4 runes, and draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d1e6947cf43a19488a2c31f71a4887aa0423a966-744x1039.png?accountingTag=RB",
@@ -3812,7 +3812,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: ["Jhin"],
 				keywords: [],
-				description: "[Repeat] — :rb_energy_1: / [A] / :rb_energy_1:[A] (You may pay each additional cost to repeat this spell's effect.)Choose one you haven't already chosen —Draw 1.Deal 2 to a unit at a battlefield.Deal 3 to a unit at a base.Give a unit at a battlefield -4 :rb_might: this turn.",
+				description: "[Repeat] — [1] / [A] / [1][A] (You may pay each additional cost to repeat this spell's effect.)Choose one you haven't already chosen —Draw 1.Deal 2 to a unit at a battlefield.Deal 3 to a unit at a base.Give a unit at a battlefield -4 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/01496068d9a8d5567672d802bd008297bd1fe8cc-744x1039.png?accountingTag=RB",
@@ -3830,7 +3830,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Rengar"],
 				keywords: [],
-				description: "When you play a unit, give a unit +1 :rb_might: this turn.",
+				description: "When you play a unit, give a unit +1 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b3d3085f62aee993b9f5b80d4659a88439da83be-744x1039.png?accountingTag=RB",
@@ -3866,7 +3866,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Pyke"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Return a friendly unit at a battlefield to its owner's hand. Play a Gold gear token exhausted. (It has &quot;[Reaction][>] Kill this, :rb_exhaust:: [Add] [A].&quot;)",
+				description: "[1], [E]: Return a friendly unit at a battlefield to its owner's hand. Play a Gold gear token exhausted. (It has &quot;[Reaction][>] Kill this, [E]: [Add] [A].&quot;)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8ca1bfde8d898a11a6abc73bbab8fc7092b0dcb4-744x1039.png?accountingTag=RB",
@@ -3884,7 +3884,7 @@ export default [
 				stats: {energy: 4, might: null, power: 1},
 				tags: ["Pyke"],
 				keywords: [],
-				description: "Kill a unit at a battlefield. Then, if it had 3 :rb_might: or less, you may play this from your trash for [A].",
+				description: "Kill a unit at a battlefield. Then, if it had 3 [M] or less, you may play this from your trash for [A].",
 				flavorText: "Keep a man down long enough, and the gutter becomes his kingdom.\"\r\n \r\n- Pyke",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/17d93a11a252287e3b0f4bbe32722ecc9469ec66-744x1039.png?accountingTag=RB",
@@ -3920,7 +3920,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Vi", "Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_energy_3:[A]. This ability's Energy cost is reduced by the Might of the unit you choose. (Pay the cost: Attach this to a unit you control.)",
+				description: "[Equip] [3][A]. This ability's Energy cost is reduced by the Might of the unit you choose. (Pay the cost: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/22755fc744a79fbdcce0ceadfe20d6d0a2b8624a-744x1039.png?accountingTag=RB",
@@ -3938,7 +3938,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Lillia"],
 				keywords: [],
-				description: ":rb_energy_4:, :rb_exhaust:: Play a ready 3 :rb_might: Sprite unit token with [Temporary]. This ability costs :rb_energy_1: less for each friendly unit with [Temporary].",
+				description: "[4], [E]: Play a ready 3 [M] Sprite unit token with [Temporary]. This ability costs [1] less for each friendly unit with [Temporary].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7e1554365120c5042947aef8bcac48a07445e9f3-744x1039.png?accountingTag=RB",
@@ -3974,7 +3974,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Master Yi"],
 				keywords: [],
-				description: "[Level 6][>] Your units have +1 :rb_might:. (While you have 6+ XP, get the effect.)[Level 11][>] Your units enter ready.",
+				description: "[Level 6][>] Your units have +1 [M]. (While you have 6+ XP, get the effect.)[Level 11][>] Your units enter ready.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ed9af55066593b4ee738b9529b847f2f738078e0-744x1039.png?accountingTag=RB",
@@ -4028,7 +4028,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Vex", "Shadow Isles"],
 				keywords: [],
-				description: "If you play me to a battlefield, I enter ready.[Action][>] :rb_energy_1:[A], :rb_exhaust:: [Stun] an enemy unit attacking here. (It doesn't deal combat damage this turn.)",
+				description: "If you play me to a battlefield, I enter ready.[Action][>] [1][A], [E]: [Stun] an enemy unit attacking here. (It doesn't deal combat damage this turn.)",
 				flavorText: "Another person to kill. Shadow, can you handle it?\"\r\n \r\n- Vex",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/690ee4937b3926810d8ed814afd14d4d9e98b13e-744x1039.png?accountingTag=RB",
@@ -4046,7 +4046,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ivern"],
 				keywords: [],
-				description: "When you conquer or hold, you may exhaust me to replace that battlefield with a Brush battlefield token. (Bird, Cat, Dog, Poro, and Ivern units have +1 :rb_might: in Brush. It can be swapped back when scored.)",
+				description: "When you conquer or hold, you may exhaust me to replace that battlefield with a Brush battlefield token. (Bird, Cat, Dog, Poro, and Ivern units have +1 [M] in Brush. It can be swapped back when scored.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a2ca02d26c1e95db03690729bd31113bda7e4140-744x1039.png?accountingTag=RB",
@@ -4064,7 +4064,7 @@ export default [
 				stats: {energy: 9, might: 8, power: 2},
 				tags: ["Ivern", "Ionia"],
 				keywords: [],
-				description: "I enter ready.Reduce my cost by :rb_energy_1: for each of the following tags among your units — Bird, Cat, Dog, and Poro.When I attack while your units have all 4 tags, [Stun] an enemy unit here. (It doesn't deal combat damage this turn.)",
+				description: "I enter ready.Reduce my cost by [1] for each of the following tags among your units — Bird, Cat, Dog, and Poro.When I attack while your units have all 4 tags, [Stun] an enemy unit here. (It doesn't deal combat damage this turn.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ada85b2a6076b60933831454d02a21da3654362c-744x1039.png?accountingTag=RB",
@@ -4082,7 +4082,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Diana"],
 				keywords: [],
-				description: "[Reaction][>] :rb_exhaust:: [Add] :rb_energy_1:. Spend this Energy only during showdowns. (Abilities that add resources can't be reacted to.)",
+				description: "[Reaction][>] [E]: [Add] [1]. Spend this Energy only during showdowns. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b00d922d62daca19190e13149fe3cf725c900330-744x1039.png?accountingTag=RB",
@@ -4100,7 +4100,7 @@ export default [
 				stats: {energy: 3, might: null, power: 1},
 				tags: ["Diana"],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Choose a battlefield where you have units. You may move up to one enemy unit to that battlefield. Then give enemy units there -2 :rb_might: this turn.",
+				description: "[Action] (Play on your turn or in showdowns.)Choose a battlefield where you have units. You may move up to one enemy unit to that battlefield. Then give enemy units there -2 [M] this turn.",
 				flavorText: "Night approaches!\"\r\n \r\n- Diana",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2eda8d4bbee47857b1916599b5c7d5fa7ca400dc-744x1039.png?accountingTag=RB",
@@ -4154,7 +4154,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Kha'Zix"],
 				keywords: [],
-				description: "When you win a combat, gain 1 XP.Spend 1 XP, :rb_exhaust:: [Buff] a unit.Spend 2 XP, :rb_exhaust:: Move an exhausted friendly unit from a battlefield to its base.",
+				description: "When you win a combat, gain 1 XP.Spend 1 XP, [E]: [Buff] a unit.Spend 2 XP, [E]: Move an exhausted friendly unit from a battlefield to its base.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a5db0b3340a189de1cf9d8174b11eb583f19ea28-744x1039.png?accountingTag=RB",
@@ -4190,7 +4190,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Poppy"],
 				keywords: [],
-				description: "When you hold, gain 1 XP.Spend 3 XP, :rb_exhaust:: Draw 1.",
+				description: "When you hold, gain 1 XP.Spend 3 XP, [E]: Draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ee1393b9bace7bfea4e87405b793bb5462305ed0-744x1039.png?accountingTag=RB",
@@ -4226,7 +4226,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When a player plays a spell, they may give a unit they control here +1 :rb_might: this turn.",
+				description: "When a player plays a spell, they may give a unit they control here +1 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7447b04d1e78192509e89e5ff3556368ea5c471a-1039x744.png?accountingTag=RB",
@@ -4280,7 +4280,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Units here with [Temporary] have [Shield]. (+1 :rb_might: while they're defenders.)",
+				description: "Units here with [Temporary] have [Shield]. (+1 [M] while they're defenders.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8cd4edde3e59c8edc8cdcea626fc443c5ed6e1f2-1039x744.png?accountingTag=RB",
@@ -4316,7 +4316,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "While a unit here is defending alone, it has -2 :rb_might:. (It's alone if there are no other friendly units here.)",
+				description: "While a unit here is defending alone, it has -2 [M]. (It's alone if there are no other friendly units here.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/83dbc88d462da85be9398c790e88ff13da8637d4-1039x744.png?accountingTag=RB",
@@ -4334,7 +4334,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "While you control this battlefield, when you play a spell, if you spent :rb_energy_4: or more, [Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
+				description: "While you control this battlefield, when you play a spell, if you spent [4] or more, [Predict]. (Look at the top card of your Main Deck. You may recycle it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a7905fb94abe453f05a4108cf5424fd1ca50f6de-1039x744.png?accountingTag=RB",
@@ -4370,7 +4370,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Units here have &quot;:rb_exhaust:: Gain 1 XP.&quot;",
+				description: "Units here have &quot;[E]: Gain 1 XP.&quot;",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0497a44ab302ea055b6f1f0d00a36c8023ed2344-1039x744.png?accountingTag=RB",
@@ -4388,7 +4388,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When a unit here is returned to a player's hand, that player may pay :rb_energy_1: to channel 1 rune exhausted.",
+				description: "When a unit here is returned to a player's hand, that player may pay [1] to channel 1 rune exhausted.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f6d0540edbabcdb7d5a6859ce2f820f744cb498c-1039x744.png?accountingTag=RB",
@@ -4442,7 +4442,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you conquer here, if you assigned 3 or more excess damage, play a 1 :rb_might: Bird unit token with [Deflect].",
+				description: "When you conquer here, if you assigned 3 or more excess damage, play a 1 [M] Bird unit token with [Deflect].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/234bb01e24892aefa024ae402f6ee7703ccdbbd4-1039x744.png?accountingTag=RB",
@@ -4460,7 +4460,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When a player plays a unit here, they may pay :rb_energy_1: to [Buff] it. (Give it a +1 :rb_might: buff if it doesn't have one.)",
+				description: "When a player plays a unit here, they may pay [1] to [Buff] it. (Give it a +1 [M] buff if it doesn't have one.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4191aa2fda9e754a7f5421edc94bd829f5795650-1039x744.png?accountingTag=RB",
@@ -4478,7 +4478,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you hold here, your non-token units cost :rb_energy_1: more to play this turn.",
+				description: "When you hold here, your non-token units cost [1] more to play this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9fc7b9a8294665881eece0dacaf3fc70e39f19e4-1039x744.png?accountingTag=RB",
@@ -4604,7 +4604,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Jhin"],
 				keywords: [],
-				description: "When you play a spell, if you spent :rb_energy_4: or more, you may banish it. Then, if there are four spells banished with me, put each in its trash, channel 4 runes, and draw 1.",
+				description: "When you play a spell, if you spent [4] or more, you may banish it. Then, if there are four spells banished with me, put each in its trash, channel 4 runes, and draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/47f10693258104e9373396165e335014bf5783a2-744x1039.png?accountingTag=RB",
@@ -4622,7 +4622,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Jhin"],
 				keywords: [],
-				description: "When you play a spell, if you spent :rb_energy_4: or more, you may banish it. Then, if there are four spells banished with me, put each in its trash, channel 4 runes, and draw 1.",
+				description: "When you play a spell, if you spent [4] or more, you may banish it. Then, if there are four spells banished with me, put each in its trash, channel 4 runes, and draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/94fb0a4944da2427ce615dd2c311a2c9bc781fd2-744x1039.png?accountingTag=RB",
@@ -4640,7 +4640,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Rengar"],
 				keywords: [],
-				description: "When you play a unit, give a unit +1 :rb_might: this turn.",
+				description: "When you play a unit, give a unit +1 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1f80a016015ebc77bd3d23ce471e364d70698279-744x1039.png?accountingTag=RB",
@@ -4658,7 +4658,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Rengar"],
 				keywords: [],
-				description: "When you play a unit, give a unit +1 :rb_might: this turn.",
+				description: "When you play a unit, give a unit +1 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9bfffdcab9899c4b0d94ab31d138edd7d2f8e4f1-744x1039.png?accountingTag=RB",
@@ -4676,7 +4676,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Pyke"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Return a friendly unit at a battlefield to its owner's hand. Play a Gold gear token exhausted.",
+				description: "[1], [E]: Return a friendly unit at a battlefield to its owner's hand. Play a Gold gear token exhausted.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b4095d98aff998fda5a08d4c32e97a2a66ccf1e6-744x1039.png?accountingTag=RB",
@@ -4694,7 +4694,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Pyke"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Return a friendly unit at a battlefield to its owner's hand. Play a Gold gear token exhausted.",
+				description: "[1], [E]: Return a friendly unit at a battlefield to its owner's hand. Play a Gold gear token exhausted.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/75ff8f0b0a4ea110dd4af5b14c23da804481387a-744x1039.png?accountingTag=RB",
@@ -4748,7 +4748,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Lillia"],
 				keywords: [],
-				description: ":rb_energy_4:, :rb_exhaust:: Play a ready 3 :rb_might: Sprite unit token with [Temporary]. This ability costs :rb_energy_1: less for each friendly unit with [Temporary].",
+				description: "[4], [E]: Play a ready 3 [M] Sprite unit token with [Temporary]. This ability costs [1] less for each friendly unit with [Temporary].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8d270600e9ec7472cbb51eb56ad0799b7be38c7b-744x1039.png?accountingTag=RB",
@@ -4766,7 +4766,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Lillia"],
 				keywords: [],
-				description: ":rb_energy_4:, :rb_exhaust:: Play a ready 3 :rb_might: Sprite unit token with [Temporary]. This ability costs :rb_energy_1: less for each friendly unit with [Temporary].",
+				description: "[4], [E]: Play a ready 3 [M] Sprite unit token with [Temporary]. This ability costs [1] less for each friendly unit with [Temporary].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5099aa2938091dfcc54277877e320a7f83aeeec1-744x1039.png?accountingTag=RB",
@@ -4784,7 +4784,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Master Yi"],
 				keywords: [],
-				description: "[Level 6][>] Your units have +1 :rb_might:.[Level 11][>] Your units enter ready.",
+				description: "[Level 6][>] Your units have +1 [M].[Level 11][>] Your units enter ready.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ebc612b2bf6003be8019930e059f0ac119997bc8-744x1039.png?accountingTag=RB",
@@ -4802,7 +4802,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Master Yi"],
 				keywords: [],
-				description: "[Level 6][>] Your units have +1 :rb_might:.[Level 11][>] Your units enter ready.",
+				description: "[Level 6][>] Your units have +1 [M].[Level 11][>] Your units enter ready.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/557e41d84ac36ffa2bf805deda159f45e0a815f9-744x1039.png?accountingTag=RB",
@@ -4892,7 +4892,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Diana"],
 				keywords: [],
-				description: "[Reaction][>] :rb_exhaust:: [Add] :rb_energy_1:. Spend this Energy only during showdowns.",
+				description: "[Reaction][>] [E]: [Add] [1]. Spend this Energy only during showdowns.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9782a99fcb36b09adc5d97cdc29595682f26220d-744x1039.png?accountingTag=RB",
@@ -4910,7 +4910,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Diana"],
 				keywords: [],
-				description: "[Reaction][>] :rb_exhaust:: [Add] :rb_energy_1:. Spend this Energy only during showdowns.",
+				description: "[Reaction][>] [E]: [Add] [1]. Spend this Energy only during showdowns.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8bd4006c34aa020211e501e3cb7ee14ab5b4c41f-744x1039.png?accountingTag=RB",
@@ -4964,7 +4964,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Kha'Zix"],
 				keywords: [],
-				description: "When you win a combat, gain 1 XP.Spend 1 XP, :rb_exhaust:: [Buff] a unit.Spend 2 XP, :rb_exhaust:: Move an exhausted friendly unit from a battlefield to its base.",
+				description: "When you win a combat, gain 1 XP.Spend 1 XP, [E]: [Buff] a unit.Spend 2 XP, [E]: Move an exhausted friendly unit from a battlefield to its base.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e3bff5dc4489376697823d056b42eba7b90566b6-744x1039.png?accountingTag=RB",
@@ -4982,7 +4982,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Kha'Zix"],
 				keywords: [],
-				description: "When you win a combat, gain 1 XP.Spend 1 XP, :rb_exhaust:: [Buff] a unit.Spend 2 XP, :rb_exhaust:: Move an exhausted friendly unit from a battlefield to its base.",
+				description: "When you win a combat, gain 1 XP.Spend 1 XP, [E]: [Buff] a unit.Spend 2 XP, [E]: Move an exhausted friendly unit from a battlefield to its base.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ffed0102adcae6fe01d173042487ea85ebe899bc-744x1039.png?accountingTag=RB",
@@ -5000,7 +5000,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Poppy"],
 				keywords: [],
-				description: "When you hold, gain 1 XP.Spend 3 XP, :rb_exhaust:: Draw 1.",
+				description: "When you hold, gain 1 XP.Spend 3 XP, [E]: Draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c2b3ae8c4beac316128a8b7b1704a221abedec8e-744x1039.png?accountingTag=RB",
@@ -5018,7 +5018,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Poppy"],
 				keywords: [],
-				description: "When you hold, gain 1 XP.Spend 3 XP, :rb_exhaust:: Draw 1.",
+				description: "When you hold, gain 1 XP.Spend 3 XP, [E]: Draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/41321ddb3b1c63492285d1c3d067ee42ade502e4-744x1039.png?accountingTag=RB",
@@ -5036,7 +5036,7 @@ export default [
 				stats: {energy: 10, might: 12, power: 3},
 				tags: ["The Void"],
 				keywords: [],
-				description: "As you play me, add the Baron Pit battlefield token to the board if it's not there already. If you do, I enter there.I can't be chosen by enemy spells and abilities.Other friendly units have +2 :rb_might:.",
+				description: "As you play me, add the Baron Pit battlefield token to the board if it's not there already. If you do, I enter there.I can't be chosen by enemy spells and abilities.Other friendly units have +2 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7e8d207a8057b97f9059ea6025a16e59229dc54d-744x1039.png?accountingTag=RB",
@@ -5060,7 +5060,7 @@ export default [
 				stats: {energy: 5, might: 3, power: null},
 				tags: ["Yordle", "Noxus"],
 				keywords: [],
-				description: "I enter ready.:rb_exhaust:: Give a unit +3 :rb_might: this turn.",
+				description: "I enter ready.[E]: Give a unit +3 [M] this turn.",
 				flavorText: "Don't you dare suggest it's a hairpiece.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/db48f8c1da0e4f9804ae94398f0864859db0002a-744x1039.png?accountingTag=RB",
@@ -5078,7 +5078,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Dragon", "Noxus"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/15ed971e4029a92b362a81ccadf309fb81e40b81-744x1039.png?accountingTag=RB",
@@ -5186,7 +5186,7 @@ export default [
 				stats: {energy: 5, might: 4, power: 1},
 				tags: ["Master Yi", "Ionia"],
 				keywords: [],
-				description: "While you have 8+ runes, I have +4 :rb_might:.",
+				description: "While you have 8+ runes, I have +4 [M].",
 				flavorText: "Anger gives motivation without purpose.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5508566c8f05f09492148faa803332a731095eb7-744x1039.png?accountingTag=RB",
@@ -5240,7 +5240,7 @@ export default [
 				stats: {energy: 4, might: 2, power: null},
 				tags: ["Lux"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_energy_2:. Spend this Energy only to play spells.",
+				description: "[E]: [Reaction] — [Add] [2]. Spend this Energy only to play spells.",
 				flavorText: "I've been hiding my light long enough.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b9778ec229e052268ea66213ca2dbf60612b2862-744x1039.png?accountingTag=RB",
@@ -5258,7 +5258,7 @@ export default [
 				stats: {energy: 6, might: 5, power: 1},
 				tags: ["Lux", "Demacia"],
 				keywords: [],
-				description: "When you play a spell that costs :rb_energy_5: or more, give me +3 :rb_might: this turn.",
+				description: "When you play a spell that costs [5] or more, give me +3 [M] this turn.",
 				flavorText: "No more holding back!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a0d10edf30abb6fde21f5d386e9a7db3c1b0a098-744x1039.png?accountingTag=RB",
@@ -5276,7 +5276,7 @@ export default [
 				stats: {energy: 6, might: 5, power: 1},
 				tags: ["Elite", "Garen", "Demacia"],
 				keywords: [],
-				description: "[Assault 2], [Shield 2] (+2 :rb_might: while I'm an attacker or defender.)",
+				description: "[Assault 2], [Shield 2] (+2 [M] while I'm an attacker or defender.)",
 				flavorText: "Fear is the first of many foes.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/67c22dc29a7a28dabe0f169a7848c25bef1fbda4-744x1039.png?accountingTag=RB",
@@ -5312,7 +5312,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Ready a unit.",
+				description: "[Repeat] [2] (You may pay the additional cost to repeat this spell's effect.)Ready a unit.",
 				flavorText: "Art is not always appreciated in its critic's lifetime.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4a636fcd682b32b41a4886c7383e781414139adb-744x1039.png?accountingTag=RB",
@@ -5348,7 +5348,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_fury: (:rb_rune_fury:: Attach this to a unit you control.)",
+				description: "[Equip] [R] ([R]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9498c8146745124fc45a7b55184854a9c9da21f5-744x1039.png?accountingTag=RB",
@@ -5420,7 +5420,7 @@ export default [
 				stats: {energy: 6, might: 5, power: 1},
 				tags: ["Elite", "Garen", "Demacia"],
 				keywords: [],
-				description: "Other friendly units have +1 :rb_might: here.",
+				description: "Other friendly units have +1 [M] here.",
 				flavorText: "For Demacia!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cbf2c12d69a86566e4cda07050b2d4495e40187e-744x1039.png?accountingTag=RB",
@@ -5438,7 +5438,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Piltover"],
 				keywords: [],
-				description: "You may pay :rb_energy_1::rb_rune_fury: as an additional cost to play me.When you play me, if you paid the additional cost, deal 2 to a unit at a battlefield.",
+				description: "You may pay [1][R] as an additional cost to play me.When you play me, if you paid the additional cost, deal 2 to a unit at a battlefield.",
 				flavorText: "The bigger the bangs, the less you have to aim.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9efe5a8322a90822650ff18578cd5e1a8561fac5-744x1039.png?accountingTag=RB",
@@ -5456,7 +5456,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Dog", "Noxus"],
 				keywords: [],
-				description: "[Hunt 2] (When I conquer or hold, gain 2 XP.)[Level 3][>] I have +1 :rb_might: and enter ready. (While you have 3+ XP, get the effect.)",
+				description: "[Hunt 2] (When I conquer or hold, gain 2 XP.)[Level 3][>] I have +1 [M] and enter ready. (While you have 3+ XP, get the effect.)",
 				flavorText: "Sit. Stay. Burn.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f69940824f8ce62a479df28988dcbdf6ea6d3960-744x1039.png?accountingTag=RB",
@@ -5528,7 +5528,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Master Yi"],
 				keywords: [],
-				description: "While a friendly unit defends alone, it gets +2 :rb_might:.",
+				description: "While a friendly unit defends alone, it gets +2 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8231ced23eaf22ca3bf62ec8cb86b83a3e222da6-744x1039.png?accountingTag=RB",
@@ -5546,7 +5546,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Master Yi"],
 				keywords: [],
-				description: "While a friendly unit defends alone, it gets +2 :rb_might:.",
+				description: "While a friendly unit defends alone, it gets +2 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8231ced23eaf22ca3bf62ec8cb86b83a3e222da6-744x1039.png?accountingTag=RB",
@@ -5582,7 +5582,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Lux"],
 				keywords: [],
-				description: "When you play a spell that costs :rb_energy_5: or more, draw 1.",
+				description: "When you play a spell that costs [5] or more, draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/44885d811b70621b188d9813b2b10b5cff1b81e6-744x1039.png?accountingTag=RB",
@@ -5600,7 +5600,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Lux"],
 				keywords: [],
-				description: "When you play a spell that costs :rb_energy_5: or more, draw 1.",
+				description: "When you play a spell that costs [5] or more, draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/44885d811b70621b188d9813b2b10b5cff1b81e6-744x1039.png?accountingTag=RB",
@@ -5690,7 +5690,7 @@ export default [
 				stats: {energy: 5, might: null, power: 1},
 				tags: ["Garen"],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Give friendly units +2 :rb_might: this turn.",
+				description: "[Action] (Play on your turn or in showdowns.)Give friendly units +2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/986782271be078c184a8d1c196e375106459c6c5-744x1039.png?accountingTag=RB",
@@ -5708,7 +5708,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
+				description: "[Equip] [G] ([G]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/49a24d4c6d770ed233c4a69bf8d87385bfc997d8-744x1039.png?accountingTag=RB",
@@ -5744,7 +5744,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Cat", "Bilgewater"],
 				keywords: [],
-				description: "[Shield 2] (+2 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)",
+				description: "[Shield 2] (+2 [M] while I'm a defender.)[Tank] (I must be assigned combat damage first.)",
 				flavorText: "One of the few cats that can scratch its own belly.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/20276519677a4d1ebe230aaad7692588e1e8d046-744x1039.png?accountingTag=RB",
@@ -5780,7 +5780,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
+				description: "[Equip] [G] ([G]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/519361230cb8554cdf0f5dd795e115ffbb5bb932-744x1039.png?accountingTag=RB",
@@ -5798,7 +5798,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Dog", "Ixtal"],
 				keywords: [],
-				description: "[Hunt 2] (When I conquer or hold, gain 2 XP.)[Level 3][>] I have +1 :rb_might: and [Deflect]. (While you have 3+ XP, get the effect. Opponents must pay [A] to choose a [Deflect] unit with a spell or ability.)",
+				description: "[Hunt 2] (When I conquer or hold, gain 2 XP.)[Level 3][>] I have +1 [M] and [Deflect]. (While you have 3+ XP, get the effect. Opponents must pay [A] to choose a [Deflect] unit with a spell or ability.)",
 				flavorText: "Sometimes you gotta stomp some moss.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0ea32d0f6f49c0b48b1ea2cc98fe0a3c540bc9db-744x1039.png?accountingTag=RB",
@@ -5834,7 +5834,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Poro"],
 				keywords: [],
-				description: "[Shield] (+1 :rb_might: while I'm a defender.)",
+				description: "[Shield] (+1 [M] while I'm a defender.)",
 				flavorText: "It suits him.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c4a5d7178e783c3975749271b6df333a82a2328a-744x1039.png?accountingTag=RB",
@@ -5852,7 +5852,7 @@ export default [
 				stats: {energy: 3, might: 2, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "While I'm attacking or defending alone, I have +2 :rb_might:.",
+				description: "While I'm attacking or defending alone, I have +2 [M].",
 				flavorText: "Each drop an ocean of possibilities.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5b38a7758705bd739caf07b5c0c49482a4a23015-744x1039.png?accountingTag=RB",
@@ -5870,7 +5870,7 @@ export default [
 				stats: {energy: 3, might: 1, power: 1},
 				tags: ["Fae", "Cat", "Bandle City", "Yuumi"],
 				keywords: [],
-				description: "When I attack or defend, give one of your other units here +3 :rb_might: and [Tank] this turn. (It must be assigned combat damage first.)",
+				description: "When I attack or defend, give one of your other units here +3 [M] and [Tank] this turn. (It must be assigned combat damage first.)",
 				flavorText: "Who's ready to risk our lives, defeat our foes, and maybe knock over some cups?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/588ddfeb01ab7b37110d8a7e656cf9f35530ce4e-744x1039.png?accountingTag=RB",
@@ -5888,7 +5888,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit +2 :rb_might: this turn. Draw 1.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit +2 [M] this turn. Draw 1.",
 				flavorText: "A blade is only as sharp as the one who wields it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8b9613970b505e3ad6abe2d51d091778314a7d48-744x1039.png?accountingTag=RB",
@@ -5906,7 +5906,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Fae", "Lillia", "Ionia"],
 				keywords: [],
-				description: "When you play a token unit, give me +1 :rb_might: this turn.Your token units have [Tank]. (They must be assigned combat damage first.)",
+				description: "When you play a token unit, give me +1 [M] this turn.Your token units have [Tank]. (They must be assigned combat damage first.)",
 				flavorText: "Nothing cries louder than loneliness.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/daa5fe15e0a1c14c8dbb8f858d8a6d444ea6096e-744x1039.png?accountingTag=RB",
@@ -5924,7 +5924,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Draw 1.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] [2] (You may pay the additional cost to repeat this spell's effect.)Draw 1.",
 				flavorText: "A true artist reveres both canvas and brush.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d76418eabcddbea148f3331913223b79a39aabda-744x1039.png?accountingTag=RB",
@@ -5942,7 +5942,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)[Equip] :rb_rune_mind: (:rb_rune_mind:: Attach this to a unit you control.)",
+				description: "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)[Equip] [B] ([B]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fe02bf01609ff2e6cc6fa8fbd578fd596ab5cb84-744x1039.png?accountingTag=RB",
@@ -5960,7 +5960,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Freljord"],
 				keywords: [],
-				description: "When I attack, you may pay :rb_energy_1: to give a unit here -1 :rb_might: this turn.",
+				description: "When I attack, you may pay [1] to give a unit here -1 [M] this turn.",
 				flavorText: "He doesn't bother to shout \"Freeze!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c14db2ae064ccee80d8ec373f9fe9b4f44776e3e-744x1039.png?accountingTag=RB",
@@ -5996,7 +5996,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Dog", "Freljord"],
 				keywords: [],
-				description: "You may pay :rb_rune_mind: as an additional cost to play me.When you play me, if you paid the additional cost, give a unit -2 :rb_might: this turn.",
+				description: "You may pay [B] as an additional cost to play me.When you play me, if you paid the additional cost, give a unit -2 [M] this turn.",
 				flavorText: "In the Freljord, cuteness is just another survival tactic.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0b5f1f6ed65e070d2878b8aa21fd95e43688fc1d-744x1039.png?accountingTag=RB",
@@ -6014,7 +6014,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Dog", "Ionia"],
 				keywords: [],
-				description: "[Hunt 2] (When I conquer or hold, gain 2 XP.)[Level 3][>] I have +1 :rb_might: and [Ganking]. (While you have 3+ XP, get the effect. A [Ganking] unit can move from battlefield to battlefield.)",
+				description: "[Hunt 2] (When I conquer or hold, gain 2 XP.)[Level 3][>] I have +1 [M] and [Ganking]. (While you have 3+ XP, get the effect. A [Ganking] unit can move from battlefield to battlefield.)",
 				flavorText: "An unconventional choice of pet.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3f314cea0c05d2ea274a81d723299e4e20b2ebde-744x1039.png?accountingTag=RB",
@@ -6032,7 +6032,7 @@ export default [
 				stats: {energy: 4, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "This costs :rb_energy_2: less if you control a Mech.Play a 3 :rb_might: Mech unit token to your base.Draw 1.",
+				description: "This costs [2] less if you control a Mech.Play a 3 [M] Mech unit token to your base.Draw 1.",
 				flavorText: "When in doubt, make more mechs.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/78783854dd9372138e599affbe96a269d8908c29-744x1039.png?accountingTag=RB",
@@ -6050,7 +6050,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Lee Sin", "Ionia"],
 				keywords: [],
-				description: "[Shield] (+1 :rb_might: while I'm a defender.):rb_exhaust:: Buff me. (I get a +1 :rb_might: buff.)I can have any number of buffs.",
+				description: "[Shield] (+1 [M] while I'm a defender.)[E]: Buff me. (I get a +1 [M] buff.)I can have any number of buffs.",
 				flavorText: "Let us see whose spirit is stronger.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/70734e8833bfbbdb2736407c449f418553e3cf7c-744x1039.png?accountingTag=RB",
@@ -6068,7 +6068,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Reaction] (Play any time, even before spells and abilities resolve.)Draw 2.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Reaction] (Play any time, even before spells and abilities resolve.)Draw 2.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/198d950d3933972273ec714e9264cbd563ea6920-744x1039.png?accountingTag=RB",
@@ -6086,7 +6086,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_mind: (:rb_rune_mind:: Attach this to a unit you control.)",
+				description: "[Equip] [B] ([B]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7b8d96e128c19c5ff368119a60759cffa644e942-744x1039.png?accountingTag=RB",
@@ -6140,7 +6140,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "[Reaction][>] :rb_exhaust:: [Add] :rb_energy_1:. (Abilities that add resources can't be reacted to.)",
+				description: "[Reaction][>] [E]: [Add] [1]. (Abilities that add resources can't be reacted to.)",
 				flavorText: "The Dragon's secrets are not mine to share. I can only share the gifts that it has given me.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2065a3b0fef9779fed8a3d42202606a31acf59ff-744x1039.png?accountingTag=RB",
@@ -6158,7 +6158,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)",
+				description: "[Equip] [O] ([O]: Attach this to a unit you control.)",
 				flavorText: "I guess I could...throw it at someone - Miss Fortune",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/53fc0c307c83871c9755a496764ef7d6aa11f510-744x1039.png?accountingTag=RB",
@@ -6176,7 +6176,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Pirate", "Bilgewater"],
 				keywords: [],
-				description: "You may pay :rb_energy_1: as an additional cost to play me.When you play me, if you paid the additional cost, buff me. (Give me a +1 :rb_might: buff if I don't already have one.)",
+				description: "You may pay [1] as an additional cost to play me.When you play me, if you paid the additional cost, buff me. (Give me a +1 [M] buff if I don't already have one.)",
 				flavorText: "Do, monkey.\" - Nilah",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0ef7f1de2bc7845f5e3dace1634c6c58a8765452-744x1039.png?accountingTag=RB",
@@ -6212,7 +6212,7 @@ export default [
 				stats: {energy: 7, might: 7, power: 1},
 				tags: ["Fae", "Dragon", "Bandle City"],
 				keywords: [],
-				description: "When you play me, buff up to four friendly units. (Give each a +1 :rb_might: buff if it doesn't have one.)When you spend a buff, play a Gold gear token exhausted.",
+				description: "When you play me, buff up to four friendly units. (Give each a +1 [M] buff if it doesn't have one.)When you spend a buff, play a Gold gear token exhausted.",
 				flavorText: "The fae who guard the boundary of the spirit realm take their job as seriously as they take anything.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/76aeda6bf59acee92b512f4a0272892673cfce90-744x1039.png?accountingTag=RB",
@@ -6230,7 +6230,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Noxus"],
 				keywords: [],
-				description: "When you play a spell, give me +1 :rb_might: this turn.",
+				description: "When you play a spell, give me +1 [M] this turn.",
 				flavorText: "A little knowledge is a dangerous thing. A lot of knowledge is awesome.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b98b1ff793b6eb263957258742cc83d50fda6537-744x1039.png?accountingTag=RB",
@@ -6284,7 +6284,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_energy_1::rb_rune_body: (:rb_energy_1::rb_rune_body:: Attach this to a unit you control.)",
+				description: "[Equip] [1][O] ([1][O]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c3e4d8c3f3975a7429428ac90e5ebcffa1f8e5a9-744x1039.png?accountingTag=RB",
@@ -6302,7 +6302,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)",
+				description: "[Equip] [P] ([P]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/054df5a11967b768430a2f763e1b5d4dbbac3b50-744x1039.png?accountingTag=RB",
@@ -6338,7 +6338,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Fae", "Ionia"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_chaos: as an additional cost to have me enter ready.)When I move to a battlefield, gain 2 XP.",
+				description: "[Accelerate] (You may pay [1][P] as an additional cost to have me enter ready.)When I move to a battlefield, gain 2 XP.",
 				flavorText: "Dreams themselves can dream as well.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c9bb7a8f5a1426a4af9843f2473ee6cc37dd24bd-744x1039.png?accountingTag=RB",
@@ -6392,7 +6392,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Cat", "Ixtal"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)",
 				flavorText: "Oh it's so cute!\" -Common last words",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/156a66d7d44165367cc5a470fb35c86f337f9429-744x1039.png?accountingTag=RB",
@@ -6410,7 +6410,7 @@ export default [
 				stats: {energy: 2, might: 1, power: 1},
 				tags: ["Poro", "Shadow Isles"],
 				keywords: [],
-				description: "When I attack, you may pay :rb_energy_1: to move an enemy unit here to its base.",
+				description: "When I attack, you may pay [1] to move an enemy unit here to its base.",
 				flavorText: "Are you going to be the one to tell him he's not scary?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7f2a623a83556bafebfbe7cb280bdedcfe116531-744x1039.png?accountingTag=RB",
@@ -6446,7 +6446,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Pirate", "Bilgewater"],
 				keywords: [],
-				description: "When I move from a battlefield, give me +2 :rb_might: this turn.",
+				description: "When I move from a battlefield, give me +2 [M] this turn.",
 				flavorText: "No room for fear on the boat.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f50d32a202375bf09781ae578db107abe84937e0-744x1039.png?accountingTag=RB",
@@ -6464,7 +6464,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_order: (:rb_rune_order:: Attach this to a unit you control.)",
+				description: "[Equip] [Y] ([Y]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fc3e26e0e4ff94de360f1163c41641daf81c1900-744x1039.png?accountingTag=RB",
@@ -6500,7 +6500,7 @@ export default [
 				stats: {energy: 4, might: 3, power: null},
 				tags: ["Demacia"],
 				keywords: [],
-				description: "[Assault 2] (+2 :rb_might: while I'm an attacker.)",
+				description: "[Assault 2] (+2 [M] while I'm an attacker.)",
 				flavorText: "No my old foil, this isn't revenge- it's épéeback.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7b3410a1d9ee175c4853453798bcd5f09d2e217c-744x1039.png?accountingTag=RB",
@@ -6518,7 +6518,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Poro", "Freljord"],
 				keywords: [],
-				description: ":rb_exhaust:: Play two :rb_energy_1: :rb_might: Bird unit tokens with [Deflect]. Use this ability only while I'm at a battlefield. (Opponents must pay [A] to choose a [Deflect] unit with a spell or ability.)",
+				description: "[E]: Play two [1] [M] Bird unit tokens with [Deflect]. Use this ability only while I'm at a battlefield. (Opponents must pay [A] to choose a [Deflect] unit with a spell or ability.)",
 				flavorText: "How? Magic. And conditioner.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/36900508e2ce61196450a4bf7e27722ae36521d9-744x1039.png?accountingTag=RB",
@@ -6536,7 +6536,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Elite", "Demacia"],
 				keywords: [],
-				description: "[Deathknell] — If I was [Mighty], draw 2. (When I die, get the effect. I'm Mighty while I have 5+ :rb_might:.)",
+				description: "[Deathknell] — If I was [Mighty], draw 2. (When I die, get the effect. I'm Mighty while I have 5+ [M].)",
 				flavorText: "She gave everything she had for the cause- even her legacy.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2a227ef7494af6409000c13c4f3d1094cec3a3a8-744x1039.png?accountingTag=RB",
@@ -6554,7 +6554,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "This costs :rb_energy_2: less if you choose a Bird, Cat, Dog, or Poro.Play a unit with cost no more than :rb_energy_2: and no more than [A] from your trash, ignoring its cost.",
+				description: "This costs [2] less if you choose a Bird, Cat, Dog, or Poro.Play a unit with cost no more than [2] and no more than [A] from your trash, ignoring its cost.",
 				flavorText: "We would call them all back, if we could.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/703b85f8284ed13865012289d03602e2cd24f4b2-744x1039.png?accountingTag=RB",
@@ -6590,7 +6590,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Jayce", "Piltover"],
 				keywords: [],
-				description: "When you play me, you may kill a friendly gear. If you do, you may play a gear with Energy cost no more than :rb_energy_7: from hand this turn, ignoring its Energy cost.",
+				description: "When you play me, you may kill a friendly gear. If you do, you may play a gear with Energy cost no more than [7] from hand this turn, ignoring its Energy cost.",
 				flavorText: "This is what the future looks like.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/be6d6a608c5bee9d2012e24d9e6f6f1d1977a37a-744x1039.png?accountingTag=RB",
@@ -6626,7 +6626,7 @@ export default [
 				stats: {energy: 6, might: 5, power: 1},
 				tags: ["Yordle", "Demacia", "Poppy"],
 				keywords: [],
-				description: "You may spend 3 XP as an additional cost to play me. If you do, I cost :rb_energy_3: less.[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)[Tank] (I must be assigned combat damage first.)",
+				description: "You may spend 3 XP as an additional cost to play me. If you do, I cost [3] less.[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)[Tank] (I must be assigned combat damage first.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1a75c5322b2179e772af83b1fd16fed864c5bf24-744x1039.png?accountingTag=RB",
@@ -6662,7 +6662,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Rumble"],
 				keywords: [],
-				description: "Your Mechs have [Shield]. (+1 :rb_might: while they're defenders.)",
+				description: "Your Mechs have [Shield]. (+1 [M] while they're defenders.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f311115e4c527ce82010596ce462d4050a9201b2-744x1039.png?accountingTag=RB",
@@ -6680,7 +6680,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Lucian"],
 				keywords: [],
-				description: "Your Equipment each give [Assault]. (+1 :rb_might: while equipped unit is an attacker.)",
+				description: "Your Equipment each give [Assault]. (+1 [M] while equipped unit is an attacker.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/450cfb71b8890904d48b37a24bbdc78f8d849614-744x1039.png?accountingTag=RB",
@@ -6752,7 +6752,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ornn"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] [A]. Use only to play gear or use gear abilities. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [A]. Use only to play gear or use gear abilities. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ed58d654034d545e54c85d836f3a6552772dd75b-744x1039.png?accountingTag=RB",
@@ -6770,7 +6770,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Jax"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Attach a detached Equipment you control to a unit you control.:rb_exhaust:: Attach an attached Equipment you control to a unit you control.",
+				description: "[1], [E]: Attach a detached Equipment you control to a unit you control.[E]: Attach an attached Equipment you control to a unit you control.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c6ddf49d7249bc8ac194fd9b194bfcb8857a4466-744x1039.png?accountingTag=RB",
@@ -6806,7 +6806,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Irelia"],
 				keywords: [],
-				description: "When you choose a friendly unit, you may exhaust me and pay [A] to ready it.When you conquer, you may pay :rb_energy_1: to ready me.",
+				description: "When you choose a friendly unit, you may exhaust me and pay [A] to ready it.When you conquer, you may pay [1] to ready me.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/656ef2d1724b818e9e737ec5dcce923de067a316-744x1039.png?accountingTag=RB",
@@ -6824,7 +6824,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Azir"],
 				keywords: [],
-				description: "Your Sand Soldiers have [Weaponmaster].:rb_energy_1:, :rb_exhaust:: Play a 2 :rb_might: Sand Soldier unit token to your base. Use only if you've played an Equipment this turn.",
+				description: "Your Sand Soldiers have [Weaponmaster].[1], [E]: Play a 2 [M] Sand Soldier unit token to your base. Use only if you've played an Equipment this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0472274c49f6540858758ebf9bd2f107a601541a-744x1039.png?accountingTag=RB",
@@ -6842,7 +6842,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Yordle", "Teemo", "Bandle City"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When you play me, give me +3 :rb_might: this turn.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When you play me, give me +3 [M] this turn.",
 				flavorText: "Reporting in!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ca8a2e11dd78dd09ad1c9ad3a23e5699254b947e-744x1039.png?accountingTag=RB",
@@ -6860,7 +6860,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ezreal"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — Draw 1. Use only if you've chosen enemy units and/or gear twice this turn with spells or unit abilities.",
+				description: "[E]: [Reaction] — Draw 1. Use only if you've chosen enemy units and/or gear twice this turn with spells or unit abilities.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d0e143d9edbc14971b2a7b463b3c25b2b6a0c098-744x1039.png?accountingTag=RB",
@@ -6878,7 +6878,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Renata Glasc"],
 				keywords: [],
-				description: "When you or an ally hold, you may exhaust me to play a Gold gear token exhausted.While your score is within 3 points of the Victory Score, your Gold [ADD] an additional :rb_energy_1:.",
+				description: "When you or an ally hold, you may exhaust me to play a Gold gear token exhausted.While your score is within 3 points of the Victory Score, your Gold [ADD] an additional [1].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4bd289c281ad64229061ff909abf88c12a574833-744x1039.png?accountingTag=RB",
@@ -6896,7 +6896,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Jinx", "Zaun"],
 				keywords: [],
-				description: "When you discard one or more cards, ready me and give me +1 :rb_might: this turn.",
+				description: "When you discard one or more cards, ready me and give me +1 [M] this turn.",
 				flavorText: "Rules are made to be broken. Like buildings! Or people!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a7fe105f40df66525be51bd18e25506945a7b027-744x1039.png?accountingTag=RB",
@@ -6932,7 +6932,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Fiora"],
 				keywords: [],
-				description: "When one of your units becomes [Mighty], you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ :rb_might:.)",
+				description: "When one of your units becomes [Mighty], you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ [M].)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/37064aa79c13316b5dd28f0a2b054821a43f6650-744x1039.png?accountingTag=RB",
@@ -6950,7 +6950,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Poro"],
 				keywords: [],
-				description: "[Assault] (+1 :rb_might: while I'm an attacker.)",
+				description: "[Assault] (+1 [M] while I'm an attacker.)",
 				flavorText: "Don't worry, they love it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/41dee7ec46124c261352595cfbd8a6d38d32b947-744x1039.png?accountingTag=RB",
@@ -6968,7 +6968,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Elite", "Demacia"],
 				keywords: [],
-				description: "[Legion] — When you play me, play two 1 :rb_might: Recruit unit tokens here. (Get the effect if you've played another card this turn.)",
+				description: "[Legion] — When you play me, play two 1 [M] Recruit unit tokens here. (Get the effect if you've played another card this turn.)",
 				flavorText: "Soldiers, to me!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f0c9ddb2af7a0d4991938cf1e3058eb0f5d2e357-744x1039.png?accountingTag=RB",
@@ -7004,7 +7004,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Viktor", "Zaun"],
 				keywords: [],
-				description: "When another non-Recruit unit you control dies, play a 1 :rb_might: Recruit unit token into your base.",
+				description: "When another non-Recruit unit you control dies, play a 1 [M] Recruit unit token into your base.",
 				flavorText: "I am the first of many.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ab390d6d074c3f07abba000cc166faa1796ec464-744x1039.png?accountingTag=RB",
@@ -7022,7 +7022,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Kai'Sa"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] [A]. Use only to play spells. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [A]. Use only to play spells. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a576472c7bb00f475882ac814e1d8f9be233b402-744x1040.png?accountingTag=RB",
@@ -7040,7 +7040,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Kai'Sa"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] [A]. Use only to play spells. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [A]. Use only to play spells. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a576472c7bb00f475882ac814e1d8f9be233b402-744x1040.png?accountingTag=RB",
@@ -7058,7 +7058,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Volibear"],
 				keywords: [],
-				description: "When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ :rb_might:.)",
+				description: "When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ [M].)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f1842ef373434db3e8109d8959832f9d184866c3-744x1040.png?accountingTag=RB",
@@ -7076,7 +7076,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Volibear"],
 				keywords: [],
-				description: "When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ :rb_might:.)",
+				description: "When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ [M].)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f1842ef373434db3e8109d8959832f9d184866c3-744x1040.png?accountingTag=RB",
@@ -7130,7 +7130,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Darius"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction], [Legion] — [Add] :rb_energy_1:. (Abilities that add resources can't be reacted to. Get the effect if you've played a card this turn.)",
+				description: "[E]: [Reaction], [Legion] — [Add] [1]. (Abilities that add resources can't be reacted to. Get the effect if you've played a card this turn.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5b9a904048b7fb936377844ec2d31564b7fedf81-744x1039.png?accountingTag=RB",
@@ -7148,7 +7148,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Darius"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction], [Legion] — [Add] :rb_energy_1:. (Abilities that add resources can't be reacted to. Get the effect if you've played a card this turn.)",
+				description: "[E]: [Reaction], [Legion] — [Add] [1]. (Abilities that add resources can't be reacted to. Get the effect if you've played a card this turn.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5b9a904048b7fb936377844ec2d31564b7fedf81-744x1039.png?accountingTag=RB",
@@ -7166,7 +7166,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ahri"],
 				keywords: [],
-				description: "When an enemy unit attacks a battlefield you control, give it -1 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "When an enemy unit attacks a battlefield you control, give it -1 [M] this turn, to a minimum of 1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fbce641f5e4d8cdf2956e8ead5884b6cd3ccd90d-744x1040.png?accountingTag=RB",
@@ -7184,7 +7184,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ahri"],
 				keywords: [],
-				description: "When an enemy unit attacks a battlefield you control, give it -1 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "When an enemy unit attacks a battlefield you control, give it -1 [M] this turn, to a minimum of 1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fbce641f5e4d8cdf2956e8ead5884b6cd3ccd90d-744x1040.png?accountingTag=RB",
@@ -7202,7 +7202,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Lee Sin"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "[1], [E]: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ffe064e002d3b9a366748eb85102a769b2545835-744x1039.png?accountingTag=RB",
@@ -7220,7 +7220,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Lee Sin"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "[1], [E]: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ffe064e002d3b9a366748eb85102a769b2545835-744x1039.png?accountingTag=RB",
@@ -7238,7 +7238,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Yasuo"],
 				keywords: [],
-				description: ":rb_energy_2:, :rb_exhaust:: Move a friendly unit to or from its base.",
+				description: "[2], [E]: Move a friendly unit to or from its base.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/68e4d3230b785738ae9d86f780f7f5607ef11807-744x1040.png?accountingTag=RB",
@@ -7256,7 +7256,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Yasuo"],
 				keywords: [],
-				description: ":rb_energy_2:, :rb_exhaust:: Move a friendly unit to or from its base.",
+				description: "[2], [E]: Move a friendly unit to or from its base.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/68e4d3230b785738ae9d86f780f7f5607ef11807-744x1040.png?accountingTag=RB",
@@ -7274,7 +7274,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Leona"],
 				keywords: [],
-				description: "When you stun one or more enemy units, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "When you stun one or more enemy units, buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/822b8bc7987a47498550708b18ef166b121fd620-744x1039.png?accountingTag=RB",
@@ -7292,7 +7292,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Leona"],
 				keywords: [],
-				description: "When you stun one or more enemy units, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "When you stun one or more enemy units, buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/822b8bc7987a47498550708b18ef166b121fd620-744x1039.png?accountingTag=RB",
@@ -7310,7 +7310,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Teemo"],
 				keywords: [],
-				description: "You may pay :rb_energy_1: to hide a card with [Hidden] instead of [A].:rb_energy_1:, :rb_exhaust:: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
+				description: "You may pay [1] to hide a card with [Hidden] instead of [A].[1], [E]: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9723181e3392bb61c2aabc804a44f7b0558cedf1-744x1039.png?accountingTag=RB",
@@ -7328,7 +7328,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Teemo"],
 				keywords: [],
-				description: "You may pay :rb_energy_1: to hide a card with [Hidden] instead of [A].:rb_energy_1:, :rb_exhaust:: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
+				description: "You may pay [1] to hide a card with [Hidden] instead of [A].[1], [E]: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9723181e3392bb61c2aabc804a44f7b0558cedf1-744x1039.png?accountingTag=RB",
@@ -7346,7 +7346,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Viktor"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Play a 1 :rb_might: Recruit unit token.",
+				description: "[1], [E]: Play a 1 [M] Recruit unit token.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/913236dabf1e4f71650bbba46870fff8163e2eff-744x1039.png?accountingTag=RB",
@@ -7364,7 +7364,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Viktor"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Play a 1 :rb_might: Recruit unit token.",
+				description: "[1], [E]: Play a 1 [M] Recruit unit token.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/913236dabf1e4f71650bbba46870fff8163e2eff-744x1039.png?accountingTag=RB",
@@ -7382,7 +7382,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Miss Fortune"],
 				keywords: [],
-				description: ":rb_exhaust:: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)",
+				description: "[E]: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cc11261fcdbf0851525030bd9e835b718efad3bc-744x1040.png?accountingTag=RB",
@@ -7400,7 +7400,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Miss Fortune"],
 				keywords: [],
-				description: ":rb_exhaust:: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)",
+				description: "[E]: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cc11261fcdbf0851525030bd9e835b718efad3bc-744x1040.png?accountingTag=RB",
@@ -7478,7 +7478,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Caitlyn", "Piltover"],
 				keywords: [],
-				description: "I must be assigned combat damage last.:rb_exhaust:: Deal damage equal to my Might to a unit at a battlefield. Use this ability only while I'm at a battlefield.",
+				description: "I must be assigned combat damage last.[E]: Deal damage equal to my Might to a unit at a battlefield. Use this ability only while I'm at a battlefield.",
 				flavorText: "Just get me a clear shot.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/51e6bacf25d19e7c391367ff107efb9e0b9f1ff5-744x1039.png?accountingTag=RB",
@@ -7496,7 +7496,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Yordle", "Heimerdinger", "Piltover"],
 				keywords: [],
-				description: "I have all :rb_exhaust: abilities of all friendly legends, units, and gear.",
+				description: "I have all [E] abilities of all friendly legends, units, and gear.",
 				flavorText: "Every action sparks a reaction.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5b14a5f9d567c90329c151a8cc72d870b47b1434-744x1039.png?accountingTag=RB",
@@ -7532,7 +7532,7 @@ export default [
 				stats: {energy: 2, might: 3, power: 1},
 				tags: ["Vi"],
 				keywords: [],
-				description: "[Ganking]Recycle 1 from your trash: Give me +1 :rb_might: this turn.",
+				description: "[Ganking]Recycle 1 from your trash: Give me +1 [M] this turn.",
 				flavorText: "Everybody dies. Might as well go down swinging.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/dff596efc7413bfdd9cc8e667c46bd4228447de5-744x1039.png?accountingTag=RB",
@@ -7550,7 +7550,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Yordle", "Teemo", "Bandle City"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When you play me, give me +3 :rb_might: this turn.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When you play me, give me +3 [M] this turn.",
 				flavorText: "Reporting in!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ca8a2e11dd78dd09ad1c9ad3a23e5699254b947e-744x1039.png?accountingTag=RB",
@@ -7568,7 +7568,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Jinx", "Zaun"],
 				keywords: [],
-				description: "When you discard one or more cards, ready me and give me +1 :rb_might: this turn.",
+				description: "When you discard one or more cards, ready me and give me +1 [M] this turn.",
 				flavorText: "I've got a bone to pick with, well, just about everyone.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a7fe105f40df66525be51bd18e25506945a7b027-744x1039.png?accountingTag=RB",
@@ -7586,7 +7586,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Viktor", "Zaun"],
 				keywords: [],
-				description: "When another non-Recruit unit you control dies, play a 1 :rb_might: Recruit unit token into your base.",
+				description: "When another non-Recruit unit you control dies, play a 1 [M] Recruit unit token into your base.",
 				flavorText: "I am more than I ever was.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ab390d6d074c3f07abba000cc166faa1796ec464-744x1039.png?accountingTag=RB",
@@ -7604,7 +7604,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Viktor", "Zaun"],
 				keywords: [],
-				description: "When another non-Recruit unit you control dies, play a 1 :rb_might: Recruit unit token into your base.",
+				description: "When another non-Recruit unit you control dies, play a 1 [M] Recruit unit token into your base.",
 				flavorText: "I am more than I ever was.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ab390d6d074c3f07abba000cc166faa1796ec464-744x1039.png",
@@ -7622,7 +7622,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Teemo"],
 				keywords: [],
-				description: "You may pay :rb_energy_1: to hide a card with [Hidden] instead of [A].:rb_energy_1:, :rb_exhaust:: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
+				description: "You may pay [1] to hide a card with [Hidden] instead of [A].[1], [E]: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9723181e3392bb61c2aabc804a44f7b0558cedf1-744x1039.png?accountingTag=RB",
@@ -7700,7 +7700,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a friendly unit at a battlefield +2 :rb_might: this turn for each enemy unit there.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a friendly unit at a battlefield +2 [M] this turn for each enemy unit there.",
 				flavorText: "We are what we overcome.\" - Pantheon",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4c4ab0c838854ccd5d5399a045835876450287e8-744x1039.png?accountingTag=RB",
@@ -7718,7 +7718,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Noxus"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for [A] less, even if it's already attached.)",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for [A] less, even if it's already attached.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1debdef1d45f7b2a452951db39674aeb01a8dc2b-744x1039.png?accountingTag=RB",
@@ -7736,7 +7736,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Kill this, :rb_exhaust:: [Reaction] — [Add] [A]. (Abilities that add resources can't be reacted to.)",
+				description: "Kill this, [E]: [Reaction] — [Add] [A]. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e878c39b562a4e870e93b819c6d85cdf3fdc5238-744x1039.png?accountingTag=RB",
@@ -7754,7 +7754,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)[Repeat] :rb_energy_1: (You may pay the additional cost to repeat this spell's effect.)Give a unit [Assault 2]. (+2 :rb_might: while it's an attacker.)",
+				description: "[Action] (Play on your turn or in showdowns.)[Repeat] [1] (You may pay the additional cost to repeat this spell's effect.)Give a unit [Assault 2]. (+2 [M] while it's an attacker.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/931b77b9ab56c3abc85686be4d2452c450f9b3e0-744x1039.png?accountingTag=RB",
@@ -7772,7 +7772,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)Friendly units enter ready this turn. Play a Gold gear token exhausted.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)Friendly units enter ready this turn. Play a Gold gear token exhausted.",
 				flavorText: "Always check the bush.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f728959ad6d4ee6c507310000c3c9e02c0772a16-744x1039.png?accountingTag=RB",
@@ -7862,7 +7862,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_fury: (:rb_rune_fury:: Attach this to a unit you control.)",
+				description: "[Equip] [R] ([R]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9498c8146745124fc45a7b55184854a9c9da21f5-744x1039.png?accountingTag=RB",
@@ -7880,7 +7880,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["The Void"],
 				keywords: [],
-				description: "I cost :rb_energy_2: less to play from anywhere other than your hand.",
+				description: "I cost [2] less to play from anywhere other than your hand.",
 				flavorText: "Rek'Sai's children appear without warning, ambushing their prey from beneath the shuriman sands.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/589dde45bc610eb83bc808803e4becf8a6d2da84-744x1039.png?accountingTag=RB",
@@ -7916,7 +7916,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Trifarian", "Noxus"],
 				keywords: [],
-				description: "I cost :rb_energy_1: less for each card you've played this turn, to a minimum of :rb_energy_1:.",
+				description: "I cost [1] less for each card you've played this turn, to a minimum of [1].",
 				flavorText: "They call it \"the Noxian hello.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5661f07778201b236b014a6078003cde9af57cdd-744x1039.png?accountingTag=RB",
@@ -7934,7 +7934,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Piltover"],
 				keywords: [],
-				description: "You may pay :rb_energy_1::rb_rune_fury: as an additional cost to play me.When you play me, if you paid the additional cost, deal 2 to a unit at a battlefield.",
+				description: "You may pay [1][R] as an additional cost to play me.When you play me, if you paid the additional cost, deal 2 to a unit at a battlefield.",
 				flavorText: "The bigger the bangs, the less you have to aim.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9efe5a8322a90822650ff18578cd5e1a8561fac5-744x1039.png?accountingTag=RB",
@@ -7988,7 +7988,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_fury: (:rb_rune_fury:: Attach this to a unit you control.)",
+				description: "[Equip] [R] ([R]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/763604237b4b59df5df98f61528be2233b850dd5-744x1039.png?accountingTag=RB",
@@ -8006,7 +8006,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Deal 2 to a unit at a battlefield. If it's attacking, deal 4 to it instead.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Action] (Play on your turn or in showdowns.)Deal 2 to a unit at a battlefield. If it's attacking, deal 4 to it instead.",
 				flavorText: "Haste makes waste.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ba3e8c3e95137a289dbdec88e96e5c5a9a45f2c7-744x1039.png?accountingTag=RB",
@@ -8042,7 +8042,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: ":rb_energy_1::rb_rune_fury:, Recycle a unit from your trash, :rb_exhaust:: Play a 3 :rb_might: Mech unit token to your base.",
+				description: "[1][R], Recycle a unit from your trash, [E]: Play a 3 [M] Mech unit token to your base.",
 				flavorText: "Can't believe someone would throw this out!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/40ae6f61f1a0b5d65d91e3bb3fd2a0dad9148208-744x1039.png?accountingTag=RB",
@@ -8060,7 +8060,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Draven", "Noxus"],
 				keywords: [],
-				description: "When I win a combat, play a Gold gear token exhausted.When I attack or defend, you may pay :rb_rune_fury:. If you do, give me +2 :rb_might: this turn.",
+				description: "When I win a combat, play a Gold gear token exhausted.When I attack or defend, you may pay [R]. If you do, give me +2 [M] this turn.",
 				flavorText: "Man, I'm good.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9019c449004f246de6607bf1829f4f3cabcda200-744x1039.png?accountingTag=RB",
@@ -8078,7 +8078,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Draven", "Noxus"],
 				keywords: [],
-				description: "When I win a combat, play a Gold gear token exhausted.When I attack or defend, you may pay :rb_rune_fury:. If you do, give me +2 :rb_might: this turn.",
+				description: "When I win a combat, play a Gold gear token exhausted.When I attack or defend, you may pay [R]. If you do, give me +2 [M] this turn.",
 				flavorText: "Man, I'm good.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8e49e0b83df68f37a15bf704b83475144fd9ef92-744x1039.png?accountingTag=RB",
@@ -8096,7 +8096,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Mech", "Yordle", "Bandle City"],
 				keywords: [],
-				description: "[Deathknell] — Play two 3 :rb_might: Mech unit tokens to your base. (When I die, get the effect.)",
+				description: "[Deathknell] — Play two 3 [M] Mech unit tokens to your base. (When I die, get the effect.)",
 				flavorText: "You see a wreck waiting to happen. I just see parts that aren't spare yet.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b2873a352c0158a677255894cec458d1c17709f7-744x1039.png?accountingTag=RB",
@@ -8114,7 +8114,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)[Equip] :rb_rune_fury: (:rb_rune_fury:: Attach this to a unit you control.)",
+				description: "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)[Equip] [R] ([R]: Attach this to a unit you control.)",
 				flavorText: "Efforts to create the Longer Sword quickly ran into diminishing returns.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/48d798bf93afd1ef139dcafc6cd8705742b93169-744x1039.png?accountingTag=RB",
@@ -8132,7 +8132,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Repeat] :rb_energy_2::rb_rune_fury: (You may pay the additional cost to repeat this spell's effect.)Deal 2 to a unit at a battlefield, then deal 2 to up to one other unit.",
+				description: "[Repeat] [2][R] (You may pay the additional cost to repeat this spell's effect.)Deal 2 to a unit at a battlefield, then deal 2 to up to one other unit.",
 				flavorText: "I got two good reasons for your to turn back.\"- Lucian",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7fb3283b11fb8e5b5b08f9ead9b98c695b75bff0-744x1039.png?accountingTag=RB",
@@ -8150,7 +8150,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Rell", "Noxus"],
 				keywords: [],
-				description: "[Tank] (I must be assigned combat damage first.)When I attack, you may play an Equipment with Energy cost no more than :rb_energy_2:, ignoring its cost, and attach it to me.",
+				description: "[Tank] (I must be assigned combat damage first.)When I attack, you may play an Equipment with Energy cost no more than [2], ignoring its cost, and attach it to me.",
 				flavorText: "Bones shatter and people lie, but I can always count on iron.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8aa1a9cf0a91a9ab601d5e5d42a438d4217eddd7-744x1039.png?accountingTag=RB",
@@ -8168,7 +8168,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Cat", "Rengar", "Ixtal"],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)[Assault 2] (+2 :rb_might: while I'm an attacker.)I can be played to a battlefield you're attacking.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)[Assault 2] (+2 [M] while I'm an attacker.)I can be played to a battlefield you're attacking.",
 				flavorText: "Tonight, we hunt!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e24eb3fb835c4762479da5608b018785ef22e02c-744x1039.png?accountingTag=RB",
@@ -8186,7 +8186,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Mech", "Yordle", "Rumble", "Bandle City"],
 				keywords: [],
-				description: "Your Mechs each have [Assault]. (+1 :rb_might: while we're attackers.)When I conquer, you may recycle another friendly unit to play a Mech from your trash. Reduce its Energy cost by the Might of the unit you recycled.",
+				description: "Your Mechs each have [Assault]. (+1 [M] while we're attackers.)When I conquer, you may recycle another friendly unit to play a Mech from your trash. Reduce its Energy cost by the Might of the unit you recycled.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/dfeef09dacae683e39013902d77b3398fdcd5db8-744x1039.png?accountingTag=RB",
@@ -8204,7 +8204,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Mech", "Yordle", "Rumble", "Bandle City"],
 				keywords: [],
-				description: "Your Mechs each have [Assault]. (+1 :rb_might: while we're attackers.)When I conquer, you may recycle another friendly unit to play a Mech from your trash. Reduce its Energy cost by the Might of the unit you recycled.",
+				description: "Your Mechs each have [Assault]. (+1 [M] while we're attackers.)When I conquer, you may recycle another friendly unit to play a Mech from your trash. Reduce its Energy cost by the Might of the unit you recycled.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e211311ecb1475e87d3d94eba4a6774b4e900091-744x1039.png?accountingTag=RB",
@@ -8240,7 +8240,7 @@ export default [
 				stats: {energy: 3, might: 2, power: null},
 				tags: ["Lucian", "Demacia", "Sentinel"],
 				keywords: [],
-				description: "[Assault] (+1 :rb_might: while I'm an attacker.)When I attack, deal damage equal to my [Assault] to an enemy unit here.",
+				description: "[Assault] (+1 [M] while I'm an attacker.)When I attack, deal damage equal to my [Assault] to an enemy unit here.",
 				flavorText: "Everybody dies. Some just need a little help.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2dfb106d7c85235436d25261195a638e2ab15092-744x1039.png?accountingTag=RB",
@@ -8258,7 +8258,7 @@ export default [
 				stats: {energy: 3, might: 2, power: null},
 				tags: ["Lucian", "Demacia", "Sentinel"],
 				keywords: [],
-				description: "[Assault] (+1 :rb_might: while I'm an attacker.)When I attack, deal damage equal to my [Assault] to an enemy unit here.",
+				description: "[Assault] (+1 [M] while I'm an attacker.)When I attack, deal damage equal to my [Assault] to an enemy unit here.",
 				flavorText: "Everybody dies. Some just need a little help.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3982de5a4aee53471ca589179f5cf8617169fb52-744x1039.png?accountingTag=RB",
@@ -8276,7 +8276,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Rek'Sai", "The Void"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)[Assault] (+1 :rb_might: while I'm an attacker.)Friendly units played from anywhere other than a player's hand have [Accelerate].",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)[Assault] (+1 [M] while I'm an attacker.)Friendly units played from anywhere other than a player's hand have [Accelerate].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8ef898e761ab44c43cb1cba11109a02d9cb5ce10-744x1039.png?accountingTag=RB",
@@ -8294,7 +8294,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Rek'Sai", "The Void"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)[Assault] (+1 :rb_might: while I'm an attacker.)Friendly units played from anywhere other than a player's hand have [Accelerate].",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)[Assault] (+1 [M] while I'm an attacker.)Friendly units played from anywhere other than a player's hand have [Accelerate].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/999e2d25ea32da971e7b99b6e75558286c17949e-744x1039.png?accountingTag=RB",
@@ -8312,7 +8312,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_energy_1::rb_rune_fury: (:rb_energy_1::rb_rune_fury:: Attach this to a unit you control.)",
+				description: "[Equip] [1][R] ([1][R]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bea8390beb651502413cf644319c8ca6a8db1102-744x1039.png?accountingTag=RB",
@@ -8330,7 +8330,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Play a 2 :rb_might: Sand Soldier unit token.",
+				description: "[Repeat] [2] (You may pay the additional cost to repeat this spell's effect.)Play a 2 [M] Sand Soldier unit token.",
 				flavorText: "The Great Sai desert hides as many spears as it does secrets.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b38ab6c02238b5a8e456cdad9b5108bb30e718bc-744x1039.png?accountingTag=RB",
@@ -8366,7 +8366,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
+				description: "[Equip] [G] ([G]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/49a24d4c6d770ed233c4a69bf8d87385bfc997d8-744x1039.png?accountingTag=RB",
@@ -8384,7 +8384,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Give a unit +2 :rb_might: this turn.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] [2] (You may pay the additional cost to repeat this spell's effect.)Give a unit +2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f07842b38914f6bc73235fe07788a3fce89b4785-744x1039.png?accountingTag=RB",
@@ -8456,7 +8456,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "When I move to a battlefield, give another friendly unit +1 :rb_might: this turn.",
+				description: "When I move to a battlefield, give another friendly unit +1 [M] this turn.",
 				flavorText: "A flutter of silk is all the warning her enemies get.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/92550ab70647046115133c7547423bcf308906f6-744x1039.png?accountingTag=RB",
@@ -8492,7 +8492,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Stun an attacking unit. (It doesn't deal combat damage this turn.)",
+				description: "[Action] (Play on your turn or in showdowns.)[Repeat] [2] (You may pay the additional cost to repeat this spell's effect.)Stun an attacking unit. (It doesn't deal combat damage this turn.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c414fdba5e47db294b8364a07f1258bc3e204c51-744x1039.png?accountingTag=RB",
@@ -8528,7 +8528,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
+				description: "[Equip] [G] ([G]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3a0de7eec3de501f79f33c09b43c7fe42721d10d-744x1039.png?accountingTag=RB",
@@ -8546,7 +8546,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Move any number of friendly units at a battlefield to their base.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Action] (Play on your turn or in showdowns.)Move any number of friendly units at a battlefield to their base.",
 				flavorText: "The sands of battle shift of Azir's command.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/80f367f06549d597c7b5a77be73eb647eab34f59-744x1039.png?accountingTag=RB",
@@ -8600,7 +8600,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "When you play this, draw 1.:rb_energy_1::rb_rune_calm:, :rb_exhaust:, Kill this: Draw 1.",
+				description: "When you play this, draw 1.[1][G], [E], Kill this: Draw 1.",
 				flavorText: "Eat, eat and grow strong!.\" - Braum",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8caaa64513b5ba57d676c7b2b9ee64af61711539-744x1039.png?accountingTag=RB",
@@ -8672,7 +8672,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Bird", "Azir", "Shurima"],
 				keywords: [],
-				description: ":rb_rune_calm:: [Action] — Choose a unit you control. Move me to its location and it to my original location. If it's equipped, you may attach one of its Equipment to me. Use only once per turn.",
+				description: "[G]: [Action] — Choose a unit you control. Move me to its location and it to my original location. If it's equipped, you may attach one of its Equipment to me. Use only once per turn.",
 				flavorText: "Challenge Shurima, challenge fate.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3c42c02f6ebd2e4d4a640c2c6ac081231439888e-744x1039.png?accountingTag=RB",
@@ -8690,7 +8690,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Bird", "Azir", "Shurima"],
 				keywords: [],
-				description: ":rb_rune_calm:: [Action] — Choose a unit you control. Move me to its location and it to my original location. If it's equipped, you may attach one of its Equipment to me. Use only once per turn.",
+				description: "[G]: [Action] — Choose a unit you control. Move me to its location and it to my original location. If it's equipped, you may attach one of its Equipment to me. Use only once per turn.",
 				flavorText: "Challenge Shurima, challenge fate.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3a0859ca50e71c69b22e4dab93e840b6d30e3d50-744x1039.png?accountingTag=RB",
@@ -8708,7 +8708,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
+				description: "[Equip] [G] ([G]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d09a797345659a1853d6d12910cf3c634990ea0c-744x1039.png?accountingTag=RB",
@@ -8726,7 +8726,7 @@ export default [
 				stats: {energy: 3, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: Give a unit +3 :rb_might: this turn.",
+				description: "[E]: Give a unit +3 [M] this turn.",
 				flavorText: "All will knee...in time.\" - Lissandra",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/73d8251c3bd8f7cd77010e9628515cd7fa462386-744x1039.png?accountingTag=RB",
@@ -8798,7 +8798,7 @@ export default [
 				stats: {energy: 10, might: 5, power: 3},
 				tags: ["Yordle", "Bandle City"],
 				keywords: [],
-				description: "[Shield 5] (+5 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)I cost :rb_energy_2::rb_rune_calm: less for each point you scored from holding this turn.",
+				description: "[Shield 5] (+5 [M] while I'm a defender.)[Tank] (I must be assigned combat damage first.)I cost [2][G] less for each point you scored from holding this turn.",
 				flavorText: "How did a yordle get so big? You're welcome to ask him.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/952dcaf9fd4b5f3e8592d140c11d792175597da1-744x1039.png?accountingTag=RB",
@@ -8816,7 +8816,7 @@ export default [
 				stats: {energy: 3, might: null, power: 2},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
+				description: "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)[Equip] [G] ([G]: Attach this to a unit you control.)",
 				flavorText: "Claws for concern.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/df16e6b668fc6771ff657512deba1bf48363e23a-744x1039.png?accountingTag=RB",
@@ -8834,7 +8834,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Irelia", "Ionia"],
 				keywords: [],
-				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)When you choose or ready me, give me +1 :rb_might: this turn.",
+				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)When you choose or ready me, give me +1 [M] this turn.",
 				flavorText: "Do we want to be safe, or free? The choice is ours.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fe05fa55781f8036f8bfc9c10bba94326a0c8cc9-744x1039.png?accountingTag=RB",
@@ -8852,7 +8852,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Irelia", "Ionia"],
 				keywords: [],
-				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)When you choose or ready me, give me +1 :rb_might: this turn.",
+				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)When you choose or ready me, give me +1 [M] this turn.",
 				flavorText: "Do we want to be safe, or free? The choice is ours.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cef4f73541e0623b4024b483d141d0396f1dddcb-744x1039.png?accountingTag=RB",
@@ -8906,7 +8906,7 @@ export default [
 				stats: {energy: 3, might: null, power: 1},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_energy_1::rb_rune_calm: (:rb_energy_1::rb_rune_calm:: Attach this to a unit you control.)As this is attached to a unit, copy that unit's text to this Equipment's effect text for as long as this is attached to it.",
+				description: "[Equip] [1][G] ([1][G]: Attach this to a unit you control.)As this is attached to a unit, copy that unit's text to this Equipment's effect text for as long as this is attached to it.",
 				flavorText: "Only the greatest Freljord heroes have weapons made of True Ice!\" -  Nunu",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bc254398dfb5db217327b56862011a2fd6020789-744x1039.png?accountingTag=RB",
@@ -8996,7 +8996,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)[Equip] :rb_rune_mind: (:rb_rune_mind:: Attach this to a unit you control.)",
+				description: "[Quick-Draw] (This has [Reaction]. When you play it, attach it to a unit you control.)[Equip] [B] ([B]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fe02bf01609ff2e6cc6fa8fbd578fd596ab5cb84-744x1039.png?accountingTag=RB",
@@ -9032,7 +9032,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Give a unit -2 :rb_might: this turn.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] [2] (You may pay the additional cost to repeat this spell's effect.)Give a unit -2 [M] this turn.",
 				flavorText: "Freeze.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1caaf42d4cc12ab9acc57dc8c572448f8d8dd34d-744x1039.png?accountingTag=RB",
@@ -9050,7 +9050,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Dog", "Freljord"],
 				keywords: [],
-				description: "You may pay :rb_rune_mind: as an additional cost to play me.When you play me, if you paid the additional cost, give a unit -2 :rb_might: this turn.",
+				description: "You may pay [B] as an additional cost to play me.When you play me, if you paid the additional cost, give a unit -2 [M] this turn.",
 				flavorText: "In the Freljord, cuteness is just another survival tactic.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0b5f1f6ed65e070d2878b8aa21fd95e43688fc1d-744x1039.png?accountingTag=RB",
@@ -9068,7 +9068,7 @@ export default [
 				stats: {energy: 5, might: 3, power: null},
 				tags: ["Zaun"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_mind: as an additional cost to have me enter ready.)Each Equipment attached to me gives double its base Might bonus.",
+				description: "[Accelerate] (You may pay [1][B] as an additional cost to have me enter ready.)Each Equipment attached to me gives double its base Might bonus.",
 				flavorText: "Some people dream about the future. I'm living it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/355b97bf135b8c60afabca7e4c6ecbf1aa25b4d9-744x1039.png?accountingTag=RB",
@@ -9104,7 +9104,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Deal 3 to a unit at a battlefield. Play a Gold gear token exhausted.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Action] (Play on your turn or in showdowns.)Deal 3 to a unit at a battlefield. Play a Gold gear token exhausted.",
 				flavorText: "Smash AND grab.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/aef5c891bd6f7cbc3a97b1e01688868316599929-744x1039.png?accountingTag=RB",
@@ -9158,7 +9158,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_mind: (:rb_rune_mind:: Attach this to a unit you control.)",
+				description: "[Equip] [B] ([B]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/940a5e9796d4ac10a238d9b2612545c04bd9a570-744x1039.png?accountingTag=RB",
@@ -9176,7 +9176,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Zaun"],
 				keywords: [],
-				description: "When you play me, you may kill a gear with Energy cost no more than :rb_energy_1:. If you do, play a Gold gear token exhausted.",
+				description: "When you play me, you may kill a gear with Energy cost no more than [1]. If you do, play a Gold gear token exhausted.",
 				flavorText: "Sticky fingers never linger.\" - Pickpockets' motto",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ebf54af997e53079e1a476feb0411d1791b20f7e-744x1039.png?accountingTag=RB",
@@ -9194,7 +9194,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Mech", "Piltover"],
 				keywords: [],
-				description: "When you use an activated ability of a gear, give me +1 :rb_might: this turn.",
+				description: "When you use an activated ability of a gear, give me +1 [M] this turn.",
 				flavorText: "In Piltover's Progress Day parade, even the floats are groundbreaking innovations.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c08f0b6ed24415e6a440a17931c7e2a2db3ab2cc-744x1039.png?accountingTag=RB",
@@ -9212,7 +9212,7 @@ export default [
 				stats: {energy: 4, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "This costs :rb_energy_2: less if you control a Mech.Play a 3 :rb_might: Mech unit token to your base.Draw 1.",
+				description: "This costs [2] less if you control a Mech.Play a 3 [M] Mech unit token to your base.Draw 1.",
 				flavorText: "When in doubt, make more mechs.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/78783854dd9372138e599affbe96a269d8908c29-744x1039.png?accountingTag=RB",
@@ -9230,7 +9230,7 @@ export default [
 				stats: {energy: 4, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Repeat] :rb_energy_4::rb_rune_mind: (You may pay the additional cost to repeat this spell's effect, and may make different choices.)Choose one —Deal 4 to a unit in a base.Kill a gear.",
+				description: "[Repeat] [4][B] (You may pay the additional cost to repeat this spell's effect, and may make different choices.)Choose one —Deal 4 to a unit in a base.Kill a gear.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0378f9adf9df08fed264fdd217ce0e94c3f611cb-744x1039.png?accountingTag=RB",
@@ -9248,7 +9248,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[A], :rb_exhaust:: Give the next spell you play this turn [Repeat] equal to its cost. (You may pay the additional cost to repeat the spell's effect.)",
+				description: "[A], [E]: Give the next spell you play this turn [Repeat] equal to its cost. (You may pay the additional cost to repeat the spell's effect.)",
 				flavorText: "Those who study history get to choose whether they'll repeat it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a6b8167486d552cc41d10cb9321bae4cef338fa7-744x1039.png?accountingTag=RB",
@@ -9284,7 +9284,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)[Repeat] :rb_energy_1::rb_rune_mind: (You may pay the additional cost to repeat this spell's effect.)Deal 1 to up to three units at the same location.",
+				description: "[Action] (Play on your turn or in showdowns.)[Repeat] [1][B] (You may pay the additional cost to repeat this spell's effect.)Deal 1 to up to three units at the same location.",
 				flavorText: "My work speaks in the roar of flame and the ringing of steel.\"- Ornn",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f0ae1c4bb788f6fadc251c9d9b36f3f92eef4c56-744x1039.png?accountingTag=RB",
@@ -9320,7 +9320,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Ezreal", "Piltover"],
 				keywords: [],
-				description: "When I attack or defend, deal damage equal to my Might to an enemy unit here.I don't deal combat damage.:rb_rune_mind:: [Action] — Move me to your base.",
+				description: "When I attack or defend, deal damage equal to my Might to an enemy unit here.I don't deal combat damage.[B]: [Action] — Move me to your base.",
 				flavorText: "Time for a true display of skill.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/83da64e39d838d2fee68c319c03fbff0d4c7035f-744x1039.png?accountingTag=RB",
@@ -9338,7 +9338,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Ezreal", "Piltover"],
 				keywords: [],
-				description: "When I attack or defend, deal damage equal to my Might to an enemy unit here.I don't deal combat damage.:rb_rune_mind:: [Action] — Move me to your base.",
+				description: "When I attack or defend, deal damage equal to my Might to an enemy unit here.I don't deal combat damage.[B]: [Action] — Move me to your base.",
 				flavorText: "Time for a true display of skill.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3e040f7b7ca16009a2558674a911b8cc93122ba3-744x1039.png?accountingTag=RB",
@@ -9356,7 +9356,7 @@ export default [
 				stats: {energy: 3, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — Pay any amount of [A] to [Add] that much Energy. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — Pay any amount of [A] to [Add] that much Energy. (Abilities that add resources can't be reacted to.)",
 				flavorText: "Hextech promises to transform the present. But progress must not come at the future's expense!\"-  Heimerdinger",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/32a46943778755e2b6210e5adb4507780f08e2c8-744x1039.png?accountingTag=RB",
@@ -9374,7 +9374,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Jayce", "Piltover"],
 				keywords: [],
-				description: "When you play me, you may kill a friendly gear. If you do, you may play a gear with Energy cost no more than :rb_energy_7: from hand this turn, ignoring its Energy cost. (You must still pay its Power cost.)",
+				description: "When you play me, you may kill a friendly gear. If you do, you may play a gear with Energy cost no more than [7] from hand this turn, ignoring its Energy cost. (You must still pay its Power cost.)",
 				flavorText: "This is what the future looks like.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b508fa4e52ebbd5f66e1fc7df28cfb70acdfe1f5-744x1039.png?accountingTag=RB",
@@ -9392,7 +9392,7 @@ export default [
 				stats: {energy: 6, might: 4, power: null},
 				tags: ["Ornn", "Freljord"],
 				keywords: [],
-				description: "[Deflect 2] (Opponents must pay [A][A] to choose me with a spell or ability.)[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for [A] less, even if it's already attached.)I have +1 :rb_might: for each friendly gear.",
+				description: "[Deflect 2] (Opponents must pay [A][A] to choose me with a spell or ability.)[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for [A] less, even if it's already attached.)I have +1 [M] for each friendly gear.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/22af72b06cb92d4a0078dddfb87cc9c21c92231d-744x1039.png?accountingTag=RB",
@@ -9410,7 +9410,7 @@ export default [
 				stats: {energy: 6, might: 4, power: null},
 				tags: ["Ornn", "Freljord"],
 				keywords: [],
-				description: "[Deflect 2] (Opponents must pay [A][A] to choose me with a spell or ability.)[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for [A] less, even if it's already attached.)I have +1 :rb_might: for each friendly gear.",
+				description: "[Deflect 2] (Opponents must pay [A][A] to choose me with a spell or ability.)[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for [A] less, even if it's already attached.)I have +1 [M] for each friendly gear.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f33c4ea9010ea5f440d4470554845c0ecae2c893-744x1039.png?accountingTag=RB",
@@ -9428,7 +9428,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_mind: (:rb_rune_mind:: Attach this to a unit you control.)",
+				description: "[Equip] [B] ([B]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7b8d96e128c19c5ff368119a60759cffa644e942-744x1039.png?accountingTag=RB",
@@ -9464,7 +9464,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Renata Glasc", "Zaun"],
 				keywords: [],
-				description: ":rb_energy_1::rb_rune_mind:: Draw 1.:rb_energy_4::rb_rune_mind::rb_rune_mind::rb_rune_mind::rb_rune_mind:, :rb_exhaust:: Score 1 point.Use my abilities only while I'm at a battlefield.",
+				description: "[1][B]: Draw 1.[4][B][B][B][B], [E]: Score 1 point.Use my abilities only while I'm at a battlefield.",
 				flavorText: "Progress comes at a price others aren't willing to pay.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b2b269d8ec274f3869ba42982f5710b160c4c43f-744x1039.png?accountingTag=RB",
@@ -9482,7 +9482,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Renata Glasc", "Zaun"],
 				keywords: [],
-				description: ":rb_energy_1::rb_rune_mind:: Draw 1.:rb_energy_4::rb_rune_mind::rb_rune_mind::rb_rune_mind::rb_rune_mind:, :rb_exhaust:: Score 1 point.Use my abilities only while I'm at a battlefield.",
+				description: "[1][B]: Draw 1.[4][B][B][B][B], [E]: Score 1 point.Use my abilities only while I'm at a battlefield.",
 				flavorText: "Progress comes at a price others aren't willing to pay.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/be8f7e08562c076e8947aafc3ecd202051d17c02-744x1039.png?accountingTag=RB",
@@ -9500,7 +9500,7 @@ export default [
 				stats: {energy: 5, might: 4, power: 1},
 				tags: ["Mech", "Yordle", "Rumble", "Bandle City"],
 				keywords: [],
-				description: "Your Mechs have +1 :rb_might: (including me).When I hold, play a 3 :rb_might: Mech unit token to your base.",
+				description: "Your Mechs have +1 [M] (including me).When I hold, play a 3 [M] Mech unit token to your base.",
 				flavorText: "Ever look up to a yordle?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1acbb906fba20f4e5d60f7a82566ca9a19e1a6ea-744x1039.png?accountingTag=RB",
@@ -9518,7 +9518,7 @@ export default [
 				stats: {energy: 5, might: 4, power: 1},
 				tags: ["Mech", "Yordle", "Rumble", "Bandle City"],
 				keywords: [],
-				description: "Your Mechs have +1 :rb_might: (including me).When I hold, play a 3 :rb_might: Mech unit token to your base.",
+				description: "Your Mechs have +1 [M] (including me).When I hold, play a 3 [M] Mech unit token to your base.",
 				flavorText: "Ever look up to a yordle?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6528aa0656cac59ff7299bc8bdac371238038080-744x1039.png?accountingTag=RB",
@@ -9536,7 +9536,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_energy_1::rb_rune_mind: (:rb_energy_1::rb_rune_mind:: Attach this to a unit you control.):rb_energy_3::rb_rune_mind:, Banish this: Play all units banished with this, ignoring their costs. (Use only if unattached.)",
+				description: "[Equip] [1][B] ([1][B]: Attach this to a unit you control.)[3][B], Banish this: Play all units banished with this, ignoring their costs. (Use only if unattached.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cc80cbfa1a64ad22dc5f7df870e9206f6938f7f5-744x1039.png?accountingTag=RB",
@@ -9554,7 +9554,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Bilgewater"],
 				keywords: [],
-				description: "When you play me, you may draw 1 or buff me. (To buff a unit, give it a +1 :rb_might: buff if it doesn't already have one.)",
+				description: "When you play me, you may draw 1 or buff me. (To buff a unit, give it a +1 [M] buff if it doesn't already have one.)",
 				flavorText: "The Buhru knew these waters long before the flotsam of Bilgewater washed up on our shores. We know them still.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9f5186bd42c23f75ea84186aa2cb945cc02a222e-744x1039.png?accountingTag=RB",
@@ -9626,7 +9626,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)",
+				description: "[Equip] [O] ([O]: Attach this to a unit you control.)",
 				flavorText: "I guess I could...throw it at someone - Miss Fortune",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/53fc0c307c83871c9755a496764ef7d6aa11f510-744x1039.png?accountingTag=RB",
@@ -9662,7 +9662,7 @@ export default [
 				stats: {energy: 1, might: null, power: 2},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Give a unit +5 :rb_might: this turn.",
+				description: "[Action] (Play on your turn or in showdowns.)Give a unit +5 [M] this turn.",
 				flavorText: "It's not for the inquisitive.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d124efad90ff61d4ac29ee69fe71e48a7cd6ece2-744x1039.png?accountingTag=RB",
@@ -9680,7 +9680,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Pirate", "Bilgewater"],
 				keywords: [],
-				description: "You may pay :rb_energy_1: as an additional cost to play me.When you play me, if you paid the additional cost, buff me. (Give me a +1 :rb_might: buff if I don't already have one.)",
+				description: "You may pay [1] as an additional cost to play me.When you play me, if you paid the additional cost, buff me. (Give me a +1 [M] buff if I don't already have one.)",
 				flavorText: "Do, monkey.\" - Nilah",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0ef7f1de2bc7845f5e3dace1634c6c58a8765452-744x1039.png?accountingTag=RB",
@@ -9734,7 +9734,7 @@ export default [
 				stats: {energy: 7, might: 7, power: 1},
 				tags: ["Fae", "Dragon", "Bandle City"],
 				keywords: [],
-				description: "When you play me, buff up to four friendly units. (Give each a +1 :rb_might: buff if it doesn't have one.)When you spend a buff, play a Gold gear token exhausted.",
+				description: "When you play me, buff up to four friendly units. (Give each a +1 [M] buff if it doesn't have one.)When you spend a buff, play a Gold gear token exhausted.",
 				flavorText: "The fae who guard the boundary of the spirit realm take their job as seriously as they take anything.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/76aeda6bf59acee92b512f4a0272892673cfce90-744x1039.png?accountingTag=RB",
@@ -9752,7 +9752,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)",
+				description: "[Equip] [O] ([O]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e7fdd555cbf9ef8c4ff8bd3ba38d187842de563d-744x1039.png?accountingTag=RB",
@@ -9770,7 +9770,7 @@ export default [
 				stats: {energy: 7, might: 6, power: 2},
 				tags: ["Bilgewater"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)I cost :rb_energy_2: less for each of your [Mighty] units. (A unit is Mighty while it has 5+ :rb_might:.)",
+				description: "[Accelerate] (You may pay [1][O] as an additional cost to have me enter ready.)I cost [2] less for each of your [Mighty] units. (A unit is Mighty while it has 5+ [M].)",
 				flavorText: "It's not hungry. It's not territorial. It just really hates boats.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/56a31630910179a1fb2f2ddf3e6e5c9627bddf5e-744x1039.png?accountingTag=RB",
@@ -9824,7 +9824,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Draw 1 for each of your [Mighty] units. (A unit is Mighty while it has 5+ :rb_might:.)",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Draw 1 for each of your [Mighty] units. (A unit is Mighty while it has 5+ [M].)",
 				flavorText: "Strength in numbers.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d04ac6687931018fd68368c65cc024155867cab4-744x1039.png?accountingTag=RB",
@@ -9860,7 +9860,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)",
+				description: "[Equip] [O] ([O]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0d680867670dd75a66a632cd6f044a7f7e39b42b-744x1039.png?accountingTag=RB",
@@ -9878,7 +9878,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Akshan", "Shurima", "Sentinel"],
 				keywords: [],
-				description: "[Weaponmaster]You may pay :rb_rune_body::rb_rune_body: as an additional cost to play me.When you play me, if you paid the additional cost, move an enemy gear to your base. You control it until I leave the board. If it's an Equipment, attach it to me.",
+				description: "[Weaponmaster]You may pay [O][O] as an additional cost to play me.When you play me, if you paid the additional cost, move an enemy gear to your base. You control it until I leave the board. If it's an Equipment, attach it to me.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f9e79f88463c1d516b9f1b053661937676e0e1f4-744x1039.png?accountingTag=RB",
@@ -9932,7 +9932,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)You may play a unit from hand to a battlefield you control, reducing its cost by :rb_energy_3:.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Action] (Play on your turn or in showdowns.)You may play a unit from hand to a battlefield you control, reducing its cost by [3].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6daa8caf27f76f2b0bce189fb9df196129582afa-744x1039.png?accountingTag=RB",
@@ -9950,7 +9950,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Noxus"],
 				keywords: [],
-				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)When I move to a battlefield, give a friendly unit my keywords and +:rb_might: equal to my Might this turn.",
+				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)When I move to a battlefield, give a friendly unit my keywords and +[M] equal to my Might this turn.",
 				flavorText: "Let's give \"em a good show!.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f4ea4f2f5169a3813d9eb7f0d3d2f41bdddebfc7-744x1039.png?accountingTag=RB",
@@ -10004,7 +10004,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)[Repeat] :rb_energy_3: (You may pay the additional cost to repeat this spell's effect.)Choose a friendly unit anywhere and an enemy unit at a battlefield. They deal damage equal to their Mights to each other.",
+				description: "[Action] (Play on your turn or in showdowns.)[Repeat] [3] (You may pay the additional cost to repeat this spell's effect.)Choose a friendly unit anywhere and an enemy unit at a battlefield. They deal damage equal to their Mights to each other.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b553f8e16e0ff1aaa57f74121e68954fbe45a07b-744x1039.png?accountingTag=RB",
@@ -10022,7 +10022,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)",
+				description: "[Equip] [O] ([O]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e8b64985389e5792afc2a2fe0dc23ae7590d7709-744x1039.png?accountingTag=RB",
@@ -10058,7 +10058,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — Pay any amount of Energy to [Add] that much [A]. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — Pay any amount of Energy to [Add] that much [A]. (Abilities that add resources can't be reacted to.)",
 				flavorText: "It's not enough to protect a pile of ice and stone. We must protect each other, and build a community on the foundations our ancestors left us.\" - Ashe",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c7c260b77b4174a61aed6243ed90f76594102193-744x1039.png?accountingTag=RB",
@@ -10076,7 +10076,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_energy_1::rb_rune_body: (:rb_energy_1::rb_rune_body:: Attach this to a unit you control.)",
+				description: "[Equip] [1][O] ([1][O]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c3e4d8c3f3975a7429428ac90e5ebcffa1f8e5a9-744x1039.png?accountingTag=RB",
@@ -10094,7 +10094,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Jax", "Icathia"],
 				keywords: [],
-				description: "[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for [A] less, even if it's already attached.)When you attach an Equipment to me, you may pay :rb_energy_1: to draw 1.",
+				description: "[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for [A] less, even if it's already attached.)When you attach an Equipment to me, you may pay [1] to draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a5796125bdb0af8ceb60cd0c5c273c6417e0f7da-744x1039.png?accountingTag=RB",
@@ -10112,7 +10112,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Jax", "Icathia"],
 				keywords: [],
-				description: "[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for [A] less, even if it's already attached.)When you attach an Equipment to me, you may pay :rb_energy_1: to draw 1.",
+				description: "[Weaponmaster] (When you play me, you may [Equip] one of your Equipment to me for [A] less, even if it's already attached.)When you attach an Equipment to me, you may pay [1] to draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e63ab3370a6e4ce4baddfba12ab92468f6cc9541-744x1039.png?accountingTag=RB",
@@ -10184,7 +10184,7 @@ export default [
 				stats: {energy: 0, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)[Repeat] :rb_rune_chaos: (You may pay the additional cost to repeat this spell's effect.)Look at the top 2 cards of your Main Deck. Draw one and recycle the other.",
+				description: "[Action] (Play on your turn or in showdowns.)[Repeat] [P] (You may pay the additional cost to repeat this spell's effect.)Look at the top 2 cards of your Main Deck. Draw one and recycle the other.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8fb07f0b3c0c697e324fb016f4cf7e4288aa4594-744x1039.png?accountingTag=RB",
@@ -10220,7 +10220,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)",
+				description: "[Equip] [P] ([P]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/054df5a11967b768430a2f763e1b5d4dbbac3b50-744x1039.png?accountingTag=RB",
@@ -10238,7 +10238,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Fae", "Ionia"],
 				keywords: [],
-				description: "When I move to a battlefield, you may pay :rb_rune_chaos: to move a unit you control to the same battlefield.",
+				description: "When I move to a battlefield, you may pay [P] to move a unit you control to the same battlefield.",
 				flavorText: "A surprisingly soft landing.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4d233b11d4efb2652d7ede556dd9f730903cdba9-744x1039.png?accountingTag=RB",
@@ -10310,7 +10310,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Move an enemy unit to a location where there's a unit with the same controller.",
+				description: "[Repeat] [2] (You may pay the additional cost to repeat this spell's effect.)Move an enemy unit to a location where there's a unit with the same controller.",
 				flavorText: "Seems legit.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4d5075a540ff5e4a2daec598cb6400fbb6570673-744x1039.png?accountingTag=RB",
@@ -10346,7 +10346,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Spirit", "Noxus"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_chaos: as an additional cost to have me enter ready.)I have [Assault] equal to the number of enemy units here. (+1 :rb_might: while I'm an attacker for each instance of Assault.)",
+				description: "[Accelerate] (You may pay [1][P] as an additional cost to have me enter ready.)I have [Assault] equal to the number of enemy units here. (+1 [M] while I'm an attacker for each instance of Assault.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8ba05afcfbe6901fb4bdb736d5e61656a551f668-744x1039.png?accountingTag=RB",
@@ -10382,7 +10382,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)",
+				description: "[Equip] [P] ([P]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a8a8e977f7427227adac69b5d2db07f643d0df09-744x1039.png?accountingTag=RB",
@@ -10400,7 +10400,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)",
+				description: "[Equip] [P] ([P]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/885ee56a4153b4f9fd064e9d24c9d55400e1291f-744x1039.png?accountingTag=RB",
@@ -10436,7 +10436,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Counter a spell unless its controller pays :rb_energy_2:.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] [2] (You may pay the additional cost to repeat this spell's effect.)Counter a spell unless its controller pays [2].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2b09887a6e0d2f109aefea62ca6744488794c233-744x1039.png?accountingTag=RB",
@@ -10454,7 +10454,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Pirate", "Bilgewater"],
 				keywords: [],
-				description: "When I move from a battlefield, give me +2 :rb_might: this turn.",
+				description: "When I move from a battlefield, give me +2 [M] this turn.",
 				flavorText: "No room for fear on the boat.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f50d32a202375bf09781ae578db107abe84937e0-744x1039.png?accountingTag=RB",
@@ -10472,7 +10472,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "Hidden (Hide now for [A] to react with later for :rb_energy_0:.)When you play me, you may return another unit at a battlefield with 3 :rb_might: or less to its owner's hand.",
+				description: "Hidden (Hide now for [A] to react with later for [0].)When you play me, you may return another unit at a battlefield with 3 [M] or less to its owner's hand.",
 				flavorText: "She never sticks around for encores.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e47c9a3956f8fbb77daa5fdb2ee433dd1772f247-744x1039.png?accountingTag=RB",
@@ -10490,7 +10490,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When you play this from face down, attach it to a unit you control here.[Equip] :rb_rune_chaos: (:rb_rune_chaos:: Attach this to a unit you control.)",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When you play this from face down, attach it to a unit you control here.[Equip] [P] ([P]: Attach this to a unit you control.)",
 				flavorText: "Every shadow an ally.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b3e385162bf3566618bb58b7a866eef846beefba-744x1039.png?accountingTag=RB",
@@ -10508,7 +10508,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Yordle", "Fizz", "Bilgewater"],
 				keywords: [],
-				description: "When you play me, you may play a spell from your trash with Energy cost no more than :rb_energy_3:, ignoring its Energy cost. Recycle that spell after you play it. (You must still pay its Power cost.)",
+				description: "When you play me, you may play a spell from your trash with Energy cost no more than [3], ignoring its Energy cost. Recycle that spell after you play it. (You must still pay its Power cost.)",
 				flavorText: "One jump ahead of you.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6d1c6615fb6ef5fb520a35b2ce76f8feee9167dc-744x1039.png?accountingTag=RB",
@@ -10526,7 +10526,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Irelia", "Ionia"],
 				keywords: [],
-				description: "Your spells that choose me cost :rb_energy_1: or [A] less.",
+				description: "Your spells that choose me cost [1] or [A] less.",
 				flavorText: "None can do what I do; so I will do it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/08419c2b5b7aa7e5f63854e324d5dabe0b5997a2-744x1039.png?accountingTag=RB",
@@ -10544,7 +10544,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Irelia", "Ionia"],
 				keywords: [],
-				description: "Your spells that choose me cost :rb_energy_1: or [A] less.",
+				description: "Your spells that choose me cost [1] or [A] less.",
 				flavorText: "None can do what I do; so I will do it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/03b9d73a7ef02447d7f4b67381a76616249061cc-744x1039.png?accountingTag=RB",
@@ -10580,7 +10580,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Sivir", "Shurima"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_chaos: as an additional cost to have me enter ready.)If you've spent at least [A][A] this turn, I have +2 :rb_might: and [Ganking]. (I can move from battlefield to battlefield.)",
+				description: "[Accelerate] (You may pay [1][P] as an additional cost to have me enter ready.)If you've spent at least [A][A] this turn, I have +2 [M] and [Ganking]. (I can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6c0eeb81da597528625d458cb4c560298b5bea50-744x1039.png?accountingTag=RB",
@@ -10598,7 +10598,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Sivir", "Shurima"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_chaos: as an additional cost to have me enter ready.)If you've spent at least [A][A] this turn, I have +2 :rb_might: and [Ganking]. (I can move from battlefield to battlefield.)",
+				description: "[Accelerate] (You may pay [1][P] as an additional cost to have me enter ready.)If you've spent at least [A][A] this turn, I have +2 [M] and [Ganking]. (I can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cb07b4adc6e301fae973ab13156028390facbad2-744x1039.png?accountingTag=RB",
@@ -10616,7 +10616,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you choose a friendly unit, you may pay :rb_energy_1: and exhaust this to draw 1.",
+				description: "When you choose a friendly unit, you may pay [1] and exhaust this to draw 1.",
 				flavorText: "Never broken.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d83d994e6dc7949eb783da16f4bbdb64342a8dfb-744x1039.png?accountingTag=RB",
@@ -10634,7 +10634,7 @@ export default [
 				stats: {energy: 2, might: null, power: 2},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Swap the Might of two units at the same battlefield this turn.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Action] (Play on your turn or in showdowns.)Swap the Might of two units at the same battlefield this turn.",
 				flavorText: "Always look out for the little guy.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a4338f495feff5eee46d5349b5fded5e35e76176-744x1039.png?accountingTag=RB",
@@ -10652,7 +10652,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Yordle", "Vex", "Shadow Isles"],
 				keywords: [],
-				description: "While I'm in combat, friendly spells cost :rb_energy_1:[A] less to a minimum of :rb_energy_1:, and enemy spells cost :rb_energy_1:[A] more.",
+				description: "While I'm in combat, friendly spells cost [1][A] less to a minimum of [1], and enemy spells cost [1][A] more.",
 				flavorText: "Let's turn these smiles upside down.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e9025578c7b5845a1a9c9a83e045bcbe71a76e71-744x1039.png?accountingTag=RB",
@@ -10724,7 +10724,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Ezreal", "Piltover"],
 				keywords: [],
-				description: "When you play me, discard 1, then draw 2.Optional additional costs you pay cost :rb_energy_1: or [A] less.",
+				description: "When you play me, discard 1, then draw 2.Optional additional costs you pay cost [1] or [A] less.",
 				flavorText: "Who needs a map?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b371832f41cd8b15cd4f29828081dd030c48d7ac-744x1039.png?accountingTag=RB",
@@ -10742,7 +10742,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Ezreal", "Piltover"],
 				keywords: [],
-				description: "When you play me, discard 1, then draw 2.Optional additional costs you pay cost :rb_energy_1: or [A] less.",
+				description: "When you play me, discard 1, then draw 2.Optional additional costs you pay cost [1] or [A] less.",
 				flavorText: "Who needs a map?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b48d6242ceb84c3eae7109317d51efaf1e56c9c3-744x1039.png?accountingTag=RB",
@@ -10760,7 +10760,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] — :rb_rune_chaos:, Recycle 2 cards from your trash (Pay the cost: Attach this to a unit you control.)",
+				description: "[Equip] — [P], Recycle 2 cards from your trash (Pay the cost: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6cfab85030bff454262794e4fa12f11b5dc45a74-744x1039.png?accountingTag=RB",
@@ -10778,7 +10778,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] :rb_energy_2: (You may pay the additional cost to repeat this spell's effect.)Give two friendly units each +1 :rb_might: this turn.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] [2] (You may pay the additional cost to repeat this spell's effect.)Give two friendly units each +1 [M] this turn.",
 				flavorText: "A vow is stronger than the words that make it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/344034c00d9fad558e98a64efab0310ad4bac37c-744x1039.png?accountingTag=RB",
@@ -10814,7 +10814,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_order: (:rb_rune_order:: Attach this to a unit you control.)",
+				description: "[Equip] [Y] ([Y]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fc3e26e0e4ff94de360f1163c41641daf81c1900-744x1039.png?accountingTag=RB",
@@ -10832,7 +10832,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)Play a 2 :rb_might: Sand Soldier unit token. You may pay :rb_rune_order: to ready it.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)Play a 2 [M] Sand Soldier unit token. You may pay [Y] to ready it.",
 				flavorText: "My empire lives in every grain of sand.\" - Azir",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1dc4fef81d018c6cf14f0344b51ebcdec968aab9-744x1039.png?accountingTag=RB",
@@ -10868,7 +10868,7 @@ export default [
 				stats: {energy: 4, might: 3, power: null},
 				tags: ["Demacia"],
 				keywords: [],
-				description: "[Assault 2] (+2 :rb_might: while I'm an attacker.)",
+				description: "[Assault 2] (+2 [M] while I'm an attacker.)",
 				flavorText: "No my old foil, this isn't revenge- it's épéeback.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7b3410a1d9ee175c4853453798bcd5f09d2e217c-744x1039.png?accountingTag=RB",
@@ -10886,7 +10886,7 @@ export default [
 				stats: {energy: 4, might: 2, power: null},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "When you play me, play a 2 :rb_might: Sand Soldier unit token here.",
+				description: "When you play me, play a 2 [M] Sand Soldier unit token here.",
 				flavorText: "A ruler's true power is in the loyalty they inspire.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/919d79a3f5a38c78476e6414a898a0dc7b385629-744x1039.png?accountingTag=RB",
@@ -10904,7 +10904,7 @@ export default [
 				stats: {energy: 5, might: 6, power: 2},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "When you play me, kill an enemy unit with 3 :rb_might: or less.",
+				description: "When you play me, kill an enemy unit with 3 [M] or less.",
 				flavorText: "Recognize your emperor... or the sands will make you.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/57f72b30862074bb5d1f302e86ee3cec024cd980-744x1039.png?accountingTag=RB",
@@ -10922,7 +10922,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Dog", "Elite", "Demacia"],
 				keywords: [],
-				description: "While you have another unit here, I have +1 :rb_might:.",
+				description: "While you have another unit here, I have +1 [M].",
 				flavorText: "It's always best to have a dog in the fight.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0bd3f82ebe45a4dc09204582d06900916e6c0480-744x1039.png?accountingTag=RB",
@@ -10958,7 +10958,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_order: (:rb_rune_order:: Attach this to a unit you control.)",
+				description: "[Equip] [Y] ([Y]: Attach this to a unit you control.)",
 				flavorText: "It certainly is big.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/97cd20e414c7282abb18cf7691eb1a5a2435af90-744x1039.png?accountingTag=RB",
@@ -10976,7 +10976,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Kill a unit at a battlefield with 2 :rb_might: or less. If it was an enemy unit, play a Gold gear token exhausted. If it was a friendly unit, play two Gold gear tokens exhausted.",
+				description: "[Action] (Play on your turn or in showdowns.)Kill a unit at a battlefield with 2 [M] or less. If it was an enemy unit, play a Gold gear token exhausted. If it was a friendly unit, play two Gold gear tokens exhausted.",
 				flavorText: "Even among the unscrupulous, betrayal costs extra.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0062fe2a96fc94bd8d85c01607a48e8619ed4e20-744x1039.png?accountingTag=RB",
@@ -10994,7 +10994,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Kill a friendly unit to give +:rb_might: equal to its Might to another friendly unit this turn. Draw 1.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Kill a friendly unit to give +[M] equal to its Might to another friendly unit this turn. Draw 1.",
 				flavorText: "Death is my kindness.\" - Mordekaiser",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/695304200c6fd3b287bd319ac564d31936b23d66-744x1039.png?accountingTag=RB",
@@ -11012,7 +11012,7 @@ export default [
 				stats: {energy: 5, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)I cost :rb_energy_2: less to play from anywhere other than your hand.Kill a unit at a battlefield.",
+				description: "[Action] (Play on your turn or in showdowns.)I cost [2] less to play from anywhere other than your hand.Kill a unit at a battlefield.",
 				flavorText: "If we hurry, we can reach the oasis by nightfall.\"- Common last words",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2400881960412ada4c1d1066105f206b02f8998a-744x1039.png?accountingTag=RB",
@@ -11030,7 +11030,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Zaun"],
 				keywords: [],
-				description: "[Deathknell] — You may play a unit with cost no more than :rb_energy_3: and no more than [A] from your trash, ignoring its cost. (When I die, get the effect.)",
+				description: "[Deathknell] — You may play a unit with cost no more than [3] and no more than [A] from your trash, ignoring its cost. (When I die, get the effect.)",
 				flavorText: "The difference between medicine and poison is the dosage.\"- Renata Glasc",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e7422fee71796aa61f8d9691d07654b901fc20f2-744x1039.png?accountingTag=RB",
@@ -11048,7 +11048,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)When a friendly unit is played this turn, buff it. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)Draw 1.",
+				description: "[Action] (Play on your turn or in showdowns.)When a friendly unit is played this turn, buff it. (If it doesn't have a buff, it gets a +1 [M] buff.)Draw 1.",
 				flavorText: "DEMACIA!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/952476dd51338ff97774946ded134a2072b2e6c9-744x1039.png?accountingTag=RB",
@@ -11066,7 +11066,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Elite", "Demacia"],
 				keywords: [],
-				description: "[Deathknell] — If I was [Mighty], draw 2. (When I die, get the effect. I'm Mighty while I have 5+ :rb_might:.)",
+				description: "[Deathknell] — If I was [Mighty], draw 2. (When I die, get the effect. I'm Mighty while I have 5+ [M].)",
 				flavorText: "She gave everything she had for the cause- even her legacy.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2a227ef7494af6409000c13c4f3d1094cec3a3a8-744x1039.png?accountingTag=RB",
@@ -11084,7 +11084,7 @@ export default [
 				stats: {energy: 7, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: Play three 1 :rb_might: Recruit unit tokens. (You may play them to different locations.)",
+				description: "[E]: Play three 1 [M] Recruit unit tokens. (You may play them to different locations.)",
 				flavorText: "It takes more than a sword and shield to make a soldier. But it's a good start.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4f4d735ff77ea599307e142196338d438fcedc05-744x1039.png?accountingTag=RB",
@@ -11192,7 +11192,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_order: (:rb_rune_order:: Attach this to a unit you control.)",
+				description: "[Equip] [Y] ([Y]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/af1069aef68d413127dfa84e4e96b8d66a8720ca-744x1039.png?accountingTag=RB",
@@ -11246,7 +11246,7 @@ export default [
 				stats: {energy: 6, might: 5, power: 1},
 				tags: ["The Void"],
 				keywords: [],
-				description: "When you play me, give your other units +2 :rb_might: this turn.As I'm revealed from your deck, [Add] :rb_energy_2:.",
+				description: "When you play me, give your other units +2 [M] this turn.As I'm revealed from your deck, [Add] [2].",
 				flavorText: "If it stayed under, it would be less of a problem.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/aa3bd795a1fa015b42bf64a2d588f527342c2a15-744x1039.png?accountingTag=RB",
@@ -11282,7 +11282,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Bird", "Azir", "Shurima"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_order: as an additional cost to have me enter ready.)When I attack, you may move any number of your token units to this battlefield.",
+				description: "[Accelerate] (You may pay [1][Y] as an additional cost to have me enter ready.)When I attack, you may move any number of your token units to this battlefield.",
 				flavorText: "You need not follow, but you must witness.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/088970936fc800bd2c4b36636734e16c83e1c8f9-744x1039.png?accountingTag=RB",
@@ -11300,7 +11300,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Bird", "Azir", "Shurima"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_order: as an additional cost to have me enter ready.)When I attack, you may move any number of your token units to this battlefield.",
+				description: "[Accelerate] (You may pay [1][Y] as an additional cost to have me enter ready.)When I attack, you may move any number of your token units to this battlefield.",
 				flavorText: "You need not follow, but you must witness.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/62c75543213df186d3f05236fda6abe8992c948e-744x1039.png?accountingTag=RB",
@@ -11318,7 +11318,7 @@ export default [
 				stats: {energy: 3, might: null, power: 1},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] — :rb_rune_order:, Kill a friendly unit (Pay the cost: Attach this to a unit you control.)",
+				description: "[Equip] — [Y], Kill a friendly unit (Pay the cost: Attach this to a unit you control.)",
 				flavorText: "You are not the hero of this tale.\" - Viego",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/26ab126258a15afd380c313e973f7469808ce55f-744x1039.png?accountingTag=RB",
@@ -11336,7 +11336,7 @@ export default [
 				stats: {energy: 7, might: 6, power: 1},
 				tags: ["Zaun"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_order: as an additional cost to have me enter ready.)When I move to a battlefield, play three 1 :rb_might: Recruit unit tokens here.",
+				description: "[Accelerate] (You may pay [1][Y] as an additional cost to have me enter ready.)When I move to a battlefield, play three 1 [M] Recruit unit tokens here.",
 				flavorText: "I told them that every achievement has its cost. I didn't tell them who would pay it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6b0f55aee4b4f9d0074c808e0fff00dcb7e35377-744x1039.png?accountingTag=RB",
@@ -11354,7 +11354,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Fiora", "Demacia"],
 				keywords: [],
-				description: "When a unit you control becomes [Mighty], you may pay :rb_rune_order: to ready it. (A unit is Mighty while it has 5+ :rb_might:.)",
+				description: "When a unit you control becomes [Mighty], you may pay [Y] to ready it. (A unit is Mighty while it has 5+ [M].)",
 				flavorText: "Strike quickly. Strike deftly.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e38428b921717edf676bd7f9628fc61b1355814c-744x1039.png?accountingTag=RB",
@@ -11372,7 +11372,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Fiora", "Demacia"],
 				keywords: [],
-				description: "When a unit you control becomes [Mighty], you may pay :rb_rune_order: to ready it. (A unit is Mighty while it has 5+ :rb_might:.)",
+				description: "When a unit you control becomes [Mighty], you may pay [Y] to ready it. (A unit is Mighty while it has 5+ [M].)",
 				flavorText: "Strike quickly. Strike deftly.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7339e76b7796242a15e97cfddbe04c32d5a05063-744x1039.png?accountingTag=RB",
@@ -11390,7 +11390,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Rumble"],
 				keywords: [],
-				description: "Your Mechs have [Shield]. (+1 :rb_might: while they're defenders.)",
+				description: "Your Mechs have [Shield]. (+1 [M] while they're defenders.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f311115e4c527ce82010596ce462d4050a9201b2-744x1039.png?accountingTag=RB",
@@ -11408,7 +11408,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: ["Rumble"],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] :rb_energy_1:[A] (You may pay the additional cost to repeat this spell's effect.)Give your Mechs +1 :rb_might: this turn.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)[Repeat] [1][A] (You may pay the additional cost to repeat this spell's effect.)Give your Mechs +1 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c4652150ba885dd346b8f3622fd0e4ada7cf767f-744x1039.png?accountingTag=RB",
@@ -11426,7 +11426,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Lucian"],
 				keywords: [],
-				description: "Your Equipment each give [Assault]. (+1 :rb_might: while equipped unit is an attacker.)",
+				description: "Your Equipment each give [Assault]. (+1 [M] while equipped unit is an attacker.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/450cfb71b8890904d48b37a24bbdc78f8d849614-744x1039.png?accountingTag=RB",
@@ -11516,7 +11516,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: ["Rek'Sai"],
 				keywords: [],
-				description: "Reveal the top 2 cards of your Main Deck. You may play one of them, reducing its cost by :rb_energy_2:. Draw any you did not play this way.",
+				description: "Reveal the top 2 cards of your Main Deck. You may play one of them, reducing its cost by [2]. Draw any you did not play this way.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ce606f096ae76485cd8dd3cc337629b510f0d1e7-744x1039.png?accountingTag=RB",
@@ -11534,7 +11534,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ornn"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] [A]. Use only to play gear or use gear abilities. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [A]. Use only to play gear or use gear abilities. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ed58d654034d545e54c85d836f3a6552772dd75b-744x1039.png?accountingTag=RB",
@@ -11606,7 +11606,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Jax"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Attach a detached Equipment you control to a unit you control.:rb_exhaust:: Attach an attached Equipment you control to a unit you control.",
+				description: "[1], [E]: Attach a detached Equipment you control to a unit you control.[E]: Attach an attached Equipment you control to a unit you control.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c6ddf49d7249bc8ac194fd9b194bfcb8857a4466-744x1039.png?accountingTag=RB",
@@ -11642,7 +11642,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Irelia"],
 				keywords: [],
-				description: "When you choose a friendly unit, you may exhaust me and pay [A] to ready it.When you conquer, you may pay :rb_energy_1: to ready me.",
+				description: "When you choose a friendly unit, you may exhaust me and pay [A] to ready it.When you conquer, you may pay [1] to ready me.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/656ef2d1724b818e9e737ec5dcce923de067a316-744x1039.png?accountingTag=RB",
@@ -11660,7 +11660,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: ["Irelia"],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit +2 :rb_might: this turn and another unit -2 :rb_might: this turn.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit +2 [M] this turn and another unit -2 [M] this turn.",
 				flavorText: "I am both the tranquil sea and the tempst.\" - Irelia",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6f5bc5c9e321830337998a2b85e4fec3cd8251c9-744x1039.png?accountingTag=RB",
@@ -11678,7 +11678,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Azir"],
 				keywords: [],
-				description: "Your Sand Soldiers have [Weaponmaster].:rb_energy_1:, :rb_exhaust:: Play a 2 :rb_might: Sand Soldier unit token to your base. Use only if you've played an Equipment this turn.",
+				description: "Your Sand Soldiers have [Weaponmaster].[1], [E]: Play a 2 [M] Sand Soldier unit token to your base. Use only if you've played an Equipment this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0472274c49f6540858758ebf9bd2f107a601541a-744x1039.png?accountingTag=RB",
@@ -11696,7 +11696,7 @@ export default [
 				stats: {energy: 6, might: null, power: 1},
 				tags: ["Azir"],
 				keywords: [],
-				description: "Play a 2 :rb_might: Sand Soldier unit token for each Equipment you control. Then ready two of them.",
+				description: "Play a 2 [M] Sand Soldier unit token for each Equipment you control. Then ready two of them.",
 				flavorText: "The order is given!\" - Azir",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/346f4698fea2878dde88470c1793047140c981e3-744x1039.png?accountingTag=RB",
@@ -11714,7 +11714,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ezreal"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — Draw 1. Use only if you've chosen enemy units and/or gear twice this turn with spells or unit abilities.",
+				description: "[E]: [Reaction] — Draw 1. Use only if you've chosen enemy units and/or gear twice this turn with spells or unit abilities.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d0e143d9edbc14971b2a7b463b3c25b2b6a0c098-744x1039.png?accountingTag=RB",
@@ -11750,7 +11750,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Renata Glasc"],
 				keywords: [],
-				description: "When you or an ally hold, you may exhaust me to play a Gold gear token exhausted.While your score is within 3 points of the Victory Score, your Gold [ADD] an additional :rb_energy_1:.",
+				description: "When you or an ally hold, you may exhaust me to play a Gold gear token exhausted.While your score is within 3 points of the Victory Score, your Gold [ADD] an additional [1].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4bd289c281ad64229061ff909abf88c12a574833-744x1039.png?accountingTag=RB",
@@ -11768,7 +11768,7 @@ export default [
 				stats: {energy: 5, might: null, power: 2},
 				tags: ["Renata Glasc"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)Take control of an enemy unit at a battlefield. Ready it. (Start a combat if other enemies are there. Otherwise, conquer.)Lose control of that unit and recall it at end of turn. (Send it to base. This isn't a move.)",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)Take control of an enemy unit at a battlefield. Ready it. (Start a combat if other enemies are there. Otherwise, conquer.)Lose control of that unit and recall it at end of turn. (Send it to base. This isn't a move.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/56651a87166df7108ce9f945bd71390d4926770a-744x1039.png?accountingTag=RB",
@@ -11822,7 +11822,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Fiora"],
 				keywords: [],
-				description: "When one of your units becomes [Mighty], you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ :rb_might:.)",
+				description: "When one of your units becomes [Mighty], you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ [M].)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/37064aa79c13316b5dd28f0a2b054821a43f6650-744x1039.png?accountingTag=RB",
@@ -11840,7 +11840,7 @@ export default [
 				stats: {energy: 2, might: null, power: 2},
 				tags: ["Fiora"],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose a friendly unit and a spell. Counter that spell and give that unit +:rb_might: equal to that spell's Energy cost this turn.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose a friendly unit and a spell. Counter that spell and give that unit +[M] equal to that spell's Energy cost this turn.",
 				flavorText: "Too slow!.\" - Fiora",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/07af52eada661904b467ca118c2715435f0a3b00-744x1039.png?accountingTag=RB",
@@ -11858,7 +11858,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you conquer here, you may pay :rb_energy_1: and return a unit you control here to its owner's hand. If you do, play a 2 :rb_might: Sand Soldier unit token here.",
+				description: "When you conquer here, you may pay [1] and return a unit you control here to its owner's hand. If you do, play a 2 [M] Sand Soldier unit token here.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c1ea4f6f58a62fc2b62647aa3459109e3d10297a-1039x744.png?accountingTag=RB",
@@ -11876,7 +11876,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "While you control this battlefield, friendly legends have &quot;:rb_exhaust:: Attach an Equipment you control to a unit you control.&quot;",
+				description: "While you control this battlefield, friendly legends have &quot;[E]: Attach an Equipment you control to a unit you control.&quot;",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6ad10353e7fc1337d8cc79086f8eaac1c75f5598-1039x744.png?accountingTag=RB",
@@ -11912,7 +11912,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you conquer here, you may pay :rb_energy_1: to ready your legend.",
+				description: "When you conquer here, you may pay [1] to ready your legend.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3b6438877bd2bd95e7a3a8921ddf6bca26d3fd95-1039x744.png?accountingTag=RB",
@@ -11930,7 +11930,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "While you control this battlefield, friendly [Repeat] costs cost :rb_energy_1: less.",
+				description: "While you control this battlefield, friendly [Repeat] costs cost [1] less.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ff64dcbac9b392d4f6930a7359114aa68aa14ebe-1039x744.png?accountingTag=RB",
@@ -11966,7 +11966,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "While you control this battlefield, the first friendly non-token gear played each turn costs :rb_energy_1: less.",
+				description: "While you control this battlefield, the first friendly non-token gear played each turn costs [1] less.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e228948bc7a6d8ee858fbc0bed3d93a53f467097-1039x744.png?accountingTag=RB",
@@ -12056,7 +12056,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you conquer here with one or more [Mighty] units, you may pay :rb_energy_1: to draw 1. (A unit is Mighty while it has 5+ :rb_might:.)",
+				description: "When you conquer here with one or more [Mighty] units, you may pay [1] to draw 1. (A unit is Mighty while it has 5+ [M].)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/06f6d17929d19000006cf281d013ecbe1543af0e-1039x744.png?accountingTag=RB",
@@ -12092,7 +12092,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you conquer here, you may pay :rb_energy_1: to play a Gold gear token exhausted.",
+				description: "When you conquer here, you may pay [1] to play a Gold gear token exhausted.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cb39bf9f8c30d1ed756ba1b83c975a89d3635159-1039x744.png?accountingTag=RB",
@@ -12128,7 +12128,7 @@ export default [
 				stats: {energy: 0, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_rune_fury:. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [R]. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/669d4dd94cf2d88ad58333c13a98cca2014e71aa-744x1039.png?accountingTag=RB",
@@ -12146,7 +12146,7 @@ export default [
 				stats: {energy: 4, might: 2, power: 1},
 				tags: ["Vayne", "Demacia", "Sentinel"],
 				keywords: [],
-				description: "[Assault 3] (+3 :rb_might: while I'm an attacker.)If an opponent controls a battlefield, I enter ready.When I conquer, you may pay :rb_energy_1: to return me to my owner's hand.",
+				description: "[Assault 3] (+3 [M] while I'm an attacker.)If an opponent controls a battlefield, I enter ready.When I conquer, you may pay [1] to return me to my owner's hand.",
 				flavorText: "On wings of night.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/75f9eac062e43105ee602b6050fe230fb8d2dce5-744x1039.png?accountingTag=RB",
@@ -12164,7 +12164,7 @@ export default [
 				stats: {energy: 4, might: 2, power: 1},
 				tags: ["Vayne", "Demacia", "Sentinel"],
 				keywords: [],
-				description: "[Assault 3] (+3 :rb_might: while I'm an attacker.)If an opponent controls a battlefield, I enter ready.When I conquer, you may pay :rb_energy_1: to return me to my owner's hand.",
+				description: "[Assault 3] (+3 [M] while I'm an attacker.)If an opponent controls a battlefield, I enter ready.When I conquer, you may pay [1] to return me to my owner's hand.",
 				flavorText: "On wings of night.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6f8caecc98cb5dae1b818677ef5baaaa4a5f7cb2-744x1039.png?accountingTag=RB",
@@ -12218,7 +12218,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Irelia", "Ionia"],
 				keywords: [],
-				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)When you choose or ready me, give me +1 :rb_might: this turn.",
+				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)When you choose or ready me, give me +1 [M] this turn.",
 				flavorText: "Everyone has purpose.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e064a9017b5d6bf0e18c4452acfca4ed8c279657-744x1039.png?accountingTag=RB",
@@ -12236,7 +12236,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Irelia", "Ionia"],
 				keywords: [],
-				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)When you choose or ready me, give me +1 :rb_might: this turn.",
+				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)When you choose or ready me, give me +1 [M] this turn.",
 				flavorText: "Everyone has purpose.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/40454a8534f7c9444bafd000ffbfc0e5bcc847f0-744x1039.png?accountingTag=RB",
@@ -12254,7 +12254,7 @@ export default [
 				stats: {energy: 0, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_rune_calm:. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [G]. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8b6bb0da7d3b37dad51148b7914e7d2b840b6482-744x1039.png?accountingTag=RB",
@@ -12272,7 +12272,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Ahri"],
 				keywords: [],
-				description: "When I attack or defend, give an enemy unit here -2 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "When I attack or defend, give an enemy unit here -2 [M] this turn, to a minimum of 1 [M].",
 				flavorText: "Just remember...to follow the fox.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/608f786c30a7e80db87d3c2d45bc0c26b0840c5e-744x1039.png?accountingTag=RB",
@@ -12290,7 +12290,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Ahri"],
 				keywords: [],
-				description: "When I attack or defend, give an enemy unit here -2 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "When I attack or defend, give an enemy unit here -2 [M] this turn, to a minimum of 1 [M].",
 				flavorText: "Just remember...to follow the fox.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d4c332e90c97e5e70b996598cd4a0f731b77fdef-744x1039.png?accountingTag=RB",
@@ -12344,7 +12344,7 @@ export default [
 				stats: {energy: 0, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_rune_mind:. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [B]. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/eb4559c507f09cabc3735973a1b20d83688d2f9d-744x1039.png?accountingTag=RB",
@@ -12362,7 +12362,7 @@ export default [
 				stats: {energy: 2, might: 2, power: 1},
 				tags: ["Yordle", "Teemo"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5e31f0ea037604aa531d84c1d56d26f255210b7c-744x1039.png?accountingTag=RB",
@@ -12380,7 +12380,7 @@ export default [
 				stats: {energy: 2, might: 2, power: 1},
 				tags: ["Yordle", "Teemo"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7f0962b840d228ad551fb9334fe9bdf76d209e7d-744x1039.png?accountingTag=RB",
@@ -12398,7 +12398,7 @@ export default [
 				stats: {energy: 0, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_rune_body:. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [O]. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/dd5c24995d5c6d327b5101da3d6426f1a75a49ef-744x1039.png?accountingTag=RB",
@@ -12416,7 +12416,7 @@ export default [
 				stats: {energy: 5, might: 4, power: 1},
 				tags: ["Sett"],
 				keywords: [],
-				description: "When I'm played and when I conquer, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)Spend my buff: Give me +4 :rb_might: this turn.",
+				description: "When I'm played and when I conquer, buff me. (If I don't have a buff, I get a +1 [M] buff.)Spend my buff: Give me +4 [M] this turn.",
 				flavorText: "Kings or beggars- all the same to me.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ea35315d12a86cff8e37fa716c92dc76d9edceb8-744x1039.png?accountingTag=RB",
@@ -12434,7 +12434,7 @@ export default [
 				stats: {energy: 5, might: 4, power: 1},
 				tags: ["Sett"],
 				keywords: [],
-				description: "When I'm played and when I conquer, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)Spend my buff: Give me +4 :rb_might: this turn.",
+				description: "When I'm played and when I conquer, buff me. (If I don't have a buff, I get a +1 [M] buff.)Spend my buff: Give me +4 [M] this turn.",
 				flavorText: "Kings or beggars- all the same to me.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a13d5473e205cb9dd8123895c58ed6ac8f19e814-744x1039.png?accountingTag=RB",
@@ -12488,7 +12488,7 @@ export default [
 				stats: {energy: 0, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_rune_chaos:. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [P]. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9263b8f36725a4cec320c1049608824ae72f6237-744x1039.png?accountingTag=RB",
@@ -12542,7 +12542,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Trifarian", "Darius"],
 				keywords: [],
-				description: "[Legion] — When you play me, ready me. (Get the effect if you've played another card this turn)Other friendly units have +1 :rb_might: here.",
+				description: "[Legion] — When you play me, ready me. (Get the effect if you've played another card this turn)Other friendly units have +1 [M] here.",
 				flavorText: "Even in death, I cannot lay down my axe.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/46fc840c17925406d22703b82ad02f5eb2ab62cf-744x1039.png?accountingTag=RB",
@@ -12560,7 +12560,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Trifarian", "Darius"],
 				keywords: [],
-				description: "[Legion] — When you play me, ready me. (Get the effect if you've played another card this turn)Other friendly units have +1 :rb_might: here.",
+				description: "[Legion] — When you play me, ready me. (Get the effect if you've played another card this turn)Other friendly units have +1 [M] here.",
 				flavorText: "Even in death, I cannot lay down my axe.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4f550f321dce06bb09bb47682d5bf2981280ea16-744x1039.png?accountingTag=RB",
@@ -12578,7 +12578,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Karma"],
 				keywords: [],
-				description: "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)When you recycle one or more cards, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff. Runes aren't cards.)",
+				description: "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)When you recycle one or more cards, buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff. Runes aren't cards.)",
 				flavorText: "Endings are beginnings with a different face.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ba0113d449813c94534ae0e74f3ef38f9b8010c2-744x1039.png?accountingTag=RB",
@@ -12596,7 +12596,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Karma"],
 				keywords: [],
-				description: "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)When you recycle one or more cards, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff. Runes aren't cards.)",
+				description: "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)When you recycle one or more cards, buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff. Runes aren't cards.)",
 				flavorText: "Endings are beginnings with a different face.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2e2c1cb4016543e3288da2dac3ecc3faf8a98927-744x1039.png?accountingTag=RB",
@@ -12614,7 +12614,7 @@ export default [
 				stats: {energy: 0, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_rune_order:. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [Y]. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/228dbde67ec37f9a0b28f81e40fce5a8fa7af56b-744x1039.png?accountingTag=RB",
@@ -12668,7 +12668,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Rumble"],
 				keywords: [],
-				description: "Your Mechs have [Shield]. (+1 :rb_might: while they're defenders.)",
+				description: "Your Mechs have [Shield]. (+1 [M] while they're defenders.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0234cad3663d52d3120e78f2adbe8a253102a7a3-744x1039.png?accountingTag=RB",
@@ -12686,7 +12686,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Lucian"],
 				keywords: [],
-				description: "Your Equipment each give [Assault]. (+1 :rb_might: while equipped unit is an attacker.)",
+				description: "Your Equipment each give [Assault]. (+1 [M] while equipped unit is an attacker.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/eb2a5262da6044c041ba87becae1dc71d58b2bf7-744x1039.png?accountingTag=RB",
@@ -12740,7 +12740,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ornn"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] [A]. Use only to play gear or use gear abilities. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [A]. Use only to play gear or use gear abilities. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/883dab66da8ed5ab39d968ed7fcaebd5ebaf3d43-744x1039.png?accountingTag=RB",
@@ -12758,7 +12758,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Jax"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Attach a detached Equipment you control to a unit you control.:rb_exhaust:: Attach an attached Equipment you control to a unit you control.",
+				description: "[1], [E]: Attach a detached Equipment you control to a unit you control.[E]: Attach an attached Equipment you control to a unit you control.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/941f72a422e0143524b3dd0cba1fd87e4286ecb4-744x1039.png?accountingTag=RB",
@@ -12776,7 +12776,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Irelia"],
 				keywords: [],
-				description: "When you choose a friendly unit, you may exhaust me and pay [A] to ready it.When you conquer, you may pay :rb_energy_1: to ready me.",
+				description: "When you choose a friendly unit, you may exhaust me and pay [A] to ready it.When you conquer, you may pay [1] to ready me.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8258072391bbb8d24e9d6e603c3ba1434979a911-744x1039.png?accountingTag=RB",
@@ -12794,7 +12794,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Azir"],
 				keywords: [],
-				description: "Sand Soldiers you play have [Weaponmaster]. (When they're played, you may [Equip] one of your Equipment to them for [A] less.):rb_energy_1:, :rb_exhaust:: Play a 2 :rb_might: Sand Soldier unit token to your base. Use only if you've played an Equipment this turn.",
+				description: "Sand Soldiers you play have [Weaponmaster]. (When they're played, you may [Equip] one of your Equipment to them for [A] less.)[1], [E]: Play a 2 [M] Sand Soldier unit token to your base. Use only if you've played an Equipment this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/42c04e4d7ef5d7395494587c2e15ac945b37b71e-744x1039.png?accountingTag=RB",
@@ -12812,7 +12812,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ezreal"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — Draw 1. Use only if you've chosen enemy units and/or gear twice this turn with spells or unit abilities.",
+				description: "[E]: [Reaction] — Draw 1. Use only if you've chosen enemy units and/or gear twice this turn with spells or unit abilities.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3ba4f1d3d61d80e7becc9d046e1974f17bff4b10-744x1039.png?accountingTag=RB",
@@ -12830,7 +12830,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Renata Glasc"],
 				keywords: [],
-				description: "When you or an ally hold, you may exhaust me to play a Gold gear token exhausted.While your score is within 3 points of the Victory Score, your Gold [ADD] an additional :rb_energy_1:.",
+				description: "When you or an ally hold, you may exhaust me to play a Gold gear token exhausted.While your score is within 3 points of the Victory Score, your Gold [ADD] an additional [1].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5df25d5a1351d0a97e103ef8e155991297b86ca9-744x1039.png?accountingTag=RB",
@@ -12866,7 +12866,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Fiora"],
 				keywords: [],
-				description: "When one of your units becomes [Mighty], you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ :rb_might:.)",
+				description: "When one of your units becomes [Mighty], you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ [M].)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/720df5a56619a6b53aa1217cb84446f2469b40e5-744x1039.png?accountingTag=RB",
@@ -12890,7 +12890,7 @@ export default [
 				stats: {energy: 3, might: null, power: 1},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_energy_1::rb_rune_calm: (:rb_energy_1::rb_rune_calm:: Attach this to a unit you control.)As this is attached to a unit, copy that unit's text to this Equipment's effect text for as long as this is attached to it.",
+				description: "[Equip] [1][G] ([1][G]: Attach this to a unit you control.)As this is attached to a unit, copy that unit's text to this Equipment's effect text for as long as this is attached to it.",
 				flavorText: "Only the greatest Freljord heroes have weapons made of True Ice!\" -  Nunu",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bc254398dfb5db217327b56862011a2fd6020789-744x1039.png?accountingTag=RB",
@@ -12908,7 +12908,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Mount Targon"],
 				keywords: [],
-				description: "[Shield 2] (+2 :rb_might: while I'm a defender.)Your hold effects for holding here trigger an additional time.When I hold, [Add] [A] at the start of your next Main Phase. (Abilities that add resources can't be reacted to.)",
+				description: "[Shield 2] (+2 [M] while I'm a defender.)Your hold effects for holding here trigger an additional time.When I hold, [Add] [A] at the start of your next Main Phase. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bec7e8f108fac2d9c94db01c85cf143133d13325-744x1039.png?accountingTag=RB",
@@ -12926,7 +12926,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Yordle", "Heimerdinger", "Piltover"],
 				keywords: [],
-				description: "I have all :rb_exhaust: abilities of all friendly legends, units, and gear.",
+				description: "I have all [E] abilities of all friendly legends, units, and gear.",
 				flavorText: "I do love a good conundrum.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5b14a5f9d567c90329c151a8cc72d870b47b1434-744x1039.png?accountingTag=RB",
@@ -12950,7 +12950,7 @@ export default [
 				stats: {energy: 6, might: 6, power: null},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "[Empower] :rb_energy_5:. This ability costs :rb_energy_3: less if you control 4 or fewer runes. (Pay the cost: Empower me. Use only if not Empowered.)[Empowered][>] I have [Deflect] and [Assault 2]. (Opponents must pay [A] to choose me with a spell or ability. +2 :rb_might: while I'm an attacker.)",
+				description: "[Empower] [5]. This ability costs [3] less if you control 4 or fewer runes. (Pay the cost: Empower me. Use only if not Empowered.)[Empowered][>] I have [Deflect] and [Assault 2]. (Opponents must pay [A] to choose me with a spell or ability. +2 [M] while I'm an attacker.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d8abab7f0df7c8ec9fff8c8dfa71c732e1ce2e6a-744x1039.png?accountingTag=RB",
@@ -13148,7 +13148,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "Kill a gear.[Flow] :rb_energy_4::rb_rune_fury: (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Kill a gear.[Flow] [4][R] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2264ab788558ec69b1b6ed3e03ce69a3f63bdbb7-744x1039.png?accountingTag=RB",
@@ -13184,7 +13184,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Ahri", "Ionia"],
 				keywords: [],
-				description: "When I attack or defend, give an enemy unit here -2 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "When I attack or defend, give an enemy unit here -2 [M] this turn, to a minimum of 1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e8d1993018d8317494cbaab4e4dd738c2e80740d-744x1039.png?accountingTag=RB",
@@ -13202,7 +13202,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Ahri", "Ionia"],
 				keywords: [],
-				description: "When I attack or defend, give an enemy unit here -2 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "When I attack or defend, give an enemy unit here -2 [M] this turn, to a minimum of 1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e8d1993018d8317494cbaab4e4dd738c2e80740d-744x1039.png?accountingTag=RB",
@@ -13220,7 +13220,7 @@ export default [
 				stats: {energy: 5, might: 4, power: 1},
 				tags: ["Sett"],
 				keywords: [],
-				description: "When you play me or when I conquer, buff me.Spend my buff: Give me +4 :rb_might: this turn.",
+				description: "When you play me or when I conquer, buff me.Spend my buff: Give me +4 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/075f83adf06b41c42c78addd11cfc73fbdb8aabb-744x1039.png?accountingTag=RB",
@@ -13256,7 +13256,7 @@ export default [
 				stats: {energy: 5, might: 4, power: 1},
 				tags: ["Sett"],
 				keywords: [],
-				description: "When you play me or when I conquer, buff me.Spend my buff: Give me +4 :rb_might: this turn.",
+				description: "When you play me or when I conquer, buff me.Spend my buff: Give me +4 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/075f83adf06b41c42c78addd11cfc73fbdb8aabb-744x1039.png?accountingTag=RB",
@@ -13310,7 +13310,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "If you control fewer runes than an opponent at the start of your Beginning Phase, give me +1 :rb_might: this turn.",
+				description: "If you control fewer runes than an opponent at the start of your Beginning Phase, give me +1 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/33d3e7840280e2780687057f08f30312a56d230f-744x1039.png?accountingTag=RB",
@@ -13364,7 +13364,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Ezreal", "Piltover"],
 				keywords: [],
-				description: "When you play me, discard 1, then draw 2.Optional additional costs you pay cost :rb_energy_1: or [A] less.",
+				description: "When you play me, discard 1, then draw 2.Optional additional costs you pay cost [1] or [A] less.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fd4beecca19d4e84ead0852acce83d4c34ac1b4c-744x1039.png?accountingTag=RB",
@@ -13382,7 +13382,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Ezreal", "Piltover"],
 				keywords: [],
-				description: "When you play me, discard 1, then draw 2.Optional additional costs you pay cost :rb_energy_1: or [A] less.",
+				description: "When you play me, discard 1, then draw 2.Optional additional costs you pay cost [1] or [A] less.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fd4beecca19d4e84ead0852acce83d4c34ac1b4c-744x1039.png?accountingTag=RB",
@@ -13400,7 +13400,7 @@ export default [
 				stats: {energy: 4, might: 2, power: null},
 				tags: ["Lux"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_energy_2:. Spend this Energy only to play spells.",
+				description: "[E]: [Reaction] — [Add] [2]. Spend this Energy only to play spells.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b9778ec229e052268ea66213ca2dbf60612b2862-744x1039.png?accountingTag=RB",
@@ -13418,7 +13418,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "If you control fewer runes than an opponent at the start of your Beginning Phase, give me +2 :rb_might: and [Ganking] this turn. (I can move from battlefield to battlefield.)",
+				description: "If you control fewer runes than an opponent at the start of your Beginning Phase, give me +2 [M] and [Ganking] this turn. (I can move from battlefield to battlefield.)",
 				flavorText: "A simple mistake! It's actually more closely related to a gharial- AUGH!\"- Surprisingly common last words",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d44355b9b129054e63b6f2c8de30518fe87b6295-744x1039.png?accountingTag=RB",
@@ -13472,7 +13472,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "If you control fewer runes than an opponent at the start of your Beginning Phase, give me +2 :rb_might: and [Ganking] this turn. (I can move from battlefield to battlefield.)",
+				description: "If you control fewer runes than an opponent at the start of your Beginning Phase, give me +2 [M] and [Ganking] this turn. (I can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d44355b9b129054e63b6f2c8de30518fe87b6295-744x1039.png?accountingTag=RB",
@@ -13490,7 +13490,7 @@ export default [
 				stats: {energy: 4, might: 2, power: null},
 				tags: ["Lux"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_energy_2:. Spend this Energy only to play spells.",
+				description: "[E]: [Reaction] — [Add] [2]. Spend this Energy only to play spells.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b9778ec229e052268ea66213ca2dbf60612b2862-744x1039.png?accountingTag=RB",
@@ -13508,7 +13508,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Poro", "Ionia"],
 				keywords: [],
-				description: "[Empower] — Discard 1 (Pay the cost: Empower me. Use only if not Empowered.)[Empowered][>] I have +1 :rb_might:.",
+				description: "[Empower] — Discard 1 (Pay the cost: Empower me. Use only if not Empowered.)[Empowered][>] I have +1 [M].",
 				flavorText: "Soft fur. Hard fists.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/03b9a8e704e0f09b686d89d4c2d79f100f212b0f-744x1039.png?accountingTag=RB",
@@ -13526,7 +13526,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Poro", "Ionia"],
 				keywords: [],
-				description: "[Empower] — Discard 1 (Pay the cost: Empower me. Use only if not Empowered.)[Empowered][>] I have +1 :rb_might:.",
+				description: "[Empower] — Discard 1 (Pay the cost: Empower me. Use only if not Empowered.)[Empowered][>] I have +1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/03b9a8e704e0f09b686d89d4c2d79f100f212b0f-744x1039.png?accountingTag=RB",
@@ -13562,7 +13562,7 @@ export default [
 				stats: {energy: 3, might: 4, power: 1},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "When I attack, you may pay :rb_rune_fury: to give me [Assault 2] this turn. (+2 :rb_might: while I'm an attacker.)",
+				description: "When I attack, you may pay [R] to give me [Assault 2] this turn. (+2 [M] while I'm an attacker.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/14c473be38b3ec40503f44555db9a4168a45bfb4-744x1039.png?accountingTag=RB",
@@ -13580,7 +13580,7 @@ export default [
 				stats: {energy: 3, might: 4, power: 1},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "When I attack, you may pay :rb_rune_fury: to give me [Assault 2] this turn. (+2 :rb_might: while I'm an attacker.)",
+				description: "When I attack, you may pay [R] to give me [Assault 2] this turn. (+2 [M] while I'm an attacker.)",
 				flavorText: "The Adcended god-warriors of Shurima pity their lesser cousins.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/14c473be38b3ec40503f44555db9a4168a45bfb4-744x1039.png?accountingTag=RB",
@@ -13616,7 +13616,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_fury: (:rb_rune_fury:: Attach this to a unit you control.)",
+				description: "[Equip] [R] ([R]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/857a5cee28f403454b1825dd112c07e9ac06b8a4-744x1039.png?accountingTag=RB",
@@ -13634,7 +13634,7 @@ export default [
 				stats: {energy: 3, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "Ready a unit and give it [Assault 3] this turn. (+3 :rb_might: while it's an attacker.)[Flow] :rb_energy_3::rb_rune_fury: (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Ready a unit and give it [Assault 3] this turn. (+3 [M] while it's an attacker.)[Flow] [3][R] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: "Anything less is just killing.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cb13c46f8c3872678b87f68891d9f4a416ba8080-744x1039.png?accountingTag=RB",
@@ -13652,7 +13652,7 @@ export default [
 				stats: {energy: 3, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "Ready a unit and give it [Assault 3] this turn. (+3 :rb_might: while it's an attacker.)[Flow] :rb_energy_3::rb_rune_fury: (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Ready a unit and give it [Assault 3] this turn. (+3 [M] while it's an attacker.)[Flow] [3][R] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cb13c46f8c3872678b87f68891d9f4a416ba8080-744x1039.png?accountingTag=RB",
@@ -13706,7 +13706,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "[Empower] :rb_energy_2::rb_rune_fury: (:rb_energy_2::rb_rune_fury:: Empower me. Use only if not Empowered.)[Empowered][>] I have [Assault 3]. (+3 :rb_might: while I'm an attacker.)",
+				description: "[Empower] [2][R] ([2][R]: Empower me. Use only if not Empowered.)[Empowered][>] I have [Assault 3]. (+3 [M] while I'm an attacker.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3bbeed15ac517c2e39c039e376553ce7e1c65f0c-744x1039.png?accountingTag=RB",
@@ -13724,7 +13724,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)This can't be countered.Deal 4 to an enemy Calm (:rb_rune_calm:) unit.",
+				description: "[Action] (Play on your turn or in showdowns.)This can't be countered.Deal 4 to an enemy Calm ([G]) unit.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/320d9f52a4f22fa3405bb9da82c4d02451d7c133-744x1039.png?accountingTag=RB",
@@ -13742,7 +13742,7 @@ export default [
 				stats: {energy: 8, might: 8, power: null},
 				tags: ["Dragon", "Mount Targon"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)When I move, if you control 4 or fewer runes, draw 1.",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)When I move, if you control 4 or fewer runes, draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6b7ea97973ced0e0631554ff07c726fe0a257a3c-744x1039.png?accountingTag=RB",
@@ -13760,7 +13760,7 @@ export default [
 				stats: {energy: 8, might: 8, power: null},
 				tags: ["Dragon", "Mount Targon"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)When I move, if you control 4 or fewer runes, draw 1.",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)When I move, if you control 4 or fewer runes, draw 1.",
 				flavorText: "Power enough to command the sun to wait.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6b7ea97973ced0e0631554ff07c726fe0a257a3c-744x1039.png?accountingTag=RB",
@@ -13814,7 +13814,7 @@ export default [
 				stats: {energy: 4, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Empower] :rb_energy_6::rb_rune_fury: (:rb_energy_6::rb_rune_fury:: Empower this. Use only if not Empowered.)Your units have +1 :rb_might:. If I'm [Empowered], they have +2 :rb_might: instead.",
+				description: "[Empower] [6][R] ([6][R]: Empower this. Use only if not Empowered.)Your units have +1 [M]. If I'm [Empowered], they have +2 [M] instead.",
 				flavorText: "Irritation and incitement are a decibel apart.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/83a7cd497dd42f535f8f0adc72c3c4324f9aec14-744x1039.png?accountingTag=RB",
@@ -13832,7 +13832,7 @@ export default [
 				stats: {energy: 4, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Empower] :rb_energy_6::rb_rune_fury: (:rb_energy_6::rb_rune_fury:: Empower this. Use only if not Empowered.)Your units have +1 :rb_might:. If I'm [Empowered], they have +2 :rb_might: instead.",
+				description: "[Empower] [6][R] ([6][R]: Empower this. Use only if not Empowered.)Your units have +1 [M]. If I'm [Empowered], they have +2 [M] instead.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/83a7cd497dd42f535f8f0adc72c3c4324f9aec14-744x1039.png?accountingTag=RB",
@@ -13868,7 +13868,7 @@ export default [
 				stats: {energy: 6, might: 6, power: null},
 				tags: ["Shurima", "Renekton"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)When I attack, if you control 4 or fewer runes, deal 2 to all enemy units here.",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)When I attack, if you control 4 or fewer runes, deal 2 to all enemy units here.",
 				flavorText: "There is no retreat.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2f6eb3e8328048ad52617c8639ecbe2c287efa36-744x1039.png?accountingTag=RB",
@@ -13904,7 +13904,7 @@ export default [
 				stats: {energy: 6, might: 6, power: null},
 				tags: ["Shurima", "Renekton"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)When I attack, if you control 4 or fewer runes, deal 2 to all enemy units here.",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)When I attack, if you control 4 or fewer runes, deal 2 to all enemy units here.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2f6eb3e8328048ad52617c8639ecbe2c287efa36-744x1039.png?accountingTag=RB",
@@ -13940,7 +13940,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Akali"],
 				keywords: [],
-				description: "[Empower] :rb_energy_2::rb_rune_fury:When I move, you may deal 1 to a unit at a battlefield I moved to or from. If I'm [Empowered], deal 2 instead.[Empowered][>] I have +1 :rb_might:..",
+				description: "[Empower] [2][R]When I move, you may deal 1 to a unit at a battlefield I moved to or from. If I'm [Empowered], deal 2 instead.[Empowered][>] I have +1 [M]..",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/92d8ad4bc4724da89f32348f290600f632f24e9e-744x1039.png?accountingTag=RB",
@@ -13958,7 +13958,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Ionia", "Akali"],
 				keywords: [],
-				description: "[Empower] :rb_energy_2::rb_rune_fury: (:rb_energy_2::rb_rune_fury:: Empower me. Use only if not Empowered.)When I move, you may deal 1 to a unit at a battlefield I moved to or from. If I'm [Empowered], deal 2 instead.[Empowered][>] I have +1 :rb_might:.",
+				description: "[Empower] [2][R] ([2][R]: Empower me. Use only if not Empowered.)When I move, you may deal 1 to a unit at a battlefield I moved to or from. If I'm [Empowered], deal 2 instead.[Empowered][>] I have +1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/564e5f35ae39b6604290e83f39ffb61c2b2b9175-744x1039.png?accountingTag=RB",
@@ -13976,7 +13976,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Ionia", "Akali"],
 				keywords: [],
-				description: "[Empower] :rb_energy_2::rb_rune_fury: (:rb_energy_2::rb_rune_fury:: Empower me. Use only if not Empowered.)When I move, you may deal 1 to a unit at a battlefield I moved to or from. If I'm [Empowered], deal 2 instead.[Empowered][>] I have +1 :rb_might:.",
+				description: "[Empower] [2][R] ([2][R]: Empower me. Use only if not Empowered.)When I move, you may deal 1 to a unit at a battlefield I moved to or from. If I'm [Empowered], deal 2 instead.[Empowered][>] I have +1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/564e5f35ae39b6604290e83f39ffb61c2b2b9175-744x1039.png?accountingTag=RB",
@@ -13994,7 +13994,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Akali"],
 				keywords: [],
-				description: "[Empower] :rb_energy_2::rb_rune_fury:When I move, you may deal 1 to a unit at a battlefield I moved to or from. If I'm [Empowered], deal 2 instead.[Empowered][>] I have +1 :rb_might:..",
+				description: "[Empower] [2][R]When I move, you may deal 1 to a unit at a battlefield I moved to or from. If I'm [Empowered], deal 2 instead.[Empowered][>] I have +1 [M]..",
 				flavorText: "A little star-struck?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/92d8ad4bc4724da89f32348f290600f632f24e9e-744x1039.png?accountingTag=RB",
@@ -14030,7 +14030,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Zed"],
 				keywords: [],
-				description: "You may discard 1 as an additional cost to play me.When you play me, if you paid the additional cost, play a 0 :rb_might: Shadow Clone unit token.",
+				description: "You may discard 1 as an additional cost to play me.When you play me, if you paid the additional cost, play a 0 [M] Shadow Clone unit token.",
 				flavorText: "No technique is forbidden.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/dcf031bd69c4880c33d68f73dde8e391a6059be7-744x1039.png?accountingTag=RB",
@@ -14048,7 +14048,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Ionia", "Zed"],
 				keywords: [],
-				description: "You may discard 1 as an additional cost to play me.When you play me, if you paid the additional cost, play a 0 :rb_might: Shadow Clone unit token. (It has &quot;When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.&quot;)",
+				description: "You may discard 1 as an additional cost to play me.When you play me, if you paid the additional cost, play a 0 [M] Shadow Clone unit token. (It has &quot;When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.&quot;)",
 				flavorText: "No technique is forbidden.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/06793f17adbd827e468db40d644eb273a3932c7e-744x1039.png?accountingTag=RB",
@@ -14066,7 +14066,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Ionia", "Zed"],
 				keywords: [],
-				description: "You may discard 1 as an additional cost to play me.When you play me, if you paid the additional cost, play a 0 :rb_might: Shadow Clone unit token. (It has &quot;When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.&quot;)",
+				description: "You may discard 1 as an additional cost to play me.When you play me, if you paid the additional cost, play a 0 [M] Shadow Clone unit token. (It has &quot;When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.&quot;)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/06793f17adbd827e468db40d644eb273a3932c7e-744x1039.png?accountingTag=RB",
@@ -14084,7 +14084,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Zed"],
 				keywords: [],
-				description: "You may discard 1 as an additional cost to play me.When you play me, if you paid the additional cost, play a 0 :rb_might: Shadow Clone unit token.",
+				description: "You may discard 1 as an additional cost to play me.When you play me, if you paid the additional cost, play a 0 [M] Shadow Clone unit token.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/dcf031bd69c4880c33d68f73dde8e391a6059be7-744x1039.png?accountingTag=RB",
@@ -14156,7 +14156,7 @@ export default [
 				stats: {energy: 4, might: 3, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "When you play me, give a unit +3 :rb_might: this turn.",
+				description: "When you play me, give a unit +3 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e880946b6c99023d9fb1e9aa7d23a0c673b0f6ac-744x1039.png?accountingTag=RB",
@@ -14174,7 +14174,7 @@ export default [
 				stats: {energy: 4, might: 3, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "When you play me, give a unit +3 :rb_might: this turn.",
+				description: "When you play me, give a unit +3 [M] this turn.",
 				flavorText: "Let's pick up the tempo!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e880946b6c99023d9fb1e9aa7d23a0c673b0f6ac-744x1039.png?accountingTag=RB",
@@ -14192,7 +14192,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_rune_calm: (:rb_rune_calm:: Attach this to a unit you control.)",
+				description: "[Equip] [G] ([G]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/524fedb9116db0eb62380c03e0853c342c53daeb-744x1039.png?accountingTag=RB",
@@ -14210,7 +14210,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Fae", "Ionia"],
 				keywords: [],
-				description: "When a combat that I was in ends, empower me. (I become Empowered if I'm not already.)[Empowered][>] I have +2 :rb_might:.",
+				description: "When a combat that I was in ends, empower me. (I become Empowered if I'm not already.)[Empowered][>] I have +2 [M].",
 				flavorText: "Nature's way is to remember, but not to resent.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2f31651fc37a3e8bc562d0a361c509c0998d82c8-744x1039.png?accountingTag=RB",
@@ -14228,7 +14228,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Fae", "Ionia"],
 				keywords: [],
-				description: "When a combat that I was in ends, empower me. (I become Empowered if I'm not already.)[Empowered][>] I have +2 :rb_might:.",
+				description: "When a combat that I was in ends, empower me. (I become Empowered if I'm not already.)[Empowered][>] I have +2 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2f31651fc37a3e8bc562d0a361c509c0998d82c8-744x1039.png?accountingTag=RB",
@@ -14282,7 +14282,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "[Empower] :rb_energy_3: (:rb_energy_3:: Empower me. Use only if not Empowered.)[Empowered][>] I have [Deflect] and [Shield 3]. (Opponents must pay [A] to choose me with a spell or ability.+3 :rb_might: while I'm a defender.)",
+				description: "[Empower] [3] ([3]: Empower me. Use only if not Empowered.)[Empowered][>] I have [Deflect] and [Shield 3]. (Opponents must pay [A] to choose me with a spell or ability.+3 [M] while I'm a defender.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7acc2f9fcdec5d2649e4a50dc3c96aeb31b87916-744x1039.png?accountingTag=RB",
@@ -14300,7 +14300,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Give a friendly unit +1 :rb_might: this turn. It can't be chosen by enemy spells and abilities this turn.[Flow] :rb_energy_2: (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Give a friendly unit +1 [M] this turn. It can't be chosen by enemy spells and abilities this turn.[Flow] [2] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: "I make problems … disappear.\"- Akali",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0bd93298503d6b1b2f6faf7e97ab494e6e26db76-744x1039.png?accountingTag=RB",
@@ -14318,7 +14318,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Give a friendly unit +1 :rb_might: this turn. It can't be chosen by enemy spells and abilities this turn.[Flow] :rb_energy_2: (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Give a friendly unit +1 [M] this turn. It can't be chosen by enemy spells and abilities this turn.[Flow] [2] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0bd93298503d6b1b2f6faf7e97ab494e6e26db76-744x1039.png?accountingTag=RB",
@@ -14336,7 +14336,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Dog", "Freljord"],
 				keywords: [],
-				description: "[Empower] :rb_energy_12:. This ability costs :rb_energy_1: less for each rune you control. (Pay the cost: Empower me. Use only if not Empowered.)[Empowered][>] I have +3 :rb_might:.",
+				description: "[Empower] [12]. This ability costs [1] less for each rune you control. (Pay the cost: Empower me. Use only if not Empowered.)[Empowered][>] I have +3 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/38e2b4f12346a1af420f875c0a5f922c56c4140f-744x1039.png?accountingTag=RB",
@@ -14354,7 +14354,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Cat", "Shurima"],
 				keywords: [],
-				description: "When I move, reveal the top card of your Main Deck. If it's a unit, draw it. Otherwise, put it in your trash and give me +2 :rb_might: this turn.",
+				description: "When I move, reveal the top card of your Main Deck. If it's a unit, draw it. Otherwise, put it in your trash and give me +2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ab3be32adadb72831c07750d8defc7918fd32d96-744x1039.png?accountingTag=RB",
@@ -14372,7 +14372,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Reaction] (Play on your turn or in showdowns.)Choose a battlefield you control and a unit you control at a different location. Move that unit to that battlefield and give it +2 :rb_might: this turn.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Reaction] (Play on your turn or in showdowns.)Choose a battlefield you control and a unit you control at a different location. Move that unit to that battlefield and give it +2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1a625de128019d65d41dd0af4f8d189d5de530a5-744x1039.png?accountingTag=RB",
@@ -14462,7 +14462,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Ionia", "Akali"],
 				keywords: [],
-				description: "I can't be chosen by enemy spells and abilities unless I'm in combat.When I move to a battlefield, give me +2 :rb_might: this turn.",
+				description: "I can't be chosen by enemy spells and abilities unless I'm in combat.When I move to a battlefield, give me +2 [M] this turn.",
 				flavorText: "Skill and steel will get the job done.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f1a4d73853194a3dde02c51b083d197af89d2bda-744x1039.png?accountingTag=RB",
@@ -14480,7 +14480,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Akali"],
 				keywords: [],
-				description: "I can't be chosen by enemy spells and abilities unless I'm in combat.When I move to a battlefield, give me +2 :rb_might: this turn.",
+				description: "I can't be chosen by enemy spells and abilities unless I'm in combat.When I move to a battlefield, give me +2 [M] this turn.",
 				flavorText: "Skill and steel will get the job done.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6924311aab46a74aa2c54030c053427725860ea8-744x1039.png?accountingTag=RB",
@@ -14498,7 +14498,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Ionia", "Akali"],
 				keywords: [],
-				description: "I can't be chosen by enemy spells and abilities unless I'm in combat.When I move to a battlefield, give me +2 :rb_might: this turn.",
+				description: "I can't be chosen by enemy spells and abilities unless I'm in combat.When I move to a battlefield, give me +2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f1a4d73853194a3dde02c51b083d197af89d2bda-744x1039.png?accountingTag=RB",
@@ -14516,7 +14516,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Akali"],
 				keywords: [],
-				description: "I can't be chosen by enemy spells and abilities unless I'm in combat.When I move to a battlefield, give me +2 :rb_might: this turn.",
+				description: "I can't be chosen by enemy spells and abilities unless I'm in combat.When I move to a battlefield, give me +2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6924311aab46a74aa2c54030c053427725860ea8-744x1039.png?accountingTag=RB",
@@ -14552,7 +14552,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose a friendly unit that's in combat with an enemy Fury (:rb_rune_fury:) unit or that's being chosen by an enemy Fury spell. Give it +4 :rb_might: this turn.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose a friendly unit that's in combat with an enemy Fury ([R]) unit or that's being chosen by an enemy Fury spell. Give it +4 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3f9a1b209cfd6097bac6fa9aec57531e300ef511-744x1039.png?accountingTag=RB",
@@ -14678,7 +14678,7 @@ export default [
 				stats: {energy: 1, might: 0, power: null},
 				tags: ["Cat", "Piltover"],
 				keywords: [],
-				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)[Empower] :rb_energy_7: (:rb_energy_7:: Empower me. Use only if not Empowered.)[Empowered][>] I have +7 :rb_might:.",
+				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)[Empower] [7] ([7]: Empower me. Use only if not Empowered.)[Empowered][>] I have +7 [M].",
 				flavorText: "When the rats get too big, it's time to innovate.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/79d9b6583ed8e7d5a1486f1c15b66b19fb7f69a5-744x1039.png?accountingTag=RB",
@@ -14696,7 +14696,7 @@ export default [
 				stats: {energy: 1, might: 0, power: null},
 				tags: ["Cat", "Piltover"],
 				keywords: [],
-				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)[Empower] :rb_energy_7: (:rb_energy_7:: Empower me. Use only if not Empowered.)[Empowered][>] I have +7 :rb_might:.",
+				description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)[Empower] [7] ([7]: Empower me. Use only if not Empowered.)[Empowered][>] I have +7 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/79d9b6583ed8e7d5a1486f1c15b66b19fb7f69a5-744x1039.png?accountingTag=RB",
@@ -14714,7 +14714,7 @@ export default [
 				stats: {energy: 7, might: 7, power: null},
 				tags: ["Bird", "Mount Targon"],
 				keywords: [],
-				description: "When you play your first card each turn, if I'm at a battlefield, your next card costs :rb_energy_2:[A][A] less.",
+				description: "When you play your first card each turn, if I'm at a battlefield, your next card costs [2][A][A] less.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b1ce87efc9a1a7e2438c53e034a7f92caaa67ed6-744x1039.png?accountingTag=RB",
@@ -14732,7 +14732,7 @@ export default [
 				stats: {energy: 4, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Empower] :rb_energy_4::rb_rune_calm: (:rb_energy_4::rb_rune_calm:: Empower this. Use only if not Empowered.)Opponents' spells cost :rb_energy_1: more. If this is [Empowered], they cost :rb_energy_1:[A] more instead.",
+				description: "[Empower] [4][G] ([4][G]: Empower this. Use only if not Empowered.)Opponents' spells cost [1] more. If this is [Empowered], they cost [1][A] more instead.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ecfe67bbdc04f5c16a845ccc7a1b8d534195ca70-744x1039.png?accountingTag=RB",
@@ -14750,7 +14750,7 @@ export default [
 				stats: {energy: 8, might: 8, power: 1},
 				tags: ["Dog", "Nasus"],
 				keywords: [],
-				description: "[Deflect 2][Empower] :rb_energy_8:[Empowered][>] When I conquer, you score 1 point.",
+				description: "[Deflect 2][Empower] [8][Empowered][>] When I conquer, you score 1 point.",
 				flavorText: "Eternity is beyond your reach.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/014103b536a1c5aa2397f0952323375ac9b73d60-744x1039.png?accountingTag=RB",
@@ -14768,7 +14768,7 @@ export default [
 				stats: {energy: 8, might: 8, power: 1},
 				tags: ["Dog", "Shurima", "Nasus"],
 				keywords: [],
-				description: "[Deflect 2] (Opponents must pay [A][A] to choose me with a spell or ability.)[Empower] :rb_energy_8: (:rb_energy_8:: Empower me. Use only if not Empowered.)[Empowered][>] When I conquer, you score 1 point.",
+				description: "[Deflect 2] (Opponents must pay [A][A] to choose me with a spell or ability.)[Empower] [8] ([8]: Empower me. Use only if not Empowered.)[Empowered][>] When I conquer, you score 1 point.",
 				flavorText: "Eternity is beyond your reach.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4d9e9cc17be6aebf33ee1db42b515ad87ba8ee8c-744x1039.png?accountingTag=RB",
@@ -14786,7 +14786,7 @@ export default [
 				stats: {energy: 8, might: 8, power: 1},
 				tags: ["Dog", "Shurima", "Nasus"],
 				keywords: [],
-				description: "[Deflect 2] (Opponents must pay [A][A] to choose me with a spell or ability.)[Empower] :rb_energy_8: (:rb_energy_8:: Empower me. Use only if not Empowered.)[Empowered][>] When I conquer, you score 1 point.",
+				description: "[Deflect 2] (Opponents must pay [A][A] to choose me with a spell or ability.)[Empower] [8] ([8]: Empower me. Use only if not Empowered.)[Empowered][>] When I conquer, you score 1 point.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4d9e9cc17be6aebf33ee1db42b515ad87ba8ee8c-744x1039.png?accountingTag=RB",
@@ -14804,7 +14804,7 @@ export default [
 				stats: {energy: 8, might: 8, power: 1},
 				tags: ["Dog", "Nasus"],
 				keywords: [],
-				description: "[Deflect 2][Empower] :rb_energy_8:[Empowered][>] When I conquer, you score 1 point.",
+				description: "[Deflect 2][Empower] [8][Empowered][>] When I conquer, you score 1 point.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/014103b536a1c5aa2397f0952323375ac9b73d60-744x1039.png?accountingTag=RB",
@@ -14822,7 +14822,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Bilgewater"],
 				keywords: [],
-				description: "[Empower] :rb_energy_2: (:rb_energy_2:: Empower me. Use only if not Empowered.)When I become [Empowered], [Predict 2]. (Look at the top 2 cards of your Main Deck. Recycle any of them and put the rest back in any order.)[Empowered][>] I have +1 :rb_might:.",
+				description: "[Empower] [2] ([2]: Empower me. Use only if not Empowered.)When I become [Empowered], [Predict 2]. (Look at the top 2 cards of your Main Deck. Recycle any of them and put the rest back in any order.)[Empowered][>] I have +1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6e650b9680864a949299cbe2ef7d06d1d22c7d18-744x1039.png?accountingTag=RB",
@@ -14840,7 +14840,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Bilgewater"],
 				keywords: [],
-				description: "[Empower] :rb_energy_2: (:rb_energy_2:: Empower me. Use only if not Empowered.)When I become [Empowered], [Predict 2]. (Look at the top 2 cards of your Main Deck. Recycle any of them and put the rest back in any order.)[Empowered][>] I have +1 :rb_might:.",
+				description: "[Empower] [2] ([2]: Empower me. Use only if not Empowered.)When I become [Empowered], [Predict 2]. (Look at the top 2 cards of your Main Deck. Recycle any of them and put the rest back in any order.)[Empowered][>] I have +1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6e650b9680864a949299cbe2ef7d06d1d22c7d18-744x1039.png?accountingTag=RB",
@@ -14894,7 +14894,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Draw 1.[Flow] :rb_energy_2: (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Draw 1.[Flow] [2] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cf561c8a0f8debde66b66d3e74ce861d0ce388ae-744x1039.png?accountingTag=RB",
@@ -14912,7 +14912,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "[Empower] :rb_energy_12:. This ability costs :rb_energy_1: less for each rune you control. (Pay the cost: Empower me. Use only if not Empowered.)[Empowered][>] I have [Deflect] and [Shield 3]. (Opponents must pay [A] to choose me with a spell or ability.+3 :rb_might: while I'm a defender.)",
+				description: "[Empower] [12]. This ability costs [1] less for each rune you control. (Pay the cost: Empower me. Use only if not Empowered.)[Empowered][>] I have [Deflect] and [Shield 3]. (Opponents must pay [A] to choose me with a spell or ability.+3 [M] while I'm a defender.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2f7f3759c59746486a5f91b8452302fa59eddde6-744x1039.png?accountingTag=RB",
@@ -14930,7 +14930,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Play a 3 :rb_might: Mech unit token.[Flow] :rb_energy_2::rb_rune_mind: (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Play a 3 [M] Mech unit token.[Flow] [2][B] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8d85a05075f95b63832ed7aa15620041eacb49d3-744x1039.png?accountingTag=RB",
@@ -14948,7 +14948,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose one —Return a friendly unit to its owner's hand.Give an enemy unit -2 :rb_might: this turn.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose one —Return a friendly unit to its owner's hand.Give an enemy unit -2 [M] this turn.",
 				flavorText: "Inaction invites regret.\"- Mel",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/854ceafc3f20c7e2d38c83170cb73232116f3d58-744x1039.png?accountingTag=RB",
@@ -14966,7 +14966,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose one —Return a friendly unit to its owner's hand.Give an enemy unit -2 :rb_might: this turn.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose one —Return a friendly unit to its owner's hand.Give an enemy unit -2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/854ceafc3f20c7e2d38c83170cb73232116f3d58-744x1039.png?accountingTag=RB",
@@ -15002,7 +15002,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Empower] —  :rb_exhaust: (Pay the cost: Empower me. Use only if not Empowered.)Disempower this, :rb_energy_1:, :rb_exhaust:: Draw 1.",
+				description: "[Empower] —  [E] (Pay the cost: Empower me. Use only if not Empowered.)Disempower this, [1], [E]: Draw 1.",
 				flavorText: "Or is it?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/07bb606d7cbcb218496b78a4fef354abb99875dc-744x1039.png?accountingTag=RB",
@@ -15020,7 +15020,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Empower] —  :rb_exhaust: (Pay the cost: Empower me. Use only if not Empowered.)Disempower this, :rb_energy_1:, :rb_exhaust:: Draw 1.",
+				description: "[Empower] —  [E] (Pay the cost: Empower me. Use only if not Empowered.)Disempower this, [1], [E]: Draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/07bb606d7cbcb218496b78a4fef354abb99875dc-744x1039.png?accountingTag=RB",
@@ -15038,7 +15038,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "[Empower] :rb_energy_3: (:rb_energy_3:: Empower me. Use only if not Empowered.)[Empowered][>] Your spells cost :rb_energy_1:[A] less, to a minimum of :rb_energy_1:.",
+				description: "[Empower] [3] ([3]: Empower me. Use only if not Empowered.)[Empowered][>] Your spells cost [1][A] less, to a minimum of [1].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/67a5f67bad4d4201b14760206a34c838d7a1e4dc-744x1039.png?accountingTag=RB",
@@ -15074,7 +15074,7 @@ export default [
 				stats: {energy: 3, might: 4, power: 1},
 				tags: ["Noxus"],
 				keywords: [],
-				description: "[Empower] :rb_energy_3: (:rb_energy_3:: Empower me. Use only if not Empowered.)[Empowered][>] When I move, draw 1.",
+				description: "[Empower] [3] ([3]: Empower me. Use only if not Empowered.)[Empowered][>] When I move, draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ff33454bf980a5c884b63e524c6580408e9b94e3-744x1039.png?accountingTag=RB",
@@ -15128,7 +15128,7 @@ export default [
 				stats: {energy: 3, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)This costs :rb_energy_2: less if you control something that's [Empowered].Deal 4 to a unit at a battlefield.",
+				description: "[Action] (Play on your turn or in showdowns.)This costs [2] less if you control something that's [Empowered].Deal 4 to a unit at a battlefield.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a8b976725e4722dcbf327cde9f92625cb516150e-744x1039.png?accountingTag=RB",
@@ -15146,7 +15146,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Piltover"],
 				keywords: [],
-				description: "Discard a gear, :rb_energy_1:, :rb_exhaust:: Deal 4 to a unit at a battlefield.",
+				description: "Discard a gear, [1], [E]: Deal 4 to a unit at a battlefield.",
 				flavorText: "Look out below.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4a99fbe995f6d5d71c1c46e1c38f64a9f9d7c3e9-744x1039.png?accountingTag=RB",
@@ -15164,7 +15164,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Piltover"],
 				keywords: [],
-				description: "Discard a gear, :rb_energy_1:, :rb_exhaust:: Deal 4 to a unit at a battlefield.",
+				description: "Discard a gear, [1], [E]: Deal 4 to a unit at a battlefield.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4a99fbe995f6d5d71c1c46e1c38f64a9f9d7c3e9-744x1039.png?accountingTag=RB",
@@ -15182,7 +15182,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Ignore [Deflect] while paying this spell's cost.Give an enemy Body (:rb_rune_body:) unit -5 :rb_might: this turn.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Ignore [Deflect] while paying this spell's cost.Give an enemy Body ([O]) unit -5 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/da019355562b207814be6aec55bccf415bd416df-744x1039.png?accountingTag=RB",
@@ -15200,7 +15200,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Ignore [Deflect] while paying this spell's cost.Give an enemy Body (:rb_rune_body:) unit -5 :rb_might: this turn.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Ignore [Deflect] while paying this spell's cost.Give an enemy Body ([O]) unit -5 [M] this turn.",
 				flavorText: "Force is artless. Be inspiried.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/da019355562b207814be6aec55bccf415bd416df-744x1039.png?accountingTag=RB",
@@ -15218,7 +15218,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "This enters exhausted.:rb_exhaust:: Empower another gear. (It becomes Empowered if it's not already.)",
+				description: "This enters exhausted.[E]: Empower another gear. (It becomes Empowered if it's not already.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/95f4ee0625dda4213847e6649465397be03c8bd1-744x1039.png?accountingTag=RB",
@@ -15236,7 +15236,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "This enters exhausted.:rb_exhaust:: Empower another gear. (It becomes Empowered if it's not already.)",
+				description: "This enters exhausted.[E]: Empower another gear. (It becomes Empowered if it's not already.)",
 				flavorText: "Such an innocuous thing.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/95f4ee0625dda4213847e6649465397be03c8bd1-744x1039.png?accountingTag=RB",
@@ -15326,7 +15326,7 @@ export default [
 				stats: {energy: 10, might: 8, power: null},
 				tags: ["Mech", "Piltover"],
 				keywords: [],
-				description: "I cost :rb_energy_1: less for each gear you control.[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)",
+				description: "I cost [1] less for each gear you control.[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3fc86ed4d23604dbb3c7de211eb6a9c36bd9176d-744x1039.png?accountingTag=RB",
@@ -15362,7 +15362,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)Banish a unit, then its owner plays it to the same location, ignoring its cost.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)Banish a unit, then its owner plays it to the same location, ignoring its cost.",
 				flavorText: "For the important things, you can always make time.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7c670dc3d997c52b90d67043989b53c67a72f4c4-744x1039.png?accountingTag=RB",
@@ -15380,7 +15380,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)Banish a unit, then its owner plays it to the same location, ignoring its cost.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)Banish a unit, then its owner plays it to the same location, ignoring its cost.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7c670dc3d997c52b90d67043989b53c67a72f4c4-744x1039.png?accountingTag=RB",
@@ -15506,7 +15506,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Noxus", "Mel"],
 				keywords: [],
-				description: "When you play me, draw 1.[Empower] :rb_energy_3: (:rb_energy_3:: Empower me. Use only if not Empowered.)[Empowered][>] Your spells and abilities can't be countered. If a spell or ability you control would give -:rb_might: to a unit it chooses, it gives an additional -1 :rb_might:.",
+				description: "When you play me, draw 1.[Empower] [3] ([3]: Empower me. Use only if not Empowered.)[Empowered][>] Your spells and abilities can't be countered. If a spell or ability you control would give -[M] to a unit it chooses, it gives an additional -1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7d794234d8efef9ad647046d1e2cd3736441899f-744x1039.png?accountingTag=RB",
@@ -15524,7 +15524,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Mel"],
 				keywords: [],
-				description: "When you play me, draw 1.[Empower] :rb_energy_3:[Empowered][>] Your spells and abilities can't be countered. If a spell or ability you control would give -:rb_might: to a unit it chooses, it gives an additional -1 :rb_might:.",
+				description: "When you play me, draw 1.[Empower] [3][Empowered][>] Your spells and abilities can't be countered. If a spell or ability you control would give -[M] to a unit it chooses, it gives an additional -1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2781dd135b5f42527df3bacee59ccee8684236fa-744x1039.png?accountingTag=RB",
@@ -15542,7 +15542,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Mel"],
 				keywords: [],
-				description: "When you play me, draw 1.[Empower] :rb_energy_3:[Empowered][>] Your spells and abilities can't be countered. If a spell or ability you control would give -:rb_might: to a unit it chooses, it gives an additional -1 :rb_might:.",
+				description: "When you play me, draw 1.[Empower] [3][Empowered][>] Your spells and abilities can't be countered. If a spell or ability you control would give -[M] to a unit it chooses, it gives an additional -1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2781dd135b5f42527df3bacee59ccee8684236fa-744x1039.png?accountingTag=RB",
@@ -15560,7 +15560,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Noxus", "Mel"],
 				keywords: [],
-				description: "When you play me, draw 1.[Empower] :rb_energy_3: (:rb_energy_3:: Empower me. Use only if not Empowered.)[Empowered][>] Your spells and abilities can't be countered. If a spell or ability you control would give -:rb_might: to a unit it chooses, it gives an additional -1 :rb_might:.",
+				description: "When you play me, draw 1.[Empower] [3] ([3]: Empower me. Use only if not Empowered.)[Empowered][>] Your spells and abilities can't be countered. If a spell or ability you control would give -[M] to a unit it chooses, it gives an additional -1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7d794234d8efef9ad647046d1e2cd3736441899f-744x1039.png?accountingTag=RB",
@@ -15578,7 +15578,7 @@ export default [
 				stats: {energy: 3, might: 4, power: 1},
 				tags: ["Noxus"],
 				keywords: [],
-				description: "[Empower] :rb_energy_3: (:rb_energy_3:: Empower me. Use only if not Empowered.)[Empowered][>] I have +2 :rb_might: and [Ganking]. (I can move from battlefield to battlefield.)",
+				description: "[Empower] [3] ([3]: Empower me. Use only if not Empowered.)[Empowered][>] I have +2 [M] and [Ganking]. (I can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/54122304a3bb1f989faf124cb74fd7d41b029681-744x1039.png?accountingTag=RB",
@@ -15596,7 +15596,7 @@ export default [
 				stats: {energy: 6, might: 5, power: null},
 				tags: ["Cat", "Piltover"],
 				keywords: [],
-				description: "When I become ready, give me +2 :rb_might: this turn.",
+				description: "When I become ready, give me +2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/24370c9e33705b393c40f426e221ae851a65dd05-744x1039.png?accountingTag=RB",
@@ -15614,7 +15614,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Give a unit +2 :rb_might: this turn. If it's [Empowered], give it +4 :rb_might: this turn instead.",
+				description: "[Action] (Play on your turn or in showdowns.)Give a unit +2 [M] this turn. If it's [Empowered], give it +4 [M] this turn instead.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/891f0f85b039b16593865c74b90b0640a312e59b-744x1039.png?accountingTag=RB",
@@ -15632,7 +15632,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "Equip :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)",
+				description: "Equip [O] ([O]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/22aae23e1ac1797beb50f3f735becfe65b51ee02-744x1039.png?accountingTag=RB",
@@ -15650,7 +15650,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "Equip :rb_rune_body: (:rb_rune_body:: Attach this to a unit you control.)",
+				description: "Equip [O] ([O]: Attach this to a unit you control.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/22aae23e1ac1797beb50f3f735becfe65b51ee02-744x1039.png?accountingTag=RB",
@@ -15668,7 +15668,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Trifarian", "Noxus"],
 				keywords: [],
-				description: "[Empower] — :rb_energy_1: or :rb_rune_body: (Pay either cost: Empower me. Use only if not Empowered.)[Empowered][>] I have +1 :rb_might:.",
+				description: "[Empower] — [1] or [O] (Pay either cost: Empower me. Use only if not Empowered.)[Empowered][>] I have +1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/15ec9e813e58c9ba96f37e78f09faaaa184ecdad-744x1039.png?accountingTag=RB",
@@ -15686,7 +15686,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "This enters exhausted.[Empower] — :rb_energy_1:, :rb_exhaust: (Pay the cost: Empower this. Use only if not Empowered.)[Reaction][>] :rb_exhaust:: [Add] :rb_energy_1:. If this is [Empowered], [Add] :rb_energy_2: instead.",
+				description: "This enters exhausted.[Empower] — [1], [E] (Pay the cost: Empower this. Use only if not Empowered.)[Reaction][>] [E]: [Add] [1]. If this is [Empowered], [Add] [2] instead.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f6a3940440a38e34fe306947d663018dd2df7ca8-744x1039.png?accountingTag=RB",
@@ -15704,7 +15704,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Zaun"],
 				keywords: [],
-				description: "I have [Assault] equal to the number of gear you control. (+1 :rb_might: while I'm an attacker for each instance of Assault.)",
+				description: "I have [Assault] equal to the number of gear you control. (+1 [M] while I'm an attacker for each instance of Assault.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b1ef578e372e64afbce717384fb8a3b7fd841fc8-744x1039.png?accountingTag=RB",
@@ -15722,7 +15722,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Empower] :rb_energy_2: (:rb_energy_2:: Empower this. Use only if not Empowered.):rb_exhaust:: Give a unit +2 :rb_might: this turn. If this is [Empowered], give that unit +4 :rb_might: this turn instead.",
+				description: "[Empower] [2] ([2]: Empower this. Use only if not Empowered.)[E]: Give a unit +2 [M] this turn. If this is [Empowered], give that unit +4 [M] this turn instead.",
 				flavorText: "We will unearth what has been lost.\"- Azir",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c4f511ca650143e3f5267e272513e4dcf9cba04f-744x1039.png?accountingTag=RB",
@@ -15740,7 +15740,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Empower] :rb_energy_2: (:rb_energy_2:: Empower this. Use only if not Empowered.):rb_exhaust:: Give a unit +2 :rb_might: this turn. If this is [Empowered], give that unit +4 :rb_might: this turn instead.",
+				description: "[Empower] [2] ([2]: Empower this. Use only if not Empowered.)[E]: Give a unit +2 [M] this turn. If this is [Empowered], give that unit +4 [M] this turn instead.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c4f511ca650143e3f5267e272513e4dcf9cba04f-744x1039.png?accountingTag=RB",
@@ -15758,7 +15758,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "[Empower] :rb_energy_1:[A][A] (:rb_energy_1:[A][A]: Empower me. Use only if not Empowered.)[Empowered][>] I have +2 :rb_might:.[Empowered][>][>>][Deathknell][>] Channel 2 runes exhausted. (When I die while Empowered, get the effect.)",
+				description: "[Empower] [1][A][A] ([1][A][A]: Empower me. Use only if not Empowered.)[Empowered][>] I have +2 [M].[Empowered][>][>>][Deathknell][>] Channel 2 runes exhausted. (When I die while Empowered, get the effect.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fa41ae964411e63643025f7d8914627849ff57a8-744x1039.png?accountingTag=RB",
@@ -15776,7 +15776,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Noxus"],
 				keywords: [],
-				description: "[Empower] :rb_energy_5::rb_rune_body: (:rb_energy_5::rb_rune_body:: Empower me. Use only if not Empowered.)[Empowered][>] When I attack or defend, choose a unit here. Increase my Might to its Might this turn, then give me +1 :rb_might: this turn.",
+				description: "[Empower] [5][O] ([5][O]: Empower me. Use only if not Empowered.)[Empowered][>] When I attack or defend, choose a unit here. Increase my Might to its Might this turn, then give me +1 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7c45dc79e72efc8ddf8c5b20d83474e23dc66e5e-744x1039.png?accountingTag=RB",
@@ -15794,7 +15794,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Noxus"],
 				keywords: [],
-				description: "[Empower] :rb_energy_5::rb_rune_body: (:rb_energy_5::rb_rune_body:: Empower me. Use only if not Empowered.)[Empowered][>] When I attack or defend, choose a unit here. Increase my Might to its Might this turn, then give me +1 :rb_might: this turn.",
+				description: "[Empower] [5][O] ([5][O]: Empower me. Use only if not Empowered.)[Empowered][>] When I attack or defend, choose a unit here. Increase my Might to its Might this turn, then give me +1 [M] this turn.",
 				flavorText: "Wanna see a show?!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7c45dc79e72efc8ddf8c5b20d83474e23dc66e5e-744x1039.png?accountingTag=RB",
@@ -15848,7 +15848,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Give a unit +6 :rb_might: this turn.[Flow] :rb_energy_4: (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Give a unit +6 [M] this turn.[Flow] [4] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6a1ef90c64e07b3f561e34c8d43ff5f64db925d8-744x1039.png?accountingTag=RB",
@@ -15884,7 +15884,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "As you play this, you may pay :rb_rune_body: as an additional cost.Choose a friendly unit and an enemy unit. If you paid the additional cost, give the friendly unit +2 :rb_might: this turn. They deal damage equal to their Mights to each other.",
+				description: "As you play this, you may pay [O] as an additional cost.Choose a friendly unit and an enemy unit. If you paid the additional cost, give the friendly unit +2 [M] this turn. They deal damage equal to their Mights to each other.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3c85ae2c6bd5b2644651564fad0f86ad19c5709a-744x1039.png?accountingTag=RB",
@@ -15902,7 +15902,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "As you play this, you may pay :rb_rune_body: as an additional cost.Choose a friendly unit and an enemy unit. If you paid the additional cost, give the friendly unit +2 :rb_might: this turn. They deal damage equal to their Mights to each other.",
+				description: "As you play this, you may pay [O] as an additional cost.Choose a friendly unit and an enemy unit. If you paid the additional cost, give the friendly unit +2 [M] this turn. They deal damage equal to their Mights to each other.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3c85ae2c6bd5b2644651564fad0f86ad19c5709a-744x1039.png?accountingTag=RB",
@@ -15920,7 +15920,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Ambessa"],
 				keywords: [],
-				description: "[Empower] :rb_energy_3::rb_rune_body:[Empowered][>] I have +3 :rb_might: and can't be dealt damage unless I'm in combat.",
+				description: "[Empower] [3][O][Empowered][>] I have +3 [M] and can't be dealt damage unless I'm in combat.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/df72c64b97738a217508ee8ee6e6297000607a97-744x1039.png?accountingTag=RB",
@@ -15938,7 +15938,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Noxus", "Ambessa"],
 				keywords: [],
-				description: "[Empower] :rb_energy_3::rb_rune_body: (:rb_energy_3::rb_rune_body:: Empower me. Use only if not Empowered.)[Empowered][>] I have +3 :rb_might: and can't be dealt damage unless I'm in combat.",
+				description: "[Empower] [3][O] ([3][O]: Empower me. Use only if not Empowered.)[Empowered][>] I have +3 [M] and can't be dealt damage unless I'm in combat.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3907dc56d3a639e62f5222eaa0fd589c7a582da6-744x1039.png?accountingTag=RB",
@@ -15956,7 +15956,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Choose an opponent. They reveal their hand and you choose a Mind (:rb_rune_mind:) card from it. They recycle that card.",
+				description: "Choose an opponent. They reveal their hand and you choose a Mind ([B]) card from it. They recycle that card.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/12106889f9f76914421f38e8958a248462637a22-744x1039.png?accountingTag=RB",
@@ -15974,7 +15974,7 @@ export default [
 				stats: {energy: 6, might: 6, power: null},
 				tags: ["Bilgewater", "Gangplank"],
 				keywords: [],
-				description: "[Empower] :rb_rune_body::rb_rune_body: (:rb_rune_body::rb_rune_body:: Empower me. Use only if not Empowered.)[Empowered][>] If a spell or ability that chooses me would stun me, give me -:rb_might:, or return me to hand, give me +3 :rb_might: instead.",
+				description: "[Empower] [O][O] ([O][O]: Empower me. Use only if not Empowered.)[Empowered][>] If a spell or ability that chooses me would stun me, give me -[M], or return me to hand, give me +3 [M] instead.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f270a3ecc4850594513c45d145f2b855152e2cb7-744x1039.png?accountingTag=RB",
@@ -15992,7 +15992,7 @@ export default [
 				stats: {energy: 6, might: 6, power: null},
 				tags: ["Bilgewater", "Gangplank"],
 				keywords: [],
-				description: "[Empower] :rb_rune_body::rb_rune_body: (:rb_rune_body::rb_rune_body:: Empower me. Use only if not Empowered.)[Empowered][>] If a spell or ability that chooses me would stun me, give me -:rb_might:, or return me to hand, give me +3 :rb_might: instead.",
+				description: "[Empower] [O][O] ([O][O]: Empower me. Use only if not Empowered.)[Empowered][>] If a spell or ability that chooses me would stun me, give me -[M], or return me to hand, give me +3 [M] instead.",
 				flavorText: "Death spit me out.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f270a3ecc4850594513c45d145f2b855152e2cb7-744x1039.png?accountingTag=RB",
@@ -16010,7 +16010,7 @@ export default [
 				stats: {energy: 4, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Empower] — :rb_exhaust: (Pay the cost: Empower this. Use only if not Empowered.)Disempower this, :rb_energy_1:, :rb_exhaust:: Play a 3 :rb_might: Mech unit token to your base.",
+				description: "[Empower] — [E] (Pay the cost: Empower this. Use only if not Empowered.)Disempower this, [1], [E]: Play a 3 [M] Mech unit token to your base.",
 				flavorText: "Excellence at scale.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/36acfeb7da10f1254e962b7bacda3e6ea559fe53-744x1039.png?accountingTag=RB",
@@ -16028,7 +16028,7 @@ export default [
 				stats: {energy: 4, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Empower] — :rb_exhaust: (Pay the cost: Empower this. Use only if not Empowered.)Disempower this, :rb_energy_1:, :rb_exhaust:: Play a 3 :rb_might: Mech unit token to your base.",
+				description: "[Empower] — [E] (Pay the cost: Empower this. Use only if not Empowered.)Disempower this, [1], [E]: Play a 3 [M] Mech unit token to your base.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/36acfeb7da10f1254e962b7bacda3e6ea559fe53-744x1039.png?accountingTag=RB",
@@ -16064,7 +16064,7 @@ export default [
 				stats: {energy: 4, might: 5, power: 1},
 				tags: ["Jayce", "Piltover"],
 				keywords: [],
-				description: "When I become ready, choose one to give me this turn —[Assault 2] (+2 :rb_might: while I'm an attacker.)[Deflect 2] (Opponents must pay [A][A] to choose me with a spell or ability.)[Ganking] (I can move from battlefield to battlefield.)",
+				description: "When I become ready, choose one to give me this turn —[Assault 2] (+2 [M] while I'm an attacker.)[Deflect 2] (Opponents must pay [A][A] to choose me with a spell or ability.)[Ganking] (I can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2dcecc0aab2b62e48388177cc27d220fd70b8a78-744x1039.png?accountingTag=RB",
@@ -16100,7 +16100,7 @@ export default [
 				stats: {energy: 4, might: 5, power: 1},
 				tags: ["Jayce", "Piltover"],
 				keywords: [],
-				description: "When I become ready, choose one to give me this turn —[Assault 2] (+2 :rb_might: while I'm an attacker.)[Deflect 2] (Opponents must pay [A][A] to choose me with a spell or ability.)[Ganking] (I can move from battlefield to battlefield.)",
+				description: "When I become ready, choose one to give me this turn —[Assault 2] (+2 [M] while I'm an attacker.)[Deflect 2] (Opponents must pay [A][A] to choose me with a spell or ability.)[Ganking] (I can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2dcecc0aab2b62e48388177cc27d220fd70b8a78-744x1039.png?accountingTag=RB",
@@ -16118,7 +16118,7 @@ export default [
 				stats: {energy: 7, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "Look at the top 5 cards of your Main Deck. You may banish a unit or gear from among them and play it, reducing its Energy cost by :rb_energy_5:. Recycle the rest. Then you may do this: Empower it. (It becomes Empowered if it's not already.)",
+				description: "Look at the top 5 cards of your Main Deck. You may banish a unit or gear from among them and play it, reducing its Energy cost by [5]. Recycle the rest. Then you may do this: Empower it. (It becomes Empowered if it's not already.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a58871b08a51efb8ce33f399fe4d168fd25b596a-744x1039.png?accountingTag=RB",
@@ -16136,7 +16136,7 @@ export default [
 				stats: {energy: 7, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "Look at the top 5 cards of your Main Deck. You may banish a unit or gear from among them and play it, reducing its Energy cost by :rb_energy_5:. Recycle the rest. Then you may do this: Empower it. (It becomes Empowered if it's not already.)",
+				description: "Look at the top 5 cards of your Main Deck. You may banish a unit or gear from among them and play it, reducing its Energy cost by [5]. Recycle the rest. Then you may do this: Empower it. (It becomes Empowered if it's not already.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a58871b08a51efb8ce33f399fe4d168fd25b596a-744x1039.png?accountingTag=RB",
@@ -16172,7 +16172,7 @@ export default [
 				stats: {energy: 10, might: 10, power: 2},
 				tags: ["Dragon", "Shadow Isles"],
 				keywords: [],
-				description: "If your score is not within 3 points of the Victory Score, I enter ready.When I attack, you may move any number of enemy units here each with 5 :rb_might: or less to their base.",
+				description: "If your score is not within 3 points of the Victory Score, I enter ready.When I attack, you may move any number of enemy units here each with 5 [M] or less to their base.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6000c549047967e619d47bdbd2f265e5bb8b5b19-744x1039.png?accountingTag=RB",
@@ -16190,7 +16190,7 @@ export default [
 				stats: {energy: 10, might: 10, power: 2},
 				tags: ["Dragon", "Shadow Isles"],
 				keywords: [],
-				description: "If your score is not within 3 points of the Victory Score, I enter ready.When I attack, you may move any number of enemy units here each with 5 :rb_might: or less to their base.",
+				description: "If your score is not within 3 points of the Victory Score, I enter ready.When I attack, you may move any number of enemy units here each with 5 [M] or less to their base.",
 				flavorText: "Noble souls fall the furthest.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6000c549047967e619d47bdbd2f265e5bb8b5b19-744x1039.png?accountingTag=RB",
@@ -16208,7 +16208,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Renekton"],
 				keywords: [],
-				description: ":rb_energy_1:: Give me +1 :rb_might: this turn.When my Might becomes 10 or more, empower me.[Empowered][>] I have [Deflect] and [Ganking].",
+				description: "[1]: Give me +1 [M] this turn.When my Might becomes 10 or more, empower me.[Empowered][>] I have [Deflect] and [Ganking].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ba4078d7df5cd5f661aa0c606794036338b64864-744x1039.png?accountingTag=RB",
@@ -16226,7 +16226,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Shurima", "Renekton"],
 				keywords: [],
-				description: ":rb_energy_1:: Give me +1 :rb_might: this turn.When my Might becomes 10 or more, empower me. (I become Empowered if I'm not already.)[Empowered][>] I have [Deflect] and [Ganking]. (Opponents must pay [A] to choose me with a spell or ability. I can move from battlefield to battlefield.)",
+				description: "[1]: Give me +1 [M] this turn.When my Might becomes 10 or more, empower me. (I become Empowered if I'm not already.)[Empowered][>] I have [Deflect] and [Ganking]. (Opponents must pay [A] to choose me with a spell or ability. I can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0b4340e30e46f1784b31b9a110903825b7428a94-744x1039.png?accountingTag=RB",
@@ -16244,7 +16244,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "[Empower] :rb_energy_2: (:rb_energy_2:: Empower me. Use only if not Empowered.)[Empowered][>] I have +1 :rb_might: and [Ganking]. (I can move from battlefield to battlefield.)",
+				description: "[Empower] [2] ([2]: Empower me. Use only if not Empowered.)[Empowered][>] I have +1 [M] and [Ganking]. (I can move from battlefield to battlefield.)",
 				flavorText: "His life is the blade. His blade is his life.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/18e925b4291231a2045e60d062bd174950316c1d-744x1039.png?accountingTag=RB",
@@ -16262,7 +16262,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "[Empower] :rb_energy_2: (:rb_energy_2:: Empower me. Use only if not Empowered.)[Empowered][>] I have +1 :rb_might: and [Ganking]. (I can move from battlefield to battlefield.)",
+				description: "[Empower] [2] ([2]: Empower me. Use only if not Empowered.)[Empowered][>] I have +1 [M] and [Ganking]. (I can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/18e925b4291231a2045e60d062bd174950316c1d-744x1039.png?accountingTag=RB",
@@ -16280,7 +16280,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Spirit", "Shadow Isles"],
 				keywords: [],
-				description: "When you discard me, you may pay :rb_energy_1: to give a friendly unit +2 :rb_might: this turn.",
+				description: "When you discard me, you may pay [1] to give a friendly unit +2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/21cf578371a75f6e2661d44f4d7389d8732c133e-744x1039.png?accountingTag=RB",
@@ -16298,7 +16298,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "When I move, you may [Burn 1] to give me +1 :rb_might: this turn. (To Burn 1, put the top card of your Main Deck into your trash.)",
+				description: "When I move, you may [Burn 1] to give me +1 [M] this turn. (To Burn 1, put the top card of your Main Deck into your trash.)",
 				flavorText: "Recipients of a terrifying education.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f85fb8b46a29360f9850826df11202ff8221fec8-744x1039.png?accountingTag=RB",
@@ -16316,7 +16316,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "When I move, you may [Burn 1] to give me +1 :rb_might: this turn. (To Burn 1, put the top card of your Main Deck into your trash.)",
+				description: "When I move, you may [Burn 1] to give me +1 [M] this turn. (To Burn 1, put the top card of your Main Deck into your trash.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f85fb8b46a29360f9850826df11202ff8221fec8-744x1039.png?accountingTag=RB",
@@ -16334,7 +16334,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "I cost :rb_energy_2: less for each card with my name in your trash.",
+				description: "I cost [2] less for each card with my name in your trash.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2874318b39f1dd9d1bf2ed21203795688b788413-744x1039.png?accountingTag=RB",
@@ -16352,7 +16352,7 @@ export default [
 				stats: {energy: 3, might: 1, power: null},
 				tags: ["Shadow Isles", "Spider"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)I have +1 :rb_might: for each other unit you control here with my name.Your deck can have any number of cards named Spiderling.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)I have +1 [M] for each other unit you control here with my name.Your deck can have any number of cards named Spiderling.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fadf12e6e52eb5c70c65b479438f999f49d825fc-744x1039.png?accountingTag=RB",
@@ -16370,7 +16370,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Mount Targon"],
 				keywords: [],
-				description: "Spells with [Flow] you play from your trash cost :rb_energy_2: less, to a minimum of :rb_energy_1:.",
+				description: "Spells with [Flow] you play from your trash cost [2] less, to a minimum of [1].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/72ef8764cb3909940f0ca4bd8b31cdceed241af0-744x1039.png?accountingTag=RB",
@@ -16388,7 +16388,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Yordle", "Bandle City"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When you play me from face down, you may empower something here. Disempower it at end of turn.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When you play me from face down, you may empower something here. Disempower it at end of turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f9b2ffecc997670713bffd3168e5578b5fb7a014-744x1039.png?accountingTag=RB",
@@ -16406,7 +16406,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Play two 1 :rb_might: Tentacle unit tokens from Bilgewater.[Flow] :rb_energy_3: (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Play two 1 [M] Tentacle unit tokens from Bilgewater.[Flow] [3] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/245942e8b2bf073d5d6d57074474ec273557f4df-744x1039.png?accountingTag=RB",
@@ -16424,7 +16424,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Yordle", "Bandle City"],
 				keywords: [],
-				description: "You may pay :rb_energy_1: as an additional cost to play me.When you play me, if you paid the additional cost, banish a card from any trash to give a unit [Assault 2] this turn. (+2 :rb_might: while it's an attacker.)",
+				description: "You may pay [1] as an additional cost to play me.When you play me, if you paid the additional cost, banish a card from any trash to give a unit [Assault 2] this turn. (+2 [M] while it's an attacker.)",
 				flavorText: "An odd technique, but quite effective.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/93a194c0c1f055c0b3bc3c0717cbe488749fed92-744x1039.png?accountingTag=RB",
@@ -16442,7 +16442,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Yordle", "Bandle City"],
 				keywords: [],
-				description: "You may pay :rb_energy_1: as an additional cost to play me.When you play me, if you paid the additional cost, banish a card from any trash to give a unit [Assault 2] this turn. (+2 :rb_might: while it's an attacker.)",
+				description: "You may pay [1] as an additional cost to play me.When you play me, if you paid the additional cost, banish a card from any trash to give a unit [Assault 2] this turn. (+2 [M] while it's an attacker.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/93a194c0c1f055c0b3bc3c0717cbe488749fed92-744x1039.png?accountingTag=RB",
@@ -16532,7 +16532,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "[Empower] :rb_energy_2::rb_rune_chaos: (:rb_energy_2::rb_rune_chaos:: Empower me. Use only if not Empowered.)When I become [Empowered], you may choose a unit in your trash with Energy cost no more than :rb_energy_3: and Power cost no more than [A]. Play it to your base, ignoring its cost.",
+				description: "[Empower] [2][P] ([2][P]: Empower me. Use only if not Empowered.)When I become [Empowered], you may choose a unit in your trash with Energy cost no more than [3] and Power cost no more than [A]. Play it to your base, ignoring its cost.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/91a04e2131245c81c2eac486e63925592b0e253a-744x1039.png?accountingTag=RB",
@@ -16550,7 +16550,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "Move a unit with 3 :rb_might: or less.[Flow] :rb_energy_4::rb_rune_chaos: (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Move a unit with 3 [M] or less.[Flow] [4][P] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1c5c10009a9fb2605df5db1ff12647a47ac07d98-744x1039.png?accountingTag=RB",
@@ -16568,7 +16568,7 @@ export default [
 				stats: {energy: 3, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Choose a unit at a battlefield. If it has 3 :rb_might: or less, banish it. Otherwise, return it to its owner's hand.",
+				description: "[Action] (Play on your turn or in showdowns.)Choose a unit at a battlefield. If it has 3 [M] or less, banish it. Otherwise, return it to its owner's hand.",
 				flavorText: "The best strategy is to not have an enemy.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ef118660422af84f6183d375b68ce1872acb1e2e-744x1039.png?accountingTag=RB",
@@ -16586,7 +16586,7 @@ export default [
 				stats: {energy: 3, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Choose a unit at a battlefield. If it has 3 :rb_might: or less, banish it. Otherwise, return it to its owner's hand.",
+				description: "[Action] (Play on your turn or in showdowns.)Choose a unit at a battlefield. If it has 3 [M] or less, banish it. Otherwise, return it to its owner's hand.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ef118660422af84f6183d375b68ce1872acb1e2e-744x1039.png?accountingTag=RB",
@@ -16604,7 +16604,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "Return any number of enemy Order (:rb_rune_order:) units with total Might 5 or less to their owners' hands.",
+				description: "Return any number of enemy Order ([Y]) units with total Might 5 or less to their owners' hands.",
 				flavorText: "Tradition is a prison. Break free.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b0e82842acddb99c47af6793dab48164caf498c2-744x1039.png?accountingTag=RB",
@@ -16622,7 +16622,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "Return any number of enemy Order (:rb_rune_order:) units with total Might 5 or less to their owners' hands.",
+				description: "Return any number of enemy Order ([Y]) units with total Might 5 or less to their owners' hands.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b0e82842acddb99c47af6793dab48164caf498c2-744x1039.png?accountingTag=RB",
@@ -16640,7 +16640,7 @@ export default [
 				stats: {energy: 5, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you play this or at the start of your Beginning Phase, [Burn 1]. When you burn a unit this way, do this: Give a friendly unit +:rb_might: equal to the burned card's Might this turn. (To Burn 1, put the top card of your Main Deck into your trash.)",
+				description: "When you play this or at the start of your Beginning Phase, [Burn 1]. When you burn a unit this way, do this: Give a friendly unit +[M] equal to the burned card's Might this turn. (To Burn 1, put the top card of your Main Deck into your trash.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e249b3c2a7f652dfb7549604f600792df11835b4-744x1039.png?accountingTag=RB",
@@ -16658,7 +16658,7 @@ export default [
 				stats: {energy: 6, might: 4, power: null},
 				tags: ["Bilgewater", "Illaoi"],
 				keywords: [],
-				description: "When you play me or when I score, play a :rb_energy_1: :rb_might: Tentacle unit token from Bilgewater.I have +1 :rb_might: for each token unit you control.",
+				description: "When you play me or when I score, play a [1] [M] Tentacle unit token from Bilgewater.I have +1 [M] for each token unit you control.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/86fccf469e67fb89312e0c860842e2801a8b12e7-744x1039.png?accountingTag=RB",
@@ -16676,7 +16676,7 @@ export default [
 				stats: {energy: 6, might: 4, power: null},
 				tags: ["Bilgewater", "Illaoi"],
 				keywords: [],
-				description: "When you play me or when I score, play a :rb_energy_1: :rb_might: Tentacle unit token from Bilgewater.I have +1 :rb_might: for each token unit you control.",
+				description: "When you play me or when I score, play a [1] [M] Tentacle unit token from Bilgewater.I have +1 [M] for each token unit you control.",
 				flavorText: "We are not one soul. We are many.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/86fccf469e67fb89312e0c860842e2801a8b12e7-744x1039.png?accountingTag=RB",
@@ -16694,7 +16694,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Noxus", "Mel"],
 				keywords: [],
-				description: "[Empower] — Discard a spell (Pay the cost: Empower me. Use only if not Empowered.)When I become [Empowered], banish an enemy unit at a battlefield with 3 :rb_might: or less.",
+				description: "[Empower] — Discard a spell (Pay the cost: Empower me. Use only if not Empowered.)When I become [Empowered], banish an enemy unit at a battlefield with 3 [M] or less.",
 				flavorText: "Medardas are known for our strategy and strength.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/214567717b4f0156ff06c923e1603234cb52db61-744x1039.png?accountingTag=RB",
@@ -16712,7 +16712,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Mel"],
 				keywords: [],
-				description: "[Empower] — Discard a spellWhen I become [Empowered], banish an enemy unit at a battlefield with 3 :rb_might: or less.",
+				description: "[Empower] — Discard a spellWhen I become [Empowered], banish an enemy unit at a battlefield with 3 [M] or less.",
 				flavorText: "Medardas are known for our strategy and strength.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0495d07746d71cdd1aeae8f7fd5a0b78da0817fb-744x1039.png?accountingTag=RB",
@@ -16730,7 +16730,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Noxus", "Mel"],
 				keywords: [],
-				description: "[Empower] — Discard a spell (Pay the cost: Empower me. Use only if not Empowered.)When I become [Empowered], banish an enemy unit at a battlefield with 3 :rb_might: or less.",
+				description: "[Empower] — Discard a spell (Pay the cost: Empower me. Use only if not Empowered.)When I become [Empowered], banish an enemy unit at a battlefield with 3 [M] or less.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/214567717b4f0156ff06c923e1603234cb52db61-744x1039.png?accountingTag=RB",
@@ -16748,7 +16748,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Mel"],
 				keywords: [],
-				description: "[Empower] — Discard a spellWhen I become [Empowered], banish an enemy unit at a battlefield with 3 :rb_might: or less.",
+				description: "[Empower] — Discard a spellWhen I become [Empowered], banish an enemy unit at a battlefield with 3 [M] or less.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0495d07746d71cdd1aeae8f7fd5a0b78da0817fb-744x1039.png?accountingTag=RB",
@@ -16784,7 +16784,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Zed"],
 				keywords: [],
-				description: "When I conquer, play a 0 :rb_might: Shadow Clone unit token to your base.[Action][>] :rb_energy_1::rb_rune_chaos:: Move me and a Shadow Clone you control to each other's locations.",
+				description: "When I conquer, play a 0 [M] Shadow Clone unit token to your base.[Action][>] [1][P]: Move me and a Shadow Clone you control to each other's locations.",
 				flavorText: "The truth lies in darkness.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a9828930a4b5ab7aa98d8199f00e1fde59fd20e3-744x1039.png?accountingTag=RB",
@@ -16802,7 +16802,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Ionia", "Zed"],
 				keywords: [],
-				description: "When I conquer, play a 0 :rb_might: Shadow Clone unit token to your base. (It has &quot;When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.&quot;)[Action][>] :rb_energy_1::rb_rune_chaos:: Move me and a Shadow Clone you control to each other's locations.",
+				description: "When I conquer, play a 0 [M] Shadow Clone unit token to your base. (It has &quot;When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.&quot;)[Action][>] [1][P]: Move me and a Shadow Clone you control to each other's locations.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/be97ca6a33e25b85a04ec1b3a163b31f141776cf-744x1039.png?accountingTag=RB",
@@ -16820,7 +16820,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Ionia", "Zed"],
 				keywords: [],
-				description: "When I conquer, play a 0 :rb_might: Shadow Clone unit token to your base. (It has &quot;When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.&quot;)[Action][>] :rb_energy_1::rb_rune_chaos:: Move me and a Shadow Clone you control to each other's locations.",
+				description: "When I conquer, play a 0 [M] Shadow Clone unit token to your base. (It has &quot;When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.&quot;)[Action][>] [1][P]: Move me and a Shadow Clone you control to each other's locations.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/be97ca6a33e25b85a04ec1b3a163b31f141776cf-744x1039.png?accountingTag=RB",
@@ -16838,7 +16838,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Zed"],
 				keywords: [],
-				description: "When I conquer, play a 0 :rb_might: Shadow Clone unit token to your base.[Action][>] :rb_energy_1::rb_rune_chaos:: Move me and a Shadow Clone you control to each other's locations.",
+				description: "When I conquer, play a 0 [M] Shadow Clone unit token to your base.[Action][>] [1][P]: Move me and a Shadow Clone you control to each other's locations.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a9828930a4b5ab7aa98d8199f00e1fde59fd20e3-744x1039.png?accountingTag=RB",
@@ -16910,7 +16910,7 @@ export default [
 				stats: {energy: 6, might: 5, power: null},
 				tags: ["Spirit", "Shadow Isles"],
 				keywords: [],
-				description: "[Empower] :rb_energy_6::rb_rune_chaos::rb_rune_chaos: (:rb_energy_6::rb_rune_chaos::rb_rune_chaos:: Empower me. Use only if not Empowered.)When I become [Empowered], choose an opponent. They [Burn 3]. Then you may do this: Choose a unit in their trash and play it, ignoring its cost. (To Burn 3, they put the top 3 cards of their Main Deck into their trash.)",
+				description: "[Empower] [6][P][P] ([6][P][P]: Empower me. Use only if not Empowered.)When I become [Empowered], choose an opponent. They [Burn 3]. Then you may do this: Choose a unit in their trash and play it, ignoring its cost. (To Burn 3, they put the top 3 cards of their Main Deck into their trash.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2453848e7069e994498c828d72c33df6905f38e5-744x1039.png?accountingTag=RB",
@@ -16964,7 +16964,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Choose a unit. Its base Might becomes 5 this turn.[Flow] :rb_energy_3: (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Choose a unit. Its base Might becomes 5 this turn.[Flow] [3] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ded9b54d93d7c3ade8a1d65c8ac66a13d1246329-744x1039.png?accountingTag=RB",
@@ -16982,7 +16982,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)I have [Shield 3] while I'm at a battlefield with exactly one other unit you control. (+3 :rb_might: while I'm a defender.)",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)I have [Shield 3] while I'm at a battlefield with exactly one other unit you control. (+3 [M] while I'm a defender.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/de5b6316d65297e67a97d12d7c70974f7d3ce7d6-744x1039.png?accountingTag=RB",
@@ -17036,7 +17036,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "I cost :rb_energy_2::rb_rune_order: less if you control a battlefield with exactly two units there.",
+				description: "I cost [2][Y] less if you control a battlefield with exactly two units there.",
 				flavorText: "Order will be preserved. Unity will be maintained.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/42b965736c715293da57ec23472684506f49ba7f-744x1039.png?accountingTag=RB",
@@ -17054,7 +17054,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "I cost :rb_energy_2::rb_rune_order: less if you control a battlefield with exactly two units there.",
+				description: "I cost [2][Y] less if you control a battlefield with exactly two units there.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/42b965736c715293da57ec23472684506f49ba7f-744x1039.png?accountingTag=RB",
@@ -17072,7 +17072,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Yordle", "Bandle City"],
 				keywords: [],
-				description: "You may pay :rb_rune_order: as an additional cost to play me.When you play me, if you paid the additional cost, [Stun] an enemy unit at a battlefield. (It doesn't deal combat damage this turn.)",
+				description: "You may pay [Y] as an additional cost to play me.When you play me, if you paid the additional cost, [Stun] an enemy unit at a battlefield. (It doesn't deal combat damage this turn.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c02046374935d38a8e4bb28a8192dfc46e2596a0-744x1039.png?accountingTag=RB",
@@ -17090,7 +17090,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "When you play another unit, give me +2 :rb_might: this turn.",
+				description: "When you play another unit, give me +2 [M] this turn.",
 				flavorText: "Sometimes there's no one else who will do the job.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d70352ba57ae548c405614ec6ba2bb17d7a19a44-744x1039.png?accountingTag=RB",
@@ -17108,7 +17108,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "When you play another unit, give me +2 :rb_might: this turn.",
+				description: "When you play another unit, give me +2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d70352ba57ae548c405614ec6ba2bb17d7a19a44-744x1039.png?accountingTag=RB",
@@ -17126,7 +17126,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Bird", "Mount Targon"],
 				keywords: [],
-				description: "[Empower] :rb_energy_2: (:rb_energy_2:: Empower me. Use only if not Empowered.)[Empowered][>] I have +1 :rb_might: and [Deflect 2]. (Opponents must pay [A][A] to choose me with a spell or ability.)",
+				description: "[Empower] [2] ([2]: Empower me. Use only if not Empowered.)[Empowered][>] I have +1 [M] and [Deflect 2]. (Opponents must pay [A][A] to choose me with a spell or ability.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1aaf389ca46bd9122233aadcfd23fee8f9cdfdc9-744x1039.png?accountingTag=RB",
@@ -17162,7 +17162,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Noxus"],
 				keywords: [],
-				description: "[Empower] — Kill a friendly unit (Pay the cost: Empower me. Use only if not Empowered.)[Empowered][>] I have +2 :rb_might:.",
+				description: "[Empower] — Kill a friendly unit (Pay the cost: Empower me. Use only if not Empowered.)[Empowered][>] I have +2 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/253d782f8f6d4056eebecf9617e6858fdb2e712d-744x1039.png?accountingTag=RB",
@@ -17180,7 +17180,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Dog", "Freljord"],
 				keywords: [],
-				description: ":rb_rune_order:: Ready me and give me +1 :rb_might: this turn. Use only if you've chosen an enemy unit this turn and only once each turn.",
+				description: "[Y]: Ready me and give me +1 [M] this turn. Use only if you've chosen an enemy unit this turn and only once each turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/464b4e2edfd526a3b72a80ab05bc9630b7057c22-744x1039.png?accountingTag=RB",
@@ -17234,7 +17234,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "Choose a unit. If it's [Empowered], disempower it. Then kill it if it has 3 :rb_might: or less.[Flow] :rb_energy_4::rb_rune_order::rb_rune_order: (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Choose a unit. If it's [Empowered], disempower it. Then kill it if it has 3 [M] or less.[Flow] [4][Y][Y] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: "Look at you. Such wasted potental.\" - Ambessa",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f21bbd09545d949f095756281e5506128eb4809d-744x1039.png?accountingTag=RB",
@@ -17252,7 +17252,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "Choose a unit. If it's [Empowered], disempower it. Then kill it if it has 3 :rb_might: or less.[Flow] :rb_energy_4::rb_rune_order::rb_rune_order: (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Choose a unit. If it's [Empowered], disempower it. Then kill it if it has 3 [M] or less.[Flow] [4][Y][Y] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f21bbd09545d949f095756281e5506128eb4809d-744x1039.png?accountingTag=RB",
@@ -17270,7 +17270,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Noxus"],
 				keywords: [],
-				description: "[Empower] :rb_energy_1::rb_rune_order: (:rb_energy_1::rb_rune_order:: Empower me. Use only if not Empowered.)[Empowered][>][>>][Deathknell][>] Play two 1 :rb_might: Recruit unit tokens to your base. (When I die while Empowered, get the effect.)",
+				description: "[Empower] [1][Y] ([1][Y]: Empower me. Use only if not Empowered.)[Empowered][>][>>][Deathknell][>] Play two 1 [M] Recruit unit tokens to your base. (When I die while Empowered, get the effect.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0720c25776670ef32dcc504b14378890991798be-744x1039.png?accountingTag=RB",
@@ -17324,7 +17324,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Trifarian", "Noxus"],
 				keywords: [],
-				description: "[Empower] :rb_energy_3::rb_rune_order: (:rb_energy_3::rb_rune_order:: Empower me. Use only if not Empowered.)[Empowered][>] Your units that are [Empowered] have +2 :rb_might: (including me).",
+				description: "[Empower] [3][Y] ([3][Y]: Empower me. Use only if not Empowered.)[Empowered][>] Your units that are [Empowered] have +2 [M] (including me).",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2324531e93383ce0d7efbe67cbf7ee226127dea2-744x1039.png?accountingTag=RB",
@@ -17342,7 +17342,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "Kill an enemy Chaos (:rb_rune_chaos:) unit or gear.",
+				description: "Kill an enemy Chaos ([P]) unit or gear.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/220161ac48f1307e4d74c372d549fea18829a86b-744x1039.png?accountingTag=RB",
@@ -17378,7 +17378,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Empower] [A][A] ([A][A]: Empower me. Use only if not Empowered.)Disempower this, :rb_exhaust:: Choose a player. They gain control of this and recall it. (Send it to their base.)At the end of your turn, kill this and deal 5 to all units you control.",
+				description: "[Empower] [A][A] ([A][A]: Empower me. Use only if not Empowered.)Disempower this, [E]: Choose a player. They gain control of this and recall it. (Send it to their base.)At the end of your turn, kill this and deal 5 to all units you control.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6426e9c2b168f0dde5430d5bc57108a0cc2bcebb-744x1039.png?accountingTag=RB",
@@ -17396,7 +17396,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Empower] [A][A] ([A][A]: Empower me. Use only if not Empowered.)Disempower this, :rb_exhaust:: Choose a player. They gain control of this and recall it. (Send it to their base.)At the end of your turn, kill this and deal 5 to all units you control.",
+				description: "[Empower] [A][A] ([A][A]: Empower me. Use only if not Empowered.)Disempower this, [E]: Choose a player. They gain control of this and recall it. (Send it to their base.)At the end of your turn, kill this and deal 5 to all units you control.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6426e9c2b168f0dde5430d5bc57108a0cc2bcebb-744x1039.png?accountingTag=RB",
@@ -17414,7 +17414,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Mount Targon", "Kayle"],
 				keywords: [],
-				description: "[Empower] :rb_energy_3: (:rb_energy_3:: Empower me.)I can be [Empowered] up to three times.I have +2 :rb_might: for each time I'm [Empowered].While I'm [Empowered] three times, I have [Deflect 3] and [Ganking].",
+				description: "[Empower] [3] ([3]: Empower me.)I can be [Empowered] up to three times.I have +2 [M] for each time I'm [Empowered].While I'm [Empowered] three times, I have [Deflect 3] and [Ganking].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8ae883f96bb3a5e20d8002ec49cace430aaf2b88-744x1039.png?accountingTag=RB",
@@ -17432,7 +17432,7 @@ export default [
 				stats: {energy: 3, might: 2, power: null},
 				tags: ["Yordle", "Ionia", "Kennen"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When you play me or I attack, you may pay :rb_energy_2: to [Stun] a unit. (It doesn't deal combat damage this turn.)While there's a stunned enemy unit here, I have +2 :rb_might:.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When you play me or I attack, you may pay [2] to [Stun] a unit. (It doesn't deal combat damage this turn.)While there's a stunned enemy unit here, I have +2 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/446ff54c091b07627f826952f45ee40e9976d040-744x1039.png?accountingTag=RB",
@@ -17450,7 +17450,7 @@ export default [
 				stats: {energy: 3, might: 2, power: null},
 				tags: ["Yordle", "Kennen"],
 				keywords: [],
-				description: "[Hidden]When you play me or I attack, you may pay :rb_energy_2: to [Stun] a unit.While there's a stunned enemy unit here, I have +2 :rb_might:.",
+				description: "[Hidden]When you play me or I attack, you may pay [2] to [Stun] a unit.While there's a stunned enemy unit here, I have +2 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1d55c475f395c2b1bac63844208687bb9b3232b2-744x1039.png?accountingTag=RB",
@@ -17468,7 +17468,7 @@ export default [
 				stats: {energy: 3, might: 2, power: null},
 				tags: ["Yordle", "Kennen"],
 				keywords: [],
-				description: "[Hidden]When you play me or I attack, you may pay :rb_energy_2: to [Stun] a unit.While there's a stunned enemy unit here, I have +2 :rb_might:.",
+				description: "[Hidden]When you play me or I attack, you may pay [2] to [Stun] a unit.While there's a stunned enemy unit here, I have +2 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1d55c475f395c2b1bac63844208687bb9b3232b2-744x1039.png?accountingTag=RB",
@@ -17486,7 +17486,7 @@ export default [
 				stats: {energy: 3, might: 2, power: null},
 				tags: ["Yordle", "Ionia", "Kennen"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When you play me or I attack, you may pay :rb_energy_2: to [Stun] a unit. (It doesn't deal combat damage this turn.)While there's a stunned enemy unit here, I have +2 :rb_might:.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When you play me or I attack, you may pay [2] to [Stun] a unit. (It doesn't deal combat damage this turn.)While there's a stunned enemy unit here, I have +2 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/446ff54c091b07627f826952f45ee40e9976d040-744x1039.png?accountingTag=RB",
@@ -17504,7 +17504,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Noxus", "Ambessa"],
 				keywords: [],
-				description: "[Empower] :rb_energy_1::rb_rune_order::rb_rune_order: (:rb_energy_1::rb_rune_order::rb_rune_order:: Empower me. Use only if not Empowered.)[Empowered][>] I have [Assault 2]. (+2 :rb_might: while I'm an attacker.)[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",
+				description: "[Empower] [1][Y][Y] ([1][Y][Y]: Empower me. Use only if not Empowered.)[Empowered][>] I have [Assault 2]. (+2 [M] while I'm an attacker.)[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/687c273217cd94067be9625a7f85b61d108a6293-744x1039.png?accountingTag=RB",
@@ -17522,7 +17522,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Ambessa"],
 				keywords: [],
-				description: "[Empower] :rb_energy_1::rb_rune_order::rb_rune_order:[Empowered][>] I have [Assault 2].[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",
+				description: "[Empower] [1][Y][Y][Empowered][>] I have [Assault 2].[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/02a1cfcd6663687d28b98a2de3ba666231c4eeee-744x1039.png?accountingTag=RB",
@@ -17540,7 +17540,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Ambessa"],
 				keywords: [],
-				description: "[Empower] :rb_energy_1::rb_rune_order::rb_rune_order:[Empowered][>] I have [Assault 2].[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",
+				description: "[Empower] [1][Y][Y][Empowered][>] I have [Assault 2].[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",
 				flavorText: "Join your ancestors!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/02a1cfcd6663687d28b98a2de3ba666231c4eeee-744x1039.png?accountingTag=RB",
@@ -17558,7 +17558,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Noxus", "Ambessa"],
 				keywords: [],
-				description: "[Empower] :rb_energy_1::rb_rune_order::rb_rune_order: (:rb_energy_1::rb_rune_order::rb_rune_order:: Empower me. Use only if not Empowered.)[Empowered][>] I have [Assault 2]. (+2 :rb_might: while I'm an attacker.)[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",
+				description: "[Empower] [1][Y][Y] ([1][Y][Y]: Empower me. Use only if not Empowered.)[Empowered][>] I have [Assault 2]. (+2 [M] while I'm an attacker.)[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/687c273217cd94067be9625a7f85b61d108a6293-744x1039.png?accountingTag=RB",
@@ -17576,7 +17576,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_energy_1::rb_rune_order: (:rb_energy_1::rb_rune_order:: Attach this to a unit you control.)As this is attached to a unit, choose another friendly unit. The equipped unit becomes a copy of that unit for as long as this is attached to it.",
+				description: "[Equip] [1][Y] ([1][Y]: Attach this to a unit you control.)As this is attached to a unit, choose another friendly unit. The equipped unit becomes a copy of that unit for as long as this is attached to it.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e49461109a4116c22af9206719f53fb73aee36d0-744x1039.png?accountingTag=RB",
@@ -17594,7 +17594,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: ["Equipment"],
 				keywords: [],
-				description: "[Equip] :rb_energy_1::rb_rune_order: (:rb_energy_1::rb_rune_order:: Attach this to a unit you control.)As this is attached to a unit, choose another friendly unit. The equipped unit becomes a copy of that unit for as long as this is attached to it.",
+				description: "[Equip] [1][Y] ([1][Y]: Attach this to a unit you control.)As this is attached to a unit, choose another friendly unit. The equipped unit becomes a copy of that unit for as long as this is attached to it.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e49461109a4116c22af9206719f53fb73aee36d0-744x1039.png?accountingTag=RB",
@@ -17612,7 +17612,7 @@ export default [
 				stats: {energy: 6, might: 7, power: 2},
 				tags: ["Shen", "Ionia"],
 				keywords: [],
-				description: "[Shield] (+1 :rb_might: while I'm a defender.)When I hold, if there is exactly one other unit you control here, you score 1 point.",
+				description: "[Shield] (+1 [M] while I'm a defender.)When I hold, if there is exactly one other unit you control here, you score 1 point.",
 				flavorText: "There is no dispute.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b227d9f9abc6f165beffba4eaf3b5819cf06eab4-744x1039.png?accountingTag=RB",
@@ -17666,7 +17666,7 @@ export default [
 				stats: {energy: 6, might: 7, power: 2},
 				tags: ["Shen", "Ionia"],
 				keywords: [],
-				description: "[Shield] (+1 :rb_might: while I'm a defender.)When I hold, if there is exactly one other unit you control here, you score 1 point.",
+				description: "[Shield] (+1 [M] while I'm a defender.)When I hold, if there is exactly one other unit you control here, you score 1 point.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b227d9f9abc6f165beffba4eaf3b5819cf06eab4-744x1039.png?accountingTag=RB",
@@ -17684,7 +17684,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Akali"],
 				keywords: [],
-				description: "[Empower] :rb_energy_3:[A] (:rb_energy_3:[A]: Empower this. Use only if not Empowered.)[Action][>] :rb_exhaust:: If it's your turn, move a friendly unit in a showdown to base and if I'm [Empowered], ready it.",
+				description: "[Empower] [3][A] ([3][A]: Empower this. Use only if not Empowered.)[Action][>] [E]: If it's your turn, move a friendly unit in a showdown to base and if I'm [Empowered], ready it.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0d53b477ed43fb9bbed84858443a606b2b51a2b5-744x1039.png?accountingTag=RB",
@@ -17702,7 +17702,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Akali"],
 				keywords: [],
-				description: "[Empower] :rb_energy_3:[A] (:rb_energy_3:[A]: Empower this. Use only if not Empowered.)[Action][>] :rb_exhaust:: If it's your turn, move a friendly unit in a showdown to base and if I'm [Empowered], ready it.",
+				description: "[Empower] [3][A] ([3][A]: Empower this. Use only if not Empowered.)[Action][>] [E]: If it's your turn, move a friendly unit in a showdown to base and if I'm [Empowered], ready it.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0d53b477ed43fb9bbed84858443a606b2b51a2b5-744x1039.png?accountingTag=RB",
@@ -17720,7 +17720,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: ["Akali"],
 				keywords: [],
-				description: "Deal 2 to up to one enemy unit at a battlefield, then move a friendly unit.[Flow] :rb_energy_3:[A] (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Deal 2 to up to one enemy unit at a battlefield, then move a friendly unit.[Flow] [3][A] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: "They can't stop me. I mean, they can try.\" - Akali",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bac1ecff92d022e99a3696ad00d020530a1a09e7-744x1039.png?accountingTag=RB",
@@ -17738,7 +17738,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: ["Akali"],
 				keywords: [],
-				description: "Deal 2 to up to one enemy unit at a battlefield, then move a friendly unit.[Flow] :rb_energy_3:[A] (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Deal 2 to up to one enemy unit at a battlefield, then move a friendly unit.[Flow] [3][A] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bac1ecff92d022e99a3696ad00d020530a1a09e7-744x1039.png?accountingTag=RB",
@@ -17756,7 +17756,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Renekton"],
 				keywords: [],
-				description: "[Reaction][>] [A][A], :rb_exhaust:: [Add] :rb_energy_2:. Spend this Energy only to play units or activated abilities of units.",
+				description: "[Reaction][>] [A][A], [E]: [Add] [2]. Spend this Energy only to play units or activated abilities of units.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7620595b36b40a0c3d05c4c5469b016d1c18c6f2-744x1039.png?accountingTag=RB",
@@ -17774,7 +17774,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Renekton"],
 				keywords: [],
-				description: "[Reaction][>] [A][A], :rb_exhaust:: [Add] :rb_energy_2:. Spend this Energy only to play units or activated abilities of units.",
+				description: "[Reaction][>] [A][A], [E]: [Add] [2]. Spend this Energy only to play units or activated abilities of units.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7620595b36b40a0c3d05c4c5469b016d1c18c6f2-744x1039.png?accountingTag=RB",
@@ -17828,7 +17828,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Zed"],
 				keywords: [],
-				description: "When you banish a card you own, empower me. (I become Empowered if I'm not already.)[Action][>] Disempower me, :rb_exhaust:: Discard 1, then draw 1.",
+				description: "When you banish a card you own, empower me. (I become Empowered if I'm not already.)[Action][>] Disempower me, [E]: Discard 1, then draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/aa316eb1b01c8d036eaba84b03909027fe69f6e2-744x1039.png?accountingTag=RB",
@@ -17846,7 +17846,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Zed"],
 				keywords: [],
-				description: "When you banish a card you own, empower me. (I become Empowered if I'm not already.)[Action][>] Disempower me, :rb_exhaust:: Discard 1, then draw 1.",
+				description: "When you banish a card you own, empower me. (I become Empowered if I'm not already.)[Action][>] Disempower me, [E]: Discard 1, then draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/aa316eb1b01c8d036eaba84b03909027fe69f6e2-744x1039.png?accountingTag=RB",
@@ -17864,7 +17864,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: ["Zed"],
 				keywords: [],
-				description: "[Burn 3]. (Put the top 3 cards of your Main Deck into your trash.)Play a 0 :rb_might: Shadow Clone unit token. (It has &quot;When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.&quot;)[Flow] :rb_energy_1:[A][A] (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "[Burn 3]. (Put the top 3 cards of your Main Deck into your trash.)Play a 0 [M] Shadow Clone unit token. (It has &quot;When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.&quot;)[Flow] [1][A][A] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/87ccfb8d1c19f402bb37ffa392011ee2f0880aa9-744x1039.png?accountingTag=RB",
@@ -17882,7 +17882,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: ["Zed"],
 				keywords: [],
-				description: "[Burn 3]. (Put the top 3 cards of your Main Deck into your trash.)Play a 0 :rb_might: Shadow Clone unit token. (It has &quot;When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.&quot;)[Flow] :rb_energy_1:[A][A] (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "[Burn 3]. (Put the top 3 cards of your Main Deck into your trash.)Play a 0 [M] Shadow Clone unit token. (It has &quot;When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.&quot;)[Flow] [1][A][A] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/87ccfb8d1c19f402bb37ffa392011ee2f0880aa9-744x1039.png?accountingTag=RB",
@@ -17900,7 +17900,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Nasus"],
 				keywords: [],
-				description: "When you play a unit, gear, or activated ability with Energy cost :rb_energy_7: or more, you may exhaust me to ready up to 2 runes.",
+				description: "When you play a unit, gear, or activated ability with Energy cost [7] or more, you may exhaust me to ready up to 2 runes.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f26a25c5fddba7da788455c3d82b85c5abc7a2eb-744x1039.png?accountingTag=RB",
@@ -17918,7 +17918,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Nasus"],
 				keywords: [],
-				description: "When you play a unit, gear, or activated ability with Energy cost :rb_energy_7: or more, you may exhaust me to ready up to 2 runes.",
+				description: "When you play a unit, gear, or activated ability with Energy cost [7] or more, you may exhaust me to ready up to 2 runes.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f26a25c5fddba7da788455c3d82b85c5abc7a2eb-744x1039.png?accountingTag=RB",
@@ -17972,7 +17972,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Shen"],
 				keywords: [],
-				description: "[Action][>] :rb_exhaust:: Give a friendly unit [Tank] this turn. (It must be assigned combat damage first.)",
+				description: "[Action][>] [E]: Give a friendly unit [Tank] this turn. (It must be assigned combat damage first.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/54388a3124b7e1f0331e5970f952778db5f24500-744x1039.png?accountingTag=RB",
@@ -17990,7 +17990,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Shen"],
 				keywords: [],
-				description: "[Action][>] :rb_exhaust:: Give a friendly unit [Tank] this turn. (It must be assigned combat damage first.)",
+				description: "[Action][>] [E]: Give a friendly unit [Tank] this turn. (It must be assigned combat damage first.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/54388a3124b7e1f0331e5970f952778db5f24500-744x1039.png?accountingTag=RB",
@@ -18008,7 +18008,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: ["Shen"],
 				keywords: [],
-				description: "Move an enemy unit to a battlefield where you have units. If you have exactly two units there, they each get +1 :rb_might: this turn.[Flow] :rb_energy_5:[A][A] (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Move an enemy unit to a battlefield where you have units. If you have exactly two units there, they each get +1 [M] this turn.[Flow] [5][A][A] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c95a4862c3af5f3ec1cee1f1ae7291c8724df7a1-744x1039.png?accountingTag=RB",
@@ -18026,7 +18026,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Jayce"],
 				keywords: [],
-				description: "[Empower] :rb_energy_2:[A][A] (:rb_energy_2:[A][A]: Empower me. Use only if not Empowered.):rb_energy_1:, :rb_exhaust:: Ready a gear.[Empowered][>] :rb_energy_1:, :rb_exhaust:: Ready 2 gear.",
+				description: "[Empower] [2][A][A] ([2][A][A]: Empower me. Use only if not Empowered.)[1], [E]: Ready a gear.[Empowered][>] [1], [E]: Ready 2 gear.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/670b7efd367a42beba11c18fb59e240a7c574a57-744x1039.png?accountingTag=RB",
@@ -18044,7 +18044,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Jayce"],
 				keywords: [],
-				description: "[Empower] :rb_energy_2:[A][A] (:rb_energy_2:[A][A]: Empower me. Use only if not Empowered.):rb_energy_1:, :rb_exhaust:: Ready a gear.[Empowered][>] :rb_energy_1:, :rb_exhaust:: Ready 2 gear.",
+				description: "[Empower] [2][A][A] ([2][A][A]: Empower me. Use only if not Empowered.)[1], [E]: Ready a gear.[Empowered][>] [1], [E]: Ready 2 gear.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/670b7efd367a42beba11c18fb59e240a7c574a57-744x1039.png?accountingTag=RB",
@@ -18080,7 +18080,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Mel"],
 				keywords: [],
-				description: "When you empower something else, empower me. (I become Empowered if I'm not already.)Disempower me, :rb_exhaust:: Give a unit at a battlefield -2 :rb_might: this turn.",
+				description: "When you empower something else, empower me. (I become Empowered if I'm not already.)Disempower me, [E]: Give a unit at a battlefield -2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2e9e60b3f161b41219c40ef0426049634fb7ba1a-744x1039.png?accountingTag=RB",
@@ -18098,7 +18098,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Mel"],
 				keywords: [],
-				description: "When you empower something else, empower me. (I become Empowered if I'm not already.)Disempower me, :rb_exhaust:: Give a unit at a battlefield -2 :rb_might: this turn.",
+				description: "When you empower something else, empower me. (I become Empowered if I'm not already.)Disempower me, [E]: Give a unit at a battlefield -2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2e9e60b3f161b41219c40ef0426049634fb7ba1a-744x1039.png?accountingTag=RB",
@@ -18116,7 +18116,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: ["Mel"],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose a spell with Energy cost no more than :rb_energy_4:.  You may pay [A]. If you do, gain control of it and you may make new choices for it. Otherwise, counter it.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose a spell with Energy cost no more than [4].  You may pay [A]. If you do, gain control of it and you may make new choices for it. Otherwise, counter it.",
 				flavorText: "A paradigm shift!\"- Mel",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2df67fe2ba17f0796ff1f9c03b85d2db48fe954b-744x1039.png?accountingTag=RB",
@@ -18134,7 +18134,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: ["Mel"],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose a spell with Energy cost no more than :rb_energy_4:.  You may pay [A]. If you do, gain control of it and you may make new choices for it. Otherwise, counter it.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose a spell with Energy cost no more than [4].  You may pay [A]. If you do, gain control of it and you may make new choices for it. Otherwise, counter it.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2df67fe2ba17f0796ff1f9c03b85d2db48fe954b-744x1039.png?accountingTag=RB",
@@ -18152,7 +18152,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ambessa"],
 				keywords: [],
-				description: "When you empower something else, empower me. (I become Empowered if I'm not already.)Disempower me, [A], :rb_exhaust:: Ready a unit.",
+				description: "When you empower something else, empower me. (I become Empowered if I'm not already.)Disempower me, [A], [E]: Ready a unit.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/49e81916d7ae72b24de845223e1798652d26e789-744x1039.png?accountingTag=RB",
@@ -18170,7 +18170,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ambessa"],
 				keywords: [],
-				description: "When you empower something else, empower me. (I become Empowered if I'm not already.)Disempower me, [A], :rb_exhaust:: Ready a unit.",
+				description: "When you empower something else, empower me. (I become Empowered if I'm not already.)Disempower me, [A], [E]: Ready a unit.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/49e81916d7ae72b24de845223e1798652d26e789-744x1039.png?accountingTag=RB",
@@ -18188,7 +18188,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: ["Ambessa"],
 				keywords: [],
-				description: "Choose a friendly unit. Kill an enemy unit with less Might than it.[Flow] :rb_energy_5:[A][A] (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Choose a friendly unit. Kill an enemy unit with less Might than it.[Flow] [5][A][A] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c8348e2aef6bad5a38d4f71b1b1c277598670286-744x1039.png?accountingTag=RB",
@@ -18206,7 +18206,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Yordle", "Kennen"],
 				keywords: [],
-				description: "When you play a card from anywhere other than your hand, empower me.[Action][>] Disempower me, :rb_exhaust:: Give a unit [Assault 2] this turn. (+2 :rb_might: while it's an attacker.)",
+				description: "When you play a card from anywhere other than your hand, empower me.[Action][>] Disempower me, [E]: Give a unit [Assault 2] this turn. (+2 [M] while it's an attacker.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0eab83392b310417d2630d50a3bfee3dd02b31c4-744x1039.png?accountingTag=RB",
@@ -18224,7 +18224,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Yordle", "Kennen"],
 				keywords: [],
-				description: "When you play a card from anywhere other than your hand, empower me.[Action][>] Disempower me, :rb_exhaust:: Give a unit [Assault 2] this turn. (+2 :rb_might: while it's an attacker.)",
+				description: "When you play a card from anywhere other than your hand, empower me.[Action][>] Disempower me, [E]: Give a unit [Assault 2] this turn. (+2 [M] while it's an attacker.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0eab83392b310417d2630d50a3bfee3dd02b31c4-744x1039.png?accountingTag=RB",
@@ -18242,7 +18242,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Kennen"],
 				keywords: [],
-				description: "Look at the top 3 cards of your Main Deck. You may choose a card from among them and draw it. Put the rest into your trash.[Flow] :rb_energy_2:[A] (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Look at the top 3 cards of your Main Deck. You may choose a card from among them and draw it. Put the rest into your trash.[Flow] [2][A] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: "I am the wind!\"- Kennen",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/22375e0d2d1a49cb0eb7e31aebf3e73a2e0bba55-744x1039.png?accountingTag=RB",
@@ -18260,7 +18260,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: ["Kennen"],
 				keywords: [],
-				description: "Look at the top 3 cards of your Main Deck. You may choose a card from among them and draw it. Put the rest into your trash.[Flow] :rb_energy_2:[A] (You may play this from your trash for its Flow cost. Then banish it.)",
+				description: "Look at the top 3 cards of your Main Deck. You may choose a card from among them and draw it. Put the rest into your trash.[Flow] [2][A] (You may play this from your trash for its Flow cost. Then banish it.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/22375e0d2d1a49cb0eb7e31aebf3e73a2e0bba55-744x1039.png?accountingTag=RB",
@@ -18332,7 +18332,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Units here with [Tank] have +1 :rb_might:.",
+				description: "Units here with [Tank] have +1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/afef083faa1f3813e5744a552c9873c798bedfd5-1039x744.png?accountingTag=RB",
@@ -18368,7 +18368,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "While you control this battlefield, the first friendly gear activated ability played each turn costs :rb_energy_1: less.",
+				description: "While you control this battlefield, the first friendly gear activated ability played each turn costs [1] less.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0cc432b51e80d1734529ef323e601e62e202c2b1-1039x744.png?accountingTag=RB",
@@ -18386,7 +18386,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "While you control this battlefield, the first friendly gear activated ability played each turn costs :rb_energy_1: less.",
+				description: "While you control this battlefield, the first friendly gear activated ability played each turn costs [1] less.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0cc432b51e80d1734529ef323e601e62e202c2b1-1039x744.png?accountingTag=RB",
@@ -18404,7 +18404,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you conquer here, if you control 4 or fewer runes, you may pay :rb_energy_1: to draw 1.",
+				description: "When you conquer here, if you control 4 or fewer runes, you may pay [1] to draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a994ae712cdefcbdaf263fbb6ab0723d0f678e99-1039x744.png?accountingTag=RB",
@@ -18422,7 +18422,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Empower] costs of your units here cost :rb_energy_1: or [A] less.",
+				description: "[Empower] costs of your units here cost [1] or [A] less.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/47402ed9d5eebb9e38176315bdaf1a556845eef7-1039x744.png?accountingTag=RB",
@@ -18440,7 +18440,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Empower] costs of your units here cost :rb_energy_1: or [A] less.",
+				description: "[Empower] costs of your units here cost [1] or [A] less.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/47402ed9d5eebb9e38176315bdaf1a556845eef7-1039x744.png?accountingTag=RB",
@@ -18512,7 +18512,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When combat starts here, the attacker and defender each [Add] :rb_energy_1:.",
+				description: "When combat starts here, the attacker and defender each [Add] [1].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5521aac82f036f1070326c743a9f653955d67bb9-1039x744.png?accountingTag=RB",
@@ -18530,7 +18530,7 @@ export default [
 				stats: {energy: 2, might: 3, power: 1},
 				tags: ["Vi"],
 				keywords: [],
-				description: "[Ganking]Recycle 1 from your trash: Give me +1 :rb_might: this turn.",
+				description: "[Ganking]Recycle 1 from your trash: Give me +1 [M] this turn.",
 				flavorText: "I like you as far as I can throw you … not even.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/dff596efc7413bfdd9cc8e667c46bd4228447de5-744x1039.png?accountingTag=RB",
@@ -18548,7 +18548,7 @@ export default [
 				stats: {energy: 2, might: 3, power: 1},
 				tags: ["Vi"],
 				keywords: [],
-				description: "[Ganking]Recycle 1 from your trash: Give me +1 :rb_might: this turn.",
+				description: "[Ganking]Recycle 1 from your trash: Give me +1 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/dff596efc7413bfdd9cc8e667c46bd4228447de5-744x1039.png?accountingTag=RB",
@@ -18602,7 +18602,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Zed"],
 				keywords: [],
-				description: "You may discard 1 as an additional cost to play me.When you play me, if you paid the additional cost, play a 0 :rb_might: Shadow Clone unit token.",
+				description: "You may discard 1 as an additional cost to play me.When you play me, if you paid the additional cost, play a 0 [M] Shadow Clone unit token.",
 				flavorText: "Challenge me, Shen … You shall not be an orphan long!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5d665b28073066442b35f7b6aed98c83fca23631-744x1039.png?accountingTag=RB",
@@ -18620,7 +18620,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Zed"],
 				keywords: [],
-				description: "You may discard 1 as an additional cost to play me.When you play me, if you paid the additional cost, play a 0 :rb_might: Shadow Clone unit token.",
+				description: "You may discard 1 as an additional cost to play me.When you play me, if you paid the additional cost, play a 0 [M] Shadow Clone unit token.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5d665b28073066442b35f7b6aed98c83fca23631-744x1039.png?accountingTag=RB",
@@ -18710,7 +18710,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Irelia", "Ionia"],
 				keywords: [],
-				description: "[Deflect]When you choose or ready me, give me +1 :rb_might: this turn.",
+				description: "[Deflect]When you choose or ready me, give me +1 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/45d83debda443f1bf88e1cf7123eb8b844143124-744x1039.png?accountingTag=RB",
@@ -18728,7 +18728,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Jayce", "Piltover"],
 				keywords: [],
-				description: "When you play me, you may kill a friendly gear. If you do, you may play a gear with Energy cost no more than :rb_energy_7: from hand this turn, ignoring its Energy cost.",
+				description: "When you play me, you may kill a friendly gear. If you do, you may play a gear with Energy cost no more than [7] from hand this turn, ignoring its Energy cost.",
 				flavorText: "Our future wil be bright.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/be6d6a608c5bee9d2012e24d9e6f6f1d1977a37a-744x1039.png?accountingTag=RB",
@@ -18746,7 +18746,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Jayce", "Piltover"],
 				keywords: [],
-				description: "When you play me, you may kill a friendly gear. If you do, you may play a gear with Energy cost no more than :rb_energy_7: from hand this turn, ignoring its Energy cost.",
+				description: "When you play me, you may kill a friendly gear. If you do, you may play a gear with Energy cost no more than [7] from hand this turn, ignoring its Energy cost.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/be6d6a608c5bee9d2012e24d9e6f6f1d1977a37a-744x1039.png?accountingTag=RB",
@@ -18764,7 +18764,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Viktor"],
 				keywords: [],
-				description: "When you play a card on an opponent's turn, play a 1 :rb_might: Recruit unit token to your base.",
+				description: "When you play a card on an opponent's turn, play a 1 [M] Recruit unit token to your base.",
 				flavorText: "You betray your future.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0416b4a447494acac41413a4511bb59ce983b4ec-744x1039.png?accountingTag=RB",
@@ -18782,7 +18782,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Viktor"],
 				keywords: [],
-				description: "When you play a card on an opponent's turn, play a 1 :rb_might: Recruit unit token to your base.",
+				description: "When you play a card on an opponent's turn, play a 1 [M] Recruit unit token to your base.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0416b4a447494acac41413a4511bb59ce983b4ec-744x1039.png?accountingTag=RB",
@@ -18800,7 +18800,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Renekton"],
 				keywords: [],
-				description: ":rb_energy_1:: Give me +1 :rb_might: this turn.When my Might becomes 10 or more, empower me.[Empowered][>] I have [Ganking] and [Deflect].",
+				description: "[1]: Give me +1 [M] this turn.When my Might becomes 10 or more, empower me.[Empowered][>] I have [Ganking] and [Deflect].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/49ebe990f1d3631e3c18fc37323c49f49bf159fa-744x1039.png?accountingTag=RB",
@@ -18908,7 +18908,7 @@ export default [
 				stats: {energy: 6, might: 6, power: null},
 				tags: ["Gangplank"],
 				keywords: [],
-				description: "[Empower] :rb_rune_body::rb_rune_body:[Empowered][>] If a spell or ability that chooses me would stun me, give me -:rb_might:, or return me to hand, give me +3 :rb_might: instead.",
+				description: "[Empower] [O][O][Empowered][>] If a spell or ability that chooses me would stun me, give me -[M], or return me to hand, give me +3 [M] instead.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9d9fd99b083fb7104d533ca0eccb43a47c2cc74a-744x1039.png?accountingTag=RB",
@@ -18926,7 +18926,7 @@ export default [
 				stats: {energy: 6, might: 6, power: null},
 				tags: ["Gangplank"],
 				keywords: [],
-				description: "[Empower] :rb_rune_body::rb_rune_body:[Empowered][>] If a spell or ability that chooses me would stun me, give me -:rb_might:, or return me to hand, give me +3 :rb_might: instead.",
+				description: "[Empower] [O][O][Empowered][>] If a spell or ability that chooses me would stun me, give me -[M], or return me to hand, give me +3 [M] instead.",
 				flavorText: "My heart is iron.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9d9fd99b083fb7104d533ca0eccb43a47c2cc74a-744x1039.png?accountingTag=RB",
@@ -18944,7 +18944,7 @@ export default [
 				stats: {energy: 6, might: 4, power: null},
 				tags: ["Illaoi"],
 				keywords: [],
-				description: "When you play me or when I score, play a :rb_energy_1: :rb_might: Tentacle unit token from Bilgewater.I have +1 :rb_might: for each token unit you control.",
+				description: "When you play me or when I score, play a [1] [M] Tentacle unit token from Bilgewater.I have +1 [M] for each token unit you control.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a50aadbfd6f435433a80b12da9826fa0a6bd8172-744x1039.png?accountingTag=RB",
@@ -18962,7 +18962,7 @@ export default [
 				stats: {energy: 6, might: 4, power: null},
 				tags: ["Illaoi"],
 				keywords: [],
-				description: "When you play me or when I score, play a :rb_energy_1: :rb_might: Tentacle unit token from Bilgewater.I have +1 :rb_might: for each token unit you control.",
+				description: "When you play me or when I score, play a [1] [M] Tentacle unit token from Bilgewater.I have +1 [M] for each token unit you control.",
 				flavorText: "I broke men's hearts. I broke men's spines. You're the first who's going to get both.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a50aadbfd6f435433a80b12da9826fa0a6bd8172-744x1039.png?accountingTag=RB",
@@ -18980,7 +18980,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Diana", "Mount Targon"],
 				keywords: [],
-				description: "[Ambush]When you play a spell, give me +2 :rb_might: this turn.",
+				description: "[Ambush]When you play a spell, give me +2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d5a7071e4f1af712c9bf5342ba70fbb2e359483f-744x1039.png?accountingTag=RB",
@@ -19016,7 +19016,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Kayle"],
 				keywords: [],
-				description: "[Empower] :rb_energy_3: (:rb_energy_3:: Empower me.)I can be [Empowered] up to three times.I have +2 :rb_might: for each time I’m [Empowered].While I'm [Empowered] three times, I have [Deflect 3] and [Ganking].",
+				description: "[Empower] [3] ([3]: Empower me.)I can be [Empowered] up to three times.I have +2 [M] for each time I’m [Empowered].While I'm [Empowered] three times, I have [Deflect 3] and [Ganking].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0fec986bfca86382c61770575ed20e1799b6b830-744x1039.png?accountingTag=RB",
@@ -19052,7 +19052,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Ambessa"],
 				keywords: [],
-				description: "[Empower] :rb_energy_1::rb_rune_order::rb_rune_order:[Empowered][>] I have [Assault 2].[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",
+				description: "[Empower] [1][Y][Y][Empowered][>] I have [Assault 2].[Empowered][>] When I attack, kill an enemy unit here with less Might than me.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/17552788c608d9cb044c0a9bf7076d462548875b-744x1039.png?accountingTag=RB",
@@ -19070,7 +19070,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Mel"],
 				keywords: [],
-				description: "[Empower] — Discard a spellWhen I become [Empowered], banish an enemy unit at a battlefield with 3 :rb_might: or less.",
+				description: "[Empower] — Discard a spellWhen I become [Empowered], banish an enemy unit at a battlefield with 3 [M] or less.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0dac0b8b724d7d20f3e8c2126856d54d990e4ebc-744x1039.png?accountingTag=RB",
@@ -19088,7 +19088,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Akali"],
 				keywords: [],
-				description: "[Empower] :rb_energy_3:[A][Action][>] :rb_exhaust:: If it's your turn, move a friendly unit in a showdown to base and if I'm [Empowered], ready it.",
+				description: "[Empower] [3][A][Action][>] [E]: If it's your turn, move a friendly unit in a showdown to base and if I'm [Empowered], ready it.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7b0ec31df147b40bbb83c40644252b48a7619593-744x1039.png?accountingTag=RB",
@@ -19106,7 +19106,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Akali"],
 				keywords: [],
-				description: "[Empower] :rb_energy_3:[A][Action][>] :rb_exhaust:: If it's your turn, move a friendly unit in a showdown to base and if I'm [Empowered], ready it.",
+				description: "[Empower] [3][A][Action][>] [E]: If it's your turn, move a friendly unit in a showdown to base and if I'm [Empowered], ready it.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7b0ec31df147b40bbb83c40644252b48a7619593-744x1039.png?accountingTag=RB",
@@ -19124,7 +19124,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Renekton"],
 				keywords: [],
-				description: "[Reaction][>] [A][A], :rb_exhaust:: [Add] :rb_energy_2:. Spend this Energy only to play units or activated abilities of units.",
+				description: "[Reaction][>] [A][A], [E]: [Add] [2]. Spend this Energy only to play units or activated abilities of units.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f5db9db00111d8225e17c3a03d0111b471e74999-744x1040.png?accountingTag=RB",
@@ -19142,7 +19142,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Renekton"],
 				keywords: [],
-				description: "[Reaction][>] [A][A], :rb_exhaust:: [Add] :rb_energy_2:. Spend this Energy only to play units or activated abilities of units.",
+				description: "[Reaction][>] [A][A], [E]: [Add] [2]. Spend this Energy only to play units or activated abilities of units.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f5db9db00111d8225e17c3a03d0111b471e74999-744x1040.png?accountingTag=RB",
@@ -19160,7 +19160,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Zed"],
 				keywords: [],
-				description: "When you banish a card you own, empower me.[Action][>] Disempower me, :rb_exhaust:: Discard 1, then draw 1.",
+				description: "When you banish a card you own, empower me.[Action][>] Disempower me, [E]: Discard 1, then draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/75b7ba57a83af496b26d9fe7e8521f9a851bf464-744x1039.png?accountingTag=RB",
@@ -19178,7 +19178,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Zed"],
 				keywords: [],
-				description: "When you banish a card you own, empower me.[Action][>] Disempower me, :rb_exhaust:: Discard 1, then draw 1.",
+				description: "When you banish a card you own, empower me.[Action][>] Disempower me, [E]: Discard 1, then draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/75b7ba57a83af496b26d9fe7e8521f9a851bf464-744x1039.png?accountingTag=RB",
@@ -19196,7 +19196,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Nasus"],
 				keywords: [],
-				description: "When you play a unit, gear, or activated ability with Energy cost :rb_energy_7: or more, you may exhaust me to ready up to 2 runes.",
+				description: "When you play a unit, gear, or activated ability with Energy cost [7] or more, you may exhaust me to ready up to 2 runes.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1790b30538781eb2a55b5baee00fff9ed08794aa-744x1039.png?accountingTag=RB",
@@ -19214,7 +19214,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Nasus"],
 				keywords: [],
-				description: "When you play a unit, gear, or activated ability with Energy cost :rb_energy_7: or more, you may exhaust me to ready up to 2 runes.",
+				description: "When you play a unit, gear, or activated ability with Energy cost [7] or more, you may exhaust me to ready up to 2 runes.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1790b30538781eb2a55b5baee00fff9ed08794aa-744x1039.png?accountingTag=RB",
@@ -19232,7 +19232,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Shen"],
 				keywords: [],
-				description: "[Action][>] :rb_exhaust:: Give a friendly unit [Tank] this turn.",
+				description: "[Action][>] [E]: Give a friendly unit [Tank] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8c234c7efc30a24dc50c4b76517857bff6e1f906-744x1039.png?accountingTag=RB",
@@ -19250,7 +19250,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Shen"],
 				keywords: [],
-				description: "[Action][>] :rb_exhaust:: Give a friendly unit [Tank] this turn.",
+				description: "[Action][>] [E]: Give a friendly unit [Tank] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8c234c7efc30a24dc50c4b76517857bff6e1f906-744x1039.png?accountingTag=RB",
@@ -19268,7 +19268,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Jayce"],
 				keywords: [],
-				description: "[Empower] :rb_energy_2:[A][A]:rb_energy_1:, :rb_exhaust:: Ready a gear.[Empowered][>] :rb_energy_1:, :rb_exhaust:: Ready 2 gear.",
+				description: "[Empower] [2][A][A][1], [E]: Ready a gear.[Empowered][>] [1], [E]: Ready 2 gear.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f527eb9b02ce62d808ec82e12ac28af5a6bd75fb-744x1039.png?accountingTag=RB",
@@ -19286,7 +19286,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Mel"],
 				keywords: [],
-				description: "When you empower something else, empower me.Disempower me, :rb_exhaust:: Give a unit at a battlefield -2 :rb_might: this turn.",
+				description: "When you empower something else, empower me.Disempower me, [E]: Give a unit at a battlefield -2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f56cf2a3755318e1dc6afd01736f2a4d759cd4a1-744x1039.png?accountingTag=RB",
@@ -19304,7 +19304,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Mel"],
 				keywords: [],
-				description: "When you empower something else, empower me.Disempower me, :rb_exhaust:: Give a unit at a battlefield -2 :rb_might: this turn.",
+				description: "When you empower something else, empower me.Disempower me, [E]: Give a unit at a battlefield -2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f56cf2a3755318e1dc6afd01736f2a4d759cd4a1-744x1039.png?accountingTag=RB",
@@ -19322,7 +19322,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ambessa"],
 				keywords: [],
-				description: "When you empower something else, empower me.Disempower me, [A], :rb_exhaust:: Ready a unit.",
+				description: "When you empower something else, empower me.Disempower me, [A], [E]: Ready a unit.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2d6c1bd7992ddd20fe524587274ed6f9a249e42c-744x1039.png?accountingTag=RB",
@@ -19340,7 +19340,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ambessa"],
 				keywords: [],
-				description: "When you empower something else, empower me.Disempower me, [A], :rb_exhaust:: Ready a unit.",
+				description: "When you empower something else, empower me.Disempower me, [A], [E]: Ready a unit.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2d6c1bd7992ddd20fe524587274ed6f9a249e42c-744x1039.png?accountingTag=RB",
@@ -19358,7 +19358,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Yordle", "Kennen"],
 				keywords: [],
-				description: "When you play a card from anywhere other than your hand, empower me.[Action][>] Disempower me, :rb_exhaust:: Give a unit [Assault 2] this turn.",
+				description: "When you play a card from anywhere other than your hand, empower me.[Action][>] Disempower me, [E]: Give a unit [Assault 2] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f208ffb2ee76827cd4c608bcc8e1bcb9380bfa31-744x1039.png?accountingTag=RB",
@@ -19376,7 +19376,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Yordle", "Kennen"],
 				keywords: [],
-				description: "When you play a card from anywhere other than your hand, empower me.[Action][>] Disempower me, :rb_exhaust:: Give a unit [Assault 2] this turn.",
+				description: "When you play a card from anywhere other than your hand, empower me.[Action][>] Disempower me, [E]: Give a unit [Assault 2] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f208ffb2ee76827cd4c608bcc8e1bcb9380bfa31-744x1039.png?accountingTag=RB",
@@ -19400,7 +19400,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Dragon", "Noxus"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/15ed971e4029a92b362a81ccadf309fb81e40b81-744x1039.png?accountingTag=RB",
@@ -19418,7 +19418,7 @@ export default [
 				stats: {energy: 6, might: 5, power: null},
 				tags: ["Pirate", "Bilgewater"],
 				keywords: [],
-				description: "As you play me, you may discard 1 as an additional cost. If you do, reduce my cost by :rb_energy_2:.",
+				description: "As you play me, you may discard 1 as an additional cost. If you do, reduce my cost by [2].",
 				flavorText: "They called my crew 'scurvy dogs,' and I took that personally.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d481971f7560e7235e7d6934767da18daa019eff-744x1039.png?accountingTag=RB",
@@ -19436,7 +19436,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Zaun"],
 				keywords: [],
-				description: "[Assault 2] (+2 :rb_might: while I'm an attacker.)When you play me, discard 1.",
+				description: "[Assault 2] (+2 [M] while I'm an attacker.)When you play me, discard 1.",
 				flavorText: "Knock, knock.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/19dcf211457d9c9c6e9ea0cd32af76c2c92a3160-744x1039.png?accountingTag=RB",
@@ -19454,7 +19454,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Give a unit [Assault 3] this turn. (+3 :rb_might: while it's an attacker.)",
+				description: "[Action] (Play on your turn or in showdowns.)Give a unit [Assault 3] this turn. (+3 [M] while it's an attacker.)",
 				flavorText: "Nobody ever won a war without attacking.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/95d476a1e88ff547fb846149619177bc7e3cea9f-744x1039.png?accountingTag=RB",
@@ -19490,7 +19490,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Zaun"],
 				keywords: [],
-				description: "When you discard me, you may pay :rb_rune_fury: to play me.",
+				description: "When you discard me, you may pay [R] to play me.",
 				flavorText: "GET 'EM, CHOMPIES!\" -Jinx",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1f6f5ebd18e5daac30d62626fddd785c4b457c2b-744x1039.png?accountingTag=RB",
@@ -19580,7 +19580,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Trifarian", "Noxus"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)",
 				flavorText: "The last line of offense.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/aedece01c7792c689050460db1670e6b9b15b61f-744x1039.png?accountingTag=RB",
@@ -19616,7 +19616,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Trifarian", "Noxus"],
 				keywords: [],
-				description: "[Legion] — I cost :rb_energy_2: less. (Get the effect if you've played another card this turn.)",
+				description: "[Legion] — I cost [2] less. (Get the effect if you've played another card this turn.)",
 				flavorText: "First to the front, first to glory.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c3bb6f4cb58feeb50e396d12ec9865c5434025af-744x1039.png?accountingTag=RB",
@@ -19670,7 +19670,7 @@ export default [
 				stats: {energy: 4, might: 5, power: 1},
 				tags: ["Trifarian", "Noxus"],
 				keywords: [],
-				description: "Other friendly units here have [Assault]. (+1 :rb_might: while they're attackers.)",
+				description: "Other friendly units here have [Assault]. (+1 [M] while they're attackers.)",
 				flavorText: "Foward! Always!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4c65e2cae6748590f589ad8b26bc5a20c0d770c2-744x1039.png?accountingTag=RB",
@@ -19688,7 +19688,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Mech", "Bandle City"],
 				keywords: [],
-				description: "[Legion] — When you play me, give a unit +2 :rb_might: this turn. (Get the effect if you've played another card this turn.)",
+				description: "[Legion] — When you play me, give a unit +2 [M] this turn. (Get the effect if you've played another card this turn.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3c02ea9e438d407c739276b788e015ac93843651-744x1039.png?accountingTag=RB",
@@ -19706,7 +19706,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "This enters exhausted.:rb_exhaust:: Deal 2 to a unit at a battlefield.",
+				description: "This enters exhausted.[E]: Deal 2 to a unit at a battlefield.",
 				flavorText: "There's no way they can hit us at this dist-AUGH!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9b5cfe757b6067994e17e284eba46433880a1461-744x1039.png?accountingTag=RB",
@@ -19742,7 +19742,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Spirit", "Shadow Isles"],
 				keywords: [],
-				description: "If you've discarded a card this turn, I have [Assault] and [Ganking]. (+1 :rb_might: while I'm an attacker. I can move from battlefield to battlefield.)",
+				description: "If you've discarded a card this turn, I have [Assault] and [Ganking]. (+1 [M] while I'm an attacker. I can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/037647d0decc94ff4a5d53b11cf36afe9d849533-744x1039.png?accountingTag=RB",
@@ -19778,7 +19778,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Legion] — The next unit you play this turn enters ready. (Get the effect if you've played another card this turn.)",
+				description: "[E]: [Legion] — The next unit you play this turn enters ready. (Get the effect if you've played another card this turn.)",
 				flavorText: "Those who follow me follow destiny!\" - Azir",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/146d7514f15e6674f471f3aa9c3fadf22c0b634b-744x1039.png?accountingTag=RB",
@@ -19814,7 +19814,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Discard 1, :rb_exhaust:: Choose a friendly unit. The next time it dies this turn, you may pay :rb_rune_fury: to recall it exhausted instead. (Send it to base. This isn't a move.)",
+				description: "Discard 1, [E]: Choose a friendly unit. The next time it dies this turn, you may pay [R] to recall it exhausted instead. (Send it to base. This isn't a move.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1a80bedd893d9024fc90f108da36b4fd1d496ad6-744x1039.png?accountingTag=RB",
@@ -19886,7 +19886,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Trifarian", "Darius", "Noxus"],
 				keywords: [],
-				description: "When you play your second card in a turn, give me +2 :rb_might: this turn and ready me.",
+				description: "When you play your second card in a turn, give me +2 [M] this turn and ready me.",
 				flavorText: "With overwhelming force.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/df878ecc25160bb7e53b254a609ec243e133e8f1-744x1039.png?accountingTag=RB",
@@ -19904,7 +19904,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Trifarian", "Darius", "Noxus"],
 				keywords: [],
-				description: "When you play your second card in a turn, give me +2 :rb_might: this turn and ready me.",
+				description: "When you play your second card in a turn, give me +2 [M] this turn and ready me.",
 				flavorText: "With overwhelming force.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bf7a4900fd2296972c1305a4707c23860bb0522e-744x1039.png?accountingTag=RB",
@@ -19958,7 +19958,7 @@ export default [
 				stats: {energy: 3, might: 4, power: 1},
 				tags: ["Jinx", "Zaun"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)[Assault 2] (+2 :rb_might: while I'm an attacker.)When you play me, discard 2.",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)[Assault 2] (+2 [M] while I'm an attacker.)When you play me, discard 2.",
 				flavorText: "I really need a new gun. But don't tell my other guns.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/60ff1aec7ecb1b11ff89fdb620c6182897a8b402-744x1039.png?accountingTag=RB",
@@ -19976,7 +19976,7 @@ export default [
 				stats: {energy: 3, might: 4, power: 1},
 				tags: ["Jinx", "Zaun"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)[Assault 2] (+2 :rb_might: while I'm an attacker.)When you play me, discard 2.",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)[Assault 2] (+2 [M] while I'm an attacker.)When you play me, discard 2.",
 				flavorText: "I really need a new gun. But don't tell my other guns.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d6cac988aa7798945e550eba6841d3993868c4a4-744x1039.png?accountingTag=RB",
@@ -19994,7 +19994,7 @@ export default [
 				stats: {energy: 6, might: 4, power: 1},
 				tags: ["Dragon", "Mount Targon"],
 				keywords: [],
-				description: "When you play me, the next spell you play this turn costs :rb_energy_5: less.",
+				description: "When you play me, the next spell you play this turn costs [5] less.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9566fc064c098bd7f3540f3074dc6353c7ca5663-744x1039.png?accountingTag=RB",
@@ -20012,7 +20012,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: The next spell you play this turn deals 1 Bonus Damage. (Each instance of damage the spell deals is increased by 1.)",
+				description: "[E]: The next spell you play this turn deals 1 Bonus Damage. (Each instance of damage the spell deals is increased by 1.)",
 				flavorText: "The book is bound in flame-resistant materials, for obvious reasons.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/81f968126026635e5b9a2fa1048fc979fcd13a1d-744x1039.png?accountingTag=RB",
@@ -20066,7 +20066,7 @@ export default [
 				stats: {energy: 4, might: 2, power: 1},
 				tags: ["Vayne", "Demacia"],
 				keywords: [],
-				description: "[Assault 3] (+3 :rb_might: while I'm an attacker.)If an opponent controls a battlefield, I enter ready.When I conquer, you may pay :rb_energy_1: to return me to my owner's hand.",
+				description: "[Assault 3] (+3 [M] while I'm an attacker.)If an opponent controls a battlefield, I enter ready.When I conquer, you may pay [1] to return me to my owner's hand.",
 				flavorText: "On wings of night.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b38a22e6f4bfaa8589f32754a7466fe5214e81b5-744x1039.png?accountingTag=RB",
@@ -20084,7 +20084,7 @@ export default [
 				stats: {energy: 2, might: 3, power: 1},
 				tags: ["Vi", "Piltover"],
 				keywords: [],
-				description: "[Ganking] (I can move from battlefield to battlefield.)Recycle 1 from your trash: Give me +1 :rb_might: this turn.",
+				description: "[Ganking] (I can move from battlefield to battlefield.)Recycle 1 from your trash: Give me +1 [M] this turn.",
 				flavorText: "Punch first. Ask questions while punching.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7ab52254ac49b8853fc7ae65b03aaee3f8c5994a-744x1039.png?accountingTag=RB",
@@ -20102,7 +20102,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Spirit"],
 				keywords: [],
-				description: "[Assault 2] (+2 :rb_might: while I'm an attacker.)When you kill a unit with a spell, you may pay :rb_energy_1::rb_rune_fury: to play me from your trash.",
+				description: "[Assault 2] (+2 [M] while I'm an attacker.)When you kill a unit with a spell, you may pay [1][R] to play me from your trash.",
 				flavorText: "The memory of every death fuels even brighter flames.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7b623ae985bf5f362b6d8d4a17e9b8146aeae3c3-744x1039.png?accountingTag=RB",
@@ -20120,7 +20120,7 @@ export default [
 				stats: {energy: 9, might: 9, power: 2},
 				tags: ["Dragon", "Demacia"],
 				keywords: [],
-				description: "When you play me, draw 1 for each of your [Mighty] units. (A unit is Mighty while it has 5+ :rb_might:.)",
+				description: "When you play me, draw 1 for each of your [Mighty] units. (A unit is Mighty while it has 5+ [M].)",
 				flavorText: "First among flames.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/733c32b1fccc7e2983cbb3586358152f90a6df04-744x1039.png?accountingTag=RB",
@@ -20138,7 +20138,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Kai'Sa", "The Void"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)When I conquer, draw 1.",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)When I conquer, draw 1.",
 				flavorText: "I like it here. I just Might stay.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ad69bde670ce218adee1d2a618a7295d2fb7bd4c-744x1039.png?accountingTag=RB",
@@ -20156,7 +20156,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Kai'Sa", "The Void"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_fury: as an additional cost to have me enter ready.)When I conquer, draw 1.",
+				description: "[Accelerate] (You may pay [1][R] as an additional cost to have me enter ready.)When I conquer, draw 1.",
 				flavorText: "I like it here. I just Might stay.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3d942c02ad4e96a36dba14d663c5105bb6614500-744x1039.png?accountingTag=RB",
@@ -20174,7 +20174,7 @@ export default [
 				stats: {energy: 0, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_rune_fury:. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [R]. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fbdd14adb40b0ca46b89f476a356fa21413d812e-744x1039.png?accountingTag=RB",
@@ -20282,7 +20282,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "As you play me, you may pay :rb_rune_calm: as an additional cost. If you do, draw 1.",
+				description: "As you play me, you may pay [G] as an additional cost. If you do, draw 1.",
 				flavorText: "It always goes back for seconds.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/417e606418349bb25d4b07d460fa043ad85f2778-744x1039.png?accountingTag=RB",
@@ -20300,7 +20300,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Counter a spell that costs no more than :rb_energy_4: and no more than [A].",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Counter a spell that costs no more than [4] and no more than [A].",
 				flavorText: "No.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4989bfcc4bd7be77051f0c2c349a981ba9c273e0-744x1039.png?accountingTag=RB",
@@ -20318,7 +20318,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a friendly unit +1 :rb_might: this turn, then an additional +1 :rb_might: this turn if it is the only unit you control there.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a friendly unit +1 [M] this turn, then an additional +1 [M] this turn if it is the only unit you control there.",
 				flavorText: "Is this supposed to be a challenge?\" -Fiora",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/03c0ec7eaa5957a62869dad2a0ce40913fc874a9-744x1039.png?accountingTag=RB",
@@ -20336,7 +20336,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)If an opponent's score is within 3 points of the Victory Score, this costs :rb_energy_2: less.Draw 1 and channel 1 rune exhausted.",
+				description: "[Action] (Play on your turn or in showdowns.)If an opponent's score is within 3 points of the Victory Score, this costs [2] less.Draw 1 and channel 1 rune exhausted.",
 				flavorText: "One does not wait for the perfect moment.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cd9d798b496fdce133c5b0106d636a230b6e7ebe-744x1039.png?accountingTag=RB",
@@ -20426,7 +20426,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Poro"],
 				keywords: [],
-				description: "[Shield] (+1 :rb_might: while I'm a defender.)",
+				description: "[Shield] (+1 [M] while I'm a defender.)",
 				flavorText: "It suits him.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c4a5d7178e783c3975749271b6df333a82a2328a-744x1039.png?accountingTag=RB",
@@ -20444,7 +20444,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Buff a friendly unit. Buffs give an additional +1 :rb_might: to friendly units this turn. (To buff a unit, give it a +1 :rb_might: buff if it doesn't already have one.)",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Action] (Play on your turn or in showdowns.)Buff a friendly unit. Buffs give an additional +1 [M] to friendly units this turn. (To buff a unit, give it a +1 [M] buff if it doesn't already have one.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4d10570e70a998de520d4baba254c3b726caa4f0-744x1039.png?accountingTag=RB",
@@ -20462,7 +20462,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Shurima"],
 				keywords: [],
-				description: "[Shield] (+1 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)",
+				description: "[Shield] (+1 [M] while I'm a defender.)[Tank] (I must be assigned combat damage first.)",
 				flavorText: "Nobody ever won a war without defending.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/28bce7a662b9008f65565300f828d98790a641e1-744x1039.png?accountingTag=RB",
@@ -20480,7 +20480,7 @@ export default [
 				stats: {energy: 3, might: 2, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "While I'm attacking or defending alone, I have +2 :rb_might:.",
+				description: "While I'm attacking or defending alone, I have +2 [M].",
 				flavorText: "Each drop an ocean of possibilities.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5b38a7758705bd739caf07b5c0c49482a4a23015-744x1039.png?accountingTag=RB",
@@ -20498,7 +20498,7 @@ export default [
 				stats: {energy: 4, might: 3, power: null},
 				tags: ["Mech", "Piltover"],
 				keywords: [],
-				description: "When I conquer, you may kill a gear. If you do, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)",
+				description: "When I conquer, you may kill a gear. If you do, buff me. (If I don't have a buff, I get a +1 [M] buff.)",
 				flavorText: "There's a scrap for that.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a3ddb00a2a872eaceb96469739531414aa27455d-744x1039.png?accountingTag=RB",
@@ -20516,7 +20516,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Give a unit [Shield 3] and [Tank] this turn. (+3 :rb_might: while it's a defender. It must be assigned combat damage first.)",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Action] (Play on your turn or in showdowns.)Give a unit [Shield 3] and [Tank] this turn. (+3 [M] while it's a defender. It must be assigned combat damage first.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/36f7352e715fe073631ed85be41408c9a38ab865-744x1039.png?accountingTag=RB",
@@ -20534,7 +20534,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit +2 :rb_might: this turn. Draw 1.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit +2 [M] this turn. Draw 1.",
 				flavorText: "A blade is only as sharp as the one who wields it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8b9613970b505e3ad6abe2d51d091778314a7d48-744x1039.png?accountingTag=RB",
@@ -20552,7 +20552,7 @@ export default [
 				stats: {energy: 7, might: 7, power: 1},
 				tags: ["Bird", "Mount Targon"],
 				keywords: [],
-				description: "When you stun an enemy unit, ready me and give me +1 :rb_might: this turn.",
+				description: "When you stun an enemy unit, ready me and give me +1 [M] this turn.",
 				flavorText: "An omen as terrifying as that which follows.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bbe4fec278b8960681f97da658dc2f06ee46c4bd-744x1039.png?accountingTag=RB",
@@ -20570,7 +20570,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When a friendly unit attacks or defends alone, give it +1 :rb_might: this turn.",
+				description: "When a friendly unit attacks or defends alone, give it +1 [M] this turn.",
 				flavorText: "To know the future, you must first accept it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/03824709acbb4151d13b083a842c4702a3e61221-744x1039.png?accountingTag=RB",
@@ -20588,7 +20588,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Freljord"],
 				keywords: [],
-				description: "When you play me, if you control a Poro, buff me and draw 1. (If I don't have a buff, I get a +1 :rb_might: buff.)",
+				description: "When you play me, if you control a Poro, buff me and draw 1. (If I don't have a buff, I get a +1 [M] buff.)",
 				flavorText: "A fluft is where you make it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/166b718a8517fcceac7e7d4f6acbc4fa0bbc2c55-744x1039.png?accountingTag=RB",
@@ -20606,7 +20606,7 @@ export default [
 				stats: {energy: 5, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Look at the top 5 cards of your Main Deck. You may banish a unit from among them, then play it, reducing its cost by :rb_energy_5:. Recycle the remaining cards.",
+				description: "Look at the top 5 cards of your Main Deck. You may banish a unit from among them, then play it, reducing its cost by [5]. Recycle the remaining cards.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5bb4ce960c7636dac103c560a2e2f4e32f9d5390-744x1039.png?accountingTag=RB",
@@ -20624,7 +20624,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "When you play this, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)Friendly buffed units have [Deflect] if they didn't already. (Opponents must pay [A] to choose those units with a spell or ability.)",
+				description: "When you play this, buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)Friendly buffed units have [Deflect] if they didn't already. (Opponents must pay [A] to choose those units with a spell or ability.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/26d5e54580d1f17ed6c35a66ac6a90ce56c99ec8-744x1039.png?accountingTag=RB",
@@ -20660,7 +20660,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "While I'm buffed, I have an additional +1 :rb_might:.",
+				description: "While I'm buffed, I have an additional +1 [M].",
 				flavorText: "I'm still fighting at my age. That should concern you more than it does.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7b98797789ad7e3a6cf52126b82a42ec6f269bb7-744x1039.png?accountingTag=RB",
@@ -20732,7 +20732,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Caitlyn", "Piltover"],
 				keywords: [],
-				description: "I must be assigned combat damage last.:rb_exhaust:: Deal damage equal to my Might to a unit at a battlefield. Use this ability only while I'm at a battlefield.",
+				description: "I must be assigned combat damage last.[E]: Deal damage equal to my Might to a unit at a battlefield. Use this ability only while I'm at a battlefield.",
 				flavorText: "I never miss.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/51e6bacf25d19e7c391367ff107efb9e0b9f1ff5-744x1039.png?accountingTag=RB",
@@ -20840,7 +20840,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Taric", "Mount Targon"],
 				keywords: [],
-				description: "[Shield] (+1 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)Other friendly units here have [Shield].",
+				description: "[Shield] (+1 [M] while I'm a defender.)[Tank] (I must be assigned combat damage first.)Other friendly units here have [Shield].",
 				flavorText: "Each life is a rare jewel.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7d08e3f64401cb87b8a0564a1cbe6fc94aee03a7-744x1039.png?accountingTag=RB",
@@ -20858,7 +20858,7 @@ export default [
 				stats: {energy: 7, might: 6, power: null},
 				tags: ["Fae", "Bandle City"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_calm: as an additional cost to have me enter ready.)[Deathknell] — Channel 2 runes exhausted and draw 1. (When I die, get the effect.)",
+				description: "[Accelerate] (You may pay [1][G] as an additional cost to have me enter ready.)[Deathknell] — Channel 2 runes exhausted and draw 1. (When I die, get the effect.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/65f69ca9a1087deb12e91fb6fdee7b6efd0c088f-744x1039.png?accountingTag=RB",
@@ -20912,7 +20912,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)The next time a friendly unit would die, kill this instead. Recall that unit exhausted. (Send it to base. This isn't a move.)",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)The next time a friendly unit would die, kill this instead. Recall that unit exhausted. (Send it to base. This isn't a move.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/dc38172c56f838b407fc9f170ba973da32d7cd4d-744x1039.png?accountingTag=RB",
@@ -20930,7 +20930,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Lee Sin", "Ionia"],
 				keywords: [],
-				description: "[Shield] (+1 :rb_might: while I'm a defender.):rb_exhaust:: Buff me. (I get a +1 :rb_might: buff.)I can have any number of buffs.",
+				description: "[Shield] (+1 [M] while I'm a defender.)[E]: Buff me. (I get a +1 [M] buff.)I can have any number of buffs.",
 				flavorText: "Let us see whose spirit is stronger.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d34a98faacd3f7d32afd6fad99c806f202aa9dad-744x1039.png?accountingTag=RB",
@@ -20948,7 +20948,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Lee Sin", "Ionia"],
 				keywords: [],
-				description: "[Shield] (+1 :rb_might: while I'm a defender.):rb_exhaust:: Buff me. (I get a +1 :rb_might: buff.)I can have any number of buffs.",
+				description: "[Shield] (+1 [M] while I'm a defender.)[E]: Buff me. (I get a +1 [M] buff.)I can have any number of buffs.",
 				flavorText: "Let us see whose spirit is stronger.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/70734e8833bfbbdb2736407c449f418553e3cf7c-744x1039.png?accountingTag=RB",
@@ -20966,7 +20966,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Leona", "Mount Targon"],
 				keywords: [],
-				description: "If an opponent's score is within 3 points of the Victory Score, I enter ready.Stunned enemy units here have -8 :rb_might:, to a minimum of 1 :rb_might:.",
+				description: "If an opponent's score is within 3 points of the Victory Score, I enter ready.Stunned enemy units here have -8 [M], to a minimum of 1 [M].",
 				flavorText: "Feel the sun's glory!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/451caa433b1fbe8e9d2b86548b82c3c5f2bac620-744x1039.png?accountingTag=RB",
@@ -20984,7 +20984,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Leona", "Mount Targon"],
 				keywords: [],
-				description: "If an opponent's score is within 3 points of the Victory Score, I enter ready.Stunned enemy units here have -8 :rb_might:, to a minimum of 1 :rb_might:.",
+				description: "If an opponent's score is within 3 points of the Victory Score, I enter ready.Stunned enemy units here have -8 [M], to a minimum of 1 [M].",
 				flavorText: "Feel the sun's glory!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3bd1e924bec41b0f733fc8b93dc8918ce5a53ba4-744x1039.png?accountingTag=RB",
@@ -21020,7 +21020,7 @@ export default [
 				stats: {energy: 0, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_rune_calm:. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [G]. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/288c300c4e4cb10ecfe6c3cbb543d0636b306852-744x1039.png?accountingTag=RB",
@@ -21038,7 +21038,7 @@ export default [
 				stats: {energy: 8, might: 8, power: 2},
 				tags: ["Dragon", "Mount Targon"],
 				keywords: [],
-				description: "When you play me, give a unit +8 :rb_might: this turn.",
+				description: "When you play me, give a unit +8 [M] this turn.",
 				flavorText: "A dragon is capable of nobility equal to its rage.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a5cdd793736f915fa1b4ea388af66de7b2bc00cb-744x1039.png?accountingTag=RB",
@@ -21056,7 +21056,7 @@ export default [
 				stats: {energy: 4, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Reaction] (Play any time, even before spells and abilities resolve.)Draw 2.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Reaction] (Play any time, even before spells and abilities resolve.)Draw 2.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/198d950d3933972273ec714e9264cbd563ea6920-744x1039.png?accountingTag=RB",
@@ -21074,7 +21074,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Piltover"],
 				keywords: [],
-				description: "While I'm at a battlefield, the Energy costs for spells you play is reduced by :rb_energy_1:, to a minimum of :rb_energy_1:.",
+				description: "While I'm at a battlefield, the Energy costs for spells you play is reduced by [1], to a minimum of [1].",
 				flavorText: "As long as these thirty-seven things go right, it'll work every time!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cf6d5447ff3634d8c2c0216cb2e5802fb5ca0b2e-744x1039.png?accountingTag=RB",
@@ -21110,7 +21110,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Mount Targon"],
 				keywords: [],
-				description: "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)[Shield] (+1 :rb_might: while I'm a defender.)",
+				description: "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)[Shield] (+1 [M] while I'm a defender.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/775bea14038165fd9feb15c796ed84aa00a032e1-744x1039.png?accountingTag=RB",
@@ -21200,7 +21200,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: Give a unit -1 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "[E]: Give a unit -1 [M] this turn, to a minimum of 1 [M].",
 				flavorText: "There's beauty in even the most painful memories.\" - Ahri",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fd883b646d1a3cdb1a03b0c19dc62c92ca552f4f-744x1039.png?accountingTag=RB",
@@ -21254,7 +21254,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit -4 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit -4 [M] this turn, to a minimum of 1 [M].",
 				flavorText: "Well, well, well. What have we here?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/06c34457afd09b828ee0b2862ed51eb31004d888-744x1039.png?accountingTag=RB",
@@ -21272,7 +21272,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Play a ready 3 :rb_might: Sprite unit token with [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Action] (Play on your turn or in showdowns.)Play a ready 3 [M] Sprite unit token with [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ab3db48dcbb12b01151d3a08c2412020380b7ca5-744x1039.png?accountingTag=RB",
@@ -21290,7 +21290,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit -1 :rb_might: this turn, to a minimum of 1 :rb_might:. Draw 1.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give a unit -1 [M] this turn, to a minimum of 1 [M]. Draw 1.",
 				flavorText: "It's easier to outsmart an opponent with a concussion.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/837a5976192bbf8bdb4086429802167548ecc119-744x1039.png?accountingTag=RB",
@@ -21326,7 +21326,7 @@ export default [
 				stats: {energy: 2, might: 2, power: 1},
 				tags: ["Fae", "Bandle City"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When you play me, give a unit -2 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When you play me, give a unit -2 [M] this turn, to a minimum of 1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fac53b2216490c99ad7ce11dc5e663a692d6c104-744x1039.png?accountingTag=RB",
@@ -21344,7 +21344,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_energy_1:. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [1]. (Abilities that add resources can't be reacted to.)",
 				flavorText: "Whatever it does, it sure does a lot of it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f0e0a67e9e9b1d45d12d248df78b4e643b70bdc1-744x1039.png?accountingTag=RB",
@@ -21362,7 +21362,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Recycle 3 from your trash, :rb_energy_1:, :rb_exhaust:: Draw 1.",
+				description: "Recycle 3 from your trash, [1], [E]: Draw 1.",
 				flavorText: "The constructs of the in-between feed on whatever gets lost in the portals - mostly keys and left socks.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/199f21237aeee2582904463a15ec62ce29452c10-744x1039.png?accountingTag=RB",
@@ -21434,7 +21434,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Noxus"],
 				keywords: [],
-				description: "When you play a spell, give me +1 :rb_might: this turn.",
+				description: "When you play a spell, give me +1 [M] this turn.",
 				flavorText: "A little knowledge is a dangerous thing. A lot of knowledge is awesome.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b98b1ff793b6eb263957258742cc83d50fda6537-744x1039.png?accountingTag=RB",
@@ -21488,7 +21488,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Fae"],
 				keywords: [],
-				description: "When you play me, play a ready 3 :rb_might: Sprite unit token with [Temporary] here. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
+				description: "When you play me, play a ready 3 [M] Sprite unit token with [Temporary] here. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
 				flavorText: "Come, little ones.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/65c06528f88de1ac207b382d4830ccfdd08a2d12-744x1039.png?accountingTag=RB",
@@ -21506,7 +21506,7 @@ export default [
 				stats: {energy: 5, might: 4, power: null},
 				tags: ["Yordle"],
 				keywords: [],
-				description: "When I attack, you may pay :rb_rune_mind: to play a card with [Hidden] from your hand here, ignoring its cost.",
+				description: "When I attack, you may pay [B] to play a card with [Hidden] from your hand here, ignoring its cost.",
 				flavorText: "I brought snacks!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/93e91aa99eb09baa68dd95b0013a89d9ffde5240-744x1039.png?accountingTag=RB",
@@ -21560,7 +21560,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Ekko", "Zaun"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_mind: as an additional cost to have me enter ready.)[Deathknell] — Recycle me to ready your runes. (When I die, get the effect.)",
+				description: "[Accelerate] (You may pay [1][B] as an additional cost to have me enter ready.)[Deathknell] — Recycle me to ready your runes. (When I die, get the effect.)",
 				flavorText: "Time to start some trouble.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/65da19325b6def53d33c07bc1aa8f91fd2f1e723-744x1039.png?accountingTag=RB",
@@ -21578,7 +21578,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Yordle", "Heimerdinger", "Piltover"],
 				keywords: [],
-				description: "I have all :rb_exhaust: abilities of all friendly legends, units, and gear.",
+				description: "I have all [E] abilities of all friendly legends, units, and gear.",
 				flavorText: "I do love a good conundrum.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5b14a5f9d567c90329c151a8cc72d870b47b1434-744x1039.png?accountingTag=RB",
@@ -21632,7 +21632,7 @@ export default [
 				stats: {energy: 4, might: 3, power: null},
 				tags: ["Malzahar", "The Void"],
 				keywords: [],
-				description: "Kill a friendly unit or gear, :rb_exhaust:: [Action] — [Add] [A][A]. (Use on your turn or in showdowns. Abilities that add resources can't be reacted to.)",
+				description: "Kill a friendly unit or gear, [E]: [Action] — [Add] [A][A]. (Use on your turn or in showdowns. Abilities that add resources can't be reacted to.)",
 				flavorText: "We demand sacrifice.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ba1fa3a18b1c2ff132ad536577e53deb49bce1f9-744x1039.png?accountingTag=RB",
@@ -21686,7 +21686,7 @@ export default [
 				stats: {energy: 7, might: 7, power: 1},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_mind: as an additional cost to have me enter ready.)When you play me, give enemy units -3 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "[Accelerate] (You may pay [1][B] as an additional cost to have me enter ready.)When you play me, give enemy units -3 [M] this turn, to a minimum of 1 [M].",
 				flavorText: "You will know when you've pushed the wilds too far.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b20e5644c33924a58e0497dd9f7db19723147003-744x1039.png?accountingTag=RB",
@@ -21704,7 +21704,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Viktor", "Zaun"],
 				keywords: [],
-				description: "When you play a card on an opponent's turn, play a 1 :rb_might: Recruit unit token in your base.",
+				description: "When you play a card on an opponent's turn, play a 1 [M] Recruit unit token in your base.",
 				flavorText: "Join the glorious evolution",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/12dfa6b38edc9b23f216c0a1828474f7506d49c0-744x1039.png?accountingTag=RB",
@@ -21722,7 +21722,7 @@ export default [
 				stats: {energy: 4, might: 3, power: 1},
 				tags: ["Viktor", "Zaun"],
 				keywords: [],
-				description: "When you play a card on an opponent's turn, play a 1 :rb_might: Recruit unit token in your base.",
+				description: "When you play a card on an opponent's turn, play a 1 [M] Recruit unit token in your base.",
 				flavorText: "Join the glorious evolution",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/35be0b10f13611b4f5d828f2a79001036ab57ba1-744x1039.png?accountingTag=RB",
@@ -21758,7 +21758,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Ahri", "Ionia"],
 				keywords: [],
-				description: "When I attack or defend, give an enemy unit here -2 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "When I attack or defend, give an enemy unit here -2 [M] this turn, to a minimum of 1 [M].",
 				flavorText: "The hunter and the hunted.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7adc5aa8dba66bf918b8140699cb3a74f7b0efb5-744x1039.png?accountingTag=RB",
@@ -21776,7 +21776,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Ahri", "Ionia"],
 				keywords: [],
-				description: "When I attack or defend, give an enemy unit here -2 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "When I attack or defend, give an enemy unit here -2 [M] this turn, to a minimum of 1 [M].",
 				flavorText: "The hunter and the hunted.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cfa28e1abcac1db780d11e82985e13ee5978290d-744x1039.png?accountingTag=RB",
@@ -21794,7 +21794,7 @@ export default [
 				stats: {energy: 0, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_rune_mind:. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [B]. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9ee0dc0221f83d569e0f458374e40f7238f306c2-744x1039.png?accountingTag=RB",
@@ -21812,7 +21812,7 @@ export default [
 				stats: {energy: 2, might: 2, power: 1},
 				tags: ["Yordle", "Teemo", "Bandle City"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0709ab02b75d9acc8f3c4037ec3a4140323150d8-744x1039.png?accountingTag=RB",
@@ -21830,7 +21830,7 @@ export default [
 				stats: {energy: 2, might: 2, power: 1},
 				tags: ["Yordle", "Teemo", "Bandle City"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When I defend or I'm played from [Hidden], reveal the top 5 cards of your Main Deck. Deal 1 to an enemy unit here for each card with [Hidden], then recycle them.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b05f31bf744972983f61a9f5801b4ffd68fb9ebf-744x1039.png?accountingTag=RB",
@@ -21884,7 +21884,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: Buff an exhausted friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "[E]: Buff an exhausted friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: "This one's on the house!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/519306d1d4a36f2d54fe0982268a197a257f5e5d-744x1039.png?accountingTag=RB",
@@ -22028,7 +22028,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Dragon", "Shurima"],
 				keywords: [],
-				description: "When I attack, give me +2 :rb_might: this turn if there is a ready enemy unit here.",
+				description: "When I attack, give me +2 [M] this turn if there is a ready enemy unit here.",
 				flavorText: "Dragons hunt not just for food, but for the thrill of it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ba18bf4a5fa9777a0cb5ae69cc7e6f049bbceaa0-744x1039.png?accountingTag=RB",
@@ -22100,7 +22100,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Cat", "Ixtal"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)",
 				flavorText: "Oh it's so cute!\" -Common last words",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/156a66d7d44165367cc5a470fb35c86f337f9429-744x1039.png?accountingTag=RB",
@@ -22118,7 +22118,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Bilgewater"],
 				keywords: [],
-				description: "When you play me, buff another friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "When you play me, buff another friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: "Is that all you got?",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ec19eeaee85c7e5669387a3f6ccb7718f5a0f570-744x1039.png?accountingTag=RB",
@@ -22172,7 +22172,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Elite", "Demacia"],
 				keywords: [],
-				description: "When you play another unit, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)",
+				description: "When you play another unit, buff me. (If I don't have a buff, I get a +1 [M] buff.)",
 				flavorText: "Every story starts small.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6f0931db65e25e0a8d8351ffb97f8deed5dc0aa9-744x1039.png?accountingTag=RB",
@@ -22190,7 +22190,7 @@ export default [
 				stats: {energy: 4, might: 3, power: null},
 				tags: ["Mount Targon"],
 				keywords: [],
-				description: "Your Dragons' Energy costs are reduced by :rb_energy_2:, to a minimum of :rb_energy_1:.",
+				description: "Your Dragons' Energy costs are reduced by [2], to a minimum of [1].",
 				flavorText: "The language of dragons is a magic of its own.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/be49bceea1d328769774fb4daac4732861f6e4fd-744x1039.png?accountingTag=RB",
@@ -22208,7 +22208,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Ionia"],
 				keywords: [],
-				description: "When you play me, buff up to two other friendly units. (Each one that doesn't have a buff gets a +1 :rb_might: buff.)",
+				description: "When you play me, buff up to two other friendly units. (Each one that doesn't have a buff gets a +1 [M] buff.)",
 				flavorText: "A master teaches the same lesson again and again, and learns something new each time.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/648b22c6f419ee55723247bbf4c3ac10f0be9ab5-744x1039.png?accountingTag=RB",
@@ -22244,7 +22244,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you ready a friendly unit, give it +1 :rb_might: this turn.",
+				description: "When you ready a friendly unit, give it +1 [M] this turn.",
 				flavorText: "It's the best place in the world, until you run out of coin.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1991b64d58cbd3698574f44b404f7a88d6403134-744x1039.png?accountingTag=RB",
@@ -22262,7 +22262,7 @@ export default [
 				stats: {energy: 4, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)If an enemy unit has died this turn, this costs :rb_energy_2: less.Draw 2.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)If an enemy unit has died this turn, this costs [2] less.Draw 2.",
 				flavorText: "Waste nothing.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b8d59d015d6b8e15822b360447fcb364e14d550f-744x1039.png?accountingTag=RB",
@@ -22316,7 +22316,7 @@ export default [
 				stats: {energy: 4, might: 3, power: null},
 				tags: ["Freljord"],
 				keywords: [],
-				description: "When you play me, you may spend a buff to buff me and ready me. (If I don't have a buff, I get a +1 :rb_might: buff.)",
+				description: "When you play me, you may spend a buff to buff me and ready me. (If I don't have a buff, I get a +1 [M] buff.)",
 				flavorText: "To channel nature's fury, a shaman must endure it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7abc938fee4ba397f52c8ea60d350857a7517b0c-744x1039.png?accountingTag=RB",
@@ -22370,7 +22370,7 @@ export default [
 				stats: {energy: 3, might: 5, power: 2},
 				tags: ["Pirate", "Bilgewater"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)[Assault] (+1 :rb_might: while I'm an attacker.)As you play me, you may spend any number of buffs as an additional cost. Reduce my cost by :rb_rune_body: for each buff you spend.",
+				description: "[Accelerate] (You may pay [1][O] as an additional cost to have me enter ready.)[Assault] (+1 [M] while I'm an attacker.)As you play me, you may spend any number of buffs as an additional cost. Reduce my cost by [O] for each buff you spend.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/51aab4710d000a9c1e665a37ef8c919ff11b0282-744x1039.png?accountingTag=RB",
@@ -22388,7 +22388,7 @@ export default [
 				stats: {energy: 6, might: 6, power: null},
 				tags: ["Lee Sin", "Ionia"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)Other buffed friendly units at my battlefield have +2 :rb_might:.",
+				description: "[Accelerate] (You may pay [1][O] as an additional cost to have me enter ready.)Other buffed friendly units at my battlefield have +2 [M].",
 				flavorText: "Today will be a worthy test.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/68d9364d3138e06a25724a0aaae0b7226472cd68-744x1039.png?accountingTag=RB",
@@ -22406,7 +22406,7 @@ export default [
 				stats: {energy: 6, might: 6, power: null},
 				tags: ["Lee Sin", "Ionia"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)Other buffed friendly units at my battlefield have +2 :rb_might:.",
+				description: "[Accelerate] (You may pay [1][O] as an additional cost to have me enter ready.)Other buffed friendly units at my battlefield have +2 [M].",
 				flavorText: "Today will be a worthy test.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/eca1aec1304de9c237751eb0aeed620b9ad0408e-744x1039.png?accountingTag=RB",
@@ -22424,7 +22424,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you buff a friendly unit, you may pay :rb_rune_body: and exhaust this to ready it.",
+				description: "When you buff a friendly unit, you may pay [O] and exhaust this to ready it.",
 				flavorText: "Thousands of thwarted dreams, ready to be lifted anew.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1cedf0dcd6c4a44ae867e9f04f9f179d9b91c357-744x1039.png?accountingTag=RB",
@@ -22442,7 +22442,7 @@ export default [
 				stats: {energy: 5, might: null, power: 2},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)For each friendly unit, you may spend its buff to ready it. Then buff all friendly units. (Each one that doesn't have a buff gets a +1 :rb_might: buff.)",
+				description: "[Action] (Play on your turn or in showdowns.)For each friendly unit, you may spend its buff to ready it. Then buff all friendly units. (Each one that doesn't have a buff gets a +1 [M] buff.)",
 				flavorText: "We can go deep undercover, sneak in through the back, and end this quietly. Or....",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/69dba13c930ba3962851346d2bc6cbeb4ca48455-744x1039.png?accountingTag=RB",
@@ -22460,7 +22460,7 @@ export default [
 				stats: {energy: 4, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Give a unit +7 :rb_might: this turn.",
+				description: "[Action] (Play on your turn or in showdowns.)Give a unit +7 [M] this turn.",
 				flavorText: "There is savagery inside us all.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/dfd910a9836cd36340d0ffdb5fe8cb92a1069963-744x1039.png?accountingTag=RB",
@@ -22532,7 +22532,7 @@ export default [
 				stats: {energy: 12, might: 10, power: 2},
 				tags: ["Volibear", "Freljord"],
 				keywords: [],
-				description: "[Shield 3] (+3 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)When an opponent moves to a battlefield other than mine, draw 1. (Bases are not battlefield.)",
+				description: "[Shield 3] (+3 [M] while I'm a defender.)[Tank] (I must be assigned combat damage first.)When an opponent moves to a battlefield other than mine, draw 1. (Bases are not battlefield.)",
 				flavorText: "Gods do not beg. We take what is ours!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/faceb90b6a46e79eadba43871b8cffe1ec5037a7-744x1039.png?accountingTag=RB",
@@ -22550,7 +22550,7 @@ export default [
 				stats: {energy: 12, might: 10, power: 2},
 				tags: ["Volibear", "Freljord"],
 				keywords: [],
-				description: "[Shield 3] (+3 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)When an opponent moves to a battlefield other than mine, draw 1. (Bases are not battlefield.)",
+				description: "[Shield 3] (+3 [M] while I'm a defender.)[Tank] (I must be assigned combat damage first.)When an opponent moves to a battlefield other than mine, draw 1. (Bases are not battlefield.)",
 				flavorText: "Gods do not beg. We take what is ours!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bcb15f95f4a72f8b070a3b1cd54e6482fe1a4b3e-744x1039.png?accountingTag=RB",
@@ -22622,7 +22622,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Pirate", "Miss Fortune", "Bilgewater"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)[Ganking] (I can move from battlefield to battlefield.)The first time I move each turn, you may ready something else that's exhausted.",
+				description: "[Accelerate] (You may pay [1][O] as an additional cost to have me enter ready.)[Ganking] (I can move from battlefield to battlefield.)The first time I move each turn, you may ready something else that's exhausted.",
 				flavorText: "Set sail!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6a7a0dfa952259993fa0d8998a820585ff4f81c6-744x1039.png?accountingTag=RB",
@@ -22640,7 +22640,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Pirate", "Miss Fortune", "Bilgewater"],
 				keywords: [],
-				description: "[Accelerate] (You may pay :rb_energy_1::rb_rune_body: as an additional cost to have me enter ready.)[Ganking] (I can move from battlefield to battlefield.)The first time I move each turn, you may ready something else that's exhausted.",
+				description: "[Accelerate] (You may pay [1][O] as an additional cost to have me enter ready.)[Ganking] (I can move from battlefield to battlefield.)The first time I move each turn, you may ready something else that's exhausted.",
 				flavorText: "Set sail!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3c7b219245cd6c6ee835974dd74771bc605289de-744x1039.png?accountingTag=RB",
@@ -22658,7 +22658,7 @@ export default [
 				stats: {energy: 0, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_rune_body:. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [O]. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/415644b2798348e3d7198ec900cc40aaa4eb8bdf-744x1039.png?accountingTag=RB",
@@ -22676,7 +22676,7 @@ export default [
 				stats: {energy: 5, might: 4, power: 1},
 				tags: ["Sett", "Ionia"],
 				keywords: [],
-				description: "When I'm played and when I conquer, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)Spend my buff: Give me +4 :rb_might: this turn.",
+				description: "When I'm played and when I conquer, buff me. (If I don't have a buff, I get a +1 [M] buff.)Spend my buff: Give me +4 [M] this turn.",
 				flavorText: "Momma always said I had her temper.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/26e65c15e8a1ce1a9cd60d96345c7916e67e00ac-744x1039.png?accountingTag=RB",
@@ -22694,7 +22694,7 @@ export default [
 				stats: {energy: 5, might: 4, power: 1},
 				tags: ["Sett", "Ionia"],
 				keywords: [],
-				description: "When I'm played and when I conquer, buff me. (If I don't have a buff, I get a +1 :rb_might: buff.)Spend my buff: Give me +4 :rb_might: this turn.",
+				description: "When I'm played and when I conquer, buff me. (If I don't have a buff, I get a +1 [M] buff.)Spend my buff: Give me +4 [M] this turn.",
 				flavorText: "Momma always said I had her temper.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/00ddd4d478f2e49e18a60ed67f4d1452041b7da3-744x1039.png?accountingTag=RB",
@@ -22766,7 +22766,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Bandle City"],
 				keywords: [],
-				description: "When you play a card from [Hidden], give me +2 :rb_might: this turn.",
+				description: "When you play a card from [Hidden], give me +2 [M] this turn.",
 				flavorText: "A flame bright enough to cast many shadows.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0441f70a7acc377d8cbe08559b7a2fc3139c903b-744x1039.png?accountingTag=RB",
@@ -22784,7 +22784,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Move a unit from a battlefield to its base.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Action] (Play on your turn or in showdowns.)Move a unit from a battlefield to its base.",
 				flavorText: "Boo.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2e7c7ad72889878e2dd5932d203814b185e74a87-744x1039.png?accountingTag=RB",
@@ -22802,7 +22802,7 @@ export default [
 				stats: {energy: 1, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Return a unit at a battlefield with 3 :rb_might: or less to its owner's hand.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Return a unit at a battlefield with 3 [M] or less to its owner's hand.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/dfd3b161ab76ba0c5d503384f1289b3395434b10-744x1039.png?accountingTag=RB",
@@ -23018,7 +23018,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: Return another friendly gear, unit, or [Hidden] card to its owner's hand.",
+				description: "[E]: Return another friendly gear, unit, or [Hidden] card to its owner's hand.",
 				flavorText: "I know I put it in here somewhere....\" -Teemo",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a0830f326c49abe7fb1d3c9787e7ce5d7b776eec-744x1039.png?accountingTag=RB",
@@ -23072,7 +23072,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Move a friendly unit at a battlefield to your base.",
+				description: "[1], [E]: Move a friendly unit at a battlefield to your base.",
 				flavorText: "Without a ship, a pirate's just another common criminal.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cafdd212b542243e10e5fac587616ab77e3d9cf1-744x1039.png?accountingTag=RB",
@@ -23108,7 +23108,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When this leaves the board, draw 1 and channel 1 rune exhausted.:rb_rune_chaos:, :rb_exhaust:: Kill this.",
+				description: "When this leaves the board, draw 1 and channel 1 rune exhausted.[P], [E]: Kill this.",
 				flavorText: "We're gonna be rich!\" -Common Last Words",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/682f5ee828ede4dbaf428cd0666db64ee8bae722-744x1039.png?accountingTag=RB",
@@ -23288,7 +23288,7 @@ export default [
 				stats: {energy: 10, might: 6, power: 1},
 				tags: ["Spirit", "Shadow Isles"],
 				keywords: [],
-				description: "I cost :rb_energy_1: less for each card in your trash.",
+				description: "I cost [1] less for each card in your trash.",
 				flavorText: "It feeds well on death, but better on madness.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e34fe8a9ee533dee99f96b4e6677d1edbd6a262d-744x1039.png?accountingTag=RB",
@@ -23324,7 +23324,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Yordle", "Teemo", "Bandle City"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When you play me, give me +3 :rb_might: this turn.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When you play me, give me +3 [M] this turn.",
 				flavorText: "Reporting in!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/404a8aa0061b58611bd913b58dd01d99fdb8087d-744x1039.png?accountingTag=RB",
@@ -23342,7 +23342,7 @@ export default [
 				stats: {energy: 2, might: 1, power: null},
 				tags: ["Yordle", "Teemo", "Bandle City"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When you play me, give me +3 :rb_might: this turn.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When you play me, give me +3 [M] this turn.",
 				flavorText: "Reporting in!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ca8a2e11dd78dd09ad1c9ad3a23e5699254b947e-744x1039.png?accountingTag=RB",
@@ -23378,7 +23378,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Bilgewater"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)When you play me, you may choose a friendly unit. Move me to its location and it to my original location.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)When you play me, you may choose a friendly unit. Move me to its location and it to my original location.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bad355dba8b32d1fba33dc3924cad6a34b61b5af-744x1039.png?accountingTag=RB",
@@ -23396,7 +23396,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Twisted Fate", "Bilgewater"],
 				keywords: [],
-				description: "When I attack, reveal the top rune of your rune deck, then recycle it. Do one of the following based on its domain::rb_rune_fury: — Deal 2 to an enemy unit here and 1 to all other enemy units here.:rb_rune_mind: — Draw 1.:rb_rune_order: — Stun an enemy unit.",
+				description: "When I attack, reveal the top rune of your rune deck, then recycle it. Do one of the following based on its domain:[R] — Deal 2 to an enemy unit here and 1 to all other enemy units here.[B] — Draw 1.[Y] — Stun an enemy unit.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9eff1a038528c4d633196f13259670d84b74c2a8-744x1039.png?accountingTag=RB",
@@ -23432,7 +23432,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Jinx", "Zaun"],
 				keywords: [],
-				description: "When you discard one or more cards, ready me and give me +1 :rb_might: this turn.",
+				description: "When you discard one or more cards, ready me and give me +1 [M] this turn.",
 				flavorText: "Rules are made to be broken. Like buildings! Or people!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/da4c4f96081b4c0e151dba74a0ef6eae338478f0-744x1039.png?accountingTag=RB",
@@ -23450,7 +23450,7 @@ export default [
 				stats: {energy: 5, might: 5, power: 1},
 				tags: ["Jinx", "Zaun"],
 				keywords: [],
-				description: "When you discard one or more cards, ready me and give me +1 :rb_might: this turn.",
+				description: "When you discard one or more cards, ready me and give me +1 [M] this turn.",
 				flavorText: "Rules are made to be broken. Like buildings! Or people!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a7fe105f40df66525be51bd18e25506945a7b027-744x1039.png?accountingTag=RB",
@@ -23486,7 +23486,7 @@ export default [
 				stats: {energy: 0, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_rune_chaos:. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [P]. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/dd8433e77e46ca77aaf0be35d1774218d9a2f037-744x1039.png?accountingTag=RB",
@@ -23540,7 +23540,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give two friendly units each +2 :rb_might: this turn.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Give two friendly units each +2 [M] this turn.",
 				flavorText: "Fight together or die alone.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7f5585dcd3e9c7866e3b99cb169a0404ea4c010f-744x1039.png?accountingTag=RB",
@@ -23558,7 +23558,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)As you play this, you may spend a buff as an additional cost. If you do, ignore this spell's cost.Give a unit +3 :rb_might: this turn.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)As you play this, you may spend a buff as an additional cost. If you do, ignore this spell's cost.Give a unit +3 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ced53bc3fb15f263471067fc3868295b09e62a07-744x1039.png?accountingTag=RB",
@@ -23612,7 +23612,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Poro"],
 				keywords: [],
-				description: "[Assault] (+1 :rb_might: while I'm an attacker.)",
+				description: "[Assault] (+1 [M] while I'm an attacker.)",
 				flavorText: "Don't worry, they love it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/41dee7ec46124c261352595cfbd8a6d38d32b947-744x1039.png?accountingTag=RB",
@@ -23630,7 +23630,7 @@ export default [
 				stats: {energy: 3, might: 2, power: null},
 				tags: ["Piltover"],
 				keywords: [],
-				description: "When you play me, play a 1 :rb_might: Recruit unit token here.",
+				description: "When you play me, play a 1 [M] Recruit unit token here.",
 				flavorText: "Hard work is its own reward.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b41107b7456a2a38d203983b1e504e3789d6b6ea-744x1039.png?accountingTag=RB",
@@ -23648,7 +23648,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you play this, play a 1 :rb_might: Recruit unit token at your base.Kill this: Recycle up to 4 cards from trashes.",
+				description: "When you play this, play a 1 [M] Recruit unit token at your base.Kill this: Recycle up to 4 cards from trashes.",
 				flavorText: "What do you make? Beats me, but we do it better than anyone else.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8e6a76d28590bcd835b0a9a1e806fe0fa6883141-744x1039.png?accountingTag=RB",
@@ -23666,7 +23666,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Kill a unit at a battlefield. Its controller draws 2.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Action] (Play on your turn or in showdowns.)Kill a unit at a battlefield. Its controller draws 2.",
 				flavorText: "Not every Noxian decree is read aloud.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/0437ab8a0b67f43ef5483a103bbae9e57fd05822-744x1039.png?accountingTag=RB",
@@ -23720,7 +23720,7 @@ export default [
 				stats: {energy: 5, might: 5, power: null},
 				tags: ["Pirate", "Bilgewater"],
 				keywords: [],
-				description: "[Assault] (+1 :rb_might: while I'm an attacker.)",
+				description: "[Assault] (+1 [M] while I'm an attacker.)",
 				flavorText: "Cross him and you'll learn just how petty he can be.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/29e062c4a38c0be12056568a2f8563557e2611c6-744x1039.png?accountingTag=RB",
@@ -23756,7 +23756,7 @@ export default [
 				stats: {energy: 2, might: 2, power: null},
 				tags: ["Trifarian", "Noxus"],
 				keywords: [],
-				description: "[Legion] — When you play me, buff me. (If I don't have a buff, I get a +1 :rb_might: buff. Get the effect if you've played another card this turn.)",
+				description: "[Legion] — When you play me, buff me. (If I don't have a buff, I get a +1 [M] buff. Get the effect if you've played another card this turn.)",
 				flavorText: "War demands your life but offers immortality.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/19ad6a0e743b56021b9651a2105034a488e172e8-744x1039.png?accountingTag=RB",
@@ -23774,7 +23774,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Elite", "Demacia"],
 				keywords: [],
-				description: "[Legion] — When you play me, play two 1 :rb_might: Recruit unit tokens here. (Get the effect if you've played another card this turn.)",
+				description: "[Legion] — When you play me, play two 1 [M] Recruit unit tokens here. (Get the effect if you've played another card this turn.)",
 				flavorText: "Soldiers, to me!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f0c9ddb2af7a0d4991938cf1e3058eb0f5d2e357-744x1039.png?accountingTag=RB",
@@ -23810,7 +23810,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Stun a friendly unit and an enemy unit at the same battlefield. (They don't deal combat damage this turn.)",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Action] (Play on your turn or in showdowns.)Stun a friendly unit and an enemy unit at the same battlefield. (They don't deal combat damage this turn.)",
 				flavorText: "Play nice!\" - Sett",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b7cddc717b886bb955b900ffaae4db9154a19280-744x1039.png?accountingTag=RB",
@@ -23846,7 +23846,7 @@ export default [
 				stats: {energy: 3, might: 3, power: null},
 				tags: ["Trifarian", "Noxus"],
 				keywords: [],
-				description: "When I move to a battlefield, play a 1 :rb_might: Recruit unit token here. (It is also at the battlefield.)",
+				description: "When I move to a battlefield, play a 1 [M] Recruit unit token here. (It is also at the battlefield.)",
 				flavorText: "Even the Legion's musicians are hard to beat.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/45a69adf92b6951c8c8fa974273c22aade312068-744x1039.png?accountingTag=RB",
@@ -23864,7 +23864,7 @@ export default [
 				stats: {energy: 6, might: 5, power: 1},
 				tags: ["Mount Targon"],
 				keywords: [],
-				description: "When you play me, buff me. Then, if I am at a battlefield, buff all other friendly units there. (To buff a unit, give it a +1 :rb_might: buff if it doesn't already have one.)",
+				description: "When you play me, buff me. Then, if I am at a battlefield, buff all other friendly units there. (To buff a unit, give it a +1 [M] buff if it doesn't already have one.)",
 				flavorText: "Mount Targon's blessing is besowed upon those who have proven that they are strong enoguh without it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bb56433bc032fd31a957923c43babc48b66db24c-744x1039.png?accountingTag=RB",
@@ -23918,7 +23918,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 2},
 				tags: ["Spirit", "Shadow Isles"],
 				keywords: [],
-				description: "When you play me, you may play a unit costing no more than :rb_energy_3: and no more than [A] from your trash, ignoring its cost.",
+				description: "When you play me, you may play a unit costing no more than [3] and no more than [A] from your trash, ignoring its cost.",
 				flavorText: "Come - there is use for you yet.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c8aebd03c8722d485ebfc38774488778c756ff5c-744x1039.png?accountingTag=RB",
@@ -23954,7 +23954,7 @@ export default [
 				stats: {energy: 2, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When a buffed friendly unit dies, buff another friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "When a buffed friendly unit dies, buff another friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: "Vanguard soldier share both a helm and a vision.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9718c666cbf789a572760c826d0a06b26b787ae5-744x1039.png?accountingTag=RB",
@@ -24008,7 +24008,7 @@ export default [
 				stats: {energy: 6, might: 8, power: 4},
 				tags: ["Spirit", "Shadow Isles"],
 				keywords: [],
-				description: "As you play me, you may kill any number of friendly units as an additional cost. Reduce my cost by :rb_rune_order: for each killed this way.[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)[Ganking] (I can move from battlefield to battlefield.)",
+				description: "As you play me, you may kill any number of friendly units as an additional cost. Reduce my cost by [Y] for each killed this way.[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)[Ganking] (I can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1183be5effc6275f17da09b983feb36632752af4-744x1039.png?accountingTag=RB",
@@ -24026,7 +24026,7 @@ export default [
 				stats: {energy: 4, might: 4, power: null},
 				tags: ["Fiora", "Demacia"],
 				keywords: [],
-				description: "While I'm [Mighty], I have [Deflect], [Ganking], and [Shield]. (I'm Mighty while I have 5+ :rb_might:.)",
+				description: "While I'm [Mighty], I have [Deflect], [Ganking], and [Shield]. (I'm Mighty while I have 5+ [M].)",
 				flavorText: "I long for a worthy opponent.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/24d4d1997e6a5b145412e402fc69399d590ecda0-744x1039.png?accountingTag=RB",
@@ -24044,7 +24044,7 @@ export default [
 				stats: {energy: 6, might: null, power: 3},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Give friendly units +5 :rb_might: this turn.",
+				description: "[Action] (Play on your turn or in showdowns.)Give friendly units +5 [M] this turn.",
 				flavorText: "You need not understand the plan - only believe in it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bda7514aefa94ac3f368690cdd2d0f955d44c089-744x1039.png?accountingTag=RB",
@@ -24080,7 +24080,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Karma", "Ionia"],
 				keywords: [],
-				description: "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)When you recycle one or more cards, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff. Runes aren't cards.)",
+				description: "[Vision] (When you play me, look at the top card of your Main Deck. You may recycle it.)When you recycle one or more cards, buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff. Runes aren't cards.)",
 				flavorText: "Heart and mind as one.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/aca8664b334f2fa40cc7bae2811dd4e1b4f06388-744x1039.png?accountingTag=RB",
@@ -24134,7 +24134,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Leona", "Mount Targon"],
 				keywords: [],
-				description: "[Shield] (+1 :rb_might: while I'm a defender.)When I attack, stun an enemy unit here. (It doesn't deal combat damage this turn.)",
+				description: "[Shield] (+1 [M] while I'm a defender.)When I attack, stun an enemy unit here. (It doesn't deal combat damage this turn.)",
 				flavorText: "First light approaches.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/1ed0250f1d3bbbbde49b3ce1fc2e744e4da64baa-744x1039.png?accountingTag=RB",
@@ -24152,7 +24152,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Leona", "Mount Targon"],
 				keywords: [],
-				description: "[Shield] (+1 :rb_might: while I'm a defender.)When I attack, stun an enemy unit here. (It doesn't deal combat damage this turn.)",
+				description: "[Shield] (+1 [M] while I'm a defender.)When I attack, stun an enemy unit here. (It doesn't deal combat damage this turn.)",
 				flavorText: "First light approaches.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/39a1e121031cfb4bdb009b071ed5d70411966cd9-744x1039.png?accountingTag=RB",
@@ -24170,7 +24170,7 @@ export default [
 				stats: {energy: 5, might: 4, power: 1},
 				tags: ["Piltover"],
 				keywords: [],
-				description: "[Deathknell] — Play three 1 :rb_might: Recruit unit tokens into your base. (When I die, get the effect.)",
+				description: "[Deathknell] — Play three 1 [M] Recruit unit tokens into your base. (When I die, get the effect.)",
 				flavorText: "The future is built by those who never see it.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ad15d4ff89548e83dcede9b209b12233652cf3a1-744x1039.png?accountingTag=RB",
@@ -24188,7 +24188,7 @@ export default [
 				stats: {energy: 4, might: 5, power: 1},
 				tags: ["Sett", "Ionia"],
 				keywords: [],
-				description: "[Tank] (I must be assigned combat damage first.)I get +1 :rb_might: for each buffed friendly unit at my battlefield.",
+				description: "[Tank] (I must be assigned combat damage first.)I get +1 [M] for each buffed friendly unit at my battlefield.",
 				flavorText: "Bein' the boss is a lot better than bein' the boss.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/010bbd89c60c57dc508f6b22201d31bb188f84d6-744x1039.png?accountingTag=RB",
@@ -24206,7 +24206,7 @@ export default [
 				stats: {energy: 4, might: 5, power: 1},
 				tags: ["Sett", "Ionia"],
 				keywords: [],
-				description: "[Tank] (I must be assigned combat damage first.)I get +1 :rb_might: for each buffed friendly unit at my battlefield.",
+				description: "[Tank] (I must be assigned combat damage first.)I get +1 [M] for each buffed friendly unit at my battlefield.",
 				flavorText: "Bein' the boss is a lot better than bein' the boss.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bd43f1dcef824b66f1af994b59b961fc3705f9c3-744x1039.png?accountingTag=RB",
@@ -24224,7 +24224,7 @@ export default [
 				stats: {energy: 3, might: 3, power: 1},
 				tags: ["Shen", "Ionia"],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)[Shield 2] (+2 :rb_might: while I'm a defender.)[Tank] (I must be assigned combat damage first.)",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve, including to a battlefield you control.)[Shield 2] (+2 [M] while I'm a defender.)[Tank] (I must be assigned combat damage first.)",
 				flavorText: "Tread carefully.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/25f3a9fa33201278ebf475b2d02dae8c0c0cb20c-744x1039.png?accountingTag=RB",
@@ -24242,7 +24242,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: ":rb_energy_1::rb_rune_order:, :rb_exhaust:: Kill a friendly unit. Look at the top 5 cards of your Main Deck. You may banish a unit from among them that has Might up to 1 more than the killed unit and play it, ignoring its cost. Then recycle the rest.",
+				description: "[1][Y], [E]: Kill a friendly unit. Look at the top 5 cards of your Main Deck. You may banish a unit from among them that has Might up to 1 more than the killed unit and play it, ignoring its cost. Then recycle the rest.",
 				flavorText: "There's always a bigger fish- sometimes a MUCH bigger fish.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7b4e6a1e32878a7d5fe4e40869c83e47ea08de7c-744x1039.png?accountingTag=RB",
@@ -24260,7 +24260,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Trifarian", "Darius", "Noxus"],
 				keywords: [],
-				description: "[Legion] — When you play me, ready me. (Get the effect if you've played another card this turn)Other friendly units have +1 :rb_might: here.",
+				description: "[Legion] — When you play me, ready me. (Get the effect if you've played another card this turn)Other friendly units have +1 [M] here.",
 				flavorText: "They will regret opposing me.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/76a697f29d4fc3cd9a5e9a0ce79f229d26bc0c90-744x1039.png?accountingTag=RB",
@@ -24278,7 +24278,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Trifarian", "Darius", "Noxus"],
 				keywords: [],
-				description: "[Legion] — When you play me, ready me. (Get the effect if you've played another card this turn)Other friendly units have +1 :rb_might: here.",
+				description: "[Legion] — When you play me, ready me. (Get the effect if you've played another card this turn)Other friendly units have +1 [M] here.",
 				flavorText: "They will regret opposing me.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7b71cf13a07074a6eccbe88ae6c74133d989cb68-744x1039.png?accountingTag=RB",
@@ -24314,7 +24314,7 @@ export default [
 				stats: {energy: 0, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_rune_order:. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [Y]. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e6fbd41d69bc0d235ea7993d2e9fa74e75e17dff-744x1039.png?accountingTag=RB",
@@ -24332,7 +24332,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Viktor", "Zaun"],
 				keywords: [],
-				description: "When another non-Recruit unit you control dies, play a 1 :rb_might: Recruit unit token into your base.",
+				description: "When another non-Recruit unit you control dies, play a 1 [M] Recruit unit token into your base.",
 				flavorText: "I am the first of many.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ab390d6d074c3f07abba000cc166faa1796ec464-744x1039.png?accountingTag=RB",
@@ -24350,7 +24350,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Viktor", "Zaun"],
 				keywords: [],
-				description: "When another non-Recruit unit you control dies, play a 1 :rb_might: Recruit unit token into your base.",
+				description: "When another non-Recruit unit you control dies, play a 1 [M] Recruit unit token into your base.",
 				flavorText: "I am the first of many.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/19b66f8eccd6d6e9d41048f73e44660f1cf77068-744x1039.png?accountingTag=RB",
@@ -24368,7 +24368,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Kai'Sa"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] [A]. Use only to play spells. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [A]. Use only to play spells. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a576472c7bb00f475882ac814e1d8f9be233b402-744x1040.png?accountingTag=RB",
@@ -24404,7 +24404,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Volibear"],
 				keywords: [],
-				description: "When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ :rb_might:.)",
+				description: "When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ [M].)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f1842ef373434db3e8109d8959832f9d184866c3-744x1040.png?accountingTag=RB",
@@ -24476,7 +24476,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Darius"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction], [Legion] — [Add] :rb_energy_1:. (Abilities that add resources can't be reacted to. Get the effect if you've played a card this turn.)",
+				description: "[E]: [Reaction], [Legion] — [Add] [1]. (Abilities that add resources can't be reacted to. Get the effect if you've played a card this turn.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5b9a904048b7fb936377844ec2d31564b7fedf81-744x1039.png?accountingTag=RB",
@@ -24512,7 +24512,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ahri"],
 				keywords: [],
-				description: "When an enemy unit attacks a battlefield you control, give it -1 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "When an enemy unit attacks a battlefield you control, give it -1 [M] this turn, to a minimum of 1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fbce641f5e4d8cdf2956e8ead5884b6cd3ccd90d-744x1040.png?accountingTag=RB",
@@ -24530,7 +24530,7 @@ export default [
 				stats: {energy: 3, might: null, power: null},
 				tags: ["Ahri"],
 				keywords: [],
-				description: "[Hidden] (Hide now for [A] to react with later for :rb_energy_0:.)[Action] (Play on your turn or in showdowns.)Kill any number of units at a battlefield with total Might 4 or less.",
+				description: "[Hidden] (Hide now for [A] to react with later for [0].)[Action] (Play on your turn or in showdowns.)Kill any number of units at a battlefield with total Might 4 or less.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7ad9d6a46a1c54080d54950a0044da3a82e32b45-744x1039.png?accountingTag=RB",
@@ -24548,7 +24548,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Lee Sin"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "[1], [E]: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ffe064e002d3b9a366748eb85102a769b2545835-744x1039.png?accountingTag=RB",
@@ -24584,7 +24584,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Yasuo"],
 				keywords: [],
-				description: ":rb_energy_2:, :rb_exhaust:: Move a friendly unit to or from its base.",
+				description: "[2], [E]: Move a friendly unit to or from its base.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/68e4d3230b785738ae9d86f780f7f5607ef11807-744x1040.png?accountingTag=RB",
@@ -24620,7 +24620,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Leona"],
 				keywords: [],
-				description: "When you stun one or more enemy units, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "When you stun one or more enemy units, buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/822b8bc7987a47498550708b18ef166b121fd620-744x1039.png?accountingTag=RB",
@@ -24656,7 +24656,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Teemo"],
 				keywords: [],
-				description: "You may pay :rb_energy_1: to hide a card with [Hidden] instead of [A].:rb_energy_1:, :rb_exhaust:: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
+				description: "You may pay [1] to hide a card with [Hidden] instead of [A].[1], [E]: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/9723181e3392bb61c2aabc804a44f7b0558cedf1-744x1039.png?accountingTag=RB",
@@ -24692,7 +24692,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Viktor"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Play a 1 :rb_might: Recruit unit token.",
+				description: "[1], [E]: Play a 1 [M] Recruit unit token.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/913236dabf1e4f71650bbba46870fff8163e2eff-744x1039.png?accountingTag=RB",
@@ -24710,7 +24710,7 @@ export default [
 				stats: {energy: 2, might: null, power: 1},
 				tags: ["Viktor"],
 				keywords: [],
-				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose a battlefield. Give friendly units there +1 :rb_might: this turn and enemy units there -1 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "[Reaction] (Play any time, even before spells and abilities resolve.)Choose a battlefield. Give friendly units there +1 [M] this turn and enemy units there -1 [M] this turn, to a minimum of 1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b449170ba312711c82708d1fea2b044822ce5eaa-744x1039.png?accountingTag=RB",
@@ -24728,7 +24728,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Miss Fortune"],
 				keywords: [],
-				description: ":rb_exhaust:: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)",
+				description: "[E]: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cc11261fcdbf0851525030bd9e835b718efad3bc-744x1040.png?accountingTag=RB",
@@ -24782,7 +24782,7 @@ export default [
 				stats: {energy: 1, might: null, power: 1},
 				tags: ["Sett"],
 				keywords: [],
-				description: "Buff a friendly unit in your base, then move it to a battlefield. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "Buff a friendly unit in your base, then move it to a battlefield. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c9b6f7a7cca1589fb53276f74ac8bc547b31e5ec-744x1039.png?accountingTag=RB",
@@ -24872,7 +24872,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you hold here, play a 1 :rb_might: Recruit unit token in your base.",
+				description: "When you hold here, play a 1 [M] Recruit unit token in your base.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2392529560dc9af72596c6fc65b4c0356bbc44d1-1038x744.png?accountingTag=RB",
@@ -24908,7 +24908,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When a unit moves from here, give it +1 :rb_might: this turn.",
+				description: "When a unit moves from here, give it +1 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3e9f659a32e390b45bc87a01bdd6af4a8a3565f7-1038x744.png?accountingTag=RB",
@@ -24944,7 +24944,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you defend here, choose a unit. It gains [Shield 2] this combat. (+2 :rb_might: while it's a defender.)",
+				description: "When you defend here, choose a unit. It gains [Shield 2] this combat. (+2 [M] while it's a defender.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/45363bbd907f4f3717868cb04b3cfed814b3bb32-1038x744.png?accountingTag=RB",
@@ -25016,7 +25016,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "When you hold here, buff a unit here. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "When you hold here, buff a unit here. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/c03ed3ddf8b764963e4b0745e86a12a5ebcef2a3-1038x744.png?accountingTag=RB",
@@ -25214,7 +25214,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "Units here have +1 :rb_might:. (This includes attackers.)",
+				description: "Units here have +1 [M]. (This includes attackers.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/3788cf718e716e35a7fa20ec1dc56991644e6484-1038x744.png?accountingTag=RB",
@@ -25304,7 +25304,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Kai'Sa"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] [A]. Use only to play spells. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [A]. Use only to play spells. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/ae8e68af43400f61f7391c0a6ee339fd718a7540-1488x2078.png?accountingTag=RB",
@@ -25322,7 +25322,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Kai'Sa"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] [A]. Use only to play spells. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [A]. Use only to play spells. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/57e13462b8fea9a5cfa1b424d3ad3005f37b00ad-1488x2078.png?accountingTag=RB",
@@ -25340,7 +25340,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Volibear"],
 				keywords: [],
-				description: "When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ :rb_might:.)",
+				description: "When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ [M].)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/d5a629ce373a6add09bfacc4b584e509c6332334-1488x2078.png?accountingTag=RB",
@@ -25358,7 +25358,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Volibear"],
 				keywords: [],
-				description: "When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ :rb_might:.)",
+				description: "When you play a [Mighty] unit, you may exhaust me to channel 1 rune exhausted. (A unit is Mighty while it has 5+ [M].)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/34aa11c88735be28266dbc61486a557454fd6b4c-1488x2078.png?accountingTag=RB",
@@ -25412,7 +25412,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Darius"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction], [Legion] — [Add] :rb_energy_1:. (Abilities that add resources can't be reacted to. Get the effect if you've played a card this turn.)",
+				description: "[E]: [Reaction], [Legion] — [Add] [1]. (Abilities that add resources can't be reacted to. Get the effect if you've played a card this turn.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/37d43efe09ccfe5d72ce37fdc27599bd5ef736af-1488x2078.png?accountingTag=RB",
@@ -25430,7 +25430,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Darius"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction], [Legion] — [Add] :rb_energy_1:. (Abilities that add resources can't be reacted to. Get the effect if you've played a card this turn.)",
+				description: "[E]: [Reaction], [Legion] — [Add] [1]. (Abilities that add resources can't be reacted to. Get the effect if you've played a card this turn.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/31f3c975c6f5693f6567b0ebdb66bd4dd92d730b-744x1039.png?accountingTag=RB",
@@ -25448,7 +25448,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ahri"],
 				keywords: [],
-				description: "When an enemy unit attacks a battlefield you control, give it -1 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "When an enemy unit attacks a battlefield you control, give it -1 [M] this turn, to a minimum of 1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e5fe571a8f09c0a9e76345ec32b446480f54617c-1488x2078.png?accountingTag=RB",
@@ -25466,7 +25466,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Ahri"],
 				keywords: [],
-				description: "When an enemy unit attacks a battlefield you control, give it -1 :rb_might: this turn, to a minimum of 1 :rb_might:.",
+				description: "When an enemy unit attacks a battlefield you control, give it -1 [M] this turn, to a minimum of 1 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/dc89c6a2415debd5bf504ed46843f5dcc1d9b815-1488x2078.png?accountingTag=RB",
@@ -25484,7 +25484,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Lee Sin"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "[1], [E]: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/b4dfd543b1cfcdefba4568fe78146e0d6e46add7-1488x2078.png?accountingTag=RB",
@@ -25502,7 +25502,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Lee Sin"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "[1], [E]: Buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/fb6316c39ad2a00d65f4b6cc823cbdd61cadda3b-1488x2078.png?accountingTag=RB",
@@ -25520,7 +25520,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Yasuo"],
 				keywords: [],
-				description: ":rb_energy_2:, :rb_exhaust:: Move a friendly unit to or from its base.",
+				description: "[2], [E]: Move a friendly unit to or from its base.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/6a06599a299b15175984c1e38d27a3be21258fbe-1488x2078.png?accountingTag=RB",
@@ -25538,7 +25538,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Yasuo"],
 				keywords: [],
-				description: ":rb_energy_2:, :rb_exhaust:: Move a friendly unit to or from its base.",
+				description: "[2], [E]: Move a friendly unit to or from its base.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/2c804ec513085702763a9145fac93a8adb6c4783-1488x2078.png?accountingTag=RB",
@@ -25556,7 +25556,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Leona"],
 				keywords: [],
-				description: "When you stun one or more enemy units, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "When you stun one or more enemy units, buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bd526a0f9177aaa9ec575add7d02e72b46520070-744x1039.png?accountingTag=RB",
@@ -25574,7 +25574,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Leona"],
 				keywords: [],
-				description: "When you stun one or more enemy units, buff a friendly unit. (If it doesn't have a buff, it gets a +1 :rb_might: buff.)",
+				description: "When you stun one or more enemy units, buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/496d173b74d036a9e28ca1b4383551be0148f13d-1488x2078.png?accountingTag=RB",
@@ -25592,7 +25592,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Teemo"],
 				keywords: [],
-				description: "You may pay :rb_energy_1: to hide a card with [Hidden] instead of [A].:rb_energy_1:, :rb_exhaust:: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
+				description: "You may pay [1] to hide a card with [Hidden] instead of [A].[1], [E]: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4fd9e82cbd96010e2556430970d433022b541a51-1488x2078.png?accountingTag=RB",
@@ -25610,7 +25610,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Teemo"],
 				keywords: [],
-				description: "You may pay :rb_energy_1: to hide a card with [Hidden] instead of [A].:rb_energy_1:, :rb_exhaust:: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
+				description: "You may pay [1] to hide a card with [Hidden] instead of [A].[1], [E]: Put a Teemo unit you own into your hand from your Champion Zone or the board.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e2fbf10efaddbabe9241bd2c7b4d059accd1d5a7-1488x2078.png?accountingTag=RB",
@@ -25628,7 +25628,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Viktor"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Play a 1 :rb_might: Recruit unit token.",
+				description: "[1], [E]: Play a 1 [M] Recruit unit token.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a39902058db800a4318f3333dddb8a62a8751d7c-1488x2078.png?accountingTag=RB",
@@ -25646,7 +25646,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Viktor"],
 				keywords: [],
-				description: ":rb_energy_1:, :rb_exhaust:: Play a 1 :rb_might: Recruit unit token.",
+				description: "[1], [E]: Play a 1 [M] Recruit unit token.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/e345a5fc347e6a5835f2afa33492058fdbfcb169-744x1039.png?accountingTag=RB",
@@ -25664,7 +25664,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Miss Fortune"],
 				keywords: [],
-				description: ":rb_exhaust:: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)",
+				description: "[E]: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/37153cce7f58b2fceb28ea9ff91deb0411f849e2-1488x2078.png?accountingTag=RB",
@@ -25682,7 +25682,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Miss Fortune"],
 				keywords: [],
-				description: ":rb_exhaust:: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)",
+				description: "[E]: Give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/f4b7f334f442d30ccea4743c641760c5533804b4-1488x2078.png?accountingTag=RB",
@@ -25796,7 +25796,7 @@ export default [
 				stats: {energy: 5, might: 4, power: 1},
 				tags: ["Master Yi", "Ionia"],
 				keywords: [],
-				description: "While you have 8+ runes, I have +4 :rb_might:.",
+				description: "While you have 8+ runes, I have +4 [M].",
 				flavorText: "Anger gives motivation without purpose.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/5508566c8f05f09492148faa803332a731095eb7-744x1039.png?accountingTag=RB",
@@ -25814,7 +25814,7 @@ export default [
 				stats: {energy: 6, might: 6, power: 1},
 				tags: ["Ionia", "Bird"],
 				keywords: [],
-				description: "[Shield] (+1 :rb_might: while I'm a defender.)",
+				description: "[Shield] (+1 [M] while I'm a defender.)",
 				flavorText: "A true master is an eternal student.\" -Master Yi",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/7664b03bb107954195153d9f2f86c5d63682fa4b-744x1039.png?accountingTag=RB",
@@ -25832,7 +25832,7 @@ export default [
 				stats: {energy: 6, might: 5, power: 1},
 				tags: ["Lux", "Demacia"],
 				keywords: [],
-				description: "When you play a spell that costs :rb_energy_5: or more, give me +3 :rb_might: this turn.",
+				description: "When you play a spell that costs [5] or more, give me +3 [M] this turn.",
 				flavorText: "No more holding back!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/a0d10edf30abb6fde21f5d386e9a7db3c1b0a098-744x1039.png?accountingTag=RB",
@@ -25850,7 +25850,7 @@ export default [
 				stats: {energy: 6, might: 5, power: 1},
 				tags: ["Elite", "Garen", "Demacia"],
 				keywords: [],
-				description: "[Assault 2], [Shield 2] (+2 :rb_might: while I'm an attacker or defender.)",
+				description: "[Assault 2], [Shield 2] (+2 [M] while I'm an attacker or defender.)",
 				flavorText: "Fear is the first of many foes.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/67c22dc29a7a28dabe0f169a7848c25bef1fbda4-744x1039.png?accountingTag=RB",
@@ -25868,7 +25868,7 @@ export default [
 				stats: {energy: 6, might: null, power: 1},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Give a friendly unit +3 :rb_might: this turn. Then choose an enemy unit. They deal damage equal to their Mights to each other.",
+				description: "[Action] (Play on your turn or in showdowns.)Give a friendly unit +3 [M] this turn. Then choose an enemy unit. They deal damage equal to their Mights to each other.",
 				flavorText: "A proper and formal way to kill your enemies.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/4568ab827fdcd42d6bb86b1c2de6182e286c9ee9-744x1039.png?accountingTag=RB",
@@ -25958,7 +25958,7 @@ export default [
 				stats: {energy: 6, might: 5, power: 1},
 				tags: ["Elite", "Garen", "Demacia"],
 				keywords: [],
-				description: "Other friendly units have +1 :rb_might: here.",
+				description: "Other friendly units have +1 [M] here.",
 				flavorText: "For Demacia!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cbf2c12d69a86566e4cda07050b2d4495e40187e-744x1039.png?accountingTag=RB",
@@ -25976,7 +25976,7 @@ export default [
 				stats: {energy: 4, might: 2, power: null},
 				tags: ["Lux", "Demacia"],
 				keywords: [],
-				description: ":rb_exhaust:: [Reaction] — [Add] :rb_energy_2:. Use only to play spells. (Abilities that add resources can't be reacted to.)",
+				description: "[E]: [Reaction] — [Add] [2]. Use only to play spells. (Abilities that add resources can't be reacted to.)",
 				flavorText: "I've been hiding my light long enough.",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/17d0793ad495727e67bb1c94ae0e11cd4705870f-744x1039.png?accountingTag=RB",
@@ -25994,7 +25994,7 @@ export default [
 				stats: {energy: 6, might: null, power: null},
 				tags: [],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Play four 1 :rb_might: Recruit unit tokens. (They can be played to your base or to battlefields you control.)",
+				description: "[Action] (Play on your turn or in showdowns.)Play four 1 [M] Recruit unit tokens. (They can be played to your base or to battlefields you control.)",
 				flavorText: "My heart and sword always for Demacia.\" -Garen",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/81d1c47459606f7b627778cce9b5f0e44d80f7fa-744x1039.png?accountingTag=RB",
@@ -26066,7 +26066,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Master Yi"],
 				keywords: [],
-				description: "While a friendly unit defends alone, it gets +2 :rb_might:.",
+				description: "While a friendly unit defends alone, it gets +2 [M].",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/8231ced23eaf22ca3bf62ec8cb86b83a3e222da6-744x1039.png?accountingTag=RB",
@@ -26102,7 +26102,7 @@ export default [
 				stats: {energy: null, might: null, power: null},
 				tags: ["Lux"],
 				keywords: [],
-				description: "When you play a spell that costs :rb_energy_5: or more, draw 1.",
+				description: "When you play a spell that costs [5] or more, draw 1.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/44885d811b70621b188d9813b2b10b5cff1b81e6-744x1039.png?accountingTag=RB",
@@ -26156,7 +26156,7 @@ export default [
 				stats: {energy: 5, might: null, power: 1},
 				tags: ["Garen"],
 				keywords: [],
-				description: "[Action] (Play on your turn or in showdowns.)Give friendly units +2 :rb_might: this turn.",
+				description: "[Action] (Play on your turn or in showdowns.)Give friendly units +2 [M] this turn.",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/986782271be078c184a8d1c196e375106459c6c5-744x1039.png?accountingTag=RB",

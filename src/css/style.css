@@ -1,0 +1,16 @@
+:root{
+    /* Set colors */
+    --c-ogn:#ef7d01;
+    --c-sfd:#d12379;
+
+    /* Domain colors*/
+    --c-fury-hi:#df1422; --c-fury-lo:#8d0308;
+    --c-calm-hi:#4b9130; --c-calm-lo:#295f24;
+    --c-mind-hi:#0f6fa7; --c-mind-lo:#073e65;
+    --c-body-hi:#e87601; --c-body-lo:#bc3b15;
+    --c-chaos-hi:#6a3e95; --c-chaos-lo:#3e2370;
+    --c-order-hi:#d2b500; --c-order-lo:#a37317;
+
+    /* Frame colors */
+    --c-bronze:#a25f16; --c-silver:#a0a0a0; --c-gold:#d8a54d;
+}
