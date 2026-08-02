@@ -1,16 +1,22 @@
 :root{
+	/* Card colors */
+	--paper-white: #ffffff;
+	--border-black: #080000;
     /* Set colors */
-    --c-ogn:#ef7d01;
-    --c-sfd:#d12379;
+    --ogn-orange:#ef7d01;
+    --sfd-magenta:#d12379;
 
     /* Domain colors*/
-    --c-fury-hi:#df1422; --c-fury-lo:#8d0308;
-    --c-calm-hi:#4b9130; --c-calm-lo:#295f24;
-    --c-mind-hi:#0f6fa7; --c-mind-lo:#073e65;
-    --c-body-hi:#e87601; --c-body-lo:#bc3b15;
-    --c-chaos-hi:#6a3e95; --c-chaos-lo:#3e2370;
-    --c-order-hi:#d2b500; --c-order-lo:#a37317;
+    --fury-hi: #df181e; --fury-lo: #8e0308;
+    --calm-hi: #54943d; --calm-lo: #295d24;
+    --mind-hi: #1375ad; --mind-lo: #003f6b;
+    --body-hi: #e87500; --body-lo: #bd3e19;
+    --chaos-hi: #6b3f96; --chaos-lo: #421a79;
+    --order-hi: #d2b501; --order-lo: #a27521;
 
     /* Frame colors */
-    --c-bronze:#a25f16; --c-silver:#a0a0a0; --c-gold:#d8a54d;
+    --bronze: #9f5e13; --silver-hi: #a1a1a1; --silver-lo: #727272; --gold: #e2b73e;
+
+    /* Keyword colors */
+    --kw-green: #96b430; --kw-gray: #707070; --kw-magenta: #cd3971; --kw-teal: #067361;
 }
