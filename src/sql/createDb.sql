@@ -1,6 +1,6 @@
-CREATE DATABASE IF NOT EXISTS riftbound;
 USE riftbound;
 
+-- Tables
 CREATE TABLE IF NOT EXISTS metadata (
 	id TINYINT UNSIGNED PRIMARY KEY DEFAULT 1,
 	schema_version INT UNSIGNED NOT NULL,
@@ -48,8 +48,8 @@ CREATE TABLE IF NOT EXISTS artists (
 CREATE TABLE IF NOT EXISTS cards (
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 	riot_id VARCHAR(255) UNIQUE NOT NULL,
-	collector_number BIGINT UNIQUE NOT NULL,
-	name VARCHAR(255) UNIQUE NOT NULL,
+	collector_number BIGINT NOT NULL,
+	name VARCHAR(255) NOT NULL,
 	type_id TINYINT UNSIGNED NOT NULL,
 	FOREIGN KEY(type_id) REFERENCES types(id),
 	domain_id TINYINT UNSIGNED NOT NULL,
@@ -65,8 +65,8 @@ CREATE TABLE IF NOT EXISTS cards (
 	cost TINYINT NOT NULL,
 	power TINYINT NOT NULL,
 	cardmarket_id BIGINT UNSIGNED UNIQUE,
-	img VARCHAR(255) UNIQUE,
-	thumbnail VARCHAR(255) UNIQUE,
+	img VARCHAR(255),
+	thumbnail VARCHAR(255),
 	description VARCHAR(1000),
 	flavor_text VARCHAR(1000)
 );
@@ -90,8 +90,8 @@ CREATE TABLE IF NOT EXISTS keywords (
 	rules_entry VARCHAR(32) UNIQUE,
 	formatting VARCHAR(32) UNIQUE,
 	color VARCHAR(8),
-	rules_description VARCHAR(255),
-	card_description VARCHAR(255)
+	rules_description VARCHAR(1000),
+	card_description VARCHAR(1000)
 );
 
 CREATE TABLE IF NOT EXISTS card_keywords (
@@ -101,3 +101,9 @@ CREATE TABLE IF NOT EXISTS card_keywords (
 	FOREIGN KEY(keyword_id) REFERENCES keywords(id),
 	PRIMARY KEY(card_id, keyword_id)
 );
+
+-- Stored procedures
+DELIMITER //
+
+CREATE PROCEDURE riftbound.set_card
+(

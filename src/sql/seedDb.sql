@@ -38,7 +38,7 @@ INSERT INTO keywords (rules_entry, name, formatting, color, rules_description, c
 		'As you play me, you may pay [EC1][PC1] as an additional cost to have me enter ready.',
 		'You may pay [EC1][PC1] as an additional cost to have me enter ready.'
 	), (
-		'806', 'action', NULL, '[Action]|[Action][>]' 'teal'
+		'806', 'action', '[Action]|[Action][>]', 'teal',
 		'[I|This] can be [played|activated] during showdowns on any player''s turn.',
 		'Play on your turn or in showdowns.'
 	), (
@@ -46,7 +46,9 @@ INSERT INTO keywords (rules_entry, name, formatting, color, rules_description, c
 		'While I am an attacker, I have +[X][M].',
 		'+[X][M] while I''m an attacker.'
 	), (
-		'808', 'deathknell', '[Deathknell][>][Effect]', 'green', 'When I die, [Effect].', 'When I die, get the effect.'
+		'808', 'deathknell', '[Deathknell][>][Effect]', 'green',
+		'When I die, [Effect].',
+		'When I die, get the effect.'
 	), (
 		'809', 'deflect', 'Deflect [X]', 'green',
 		'Spells and abilities an opponent controls that choose me cost [AX] more to play, as an additional cost for each time they choose me.',
@@ -81,16 +83,16 @@ INSERT INTO keywords (rules_entry, name, formatting, color, rules_description, c
 		'Kill me at the start of your Beginning Phase, before scoring.'
 	), (
 		'817', 'vision', NULL, 'gray',
-		'When you this is played, look at the top card of your Main Deck. You may recycle it.',
-		'When you play me, look at the top card of your Main Deck. You may recycle it.',
+		'When this is played, look at the top card of your Main Deck. You may recycle it.',
+		'When you play me, look at the top card of your Main Deck. You may recycle it.'
 	), (
 		'818', 'equip', 'Equip [Cost]', 'gray',
 		'[Cost]: Attach this gear to a unit you control.',
-		'[Cost]: Attach this to a unit you control.',
+		'[Cost]: Attach this to a unit you control.'
 	), (
 		'819', 'quick-draw', NULL, 'teal',
 		'[Reaction] When you play this, attach it to a Unit you control.',
-		'This has [Reaction]. When you play this, attach it to a Unit you control.',
+		'This has [Reaction]. When you play this, attach it to a Unit you control.'
 	), (
 		'820', 'repeat', 'Repeat [Cost]', 'teal',
 		'You may pay [Cost] as an additional cost as you play me. If you do, execute the instructions of this spell one additional time.',
@@ -119,4 +121,12 @@ INSERT INTO keywords (rules_entry, name, formatting, color, rules_description, c
 		'826', 'backline', NULL, 'magenta',
 		'I must be assigned lethal damage after any other unit with the same controller as me that does not have [Backline] during the Combat Damage step.',
 		'I must be assigned combat damage last.'
-	),
+	)
+ON DUPLICATE KEY UPDATE
+	rules_entry = VALUE(rules_entry),
+	name = VALUE(name),
+	formatting = VALUE(formatting),
+	color = VALUE(color),
+	rules_description = VALUE(rules_description),
+	card_description = VALUE(card_description)
+;
