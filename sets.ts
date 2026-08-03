@@ -4,7 +4,7 @@ export default [
 		name: "Unleashed",
 		cards: [
 			{
-				id: "unl-001-219",
+				id: "unl-001/219",
 				set: "Unleashed",
 				collectorNumber: 1,
 				rarity: "Common",
@@ -22,7 +22,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-002-219",
+				id: "unl-002/219",
 				set: "Unleashed",
 				collectorNumber: 2,
 				rarity: "Common",
@@ -40,7 +40,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-003-219",
+				id: "unl-003/219",
 				set: "Unleashed",
 				collectorNumber: 3,
 				rarity: "Common",
@@ -58,7 +58,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-004-219",
+				id: "unl-004/219",
 				set: "Unleashed",
 				collectorNumber: 4,
 				rarity: "Common",
@@ -76,7 +76,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-005-219",
+				id: "unl-005/219",
 				set: "Unleashed",
 				collectorNumber: 5,
 				rarity: "Common",
@@ -94,7 +94,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-006-219",
+				id: "unl-006/219",
 				set: "Unleashed",
 				collectorNumber: 6,
 				rarity: "Common",
@@ -112,7 +112,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-007-219",
+				id: "unl-007/219",
 				set: "Unleashed",
 				collectorNumber: 7,
 				rarity: "Common",
@@ -130,7 +130,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-008-219",
+				id: "unl-008/219",
 				set: "Unleashed",
 				collectorNumber: 8,
 				rarity: "Common",
@@ -148,7 +148,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-009-219",
+				id: "unl-009/219",
 				set: "Unleashed",
 				collectorNumber: 9,
 				rarity: "Common",
@@ -166,7 +166,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-010-219",
+				id: "unl-010/219",
 				set: "Unleashed",
 				collectorNumber: 10,
 				rarity: "Common",
@@ -184,7 +184,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-011-219",
+				id: "unl-011/219",
 				set: "Unleashed",
 				collectorNumber: 11,
 				rarity: "Uncommon",
@@ -202,7 +202,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-012-219",
+				id: "unl-012/219",
 				set: "Unleashed",
 				collectorNumber: 12,
 				rarity: "Uncommon",
@@ -220,7 +220,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-013-219",
+				id: "unl-013/219",
 				set: "Unleashed",
 				collectorNumber: 13,
 				rarity: "Uncommon",
@@ -238,7 +238,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-014-219",
+				id: "unl-014/219",
 				set: "Unleashed",
 				collectorNumber: 14,
 				rarity: "Uncommon",
@@ -256,7 +256,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-015-219",
+				id: "unl-015/219",
 				set: "Unleashed",
 				collectorNumber: 15,
 				rarity: "Uncommon",
@@ -274,7 +274,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-016-219",
+				id: "unl-016/219",
 				set: "Unleashed",
 				collectorNumber: 16,
 				rarity: "Uncommon",
@@ -292,7 +292,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-017-219",
+				id: "unl-017/219",
 				set: "Unleashed",
 				collectorNumber: 17,
 				rarity: "Uncommon",
@@ -310,7 +310,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-018-219",
+				id: "unl-018/219",
 				set: "Unleashed",
 				collectorNumber: 18,
 				rarity: "Uncommon",
@@ -328,7 +328,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-019-219",
+				id: "unl-019/219",
 				set: "Unleashed",
 				collectorNumber: 19,
 				rarity: "Rare",
@@ -346,7 +346,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-020-219",
+				id: "unl-020/219",
 				set: "Unleashed",
 				collectorNumber: 20,
 				rarity: "Rare",
@@ -364,7 +364,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-021-219",
+				id: "unl-021/219",
 				set: "Unleashed",
 				collectorNumber: 21,
 				rarity: "Rare",
@@ -382,7 +382,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-022-219",
+				id: "unl-022/219",
 				set: "Unleashed",
 				collectorNumber: 22,
 				rarity: "Rare",
@@ -400,7 +400,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-022a-219",
+				id: "unl-022a/219",
 				set: "Unleashed",
 				collectorNumber: 22,
 				rarity: "Rare",
@@ -418,7 +418,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-023-219",
+				id: "unl-023/219",
 				set: "Unleashed",
 				collectorNumber: 23,
 				rarity: "Rare",
@@ -436,7 +436,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-024a-219",
+				id: "unl-024a/219",
 				set: "Unleashed",
 				collectorNumber: 24,
 				rarity: "Rare",
@@ -454,7 +454,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-024-219",
+				id: "unl-024/219",
 				set: "Unleashed",
 				collectorNumber: 24,
 				rarity: "Rare",
@@ -472,7 +472,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-025-219",
+				id: "unl-025/219",
 				set: "Unleashed",
 				collectorNumber: 25,
 				rarity: "Rare",
@@ -490,7 +490,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-026-219",
+				id: "unl-026/219",
 				set: "Unleashed",
 				collectorNumber: 26,
 				rarity: "Rare",
@@ -508,7 +508,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-027-219",
+				id: "unl-027/219",
 				set: "Unleashed",
 				collectorNumber: 27,
 				rarity: "Epic",
@@ -526,7 +526,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-028a-219",
+				id: "unl-028a/219",
 				set: "Unleashed",
 				collectorNumber: 28,
 				rarity: "Epic",
@@ -544,7 +544,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-028-219",
+				id: "unl-028/219",
 				set: "Unleashed",
 				collectorNumber: 28,
 				rarity: "Epic",
@@ -562,7 +562,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-029a-219",
+				id: "unl-029a/219",
 				set: "Unleashed",
 				collectorNumber: 29,
 				rarity: "Epic",
@@ -580,7 +580,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-029-219",
+				id: "unl-029/219",
 				set: "Unleashed",
 				collectorNumber: 29,
 				rarity: "Epic",
@@ -598,7 +598,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-030a-219",
+				id: "unl-030a/219",
 				set: "Unleashed",
 				collectorNumber: 30,
 				rarity: "Epic",
@@ -616,7 +616,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-030-219",
+				id: "unl-030/219",
 				set: "Unleashed",
 				collectorNumber: 30,
 				rarity: "Epic",
@@ -634,7 +634,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-031-219",
+				id: "unl-031/219",
 				set: "Unleashed",
 				collectorNumber: 31,
 				rarity: "Common",
@@ -652,7 +652,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-032-219",
+				id: "unl-032/219",
 				set: "Unleashed",
 				collectorNumber: 32,
 				rarity: "Common",
@@ -670,7 +670,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-033-219",
+				id: "unl-033/219",
 				set: "Unleashed",
 				collectorNumber: 33,
 				rarity: "Common",
@@ -688,7 +688,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-034-219",
+				id: "unl-034/219",
 				set: "Unleashed",
 				collectorNumber: 34,
 				rarity: "Common",
@@ -706,7 +706,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-035-219",
+				id: "unl-035/219",
 				set: "Unleashed",
 				collectorNumber: 35,
 				rarity: "Common",
@@ -724,7 +724,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-036-219",
+				id: "unl-036/219",
 				set: "Unleashed",
 				collectorNumber: 36,
 				rarity: "Common",
@@ -742,7 +742,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-037-219",
+				id: "unl-037/219",
 				set: "Unleashed",
 				collectorNumber: 37,
 				rarity: "Common",
@@ -760,7 +760,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-038-219",
+				id: "unl-038/219",
 				set: "Unleashed",
 				collectorNumber: 38,
 				rarity: "Common",
@@ -778,7 +778,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-039-219",
+				id: "unl-039/219",
 				set: "Unleashed",
 				collectorNumber: 39,
 				rarity: "Common",
@@ -796,7 +796,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-040-219",
+				id: "unl-040/219",
 				set: "Unleashed",
 				collectorNumber: 40,
 				rarity: "Common",
@@ -814,7 +814,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-041-219",
+				id: "unl-041/219",
 				set: "Unleashed",
 				collectorNumber: 41,
 				rarity: "Uncommon",
@@ -832,7 +832,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-042-219",
+				id: "unl-042/219",
 				set: "Unleashed",
 				collectorNumber: 42,
 				rarity: "Uncommon",
@@ -850,7 +850,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-043-219",
+				id: "unl-043/219",
 				set: "Unleashed",
 				collectorNumber: 43,
 				rarity: "Uncommon",
@@ -868,7 +868,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-044-219",
+				id: "unl-044/219",
 				set: "Unleashed",
 				collectorNumber: 44,
 				rarity: "Uncommon",
@@ -886,7 +886,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-045-219",
+				id: "unl-045/219",
 				set: "Unleashed",
 				collectorNumber: 45,
 				rarity: "Uncommon",
@@ -904,7 +904,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-046-219",
+				id: "unl-046/219",
 				set: "Unleashed",
 				collectorNumber: 46,
 				rarity: "Uncommon",
@@ -922,7 +922,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-047-219",
+				id: "unl-047/219",
 				set: "Unleashed",
 				collectorNumber: 47,
 				rarity: "Uncommon",
@@ -940,7 +940,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-048-219",
+				id: "unl-048/219",
 				set: "Unleashed",
 				collectorNumber: 48,
 				rarity: "Uncommon",
@@ -958,7 +958,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-049-219",
+				id: "unl-049/219",
 				set: "Unleashed",
 				collectorNumber: 49,
 				rarity: "Rare",
@@ -976,7 +976,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-050-219",
+				id: "unl-050/219",
 				set: "Unleashed",
 				collectorNumber: 50,
 				rarity: "Rare",
@@ -994,7 +994,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-051a-219",
+				id: "unl-051a/219",
 				set: "Unleashed",
 				collectorNumber: 51,
 				rarity: "Rare",
@@ -1012,7 +1012,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-051-219",
+				id: "unl-051/219",
 				set: "Unleashed",
 				collectorNumber: 51,
 				rarity: "Rare",
@@ -1030,7 +1030,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-052-219",
+				id: "unl-052/219",
 				set: "Unleashed",
 				collectorNumber: 52,
 				rarity: "Rare",
@@ -1048,7 +1048,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-053-219",
+				id: "unl-053/219",
 				set: "Unleashed",
 				collectorNumber: 53,
 				rarity: "Rare",
@@ -1066,7 +1066,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-054-219",
+				id: "unl-054/219",
 				set: "Unleashed",
 				collectorNumber: 54,
 				rarity: "Rare",
@@ -1084,7 +1084,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-055a-219",
+				id: "unl-055a/219",
 				set: "Unleashed",
 				collectorNumber: 55,
 				rarity: "Rare",
@@ -1102,7 +1102,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-055-219",
+				id: "unl-055/219",
 				set: "Unleashed",
 				collectorNumber: 55,
 				rarity: "Rare",
@@ -1120,7 +1120,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-056-219",
+				id: "unl-056/219",
 				set: "Unleashed",
 				collectorNumber: 56,
 				rarity: "Rare",
@@ -1138,7 +1138,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-057-219",
+				id: "unl-057/219",
 				set: "Unleashed",
 				collectorNumber: 57,
 				rarity: "Epic",
@@ -1156,7 +1156,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-058a-219",
+				id: "unl-058a/219",
 				set: "Unleashed",
 				collectorNumber: 58,
 				rarity: "Epic",
@@ -1174,7 +1174,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-058-219",
+				id: "unl-058/219",
 				set: "Unleashed",
 				collectorNumber: 58,
 				rarity: "Epic",
@@ -1192,7 +1192,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-059a-219",
+				id: "unl-059a/219",
 				set: "Unleashed",
 				collectorNumber: 59,
 				rarity: "Epic",
@@ -1210,7 +1210,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-059-219",
+				id: "unl-059/219",
 				set: "Unleashed",
 				collectorNumber: 59,
 				rarity: "Epic",
@@ -1228,7 +1228,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-060a-219",
+				id: "unl-060a/219",
 				set: "Unleashed",
 				collectorNumber: 60,
 				rarity: "Epic",
@@ -1246,7 +1246,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-060-219",
+				id: "unl-060/219",
 				set: "Unleashed",
 				collectorNumber: 60,
 				rarity: "Epic",
@@ -1264,7 +1264,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-061-219",
+				id: "unl-061/219",
 				set: "Unleashed",
 				collectorNumber: 61,
 				rarity: "Common",
@@ -1282,7 +1282,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-062-219",
+				id: "unl-062/219",
 				set: "Unleashed",
 				collectorNumber: 62,
 				rarity: "Common",
@@ -1300,7 +1300,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-063-219",
+				id: "unl-063/219",
 				set: "Unleashed",
 				collectorNumber: 63,
 				rarity: "Common",
@@ -1318,7 +1318,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-064-219",
+				id: "unl-064/219",
 				set: "Unleashed",
 				collectorNumber: 64,
 				rarity: "Common",
@@ -1336,7 +1336,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-065-219",
+				id: "unl-065/219",
 				set: "Unleashed",
 				collectorNumber: 65,
 				rarity: "Common",
@@ -1354,7 +1354,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-066-219",
+				id: "unl-066/219",
 				set: "Unleashed",
 				collectorNumber: 66,
 				rarity: "Common",
@@ -1372,7 +1372,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-067-219",
+				id: "unl-067/219",
 				set: "Unleashed",
 				collectorNumber: 67,
 				rarity: "Common",
@@ -1390,7 +1390,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-068-219",
+				id: "unl-068/219",
 				set: "Unleashed",
 				collectorNumber: 68,
 				rarity: "Common",
@@ -1408,7 +1408,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-069-219",
+				id: "unl-069/219",
 				set: "Unleashed",
 				collectorNumber: 69,
 				rarity: "Common",
@@ -1426,7 +1426,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-070-219",
+				id: "unl-070/219",
 				set: "Unleashed",
 				collectorNumber: 70,
 				rarity: "Common",
@@ -1444,7 +1444,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-071-219",
+				id: "unl-071/219",
 				set: "Unleashed",
 				collectorNumber: 71,
 				rarity: "Uncommon",
@@ -1462,7 +1462,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-072-219",
+				id: "unl-072/219",
 				set: "Unleashed",
 				collectorNumber: 72,
 				rarity: "Uncommon",
@@ -1480,7 +1480,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-073-219",
+				id: "unl-073/219",
 				set: "Unleashed",
 				collectorNumber: 73,
 				rarity: "Uncommon",
@@ -1498,7 +1498,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-074-219",
+				id: "unl-074/219",
 				set: "Unleashed",
 				collectorNumber: 74,
 				rarity: "Uncommon",
@@ -1516,7 +1516,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-075-219",
+				id: "unl-075/219",
 				set: "Unleashed",
 				collectorNumber: 75,
 				rarity: "Uncommon",
@@ -1534,7 +1534,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-076-219",
+				id: "unl-076/219",
 				set: "Unleashed",
 				collectorNumber: 76,
 				rarity: "Uncommon",
@@ -1552,7 +1552,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-077-219",
+				id: "unl-077/219",
 				set: "Unleashed",
 				collectorNumber: 77,
 				rarity: "Uncommon",
@@ -1570,7 +1570,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-078-219",
+				id: "unl-078/219",
 				set: "Unleashed",
 				collectorNumber: 78,
 				rarity: "Uncommon",
@@ -1588,7 +1588,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-079a-219",
+				id: "unl-079a/219",
 				set: "Unleashed",
 				collectorNumber: 79,
 				rarity: "Rare",
@@ -1606,7 +1606,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-079-219",
+				id: "unl-079/219",
 				set: "Unleashed",
 				collectorNumber: 79,
 				rarity: "Rare",
@@ -1624,7 +1624,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-080-219",
+				id: "unl-080/219",
 				set: "Unleashed",
 				collectorNumber: 80,
 				rarity: "Rare",
@@ -1642,7 +1642,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-081-219",
+				id: "unl-081/219",
 				set: "Unleashed",
 				collectorNumber: 81,
 				rarity: "Rare",
@@ -1660,7 +1660,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-082a-219",
+				id: "unl-082a/219",
 				set: "Unleashed",
 				collectorNumber: 82,
 				rarity: "Rare",
@@ -1678,7 +1678,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-082-219",
+				id: "unl-082/219",
 				set: "Unleashed",
 				collectorNumber: 82,
 				rarity: "Rare",
@@ -1696,7 +1696,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-083-219",
+				id: "unl-083/219",
 				set: "Unleashed",
 				collectorNumber: 83,
 				rarity: "Rare",
@@ -1714,7 +1714,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-084-219",
+				id: "unl-084/219",
 				set: "Unleashed",
 				collectorNumber: 84,
 				rarity: "Rare",
@@ -1732,7 +1732,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-085-219",
+				id: "unl-085/219",
 				set: "Unleashed",
 				collectorNumber: 85,
 				rarity: "Rare",
@@ -1750,7 +1750,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-086-219",
+				id: "unl-086/219",
 				set: "Unleashed",
 				collectorNumber: 86,
 				rarity: "Rare",
@@ -1768,7 +1768,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-087a-219",
+				id: "unl-087a/219",
 				set: "Unleashed",
 				collectorNumber: 87,
 				rarity: "Epic",
@@ -1786,7 +1786,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-087-219",
+				id: "unl-087/219",
 				set: "Unleashed",
 				collectorNumber: 87,
 				rarity: "Epic",
@@ -1804,7 +1804,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-088-219",
+				id: "unl-088/219",
 				set: "Unleashed",
 				collectorNumber: 88,
 				rarity: "Epic",
@@ -1822,7 +1822,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-089a-219",
+				id: "unl-089a/219",
 				set: "Unleashed",
 				collectorNumber: 89,
 				rarity: "Epic",
@@ -1840,7 +1840,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-089-219",
+				id: "unl-089/219",
 				set: "Unleashed",
 				collectorNumber: 89,
 				rarity: "Epic",
@@ -1858,7 +1858,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-090a-219",
+				id: "unl-090a/219",
 				set: "Unleashed",
 				collectorNumber: 90,
 				rarity: "Epic",
@@ -1876,7 +1876,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-090-219",
+				id: "unl-090/219",
 				set: "Unleashed",
 				collectorNumber: 90,
 				rarity: "Epic",
@@ -1894,7 +1894,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-091-219",
+				id: "unl-091/219",
 				set: "Unleashed",
 				collectorNumber: 91,
 				rarity: "Common",
@@ -1912,7 +1912,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-092-219",
+				id: "unl-092/219",
 				set: "Unleashed",
 				collectorNumber: 92,
 				rarity: "Common",
@@ -1930,7 +1930,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-093-219",
+				id: "unl-093/219",
 				set: "Unleashed",
 				collectorNumber: 93,
 				rarity: "Common",
@@ -1948,7 +1948,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-094-219",
+				id: "unl-094/219",
 				set: "Unleashed",
 				collectorNumber: 94,
 				rarity: "Common",
@@ -1966,7 +1966,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-095-219",
+				id: "unl-095/219",
 				set: "Unleashed",
 				collectorNumber: 95,
 				rarity: "Common",
@@ -1984,7 +1984,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-096-219",
+				id: "unl-096/219",
 				set: "Unleashed",
 				collectorNumber: 96,
 				rarity: "Common",
@@ -2002,7 +2002,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-097-219",
+				id: "unl-097/219",
 				set: "Unleashed",
 				collectorNumber: 97,
 				rarity: "Common",
@@ -2020,7 +2020,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-098-219",
+				id: "unl-098/219",
 				set: "Unleashed",
 				collectorNumber: 98,
 				rarity: "Common",
@@ -2038,7 +2038,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-099-219",
+				id: "unl-099/219",
 				set: "Unleashed",
 				collectorNumber: 99,
 				rarity: "Common",
@@ -2056,7 +2056,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-100-219",
+				id: "unl-100/219",
 				set: "Unleashed",
 				collectorNumber: 100,
 				rarity: "Common",
@@ -2074,7 +2074,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-101-219",
+				id: "unl-101/219",
 				set: "Unleashed",
 				collectorNumber: 101,
 				rarity: "Uncommon",
@@ -2092,7 +2092,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-102-219",
+				id: "unl-102/219",
 				set: "Unleashed",
 				collectorNumber: 102,
 				rarity: "Uncommon",
@@ -2110,7 +2110,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-103-219",
+				id: "unl-103/219",
 				set: "Unleashed",
 				collectorNumber: 103,
 				rarity: "Uncommon",
@@ -2128,7 +2128,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-104-219",
+				id: "unl-104/219",
 				set: "Unleashed",
 				collectorNumber: 104,
 				rarity: "Uncommon",
@@ -2146,7 +2146,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-105-219",
+				id: "unl-105/219",
 				set: "Unleashed",
 				collectorNumber: 105,
 				rarity: "Uncommon",
@@ -2164,7 +2164,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-106-219",
+				id: "unl-106/219",
 				set: "Unleashed",
 				collectorNumber: 106,
 				rarity: "Uncommon",
@@ -2182,7 +2182,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-107-219",
+				id: "unl-107/219",
 				set: "Unleashed",
 				collectorNumber: 107,
 				rarity: "Uncommon",
@@ -2200,7 +2200,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-108-219",
+				id: "unl-108/219",
 				set: "Unleashed",
 				collectorNumber: 108,
 				rarity: "Uncommon",
@@ -2218,7 +2218,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-109-219",
+				id: "unl-109/219",
 				set: "Unleashed",
 				collectorNumber: 109,
 				rarity: "Rare",
@@ -2236,7 +2236,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-110-219",
+				id: "unl-110/219",
 				set: "Unleashed",
 				collectorNumber: 110,
 				rarity: "Rare",
@@ -2254,7 +2254,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-111-219",
+				id: "unl-111/219",
 				set: "Unleashed",
 				collectorNumber: 111,
 				rarity: "Rare",
@@ -2272,7 +2272,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-112-219",
+				id: "unl-112/219",
 				set: "Unleashed",
 				collectorNumber: 112,
 				rarity: "Rare",
@@ -2290,7 +2290,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-113-219",
+				id: "unl-113/219",
 				set: "Unleashed",
 				collectorNumber: 113,
 				rarity: "Rare",
@@ -2308,7 +2308,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-113a-219",
+				id: "unl-113a/219",
 				set: "Unleashed",
 				collectorNumber: 113,
 				rarity: "Rare",
@@ -2326,7 +2326,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-114-219",
+				id: "unl-114/219",
 				set: "Unleashed",
 				collectorNumber: 114,
 				rarity: "Rare",
@@ -2344,7 +2344,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-115-219",
+				id: "unl-115/219",
 				set: "Unleashed",
 				collectorNumber: 115,
 				rarity: "Rare",
@@ -2362,7 +2362,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-116a-219",
+				id: "unl-116a/219",
 				set: "Unleashed",
 				collectorNumber: 116,
 				rarity: "Rare",
@@ -2380,7 +2380,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-116-219",
+				id: "unl-116/219",
 				set: "Unleashed",
 				collectorNumber: 116,
 				rarity: "Rare",
@@ -2398,7 +2398,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-117-219",
+				id: "unl-117/219",
 				set: "Unleashed",
 				collectorNumber: 117,
 				rarity: "Epic",
@@ -2416,7 +2416,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-118-219",
+				id: "unl-118/219",
 				set: "Unleashed",
 				collectorNumber: 118,
 				rarity: "Epic",
@@ -2434,7 +2434,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-118a-219",
+				id: "unl-118a/219",
 				set: "Unleashed",
 				collectorNumber: 118,
 				rarity: "Epic",
@@ -2452,7 +2452,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-119a-219",
+				id: "unl-119a/219",
 				set: "Unleashed",
 				collectorNumber: 119,
 				rarity: "Epic",
@@ -2470,7 +2470,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-119-219",
+				id: "unl-119/219",
 				set: "Unleashed",
 				collectorNumber: 119,
 				rarity: "Epic",
@@ -2488,7 +2488,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-120a-219",
+				id: "unl-120a/219",
 				set: "Unleashed",
 				collectorNumber: 120,
 				rarity: "Epic",
@@ -2506,7 +2506,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-120-219",
+				id: "unl-120/219",
 				set: "Unleashed",
 				collectorNumber: 120,
 				rarity: "Epic",
@@ -2524,7 +2524,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-121-219",
+				id: "unl-121/219",
 				set: "Unleashed",
 				collectorNumber: 121,
 				rarity: "Common",
@@ -2542,7 +2542,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-122-219",
+				id: "unl-122/219",
 				set: "Unleashed",
 				collectorNumber: 122,
 				rarity: "Common",
@@ -2560,7 +2560,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-123-219",
+				id: "unl-123/219",
 				set: "Unleashed",
 				collectorNumber: 123,
 				rarity: "Common",
@@ -2578,7 +2578,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-124-219",
+				id: "unl-124/219",
 				set: "Unleashed",
 				collectorNumber: 124,
 				rarity: "Common",
@@ -2596,7 +2596,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-125-219",
+				id: "unl-125/219",
 				set: "Unleashed",
 				collectorNumber: 125,
 				rarity: "Common",
@@ -2614,7 +2614,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-126-219",
+				id: "unl-126/219",
 				set: "Unleashed",
 				collectorNumber: 126,
 				rarity: "Common",
@@ -2632,7 +2632,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-127-219",
+				id: "unl-127/219",
 				set: "Unleashed",
 				collectorNumber: 127,
 				rarity: "Common",
@@ -2650,7 +2650,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-128-219",
+				id: "unl-128/219",
 				set: "Unleashed",
 				collectorNumber: 128,
 				rarity: "Common",
@@ -2668,7 +2668,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-129-219",
+				id: "unl-129/219",
 				set: "Unleashed",
 				collectorNumber: 129,
 				rarity: "Common",
@@ -2686,7 +2686,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-130-219",
+				id: "unl-130/219",
 				set: "Unleashed",
 				collectorNumber: 130,
 				rarity: "Common",
@@ -2704,7 +2704,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-131-219",
+				id: "unl-131/219",
 				set: "Unleashed",
 				collectorNumber: 131,
 				rarity: "Uncommon",
@@ -2722,7 +2722,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-132-219",
+				id: "unl-132/219",
 				set: "Unleashed",
 				collectorNumber: 132,
 				rarity: "Uncommon",
@@ -2740,7 +2740,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-133-219",
+				id: "unl-133/219",
 				set: "Unleashed",
 				collectorNumber: 133,
 				rarity: "Uncommon",
@@ -2758,7 +2758,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-134-219",
+				id: "unl-134/219",
 				set: "Unleashed",
 				collectorNumber: 134,
 				rarity: "Uncommon",
@@ -2776,7 +2776,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-135-219",
+				id: "unl-135/219",
 				set: "Unleashed",
 				collectorNumber: 135,
 				rarity: "Uncommon",
@@ -2794,7 +2794,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-136-219",
+				id: "unl-136/219",
 				set: "Unleashed",
 				collectorNumber: 136,
 				rarity: "Uncommon",
@@ -2812,7 +2812,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-137-219",
+				id: "unl-137/219",
 				set: "Unleashed",
 				collectorNumber: 137,
 				rarity: "Uncommon",
@@ -2830,7 +2830,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-138-219",
+				id: "unl-138/219",
 				set: "Unleashed",
 				collectorNumber: 138,
 				rarity: "Uncommon",
@@ -2848,7 +2848,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-139-219",
+				id: "unl-139/219",
 				set: "Unleashed",
 				collectorNumber: 139,
 				rarity: "Rare",
@@ -2866,7 +2866,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-140-219",
+				id: "unl-140/219",
 				set: "Unleashed",
 				collectorNumber: 140,
 				rarity: "Rare",
@@ -2884,7 +2884,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-141-219",
+				id: "unl-141/219",
 				set: "Unleashed",
 				collectorNumber: 141,
 				rarity: "Rare",
@@ -2902,7 +2902,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-142-219",
+				id: "unl-142/219",
 				set: "Unleashed",
 				collectorNumber: 142,
 				rarity: "Rare",
@@ -2920,7 +2920,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-143a-219",
+				id: "unl-143a/219",
 				set: "Unleashed",
 				collectorNumber: 143,
 				rarity: "Rare",
@@ -2938,7 +2938,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-143-219",
+				id: "unl-143/219",
 				set: "Unleashed",
 				collectorNumber: 143,
 				rarity: "Rare",
@@ -2956,7 +2956,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-144-219",
+				id: "unl-144/219",
 				set: "Unleashed",
 				collectorNumber: 144,
 				rarity: "Rare",
@@ -2974,7 +2974,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-145a-219",
+				id: "unl-145a/219",
 				set: "Unleashed",
 				collectorNumber: 145,
 				rarity: "Rare",
@@ -2992,7 +2992,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-145-219",
+				id: "unl-145/219",
 				set: "Unleashed",
 				collectorNumber: 145,
 				rarity: "Rare",
@@ -3010,7 +3010,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-146-219",
+				id: "unl-146/219",
 				set: "Unleashed",
 				collectorNumber: 146,
 				rarity: "Rare",
@@ -3028,7 +3028,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-147a-219",
+				id: "unl-147a/219",
 				set: "Unleashed",
 				collectorNumber: 147,
 				rarity: "Epic",
@@ -3046,7 +3046,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-147-219",
+				id: "unl-147/219",
 				set: "Unleashed",
 				collectorNumber: 147,
 				rarity: "Epic",
@@ -3064,7 +3064,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-148-219",
+				id: "unl-148/219",
 				set: "Unleashed",
 				collectorNumber: 148,
 				rarity: "Epic",
@@ -3082,7 +3082,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-149a-219",
+				id: "unl-149a/219",
 				set: "Unleashed",
 				collectorNumber: 149,
 				rarity: "Epic",
@@ -3100,7 +3100,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-149-219",
+				id: "unl-149/219",
 				set: "Unleashed",
 				collectorNumber: 149,
 				rarity: "Epic",
@@ -3118,7 +3118,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-150a-219",
+				id: "unl-150a/219",
 				set: "Unleashed",
 				collectorNumber: 150,
 				rarity: "Epic",
@@ -3136,7 +3136,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-150-219",
+				id: "unl-150/219",
 				set: "Unleashed",
 				collectorNumber: 150,
 				rarity: "Epic",
@@ -3154,7 +3154,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-151-219",
+				id: "unl-151/219",
 				set: "Unleashed",
 				collectorNumber: 151,
 				rarity: "Common",
@@ -3172,7 +3172,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-152-219",
+				id: "unl-152/219",
 				set: "Unleashed",
 				collectorNumber: 152,
 				rarity: "Common",
@@ -3190,7 +3190,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-153-219",
+				id: "unl-153/219",
 				set: "Unleashed",
 				collectorNumber: 153,
 				rarity: "Common",
@@ -3208,7 +3208,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-154-219",
+				id: "unl-154/219",
 				set: "Unleashed",
 				collectorNumber: 154,
 				rarity: "Common",
@@ -3226,7 +3226,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-155-219",
+				id: "unl-155/219",
 				set: "Unleashed",
 				collectorNumber: 155,
 				rarity: "Common",
@@ -3244,7 +3244,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-156-219",
+				id: "unl-156/219",
 				set: "Unleashed",
 				collectorNumber: 156,
 				rarity: "Common",
@@ -3262,7 +3262,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-157-219",
+				id: "unl-157/219",
 				set: "Unleashed",
 				collectorNumber: 157,
 				rarity: "Common",
@@ -3280,7 +3280,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-158-219",
+				id: "unl-158/219",
 				set: "Unleashed",
 				collectorNumber: 158,
 				rarity: "Common",
@@ -3298,7 +3298,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-159-219",
+				id: "unl-159/219",
 				set: "Unleashed",
 				collectorNumber: 159,
 				rarity: "Common",
@@ -3316,7 +3316,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-160-219",
+				id: "unl-160/219",
 				set: "Unleashed",
 				collectorNumber: 160,
 				rarity: "Common",
@@ -3334,7 +3334,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-161-219",
+				id: "unl-161/219",
 				set: "Unleashed",
 				collectorNumber: 161,
 				rarity: "Uncommon",
@@ -3352,7 +3352,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-162-219",
+				id: "unl-162/219",
 				set: "Unleashed",
 				collectorNumber: 162,
 				rarity: "Uncommon",
@@ -3370,7 +3370,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-163-219",
+				id: "unl-163/219",
 				set: "Unleashed",
 				collectorNumber: 163,
 				rarity: "Uncommon",
@@ -3388,7 +3388,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-164-219",
+				id: "unl-164/219",
 				set: "Unleashed",
 				collectorNumber: 164,
 				rarity: "Uncommon",
@@ -3406,7 +3406,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-165-219",
+				id: "unl-165/219",
 				set: "Unleashed",
 				collectorNumber: 165,
 				rarity: "Uncommon",
@@ -3424,7 +3424,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-166-219",
+				id: "unl-166/219",
 				set: "Unleashed",
 				collectorNumber: 166,
 				rarity: "Uncommon",
@@ -3442,7 +3442,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-167-219",
+				id: "unl-167/219",
 				set: "Unleashed",
 				collectorNumber: 167,
 				rarity: "Uncommon",
@@ -3460,7 +3460,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-168-219",
+				id: "unl-168/219",
 				set: "Unleashed",
 				collectorNumber: 168,
 				rarity: "Uncommon",
@@ -3478,7 +3478,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-169-219",
+				id: "unl-169/219",
 				set: "Unleashed",
 				collectorNumber: 169,
 				rarity: "Rare",
@@ -3496,7 +3496,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-170-219",
+				id: "unl-170/219",
 				set: "Unleashed",
 				collectorNumber: 170,
 				rarity: "Rare",
@@ -3514,7 +3514,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-171-219",
+				id: "unl-171/219",
 				set: "Unleashed",
 				collectorNumber: 171,
 				rarity: "Rare",
@@ -3532,7 +3532,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-172a-219",
+				id: "unl-172a/219",
 				set: "Unleashed",
 				collectorNumber: 172,
 				rarity: "Rare",
@@ -3550,7 +3550,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-172-219",
+				id: "unl-172/219",
 				set: "Unleashed",
 				collectorNumber: 172,
 				rarity: "Rare",
@@ -3568,7 +3568,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-173-219",
+				id: "unl-173/219",
 				set: "Unleashed",
 				collectorNumber: 173,
 				rarity: "Rare",
@@ -3586,7 +3586,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-174-219",
+				id: "unl-174/219",
 				set: "Unleashed",
 				collectorNumber: 174,
 				rarity: "Rare",
@@ -3604,7 +3604,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-175-219",
+				id: "unl-175/219",
 				set: "Unleashed",
 				collectorNumber: 175,
 				rarity: "Rare",
@@ -3622,7 +3622,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-176a-219",
+				id: "unl-176a/219",
 				set: "Unleashed",
 				collectorNumber: 176,
 				rarity: "Rare",
@@ -3640,7 +3640,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-176-219",
+				id: "unl-176/219",
 				set: "Unleashed",
 				collectorNumber: 176,
 				rarity: "Rare",
@@ -3658,7 +3658,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-177a-219",
+				id: "unl-177a/219",
 				set: "Unleashed",
 				collectorNumber: 177,
 				rarity: "Epic",
@@ -3676,7 +3676,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-177-219",
+				id: "unl-177/219",
 				set: "Unleashed",
 				collectorNumber: 177,
 				rarity: "Epic",
@@ -3694,7 +3694,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-178a-219",
+				id: "unl-178a/219",
 				set: "Unleashed",
 				collectorNumber: 178,
 				rarity: "Epic",
@@ -3712,7 +3712,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-178-219",
+				id: "unl-178/219",
 				set: "Unleashed",
 				collectorNumber: 178,
 				rarity: "Epic",
@@ -3730,7 +3730,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-179a-219",
+				id: "unl-179a/219",
 				set: "Unleashed",
 				collectorNumber: 179,
 				rarity: "Epic",
@@ -3748,7 +3748,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-179-219",
+				id: "unl-179/219",
 				set: "Unleashed",
 				collectorNumber: 179,
 				rarity: "Epic",
@@ -3766,7 +3766,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-180-219",
+				id: "unl-180/219",
 				set: "Unleashed",
 				collectorNumber: 180,
 				rarity: "Epic",
@@ -3784,7 +3784,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-181-219",
+				id: "unl-181/219",
 				set: "Unleashed",
 				collectorNumber: 181,
 				rarity: "Rare",
@@ -3802,7 +3802,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-182-219",
+				id: "unl-182/219",
 				set: "Unleashed",
 				collectorNumber: 182,
 				rarity: "Epic",
@@ -3820,7 +3820,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-183-219",
+				id: "unl-183/219",
 				set: "Unleashed",
 				collectorNumber: 183,
 				rarity: "Rare",
@@ -3838,7 +3838,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-184-219",
+				id: "unl-184/219",
 				set: "Unleashed",
 				collectorNumber: 184,
 				rarity: "Epic",
@@ -3856,7 +3856,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-185-219",
+				id: "unl-185/219",
 				set: "Unleashed",
 				collectorNumber: 185,
 				rarity: "Rare",
@@ -3874,7 +3874,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-186-219",
+				id: "unl-186/219",
 				set: "Unleashed",
 				collectorNumber: 186,
 				rarity: "Epic",
@@ -3892,7 +3892,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-187-219",
+				id: "unl-187/219",
 				set: "Unleashed",
 				collectorNumber: 187,
 				rarity: "Rare",
@@ -3910,7 +3910,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-188-219",
+				id: "unl-188/219",
 				set: "Unleashed",
 				collectorNumber: 188,
 				rarity: "Epic",
@@ -3928,7 +3928,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-189-219",
+				id: "unl-189/219",
 				set: "Unleashed",
 				collectorNumber: 189,
 				rarity: "Rare",
@@ -3946,7 +3946,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-190-219",
+				id: "unl-190/219",
 				set: "Unleashed",
 				collectorNumber: 190,
 				rarity: "Epic",
@@ -3964,7 +3964,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-191-219",
+				id: "unl-191/219",
 				set: "Unleashed",
 				collectorNumber: 191,
 				rarity: "Rare",
@@ -3982,7 +3982,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-192-219",
+				id: "unl-192/219",
 				set: "Unleashed",
 				collectorNumber: 192,
 				rarity: "Epic",
@@ -4000,7 +4000,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-193-219",
+				id: "unl-193/219",
 				set: "Unleashed",
 				collectorNumber: 193,
 				rarity: "Rare",
@@ -4018,7 +4018,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-194-219",
+				id: "unl-194/219",
 				set: "Unleashed",
 				collectorNumber: 194,
 				rarity: "Epic",
@@ -4036,7 +4036,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-195-219",
+				id: "unl-195/219",
 				set: "Unleashed",
 				collectorNumber: 195,
 				rarity: "Rare",
@@ -4054,7 +4054,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-196-219",
+				id: "unl-196/219",
 				set: "Unleashed",
 				collectorNumber: 196,
 				rarity: "Epic",
@@ -4072,7 +4072,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-197-219",
+				id: "unl-197/219",
 				set: "Unleashed",
 				collectorNumber: 197,
 				rarity: "Rare",
@@ -4090,7 +4090,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-198-219",
+				id: "unl-198/219",
 				set: "Unleashed",
 				collectorNumber: 198,
 				rarity: "Epic",
@@ -4108,7 +4108,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-199-219",
+				id: "unl-199/219",
 				set: "Unleashed",
 				collectorNumber: 199,
 				rarity: "Rare",
@@ -4126,7 +4126,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-200-219",
+				id: "unl-200/219",
 				set: "Unleashed",
 				collectorNumber: 200,
 				rarity: "Epic",
@@ -4144,7 +4144,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-201-219",
+				id: "unl-201/219",
 				set: "Unleashed",
 				collectorNumber: 201,
 				rarity: "Rare",
@@ -4162,7 +4162,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-202-219",
+				id: "unl-202/219",
 				set: "Unleashed",
 				collectorNumber: 202,
 				rarity: "Epic",
@@ -4180,7 +4180,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-203-219",
+				id: "unl-203/219",
 				set: "Unleashed",
 				collectorNumber: 203,
 				rarity: "Rare",
@@ -4198,7 +4198,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-204-219",
+				id: "unl-204/219",
 				set: "Unleashed",
 				collectorNumber: 204,
 				rarity: "Epic",
@@ -4216,7 +4216,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-205-219",
+				id: "unl-205/219",
 				set: "Unleashed",
 				collectorNumber: 205,
 				rarity: "Uncommon",
@@ -4234,7 +4234,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-206-219",
+				id: "unl-206/219",
 				set: "Unleashed",
 				collectorNumber: 206,
 				rarity: "Uncommon",
@@ -4252,7 +4252,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-207-219",
+				id: "unl-207/219",
 				set: "Unleashed",
 				collectorNumber: 207,
 				rarity: "Uncommon",
@@ -4270,7 +4270,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-208-219",
+				id: "unl-208/219",
 				set: "Unleashed",
 				collectorNumber: 208,
 				rarity: "Uncommon",
@@ -4288,7 +4288,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-209-219",
+				id: "unl-209/219",
 				set: "Unleashed",
 				collectorNumber: 209,
 				rarity: "Uncommon",
@@ -4306,7 +4306,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-210-219",
+				id: "unl-210/219",
 				set: "Unleashed",
 				collectorNumber: 210,
 				rarity: "Uncommon",
@@ -4324,7 +4324,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-211-219",
+				id: "unl-211/219",
 				set: "Unleashed",
 				collectorNumber: 211,
 				rarity: "Uncommon",
@@ -4342,7 +4342,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-212-219",
+				id: "unl-212/219",
 				set: "Unleashed",
 				collectorNumber: 212,
 				rarity: "Uncommon",
@@ -4360,7 +4360,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-213-219",
+				id: "unl-213/219",
 				set: "Unleashed",
 				collectorNumber: 213,
 				rarity: "Uncommon",
@@ -4378,7 +4378,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-214-219",
+				id: "unl-214/219",
 				set: "Unleashed",
 				collectorNumber: 214,
 				rarity: "Uncommon",
@@ -4396,7 +4396,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-215-219",
+				id: "unl-215/219",
 				set: "Unleashed",
 				collectorNumber: 215,
 				rarity: "Uncommon",
@@ -4414,7 +4414,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-216-219",
+				id: "unl-216/219",
 				set: "Unleashed",
 				collectorNumber: 216,
 				rarity: "Uncommon",
@@ -4432,7 +4432,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-217-219",
+				id: "unl-217/219",
 				set: "Unleashed",
 				collectorNumber: 217,
 				rarity: "Uncommon",
@@ -4450,7 +4450,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-218-219",
+				id: "unl-218/219",
 				set: "Unleashed",
 				collectorNumber: 218,
 				rarity: "Uncommon",
@@ -4468,7 +4468,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-219-219",
+				id: "unl-219/219",
 				set: "Unleashed",
 				collectorNumber: 219,
 				rarity: "Uncommon",
@@ -4486,7 +4486,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-220-219",
+				id: "unl-220/219",
 				set: "Unleashed",
 				collectorNumber: 220,
 				rarity: "Common",
@@ -4504,7 +4504,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-221-219",
+				id: "unl-221/219",
 				set: "Unleashed",
 				collectorNumber: 221,
 				rarity: "Common",
@@ -4522,7 +4522,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-222-219",
+				id: "unl-222/219",
 				set: "Unleashed",
 				collectorNumber: 222,
 				rarity: "Common",
@@ -4540,7 +4540,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-223-219",
+				id: "unl-223/219",
 				set: "Unleashed",
 				collectorNumber: 223,
 				rarity: "Common",
@@ -4558,7 +4558,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-224-219",
+				id: "unl-224/219",
 				set: "Unleashed",
 				collectorNumber: 224,
 				rarity: "Common",
@@ -4576,7 +4576,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-225-219",
+				id: "unl-225/219",
 				set: "Unleashed",
 				collectorNumber: 225,
 				rarity: "Common",
@@ -4594,7 +4594,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-226-219",
+				id: "unl-226/219",
 				set: "Unleashed",
 				collectorNumber: 226,
 				rarity: "Rare",
@@ -4612,7 +4612,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-226*-219",
+				id: "unl-226*/219",
 				set: "Unleashed",
 				collectorNumber: 226,
 				rarity: "Rare",
@@ -4630,7 +4630,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-227-219",
+				id: "unl-227/219",
 				set: "Unleashed",
 				collectorNumber: 227,
 				rarity: "Rare",
@@ -4648,7 +4648,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-227*-219",
+				id: "unl-227*/219",
 				set: "Unleashed",
 				collectorNumber: 227,
 				rarity: "Rare",
@@ -4666,7 +4666,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-228-219",
+				id: "unl-228/219",
 				set: "Unleashed",
 				collectorNumber: 228,
 				rarity: "Rare",
@@ -4684,7 +4684,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-228*-219",
+				id: "unl-228*/219",
 				set: "Unleashed",
 				collectorNumber: 228,
 				rarity: "Rare",
@@ -4702,7 +4702,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-229*-219",
+				id: "unl-229*/219",
 				set: "Unleashed",
 				collectorNumber: 229,
 				rarity: "Rare",
@@ -4720,7 +4720,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-229-219",
+				id: "unl-229/219",
 				set: "Unleashed",
 				collectorNumber: 229,
 				rarity: "Rare",
@@ -4738,7 +4738,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-230*-219",
+				id: "unl-230*/219",
 				set: "Unleashed",
 				collectorNumber: 230,
 				rarity: "Rare",
@@ -4756,7 +4756,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-230-219",
+				id: "unl-230/219",
 				set: "Unleashed",
 				collectorNumber: 230,
 				rarity: "Rare",
@@ -4774,7 +4774,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-231*-219",
+				id: "unl-231*/219",
 				set: "Unleashed",
 				collectorNumber: 231,
 				rarity: "Rare",
@@ -4792,7 +4792,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-231-219",
+				id: "unl-231/219",
 				set: "Unleashed",
 				collectorNumber: 231,
 				rarity: "Rare",
@@ -4810,7 +4810,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-232*-219",
+				id: "unl-232*/219",
 				set: "Unleashed",
 				collectorNumber: 232,
 				rarity: "Rare",
@@ -4828,7 +4828,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-232-219",
+				id: "unl-232/219",
 				set: "Unleashed",
 				collectorNumber: 232,
 				rarity: "Rare",
@@ -4846,7 +4846,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-233*-219",
+				id: "unl-233*/219",
 				set: "Unleashed",
 				collectorNumber: 233,
 				rarity: "Rare",
@@ -4864,7 +4864,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-233-219",
+				id: "unl-233/219",
 				set: "Unleashed",
 				collectorNumber: 233,
 				rarity: "Rare",
@@ -4882,7 +4882,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-234*-219",
+				id: "unl-234*/219",
 				set: "Unleashed",
 				collectorNumber: 234,
 				rarity: "Rare",
@@ -4900,7 +4900,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-234-219",
+				id: "unl-234/219",
 				set: "Unleashed",
 				collectorNumber: 234,
 				rarity: "Rare",
@@ -4918,7 +4918,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-235*-219",
+				id: "unl-235*/219",
 				set: "Unleashed",
 				collectorNumber: 235,
 				rarity: "Rare",
@@ -4936,7 +4936,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-235-219",
+				id: "unl-235/219",
 				set: "Unleashed",
 				collectorNumber: 235,
 				rarity: "Rare",
@@ -4954,7 +4954,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-236*-219",
+				id: "unl-236*/219",
 				set: "Unleashed",
 				collectorNumber: 236,
 				rarity: "Rare",
@@ -4972,7 +4972,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-236-219",
+				id: "unl-236/219",
 				set: "Unleashed",
 				collectorNumber: 236,
 				rarity: "Rare",
@@ -4990,7 +4990,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-237*-219",
+				id: "unl-237*/219",
 				set: "Unleashed",
 				collectorNumber: 237,
 				rarity: "Rare",
@@ -5008,7 +5008,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-237-219",
+				id: "unl-237/219",
 				set: "Unleashed",
 				collectorNumber: 237,
 				rarity: "Rare",
@@ -5026,7 +5026,7 @@ export default [
 				}
 			},
 			{
-				id: "unl-238-219",
+				id: "unl-238/219",
 				set: "Unleashed",
 				collectorNumber: 238,
 				rarity: "Epic",
@@ -5050,7 +5050,7 @@ export default [
 		name: "Riftbound Organized Play Promotional Cards",
 		cards: [
 			{
-				id: "opp-001-219",
+				id: "opp-001/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 1,
 				rarity: "Promo",
@@ -5068,7 +5068,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-001-298",
+				id: "opp-001/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 1,
 				rarity: "Promo",
@@ -5086,7 +5086,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-007b-298",
+				id: "opp-007b/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 1,
 				rarity: "Promo",
@@ -5104,7 +5104,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-001-024",
+				id: "opp-001/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 1,
 				rarity: "Promo",
@@ -5122,7 +5122,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-042b-298",
+				id: "opp-042b/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 2,
 				rarity: "Promo",
@@ -5140,7 +5140,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-089b-298",
+				id: "opp-089b/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 3,
 				rarity: "Promo",
@@ -5158,7 +5158,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-126b-298",
+				id: "opp-126b/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 4,
 				rarity: "Promo",
@@ -5176,7 +5176,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-004-024",
+				id: "opp-004/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 4,
 				rarity: "Promo",
@@ -5194,7 +5194,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-166b-298",
+				id: "opp-166b/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 5,
 				rarity: "Promo",
@@ -5212,7 +5212,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-214b-298",
+				id: "opp-214b/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 6,
 				rarity: "Promo",
@@ -5230,7 +5230,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-014-024",
+				id: "opp-014/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 6,
 				rarity: "Promo",
@@ -5248,7 +5248,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-006-024",
+				id: "opp-006/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 6,
 				rarity: "Promo",
@@ -5266,7 +5266,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-007-024",
+				id: "opp-007/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 7,
 				rarity: "Promo",
@@ -5284,7 +5284,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-007-221",
+				id: "opp-007/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 7,
 				rarity: "Promo",
@@ -5302,7 +5302,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-009-219",
+				id: "opp-009/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 9,
 				rarity: "Promo",
@@ -5320,7 +5320,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-009-024",
+				id: "opp-009/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 9,
 				rarity: "Promo",
@@ -5338,7 +5338,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-009-221",
+				id: "opp-009/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 9,
 				rarity: "Promo",
@@ -5356,7 +5356,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-010-024",
+				id: "opp-010/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 10,
 				rarity: "Promo",
@@ -5374,7 +5374,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-011-024",
+				id: "opp-011/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 11,
 				rarity: "Promo",
@@ -5392,7 +5392,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-013-298",
+				id: "opp-013/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 13,
 				rarity: "Promo",
@@ -5410,7 +5410,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-013-024",
+				id: "opp-013/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 13,
 				rarity: "Promo",
@@ -5428,7 +5428,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-013-221",
+				id: "opp-013/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 13,
 				rarity: "Promo",
@@ -5446,7 +5446,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-016-219",
+				id: "opp-016/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 16,
 				rarity: "Promo",
@@ -5464,7 +5464,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-017-024",
+				id: "opp-017/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 17,
 				rarity: "Promo",
@@ -5482,7 +5482,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-017-024",
+				id: "opp-017/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 17,
 				rarity: "Promo",
@@ -5500,7 +5500,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-018-024",
+				id: "opp-018/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 18,
 				rarity: "Promo",
@@ -5518,7 +5518,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-019-024",
+				id: "opp-019/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 19,
 				rarity: "Promo",
@@ -5536,7 +5536,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-019-024",
+				id: "opp-019/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 19,
 				rarity: "Promo",
@@ -5554,7 +5554,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-020-024",
+				id: "opp-020/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 20,
 				rarity: "Promo",
@@ -5572,7 +5572,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-021-024",
+				id: "opp-021/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 21,
 				rarity: "Promo",
@@ -5590,7 +5590,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-021-024",
+				id: "opp-021/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 21,
 				rarity: "Rare",
@@ -5608,7 +5608,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-022-024",
+				id: "opp-022/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 22,
 				rarity: "Promo",
@@ -5626,7 +5626,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-023-024",
+				id: "opp-023/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 23,
 				rarity: "Promo",
@@ -5644,7 +5644,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-023-024",
+				id: "opp-023/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 23,
 				rarity: "Promo",
@@ -5662,7 +5662,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-024-298",
+				id: "opp-024/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 24,
 				rarity: "Promo",
@@ -5680,7 +5680,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-024-024",
+				id: "opp-024/024",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 24,
 				rarity: "Promo",
@@ -5698,7 +5698,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-033-221",
+				id: "opp-033/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 33,
 				rarity: "Promo",
@@ -5716,7 +5716,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-034-298",
+				id: "opp-034/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 34,
 				rarity: "Promo",
@@ -5734,7 +5734,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-036-219",
+				id: "opp-036/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 36,
 				rarity: "Promo",
@@ -5752,7 +5752,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-037-221",
+				id: "opp-037/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 37,
 				rarity: "Promo",
@@ -5770,7 +5770,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-039-219",
+				id: "opp-039/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 39,
 				rarity: "Promo",
@@ -5788,7 +5788,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-047-219",
+				id: "opp-047/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 47,
 				rarity: "Promo",
@@ -5806,7 +5806,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-048-221",
+				id: "opp-048/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 48,
 				rarity: "Promo",
@@ -5824,7 +5824,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-052-298",
+				id: "opp-052/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 52,
 				rarity: "Promo",
@@ -5842,7 +5842,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-055-298",
+				id: "opp-055/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 55,
 				rarity: "Promo",
@@ -5860,7 +5860,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-056-219",
+				id: "opp-056/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 56,
 				rarity: "Promo",
@@ -5878,7 +5878,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-058-298",
+				id: "opp-058/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 58,
 				rarity: "Promo",
@@ -5896,7 +5896,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-058-219",
+				id: "opp-058/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 58,
 				rarity: "Promo",
@@ -5914,7 +5914,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-061-219",
+				id: "opp-061/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 61,
 				rarity: "Promo",
@@ -5932,7 +5932,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-064-221",
+				id: "opp-064/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 64,
 				rarity: "Promo",
@@ -5950,7 +5950,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-065-219",
+				id: "opp-065/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 65,
 				rarity: "Promo",
@@ -5968,7 +5968,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-067-298",
+				id: "opp-067/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 67,
 				rarity: "Promo",
@@ -5986,7 +5986,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-067-221",
+				id: "opp-067/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 67,
 				rarity: "Promo",
@@ -6004,7 +6004,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-075-219",
+				id: "opp-075/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 75,
 				rarity: "Promo",
@@ -6022,7 +6022,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-076-221",
+				id: "opp-076/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 76,
 				rarity: "Promo",
@@ -6040,7 +6040,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-078-298",
+				id: "opp-078/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 78,
 				rarity: "Promo",
@@ -6058,7 +6058,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-083-298",
+				id: "opp-083/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 83,
 				rarity: "Promo",
@@ -6076,7 +6076,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-086-221",
+				id: "opp-086/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 86,
 				rarity: "Promo",
@@ -6094,7 +6094,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-086-219",
+				id: "opp-086/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 86,
 				rarity: "Promo",
@@ -6112,7 +6112,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-092-298",
+				id: "opp-092/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 92,
 				rarity: "Promo",
@@ -6130,7 +6130,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-093-219",
+				id: "opp-093/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 93,
 				rarity: "Promo",
@@ -6148,7 +6148,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-095-221",
+				id: "opp-095/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 95,
 				rarity: "Promo",
@@ -6166,7 +6166,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-098-221",
+				id: "opp-098/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 98,
 				rarity: "Promo",
@@ -6184,7 +6184,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-100-219",
+				id: "opp-100/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 100,
 				rarity: "Promo",
@@ -6202,7 +6202,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-101-221",
+				id: "opp-101/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 101,
 				rarity: "Promo",
@@ -6220,7 +6220,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-103-298",
+				id: "opp-103/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 103,
 				rarity: "Promo",
@@ -6238,7 +6238,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-107-219",
+				id: "opp-107/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 107,
 				rarity: "Promo",
@@ -6256,7 +6256,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-116-221",
+				id: "opp-116/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 116,
 				rarity: "Promo",
@@ -6274,7 +6274,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-118a-221",
+				id: "opp-118a/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 118,
 				rarity: "Promo",
@@ -6292,7 +6292,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-124-221",
+				id: "opp-124/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 124,
 				rarity: "Promo",
@@ -6310,7 +6310,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-125-219",
+				id: "opp-125/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 125,
 				rarity: "Promo",
@@ -6328,7 +6328,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-127-219",
+				id: "opp-127/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 127,
 				rarity: "Promo",
@@ -6346,7 +6346,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-128-298",
+				id: "opp-128/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 128,
 				rarity: "Promo",
@@ -6364,7 +6364,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-130-221",
+				id: "opp-130/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 130,
 				rarity: "Promo",
@@ -6382,7 +6382,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-135-298",
+				id: "opp-135/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 135,
 				rarity: "Promo",
@@ -6400,7 +6400,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-137-219",
+				id: "opp-137/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 137,
 				rarity: "Promo",
@@ -6418,7 +6418,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-137-298",
+				id: "opp-137/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 137,
 				rarity: "Promo",
@@ -6436,7 +6436,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-137-221",
+				id: "opp-137/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 137,
 				rarity: "Promo",
@@ -6454,7 +6454,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-153-221",
+				id: "opp-153/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 153,
 				rarity: "Promo",
@@ -6472,7 +6472,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-156-219",
+				id: "opp-156/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 156,
 				rarity: "Promo",
@@ -6490,7 +6490,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-156-221",
+				id: "opp-156/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 156,
 				rarity: "Promo",
@@ -6508,7 +6508,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-160-219",
+				id: "opp-160/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 160,
 				rarity: "Promo",
@@ -6526,7 +6526,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-167-221",
+				id: "opp-167/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 167,
 				rarity: "Promo",
@@ -6544,7 +6544,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-168-219",
+				id: "opp-168/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 168,
 				rarity: "Promo",
@@ -6562,7 +6562,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-169-219",
+				id: "opp-169/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 169,
 				rarity: "Promo",
@@ -6580,7 +6580,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-084-221",
+				id: "opp-084/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 175,
 				rarity: "Promo",
@@ -6598,7 +6598,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-177-298",
+				id: "opp-177/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 177,
 				rarity: "Promo",
@@ -6616,7 +6616,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-178-219",
+				id: "opp-178/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 178,
 				rarity: "Promo",
@@ -6634,7 +6634,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-120-219",
+				id: "opp-120/219",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 179,
 				rarity: "Promo",
@@ -6652,7 +6652,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-181-221",
+				id: "opp-181/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 181,
 				rarity: "Promo",
@@ -6670,7 +6670,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-183-221",
+				id: "opp-183/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 183,
 				rarity: "Promo",
@@ -6688,7 +6688,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-183-298",
+				id: "opp-183/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 183,
 				rarity: "Promo",
@@ -6706,7 +6706,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-185-221",
+				id: "opp-185/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 185,
 				rarity: "Promo",
@@ -6724,7 +6724,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-187-221",
+				id: "opp-187/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 187,
 				rarity: "Promo",
@@ -6742,7 +6742,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-189-221",
+				id: "opp-189/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 189,
 				rarity: "Promo",
@@ -6760,7 +6760,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-193-221",
+				id: "opp-193/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 193,
 				rarity: "Promo",
@@ -6778,7 +6778,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-193-298",
+				id: "opp-193/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 193,
 				rarity: "Promo",
@@ -6796,7 +6796,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-195-221",
+				id: "opp-195/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 195,
 				rarity: "Promo",
@@ -6814,7 +6814,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-197-221",
+				id: "opp-197/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 197,
 				rarity: "Promo",
@@ -6832,7 +6832,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-197b-298",
+				id: "opp-197b/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 197,
 				rarity: "Promo",
@@ -6850,7 +6850,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-199-221",
+				id: "opp-199/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 199,
 				rarity: "Promo",
@@ -6868,7 +6868,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-201-221",
+				id: "opp-201/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 201,
 				rarity: "Promo",
@@ -6886,7 +6886,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-202-298",
+				id: "opp-202/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 202,
 				rarity: "Promo",
@@ -6904,7 +6904,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-203-221",
+				id: "opp-203/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 203,
 				rarity: "Promo",
@@ -6922,7 +6922,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-205-221",
+				id: "opp-205/221",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 205,
 				rarity: "Promo",
@@ -6940,7 +6940,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-210-298",
+				id: "opp-210/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 210,
 				rarity: "Promo",
@@ -6958,7 +6958,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-218-298",
+				id: "opp-218/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 218,
 				rarity: "Promo",
@@ -6976,7 +6976,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-229-298",
+				id: "opp-229/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 229,
 				rarity: "Promo",
@@ -6994,7 +6994,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-246-298",
+				id: "opp-246/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 246,
 				rarity: "Promo",
@@ -7012,7 +7012,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-247-298",
+				id: "opp-247/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 247,
 				rarity: "Promo",
@@ -7030,7 +7030,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-247-298",
+				id: "opp-247/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 247,
 				rarity: "Promo",
@@ -7048,7 +7048,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-249-298",
+				id: "opp-249/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 249,
 				rarity: "Promo",
@@ -7066,7 +7066,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-249-298",
+				id: "opp-249/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 249,
 				rarity: "Promo",
@@ -7084,7 +7084,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-251-298",
+				id: "opp-251/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 251,
 				rarity: "Promo",
@@ -7102,7 +7102,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-251-298",
+				id: "opp-251/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 251,
 				rarity: "Promo",
@@ -7120,7 +7120,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-253-298",
+				id: "opp-253/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 253,
 				rarity: "Promo",
@@ -7138,7 +7138,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-253-298",
+				id: "opp-253/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 253,
 				rarity: "Promo",
@@ -7156,7 +7156,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-255-298",
+				id: "opp-255/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 255,
 				rarity: "Promo",
@@ -7174,7 +7174,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-255-298",
+				id: "opp-255/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 255,
 				rarity: "Promo",
@@ -7192,7 +7192,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-257-298",
+				id: "opp-257/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 257,
 				rarity: "Promo",
@@ -7210,7 +7210,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-257-298",
+				id: "opp-257/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 257,
 				rarity: "Promo",
@@ -7228,7 +7228,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-259-298",
+				id: "opp-259/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 259,
 				rarity: "Promo",
@@ -7246,7 +7246,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-259-298",
+				id: "opp-259/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 259,
 				rarity: "Promo",
@@ -7264,7 +7264,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-261-298",
+				id: "opp-261/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 261,
 				rarity: "Promo",
@@ -7282,7 +7282,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-261-298",
+				id: "opp-261/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 261,
 				rarity: "Promo",
@@ -7300,7 +7300,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-263-298",
+				id: "opp-263/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 263,
 				rarity: "Promo",
@@ -7318,7 +7318,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-263-298",
+				id: "opp-263/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 263,
 				rarity: "Promo",
@@ -7336,7 +7336,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-265-298",
+				id: "opp-265/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 265,
 				rarity: "Promo",
@@ -7354,7 +7354,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-265-298",
+				id: "opp-265/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 265,
 				rarity: "Promo",
@@ -7372,7 +7372,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-267-298",
+				id: "opp-267/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 267,
 				rarity: "Promo",
@@ -7390,7 +7390,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-267-298",
+				id: "opp-267/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 267,
 				rarity: "Promo",
@@ -7408,7 +7408,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-269-298",
+				id: "opp-269/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 269,
 				rarity: "Promo",
@@ -7426,7 +7426,7 @@ export default [
 				}
 			},
 			{
-				id: "opp-269-298",
+				id: "opp-269/298",
 				set: "Riftbound Organized Play Promotional Cards",
 				collectorNumber: 269,
 				rarity: "Promo",
@@ -7450,7 +7450,7 @@ export default [
 		name: "Riftbound Promotional Cards",
 		cards: [
 			{
-				id: "pr-066-298",
+				id: "pr-066/298",
 				set: "Riftbound Promotional Cards",
 				collectorNumber: 66,
 				rarity: "Promo",
@@ -7468,7 +7468,7 @@ export default [
 				}
 			},
 			{
-				id: "pr-068a-298",
+				id: "pr-068a/298",
 				set: "Riftbound Promotional Cards",
 				collectorNumber: 68,
 				rarity: "Promo",
@@ -7486,7 +7486,7 @@ export default [
 				}
 			},
 			{
-				id: "pr-111a-298",
+				id: "pr-111a/298",
 				set: "Riftbound Promotional Cards",
 				collectorNumber: 111,
 				rarity: "Promo",
@@ -7504,7 +7504,7 @@ export default [
 				}
 			},
 			{
-				id: "pr-159a-298",
+				id: "pr-159a/298",
 				set: "Riftbound Promotional Cards",
 				collectorNumber: 159,
 				rarity: "Promo",
@@ -7522,7 +7522,7 @@ export default [
 				}
 			},
 			{
-				id: "pr-036a-298",
+				id: "pr-036a/298",
 				set: "Riftbound Promotional Cards",
 				collectorNumber: 167,
 				rarity: "Promo",
@@ -7540,7 +7540,7 @@ export default [
 				}
 			},
 			{
-				id: "pr-197-298",
+				id: "pr-197/298",
 				set: "Riftbound Promotional Cards",
 				collectorNumber: 197,
 				rarity: "Promo",
@@ -7558,7 +7558,7 @@ export default [
 				}
 			},
 			{
-				id: "pr-202-298",
+				id: "pr-202/298",
 				set: "Riftbound Promotional Cards",
 				collectorNumber: 202,
 				rarity: "Promo",
@@ -7576,7 +7576,7 @@ export default [
 				}
 			},
 			{
-				id: "pr-246b-298",
+				id: "pr-246b/298",
 				set: "Riftbound Promotional Cards",
 				collectorNumber: 246,
 				rarity: "Promo",
@@ -7594,7 +7594,7 @@ export default [
 				}
 			},
 			{
-				id: "pr-246a-298",
+				id: "pr-246a/298",
 				set: "Riftbound Promotional Cards",
 				collectorNumber: 246,
 				rarity: "Promo",
@@ -7612,7 +7612,7 @@ export default [
 				}
 			},
 			{
-				id: "pr-263a-298",
+				id: "pr-263a/298",
 				set: "Riftbound Promotional Cards",
 				collectorNumber: 263,
 				rarity: "Promo",
@@ -7630,7 +7630,7 @@ export default [
 				}
 			},
 			{
-				id: "pr-276a-298",
+				id: "pr-276a/298",
 				set: "Riftbound Promotional Cards",
 				collectorNumber: 276,
 				rarity: "Promo",
@@ -7648,7 +7648,7 @@ export default [
 				}
 			},
 			{
-				id: "pr-278a-298",
+				id: "pr-278a/298",
 				set: "Riftbound Promotional Cards",
 				collectorNumber: 278,
 				rarity: "Promo",
@@ -7666,7 +7666,7 @@ export default [
 				}
 			},
 			{
-				id: "pr-293a-298",
+				id: "pr-293a/298",
 				set: "Riftbound Promotional Cards",
 				collectorNumber: 293,
 				rarity: "Promo",
@@ -7690,7 +7690,7 @@ export default [
 		name: "Spiritforged",
 		cards: [
 			{
-				id: "sfd-001-221",
+				id: "sfd-001/221",
 				set: "Spiritforged",
 				collectorNumber: 1,
 				rarity: "Common",
@@ -7708,7 +7708,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-002-221",
+				id: "sfd-002/221",
 				set: "Spiritforged",
 				collectorNumber: 2,
 				rarity: "Common",
@@ -7744,7 +7744,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-003-221",
+				id: "sfd-003/221",
 				set: "Spiritforged",
 				collectorNumber: 3,
 				rarity: "Common",
@@ -7762,7 +7762,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-004-221",
+				id: "sfd-004/221",
 				set: "Spiritforged",
 				collectorNumber: 4,
 				rarity: "Common",
@@ -7780,7 +7780,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-005-221",
+				id: "sfd-005/221",
 				set: "Spiritforged",
 				collectorNumber: 5,
 				rarity: "Common",
@@ -7798,7 +7798,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-006-221",
+				id: "sfd-006/221",
 				set: "Spiritforged",
 				collectorNumber: 6,
 				rarity: "Common",
@@ -7816,7 +7816,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-007-221",
+				id: "sfd-007/221",
 				set: "Spiritforged",
 				collectorNumber: 7,
 				rarity: "Common",
@@ -7834,7 +7834,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-008-221",
+				id: "sfd-008/221",
 				set: "Spiritforged",
 				collectorNumber: 8,
 				rarity: "Common",
@@ -7852,7 +7852,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-009-221",
+				id: "sfd-009/221",
 				set: "Spiritforged",
 				collectorNumber: 9,
 				rarity: "Common",
@@ -7870,7 +7870,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-010-221",
+				id: "sfd-010/221",
 				set: "Spiritforged",
 				collectorNumber: 10,
 				rarity: "Common",
@@ -7888,7 +7888,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-011-221",
+				id: "sfd-011/221",
 				set: "Spiritforged",
 				collectorNumber: 11,
 				rarity: "Uncommon",
@@ -7906,7 +7906,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-012-221",
+				id: "sfd-012/221",
 				set: "Spiritforged",
 				collectorNumber: 12,
 				rarity: "Uncommon",
@@ -7924,7 +7924,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-013-221",
+				id: "sfd-013/221",
 				set: "Spiritforged",
 				collectorNumber: 13,
 				rarity: "Uncommon",
@@ -7942,7 +7942,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-014-221",
+				id: "sfd-014/221",
 				set: "Spiritforged",
 				collectorNumber: 14,
 				rarity: "Uncommon",
@@ -7960,7 +7960,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-015-221",
+				id: "sfd-015/221",
 				set: "Spiritforged",
 				collectorNumber: 15,
 				rarity: "Uncommon",
@@ -7978,7 +7978,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-016-221",
+				id: "sfd-016/221",
 				set: "Spiritforged",
 				collectorNumber: 16,
 				rarity: "Uncommon",
@@ -7996,7 +7996,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-017-221",
+				id: "sfd-017/221",
 				set: "Spiritforged",
 				collectorNumber: 17,
 				rarity: "Uncommon",
@@ -8014,7 +8014,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-018-221",
+				id: "sfd-018/221",
 				set: "Spiritforged",
 				collectorNumber: 18,
 				rarity: "Uncommon",
@@ -8032,7 +8032,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-019-221",
+				id: "sfd-019/221",
 				set: "Spiritforged",
 				collectorNumber: 19,
 				rarity: "Rare",
@@ -8050,7 +8050,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-020a-221",
+				id: "sfd-020a/221",
 				set: "Spiritforged",
 				collectorNumber: 20,
 				rarity: "Showcase",
@@ -8068,7 +8068,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-020-221",
+				id: "sfd-020/221",
 				set: "Spiritforged",
 				collectorNumber: 20,
 				rarity: "Rare",
@@ -8086,7 +8086,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-021-221",
+				id: "sfd-021/221",
 				set: "Spiritforged",
 				collectorNumber: 21,
 				rarity: "Rare",
@@ -8104,7 +8104,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-022-221",
+				id: "sfd-022/221",
 				set: "Spiritforged",
 				collectorNumber: 22,
 				rarity: "Rare",
@@ -8122,7 +8122,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-023-221",
+				id: "sfd-023/221",
 				set: "Spiritforged",
 				collectorNumber: 23,
 				rarity: "Rare",
@@ -8140,7 +8140,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-024-221",
+				id: "sfd-024/221",
 				set: "Spiritforged",
 				collectorNumber: 24,
 				rarity: "Rare",
@@ -8158,7 +8158,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-025-221",
+				id: "sfd-025/221",
 				set: "Spiritforged",
 				collectorNumber: 25,
 				rarity: "Rare",
@@ -8176,7 +8176,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-026a-221",
+				id: "sfd-026a/221",
 				set: "Spiritforged",
 				collectorNumber: 26,
 				rarity: "Showcase",
@@ -8194,7 +8194,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-026-221",
+				id: "sfd-026/221",
 				set: "Spiritforged",
 				collectorNumber: 26,
 				rarity: "Rare",
@@ -8212,7 +8212,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-027-221",
+				id: "sfd-027/221",
 				set: "Spiritforged",
 				collectorNumber: 27,
 				rarity: "Epic",
@@ -8230,7 +8230,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-028-221",
+				id: "sfd-028/221",
 				set: "Spiritforged",
 				collectorNumber: 28,
 				rarity: "Epic",
@@ -8248,7 +8248,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-028a-221",
+				id: "sfd-028a/221",
 				set: "Spiritforged",
 				collectorNumber: 28,
 				rarity: "Showcase",
@@ -8266,7 +8266,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-029a-221",
+				id: "sfd-029a/221",
 				set: "Spiritforged",
 				collectorNumber: 29,
 				rarity: "Showcase",
@@ -8284,7 +8284,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-029-221",
+				id: "sfd-029/221",
 				set: "Spiritforged",
 				collectorNumber: 29,
 				rarity: "Epic",
@@ -8302,7 +8302,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-030-221",
+				id: "sfd-030/221",
 				set: "Spiritforged",
 				collectorNumber: 30,
 				rarity: "Epic",
@@ -8320,7 +8320,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-031-221",
+				id: "sfd-031/221",
 				set: "Spiritforged",
 				collectorNumber: 31,
 				rarity: "Common",
@@ -8338,7 +8338,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-032-221",
+				id: "sfd-032/221",
 				set: "Spiritforged",
 				collectorNumber: 32,
 				rarity: "Common",
@@ -8356,7 +8356,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-033-221",
+				id: "sfd-033/221",
 				set: "Spiritforged",
 				collectorNumber: 33,
 				rarity: "Common",
@@ -8374,7 +8374,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-034-221",
+				id: "sfd-034/221",
 				set: "Spiritforged",
 				collectorNumber: 34,
 				rarity: "Common",
@@ -8392,7 +8392,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-035-221",
+				id: "sfd-035/221",
 				set: "Spiritforged",
 				collectorNumber: 35,
 				rarity: "Common",
@@ -8410,7 +8410,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-036-221",
+				id: "sfd-036/221",
 				set: "Spiritforged",
 				collectorNumber: 36,
 				rarity: "Common",
@@ -8428,7 +8428,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-037-221",
+				id: "sfd-037/221",
 				set: "Spiritforged",
 				collectorNumber: 37,
 				rarity: "Common",
@@ -8446,7 +8446,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-038-221",
+				id: "sfd-038/221",
 				set: "Spiritforged",
 				collectorNumber: 38,
 				rarity: "Common",
@@ -8464,7 +8464,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-039-221",
+				id: "sfd-039/221",
 				set: "Spiritforged",
 				collectorNumber: 39,
 				rarity: "Common",
@@ -8482,7 +8482,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-040-221",
+				id: "sfd-040/221",
 				set: "Spiritforged",
 				collectorNumber: 40,
 				rarity: "Common",
@@ -8500,7 +8500,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-041-221",
+				id: "sfd-041/221",
 				set: "Spiritforged",
 				collectorNumber: 41,
 				rarity: "Uncommon",
@@ -8518,7 +8518,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-042-221",
+				id: "sfd-042/221",
 				set: "Spiritforged",
 				collectorNumber: 42,
 				rarity: "Uncommon",
@@ -8536,7 +8536,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-043-221",
+				id: "sfd-043/221",
 				set: "Spiritforged",
 				collectorNumber: 43,
 				rarity: "Uncommon",
@@ -8554,7 +8554,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-044-221",
+				id: "sfd-044/221",
 				set: "Spiritforged",
 				collectorNumber: 44,
 				rarity: "Uncommon",
@@ -8572,7 +8572,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-045-221",
+				id: "sfd-045/221",
 				set: "Spiritforged",
 				collectorNumber: 45,
 				rarity: "Uncommon",
@@ -8590,7 +8590,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-046-221",
+				id: "sfd-046/221",
 				set: "Spiritforged",
 				collectorNumber: 46,
 				rarity: "Uncommon",
@@ -8608,7 +8608,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-047-221",
+				id: "sfd-047/221",
 				set: "Spiritforged",
 				collectorNumber: 47,
 				rarity: "Uncommon",
@@ -8626,7 +8626,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-048-221",
+				id: "sfd-048/221",
 				set: "Spiritforged",
 				collectorNumber: 48,
 				rarity: "Uncommon",
@@ -8644,7 +8644,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-049-221",
+				id: "sfd-049/221",
 				set: "Spiritforged",
 				collectorNumber: 49,
 				rarity: "Rare",
@@ -8662,7 +8662,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-050-221",
+				id: "sfd-050/221",
 				set: "Spiritforged",
 				collectorNumber: 50,
 				rarity: "Rare",
@@ -8680,7 +8680,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-050a-221",
+				id: "sfd-050a/221",
 				set: "Spiritforged",
 				collectorNumber: 50,
 				rarity: "Showcase",
@@ -8698,7 +8698,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-051-221",
+				id: "sfd-051/221",
 				set: "Spiritforged",
 				collectorNumber: 51,
 				rarity: "Rare",
@@ -8716,7 +8716,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-052-221",
+				id: "sfd-052/221",
 				set: "Spiritforged",
 				collectorNumber: 52,
 				rarity: "Rare",
@@ -8734,7 +8734,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-053-221",
+				id: "sfd-053/221",
 				set: "Spiritforged",
 				collectorNumber: 53,
 				rarity: "Rare",
@@ -8752,7 +8752,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-054-221",
+				id: "sfd-054/221",
 				set: "Spiritforged",
 				collectorNumber: 54,
 				rarity: "Rare",
@@ -8770,7 +8770,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-054a-221",
+				id: "sfd-054a/221",
 				set: "Spiritforged",
 				collectorNumber: 54,
 				rarity: "Showcase",
@@ -8788,7 +8788,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-055-221",
+				id: "sfd-055/221",
 				set: "Spiritforged",
 				collectorNumber: 55,
 				rarity: "Rare",
@@ -8806,7 +8806,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-056-221",
+				id: "sfd-056/221",
 				set: "Spiritforged",
 				collectorNumber: 56,
 				rarity: "Rare",
@@ -8824,7 +8824,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-057-221",
+				id: "sfd-057/221",
 				set: "Spiritforged",
 				collectorNumber: 57,
 				rarity: "Epic",
@@ -8842,7 +8842,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-057a-221",
+				id: "sfd-057a/221",
 				set: "Spiritforged",
 				collectorNumber: 57,
 				rarity: "Showcase",
@@ -8860,7 +8860,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-058a-221",
+				id: "sfd-058a/221",
 				set: "Spiritforged",
 				collectorNumber: 58,
 				rarity: "Showcase",
@@ -8878,7 +8878,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-058-221",
+				id: "sfd-058/221",
 				set: "Spiritforged",
 				collectorNumber: 58,
 				rarity: "Epic",
@@ -8896,7 +8896,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-059-221",
+				id: "sfd-059/221",
 				set: "Spiritforged",
 				collectorNumber: 59,
 				rarity: "Epic",
@@ -8914,7 +8914,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-060-221",
+				id: "sfd-060/221",
 				set: "Spiritforged",
 				collectorNumber: 60,
 				rarity: "Epic",
@@ -8932,7 +8932,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-061-221",
+				id: "sfd-061/221",
 				set: "Spiritforged",
 				collectorNumber: 61,
 				rarity: "Common",
@@ -8950,7 +8950,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-062-221",
+				id: "sfd-062/221",
 				set: "Spiritforged",
 				collectorNumber: 62,
 				rarity: "Common",
@@ -8968,7 +8968,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-063-221",
+				id: "sfd-063/221",
 				set: "Spiritforged",
 				collectorNumber: 63,
 				rarity: "Common",
@@ -8986,7 +8986,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-064-221",
+				id: "sfd-064/221",
 				set: "Spiritforged",
 				collectorNumber: 64,
 				rarity: "Common",
@@ -9004,7 +9004,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-065-221",
+				id: "sfd-065/221",
 				set: "Spiritforged",
 				collectorNumber: 65,
 				rarity: "Common",
@@ -9022,7 +9022,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-066-221",
+				id: "sfd-066/221",
 				set: "Spiritforged",
 				collectorNumber: 66,
 				rarity: "Common",
@@ -9040,7 +9040,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-067-221",
+				id: "sfd-067/221",
 				set: "Spiritforged",
 				collectorNumber: 67,
 				rarity: "Common",
@@ -9058,7 +9058,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-068-221",
+				id: "sfd-068/221",
 				set: "Spiritforged",
 				collectorNumber: 68,
 				rarity: "Common",
@@ -9076,7 +9076,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-069-221",
+				id: "sfd-069/221",
 				set: "Spiritforged",
 				collectorNumber: 69,
 				rarity: "Common",
@@ -9094,7 +9094,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-070-221",
+				id: "sfd-070/221",
 				set: "Spiritforged",
 				collectorNumber: 70,
 				rarity: "Common",
@@ -9112,7 +9112,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-071-221",
+				id: "sfd-071/221",
 				set: "Spiritforged",
 				collectorNumber: 71,
 				rarity: "Uncommon",
@@ -9130,7 +9130,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-072-221",
+				id: "sfd-072/221",
 				set: "Spiritforged",
 				collectorNumber: 72,
 				rarity: "Uncommon",
@@ -9148,7 +9148,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-073-221",
+				id: "sfd-073/221",
 				set: "Spiritforged",
 				collectorNumber: 73,
 				rarity: "Uncommon",
@@ -9166,7 +9166,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-074-221",
+				id: "sfd-074/221",
 				set: "Spiritforged",
 				collectorNumber: 74,
 				rarity: "Uncommon",
@@ -9184,7 +9184,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-075-221",
+				id: "sfd-075/221",
 				set: "Spiritforged",
 				collectorNumber: 75,
 				rarity: "Uncommon",
@@ -9202,7 +9202,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-076-221",
+				id: "sfd-076/221",
 				set: "Spiritforged",
 				collectorNumber: 76,
 				rarity: "Uncommon",
@@ -9220,7 +9220,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-077-221",
+				id: "sfd-077/221",
 				set: "Spiritforged",
 				collectorNumber: 77,
 				rarity: "Uncommon",
@@ -9238,7 +9238,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-078-221",
+				id: "sfd-078/221",
 				set: "Spiritforged",
 				collectorNumber: 78,
 				rarity: "Uncommon",
@@ -9256,7 +9256,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-079-221",
+				id: "sfd-079/221",
 				set: "Spiritforged",
 				collectorNumber: 79,
 				rarity: "Rare",
@@ -9274,7 +9274,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-080-221",
+				id: "sfd-080/221",
 				set: "Spiritforged",
 				collectorNumber: 80,
 				rarity: "Rare",
@@ -9292,7 +9292,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-081-221",
+				id: "sfd-081/221",
 				set: "Spiritforged",
 				collectorNumber: 81,
 				rarity: "Rare",
@@ -9310,7 +9310,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-082a-221",
+				id: "sfd-082a/221",
 				set: "Spiritforged",
 				collectorNumber: 82,
 				rarity: "Showcase",
@@ -9328,7 +9328,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-082-221",
+				id: "sfd-082/221",
 				set: "Spiritforged",
 				collectorNumber: 82,
 				rarity: "Rare",
@@ -9346,7 +9346,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-083-221",
+				id: "sfd-083/221",
 				set: "Spiritforged",
 				collectorNumber: 83,
 				rarity: "Rare",
@@ -9364,7 +9364,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-084-221",
+				id: "sfd-084/221",
 				set: "Spiritforged",
 				collectorNumber: 84,
 				rarity: "Rare",
@@ -9382,7 +9382,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-085a-221",
+				id: "sfd-085a/221",
 				set: "Spiritforged",
 				collectorNumber: 85,
 				rarity: "Showcase",
@@ -9400,7 +9400,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-085-221",
+				id: "sfd-085/221",
 				set: "Spiritforged",
 				collectorNumber: 85,
 				rarity: "Rare",
@@ -9418,7 +9418,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-086-221",
+				id: "sfd-086/221",
 				set: "Spiritforged",
 				collectorNumber: 86,
 				rarity: "Rare",
@@ -9436,7 +9436,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-087-221",
+				id: "sfd-087/221",
 				set: "Spiritforged",
 				collectorNumber: 87,
 				rarity: "Epic",
@@ -9454,7 +9454,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-088a-221",
+				id: "sfd-088a/221",
 				set: "Spiritforged",
 				collectorNumber: 88,
 				rarity: "Showcase",
@@ -9472,7 +9472,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-088-221",
+				id: "sfd-088/221",
 				set: "Spiritforged",
 				collectorNumber: 88,
 				rarity: "Epic",
@@ -9490,7 +9490,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-089a-221",
+				id: "sfd-089a/221",
 				set: "Spiritforged",
 				collectorNumber: 89,
 				rarity: "Showcase",
@@ -9508,7 +9508,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-089-221",
+				id: "sfd-089/221",
 				set: "Spiritforged",
 				collectorNumber: 89,
 				rarity: "Epic",
@@ -9526,7 +9526,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-090-221",
+				id: "sfd-090/221",
 				set: "Spiritforged",
 				collectorNumber: 90,
 				rarity: "Epic",
@@ -9544,7 +9544,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-091-221",
+				id: "sfd-091/221",
 				set: "Spiritforged",
 				collectorNumber: 91,
 				rarity: "Common",
@@ -9562,7 +9562,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-092-221",
+				id: "sfd-092/221",
 				set: "Spiritforged",
 				collectorNumber: 92,
 				rarity: "Common",
@@ -9580,7 +9580,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-093-221",
+				id: "sfd-093/221",
 				set: "Spiritforged",
 				collectorNumber: 93,
 				rarity: "Common",
@@ -9598,7 +9598,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-094-221",
+				id: "sfd-094/221",
 				set: "Spiritforged",
 				collectorNumber: 94,
 				rarity: "Common",
@@ -9616,7 +9616,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-095-221",
+				id: "sfd-095/221",
 				set: "Spiritforged",
 				collectorNumber: 95,
 				rarity: "Common",
@@ -9634,7 +9634,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-096-221",
+				id: "sfd-096/221",
 				set: "Spiritforged",
 				collectorNumber: 96,
 				rarity: "Common",
@@ -9652,7 +9652,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-097-221",
+				id: "sfd-097/221",
 				set: "Spiritforged",
 				collectorNumber: 97,
 				rarity: "Common",
@@ -9670,7 +9670,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-098-221",
+				id: "sfd-098/221",
 				set: "Spiritforged",
 				collectorNumber: 98,
 				rarity: "Common",
@@ -9688,7 +9688,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-099-221",
+				id: "sfd-099/221",
 				set: "Spiritforged",
 				collectorNumber: 99,
 				rarity: "Common",
@@ -9706,7 +9706,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-100-221",
+				id: "sfd-100/221",
 				set: "Spiritforged",
 				collectorNumber: 100,
 				rarity: "Common",
@@ -9724,7 +9724,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-101-221",
+				id: "sfd-101/221",
 				set: "Spiritforged",
 				collectorNumber: 101,
 				rarity: "Uncommon",
@@ -9742,7 +9742,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-102-221",
+				id: "sfd-102/221",
 				set: "Spiritforged",
 				collectorNumber: 102,
 				rarity: "Uncommon",
@@ -9760,7 +9760,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-103-221",
+				id: "sfd-103/221",
 				set: "Spiritforged",
 				collectorNumber: 103,
 				rarity: "Uncommon",
@@ -9778,7 +9778,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-104-221",
+				id: "sfd-104/221",
 				set: "Spiritforged",
 				collectorNumber: 104,
 				rarity: "Uncommon",
@@ -9796,7 +9796,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-105-221",
+				id: "sfd-105/221",
 				set: "Spiritforged",
 				collectorNumber: 105,
 				rarity: "Uncommon",
@@ -9814,7 +9814,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-106-221",
+				id: "sfd-106/221",
 				set: "Spiritforged",
 				collectorNumber: 106,
 				rarity: "Uncommon",
@@ -9832,7 +9832,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-107-221",
+				id: "sfd-107/221",
 				set: "Spiritforged",
 				collectorNumber: 107,
 				rarity: "Uncommon",
@@ -9850,7 +9850,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-108-221",
+				id: "sfd-108/221",
 				set: "Spiritforged",
 				collectorNumber: 108,
 				rarity: "Uncommon",
@@ -9868,7 +9868,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-109-221",
+				id: "sfd-109/221",
 				set: "Spiritforged",
 				collectorNumber: 109,
 				rarity: "Rare",
@@ -9886,7 +9886,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-110a-221",
+				id: "sfd-110a/221",
 				set: "Spiritforged",
 				collectorNumber: 110,
 				rarity: "Showcase",
@@ -9904,7 +9904,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-110-221",
+				id: "sfd-110/221",
 				set: "Spiritforged",
 				collectorNumber: 110,
 				rarity: "Rare",
@@ -9922,7 +9922,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-111-221",
+				id: "sfd-111/221",
 				set: "Spiritforged",
 				collectorNumber: 111,
 				rarity: "Rare",
@@ -9940,7 +9940,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-112-221",
+				id: "sfd-112/221",
 				set: "Spiritforged",
 				collectorNumber: 112,
 				rarity: "Rare",
@@ -9958,7 +9958,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-113a-221",
+				id: "sfd-113a/221",
 				set: "Spiritforged",
 				collectorNumber: 113,
 				rarity: "Showcase",
@@ -9976,7 +9976,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-113-221",
+				id: "sfd-113/221",
 				set: "Spiritforged",
 				collectorNumber: 113,
 				rarity: "Rare",
@@ -9994,7 +9994,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-114-221",
+				id: "sfd-114/221",
 				set: "Spiritforged",
 				collectorNumber: 114,
 				rarity: "Rare",
@@ -10012,7 +10012,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-115-221",
+				id: "sfd-115/221",
 				set: "Spiritforged",
 				collectorNumber: 115,
 				rarity: "Rare",
@@ -10030,7 +10030,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-116-221",
+				id: "sfd-116/221",
 				set: "Spiritforged",
 				collectorNumber: 116,
 				rarity: "Rare",
@@ -10048,7 +10048,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-117-221",
+				id: "sfd-117/221",
 				set: "Spiritforged",
 				collectorNumber: 117,
 				rarity: "Epic",
@@ -10066,7 +10066,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-118-221",
+				id: "sfd-118/221",
 				set: "Spiritforged",
 				collectorNumber: 118,
 				rarity: "Epic",
@@ -10084,7 +10084,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-119a-221",
+				id: "sfd-119a/221",
 				set: "Spiritforged",
 				collectorNumber: 119,
 				rarity: "Showcase",
@@ -10102,7 +10102,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-119-221",
+				id: "sfd-119/221",
 				set: "Spiritforged",
 				collectorNumber: 119,
 				rarity: "Epic",
@@ -10120,7 +10120,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-120a-221",
+				id: "sfd-120a/221",
 				set: "Spiritforged",
 				collectorNumber: 120,
 				rarity: "Showcase",
@@ -10138,7 +10138,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-120-221",
+				id: "sfd-120/221",
 				set: "Spiritforged",
 				collectorNumber: 120,
 				rarity: "Epic",
@@ -10156,7 +10156,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-121-221",
+				id: "sfd-121/221",
 				set: "Spiritforged",
 				collectorNumber: 121,
 				rarity: "Common",
@@ -10174,7 +10174,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-122-221",
+				id: "sfd-122/221",
 				set: "Spiritforged",
 				collectorNumber: 122,
 				rarity: "Common",
@@ -10192,7 +10192,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-123-221",
+				id: "sfd-123/221",
 				set: "Spiritforged",
 				collectorNumber: 123,
 				rarity: "Common",
@@ -10210,7 +10210,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-124-221",
+				id: "sfd-124/221",
 				set: "Spiritforged",
 				collectorNumber: 124,
 				rarity: "Common",
@@ -10228,7 +10228,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-125-221",
+				id: "sfd-125/221",
 				set: "Spiritforged",
 				collectorNumber: 125,
 				rarity: "Common",
@@ -10246,7 +10246,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-126-221",
+				id: "sfd-126/221",
 				set: "Spiritforged",
 				collectorNumber: 126,
 				rarity: "Common",
@@ -10264,7 +10264,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-127-221",
+				id: "sfd-127/221",
 				set: "Spiritforged",
 				collectorNumber: 127,
 				rarity: "Common",
@@ -10282,7 +10282,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-128-221",
+				id: "sfd-128/221",
 				set: "Spiritforged",
 				collectorNumber: 128,
 				rarity: "Common",
@@ -10300,7 +10300,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-129-221",
+				id: "sfd-129/221",
 				set: "Spiritforged",
 				collectorNumber: 129,
 				rarity: "Common",
@@ -10318,7 +10318,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-130-221",
+				id: "sfd-130/221",
 				set: "Spiritforged",
 				collectorNumber: 130,
 				rarity: "Common",
@@ -10336,7 +10336,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-131-221",
+				id: "sfd-131/221",
 				set: "Spiritforged",
 				collectorNumber: 131,
 				rarity: "Uncommon",
@@ -10354,7 +10354,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-132-221",
+				id: "sfd-132/221",
 				set: "Spiritforged",
 				collectorNumber: 132,
 				rarity: "Uncommon",
@@ -10372,7 +10372,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-133-221",
+				id: "sfd-133/221",
 				set: "Spiritforged",
 				collectorNumber: 133,
 				rarity: "Uncommon",
@@ -10390,7 +10390,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-134-221",
+				id: "sfd-134/221",
 				set: "Spiritforged",
 				collectorNumber: 134,
 				rarity: "Uncommon",
@@ -10408,7 +10408,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-135-221",
+				id: "sfd-135/221",
 				set: "Spiritforged",
 				collectorNumber: 135,
 				rarity: "Uncommon",
@@ -10426,7 +10426,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-136-221",
+				id: "sfd-136/221",
 				set: "Spiritforged",
 				collectorNumber: 136,
 				rarity: "Uncommon",
@@ -10444,7 +10444,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-137-221",
+				id: "sfd-137/221",
 				set: "Spiritforged",
 				collectorNumber: 137,
 				rarity: "Uncommon",
@@ -10462,7 +10462,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-138-221",
+				id: "sfd-138/221",
 				set: "Spiritforged",
 				collectorNumber: 138,
 				rarity: "Uncommon",
@@ -10480,7 +10480,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-139-221",
+				id: "sfd-139/221",
 				set: "Spiritforged",
 				collectorNumber: 139,
 				rarity: "Rare",
@@ -10498,7 +10498,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-140-221",
+				id: "sfd-140/221",
 				set: "Spiritforged",
 				collectorNumber: 140,
 				rarity: "Rare",
@@ -10516,7 +10516,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-141a-221",
+				id: "sfd-141a/221",
 				set: "Spiritforged",
 				collectorNumber: 141,
 				rarity: "Showcase",
@@ -10534,7 +10534,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-141-221",
+				id: "sfd-141/221",
 				set: "Spiritforged",
 				collectorNumber: 141,
 				rarity: "Rare",
@@ -10552,7 +10552,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-142-221",
+				id: "sfd-142/221",
 				set: "Spiritforged",
 				collectorNumber: 142,
 				rarity: "Rare",
@@ -10570,7 +10570,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-143a-221",
+				id: "sfd-143a/221",
 				set: "Spiritforged",
 				collectorNumber: 143,
 				rarity: "Showcase",
@@ -10588,7 +10588,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-143-221",
+				id: "sfd-143/221",
 				set: "Spiritforged",
 				collectorNumber: 143,
 				rarity: "Rare",
@@ -10606,7 +10606,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-144-221",
+				id: "sfd-144/221",
 				set: "Spiritforged",
 				collectorNumber: 144,
 				rarity: "Rare",
@@ -10624,7 +10624,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-145-221",
+				id: "sfd-145/221",
 				set: "Spiritforged",
 				collectorNumber: 145,
 				rarity: "Rare",
@@ -10642,7 +10642,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-146-221",
+				id: "sfd-146/221",
 				set: "Spiritforged",
 				collectorNumber: 146,
 				rarity: "Rare",
@@ -10660,7 +10660,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-147-221",
+				id: "sfd-147/221",
 				set: "Spiritforged",
 				collectorNumber: 147,
 				rarity: "Epic",
@@ -10678,7 +10678,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-148-221",
+				id: "sfd-148/221",
 				set: "Spiritforged",
 				collectorNumber: 148,
 				rarity: "Epic",
@@ -10696,7 +10696,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-148a-221",
+				id: "sfd-148a/221",
 				set: "Spiritforged",
 				collectorNumber: 148,
 				rarity: "Showcase",
@@ -10714,7 +10714,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-149a-221",
+				id: "sfd-149a/221",
 				set: "Spiritforged",
 				collectorNumber: 149,
 				rarity: "Showcase",
@@ -10732,7 +10732,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-149-221",
+				id: "sfd-149/221",
 				set: "Spiritforged",
 				collectorNumber: 149,
 				rarity: "Epic",
@@ -10750,7 +10750,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-150-221",
+				id: "sfd-150/221",
 				set: "Spiritforged",
 				collectorNumber: 150,
 				rarity: "Epic",
@@ -10768,7 +10768,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-151-221",
+				id: "sfd-151/221",
 				set: "Spiritforged",
 				collectorNumber: 151,
 				rarity: "Common",
@@ -10786,7 +10786,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-152-221",
+				id: "sfd-152/221",
 				set: "Spiritforged",
 				collectorNumber: 152,
 				rarity: "Common",
@@ -10804,7 +10804,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-153-221",
+				id: "sfd-153/221",
 				set: "Spiritforged",
 				collectorNumber: 153,
 				rarity: "Common",
@@ -10822,7 +10822,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-154-221",
+				id: "sfd-154/221",
 				set: "Spiritforged",
 				collectorNumber: 154,
 				rarity: "Common",
@@ -10840,7 +10840,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-155-221",
+				id: "sfd-155/221",
 				set: "Spiritforged",
 				collectorNumber: 155,
 				rarity: "Common",
@@ -10858,7 +10858,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-156-221",
+				id: "sfd-156/221",
 				set: "Spiritforged",
 				collectorNumber: 156,
 				rarity: "Common",
@@ -10876,7 +10876,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-157-221",
+				id: "sfd-157/221",
 				set: "Spiritforged",
 				collectorNumber: 157,
 				rarity: "Common",
@@ -10894,7 +10894,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-158-221",
+				id: "sfd-158/221",
 				set: "Spiritforged",
 				collectorNumber: 158,
 				rarity: "Common",
@@ -10912,7 +10912,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-159-221",
+				id: "sfd-159/221",
 				set: "Spiritforged",
 				collectorNumber: 159,
 				rarity: "Common",
@@ -10930,7 +10930,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-160-221",
+				id: "sfd-160/221",
 				set: "Spiritforged",
 				collectorNumber: 160,
 				rarity: "Common",
@@ -10948,7 +10948,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-161-221",
+				id: "sfd-161/221",
 				set: "Spiritforged",
 				collectorNumber: 161,
 				rarity: "Uncommon",
@@ -10966,7 +10966,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-162-221",
+				id: "sfd-162/221",
 				set: "Spiritforged",
 				collectorNumber: 162,
 				rarity: "Uncommon",
@@ -10984,7 +10984,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-163-221",
+				id: "sfd-163/221",
 				set: "Spiritforged",
 				collectorNumber: 163,
 				rarity: "Uncommon",
@@ -11002,7 +11002,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-164-221",
+				id: "sfd-164/221",
 				set: "Spiritforged",
 				collectorNumber: 164,
 				rarity: "Uncommon",
@@ -11020,7 +11020,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-165-221",
+				id: "sfd-165/221",
 				set: "Spiritforged",
 				collectorNumber: 165,
 				rarity: "Uncommon",
@@ -11038,7 +11038,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-166-221",
+				id: "sfd-166/221",
 				set: "Spiritforged",
 				collectorNumber: 166,
 				rarity: "Uncommon",
@@ -11056,7 +11056,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-167-221",
+				id: "sfd-167/221",
 				set: "Spiritforged",
 				collectorNumber: 167,
 				rarity: "Uncommon",
@@ -11074,7 +11074,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-168-221",
+				id: "sfd-168/221",
 				set: "Spiritforged",
 				collectorNumber: 168,
 				rarity: "Uncommon",
@@ -11092,7 +11092,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-169-221",
+				id: "sfd-169/221",
 				set: "Spiritforged",
 				collectorNumber: 169,
 				rarity: "Rare",
@@ -11110,7 +11110,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-170a-221",
+				id: "sfd-170a/221",
 				set: "Spiritforged",
 				collectorNumber: 170,
 				rarity: "Showcase",
@@ -11128,7 +11128,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-170-221",
+				id: "sfd-170/221",
 				set: "Spiritforged",
 				collectorNumber: 170,
 				rarity: "Rare",
@@ -11146,7 +11146,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-171a-221",
+				id: "sfd-171a/221",
 				set: "Spiritforged",
 				collectorNumber: 171,
 				rarity: "Showcase",
@@ -11164,7 +11164,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-171-221",
+				id: "sfd-171/221",
 				set: "Spiritforged",
 				collectorNumber: 171,
 				rarity: "Rare",
@@ -11182,7 +11182,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-172-221",
+				id: "sfd-172/221",
 				set: "Spiritforged",
 				collectorNumber: 172,
 				rarity: "Rare",
@@ -11200,7 +11200,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-173-221",
+				id: "sfd-173/221",
 				set: "Spiritforged",
 				collectorNumber: 173,
 				rarity: "Rare",
@@ -11218,7 +11218,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-174-221",
+				id: "sfd-174/221",
 				set: "Spiritforged",
 				collectorNumber: 174,
 				rarity: "Rare",
@@ -11236,7 +11236,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-175-221",
+				id: "sfd-175/221",
 				set: "Spiritforged",
 				collectorNumber: 175,
 				rarity: "Rare",
@@ -11254,7 +11254,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-176-221",
+				id: "sfd-176/221",
 				set: "Spiritforged",
 				collectorNumber: 176,
 				rarity: "Rare",
@@ -11272,7 +11272,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-177-221",
+				id: "sfd-177/221",
 				set: "Spiritforged",
 				collectorNumber: 177,
 				rarity: "Epic",
@@ -11290,7 +11290,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-177a-221",
+				id: "sfd-177a/221",
 				set: "Spiritforged",
 				collectorNumber: 177,
 				rarity: "Showcase",
@@ -11308,7 +11308,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-178-221",
+				id: "sfd-178/221",
 				set: "Spiritforged",
 				collectorNumber: 178,
 				rarity: "Epic",
@@ -11326,7 +11326,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-179-221",
+				id: "sfd-179/221",
 				set: "Spiritforged",
 				collectorNumber: 179,
 				rarity: "Epic",
@@ -11344,7 +11344,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-180a-221",
+				id: "sfd-180a/221",
 				set: "Spiritforged",
 				collectorNumber: 180,
 				rarity: "Showcase",
@@ -11362,7 +11362,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-180-221",
+				id: "sfd-180/221",
 				set: "Spiritforged",
 				collectorNumber: 180,
 				rarity: "Epic",
@@ -11380,7 +11380,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-181-221",
+				id: "sfd-181/221",
 				set: "Spiritforged",
 				collectorNumber: 181,
 				rarity: "Rare",
@@ -11398,7 +11398,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-182-221",
+				id: "sfd-182/221",
 				set: "Spiritforged",
 				collectorNumber: 182,
 				rarity: "Epic",
@@ -11416,7 +11416,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-183-221",
+				id: "sfd-183/221",
 				set: "Spiritforged",
 				collectorNumber: 183,
 				rarity: "Rare",
@@ -11434,7 +11434,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-184-221",
+				id: "sfd-184/221",
 				set: "Spiritforged",
 				collectorNumber: 184,
 				rarity: "Epic",
@@ -11452,7 +11452,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-185-221",
+				id: "sfd-185/221",
 				set: "Spiritforged",
 				collectorNumber: 185,
 				rarity: "Rare",
@@ -11470,7 +11470,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-186-221",
+				id: "sfd-186/221",
 				set: "Spiritforged",
 				collectorNumber: 186,
 				rarity: "Epic",
@@ -11488,7 +11488,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-187-221",
+				id: "sfd-187/221",
 				set: "Spiritforged",
 				collectorNumber: 187,
 				rarity: "Rare",
@@ -11506,7 +11506,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-188-221",
+				id: "sfd-188/221",
 				set: "Spiritforged",
 				collectorNumber: 188,
 				rarity: "Epic",
@@ -11524,7 +11524,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-189-221",
+				id: "sfd-189/221",
 				set: "Spiritforged",
 				collectorNumber: 189,
 				rarity: "Rare",
@@ -11542,7 +11542,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-190-221",
+				id: "sfd-190/221",
 				set: "Spiritforged",
 				collectorNumber: 190,
 				rarity: "Epic",
@@ -11560,7 +11560,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-191-221",
+				id: "sfd-191/221",
 				set: "Spiritforged",
 				collectorNumber: 191,
 				rarity: "Epic",
@@ -11578,7 +11578,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-192-221",
+				id: "sfd-192/221",
 				set: "Spiritforged",
 				collectorNumber: 192,
 				rarity: "Epic",
@@ -11596,7 +11596,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-193-221",
+				id: "sfd-193/221",
 				set: "Spiritforged",
 				collectorNumber: 193,
 				rarity: "Rare",
@@ -11614,7 +11614,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-194-221",
+				id: "sfd-194/221",
 				set: "Spiritforged",
 				collectorNumber: 194,
 				rarity: "Epic",
@@ -11632,7 +11632,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-195-221",
+				id: "sfd-195/221",
 				set: "Spiritforged",
 				collectorNumber: 195,
 				rarity: "Rare",
@@ -11650,7 +11650,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-196-221",
+				id: "sfd-196/221",
 				set: "Spiritforged",
 				collectorNumber: 196,
 				rarity: "Epic",
@@ -11668,7 +11668,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-197-221",
+				id: "sfd-197/221",
 				set: "Spiritforged",
 				collectorNumber: 197,
 				rarity: "Rare",
@@ -11686,7 +11686,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-198-221",
+				id: "sfd-198/221",
 				set: "Spiritforged",
 				collectorNumber: 198,
 				rarity: "Epic",
@@ -11704,7 +11704,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-199-221",
+				id: "sfd-199/221",
 				set: "Spiritforged",
 				collectorNumber: 199,
 				rarity: "Rare",
@@ -11722,7 +11722,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-200-221",
+				id: "sfd-200/221",
 				set: "Spiritforged",
 				collectorNumber: 200,
 				rarity: "Epic",
@@ -11740,7 +11740,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-201-221",
+				id: "sfd-201/221",
 				set: "Spiritforged",
 				collectorNumber: 201,
 				rarity: "Rare",
@@ -11758,7 +11758,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-202-221",
+				id: "sfd-202/221",
 				set: "Spiritforged",
 				collectorNumber: 202,
 				rarity: "Epic",
@@ -11776,7 +11776,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-203-221",
+				id: "sfd-203/221",
 				set: "Spiritforged",
 				collectorNumber: 203,
 				rarity: "Rare",
@@ -11794,7 +11794,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-204-221",
+				id: "sfd-204/221",
 				set: "Spiritforged",
 				collectorNumber: 204,
 				rarity: "Epic",
@@ -11812,7 +11812,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-205-221",
+				id: "sfd-205/221",
 				set: "Spiritforged",
 				collectorNumber: 205,
 				rarity: "Rare",
@@ -11830,7 +11830,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-206-221",
+				id: "sfd-206/221",
 				set: "Spiritforged",
 				collectorNumber: 206,
 				rarity: "Epic",
@@ -11848,7 +11848,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-207-221",
+				id: "sfd-207/221",
 				set: "Spiritforged",
 				collectorNumber: 207,
 				rarity: "Uncommon",
@@ -11866,7 +11866,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-208-221",
+				id: "sfd-208/221",
 				set: "Spiritforged",
 				collectorNumber: 208,
 				rarity: "Uncommon",
@@ -11884,7 +11884,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-209-221",
+				id: "sfd-209/221",
 				set: "Spiritforged",
 				collectorNumber: 209,
 				rarity: "Uncommon",
@@ -11902,7 +11902,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-210-221",
+				id: "sfd-210/221",
 				set: "Spiritforged",
 				collectorNumber: 210,
 				rarity: "Uncommon",
@@ -11920,7 +11920,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-211-221",
+				id: "sfd-211/221",
 				set: "Spiritforged",
 				collectorNumber: 211,
 				rarity: "Uncommon",
@@ -11938,7 +11938,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-212-221",
+				id: "sfd-212/221",
 				set: "Spiritforged",
 				collectorNumber: 212,
 				rarity: "Uncommon",
@@ -11956,7 +11956,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-213-221",
+				id: "sfd-213/221",
 				set: "Spiritforged",
 				collectorNumber: 213,
 				rarity: "Uncommon",
@@ -11974,7 +11974,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-214-221",
+				id: "sfd-214/221",
 				set: "Spiritforged",
 				collectorNumber: 214,
 				rarity: "Uncommon",
@@ -11992,7 +11992,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-215-221",
+				id: "sfd-215/221",
 				set: "Spiritforged",
 				collectorNumber: 215,
 				rarity: "Uncommon",
@@ -12010,7 +12010,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-216-221",
+				id: "sfd-216/221",
 				set: "Spiritforged",
 				collectorNumber: 216,
 				rarity: "Uncommon",
@@ -12028,7 +12028,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-217-221",
+				id: "sfd-217/221",
 				set: "Spiritforged",
 				collectorNumber: 217,
 				rarity: "Uncommon",
@@ -12046,7 +12046,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-218-221",
+				id: "sfd-218/221",
 				set: "Spiritforged",
 				collectorNumber: 218,
 				rarity: "Uncommon",
@@ -12064,7 +12064,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-219-221",
+				id: "sfd-219/221",
 				set: "Spiritforged",
 				collectorNumber: 219,
 				rarity: "Uncommon",
@@ -12082,7 +12082,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-220-221",
+				id: "sfd-220/221",
 				set: "Spiritforged",
 				collectorNumber: 220,
 				rarity: "Uncommon",
@@ -12100,7 +12100,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-221-221",
+				id: "sfd-221/221",
 				set: "Spiritforged",
 				collectorNumber: 221,
 				rarity: "Uncommon",
@@ -12118,7 +12118,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-222-221",
+				id: "sfd-222/221",
 				set: "Spiritforged",
 				collectorNumber: 222,
 				rarity: "Showcase",
@@ -12136,7 +12136,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-223*-221",
+				id: "sfd-223*/221",
 				set: "Spiritforged",
 				collectorNumber: 223,
 				rarity: "Showcase",
@@ -12154,7 +12154,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-223-221",
+				id: "sfd-223/221",
 				set: "Spiritforged",
 				collectorNumber: 223,
 				rarity: "Showcase",
@@ -12172,7 +12172,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-224-221",
+				id: "sfd-224/221",
 				set: "Spiritforged",
 				collectorNumber: 224,
 				rarity: "Showcase",
@@ -12190,7 +12190,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-224*-221",
+				id: "sfd-224*/221",
 				set: "Spiritforged",
 				collectorNumber: 224,
 				rarity: "Showcase",
@@ -12208,7 +12208,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-225*-221",
+				id: "sfd-225*/221",
 				set: "Spiritforged",
 				collectorNumber: 225,
 				rarity: "Showcase",
@@ -12226,7 +12226,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-225-221",
+				id: "sfd-225/221",
 				set: "Spiritforged",
 				collectorNumber: 225,
 				rarity: "Showcase",
@@ -12244,7 +12244,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-226-221",
+				id: "sfd-226/221",
 				set: "Spiritforged",
 				collectorNumber: 226,
 				rarity: "Showcase",
@@ -12262,7 +12262,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-227*-221",
+				id: "sfd-227*/221",
 				set: "Spiritforged",
 				collectorNumber: 227,
 				rarity: "Showcase",
@@ -12280,7 +12280,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-227-221",
+				id: "sfd-227/221",
 				set: "Spiritforged",
 				collectorNumber: 227,
 				rarity: "Showcase",
@@ -12298,7 +12298,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-228*-221",
+				id: "sfd-228*/221",
 				set: "Spiritforged",
 				collectorNumber: 228,
 				rarity: "Showcase",
@@ -12316,7 +12316,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-228-221",
+				id: "sfd-228/221",
 				set: "Spiritforged",
 				collectorNumber: 228,
 				rarity: "Showcase",
@@ -12334,7 +12334,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-229-221",
+				id: "sfd-229/221",
 				set: "Spiritforged",
 				collectorNumber: 229,
 				rarity: "Showcase",
@@ -12352,7 +12352,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-230*-221",
+				id: "sfd-230*/221",
 				set: "Spiritforged",
 				collectorNumber: 230,
 				rarity: "Showcase",
@@ -12370,7 +12370,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-230-221",
+				id: "sfd-230/221",
 				set: "Spiritforged",
 				collectorNumber: 230,
 				rarity: "Showcase",
@@ -12388,7 +12388,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-231-221",
+				id: "sfd-231/221",
 				set: "Spiritforged",
 				collectorNumber: 231,
 				rarity: "Showcase",
@@ -12406,7 +12406,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-232*-221",
+				id: "sfd-232*/221",
 				set: "Spiritforged",
 				collectorNumber: 232,
 				rarity: "Showcase",
@@ -12424,7 +12424,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-232-221",
+				id: "sfd-232/221",
 				set: "Spiritforged",
 				collectorNumber: 232,
 				rarity: "Showcase",
@@ -12442,7 +12442,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-233*-221",
+				id: "sfd-233*/221",
 				set: "Spiritforged",
 				collectorNumber: 233,
 				rarity: "Showcase",
@@ -12460,7 +12460,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-233-221",
+				id: "sfd-233/221",
 				set: "Spiritforged",
 				collectorNumber: 233,
 				rarity: "Showcase",
@@ -12478,7 +12478,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-234-221",
+				id: "sfd-234/221",
 				set: "Spiritforged",
 				collectorNumber: 234,
 				rarity: "Showcase",
@@ -12496,7 +12496,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-235-221",
+				id: "sfd-235/221",
 				set: "Spiritforged",
 				collectorNumber: 235,
 				rarity: "Showcase",
@@ -12514,7 +12514,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-235*-221",
+				id: "sfd-235*/221",
 				set: "Spiritforged",
 				collectorNumber: 235,
 				rarity: "Showcase",
@@ -12532,7 +12532,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-236*-221",
+				id: "sfd-236*/221",
 				set: "Spiritforged",
 				collectorNumber: 236,
 				rarity: "Showcase",
@@ -12550,7 +12550,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-236-221",
+				id: "sfd-236/221",
 				set: "Spiritforged",
 				collectorNumber: 236,
 				rarity: "Showcase",
@@ -12568,7 +12568,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-237-221",
+				id: "sfd-237/221",
 				set: "Spiritforged",
 				collectorNumber: 237,
 				rarity: "Showcase",
@@ -12586,7 +12586,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-237*-221",
+				id: "sfd-237*/221",
 				set: "Spiritforged",
 				collectorNumber: 237,
 				rarity: "Showcase",
@@ -12604,7 +12604,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-238-221",
+				id: "sfd-238/221",
 				set: "Spiritforged",
 				collectorNumber: 238,
 				rarity: "Showcase",
@@ -12622,7 +12622,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-239-221",
+				id: "sfd-239/221",
 				set: "Spiritforged",
 				collectorNumber: 239,
 				rarity: "Showcase",
@@ -12640,7 +12640,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-239*-221",
+				id: "sfd-239*/221",
 				set: "Spiritforged",
 				collectorNumber: 239,
 				rarity: "Showcase",
@@ -12658,7 +12658,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-240-221",
+				id: "sfd-240/221",
 				set: "Spiritforged",
 				collectorNumber: 240,
 				rarity: "Showcase",
@@ -12676,7 +12676,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-241-221",
+				id: "sfd-241/221",
 				set: "Spiritforged",
 				collectorNumber: 241,
 				rarity: "Showcase",
@@ -12694,7 +12694,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-242-221",
+				id: "sfd-242/221",
 				set: "Spiritforged",
 				collectorNumber: 242,
 				rarity: "Showcase",
@@ -12712,7 +12712,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-243-221",
+				id: "sfd-243/221",
 				set: "Spiritforged",
 				collectorNumber: 243,
 				rarity: "Showcase",
@@ -12730,7 +12730,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-244-221",
+				id: "sfd-244/221",
 				set: "Spiritforged",
 				collectorNumber: 244,
 				rarity: "Showcase",
@@ -12748,7 +12748,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-245-221",
+				id: "sfd-245/221",
 				set: "Spiritforged",
 				collectorNumber: 245,
 				rarity: "Showcase",
@@ -12766,7 +12766,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-246-221",
+				id: "sfd-246/221",
 				set: "Spiritforged",
 				collectorNumber: 246,
 				rarity: "Showcase",
@@ -12784,7 +12784,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-247-221",
+				id: "sfd-247/221",
 				set: "Spiritforged",
 				collectorNumber: 247,
 				rarity: "Showcase",
@@ -12802,7 +12802,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-248-221",
+				id: "sfd-248/221",
 				set: "Spiritforged",
 				collectorNumber: 248,
 				rarity: "Showcase",
@@ -12820,7 +12820,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-249-221",
+				id: "sfd-249/221",
 				set: "Spiritforged",
 				collectorNumber: 249,
 				rarity: "Showcase",
@@ -12838,7 +12838,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-250-221",
+				id: "sfd-250/221",
 				set: "Spiritforged",
 				collectorNumber: 250,
 				rarity: "Showcase",
@@ -12856,7 +12856,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd-251-221",
+				id: "sfd-251/221",
 				set: "Spiritforged",
 				collectorNumber: 251,
 				rarity: "Showcase",
@@ -12880,7 +12880,7 @@ export default [
 		name: "Riftbound Judge Promotional Cards",
 		cards: [
 			{
-				id: "jdg-059-221",
+				id: "jdg-059/221",
 				set: "Riftbound Judge Promotional Cards",
 				collectorNumber: 59,
 				rarity: "Promo",
@@ -12898,7 +12898,7 @@ export default [
 				}
 			},
 			{
-				id: "jdg-087-219",
+				id: "jdg-087/219",
 				set: "Riftbound Judge Promotional Cards",
 				collectorNumber: 87,
 				rarity: "Promo",
@@ -12916,7 +12916,7 @@ export default [
 				}
 			},
 			{
-				id: "jdg-111-298",
+				id: "jdg-111/298",
 				set: "Riftbound Judge Promotional Cards",
 				collectorNumber: 111,
 				rarity: "Promo",
@@ -12940,7 +12940,7 @@ export default [
 		name: "Vendetta",
 		cards: [
 			{
-				id: "ven-001-166",
+				id: "ven-001/166",
 				set: "Vendetta",
 				collectorNumber: 1,
 				rarity: "Common",
@@ -12958,7 +12958,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-sp1-006",
+				id: "ven-sp1/006",
 				set: "Vendetta",
 				collectorNumber: 1,
 				rarity: "Epic",
@@ -13012,7 +13012,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-sp2-006",
+				id: "ven-sp2/006",
 				set: "Vendetta",
 				collectorNumber: 2,
 				rarity: "Epic",
@@ -13048,7 +13048,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-002-166",
+				id: "ven-002/166",
 				set: "Vendetta",
 				collectorNumber: 2,
 				rarity: "Common",
@@ -13084,7 +13084,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-002-166",
+				id: "ven-002/166",
 				set: "Vendetta",
 				collectorNumber: 2,
 				rarity: "Common",
@@ -13102,7 +13102,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-sp2-006",
+				id: "ven-sp2/006",
 				set: "Vendetta",
 				collectorNumber: 2,
 				rarity: "Epic",
@@ -13138,7 +13138,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-003-166",
+				id: "ven-003/166",
 				set: "Vendetta",
 				collectorNumber: 3,
 				rarity: "Common",
@@ -13174,7 +13174,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-sp3-006",
+				id: "ven-sp3/006",
 				set: "Vendetta",
 				collectorNumber: 3,
 				rarity: "Epic",
@@ -13192,7 +13192,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-sp3-006",
+				id: "ven-sp3/006",
 				set: "Vendetta",
 				collectorNumber: 3,
 				rarity: "Epic",
@@ -13210,7 +13210,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-sp4-006",
+				id: "ven-sp4/006",
 				set: "Vendetta",
 				collectorNumber: 4,
 				rarity: "Epic",
@@ -13228,7 +13228,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-004-166",
+				id: "ven-004/166",
 				set: "Vendetta",
 				collectorNumber: 4,
 				rarity: "Common",
@@ -13246,7 +13246,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-sp4-006",
+				id: "ven-sp4/006",
 				set: "Vendetta",
 				collectorNumber: 4,
 				rarity: "Epic",
@@ -13300,7 +13300,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-005-166",
+				id: "ven-005/166",
 				set: "Vendetta",
 				collectorNumber: 5,
 				rarity: "Common",
@@ -13354,7 +13354,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-sp5-006",
+				id: "ven-sp5/006",
 				set: "Vendetta",
 				collectorNumber: 5,
 				rarity: "Epic",
@@ -13372,7 +13372,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-sp5-006",
+				id: "ven-sp5/006",
 				set: "Vendetta",
 				collectorNumber: 5,
 				rarity: "Epic",
@@ -13390,7 +13390,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-sp6-006",
+				id: "ven-sp6/006",
 				set: "Vendetta",
 				collectorNumber: 6,
 				rarity: "Epic",
@@ -13408,7 +13408,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-006-166",
+				id: "ven-006/166",
 				set: "Vendetta",
 				collectorNumber: 6,
 				rarity: "Common",
@@ -13462,7 +13462,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-006-166",
+				id: "ven-006/166",
 				set: "Vendetta",
 				collectorNumber: 6,
 				rarity: "Common",
@@ -13480,7 +13480,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-sp6-006",
+				id: "ven-sp6/006",
 				set: "Vendetta",
 				collectorNumber: 6,
 				rarity: "Epic",
@@ -13498,7 +13498,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-007-166",
+				id: "ven-007/166",
 				set: "Vendetta",
 				collectorNumber: 7,
 				rarity: "Common",
@@ -13516,7 +13516,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-007-166",
+				id: "ven-007/166",
 				set: "Vendetta",
 				collectorNumber: 7,
 				rarity: "Common",
@@ -13534,7 +13534,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-008-166",
+				id: "ven-008/166",
 				set: "Vendetta",
 				collectorNumber: 8,
 				rarity: "Common",
@@ -13552,7 +13552,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-009-166",
+				id: "ven-009/166",
 				set: "Vendetta",
 				collectorNumber: 9,
 				rarity: "Uncommon",
@@ -13570,7 +13570,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-009-166",
+				id: "ven-009/166",
 				set: "Vendetta",
 				collectorNumber: 9,
 				rarity: "Uncommon",
@@ -13588,7 +13588,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-010-166",
+				id: "ven-010/166",
 				set: "Vendetta",
 				collectorNumber: 10,
 				rarity: "Uncommon",
@@ -13606,7 +13606,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-011-166",
+				id: "ven-011/166",
 				set: "Vendetta",
 				collectorNumber: 11,
 				rarity: "Uncommon",
@@ -13624,7 +13624,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-012-166",
+				id: "ven-012/166",
 				set: "Vendetta",
 				collectorNumber: 12,
 				rarity: "Uncommon",
@@ -13642,7 +13642,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-012-166",
+				id: "ven-012/166",
 				set: "Vendetta",
 				collectorNumber: 12,
 				rarity: "Uncommon",
@@ -13660,7 +13660,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-013-166",
+				id: "ven-013/166",
 				set: "Vendetta",
 				collectorNumber: 13,
 				rarity: "Uncommon",
@@ -13678,7 +13678,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-013-166",
+				id: "ven-013/166",
 				set: "Vendetta",
 				collectorNumber: 13,
 				rarity: "Uncommon",
@@ -13696,7 +13696,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-014-166",
+				id: "ven-014/166",
 				set: "Vendetta",
 				collectorNumber: 14,
 				rarity: "Uncommon",
@@ -13714,7 +13714,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-015-166",
+				id: "ven-015/166",
 				set: "Vendetta",
 				collectorNumber: 15,
 				rarity: "Rare",
@@ -13732,7 +13732,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-016-166",
+				id: "ven-016/166",
 				set: "Vendetta",
 				collectorNumber: 16,
 				rarity: "Rare",
@@ -13750,7 +13750,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-016-166",
+				id: "ven-016/166",
 				set: "Vendetta",
 				collectorNumber: 16,
 				rarity: "Rare",
@@ -13768,7 +13768,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-017-166",
+				id: "ven-017/166",
 				set: "Vendetta",
 				collectorNumber: 17,
 				rarity: "Rare",
@@ -13786,7 +13786,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-017-166",
+				id: "ven-017/166",
 				set: "Vendetta",
 				collectorNumber: 17,
 				rarity: "Rare",
@@ -13804,7 +13804,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-018-166",
+				id: "ven-018/166",
 				set: "Vendetta",
 				collectorNumber: 18,
 				rarity: "Rare",
@@ -13822,7 +13822,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-018-166",
+				id: "ven-018/166",
 				set: "Vendetta",
 				collectorNumber: 18,
 				rarity: "Rare",
@@ -13840,7 +13840,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-019a-166",
+				id: "ven-019a/166",
 				set: "Vendetta",
 				collectorNumber: 19,
 				rarity: "Rare",
@@ -13858,7 +13858,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-019-166",
+				id: "ven-019/166",
 				set: "Vendetta",
 				collectorNumber: 19,
 				rarity: "Rare",
@@ -13876,7 +13876,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-019a-166",
+				id: "ven-019a/166",
 				set: "Vendetta",
 				collectorNumber: 19,
 				rarity: "Rare",
@@ -13894,7 +13894,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-019-166",
+				id: "ven-019/166",
 				set: "Vendetta",
 				collectorNumber: 19,
 				rarity: "Rare",
@@ -13912,7 +13912,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-020-166",
+				id: "ven-020/166",
 				set: "Vendetta",
 				collectorNumber: 20,
 				rarity: "Rare",
@@ -13930,7 +13930,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-021a-166",
+				id: "ven-021a/166",
 				set: "Vendetta",
 				collectorNumber: 21,
 				rarity: "Epic",
@@ -13948,7 +13948,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-021-166",
+				id: "ven-021/166",
 				set: "Vendetta",
 				collectorNumber: 21,
 				rarity: "Epic",
@@ -13966,7 +13966,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-021-166",
+				id: "ven-021/166",
 				set: "Vendetta",
 				collectorNumber: 21,
 				rarity: "Epic",
@@ -13984,7 +13984,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-021a-166",
+				id: "ven-021a/166",
 				set: "Vendetta",
 				collectorNumber: 21,
 				rarity: "Epic",
@@ -14002,7 +14002,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-022-166",
+				id: "ven-022/166",
 				set: "Vendetta",
 				collectorNumber: 22,
 				rarity: "Epic",
@@ -14020,7 +14020,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-023a-166",
+				id: "ven-023a/166",
 				set: "Vendetta",
 				collectorNumber: 23,
 				rarity: "Epic",
@@ -14038,7 +14038,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-023-166",
+				id: "ven-023/166",
 				set: "Vendetta",
 				collectorNumber: 23,
 				rarity: "Epic",
@@ -14056,7 +14056,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-023-166",
+				id: "ven-023/166",
 				set: "Vendetta",
 				collectorNumber: 23,
 				rarity: "Epic",
@@ -14074,7 +14074,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-023a-166",
+				id: "ven-023a/166",
 				set: "Vendetta",
 				collectorNumber: 23,
 				rarity: "Epic",
@@ -14092,7 +14092,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-024-166",
+				id: "ven-024/166",
 				set: "Vendetta",
 				collectorNumber: 24,
 				rarity: "Common",
@@ -14110,7 +14110,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-025-166",
+				id: "ven-025/166",
 				set: "Vendetta",
 				collectorNumber: 25,
 				rarity: "Common",
@@ -14128,7 +14128,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-025-166",
+				id: "ven-025/166",
 				set: "Vendetta",
 				collectorNumber: 25,
 				rarity: "Common",
@@ -14146,7 +14146,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-026-166",
+				id: "ven-026/166",
 				set: "Vendetta",
 				collectorNumber: 26,
 				rarity: "Common",
@@ -14164,7 +14164,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-026-166",
+				id: "ven-026/166",
 				set: "Vendetta",
 				collectorNumber: 26,
 				rarity: "Common",
@@ -14182,7 +14182,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-027-166",
+				id: "ven-027/166",
 				set: "Vendetta",
 				collectorNumber: 27,
 				rarity: "Common",
@@ -14200,7 +14200,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-028-166",
+				id: "ven-028/166",
 				set: "Vendetta",
 				collectorNumber: 28,
 				rarity: "Common",
@@ -14218,7 +14218,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-028-166",
+				id: "ven-028/166",
 				set: "Vendetta",
 				collectorNumber: 28,
 				rarity: "Common",
@@ -14236,7 +14236,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-029-166",
+				id: "ven-029/166",
 				set: "Vendetta",
 				collectorNumber: 29,
 				rarity: "Common",
@@ -14254,7 +14254,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-029-166",
+				id: "ven-029/166",
 				set: "Vendetta",
 				collectorNumber: 29,
 				rarity: "Common",
@@ -14272,7 +14272,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-030-166",
+				id: "ven-030/166",
 				set: "Vendetta",
 				collectorNumber: 30,
 				rarity: "Common",
@@ -14290,7 +14290,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-031-166",
+				id: "ven-031/166",
 				set: "Vendetta",
 				collectorNumber: 31,
 				rarity: "Common",
@@ -14308,7 +14308,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-031-166",
+				id: "ven-031/166",
 				set: "Vendetta",
 				collectorNumber: 31,
 				rarity: "Common",
@@ -14326,7 +14326,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-032-166",
+				id: "ven-032/166",
 				set: "Vendetta",
 				collectorNumber: 32,
 				rarity: "Uncommon",
@@ -14344,7 +14344,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-033-166",
+				id: "ven-033/166",
 				set: "Vendetta",
 				collectorNumber: 33,
 				rarity: "Uncommon",
@@ -14362,7 +14362,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-034-166",
+				id: "ven-034/166",
 				set: "Vendetta",
 				collectorNumber: 34,
 				rarity: "Uncommon",
@@ -14380,7 +14380,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-035-166",
+				id: "ven-035/166",
 				set: "Vendetta",
 				collectorNumber: 35,
 				rarity: "Uncommon",
@@ -14398,7 +14398,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-036-166",
+				id: "ven-036/166",
 				set: "Vendetta",
 				collectorNumber: 36,
 				rarity: "Uncommon",
@@ -14416,7 +14416,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-037-166",
+				id: "ven-037/166",
 				set: "Vendetta",
 				collectorNumber: 37,
 				rarity: "Uncommon",
@@ -14434,7 +14434,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-037-166",
+				id: "ven-037/166",
 				set: "Vendetta",
 				collectorNumber: 37,
 				rarity: "Uncommon",
@@ -14452,7 +14452,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-038-166",
+				id: "ven-038/166",
 				set: "Vendetta",
 				collectorNumber: 38,
 				rarity: "Rare",
@@ -14470,7 +14470,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-038a-166",
+				id: "ven-038a/166",
 				set: "Vendetta",
 				collectorNumber: 38,
 				rarity: "Rare",
@@ -14488,7 +14488,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-038-166",
+				id: "ven-038/166",
 				set: "Vendetta",
 				collectorNumber: 38,
 				rarity: "Rare",
@@ -14506,7 +14506,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-038a-166",
+				id: "ven-038a/166",
 				set: "Vendetta",
 				collectorNumber: 38,
 				rarity: "Rare",
@@ -14524,7 +14524,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-039-166",
+				id: "ven-039/166",
 				set: "Vendetta",
 				collectorNumber: 39,
 				rarity: "Rare",
@@ -14542,7 +14542,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-040-166",
+				id: "ven-040/166",
 				set: "Vendetta",
 				collectorNumber: 40,
 				rarity: "Rare",
@@ -14560,7 +14560,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-041-166",
+				id: "ven-041/166",
 				set: "Vendetta",
 				collectorNumber: 41,
 				rarity: "Rare",
@@ -14578,7 +14578,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-041-166",
+				id: "ven-041/166",
 				set: "Vendetta",
 				collectorNumber: 41,
 				rarity: "Rare",
@@ -14596,7 +14596,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-042-166",
+				id: "ven-042/166",
 				set: "Vendetta",
 				collectorNumber: 42,
 				rarity: "Rare",
@@ -14614,7 +14614,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-042a-166",
+				id: "ven-042a/166",
 				set: "Vendetta",
 				collectorNumber: 42,
 				rarity: "Rare",
@@ -14632,7 +14632,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-042-166",
+				id: "ven-042/166",
 				set: "Vendetta",
 				collectorNumber: 42,
 				rarity: "Rare",
@@ -14650,7 +14650,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-042a-166",
+				id: "ven-042a/166",
 				set: "Vendetta",
 				collectorNumber: 42,
 				rarity: "Rare",
@@ -14668,7 +14668,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-043-166",
+				id: "ven-043/166",
 				set: "Vendetta",
 				collectorNumber: 43,
 				rarity: "Rare",
@@ -14686,7 +14686,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-043-166",
+				id: "ven-043/166",
 				set: "Vendetta",
 				collectorNumber: 43,
 				rarity: "Rare",
@@ -14704,7 +14704,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-044-166",
+				id: "ven-044/166",
 				set: "Vendetta",
 				collectorNumber: 44,
 				rarity: "Epic",
@@ -14722,7 +14722,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-045-166",
+				id: "ven-045/166",
 				set: "Vendetta",
 				collectorNumber: 45,
 				rarity: "Epic",
@@ -14740,7 +14740,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-046a-166",
+				id: "ven-046a/166",
 				set: "Vendetta",
 				collectorNumber: 46,
 				rarity: "Epic",
@@ -14758,7 +14758,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-046-166",
+				id: "ven-046/166",
 				set: "Vendetta",
 				collectorNumber: 46,
 				rarity: "Epic",
@@ -14776,7 +14776,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-046-166",
+				id: "ven-046/166",
 				set: "Vendetta",
 				collectorNumber: 46,
 				rarity: "Epic",
@@ -14794,7 +14794,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-046a-166",
+				id: "ven-046a/166",
 				set: "Vendetta",
 				collectorNumber: 46,
 				rarity: "Epic",
@@ -14812,7 +14812,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-047-166",
+				id: "ven-047/166",
 				set: "Vendetta",
 				collectorNumber: 47,
 				rarity: "Common",
@@ -14830,7 +14830,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-047-166",
+				id: "ven-047/166",
 				set: "Vendetta",
 				collectorNumber: 47,
 				rarity: "Common",
@@ -14848,7 +14848,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-048-166",
+				id: "ven-048/166",
 				set: "Vendetta",
 				collectorNumber: 48,
 				rarity: "Common",
@@ -14866,7 +14866,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-048-166",
+				id: "ven-048/166",
 				set: "Vendetta",
 				collectorNumber: 48,
 				rarity: "Common",
@@ -14884,7 +14884,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-049-166",
+				id: "ven-049/166",
 				set: "Vendetta",
 				collectorNumber: 49,
 				rarity: "Common",
@@ -14902,7 +14902,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-050-166",
+				id: "ven-050/166",
 				set: "Vendetta",
 				collectorNumber: 50,
 				rarity: "Common",
@@ -14920,7 +14920,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-051-166",
+				id: "ven-051/166",
 				set: "Vendetta",
 				collectorNumber: 51,
 				rarity: "Common",
@@ -14938,7 +14938,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-052-166",
+				id: "ven-052/166",
 				set: "Vendetta",
 				collectorNumber: 52,
 				rarity: "Common",
@@ -14956,7 +14956,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-052-166",
+				id: "ven-052/166",
 				set: "Vendetta",
 				collectorNumber: 52,
 				rarity: "Common",
@@ -14974,7 +14974,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-053-166",
+				id: "ven-053/166",
 				set: "Vendetta",
 				collectorNumber: 53,
 				rarity: "Uncommon",
@@ -14992,7 +14992,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-054-166",
+				id: "ven-054/166",
 				set: "Vendetta",
 				collectorNumber: 54,
 				rarity: "Common",
@@ -15010,7 +15010,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-054-166",
+				id: "ven-054/166",
 				set: "Vendetta",
 				collectorNumber: 54,
 				rarity: "Common",
@@ -15028,7 +15028,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-055-166",
+				id: "ven-055/166",
 				set: "Vendetta",
 				collectorNumber: 55,
 				rarity: "Uncommon",
@@ -15046,7 +15046,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-056-166",
+				id: "ven-056/166",
 				set: "Vendetta",
 				collectorNumber: 56,
 				rarity: "Uncommon",
@@ -15064,7 +15064,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-057-166",
+				id: "ven-057/166",
 				set: "Vendetta",
 				collectorNumber: 57,
 				rarity: "Uncommon",
@@ -15082,7 +15082,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-058-166",
+				id: "ven-058/166",
 				set: "Vendetta",
 				collectorNumber: 58,
 				rarity: "Common",
@@ -15100,7 +15100,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-058-166",
+				id: "ven-058/166",
 				set: "Vendetta",
 				collectorNumber: 58,
 				rarity: "Common",
@@ -15118,7 +15118,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-059-166",
+				id: "ven-059/166",
 				set: "Vendetta",
 				collectorNumber: 59,
 				rarity: "Uncommon",
@@ -15136,7 +15136,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-060-166",
+				id: "ven-060/166",
 				set: "Vendetta",
 				collectorNumber: 60,
 				rarity: "Uncommon",
@@ -15154,7 +15154,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-060-166",
+				id: "ven-060/166",
 				set: "Vendetta",
 				collectorNumber: 60,
 				rarity: "Uncommon",
@@ -15172,7 +15172,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-061-166",
+				id: "ven-061/166",
 				set: "Vendetta",
 				collectorNumber: 61,
 				rarity: "Rare",
@@ -15190,7 +15190,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-061-166",
+				id: "ven-061/166",
 				set: "Vendetta",
 				collectorNumber: 61,
 				rarity: "Rare",
@@ -15208,7 +15208,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-062-166",
+				id: "ven-062/166",
 				set: "Vendetta",
 				collectorNumber: 62,
 				rarity: "Rare",
@@ -15226,7 +15226,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-062-166",
+				id: "ven-062/166",
 				set: "Vendetta",
 				collectorNumber: 62,
 				rarity: "Rare",
@@ -15244,7 +15244,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-063a-166",
+				id: "ven-063a/166",
 				set: "Vendetta",
 				collectorNumber: 63,
 				rarity: "Rare",
@@ -15262,7 +15262,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-063-166",
+				id: "ven-063/166",
 				set: "Vendetta",
 				collectorNumber: 63,
 				rarity: "Rare",
@@ -15280,7 +15280,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-063a-166",
+				id: "ven-063a/166",
 				set: "Vendetta",
 				collectorNumber: 63,
 				rarity: "Rare",
@@ -15298,7 +15298,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-063-166",
+				id: "ven-063/166",
 				set: "Vendetta",
 				collectorNumber: 63,
 				rarity: "Rare",
@@ -15316,7 +15316,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-064-166",
+				id: "ven-064/166",
 				set: "Vendetta",
 				collectorNumber: 64,
 				rarity: "Rare",
@@ -15334,7 +15334,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-065-166",
+				id: "ven-065/166",
 				set: "Vendetta",
 				collectorNumber: 65,
 				rarity: "Rare",
@@ -15352,7 +15352,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-066-166",
+				id: "ven-066/166",
 				set: "Vendetta",
 				collectorNumber: 66,
 				rarity: "Rare",
@@ -15370,7 +15370,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-066-166",
+				id: "ven-066/166",
 				set: "Vendetta",
 				collectorNumber: 66,
 				rarity: "Rare",
@@ -15388,7 +15388,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-067-166",
+				id: "ven-067/166",
 				set: "Vendetta",
 				collectorNumber: 67,
 				rarity: "Epic",
@@ -15406,7 +15406,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-067-166",
+				id: "ven-067/166",
 				set: "Vendetta",
 				collectorNumber: 67,
 				rarity: "Epic",
@@ -15424,7 +15424,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-068a-166",
+				id: "ven-068a/166",
 				set: "Vendetta",
 				collectorNumber: 68,
 				rarity: "Epic",
@@ -15442,7 +15442,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-068-166",
+				id: "ven-068/166",
 				set: "Vendetta",
 				collectorNumber: 68,
 				rarity: "Epic",
@@ -15460,7 +15460,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-068-166",
+				id: "ven-068/166",
 				set: "Vendetta",
 				collectorNumber: 68,
 				rarity: "Epic",
@@ -15478,7 +15478,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-068a-166",
+				id: "ven-068a/166",
 				set: "Vendetta",
 				collectorNumber: 68,
 				rarity: "Epic",
@@ -15496,7 +15496,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-069-166",
+				id: "ven-069/166",
 				set: "Vendetta",
 				collectorNumber: 69,
 				rarity: "Epic",
@@ -15514,7 +15514,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-069a-166",
+				id: "ven-069a/166",
 				set: "Vendetta",
 				collectorNumber: 69,
 				rarity: "Epic",
@@ -15532,7 +15532,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-069a-166",
+				id: "ven-069a/166",
 				set: "Vendetta",
 				collectorNumber: 69,
 				rarity: "Epic",
@@ -15550,7 +15550,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-069-166",
+				id: "ven-069/166",
 				set: "Vendetta",
 				collectorNumber: 69,
 				rarity: "Epic",
@@ -15568,7 +15568,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-070-166",
+				id: "ven-070/166",
 				set: "Vendetta",
 				collectorNumber: 70,
 				rarity: "Common",
@@ -15586,7 +15586,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-071-166",
+				id: "ven-071/166",
 				set: "Vendetta",
 				collectorNumber: 71,
 				rarity: "Common",
@@ -15604,7 +15604,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-072-166",
+				id: "ven-072/166",
 				set: "Vendetta",
 				collectorNumber: 72,
 				rarity: "Common",
@@ -15622,7 +15622,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-073-166",
+				id: "ven-073/166",
 				set: "Vendetta",
 				collectorNumber: 73,
 				rarity: "Common",
@@ -15640,7 +15640,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-073-166",
+				id: "ven-073/166",
 				set: "Vendetta",
 				collectorNumber: 73,
 				rarity: "Common",
@@ -15658,7 +15658,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-074-166",
+				id: "ven-074/166",
 				set: "Vendetta",
 				collectorNumber: 74,
 				rarity: "Common",
@@ -15676,7 +15676,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-075-166",
+				id: "ven-075/166",
 				set: "Vendetta",
 				collectorNumber: 75,
 				rarity: "Common",
@@ -15694,7 +15694,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-076-166",
+				id: "ven-076/166",
 				set: "Vendetta",
 				collectorNumber: 76,
 				rarity: "Common",
@@ -15712,7 +15712,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-077-166",
+				id: "ven-077/166",
 				set: "Vendetta",
 				collectorNumber: 77,
 				rarity: "Common",
@@ -15730,7 +15730,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-077-166",
+				id: "ven-077/166",
 				set: "Vendetta",
 				collectorNumber: 77,
 				rarity: "Common",
@@ -15748,7 +15748,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-078-166",
+				id: "ven-078/166",
 				set: "Vendetta",
 				collectorNumber: 78,
 				rarity: "Uncommon",
@@ -15766,7 +15766,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-079-166",
+				id: "ven-079/166",
 				set: "Vendetta",
 				collectorNumber: 79,
 				rarity: "Uncommon",
@@ -15784,7 +15784,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-079-166",
+				id: "ven-079/166",
 				set: "Vendetta",
 				collectorNumber: 79,
 				rarity: "Uncommon",
@@ -15802,7 +15802,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-080-166",
+				id: "ven-080/166",
 				set: "Vendetta",
 				collectorNumber: 80,
 				rarity: "Uncommon",
@@ -15820,7 +15820,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-080-166",
+				id: "ven-080/166",
 				set: "Vendetta",
 				collectorNumber: 80,
 				rarity: "Uncommon",
@@ -15838,7 +15838,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-081-166",
+				id: "ven-081/166",
 				set: "Vendetta",
 				collectorNumber: 81,
 				rarity: "Uncommon",
@@ -15856,7 +15856,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-082-166",
+				id: "ven-082/166",
 				set: "Vendetta",
 				collectorNumber: 82,
 				rarity: "Uncommon",
@@ -15874,7 +15874,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-083-166",
+				id: "ven-083/166",
 				set: "Vendetta",
 				collectorNumber: 83,
 				rarity: "Uncommon",
@@ -15892,7 +15892,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-083-166",
+				id: "ven-083/166",
 				set: "Vendetta",
 				collectorNumber: 83,
 				rarity: "Uncommon",
@@ -15910,7 +15910,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-084a-166",
+				id: "ven-084a/166",
 				set: "Vendetta",
 				collectorNumber: 84,
 				rarity: "Rare",
@@ -15928,7 +15928,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-084-166",
+				id: "ven-084/166",
 				set: "Vendetta",
 				collectorNumber: 84,
 				rarity: "Rare",
@@ -15946,7 +15946,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-085-166",
+				id: "ven-085/166",
 				set: "Vendetta",
 				collectorNumber: 85,
 				rarity: "Rare",
@@ -15964,7 +15964,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-086-166",
+				id: "ven-086/166",
 				set: "Vendetta",
 				collectorNumber: 86,
 				rarity: "Rare",
@@ -15982,7 +15982,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-086-166",
+				id: "ven-086/166",
 				set: "Vendetta",
 				collectorNumber: 86,
 				rarity: "Rare",
@@ -16000,7 +16000,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-087-166",
+				id: "ven-087/166",
 				set: "Vendetta",
 				collectorNumber: 87,
 				rarity: "Rare",
@@ -16018,7 +16018,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-087-166",
+				id: "ven-087/166",
 				set: "Vendetta",
 				collectorNumber: 87,
 				rarity: "Rare",
@@ -16036,7 +16036,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-088a-166",
+				id: "ven-088a/166",
 				set: "Vendetta",
 				collectorNumber: 88,
 				rarity: "Rare",
@@ -16054,7 +16054,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-088-166",
+				id: "ven-088/166",
 				set: "Vendetta",
 				collectorNumber: 88,
 				rarity: "Rare",
@@ -16072,7 +16072,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-088a-166",
+				id: "ven-088a/166",
 				set: "Vendetta",
 				collectorNumber: 88,
 				rarity: "Rare",
@@ -16090,7 +16090,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-088-166",
+				id: "ven-088/166",
 				set: "Vendetta",
 				collectorNumber: 88,
 				rarity: "Rare",
@@ -16108,7 +16108,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-089-166",
+				id: "ven-089/166",
 				set: "Vendetta",
 				collectorNumber: 89,
 				rarity: "Rare",
@@ -16126,7 +16126,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-089-166",
+				id: "ven-089/166",
 				set: "Vendetta",
 				collectorNumber: 89,
 				rarity: "Rare",
@@ -16144,7 +16144,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-090-166",
+				id: "ven-090/166",
 				set: "Vendetta",
 				collectorNumber: 90,
 				rarity: "Epic",
@@ -16162,7 +16162,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-091-166",
+				id: "ven-091/166",
 				set: "Vendetta",
 				collectorNumber: 91,
 				rarity: "Epic",
@@ -16180,7 +16180,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-091-166",
+				id: "ven-091/166",
 				set: "Vendetta",
 				collectorNumber: 91,
 				rarity: "Epic",
@@ -16198,7 +16198,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-092a-166",
+				id: "ven-092a/166",
 				set: "Vendetta",
 				collectorNumber: 92,
 				rarity: "Epic",
@@ -16216,7 +16216,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-092-166",
+				id: "ven-092/166",
 				set: "Vendetta",
 				collectorNumber: 92,
 				rarity: "Epic",
@@ -16234,7 +16234,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-093-166",
+				id: "ven-093/166",
 				set: "Vendetta",
 				collectorNumber: 93,
 				rarity: "Common",
@@ -16252,7 +16252,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-093-166",
+				id: "ven-093/166",
 				set: "Vendetta",
 				collectorNumber: 93,
 				rarity: "Common",
@@ -16270,7 +16270,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-094-166",
+				id: "ven-094/166",
 				set: "Vendetta",
 				collectorNumber: 94,
 				rarity: "Uncommon",
@@ -16288,7 +16288,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-095-166",
+				id: "ven-095/166",
 				set: "Vendetta",
 				collectorNumber: 95,
 				rarity: "Common",
@@ -16306,7 +16306,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-095-166",
+				id: "ven-095/166",
 				set: "Vendetta",
 				collectorNumber: 95,
 				rarity: "Common",
@@ -16324,7 +16324,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-096-166",
+				id: "ven-096/166",
 				set: "Vendetta",
 				collectorNumber: 96,
 				rarity: "Common",
@@ -16342,7 +16342,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-097-166",
+				id: "ven-097/166",
 				set: "Vendetta",
 				collectorNumber: 97,
 				rarity: "Common",
@@ -16360,7 +16360,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-098-166",
+				id: "ven-098/166",
 				set: "Vendetta",
 				collectorNumber: 98,
 				rarity: "Common",
@@ -16378,7 +16378,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-099-166",
+				id: "ven-099/166",
 				set: "Vendetta",
 				collectorNumber: 99,
 				rarity: "Common",
@@ -16396,7 +16396,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-100-166",
+				id: "ven-100/166",
 				set: "Vendetta",
 				collectorNumber: 100,
 				rarity: "Common",
@@ -16414,7 +16414,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-101-166",
+				id: "ven-101/166",
 				set: "Vendetta",
 				collectorNumber: 101,
 				rarity: "Uncommon",
@@ -16432,7 +16432,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-101-166",
+				id: "ven-101/166",
 				set: "Vendetta",
 				collectorNumber: 101,
 				rarity: "Uncommon",
@@ -16450,7 +16450,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-102-166",
+				id: "ven-102/166",
 				set: "Vendetta",
 				collectorNumber: 102,
 				rarity: "Common",
@@ -16468,7 +16468,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-102-166",
+				id: "ven-102/166",
 				set: "Vendetta",
 				collectorNumber: 102,
 				rarity: "Common",
@@ -16486,7 +16486,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-103-166",
+				id: "ven-103/166",
 				set: "Vendetta",
 				collectorNumber: 103,
 				rarity: "Uncommon",
@@ -16504,7 +16504,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-103-166",
+				id: "ven-103/166",
 				set: "Vendetta",
 				collectorNumber: 103,
 				rarity: "Uncommon",
@@ -16522,7 +16522,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-104-166",
+				id: "ven-104/166",
 				set: "Vendetta",
 				collectorNumber: 104,
 				rarity: "Uncommon",
@@ -16540,7 +16540,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-105-166",
+				id: "ven-105/166",
 				set: "Vendetta",
 				collectorNumber: 105,
 				rarity: "Uncommon",
@@ -16558,7 +16558,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-106-166",
+				id: "ven-106/166",
 				set: "Vendetta",
 				collectorNumber: 106,
 				rarity: "Uncommon",
@@ -16576,7 +16576,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-106-166",
+				id: "ven-106/166",
 				set: "Vendetta",
 				collectorNumber: 106,
 				rarity: "Uncommon",
@@ -16594,7 +16594,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-107-166",
+				id: "ven-107/166",
 				set: "Vendetta",
 				collectorNumber: 107,
 				rarity: "Rare",
@@ -16612,7 +16612,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-107-166",
+				id: "ven-107/166",
 				set: "Vendetta",
 				collectorNumber: 107,
 				rarity: "Rare",
@@ -16630,7 +16630,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-108-166",
+				id: "ven-108/166",
 				set: "Vendetta",
 				collectorNumber: 108,
 				rarity: "Rare",
@@ -16648,7 +16648,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-109-166",
+				id: "ven-109/166",
 				set: "Vendetta",
 				collectorNumber: 109,
 				rarity: "Rare",
@@ -16666,7 +16666,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-109-166",
+				id: "ven-109/166",
 				set: "Vendetta",
 				collectorNumber: 109,
 				rarity: "Rare",
@@ -16684,7 +16684,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-110-166",
+				id: "ven-110/166",
 				set: "Vendetta",
 				collectorNumber: 110,
 				rarity: "Rare",
@@ -16702,7 +16702,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-110a-166",
+				id: "ven-110a/166",
 				set: "Vendetta",
 				collectorNumber: 110,
 				rarity: "Rare",
@@ -16720,7 +16720,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-110-166",
+				id: "ven-110/166",
 				set: "Vendetta",
 				collectorNumber: 110,
 				rarity: "Rare",
@@ -16738,7 +16738,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-110a-166",
+				id: "ven-110a/166",
 				set: "Vendetta",
 				collectorNumber: 110,
 				rarity: "Rare",
@@ -16756,7 +16756,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-111-166",
+				id: "ven-111/166",
 				set: "Vendetta",
 				collectorNumber: 111,
 				rarity: "Rare",
@@ -16774,7 +16774,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-112a-166",
+				id: "ven-112a/166",
 				set: "Vendetta",
 				collectorNumber: 112,
 				rarity: "Rare",
@@ -16792,7 +16792,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-112-166",
+				id: "ven-112/166",
 				set: "Vendetta",
 				collectorNumber: 112,
 				rarity: "Rare",
@@ -16810,7 +16810,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-112-166",
+				id: "ven-112/166",
 				set: "Vendetta",
 				collectorNumber: 112,
 				rarity: "Rare",
@@ -16828,7 +16828,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-112a-166",
+				id: "ven-112a/166",
 				set: "Vendetta",
 				collectorNumber: 112,
 				rarity: "Rare",
@@ -16846,7 +16846,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-113-166",
+				id: "ven-113/166",
 				set: "Vendetta",
 				collectorNumber: 113,
 				rarity: "Epic",
@@ -16864,7 +16864,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-113a-166",
+				id: "ven-113a/166",
 				set: "Vendetta",
 				collectorNumber: 113,
 				rarity: "Epic",
@@ -16882,7 +16882,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-113-166",
+				id: "ven-113/166",
 				set: "Vendetta",
 				collectorNumber: 113,
 				rarity: "Epic",
@@ -16900,7 +16900,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-114-166",
+				id: "ven-114/166",
 				set: "Vendetta",
 				collectorNumber: 114,
 				rarity: "Epic",
@@ -16918,7 +16918,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-115-166",
+				id: "ven-115/166",
 				set: "Vendetta",
 				collectorNumber: 115,
 				rarity: "Epic",
@@ -16936,7 +16936,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-115-166",
+				id: "ven-115/166",
 				set: "Vendetta",
 				collectorNumber: 115,
 				rarity: "Epic",
@@ -16954,7 +16954,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-116-166",
+				id: "ven-116/166",
 				set: "Vendetta",
 				collectorNumber: 116,
 				rarity: "Uncommon",
@@ -16972,7 +16972,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-117-166",
+				id: "ven-117/166",
 				set: "Vendetta",
 				collectorNumber: 117,
 				rarity: "Common",
@@ -16990,7 +16990,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-118-166",
+				id: "ven-118/166",
 				set: "Vendetta",
 				collectorNumber: 118,
 				rarity: "Common",
@@ -17008,7 +17008,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-118-166",
+				id: "ven-118/166",
 				set: "Vendetta",
 				collectorNumber: 118,
 				rarity: "Common",
@@ -17026,7 +17026,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-119-166",
+				id: "ven-119/166",
 				set: "Vendetta",
 				collectorNumber: 119,
 				rarity: "Common",
@@ -17044,7 +17044,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-119-166",
+				id: "ven-119/166",
 				set: "Vendetta",
 				collectorNumber: 119,
 				rarity: "Common",
@@ -17062,7 +17062,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-120-166",
+				id: "ven-120/166",
 				set: "Vendetta",
 				collectorNumber: 120,
 				rarity: "Common",
@@ -17080,7 +17080,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-121-166",
+				id: "ven-121/166",
 				set: "Vendetta",
 				collectorNumber: 121,
 				rarity: "Common",
@@ -17098,7 +17098,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-121-166",
+				id: "ven-121/166",
 				set: "Vendetta",
 				collectorNumber: 121,
 				rarity: "Common",
@@ -17116,7 +17116,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-122-166",
+				id: "ven-122/166",
 				set: "Vendetta",
 				collectorNumber: 122,
 				rarity: "Common",
@@ -17134,7 +17134,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-123-166",
+				id: "ven-123/166",
 				set: "Vendetta",
 				collectorNumber: 123,
 				rarity: "Common",
@@ -17152,7 +17152,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-124-166",
+				id: "ven-124/166",
 				set: "Vendetta",
 				collectorNumber: 124,
 				rarity: "Uncommon",
@@ -17170,7 +17170,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-125-166",
+				id: "ven-125/166",
 				set: "Vendetta",
 				collectorNumber: 125,
 				rarity: "Uncommon",
@@ -17188,7 +17188,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-126-166",
+				id: "ven-126/166",
 				set: "Vendetta",
 				collectorNumber: 126,
 				rarity: "Uncommon",
@@ -17206,7 +17206,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-126-166",
+				id: "ven-126/166",
 				set: "Vendetta",
 				collectorNumber: 126,
 				rarity: "Uncommon",
@@ -17224,7 +17224,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-127-166",
+				id: "ven-127/166",
 				set: "Vendetta",
 				collectorNumber: 127,
 				rarity: "Common",
@@ -17242,7 +17242,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-127-166",
+				id: "ven-127/166",
 				set: "Vendetta",
 				collectorNumber: 127,
 				rarity: "Common",
@@ -17260,7 +17260,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-128-166",
+				id: "ven-128/166",
 				set: "Vendetta",
 				collectorNumber: 128,
 				rarity: "Uncommon",
@@ -17278,7 +17278,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-129-166",
+				id: "ven-129/166",
 				set: "Vendetta",
 				collectorNumber: 129,
 				rarity: "Uncommon",
@@ -17296,7 +17296,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-129-166",
+				id: "ven-129/166",
 				set: "Vendetta",
 				collectorNumber: 129,
 				rarity: "Uncommon",
@@ -17314,7 +17314,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-130-166",
+				id: "ven-130/166",
 				set: "Vendetta",
 				collectorNumber: 130,
 				rarity: "Rare",
@@ -17332,7 +17332,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-131-166",
+				id: "ven-131/166",
 				set: "Vendetta",
 				collectorNumber: 131,
 				rarity: "Rare",
@@ -17350,7 +17350,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-132-166",
+				id: "ven-132/166",
 				set: "Vendetta",
 				collectorNumber: 132,
 				rarity: "Rare",
@@ -17368,7 +17368,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-133-166",
+				id: "ven-133/166",
 				set: "Vendetta",
 				collectorNumber: 133,
 				rarity: "Rare",
@@ -17386,7 +17386,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-133-166",
+				id: "ven-133/166",
 				set: "Vendetta",
 				collectorNumber: 133,
 				rarity: "Rare",
@@ -17404,7 +17404,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-134-166",
+				id: "ven-134/166",
 				set: "Vendetta",
 				collectorNumber: 134,
 				rarity: "Rare",
@@ -17422,7 +17422,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-135-166",
+				id: "ven-135/166",
 				set: "Vendetta",
 				collectorNumber: 135,
 				rarity: "Rare",
@@ -17440,7 +17440,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-135a-166",
+				id: "ven-135a/166",
 				set: "Vendetta",
 				collectorNumber: 135,
 				rarity: "Rare",
@@ -17458,7 +17458,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-135a-166",
+				id: "ven-135a/166",
 				set: "Vendetta",
 				collectorNumber: 135,
 				rarity: "Rare",
@@ -17476,7 +17476,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-135-166",
+				id: "ven-135/166",
 				set: "Vendetta",
 				collectorNumber: 135,
 				rarity: "Rare",
@@ -17494,7 +17494,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-136-166",
+				id: "ven-136/166",
 				set: "Vendetta",
 				collectorNumber: 136,
 				rarity: "Epic",
@@ -17512,7 +17512,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-136a-166",
+				id: "ven-136a/166",
 				set: "Vendetta",
 				collectorNumber: 136,
 				rarity: "Epic",
@@ -17530,7 +17530,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-136a-166",
+				id: "ven-136a/166",
 				set: "Vendetta",
 				collectorNumber: 136,
 				rarity: "Epic",
@@ -17548,7 +17548,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-136-166",
+				id: "ven-136/166",
 				set: "Vendetta",
 				collectorNumber: 136,
 				rarity: "Epic",
@@ -17566,7 +17566,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-137-166",
+				id: "ven-137/166",
 				set: "Vendetta",
 				collectorNumber: 137,
 				rarity: "Epic",
@@ -17584,7 +17584,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-137-166",
+				id: "ven-137/166",
 				set: "Vendetta",
 				collectorNumber: 137,
 				rarity: "Epic",
@@ -17602,7 +17602,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-138-166",
+				id: "ven-138/166",
 				set: "Vendetta",
 				collectorNumber: 138,
 				rarity: "Epic",
@@ -17620,7 +17620,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-138a-166",
+				id: "ven-138a/166",
 				set: "Vendetta",
 				collectorNumber: 138,
 				rarity: "Epic",
@@ -17638,7 +17638,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-138a-166",
+				id: "ven-138a/166",
 				set: "Vendetta",
 				collectorNumber: 138,
 				rarity: "Epic",
@@ -17656,7 +17656,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-138-166",
+				id: "ven-138/166",
 				set: "Vendetta",
 				collectorNumber: 138,
 				rarity: "Epic",
@@ -17674,7 +17674,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-139-166",
+				id: "ven-139/166",
 				set: "Vendetta",
 				collectorNumber: 139,
 				rarity: "Rare",
@@ -17692,7 +17692,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-139-166",
+				id: "ven-139/166",
 				set: "Vendetta",
 				collectorNumber: 139,
 				rarity: "Rare",
@@ -17710,7 +17710,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-140-166",
+				id: "ven-140/166",
 				set: "Vendetta",
 				collectorNumber: 140,
 				rarity: "Epic",
@@ -17728,7 +17728,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-140-166",
+				id: "ven-140/166",
 				set: "Vendetta",
 				collectorNumber: 140,
 				rarity: "Epic",
@@ -17746,7 +17746,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-141-166",
+				id: "ven-141/166",
 				set: "Vendetta",
 				collectorNumber: 141,
 				rarity: "Rare",
@@ -17764,7 +17764,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-141-166",
+				id: "ven-141/166",
 				set: "Vendetta",
 				collectorNumber: 141,
 				rarity: "Rare",
@@ -17782,7 +17782,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-142-166",
+				id: "ven-142/166",
 				set: "Vendetta",
 				collectorNumber: 142,
 				rarity: "Epic",
@@ -17800,7 +17800,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-142-166",
+				id: "ven-142/166",
 				set: "Vendetta",
 				collectorNumber: 142,
 				rarity: "Epic",
@@ -17818,7 +17818,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-143-166",
+				id: "ven-143/166",
 				set: "Vendetta",
 				collectorNumber: 143,
 				rarity: "Rare",
@@ -17836,7 +17836,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-143-166",
+				id: "ven-143/166",
 				set: "Vendetta",
 				collectorNumber: 143,
 				rarity: "Rare",
@@ -17854,7 +17854,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-144-166",
+				id: "ven-144/166",
 				set: "Vendetta",
 				collectorNumber: 144,
 				rarity: "Epic",
@@ -17872,7 +17872,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-144-166",
+				id: "ven-144/166",
 				set: "Vendetta",
 				collectorNumber: 144,
 				rarity: "Epic",
@@ -17890,7 +17890,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-145-166",
+				id: "ven-145/166",
 				set: "Vendetta",
 				collectorNumber: 145,
 				rarity: "Rare",
@@ -17908,7 +17908,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-145-166",
+				id: "ven-145/166",
 				set: "Vendetta",
 				collectorNumber: 145,
 				rarity: "Rare",
@@ -17926,7 +17926,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-146-166",
+				id: "ven-146/166",
 				set: "Vendetta",
 				collectorNumber: 146,
 				rarity: "Epic",
@@ -17944,7 +17944,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-146-166",
+				id: "ven-146/166",
 				set: "Vendetta",
 				collectorNumber: 146,
 				rarity: "Epic",
@@ -17962,7 +17962,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-147-166",
+				id: "ven-147/166",
 				set: "Vendetta",
 				collectorNumber: 147,
 				rarity: "Rare",
@@ -17980,7 +17980,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-147-166",
+				id: "ven-147/166",
 				set: "Vendetta",
 				collectorNumber: 147,
 				rarity: "Rare",
@@ -17998,7 +17998,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-148-166",
+				id: "ven-148/166",
 				set: "Vendetta",
 				collectorNumber: 148,
 				rarity: "Epic",
@@ -18016,7 +18016,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-149-166",
+				id: "ven-149/166",
 				set: "Vendetta",
 				collectorNumber: 149,
 				rarity: "Rare",
@@ -18034,7 +18034,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-149-166",
+				id: "ven-149/166",
 				set: "Vendetta",
 				collectorNumber: 149,
 				rarity: "Rare",
@@ -18052,7 +18052,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-150-166",
+				id: "ven-150/166",
 				set: "Vendetta",
 				collectorNumber: 150,
 				rarity: "Epic",
@@ -18070,7 +18070,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-151-166",
+				id: "ven-151/166",
 				set: "Vendetta",
 				collectorNumber: 151,
 				rarity: "Rare",
@@ -18088,7 +18088,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-151-166",
+				id: "ven-151/166",
 				set: "Vendetta",
 				collectorNumber: 151,
 				rarity: "Rare",
@@ -18106,7 +18106,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-152-166",
+				id: "ven-152/166",
 				set: "Vendetta",
 				collectorNumber: 152,
 				rarity: "Epic",
@@ -18124,7 +18124,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-152-166",
+				id: "ven-152/166",
 				set: "Vendetta",
 				collectorNumber: 152,
 				rarity: "Epic",
@@ -18142,7 +18142,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-153-166",
+				id: "ven-153/166",
 				set: "Vendetta",
 				collectorNumber: 153,
 				rarity: "Rare",
@@ -18160,7 +18160,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-153-166",
+				id: "ven-153/166",
 				set: "Vendetta",
 				collectorNumber: 153,
 				rarity: "Rare",
@@ -18178,7 +18178,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-154-166",
+				id: "ven-154/166",
 				set: "Vendetta",
 				collectorNumber: 154,
 				rarity: "Epic",
@@ -18196,7 +18196,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-155-166",
+				id: "ven-155/166",
 				set: "Vendetta",
 				collectorNumber: 155,
 				rarity: "Rare",
@@ -18214,7 +18214,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-155-166",
+				id: "ven-155/166",
 				set: "Vendetta",
 				collectorNumber: 155,
 				rarity: "Rare",
@@ -18232,7 +18232,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-156-166",
+				id: "ven-156/166",
 				set: "Vendetta",
 				collectorNumber: 156,
 				rarity: "Epic",
@@ -18250,7 +18250,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-156-166",
+				id: "ven-156/166",
 				set: "Vendetta",
 				collectorNumber: 156,
 				rarity: "Epic",
@@ -18268,7 +18268,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-157-166",
+				id: "ven-157/166",
 				set: "Vendetta",
 				collectorNumber: 157,
 				rarity: "Uncommon",
@@ -18286,7 +18286,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-158-166",
+				id: "ven-158/166",
 				set: "Vendetta",
 				collectorNumber: 158,
 				rarity: "Uncommon",
@@ -18304,7 +18304,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-158-166",
+				id: "ven-158/166",
 				set: "Vendetta",
 				collectorNumber: 158,
 				rarity: "Uncommon",
@@ -18322,7 +18322,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-159-166",
+				id: "ven-159/166",
 				set: "Vendetta",
 				collectorNumber: 159,
 				rarity: "Uncommon",
@@ -18340,7 +18340,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-160-166",
+				id: "ven-160/166",
 				set: "Vendetta",
 				collectorNumber: 160,
 				rarity: "Uncommon",
@@ -18358,7 +18358,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-161-166",
+				id: "ven-161/166",
 				set: "Vendetta",
 				collectorNumber: 161,
 				rarity: "Uncommon",
@@ -18376,7 +18376,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-161-166",
+				id: "ven-161/166",
 				set: "Vendetta",
 				collectorNumber: 161,
 				rarity: "Uncommon",
@@ -18394,7 +18394,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-162-166",
+				id: "ven-162/166",
 				set: "Vendetta",
 				collectorNumber: 162,
 				rarity: "Uncommon",
@@ -18412,7 +18412,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-163-166",
+				id: "ven-163/166",
 				set: "Vendetta",
 				collectorNumber: 163,
 				rarity: "Uncommon",
@@ -18430,7 +18430,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-163-166",
+				id: "ven-163/166",
 				set: "Vendetta",
 				collectorNumber: 163,
 				rarity: "Uncommon",
@@ -18448,7 +18448,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-164-166",
+				id: "ven-164/166",
 				set: "Vendetta",
 				collectorNumber: 164,
 				rarity: "Uncommon",
@@ -18466,7 +18466,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-164-166",
+				id: "ven-164/166",
 				set: "Vendetta",
 				collectorNumber: 164,
 				rarity: "Uncommon",
@@ -18484,7 +18484,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-165-166",
+				id: "ven-165/166",
 				set: "Vendetta",
 				collectorNumber: 165,
 				rarity: "Uncommon",
@@ -18502,7 +18502,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-166-166",
+				id: "ven-166/166",
 				set: "Vendetta",
 				collectorNumber: 166,
 				rarity: "Uncommon",
@@ -18520,7 +18520,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-167-166",
+				id: "ven-167/166",
 				set: "Vendetta",
 				collectorNumber: 167,
 				rarity: "Rare",
@@ -18538,7 +18538,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-167-166",
+				id: "ven-167/166",
 				set: "Vendetta",
 				collectorNumber: 167,
 				rarity: "Rare",
@@ -18556,7 +18556,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-168-166",
+				id: "ven-168/166",
 				set: "Vendetta",
 				collectorNumber: 168,
 				rarity: "Rare",
@@ -18574,7 +18574,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-168-166",
+				id: "ven-168/166",
 				set: "Vendetta",
 				collectorNumber: 168,
 				rarity: "Rare",
@@ -18592,7 +18592,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-169-166",
+				id: "ven-169/166",
 				set: "Vendetta",
 				collectorNumber: 169,
 				rarity: "Epic",
@@ -18610,7 +18610,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-169-166",
+				id: "ven-169/166",
 				set: "Vendetta",
 				collectorNumber: 169,
 				rarity: "Epic",
@@ -18628,7 +18628,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-170-166",
+				id: "ven-170/166",
 				set: "Vendetta",
 				collectorNumber: 170,
 				rarity: "Rare",
@@ -18646,7 +18646,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-171-166",
+				id: "ven-171/166",
 				set: "Vendetta",
 				collectorNumber: 171,
 				rarity: "Rare",
@@ -18664,7 +18664,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-172-166",
+				id: "ven-172/166",
 				set: "Vendetta",
 				collectorNumber: 172,
 				rarity: "Rare",
@@ -18682,7 +18682,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-173-166",
+				id: "ven-173/166",
 				set: "Vendetta",
 				collectorNumber: 173,
 				rarity: "Rare",
@@ -18700,7 +18700,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-174-166",
+				id: "ven-174/166",
 				set: "Vendetta",
 				collectorNumber: 174,
 				rarity: "Epic",
@@ -18718,7 +18718,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-175-166",
+				id: "ven-175/166",
 				set: "Vendetta",
 				collectorNumber: 175,
 				rarity: "Rare",
@@ -18736,7 +18736,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-175-166",
+				id: "ven-175/166",
 				set: "Vendetta",
 				collectorNumber: 175,
 				rarity: "Rare",
@@ -18754,7 +18754,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-176-166",
+				id: "ven-176/166",
 				set: "Vendetta",
 				collectorNumber: 176,
 				rarity: "Rare",
@@ -18772,7 +18772,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-176-166",
+				id: "ven-176/166",
 				set: "Vendetta",
 				collectorNumber: 176,
 				rarity: "Rare",
@@ -18790,7 +18790,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-177-166",
+				id: "ven-177/166",
 				set: "Vendetta",
 				collectorNumber: 177,
 				rarity: "Epic",
@@ -18808,7 +18808,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-178-166",
+				id: "ven-178/166",
 				set: "Vendetta",
 				collectorNumber: 178,
 				rarity: "Rare",
@@ -18826,7 +18826,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-179-166",
+				id: "ven-179/166",
 				set: "Vendetta",
 				collectorNumber: 179,
 				rarity: "Epic",
@@ -18844,7 +18844,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-179-166",
+				id: "ven-179/166",
 				set: "Vendetta",
 				collectorNumber: 179,
 				rarity: "Epic",
@@ -18862,7 +18862,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-180-166",
+				id: "ven-180/166",
 				set: "Vendetta",
 				collectorNumber: 180,
 				rarity: "Epic",
@@ -18880,7 +18880,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-180-166",
+				id: "ven-180/166",
 				set: "Vendetta",
 				collectorNumber: 180,
 				rarity: "Epic",
@@ -18898,7 +18898,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-181-166",
+				id: "ven-181/166",
 				set: "Vendetta",
 				collectorNumber: 181,
 				rarity: "Rare",
@@ -18916,7 +18916,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-181-166",
+				id: "ven-181/166",
 				set: "Vendetta",
 				collectorNumber: 181,
 				rarity: "Rare",
@@ -18934,7 +18934,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-182-166",
+				id: "ven-182/166",
 				set: "Vendetta",
 				collectorNumber: 182,
 				rarity: "Rare",
@@ -18952,7 +18952,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-182-166",
+				id: "ven-182/166",
 				set: "Vendetta",
 				collectorNumber: 182,
 				rarity: "Rare",
@@ -18970,7 +18970,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-183-166",
+				id: "ven-183/166",
 				set: "Vendetta",
 				collectorNumber: 183,
 				rarity: "Epic",
@@ -18988,7 +18988,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-184-166",
+				id: "ven-184/166",
 				set: "Vendetta",
 				collectorNumber: 184,
 				rarity: "Rare",
@@ -19006,7 +19006,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-185-166",
+				id: "ven-185/166",
 				set: "Vendetta",
 				collectorNumber: 185,
 				rarity: "Rare",
@@ -19024,7 +19024,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-186-166",
+				id: "ven-186/166",
 				set: "Vendetta",
 				collectorNumber: 186,
 				rarity: "Rare",
@@ -19042,7 +19042,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-187-166",
+				id: "ven-187/166",
 				set: "Vendetta",
 				collectorNumber: 187,
 				rarity: "Epic",
@@ -19060,7 +19060,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-188-166",
+				id: "ven-188/166",
 				set: "Vendetta",
 				collectorNumber: 188,
 				rarity: "Rare",
@@ -19078,7 +19078,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-189-166",
+				id: "ven-189/166",
 				set: "Vendetta",
 				collectorNumber: 189,
 				rarity: "Rare",
@@ -19096,7 +19096,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-189-166",
+				id: "ven-189/166",
 				set: "Vendetta",
 				collectorNumber: 189,
 				rarity: "Rare",
@@ -19114,7 +19114,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-190-166",
+				id: "ven-190/166",
 				set: "Vendetta",
 				collectorNumber: 190,
 				rarity: "Rare",
@@ -19132,7 +19132,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-190-166",
+				id: "ven-190/166",
 				set: "Vendetta",
 				collectorNumber: 190,
 				rarity: "Rare",
@@ -19150,7 +19150,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-191-166",
+				id: "ven-191/166",
 				set: "Vendetta",
 				collectorNumber: 191,
 				rarity: "Rare",
@@ -19168,7 +19168,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-191-166",
+				id: "ven-191/166",
 				set: "Vendetta",
 				collectorNumber: 191,
 				rarity: "Rare",
@@ -19186,7 +19186,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-192-166",
+				id: "ven-192/166",
 				set: "Vendetta",
 				collectorNumber: 192,
 				rarity: "Rare",
@@ -19204,7 +19204,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-192-166",
+				id: "ven-192/166",
 				set: "Vendetta",
 				collectorNumber: 192,
 				rarity: "Rare",
@@ -19222,7 +19222,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-193-166",
+				id: "ven-193/166",
 				set: "Vendetta",
 				collectorNumber: 193,
 				rarity: "Rare",
@@ -19240,7 +19240,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-193-166",
+				id: "ven-193/166",
 				set: "Vendetta",
 				collectorNumber: 193,
 				rarity: "Rare",
@@ -19258,7 +19258,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-194-166",
+				id: "ven-194/166",
 				set: "Vendetta",
 				collectorNumber: 194,
 				rarity: "Rare",
@@ -19276,7 +19276,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-195-166",
+				id: "ven-195/166",
 				set: "Vendetta",
 				collectorNumber: 195,
 				rarity: "Rare",
@@ -19294,7 +19294,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-195-166",
+				id: "ven-195/166",
 				set: "Vendetta",
 				collectorNumber: 195,
 				rarity: "Rare",
@@ -19312,7 +19312,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-196-166",
+				id: "ven-196/166",
 				set: "Vendetta",
 				collectorNumber: 196,
 				rarity: "Rare",
@@ -19330,7 +19330,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-196-166",
+				id: "ven-196/166",
 				set: "Vendetta",
 				collectorNumber: 196,
 				rarity: "Rare",
@@ -19348,7 +19348,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-197-166",
+				id: "ven-197/166",
 				set: "Vendetta",
 				collectorNumber: 197,
 				rarity: "Rare",
@@ -19366,7 +19366,7 @@ export default [
 				}
 			},
 			{
-				id: "ven-197-166",
+				id: "ven-197/166",
 				set: "Vendetta",
 				collectorNumber: 197,
 				rarity: "Rare",
@@ -19390,7 +19390,7 @@ export default [
 		name: "Origins",
 		cards: [
 			{
-				id: "ogn-001-298",
+				id: "ogn-001/298",
 				set: "Origins",
 				collectorNumber: 1,
 				rarity: "Common",
@@ -19408,7 +19408,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-002-298",
+				id: "ogn-002/298",
 				set: "Origins",
 				collectorNumber: 2,
 				rarity: "Common",
@@ -19426,7 +19426,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-003-298",
+				id: "ogn-003/298",
 				set: "Origins",
 				collectorNumber: 3,
 				rarity: "Common",
@@ -19444,7 +19444,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-004-298",
+				id: "ogn-004/298",
 				set: "Origins",
 				collectorNumber: 4,
 				rarity: "Common",
@@ -19462,7 +19462,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-005-298",
+				id: "ogn-005/298",
 				set: "Origins",
 				collectorNumber: 5,
 				rarity: "Common",
@@ -19480,7 +19480,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-006-298",
+				id: "ogn-006/298",
 				set: "Origins",
 				collectorNumber: 6,
 				rarity: "Common",
@@ -19498,7 +19498,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-007a-298",
+				id: "ogn-007a/298",
 				set: "Origins",
 				collectorNumber: 7,
 				rarity: "Showcase",
@@ -19516,7 +19516,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-007-298",
+				id: "ogn-007/298",
 				set: "Origins",
 				collectorNumber: 7,
 				rarity: "Common",
@@ -19534,7 +19534,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-008-298",
+				id: "ogn-008/298",
 				set: "Origins",
 				collectorNumber: 8,
 				rarity: "Common",
@@ -19552,7 +19552,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-009-298",
+				id: "ogn-009/298",
 				set: "Origins",
 				collectorNumber: 9,
 				rarity: "Common",
@@ -19570,7 +19570,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-010-298",
+				id: "ogn-010/298",
 				set: "Origins",
 				collectorNumber: 10,
 				rarity: "Common",
@@ -19588,7 +19588,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-011-298",
+				id: "ogn-011/298",
 				set: "Origins",
 				collectorNumber: 11,
 				rarity: "Common",
@@ -19606,7 +19606,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-012-298",
+				id: "ogn-012/298",
 				set: "Origins",
 				collectorNumber: 12,
 				rarity: "Common",
@@ -19624,7 +19624,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-013-298",
+				id: "ogn-013/298",
 				set: "Origins",
 				collectorNumber: 13,
 				rarity: "Common",
@@ -19642,7 +19642,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-014-298",
+				id: "ogn-014/298",
 				set: "Origins",
 				collectorNumber: 14,
 				rarity: "Common",
@@ -19660,7 +19660,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-015-298",
+				id: "ogn-015/298",
 				set: "Origins",
 				collectorNumber: 15,
 				rarity: "Uncommon",
@@ -19678,7 +19678,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-016-298",
+				id: "ogn-016/298",
 				set: "Origins",
 				collectorNumber: 16,
 				rarity: "Uncommon",
@@ -19696,7 +19696,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-017-298",
+				id: "ogn-017/298",
 				set: "Origins",
 				collectorNumber: 17,
 				rarity: "Uncommon",
@@ -19714,7 +19714,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-018-298",
+				id: "ogn-018/298",
 				set: "Origins",
 				collectorNumber: 18,
 				rarity: "Uncommon",
@@ -19732,7 +19732,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-019-298",
+				id: "ogn-019/298",
 				set: "Origins",
 				collectorNumber: 19,
 				rarity: "Uncommon",
@@ -19750,7 +19750,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-020-298",
+				id: "ogn-020/298",
 				set: "Origins",
 				collectorNumber: 20,
 				rarity: "Uncommon",
@@ -19768,7 +19768,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-021-298",
+				id: "ogn-021/298",
 				set: "Origins",
 				collectorNumber: 21,
 				rarity: "Uncommon",
@@ -19786,7 +19786,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-022-298",
+				id: "ogn-022/298",
 				set: "Origins",
 				collectorNumber: 22,
 				rarity: "Uncommon",
@@ -19804,7 +19804,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-023-298",
+				id: "ogn-023/298",
 				set: "Origins",
 				collectorNumber: 23,
 				rarity: "Uncommon",
@@ -19822,7 +19822,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-024-298",
+				id: "ogn-024/298",
 				set: "Origins",
 				collectorNumber: 24,
 				rarity: "Uncommon",
@@ -19840,7 +19840,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-025-298",
+				id: "ogn-025/298",
 				set: "Origins",
 				collectorNumber: 25,
 				rarity: "Rare",
@@ -19858,7 +19858,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-026-298",
+				id: "ogn-026/298",
 				set: "Origins",
 				collectorNumber: 26,
 				rarity: "Rare",
@@ -19876,7 +19876,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-027a-298",
+				id: "ogn-027a/298",
 				set: "Origins",
 				collectorNumber: 27,
 				rarity: "Showcase",
@@ -19894,7 +19894,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-027-298",
+				id: "ogn-027/298",
 				set: "Origins",
 				collectorNumber: 27,
 				rarity: "Rare",
@@ -19912,7 +19912,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-028-298",
+				id: "ogn-028/298",
 				set: "Origins",
 				collectorNumber: 28,
 				rarity: "Rare",
@@ -19930,7 +19930,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-029-298",
+				id: "ogn-029/298",
 				set: "Origins",
 				collectorNumber: 29,
 				rarity: "Rare",
@@ -19948,7 +19948,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-030a-298",
+				id: "ogn-030a/298",
 				set: "Origins",
 				collectorNumber: 30,
 				rarity: "Showcase",
@@ -19966,7 +19966,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-030-298",
+				id: "ogn-030/298",
 				set: "Origins",
 				collectorNumber: 30,
 				rarity: "Rare",
@@ -19984,7 +19984,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-031-298",
+				id: "ogn-031/298",
 				set: "Origins",
 				collectorNumber: 31,
 				rarity: "Rare",
@@ -20002,7 +20002,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-032-298",
+				id: "ogn-032/298",
 				set: "Origins",
 				collectorNumber: 32,
 				rarity: "Rare",
@@ -20020,7 +20020,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-033-298",
+				id: "ogn-033/298",
 				set: "Origins",
 				collectorNumber: 33,
 				rarity: "Rare",
@@ -20038,7 +20038,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-034-298",
+				id: "ogn-034/298",
 				set: "Origins",
 				collectorNumber: 34,
 				rarity: "Rare",
@@ -20056,7 +20056,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-035-298",
+				id: "ogn-035/298",
 				set: "Origins",
 				collectorNumber: 35,
 				rarity: "Rare",
@@ -20074,7 +20074,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-036-298",
+				id: "ogn-036/298",
 				set: "Origins",
 				collectorNumber: 36,
 				rarity: "Rare",
@@ -20092,7 +20092,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-037-298",
+				id: "ogn-037/298",
 				set: "Origins",
 				collectorNumber: 37,
 				rarity: "Epic",
@@ -20110,7 +20110,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-038-298",
+				id: "ogn-038/298",
 				set: "Origins",
 				collectorNumber: 38,
 				rarity: "Epic",
@@ -20128,7 +20128,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-039a-298",
+				id: "ogn-039a/298",
 				set: "Origins",
 				collectorNumber: 39,
 				rarity: "Showcase",
@@ -20146,7 +20146,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-039-298",
+				id: "ogn-039/298",
 				set: "Origins",
 				collectorNumber: 39,
 				rarity: "Epic",
@@ -20164,7 +20164,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-040-298",
+				id: "ogn-040/298",
 				set: "Origins",
 				collectorNumber: 40,
 				rarity: "Epic",
@@ -20182,7 +20182,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-041a-298",
+				id: "ogn-041a/298",
 				set: "Origins",
 				collectorNumber: 41,
 				rarity: "Showcase",
@@ -20200,7 +20200,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-041-298",
+				id: "ogn-041/298",
 				set: "Origins",
 				collectorNumber: 41,
 				rarity: "Epic",
@@ -20218,7 +20218,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-042a-298",
+				id: "ogn-042a/298",
 				set: "Origins",
 				collectorNumber: 42,
 				rarity: "Showcase",
@@ -20236,7 +20236,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-042-298",
+				id: "ogn-042/298",
 				set: "Origins",
 				collectorNumber: 42,
 				rarity: "Common",
@@ -20254,7 +20254,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-043-298",
+				id: "ogn-043/298",
 				set: "Origins",
 				collectorNumber: 43,
 				rarity: "Common",
@@ -20272,7 +20272,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-044-298",
+				id: "ogn-044/298",
 				set: "Origins",
 				collectorNumber: 44,
 				rarity: "Common",
@@ -20290,7 +20290,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-045-298",
+				id: "ogn-045/298",
 				set: "Origins",
 				collectorNumber: 45,
 				rarity: "Common",
@@ -20308,7 +20308,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-046-298",
+				id: "ogn-046/298",
 				set: "Origins",
 				collectorNumber: 46,
 				rarity: "Common",
@@ -20326,7 +20326,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-047-298",
+				id: "ogn-047/298",
 				set: "Origins",
 				collectorNumber: 47,
 				rarity: "Common",
@@ -20344,7 +20344,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-048-298",
+				id: "ogn-048/298",
 				set: "Origins",
 				collectorNumber: 48,
 				rarity: "Common",
@@ -20362,7 +20362,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-049-298",
+				id: "ogn-049/298",
 				set: "Origins",
 				collectorNumber: 49,
 				rarity: "Common",
@@ -20380,7 +20380,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-050-298",
+				id: "ogn-050/298",
 				set: "Origins",
 				collectorNumber: 50,
 				rarity: "Common",
@@ -20398,7 +20398,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-051-298",
+				id: "ogn-051/298",
 				set: "Origins",
 				collectorNumber: 51,
 				rarity: "Common",
@@ -20416,7 +20416,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-052-298",
+				id: "ogn-052/298",
 				set: "Origins",
 				collectorNumber: 52,
 				rarity: "Common",
@@ -20434,7 +20434,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-053-298",
+				id: "ogn-053/298",
 				set: "Origins",
 				collectorNumber: 53,
 				rarity: "Common",
@@ -20452,7 +20452,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-054-298",
+				id: "ogn-054/298",
 				set: "Origins",
 				collectorNumber: 54,
 				rarity: "Common",
@@ -20470,7 +20470,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-055-298",
+				id: "ogn-055/298",
 				set: "Origins",
 				collectorNumber: 55,
 				rarity: "Common",
@@ -20488,7 +20488,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-056-298",
+				id: "ogn-056/298",
 				set: "Origins",
 				collectorNumber: 56,
 				rarity: "Uncommon",
@@ -20506,7 +20506,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-057-298",
+				id: "ogn-057/298",
 				set: "Origins",
 				collectorNumber: 57,
 				rarity: "Uncommon",
@@ -20524,7 +20524,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-058-298",
+				id: "ogn-058/298",
 				set: "Origins",
 				collectorNumber: 58,
 				rarity: "Uncommon",
@@ -20542,7 +20542,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-059-298",
+				id: "ogn-059/298",
 				set: "Origins",
 				collectorNumber: 59,
 				rarity: "Uncommon",
@@ -20560,7 +20560,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-060-298",
+				id: "ogn-060/298",
 				set: "Origins",
 				collectorNumber: 60,
 				rarity: "Uncommon",
@@ -20578,7 +20578,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-061-298",
+				id: "ogn-061/298",
 				set: "Origins",
 				collectorNumber: 61,
 				rarity: "Uncommon",
@@ -20596,7 +20596,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-062-298",
+				id: "ogn-062/298",
 				set: "Origins",
 				collectorNumber: 62,
 				rarity: "Uncommon",
@@ -20614,7 +20614,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-063-298",
+				id: "ogn-063/298",
 				set: "Origins",
 				collectorNumber: 63,
 				rarity: "Uncommon",
@@ -20632,7 +20632,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-064-298",
+				id: "ogn-064/298",
 				set: "Origins",
 				collectorNumber: 64,
 				rarity: "Uncommon",
@@ -20650,7 +20650,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-065-298",
+				id: "ogn-065/298",
 				set: "Origins",
 				collectorNumber: 65,
 				rarity: "Uncommon",
@@ -20668,7 +20668,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-066a-298",
+				id: "ogn-066a/298",
 				set: "Origins",
 				collectorNumber: 66,
 				rarity: "Showcase",
@@ -20686,7 +20686,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-066-298",
+				id: "ogn-066/298",
 				set: "Origins",
 				collectorNumber: 66,
 				rarity: "Rare",
@@ -20704,7 +20704,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-067-298",
+				id: "ogn-067/298",
 				set: "Origins",
 				collectorNumber: 67,
 				rarity: "Rare",
@@ -20722,7 +20722,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-068-298",
+				id: "ogn-068/298",
 				set: "Origins",
 				collectorNumber: 68,
 				rarity: "Rare",
@@ -20740,7 +20740,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-069-298",
+				id: "ogn-069/298",
 				set: "Origins",
 				collectorNumber: 69,
 				rarity: "Rare",
@@ -20758,7 +20758,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-070-298",
+				id: "ogn-070/298",
 				set: "Origins",
 				collectorNumber: 70,
 				rarity: "Rare",
@@ -20776,7 +20776,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-071-298",
+				id: "ogn-071/298",
 				set: "Origins",
 				collectorNumber: 71,
 				rarity: "Rare",
@@ -20794,7 +20794,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-072-298",
+				id: "ogn-072/298",
 				set: "Origins",
 				collectorNumber: 72,
 				rarity: "Rare",
@@ -20812,7 +20812,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-073-298",
+				id: "ogn-073/298",
 				set: "Origins",
 				collectorNumber: 73,
 				rarity: "Rare",
@@ -20830,7 +20830,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-074-298",
+				id: "ogn-074/298",
 				set: "Origins",
 				collectorNumber: 74,
 				rarity: "Rare",
@@ -20848,7 +20848,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-075-298",
+				id: "ogn-075/298",
 				set: "Origins",
 				collectorNumber: 75,
 				rarity: "Rare",
@@ -20866,7 +20866,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-076a-298",
+				id: "ogn-076a/298",
 				set: "Origins",
 				collectorNumber: 76,
 				rarity: "Showcase",
@@ -20884,7 +20884,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-076-298",
+				id: "ogn-076/298",
 				set: "Origins",
 				collectorNumber: 76,
 				rarity: "Rare",
@@ -20902,7 +20902,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-077-298",
+				id: "ogn-077/298",
 				set: "Origins",
 				collectorNumber: 77,
 				rarity: "Rare",
@@ -20920,7 +20920,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-078a-298",
+				id: "ogn-078a/298",
 				set: "Origins",
 				collectorNumber: 78,
 				rarity: "Showcase",
@@ -20938,7 +20938,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-078-298",
+				id: "ogn-078/298",
 				set: "Origins",
 				collectorNumber: 78,
 				rarity: "Epic",
@@ -20956,7 +20956,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-079a-298",
+				id: "ogn-079a/298",
 				set: "Origins",
 				collectorNumber: 79,
 				rarity: "Showcase",
@@ -20974,7 +20974,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-079-298",
+				id: "ogn-079/298",
 				set: "Origins",
 				collectorNumber: 79,
 				rarity: "Epic",
@@ -20992,7 +20992,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-080-298",
+				id: "ogn-080/298",
 				set: "Origins",
 				collectorNumber: 80,
 				rarity: "Epic",
@@ -21010,7 +21010,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-081-298",
+				id: "ogn-081/298",
 				set: "Origins",
 				collectorNumber: 81,
 				rarity: "Epic",
@@ -21028,7 +21028,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-082-298",
+				id: "ogn-082/298",
 				set: "Origins",
 				collectorNumber: 82,
 				rarity: "Epic",
@@ -21046,7 +21046,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-083-298",
+				id: "ogn-083/298",
 				set: "Origins",
 				collectorNumber: 83,
 				rarity: "Common",
@@ -21064,7 +21064,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-084-298",
+				id: "ogn-084/298",
 				set: "Origins",
 				collectorNumber: 84,
 				rarity: "Common",
@@ -21082,7 +21082,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-085-298",
+				id: "ogn-085/298",
 				set: "Origins",
 				collectorNumber: 85,
 				rarity: "Common",
@@ -21100,7 +21100,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-086-298",
+				id: "ogn-086/298",
 				set: "Origins",
 				collectorNumber: 86,
 				rarity: "Common",
@@ -21118,7 +21118,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-087-298",
+				id: "ogn-087/298",
 				set: "Origins",
 				collectorNumber: 87,
 				rarity: "Common",
@@ -21136,7 +21136,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-088-298",
+				id: "ogn-088/298",
 				set: "Origins",
 				collectorNumber: 88,
 				rarity: "Common",
@@ -21154,7 +21154,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-089a-298",
+				id: "ogn-089a/298",
 				set: "Origins",
 				collectorNumber: 89,
 				rarity: "Showcase",
@@ -21172,7 +21172,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-089-298",
+				id: "ogn-089/298",
 				set: "Origins",
 				collectorNumber: 89,
 				rarity: "Common",
@@ -21190,7 +21190,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-090-298",
+				id: "ogn-090/298",
 				set: "Origins",
 				collectorNumber: 90,
 				rarity: "Common",
@@ -21208,7 +21208,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-091-298",
+				id: "ogn-091/298",
 				set: "Origins",
 				collectorNumber: 91,
 				rarity: "Common",
@@ -21226,7 +21226,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-092-298",
+				id: "ogn-092/298",
 				set: "Origins",
 				collectorNumber: 92,
 				rarity: "Common",
@@ -21244,7 +21244,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-093-298",
+				id: "ogn-093/298",
 				set: "Origins",
 				collectorNumber: 93,
 				rarity: "Common",
@@ -21262,7 +21262,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-094-298",
+				id: "ogn-094/298",
 				set: "Origins",
 				collectorNumber: 94,
 				rarity: "Common",
@@ -21280,7 +21280,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-095-298",
+				id: "ogn-095/298",
 				set: "Origins",
 				collectorNumber: 95,
 				rarity: "Common",
@@ -21298,7 +21298,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-096-298",
+				id: "ogn-096/298",
 				set: "Origins",
 				collectorNumber: 96,
 				rarity: "Common",
@@ -21316,7 +21316,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-097-298",
+				id: "ogn-097/298",
 				set: "Origins",
 				collectorNumber: 97,
 				rarity: "Uncommon",
@@ -21334,7 +21334,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-098-298",
+				id: "ogn-098/298",
 				set: "Origins",
 				collectorNumber: 98,
 				rarity: "Uncommon",
@@ -21352,7 +21352,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-099-298",
+				id: "ogn-099/298",
 				set: "Origins",
 				collectorNumber: 99,
 				rarity: "Uncommon",
@@ -21370,7 +21370,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-100-298",
+				id: "ogn-100/298",
 				set: "Origins",
 				collectorNumber: 100,
 				rarity: "Uncommon",
@@ -21388,7 +21388,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-101-298",
+				id: "ogn-101/298",
 				set: "Origins",
 				collectorNumber: 101,
 				rarity: "Uncommon",
@@ -21406,7 +21406,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-102-298",
+				id: "ogn-102/298",
 				set: "Origins",
 				collectorNumber: 102,
 				rarity: "Uncommon",
@@ -21424,7 +21424,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-103-298",
+				id: "ogn-103/298",
 				set: "Origins",
 				collectorNumber: 103,
 				rarity: "Uncommon",
@@ -21442,7 +21442,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-104-298",
+				id: "ogn-104/298",
 				set: "Origins",
 				collectorNumber: 104,
 				rarity: "Uncommon",
@@ -21460,7 +21460,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-105-298",
+				id: "ogn-105/298",
 				set: "Origins",
 				collectorNumber: 105,
 				rarity: "Uncommon",
@@ -21478,7 +21478,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-106-298",
+				id: "ogn-106/298",
 				set: "Origins",
 				collectorNumber: 106,
 				rarity: "Uncommon",
@@ -21496,7 +21496,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-107-298",
+				id: "ogn-107/298",
 				set: "Origins",
 				collectorNumber: 107,
 				rarity: "Rare",
@@ -21514,7 +21514,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-108-298",
+				id: "ogn-108/298",
 				set: "Origins",
 				collectorNumber: 108,
 				rarity: "Rare",
@@ -21532,7 +21532,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-109-298",
+				id: "ogn-109/298",
 				set: "Origins",
 				collectorNumber: 109,
 				rarity: "Rare",
@@ -21550,7 +21550,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-110-298",
+				id: "ogn-110/298",
 				set: "Origins",
 				collectorNumber: 110,
 				rarity: "Rare",
@@ -21568,7 +21568,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-111-298",
+				id: "ogn-111/298",
 				set: "Origins",
 				collectorNumber: 111,
 				rarity: "Rare",
@@ -21586,7 +21586,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-112a-298",
+				id: "ogn-112a/298",
 				set: "Origins",
 				collectorNumber: 112,
 				rarity: "Showcase",
@@ -21604,7 +21604,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-112-298",
+				id: "ogn-112/298",
 				set: "Origins",
 				collectorNumber: 112,
 				rarity: "Rare",
@@ -21622,7 +21622,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-113-298",
+				id: "ogn-113/298",
 				set: "Origins",
 				collectorNumber: 113,
 				rarity: "Rare",
@@ -21640,7 +21640,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-114-298",
+				id: "ogn-114/298",
 				set: "Origins",
 				collectorNumber: 114,
 				rarity: "Rare",
@@ -21658,7 +21658,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-115-298",
+				id: "ogn-115/298",
 				set: "Origins",
 				collectorNumber: 115,
 				rarity: "Rare",
@@ -21676,7 +21676,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-116-298",
+				id: "ogn-116/298",
 				set: "Origins",
 				collectorNumber: 116,
 				rarity: "Rare",
@@ -21694,7 +21694,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-117a-298",
+				id: "ogn-117a/298",
 				set: "Origins",
 				collectorNumber: 117,
 				rarity: "Showcase",
@@ -21712,7 +21712,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-117-298",
+				id: "ogn-117/298",
 				set: "Origins",
 				collectorNumber: 117,
 				rarity: "Rare",
@@ -21730,7 +21730,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-118-298",
+				id: "ogn-118/298",
 				set: "Origins",
 				collectorNumber: 118,
 				rarity: "Rare",
@@ -21748,7 +21748,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-119a-298",
+				id: "ogn-119a/298",
 				set: "Origins",
 				collectorNumber: 119,
 				rarity: "Showcase",
@@ -21766,7 +21766,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-119-298",
+				id: "ogn-119/298",
 				set: "Origins",
 				collectorNumber: 119,
 				rarity: "Epic",
@@ -21784,7 +21784,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-120-298",
+				id: "ogn-120/298",
 				set: "Origins",
 				collectorNumber: 120,
 				rarity: "Epic",
@@ -21802,7 +21802,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-121a-298",
+				id: "ogn-121a/298",
 				set: "Origins",
 				collectorNumber: 121,
 				rarity: "Showcase",
@@ -21820,7 +21820,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-121-298",
+				id: "ogn-121/298",
 				set: "Origins",
 				collectorNumber: 121,
 				rarity: "Epic",
@@ -21838,7 +21838,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-122-298",
+				id: "ogn-122/298",
 				set: "Origins",
 				collectorNumber: 122,
 				rarity: "Epic",
@@ -21856,7 +21856,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-123-298",
+				id: "ogn-123/298",
 				set: "Origins",
 				collectorNumber: 123,
 				rarity: "Epic",
@@ -21874,7 +21874,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-124-298",
+				id: "ogn-124/298",
 				set: "Origins",
 				collectorNumber: 124,
 				rarity: "Common",
@@ -21892,7 +21892,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-125-298",
+				id: "ogn-125/298",
 				set: "Origins",
 				collectorNumber: 125,
 				rarity: "Common",
@@ -21910,7 +21910,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-126a-298",
+				id: "ogn-126a/298",
 				set: "Origins",
 				collectorNumber: 126,
 				rarity: "Showcase",
@@ -21928,7 +21928,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-126-298",
+				id: "ogn-126/298",
 				set: "Origins",
 				collectorNumber: 126,
 				rarity: "Common",
@@ -21946,7 +21946,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-127-298",
+				id: "ogn-127/298",
 				set: "Origins",
 				collectorNumber: 127,
 				rarity: "Common",
@@ -21964,7 +21964,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-128-298",
+				id: "ogn-128/298",
 				set: "Origins",
 				collectorNumber: 128,
 				rarity: "Common",
@@ -21982,7 +21982,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-129-298",
+				id: "ogn-129/298",
 				set: "Origins",
 				collectorNumber: 129,
 				rarity: "Common",
@@ -22000,7 +22000,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-130-298",
+				id: "ogn-130/298",
 				set: "Origins",
 				collectorNumber: 130,
 				rarity: "Common",
@@ -22018,7 +22018,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-131-298",
+				id: "ogn-131/298",
 				set: "Origins",
 				collectorNumber: 131,
 				rarity: "Common",
@@ -22036,7 +22036,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-132-298",
+				id: "ogn-132/298",
 				set: "Origins",
 				collectorNumber: 132,
 				rarity: "Common",
@@ -22054,7 +22054,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-133-298",
+				id: "ogn-133/298",
 				set: "Origins",
 				collectorNumber: 133,
 				rarity: "Common",
@@ -22072,7 +22072,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-134-298",
+				id: "ogn-134/298",
 				set: "Origins",
 				collectorNumber: 134,
 				rarity: "Common",
@@ -22090,7 +22090,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-135-298",
+				id: "ogn-135/298",
 				set: "Origins",
 				collectorNumber: 135,
 				rarity: "Common",
@@ -22108,7 +22108,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-136-298",
+				id: "ogn-136/298",
 				set: "Origins",
 				collectorNumber: 136,
 				rarity: "Common",
@@ -22126,7 +22126,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-137-298",
+				id: "ogn-137/298",
 				set: "Origins",
 				collectorNumber: 137,
 				rarity: "Common",
@@ -22144,7 +22144,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-138-298",
+				id: "ogn-138/298",
 				set: "Origins",
 				collectorNumber: 138,
 				rarity: "Uncommon",
@@ -22162,7 +22162,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-139-298",
+				id: "ogn-139/298",
 				set: "Origins",
 				collectorNumber: 139,
 				rarity: "Uncommon",
@@ -22180,7 +22180,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-140-298",
+				id: "ogn-140/298",
 				set: "Origins",
 				collectorNumber: 140,
 				rarity: "Uncommon",
@@ -22198,7 +22198,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-141-298",
+				id: "ogn-141/298",
 				set: "Origins",
 				collectorNumber: 141,
 				rarity: "Uncommon",
@@ -22216,7 +22216,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-142-298",
+				id: "ogn-142/298",
 				set: "Origins",
 				collectorNumber: 142,
 				rarity: "Uncommon",
@@ -22234,7 +22234,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-143-298",
+				id: "ogn-143/298",
 				set: "Origins",
 				collectorNumber: 143,
 				rarity: "Uncommon",
@@ -22252,7 +22252,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-144-298",
+				id: "ogn-144/298",
 				set: "Origins",
 				collectorNumber: 144,
 				rarity: "Uncommon",
@@ -22270,7 +22270,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-145-298",
+				id: "ogn-145/298",
 				set: "Origins",
 				collectorNumber: 145,
 				rarity: "Uncommon",
@@ -22288,7 +22288,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-146-298",
+				id: "ogn-146/298",
 				set: "Origins",
 				collectorNumber: 146,
 				rarity: "Uncommon",
@@ -22306,7 +22306,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-147-298",
+				id: "ogn-147/298",
 				set: "Origins",
 				collectorNumber: 147,
 				rarity: "Uncommon",
@@ -22324,7 +22324,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-148-298",
+				id: "ogn-148/298",
 				set: "Origins",
 				collectorNumber: 148,
 				rarity: "Rare",
@@ -22342,7 +22342,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-149-298",
+				id: "ogn-149/298",
 				set: "Origins",
 				collectorNumber: 149,
 				rarity: "Rare",
@@ -22360,7 +22360,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-150-298",
+				id: "ogn-150/298",
 				set: "Origins",
 				collectorNumber: 150,
 				rarity: "Rare",
@@ -22378,7 +22378,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-151a-298",
+				id: "ogn-151a/298",
 				set: "Origins",
 				collectorNumber: 151,
 				rarity: "Showcase",
@@ -22396,7 +22396,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-151-298",
+				id: "ogn-151/298",
 				set: "Origins",
 				collectorNumber: 151,
 				rarity: "Rare",
@@ -22414,7 +22414,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-152-298",
+				id: "ogn-152/298",
 				set: "Origins",
 				collectorNumber: 152,
 				rarity: "Rare",
@@ -22432,7 +22432,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-153-298",
+				id: "ogn-153/298",
 				set: "Origins",
 				collectorNumber: 153,
 				rarity: "Rare",
@@ -22450,7 +22450,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-154-298",
+				id: "ogn-154/298",
 				set: "Origins",
 				collectorNumber: 154,
 				rarity: "Rare",
@@ -22468,7 +22468,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-155-298",
+				id: "ogn-155/298",
 				set: "Origins",
 				collectorNumber: 155,
 				rarity: "Rare",
@@ -22486,7 +22486,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-156-298",
+				id: "ogn-156/298",
 				set: "Origins",
 				collectorNumber: 156,
 				rarity: "Rare",
@@ -22504,7 +22504,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-157-298",
+				id: "ogn-157/298",
 				set: "Origins",
 				collectorNumber: 157,
 				rarity: "Rare",
@@ -22522,7 +22522,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-158a-298",
+				id: "ogn-158a/298",
 				set: "Origins",
 				collectorNumber: 158,
 				rarity: "Showcase",
@@ -22540,7 +22540,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-158-298",
+				id: "ogn-158/298",
 				set: "Origins",
 				collectorNumber: 158,
 				rarity: "Rare",
@@ -22558,7 +22558,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-159-298",
+				id: "ogn-159/298",
 				set: "Origins",
 				collectorNumber: 159,
 				rarity: "Rare",
@@ -22576,7 +22576,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-160-298",
+				id: "ogn-160/298",
 				set: "Origins",
 				collectorNumber: 160,
 				rarity: "Epic",
@@ -22594,7 +22594,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-161-298",
+				id: "ogn-161/298",
 				set: "Origins",
 				collectorNumber: 161,
 				rarity: "Epic",
@@ -22612,7 +22612,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-162a-298",
+				id: "ogn-162a/298",
 				set: "Origins",
 				collectorNumber: 162,
 				rarity: "Showcase",
@@ -22630,7 +22630,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-162-298",
+				id: "ogn-162/298",
 				set: "Origins",
 				collectorNumber: 162,
 				rarity: "Epic",
@@ -22648,7 +22648,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-163-298",
+				id: "ogn-163/298",
 				set: "Origins",
 				collectorNumber: 163,
 				rarity: "Epic",
@@ -22666,7 +22666,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-164a-298",
+				id: "ogn-164a/298",
 				set: "Origins",
 				collectorNumber: 164,
 				rarity: "Showcase",
@@ -22684,7 +22684,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-164-298",
+				id: "ogn-164/298",
 				set: "Origins",
 				collectorNumber: 164,
 				rarity: "Epic",
@@ -22702,7 +22702,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-165-298",
+				id: "ogn-165/298",
 				set: "Origins",
 				collectorNumber: 165,
 				rarity: "Common",
@@ -22720,7 +22720,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-166a-298",
+				id: "ogn-166a/298",
 				set: "Origins",
 				collectorNumber: 166,
 				rarity: "Showcase",
@@ -22738,7 +22738,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-166-298",
+				id: "ogn-166/298",
 				set: "Origins",
 				collectorNumber: 166,
 				rarity: "Common",
@@ -22756,7 +22756,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-167-298",
+				id: "ogn-167/298",
 				set: "Origins",
 				collectorNumber: 167,
 				rarity: "Common",
@@ -22774,7 +22774,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-168-298",
+				id: "ogn-168/298",
 				set: "Origins",
 				collectorNumber: 168,
 				rarity: "Common",
@@ -22792,7 +22792,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-169-298",
+				id: "ogn-169/298",
 				set: "Origins",
 				collectorNumber: 169,
 				rarity: "Common",
@@ -22810,7 +22810,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-170-298",
+				id: "ogn-170/298",
 				set: "Origins",
 				collectorNumber: 170,
 				rarity: "Common",
@@ -22828,7 +22828,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-171-298",
+				id: "ogn-171/298",
 				set: "Origins",
 				collectorNumber: 171,
 				rarity: "Common",
@@ -22846,7 +22846,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-172-298",
+				id: "ogn-172/298",
 				set: "Origins",
 				collectorNumber: 172,
 				rarity: "Common",
@@ -22864,7 +22864,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-173-298",
+				id: "ogn-173/298",
 				set: "Origins",
 				collectorNumber: 173,
 				rarity: "Common",
@@ -22882,7 +22882,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-174-298",
+				id: "ogn-174/298",
 				set: "Origins",
 				collectorNumber: 174,
 				rarity: "Common",
@@ -22900,7 +22900,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-175-298",
+				id: "ogn-175/298",
 				set: "Origins",
 				collectorNumber: 175,
 				rarity: "Common",
@@ -22918,7 +22918,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-176-298",
+				id: "ogn-176/298",
 				set: "Origins",
 				collectorNumber: 176,
 				rarity: "Common",
@@ -22936,7 +22936,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-177-298",
+				id: "ogn-177/298",
 				set: "Origins",
 				collectorNumber: 177,
 				rarity: "Common",
@@ -22954,7 +22954,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-178-298",
+				id: "ogn-178/298",
 				set: "Origins",
 				collectorNumber: 178,
 				rarity: "Common",
@@ -22972,7 +22972,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-179-298",
+				id: "ogn-179/298",
 				set: "Origins",
 				collectorNumber: 179,
 				rarity: "Uncommon",
@@ -22990,7 +22990,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-180-298",
+				id: "ogn-180/298",
 				set: "Origins",
 				collectorNumber: 180,
 				rarity: "Uncommon",
@@ -23008,7 +23008,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-181-298",
+				id: "ogn-181/298",
 				set: "Origins",
 				collectorNumber: 181,
 				rarity: "Uncommon",
@@ -23026,7 +23026,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-182-298",
+				id: "ogn-182/298",
 				set: "Origins",
 				collectorNumber: 182,
 				rarity: "Uncommon",
@@ -23044,7 +23044,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-183-298",
+				id: "ogn-183/298",
 				set: "Origins",
 				collectorNumber: 183,
 				rarity: "Uncommon",
@@ -23062,7 +23062,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-184-298",
+				id: "ogn-184/298",
 				set: "Origins",
 				collectorNumber: 184,
 				rarity: "Uncommon",
@@ -23080,7 +23080,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-185-298",
+				id: "ogn-185/298",
 				set: "Origins",
 				collectorNumber: 185,
 				rarity: "Uncommon",
@@ -23098,7 +23098,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-186-298",
+				id: "ogn-186/298",
 				set: "Origins",
 				collectorNumber: 186,
 				rarity: "Uncommon",
@@ -23116,7 +23116,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-187-298",
+				id: "ogn-187/298",
 				set: "Origins",
 				collectorNumber: 187,
 				rarity: "Uncommon",
@@ -23134,7 +23134,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-188-298",
+				id: "ogn-188/298",
 				set: "Origins",
 				collectorNumber: 188,
 				rarity: "Uncommon",
@@ -23152,7 +23152,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-189-298",
+				id: "ogn-189/298",
 				set: "Origins",
 				collectorNumber: 189,
 				rarity: "Rare",
@@ -23170,7 +23170,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-190-298",
+				id: "ogn-190/298",
 				set: "Origins",
 				collectorNumber: 190,
 				rarity: "Rare",
@@ -23188,7 +23188,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-191-298",
+				id: "ogn-191/298",
 				set: "Origins",
 				collectorNumber: 191,
 				rarity: "Rare",
@@ -23206,7 +23206,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-192-298",
+				id: "ogn-192/298",
 				set: "Origins",
 				collectorNumber: 192,
 				rarity: "Rare",
@@ -23224,7 +23224,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-193a-298",
+				id: "ogn-193a/298",
 				set: "Origins",
 				collectorNumber: 193,
 				rarity: "Showcase",
@@ -23242,7 +23242,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-193-298",
+				id: "ogn-193/298",
 				set: "Origins",
 				collectorNumber: 193,
 				rarity: "Rare",
@@ -23260,7 +23260,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-194-298",
+				id: "ogn-194/298",
 				set: "Origins",
 				collectorNumber: 194,
 				rarity: "Rare",
@@ -23278,7 +23278,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-195-298",
+				id: "ogn-195/298",
 				set: "Origins",
 				collectorNumber: 195,
 				rarity: "Rare",
@@ -23296,7 +23296,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-196-298",
+				id: "ogn-196/298",
 				set: "Origins",
 				collectorNumber: 196,
 				rarity: "Rare",
@@ -23314,7 +23314,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-197a-298",
+				id: "ogn-197a/298",
 				set: "Origins",
 				collectorNumber: 197,
 				rarity: "Showcase",
@@ -23332,7 +23332,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-197-298",
+				id: "ogn-197/298",
 				set: "Origins",
 				collectorNumber: 197,
 				rarity: "Rare",
@@ -23350,7 +23350,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-198-298",
+				id: "ogn-198/298",
 				set: "Origins",
 				collectorNumber: 198,
 				rarity: "Rare",
@@ -23368,7 +23368,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-199-298",
+				id: "ogn-199/298",
 				set: "Origins",
 				collectorNumber: 199,
 				rarity: "Rare",
@@ -23386,7 +23386,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-200-298",
+				id: "ogn-200/298",
 				set: "Origins",
 				collectorNumber: 200,
 				rarity: "Rare",
@@ -23404,7 +23404,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-201-298",
+				id: "ogn-201/298",
 				set: "Origins",
 				collectorNumber: 201,
 				rarity: "Epic",
@@ -23422,7 +23422,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-202a-298",
+				id: "ogn-202a/298",
 				set: "Origins",
 				collectorNumber: 202,
 				rarity: "Showcase",
@@ -23440,7 +23440,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-202-298",
+				id: "ogn-202/298",
 				set: "Origins",
 				collectorNumber: 202,
 				rarity: "Epic",
@@ -23458,7 +23458,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-203-298",
+				id: "ogn-203/298",
 				set: "Origins",
 				collectorNumber: 203,
 				rarity: "Epic",
@@ -23476,7 +23476,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-204-298",
+				id: "ogn-204/298",
 				set: "Origins",
 				collectorNumber: 204,
 				rarity: "Epic",
@@ -23494,7 +23494,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-205a-298",
+				id: "ogn-205a/298",
 				set: "Origins",
 				collectorNumber: 205,
 				rarity: "Showcase",
@@ -23512,7 +23512,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-205-298",
+				id: "ogn-205/298",
 				set: "Origins",
 				collectorNumber: 205,
 				rarity: "Epic",
@@ -23530,7 +23530,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-206-298",
+				id: "ogn-206/298",
 				set: "Origins",
 				collectorNumber: 206,
 				rarity: "Common",
@@ -23548,7 +23548,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-207-298",
+				id: "ogn-207/298",
 				set: "Origins",
 				collectorNumber: 207,
 				rarity: "Common",
@@ -23566,7 +23566,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-208-298",
+				id: "ogn-208/298",
 				set: "Origins",
 				collectorNumber: 208,
 				rarity: "Common",
@@ -23584,7 +23584,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-209-298",
+				id: "ogn-209/298",
 				set: "Origins",
 				collectorNumber: 209,
 				rarity: "Common",
@@ -23602,7 +23602,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-210-298",
+				id: "ogn-210/298",
 				set: "Origins",
 				collectorNumber: 210,
 				rarity: "Common",
@@ -23620,7 +23620,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-211-298",
+				id: "ogn-211/298",
 				set: "Origins",
 				collectorNumber: 211,
 				rarity: "Common",
@@ -23638,7 +23638,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-212-298",
+				id: "ogn-212/298",
 				set: "Origins",
 				collectorNumber: 212,
 				rarity: "Common",
@@ -23656,7 +23656,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-213-298",
+				id: "ogn-213/298",
 				set: "Origins",
 				collectorNumber: 213,
 				rarity: "Common",
@@ -23674,7 +23674,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-214a-298",
+				id: "ogn-214a/298",
 				set: "Origins",
 				collectorNumber: 214,
 				rarity: "Showcase",
@@ -23692,7 +23692,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-214-298",
+				id: "ogn-214/298",
 				set: "Origins",
 				collectorNumber: 214,
 				rarity: "Common",
@@ -23710,7 +23710,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-215-298",
+				id: "ogn-215/298",
 				set: "Origins",
 				collectorNumber: 215,
 				rarity: "Common",
@@ -23728,7 +23728,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-216-298",
+				id: "ogn-216/298",
 				set: "Origins",
 				collectorNumber: 216,
 				rarity: "Common",
@@ -23746,7 +23746,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-217-298",
+				id: "ogn-217/298",
 				set: "Origins",
 				collectorNumber: 217,
 				rarity: "Common",
@@ -23764,7 +23764,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-218-298",
+				id: "ogn-218/298",
 				set: "Origins",
 				collectorNumber: 218,
 				rarity: "Common",
@@ -23782,7 +23782,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-219-298",
+				id: "ogn-219/298",
 				set: "Origins",
 				collectorNumber: 219,
 				rarity: "Common",
@@ -23800,7 +23800,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-220-298",
+				id: "ogn-220/298",
 				set: "Origins",
 				collectorNumber: 220,
 				rarity: "Uncommon",
@@ -23818,7 +23818,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-221-298",
+				id: "ogn-221/298",
 				set: "Origins",
 				collectorNumber: 221,
 				rarity: "Uncommon",
@@ -23836,7 +23836,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-222-298",
+				id: "ogn-222/298",
 				set: "Origins",
 				collectorNumber: 222,
 				rarity: "Uncommon",
@@ -23854,7 +23854,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-223-298",
+				id: "ogn-223/298",
 				set: "Origins",
 				collectorNumber: 223,
 				rarity: "Uncommon",
@@ -23872,7 +23872,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-224-298",
+				id: "ogn-224/298",
 				set: "Origins",
 				collectorNumber: 224,
 				rarity: "Uncommon",
@@ -23890,7 +23890,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-225-298",
+				id: "ogn-225/298",
 				set: "Origins",
 				collectorNumber: 225,
 				rarity: "Uncommon",
@@ -23908,7 +23908,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-226-298",
+				id: "ogn-226/298",
 				set: "Origins",
 				collectorNumber: 226,
 				rarity: "Uncommon",
@@ -23926,7 +23926,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-227-298",
+				id: "ogn-227/298",
 				set: "Origins",
 				collectorNumber: 227,
 				rarity: "Uncommon",
@@ -23944,7 +23944,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-228-298",
+				id: "ogn-228/298",
 				set: "Origins",
 				collectorNumber: 228,
 				rarity: "Uncommon",
@@ -23962,7 +23962,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-229-298",
+				id: "ogn-229/298",
 				set: "Origins",
 				collectorNumber: 229,
 				rarity: "Uncommon",
@@ -23980,7 +23980,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-230-298",
+				id: "ogn-230/298",
 				set: "Origins",
 				collectorNumber: 230,
 				rarity: "Rare",
@@ -23998,7 +23998,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-231-298",
+				id: "ogn-231/298",
 				set: "Origins",
 				collectorNumber: 231,
 				rarity: "Rare",
@@ -24016,7 +24016,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-232-298",
+				id: "ogn-232/298",
 				set: "Origins",
 				collectorNumber: 232,
 				rarity: "Rare",
@@ -24034,7 +24034,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-233-298",
+				id: "ogn-233/298",
 				set: "Origins",
 				collectorNumber: 233,
 				rarity: "Rare",
@@ -24052,7 +24052,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-234-298",
+				id: "ogn-234/298",
 				set: "Origins",
 				collectorNumber: 234,
 				rarity: "Rare",
@@ -24070,7 +24070,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-235-298",
+				id: "ogn-235/298",
 				set: "Origins",
 				collectorNumber: 235,
 				rarity: "Rare",
@@ -24088,7 +24088,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-236-298",
+				id: "ogn-236/298",
 				set: "Origins",
 				collectorNumber: 236,
 				rarity: "Rare",
@@ -24106,7 +24106,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-237-298",
+				id: "ogn-237/298",
 				set: "Origins",
 				collectorNumber: 237,
 				rarity: "Rare",
@@ -24124,7 +24124,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-238a-298",
+				id: "ogn-238a/298",
 				set: "Origins",
 				collectorNumber: 238,
 				rarity: "Showcase",
@@ -24142,7 +24142,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-238-298",
+				id: "ogn-238/298",
 				set: "Origins",
 				collectorNumber: 238,
 				rarity: "Rare",
@@ -24160,7 +24160,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-239-298",
+				id: "ogn-239/298",
 				set: "Origins",
 				collectorNumber: 239,
 				rarity: "Rare",
@@ -24178,7 +24178,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-240a-298",
+				id: "ogn-240a/298",
 				set: "Origins",
 				collectorNumber: 240,
 				rarity: "Showcase",
@@ -24196,7 +24196,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-240-298",
+				id: "ogn-240/298",
 				set: "Origins",
 				collectorNumber: 240,
 				rarity: "Rare",
@@ -24214,7 +24214,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-241-298",
+				id: "ogn-241/298",
 				set: "Origins",
 				collectorNumber: 241,
 				rarity: "Rare",
@@ -24232,7 +24232,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-242-298",
+				id: "ogn-242/298",
 				set: "Origins",
 				collectorNumber: 242,
 				rarity: "Epic",
@@ -24250,7 +24250,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-243a-298",
+				id: "ogn-243a/298",
 				set: "Origins",
 				collectorNumber: 243,
 				rarity: "Showcase",
@@ -24268,7 +24268,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-243-298",
+				id: "ogn-243/298",
 				set: "Origins",
 				collectorNumber: 243,
 				rarity: "Epic",
@@ -24286,7 +24286,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-244-298",
+				id: "ogn-244/298",
 				set: "Origins",
 				collectorNumber: 244,
 				rarity: "Epic",
@@ -24304,7 +24304,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-245-298",
+				id: "ogn-245/298",
 				set: "Origins",
 				collectorNumber: 245,
 				rarity: "Epic",
@@ -24322,7 +24322,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-246-298",
+				id: "ogn-246/298",
 				set: "Origins",
 				collectorNumber: 246,
 				rarity: "Epic",
@@ -24340,7 +24340,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-246a-298",
+				id: "ogn-246a/298",
 				set: "Origins",
 				collectorNumber: 246,
 				rarity: "Showcase",
@@ -24358,7 +24358,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-247-298",
+				id: "ogn-247/298",
 				set: "Origins",
 				collectorNumber: 247,
 				rarity: "Rare",
@@ -24376,7 +24376,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-248-298",
+				id: "ogn-248/298",
 				set: "Origins",
 				collectorNumber: 248,
 				rarity: "Epic",
@@ -24394,7 +24394,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-249-298",
+				id: "ogn-249/298",
 				set: "Origins",
 				collectorNumber: 249,
 				rarity: "Rare",
@@ -24412,7 +24412,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-250-298",
+				id: "ogn-250/298",
 				set: "Origins",
 				collectorNumber: 250,
 				rarity: "Epic",
@@ -24430,7 +24430,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-251-298",
+				id: "ogn-251/298",
 				set: "Origins",
 				collectorNumber: 251,
 				rarity: "Rare",
@@ -24448,7 +24448,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-252-298",
+				id: "ogn-252/298",
 				set: "Origins",
 				collectorNumber: 252,
 				rarity: "Epic",
@@ -24466,7 +24466,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-253-298",
+				id: "ogn-253/298",
 				set: "Origins",
 				collectorNumber: 253,
 				rarity: "Rare",
@@ -24484,7 +24484,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-254-298",
+				id: "ogn-254/298",
 				set: "Origins",
 				collectorNumber: 254,
 				rarity: "Epic",
@@ -24502,7 +24502,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-255-298",
+				id: "ogn-255/298",
 				set: "Origins",
 				collectorNumber: 255,
 				rarity: "Rare",
@@ -24520,7 +24520,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-256-298",
+				id: "ogn-256/298",
 				set: "Origins",
 				collectorNumber: 256,
 				rarity: "Epic",
@@ -24538,7 +24538,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-257-298",
+				id: "ogn-257/298",
 				set: "Origins",
 				collectorNumber: 257,
 				rarity: "Rare",
@@ -24556,7 +24556,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-258-298",
+				id: "ogn-258/298",
 				set: "Origins",
 				collectorNumber: 258,
 				rarity: "Epic",
@@ -24574,7 +24574,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-259-298",
+				id: "ogn-259/298",
 				set: "Origins",
 				collectorNumber: 259,
 				rarity: "Rare",
@@ -24592,7 +24592,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-260-298",
+				id: "ogn-260/298",
 				set: "Origins",
 				collectorNumber: 260,
 				rarity: "Epic",
@@ -24610,7 +24610,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-261-298",
+				id: "ogn-261/298",
 				set: "Origins",
 				collectorNumber: 261,
 				rarity: "Rare",
@@ -24628,7 +24628,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-262-298",
+				id: "ogn-262/298",
 				set: "Origins",
 				collectorNumber: 262,
 				rarity: "Epic",
@@ -24646,7 +24646,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-263-298",
+				id: "ogn-263/298",
 				set: "Origins",
 				collectorNumber: 263,
 				rarity: "Rare",
@@ -24664,7 +24664,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-264-298",
+				id: "ogn-264/298",
 				set: "Origins",
 				collectorNumber: 264,
 				rarity: "Epic",
@@ -24682,7 +24682,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-265-298",
+				id: "ogn-265/298",
 				set: "Origins",
 				collectorNumber: 265,
 				rarity: "Rare",
@@ -24700,7 +24700,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-266-298",
+				id: "ogn-266/298",
 				set: "Origins",
 				collectorNumber: 266,
 				rarity: "Epic",
@@ -24718,7 +24718,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-267-298",
+				id: "ogn-267/298",
 				set: "Origins",
 				collectorNumber: 267,
 				rarity: "Rare",
@@ -24736,7 +24736,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-268-298",
+				id: "ogn-268/298",
 				set: "Origins",
 				collectorNumber: 268,
 				rarity: "Epic",
@@ -24754,7 +24754,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-269-298",
+				id: "ogn-269/298",
 				set: "Origins",
 				collectorNumber: 269,
 				rarity: "Rare",
@@ -24772,7 +24772,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-270-298",
+				id: "ogn-270/298",
 				set: "Origins",
 				collectorNumber: 270,
 				rarity: "Epic",
@@ -24790,7 +24790,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-271-298",
+				id: "ogn-271/298",
 				set: "Origins",
 				collectorNumber: 271,
 				rarity: "Common",
@@ -24808,7 +24808,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-272-298",
+				id: "ogn-272/298",
 				set: "Origins",
 				collectorNumber: 272,
 				rarity: "Common",
@@ -24826,7 +24826,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-273-298",
+				id: "ogn-273/298",
 				set: "Origins",
 				collectorNumber: 273,
 				rarity: "Common",
@@ -24844,7 +24844,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-274-298",
+				id: "ogn-274/298",
 				set: "Origins",
 				collectorNumber: 274,
 				rarity: "Common",
@@ -24862,7 +24862,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-275-298",
+				id: "ogn-275/298",
 				set: "Origins",
 				collectorNumber: 275,
 				rarity: "Uncommon",
@@ -24880,7 +24880,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-276-298",
+				id: "ogn-276/298",
 				set: "Origins",
 				collectorNumber: 276,
 				rarity: "Uncommon",
@@ -24898,7 +24898,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-277-298",
+				id: "ogn-277/298",
 				set: "Origins",
 				collectorNumber: 277,
 				rarity: "Uncommon",
@@ -24916,7 +24916,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-278-298",
+				id: "ogn-278/298",
 				set: "Origins",
 				collectorNumber: 278,
 				rarity: "Uncommon",
@@ -24934,7 +24934,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-279-298",
+				id: "ogn-279/298",
 				set: "Origins",
 				collectorNumber: 279,
 				rarity: "Uncommon",
@@ -24952,7 +24952,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-280-298",
+				id: "ogn-280/298",
 				set: "Origins",
 				collectorNumber: 280,
 				rarity: "Uncommon",
@@ -24970,7 +24970,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-281-298",
+				id: "ogn-281/298",
 				set: "Origins",
 				collectorNumber: 281,
 				rarity: "Uncommon",
@@ -24988,7 +24988,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-282-298",
+				id: "ogn-282/298",
 				set: "Origins",
 				collectorNumber: 282,
 				rarity: "Uncommon",
@@ -25006,7 +25006,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-283-298",
+				id: "ogn-283/298",
 				set: "Origins",
 				collectorNumber: 283,
 				rarity: "Uncommon",
@@ -25024,7 +25024,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-284-298",
+				id: "ogn-284/298",
 				set: "Origins",
 				collectorNumber: 284,
 				rarity: "Uncommon",
@@ -25042,7 +25042,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-285-298",
+				id: "ogn-285/298",
 				set: "Origins",
 				collectorNumber: 285,
 				rarity: "Uncommon",
@@ -25060,7 +25060,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-286-298",
+				id: "ogn-286/298",
 				set: "Origins",
 				collectorNumber: 286,
 				rarity: "Uncommon",
@@ -25078,7 +25078,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-287-298",
+				id: "ogn-287/298",
 				set: "Origins",
 				collectorNumber: 287,
 				rarity: "Uncommon",
@@ -25096,7 +25096,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-288-298",
+				id: "ogn-288/298",
 				set: "Origins",
 				collectorNumber: 288,
 				rarity: "Uncommon",
@@ -25114,7 +25114,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-289-298",
+				id: "ogn-289/298",
 				set: "Origins",
 				collectorNumber: 289,
 				rarity: "Uncommon",
@@ -25132,7 +25132,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-290-298",
+				id: "ogn-290/298",
 				set: "Origins",
 				collectorNumber: 290,
 				rarity: "Uncommon",
@@ -25150,7 +25150,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-291-298",
+				id: "ogn-291/298",
 				set: "Origins",
 				collectorNumber: 291,
 				rarity: "Uncommon",
@@ -25168,7 +25168,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-292-298",
+				id: "ogn-292/298",
 				set: "Origins",
 				collectorNumber: 292,
 				rarity: "Uncommon",
@@ -25186,7 +25186,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-293-298",
+				id: "ogn-293/298",
 				set: "Origins",
 				collectorNumber: 293,
 				rarity: "Uncommon",
@@ -25204,7 +25204,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-294-298",
+				id: "ogn-294/298",
 				set: "Origins",
 				collectorNumber: 294,
 				rarity: "Uncommon",
@@ -25222,7 +25222,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-295-298",
+				id: "ogn-295/298",
 				set: "Origins",
 				collectorNumber: 295,
 				rarity: "Uncommon",
@@ -25240,7 +25240,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-296-298",
+				id: "ogn-296/298",
 				set: "Origins",
 				collectorNumber: 296,
 				rarity: "Uncommon",
@@ -25258,7 +25258,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-297-298",
+				id: "ogn-297/298",
 				set: "Origins",
 				collectorNumber: 297,
 				rarity: "Uncommon",
@@ -25276,7 +25276,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-298-298",
+				id: "ogn-298/298",
 				set: "Origins",
 				collectorNumber: 298,
 				rarity: "Uncommon",
@@ -25294,7 +25294,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-299*-298",
+				id: "ogn-299*/298",
 				set: "Origins",
 				collectorNumber: 299,
 				rarity: "Showcase",
@@ -25312,7 +25312,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-299-298",
+				id: "ogn-299/298",
 				set: "Origins",
 				collectorNumber: 299,
 				rarity: "Showcase",
@@ -25330,7 +25330,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-300*-298",
+				id: "ogn-300*/298",
 				set: "Origins",
 				collectorNumber: 300,
 				rarity: "Showcase",
@@ -25348,7 +25348,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-300-298",
+				id: "ogn-300/298",
 				set: "Origins",
 				collectorNumber: 300,
 				rarity: "Showcase",
@@ -25366,7 +25366,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-301*-298",
+				id: "ogn-301*/298",
 				set: "Origins",
 				collectorNumber: 301,
 				rarity: "Showcase",
@@ -25384,7 +25384,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-301-298",
+				id: "ogn-301/298",
 				set: "Origins",
 				collectorNumber: 301,
 				rarity: "Showcase",
@@ -25402,7 +25402,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-302-298",
+				id: "ogn-302/298",
 				set: "Origins",
 				collectorNumber: 302,
 				rarity: "Showcase",
@@ -25420,7 +25420,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-302*-298",
+				id: "ogn-302*/298",
 				set: "Origins",
 				collectorNumber: 302,
 				rarity: "Showcase",
@@ -25438,7 +25438,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-303*-298",
+				id: "ogn-303*/298",
 				set: "Origins",
 				collectorNumber: 303,
 				rarity: "Showcase",
@@ -25456,7 +25456,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-303-298",
+				id: "ogn-303/298",
 				set: "Origins",
 				collectorNumber: 303,
 				rarity: "Showcase",
@@ -25474,7 +25474,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-304*-298",
+				id: "ogn-304*/298",
 				set: "Origins",
 				collectorNumber: 304,
 				rarity: "Showcase",
@@ -25492,7 +25492,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-304-298",
+				id: "ogn-304/298",
 				set: "Origins",
 				collectorNumber: 304,
 				rarity: "Showcase",
@@ -25510,7 +25510,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-305*-298",
+				id: "ogn-305*/298",
 				set: "Origins",
 				collectorNumber: 305,
 				rarity: "Showcase",
@@ -25528,7 +25528,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-305-298",
+				id: "ogn-305/298",
 				set: "Origins",
 				collectorNumber: 305,
 				rarity: "Showcase",
@@ -25546,7 +25546,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-306*-298",
+				id: "ogn-306*/298",
 				set: "Origins",
 				collectorNumber: 306,
 				rarity: "Showcase",
@@ -25564,7 +25564,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-306-298",
+				id: "ogn-306/298",
 				set: "Origins",
 				collectorNumber: 306,
 				rarity: "Showcase",
@@ -25582,7 +25582,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-307*-298",
+				id: "ogn-307*/298",
 				set: "Origins",
 				collectorNumber: 307,
 				rarity: "Showcase",
@@ -25600,7 +25600,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-307-298",
+				id: "ogn-307/298",
 				set: "Origins",
 				collectorNumber: 307,
 				rarity: "Showcase",
@@ -25618,7 +25618,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-308-298",
+				id: "ogn-308/298",
 				set: "Origins",
 				collectorNumber: 308,
 				rarity: "Showcase",
@@ -25636,7 +25636,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-308*-298",
+				id: "ogn-308*/298",
 				set: "Origins",
 				collectorNumber: 308,
 				rarity: "Showcase",
@@ -25654,7 +25654,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-309*-298",
+				id: "ogn-309*/298",
 				set: "Origins",
 				collectorNumber: 309,
 				rarity: "Showcase",
@@ -25672,7 +25672,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-309-298",
+				id: "ogn-309/298",
 				set: "Origins",
 				collectorNumber: 309,
 				rarity: "Showcase",
@@ -25690,7 +25690,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-310*-298",
+				id: "ogn-310*/298",
 				set: "Origins",
 				collectorNumber: 310,
 				rarity: "Showcase",
@@ -25708,7 +25708,7 @@ export default [
 				}
 			},
 			{
-				id: "ogn-310-298",
+				id: "ogn-310/298",
 				set: "Origins",
 				collectorNumber: 310,
 				rarity: "Showcase",
@@ -25732,7 +25732,7 @@ export default [
 		name: "Proving Grounds",
 		cards: [
 			{
-				id: "ogs-001-024",
+				id: "ogs-001/024",
 				set: "Proving Grounds",
 				collectorNumber: 1,
 				rarity: "Epic",
@@ -25750,7 +25750,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-002-024",
+				id: "ogs-002/024",
 				set: "Proving Grounds",
 				collectorNumber: 2,
 				rarity: "Uncommon",
@@ -25768,7 +25768,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-003-024",
+				id: "ogs-003/024",
 				set: "Proving Grounds",
 				collectorNumber: 3,
 				rarity: "Common",
@@ -25786,7 +25786,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-004-024",
+				id: "ogs-004/024",
 				set: "Proving Grounds",
 				collectorNumber: 4,
 				rarity: "Rare",
@@ -25804,7 +25804,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-005-024",
+				id: "ogs-005/024",
 				set: "Proving Grounds",
 				collectorNumber: 5,
 				rarity: "Uncommon",
@@ -25822,7 +25822,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-006-024",
+				id: "ogs-006/024",
 				set: "Proving Grounds",
 				collectorNumber: 6,
 				rarity: "Rare",
@@ -25840,7 +25840,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-007-024",
+				id: "ogs-007/024",
 				set: "Proving Grounds",
 				collectorNumber: 7,
 				rarity: "Rare",
@@ -25858,7 +25858,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-008-024",
+				id: "ogs-008/024",
 				set: "Proving Grounds",
 				collectorNumber: 8,
 				rarity: "Common",
@@ -25876,7 +25876,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-009-024",
+				id: "ogs-009/024",
 				set: "Proving Grounds",
 				collectorNumber: 9,
 				rarity: "Epic",
@@ -25894,7 +25894,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-010-024",
+				id: "ogs-010/024",
 				set: "Proving Grounds",
 				collectorNumber: 10,
 				rarity: "Rare",
@@ -25912,7 +25912,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-011-024",
+				id: "ogs-011/024",
 				set: "Proving Grounds",
 				collectorNumber: 11,
 				rarity: "Common",
@@ -25930,7 +25930,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-012-024",
+				id: "ogs-012/024",
 				set: "Proving Grounds",
 				collectorNumber: 12,
 				rarity: "Common",
@@ -25948,7 +25948,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-013-024",
+				id: "ogs-013/024",
 				set: "Proving Grounds",
 				collectorNumber: 13,
 				rarity: "Epic",
@@ -25966,7 +25966,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-014-024",
+				id: "ogs-014/024",
 				set: "Proving Grounds",
 				collectorNumber: 14,
 				rarity: "Epic",
@@ -25984,7 +25984,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-015-024",
+				id: "ogs-015/024",
 				set: "Proving Grounds",
 				collectorNumber: 15,
 				rarity: "Uncommon",
@@ -26002,7 +26002,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-016-024",
+				id: "ogs-016/024",
 				set: "Proving Grounds",
 				collectorNumber: 16,
 				rarity: "Common",
@@ -26020,7 +26020,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-017-024",
+				id: "ogs-017/024",
 				set: "Proving Grounds",
 				collectorNumber: 17,
 				rarity: "Rare",
@@ -26038,7 +26038,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-018-024",
+				id: "ogs-018/024",
 				set: "Proving Grounds",
 				collectorNumber: 18,
 				rarity: "Epic",
@@ -26056,7 +26056,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-019-024",
+				id: "ogs-019/024",
 				set: "Proving Grounds",
 				collectorNumber: 19,
 				rarity: "Rare",
@@ -26074,7 +26074,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-020-024",
+				id: "ogs-020/024",
 				set: "Proving Grounds",
 				collectorNumber: 20,
 				rarity: "Epic",
@@ -26092,7 +26092,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-021-024",
+				id: "ogs-021/024",
 				set: "Proving Grounds",
 				collectorNumber: 21,
 				rarity: "Rare",
@@ -26110,7 +26110,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-022-024",
+				id: "ogs-022/024",
 				set: "Proving Grounds",
 				collectorNumber: 22,
 				rarity: "Epic",
@@ -26128,7 +26128,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-023-024",
+				id: "ogs-023/024",
 				set: "Proving Grounds",
 				collectorNumber: 23,
 				rarity: "Rare",
@@ -26146,7 +26146,7 @@ export default [
 				}
 			},
 			{
-				id: "ogs-024-024",
+				id: "ogs-024/024",
 				set: "Proving Grounds",
 				collectorNumber: 24,
 				rarity: "Epic",

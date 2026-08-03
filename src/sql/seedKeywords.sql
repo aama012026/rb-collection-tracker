@@ -1,8 +1,8 @@
 INSERT INTO keywords (rules_entry, name, formatting, color, rules_description, card_description) VALUES
 	(
 		'805', 'accelerate', NULL, 'teal',
-		'As you play me, you may pay [EC1][PC1] as an additional cost to have me enter ready.',
-		'You may pay [EC1][PC1] as an additional cost to have me enter ready.'
+		'As you play me, you may pay [1][C] as an additional cost to have me enter ready.',
+		'You may pay [1][C] as an additional cost to have me enter ready.'
 	), (
 		'806', 'action', '[Action]|[Action][>]', 'teal',
 		'[I|This] can be [played|activated] during showdowns on any player''s turn.',
@@ -26,7 +26,7 @@ INSERT INTO keywords (rules_entry, name, formatting, color, rules_description, c
 	), (
 		'811', 'hidden', NULL, 'magenta',
 		'While this card is in your hand or your Champion Zone on your turn during an Open State, you may pay [A] to hide this facedown at a battlefield you control that doesn''t already have a facedown card hidden there for as long as you control that battlefield. Beginning on the next turn, this gains [Reaction] and you may play this, ignoring its base cost.',
-		'Hide now for [A] to react with later for [EC0].'
+		'Hide now for [A] to react with later for [0].'
 	), (
 		'812', 'legion', '[Legion][>][Text]', 'teal',
 		'If you have played another card this turn, this card gains [Text].',
@@ -95,4 +95,4 @@ ON DUPLICATE KEY UPDATE
 	color = VALUE(color),
 	rules_description = VALUE(rules_description),
 	card_description = VALUE(card_description)
-;
+RETURNING *;
