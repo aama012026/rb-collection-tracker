@@ -2,49 +2,49 @@ DELIMITER //
 -- @ end of update: check what types are missing sort_order.
 CREATE PROCEDURE get_or_add_type(
 	IN p_name VARCHAR(32),
-	OUT out_id TINYINT UNSIGNED
+	OUT type_id TINYINT UNSIGNED
 )
 BEGIN
-	SELECT id INTO out_id FROM types WHERE name = p_name;
-	IF out_id IS NULL THEN
+	SELECT id INTO type_id FROM types WHERE name = p_name;
+	IF type_id IS NULL THEN
 		INSERT INTO types (name) VALUES (p_name);
-		SET out_id = LAST_INSERT_ID();
+		SET type_id = LAST_INSERT_ID();
 	END IF;
 END//
 
 CREATE PROCEDURE get_or_add_rarity(
 	IN p_name VARCHAR(32),
-	OUT out_id TINYINT UNSIGNED
+	OUT rarity_id TINYINT UNSIGNED
 )
 BEGIN
-	SELECT id INTO out_id FROM rarities WHERE name = p_name;
-	IF out_id IS NULL THEN
+	SELECT id INTO rarity_id FROM rarities WHERE name = p_name;
+	IF rarity_id IS NULL THEN
 		INSERT INTO rarities (name) VALUES (p_name);
-		SET out_id = LAST_INSERT_ID();
+		SET rarity_id = LAST_INSERT_ID();
 	END IF;
 END//
 
 CREATE PROCEDURE get_or_add_domain(
 	IN p_name VARCHAR(32),
-	OUT out_id TINYINT UNSIGNED
+	OUT domain_id TINYINT UNSIGNED
 )
 BEGIN
-	SELECT id INTO out_id FROM domains WHERE name = p_name;
-	IF out_id IS NULL THEN
+	SELECT id INTO domain_id FROM domains WHERE name = p_name;
+	IF domain_id IS NULL THEN
 		INSERT INTO domains (name) VALUES (p_name);
-		SET out_id = LAST_INSERT_ID();
+		SET domain_id = LAST_INSERT_ID();
 	END IF;
 END//
 
 CREATE PROCEDURE get_or_add_tag(
 	IN p_name VARCHAR(32),
-	OUT out_id SMALLINT UNSIGNED
+	OUT tag_id SMALLINT UNSIGNED
 )
 BEGIN
-	SELECT id INTO out_id FROM tags WHERE name = p_name;
-	IF out_id IS NULL THEN
+	SELECT id INTO tag_id FROM tags WHERE name = p_name;
+	IF tag_id IS NULL THEN
 		INSERT INTO tags (name) VALUES (p_name);
-		SET out_id = LAST_INSERT_ID();
+		SET tag_id = LAST_INSERT_ID();
 	END IF;
 END//
 
@@ -52,21 +52,21 @@ CREATE PROCEDURE get_or_add_set(
 	IN p_name VARCHAR(255),
 	IN p_code VARCHAR(8),
 	IN p_count_denominator SMALLINT UNSIGNED,
-	OUT out_id INT UNSIGNED
+	OUT set_id INT UNSIGNED
 )
 BEGIN
 	DECLARE present_denominator TYPE OF sets.card_count_denominator;
-	SELECT id, card_count_denominator INTO out_id, present_denominator
+	SELECT id, card_count_denominator INTO set_id, present_denominator
 	FROM sets
 	WHERE code = LOWER(p_code);
-	IF out_id IS NULL THEN
+	IF set_id IS NULL THEN
 		INSERT INTO sets (code, name, card_count_denominator)
 		VALUES (LOWER(p_code), p_name, p_count_denominator, p_count_total);
-		SET out_id = LAST_INSERT_ID();
+		SET set_id = LAST_INSERT_ID();
 	ELSEIF present_denominator IS NULL AND p_count_denominator IS NOT NULL THEN
 		UPDATE sets
 		SET card_count_denominator = p_count_denominator
-		WHERE id = out_id;
+		WHERE id = set_id;
 	END IF;
 END//
 
@@ -124,13 +124,13 @@ END//
 
 CREATE PROCEDURE set_card_types(
 	IN p_card_id INT UNSIGNED,
-	IN p_types VARCHAR(1000)
+	IN type_text VARCHAR(1000)
 )
 BEGIN
 	DECLARE type_name TYPE OF types.name;
 	DECLARE v_type_id TYPE OF types.id;
-	WHILE p_types IS NOT NULL AND LENGTH(p_types) > 0 DO
-		CALL split_string(p_types, ',', type_name, p_types);
+	WHILE type_text IS NOT NULL AND LENGTH(type_text) > 0 DO
+		CALL split_string(type_text, ',', type_name, type_text);
 		SET type_name = LOWER(TRIM(type_name));
 		IF type_name <> '' THEN
 			CALL get_or_add_type(type_name, v_type_id);
@@ -142,32 +142,50 @@ END//
 
 CREATE PROCEDURE set_card_domains(
 	IN p_card_id INT UNSIGNED,
-	IN p_domains VARCHAR(1000)
+	IN domain_text VARCHAR(1000)
 )
 BEGIN
 	DECLARE domain_name TYPE OF domains.name;
 	DECLARE v_domain_id TYPE OF domains.id;
-	WHILE p_domains IS NOT NULL AND LENGTH(p_domains) > 0 DO
-		CALL split_string(p_domains, ',', domain_name, p_domains);
+	WHILE domain_text IS NOT NULL AND LENGTH(domain_text) > 0 DO
+		CALL split_string(domain_text, ',', domain_name, domain_text);
 		SET domain_name = LOWER(TRIM(domain_name));
-		IF type <> '' THEN
+		IF domain_name <> '' THEN
 			CALL get_or_add_domain(domain_name, v_domain_id);
-			INSERT INTO card_types (card_id, domain_id)
+			INSERT INTO card_domains (card_id, domain_id)
 			VALUES (p_card_id, v_domain_id);
 		END IF;
 	END WHILE;
-END
+END//
 
 CREATE PROCEDURE get_or_add_artist(
 	IN p_name VARCHAR(255),
-	OUT out_id INT UNSIGNED
+	OUT artist_id INT UNSIGNED
 )
 BEGIN
-	SELECT id INTO out_id FROM artists WHERE name = p_name;
-	IF out_id IS NULL THEN
+	SELECT id INTO artist_id FROM artists WHERE name = p_name;
+	IF artist_id IS NULL THEN
 		INSERT INTO artists (name) VALUES (p_name);
-		SET out_id = LAST_INSERT_ID();
+		SET artist_id = LAST_INSERT_ID();
 	END IF;
+END//
+
+CREATE PROCEDURE set_card_artists(
+	IN p_card_id INT UNSIGNED,
+	IN artist_text VARCHAR(1000)
+)
+BEGIN
+	DECLARE artist_name TYPE OF artists.name;
+	DECLARE v_artist_id TYPE OF artists.id;
+	WHILE artist_text IS NOT NULL AND LENGTH(artist_text) > 0 DO
+		CALL split_string(artist_text, ' & ', artist_name, artist_text);
+		SET artist_name = TRIM(artist_name);
+		IF artist_name <> '' THEN
+			CALL get_or_add_artist(artist_name, v_artist_id);
+			INSERT INTO card_artists (card_id, artist_id)
+			VALUES (p_card_id, v_artist_id);
+		END IF;
+	END WHILE;
 END//
 
 CREATE PROCEDURE set_card(
@@ -175,10 +193,10 @@ CREATE PROCEDURE set_card(
 	IN p_riot_id VARCHAR(255),
 	IN p_collector_number BIGINT,
 	IN p_name VARCHAR(255),
-	IN p_types VARCHAR(32),
-	IN p_domain VARCHAR(32),
+	IN type_text VARCHAR(32),
+	IN domain_text VARCHAR(32),
 	IN p_rarity VARCHAR(32),
-	IN p_artist VARCHAR(255),
+	IN artist_text VARCHAR(255),
 	IN p_energy TINYINT,
 	IN p_power TINYINT,
 	IN p_might TINYINT,
@@ -197,9 +215,9 @@ BEGIN
 	DECLARE v_set_id TYPE OF cards.set_id;
 
 	CALL get_or_add_type(p_type, v_type_id);
-	CALL get_or_add_domain(p_domain, v_domain_id);
+	CALL get_or_add_domain(domain_text, v_domain_id);
 	CALL get_or_add_rarity(p_rarity, v_rarity_id);
-	CALL get_or_add_artist(p_artist, v_artist_id);
+	CALL get_or_add_artist(artist_text, v_artist_id);
 	CALL get_or_add_set(
 		p_set_name,
 		extract_set_code(p_riot_id),
