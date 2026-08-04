@@ -129,16 +129,34 @@ CREATE PROCEDURE set_card_types(
 BEGIN
 	DECLARE type_name TYPE OF types.name;
 	DECLARE v_type_id TYPE OF types.id;
-	WHILE rest IS NOT NULL AND LENGTH(rest) > 0 DO
+	WHILE p_types IS NOT NULL AND LENGTH(p_types) > 0 DO
 		CALL split_string(p_types, ',', type_name, p_types);
-		SET type = LOWER(TRIM(type_name));
-		IF type <> '' THEN
+		SET type_name = LOWER(TRIM(type_name));
+		IF type_name <> '' THEN
 			CALL get_or_add_type(type_name, v_type_id);
 			INSERT INTO card_types (card_id, type_id)
 			VALUES (p_card_id, v_type_id);
 		END IF;
 	END WHILE;
 END//
+
+CREATE PROCEDURE set_card_domains(
+	IN p_card_id INT UNSIGNED,
+	IN p_domains VARCHAR(1000)
+)
+BEGIN
+	DECLARE domain_name TYPE OF domains.name;
+	DECLARE v_domain_id TYPE OF domains.id;
+	WHILE p_domains IS NOT NULL AND LENGTH(p_domains) > 0 DO
+		CALL split_string(p_domains, ',', domain_name, p_domains);
+		SET domain_name = LOWER(TRIM(domain_name));
+		IF type <> '' THEN
+			CALL get_or_add_domain(domain_name, v_domain_id);
+			INSERT INTO card_types (card_id, domain_id)
+			VALUES (p_card_id, v_domain_id);
+		END IF;
+	END WHILE;
+END
 
 CREATE PROCEDURE get_or_add_artist(
 	IN p_name VARCHAR(255),
@@ -189,13 +207,12 @@ BEGIN
 		v_set_id
 	);
 	INSERT INTO cards (
-		riot_id, collector_number, name, type_id, domain_id,
-		rarity_id, artist_id, set_id, energy, might, cost,
-		power, img, thumbnail, description, flavor_text
+		riot_id, collector_number, name, rarity_id, set_id, cost,
+		energy, might, power, img, thumbnail, description, flavor_text
 	) VALUES (
-		p_riot_id, p_collector_number, p_name, v_type_id, v_domain_id,
-		v_rarity_id, v_artist_id, v_set_id, p_energy, p_might, p_cost,
-		p_power, p_img, p_thumbnail, p_description, p_flavor_text
+		p_riot_id, p_collector_number, p_name, v_rarity_id, v_set_id,
+		p_cost, p_energy, p_might, p_power, p_img, p_thumbnail,
+		p_description, p_flavor_text
 	) ON DUPLICATE KEY UPDATE
 		riot_id          = VALUE(riot_id),
 		collector_number = VALUE(collector_number),
