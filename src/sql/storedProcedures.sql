@@ -1,55 +1,75 @@
 DELIMITER //
 -- @ end of update: check what types are missing sort_order.
 CREATE PROCEDURE get_or_add_type(
-	IN p_name VARCHAR(32),
+	IN type_name VARCHAR(32),
 	OUT type_id TINYINT UNSIGNED
 )
 BEGIN
-	SELECT id INTO type_id FROM types WHERE name = p_name;
+	SELECT id INTO type_id FROM types WHERE name = type_name;
 	IF type_id IS NULL THEN
-		INSERT INTO types (name) VALUES (p_name);
+		INSERT INTO types (name) VALUES (type_name);
 		SET type_id = LAST_INSERT_ID();
 	END IF;
 END//
 
 CREATE PROCEDURE get_or_add_rarity(
-	IN p_name VARCHAR(32),
+	IN rarity_name VARCHAR(32),
 	OUT rarity_id TINYINT UNSIGNED
 )
 BEGIN
-	SELECT id INTO rarity_id FROM rarities WHERE name = p_name;
+	SELECT id INTO rarity_id FROM rarities WHERE name = rarity_name;
 	IF rarity_id IS NULL THEN
-		INSERT INTO rarities (name) VALUES (p_name);
+		INSERT INTO rarities (name) VALUES (rarity_name);
 		SET rarity_id = LAST_INSERT_ID();
 	END IF;
 END//
 
 CREATE PROCEDURE get_or_add_domain(
-	IN p_name VARCHAR(32),
+	IN domain_name VARCHAR(32),
 	OUT domain_id TINYINT UNSIGNED
 )
 BEGIN
-	SELECT id INTO domain_id FROM domains WHERE name = p_name;
+	SELECT id INTO domain_id FROM domains WHERE name = domain_name;
 	IF domain_id IS NULL THEN
-		INSERT INTO domains (name) VALUES (p_name);
+		INSERT INTO domains (name) VALUES (domain_name);
 		SET domain_id = LAST_INSERT_ID();
 	END IF;
 END//
 
 CREATE PROCEDURE get_or_add_tag(
-	IN p_name VARCHAR(32),
+	IN tag_name VARCHAR(32),
 	OUT tag_id SMALLINT UNSIGNED
 )
 BEGIN
-	SELECT id INTO tag_id FROM tags WHERE name = p_name;
+	SELECT id INTO tag_id FROM tags WHERE name = tag_name;
 	IF tag_id IS NULL THEN
-		INSERT INTO tags (name) VALUES (p_name);
+		INSERT INTO tags (name) VALUES (tag_name);
 		SET tag_id = LAST_INSERT_ID();
 	END IF;
 END//
 
+CREATE PROCEDURE insert_card_tag(
+	IN p_card_id INT UNSIGNED,
+	IN tag_name VARCHAR(32),
+	OUT got_inserted BOOLEAN
+) BEGIN
+	DECLARE v_tag_id TYPE OF tags.id;
+	DECLARE v_card_id TYPE OF cards.id;
+	CALL get_or_add_tag(tag_name, v_tag_id);
+	IF EXISTS (
+		SELECT 1 FROM card_tags
+		WHERE card_id = p_card_id AND tag_id = v_tag_id
+	) THEN
+		SET got_inserted = FALSE;
+	ELSE
+		INSERT INTO card_tags (card_id, tag_id)
+		VALUES (p_card_id, v_tag_id);
+		SET got_inserted = TRUE;
+	END IF;
+END//
+
 CREATE PROCEDURE get_or_add_set(
-	IN p_name VARCHAR(255),
+	IN set_name VARCHAR(255),
 	IN p_code VARCHAR(8),
 	IN p_count_denominator SMALLINT UNSIGNED,
 	OUT set_id INT UNSIGNED
@@ -61,7 +81,7 @@ BEGIN
 	WHERE code = LOWER(p_code);
 	IF set_id IS NULL THEN
 		INSERT INTO sets (code, name, card_count_denominator)
-		VALUES (LOWER(p_code), p_name, p_count_denominator, p_count_total);
+		VALUES (LOWER(p_code), set_name, p_count_denominator, p_count_total);
 		SET set_id = LAST_INSERT_ID();
 	ELSEIF present_denominator IS NULL AND p_count_denominator IS NOT NULL THEN
 		UPDATE sets
@@ -159,13 +179,13 @@ BEGIN
 END//
 
 CREATE PROCEDURE get_or_add_artist(
-	IN p_name VARCHAR(255),
+	IN artist_name VARCHAR(255),
 	OUT artist_id INT UNSIGNED
 )
 BEGIN
-	SELECT id INTO artist_id FROM artists WHERE name = p_name;
+	SELECT id INTO artist_id FROM artists WHERE name = artist_name;
 	IF artist_id IS NULL THEN
-		INSERT INTO artists (name) VALUES (p_name);
+		INSERT INTO artists (name) VALUES (artist_name);
 		SET artist_id = LAST_INSERT_ID();
 	END IF;
 END//
@@ -192,7 +212,7 @@ CREATE PROCEDURE set_card(
 	IN p_set_name VARCHAR(255),
 	IN p_riot_id VARCHAR(255),
 	IN p_collector_number BIGINT,
-	IN p_name VARCHAR(255),
+	IN card_name VARCHAR(255),
 	IN type_text VARCHAR(32),
 	IN domain_text VARCHAR(32),
 	IN p_rarity VARCHAR(32),
@@ -228,7 +248,7 @@ BEGIN
 		riot_id, collector_number, name, rarity_id, set_id, cost,
 		energy, might, power, img, thumbnail, description, flavor_text
 	) VALUES (
-		p_riot_id, p_collector_number, p_name, v_rarity_id, v_set_id,
+		p_riot_id, p_collector_number, card_name, v_rarity_id, v_set_id,
 		p_cost, p_energy, p_might, p_power, p_img, p_thumbnail,
 		p_description, p_flavor_text
 	) ON DUPLICATE KEY UPDATE
