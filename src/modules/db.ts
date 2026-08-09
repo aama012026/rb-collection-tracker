@@ -1,9 +1,7 @@
 import { SQL } from "bun";
 import stringify, { prettyPrint } from "./stringify";
 
-const {
-	DB_ADMIN_USER, DB_ADMIN_PASS, DB_HOST, DB_PORT
-} = process.env
+const {DB_ADMIN_USER, DB_ADMIN_PASS, DB_HOST, DB_PORT} = process.env
 
 const sql = new SQL({
 	adapter:'mariadb',
@@ -12,14 +10,19 @@ const sql = new SQL({
 	host:DB_HOST,
 	port:DB_PORT,
 	database:'riftbound',
-	// `mariadb://${USER}:${PASSWORD}@${HOST}:${PORT}/riftbound`)
 })
 console.log('creating tables...')
 await sql.file('src/sql/createTables.sql')
-console.log(await sql`DESCRIBE types;`)
-console.log(await sql`DESCRIBE rarities;`)
-console.log(await sql`DESCRIBE domains;`)
-console.log(await sql`DESCRIBE keywords;`)
+prettyPrint(await sql`DESCRIBE types;`)
+prettyPrint(await sql`DESCRIBE rarities;`)
+prettyPrint(await sql`DESCRIBE domains;`)
+prettyPrint(await sql`DESCRIBE keywords;`)
+
+console.log('creating functions...')
+prettyPrint(await sql.file('src/sql/createFunctions.sql'))
+
+console.log('creating procedures...')
+prettyPrint(await sql.file('src/sql/createProcedures.sql'))
 
 console.log('seeding db...')
 prettyPrint(await sql`

@@ -35,8 +35,8 @@ CREATE TABLE IF NOT EXISTS cards (
 	cardmarket_id BIGINT UNSIGNED UNIQUE,
 	energy TINYINT,
 	might TINYINT,
-	cost TINYINT,
 	power TINYINT,
+	cost TINYINT,
 	img VARCHAR(255),
 	thumbnail VARCHAR(255),
 	description VARCHAR(1000),
@@ -50,10 +50,10 @@ CREATE TABLE IF NOT EXISTS domains (
 	shorthand varchar(8) UNIQUE
 );
 
-CREATE TABLE IF NOT EXISTS card_domains (
+CREATE TABLE IF NOT EXISTS cards_x_domains (
 	card_id INT UNSIGNED NOT NULL,
 	FOREIGN KEY(card_id) REFERENCES cards(id),
-	domain_id INT UNSIGNED NOT NULL,
+	domain_id TINYINT UNSIGNED NOT NULL,
 	FOREIGN KEY(domain_id) REFERENCES domains(id),
 	PRIMARY KEY(card_id, domain_id)
 );
@@ -64,10 +64,10 @@ CREATE TABLE IF NOT EXISTS types (
 	name VARCHAR(32) UNIQUE NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS card_types (
+CREATE TABLE IF NOT EXISTS cards_x_types (
 	card_id INT UNSIGNED NOT NULL,
 	FOREIGN KEY(card_id) REFERENCES cards(id),
-	type_id INT UNSIGNED NOT NULL,
+	type_id TINYINT UNSIGNED NOT NULL,
 	FOREIGN KEY(type_id) REFERENCES types(id),
 	PRIMARY KEY(card_id, type_id)
 );
@@ -77,7 +77,7 @@ CREATE TABLE IF NOT EXISTS tags (
 	name VARCHAR(32) UNIQUE NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS card_tags (
+CREATE TABLE IF NOT EXISTS cards_x_tags (
 	card_id INT UNSIGNED NOT NULL,
 	FOREIGN KEY (card_id) REFERENCES cards(id),
 	tag_id SMALLINT UNSIGNED NOT NULL,
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS keywords (
 	card_description VARCHAR(1000)
 );
 
-CREATE TABLE IF NOT EXISTS card_keywords (
+CREATE TABLE IF NOT EXISTS cards_x_keywords (
 	card_id INT UNSIGNED NOT NULL,
 	FOREIGN KEY(card_id) REFERENCES cards(id),
 	keyword_id SMALLINT UNSIGNED NOT NULL,
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS artists (
 	website VARCHAR(255) UNIQUE DEFAULT NULL
 );
 
-CREATE TABLE IF NOT EXISTS card_artists (
+CREATE TABLE IF NOT EXISTS cards_x_artists (
 	card_id INT UNSIGNED NOT NULL,
 	FOREIGN KEY(card_id) REFERENCES cards(id),
 	artist_id INT UNSIGNED NOT NULL,
