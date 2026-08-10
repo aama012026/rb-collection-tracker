@@ -46,7 +46,8 @@ for(const set of mockData) {
 			)
 		`
 		prettyPrint(await sql`SHOW WARNINGS`)
-		const id = await sql`SELECT @card_id`
+		const [{id}] = await sql`SELECT @card_id as id`
+		console.log(id)
 		prettyPrint(await sql`SELECT * FROM cards WHERE riot_id = ${card.id}`)
 		for(const tag of card.tags) {
 			await sql`CALL insert_card_tag(${id}, ${tag}, @got_inserted)`

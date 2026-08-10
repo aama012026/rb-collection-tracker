@@ -166,7 +166,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 			DECLARE v_tag_id TYPE OF tags.id;
 			DECLARE v_count BIGINT;
 			CALL get_or_add_tag(tag_name, v_tag_id);
-			SELECT COUNT(*) INTO v_count FROM card_tags
+			SELECT COUNT(*) INTO v_count FROM cards_x_tags
 			WHERE card_id = p_card_id AND tag_id = v_tag_id;
 			IF v_count > 0 THEN
 				SET got_inserted = FALSE;
