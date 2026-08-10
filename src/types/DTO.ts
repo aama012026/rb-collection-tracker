@@ -25,19 +25,19 @@ export interface Card {
 	stats:CardStats,
 	keywords:string[],
 	art:CardArt,
-	flavorText:string,
+	flavorText?:string|null,
 	tags:string[]
 }
 
 export interface CardStats {
-	energy:number,
-	might:number,
-	cost:number,
-	power:number
+	energy?:number|null,
+	power?:number|null
+	might?:number|null,
+	cost?:number|null,
 }
 
 export interface CardArt {
-	thumbnailURL:string,
-	fullURL:string,
+	thumbnailURL?:string,
+	fullURL?:string,
 	artist:string
 }

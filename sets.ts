@@ -1,4 +1,6 @@
-export default [
+import type { Set } from "./src/types/DTO";
+
+export const mockData:Set[] = [
 	{
 		id: "UNL",
 		name: "Unleashed",

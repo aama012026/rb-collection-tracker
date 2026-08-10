@@ -51,5 +51,5 @@ export default function stringify(value: unknown, tabStops = 0, keyLength = 0): 
 }
 
 export function prettyPrint(value:unknown):void {
-	console.log(stringify(value))
+	console.log('\x1b[0m'+stringify(value)+'\x1b[0m')
 }
