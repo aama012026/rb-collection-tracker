@@ -4,7 +4,7 @@ import { prettyPrint } from "../modules/stringify"
 export default async function createTables(sql: SQL): Promise<void> {
 	async function createTable(name:string, query:SQL.Query<any>
 	): Promise<void> {
-		console.log(`Creating table ${name}...`)
+		prettyPrint(`Creating table ${name}...`)
 		await query
 		prettyPrint(await sql`SHOW WARNINGS`)
 		prettyPrint(await sql`DESCRIBE ${sql(name)}`)
@@ -37,8 +37,7 @@ export default async function createTables(sql: SQL): Promise<void> {
 			name VARCHAR(255) UNIQUE NOT NULL,
 			cardmarket_id BIGINT UNIQUE,
 			release_date DATE,
-			card_count_denominator SMALLINT UNSIGNED,
-			card_count_total SMALLINT UNSIGNED
+			card_count_denominator SMALLINT UNSIGNED
 		);
 	`)
 

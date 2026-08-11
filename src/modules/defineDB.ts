@@ -6,6 +6,7 @@ import createTables from "../schema/createTables";
 import seedTables from "../schema/seedDB";
 import type { RiftboundContent, Set } from "../types/DTO";
 import { mockData } from "../../sets";
+import createViews from "../schema/createViews";
 
 const {DB_ADMIN_USER, DB_ADMIN_PASS, DB_HOST, DB_PORT} = process.env
 
@@ -20,6 +21,7 @@ const sql = new SQL({
 await createTables(sql)
 await createStoredFunctions(sql)
 await createStoredProcedures(sql)
+await createViews(sql)
 await seedTables(sql)
 
 for(const set of mockData) {
@@ -45,15 +47,47 @@ for(const set of mockData) {
 			@card_id
 			)
 		`
-		prettyPrint(await sql`SHOW WARNINGS`)
+		// prettyPrint(await sql`SHOW WARNINGS`)
 		const [{id}] = await sql`SELECT @card_id as id`
-		console.log(id)
-		prettyPrint(await sql`SELECT * FROM cards WHERE riot_id = ${card.id}`)
+		// prettyPrint(await sql`SELECT * FROM cards WHERE riot_id = ${card.id};`)
 		for(const tag of card.tags) {
 			await sql`CALL insert_card_tag(${id}, ${tag}, @got_inserted)`
 		}
-		prettyPrint(await sql`SELECT * FROM cards_x_tags WHERE card_id = ${id}`)
+		// prettyPrint(await sql`SELECT * FROM cards_x_tags WHERE card_id = ${id};`)
 	}
 }
-prettyPrint(await sql`SELECT * FROM cards`)
+prettyPrint(`artists missing home pages:\n`)
+prettyPrint(await sql`SELECT name FROM artists WHERE website IS NULL;`.values())
+
+prettyPrint(`domains missing sort order:\n`)
+prettyPrint(await sql`SELECT name FROM domains WHERE sort_order IS NULL;`.values())
+
+prettyPrint(`types missing sort order:\n`)
+prettyPrint(await sql`SELECT name FROM types WHERE sort_order IS NULL;`.values())
+
+prettyPrint(`rarities missing sort order:\n`)
+prettyPrint(await sql`SELECT name FROM rarities WHERE sort_order IS NULL;`.values())
+
+prettyPrint(`sets missing details:\n`)
+prettyPrint(await sql`
+	SELECT * FROM sets
+	WHERE release_date IS NULL
+	OR card_count_denominator IS NULL
+`)
+prettyPrint(`cards missing details\n`)
+prettyPrint(await sql`
+	SELECT * FROM cards
+	WHERE NOT EXISTS(
+		SELECT domain_id FROM cards_x_domains
+		WHERE cards.id = cards_x_domains.card_id
+	)
+	OR NOT EXISTS(
+		SELECT type_id FROM cards_x_types
+		WHERE cards.id = cards_x_types.card_id
+	);
+`)
+prettyPrint(await sql`SELECT COUNT(*) FROM cards;`)
+prettyPrint(`Cards in dataset: ${
+	mockData.reduce((cardCount, set) => cardCount + set.cards.length, 0)
+}`)
 prettyPrint('done...')

@@ -13,18 +13,38 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 	await createStoredProcedure('split_string', sql`
 		CREATE PROCEDURE IF NOT EXISTS split_string(
 			IN input VARCHAR(1000),
-			IN delimiter VARCHAR(1000),
+			-- '|' separated list of delimiters, whitespace included.
+			IN delimiter_list VARCHAR(1000),
 			OUT result VARCHAR(1000),
 			OUT rest VARCHAR(1000)
 		) BEGIN
-			DECLARE split_pos INT UNSIGNED;
-			SET split_pos = LOCATE(delimiter, input);
+			DECLARE delimiter VARCHAR(100);
+			DECLARE delim_pos INT UNSIGNED;
+			DECLARE split_pos INT UNSIGNED DEFAULT 0;
+			DECLARE split_len INT UNSIGNED DEFAULT 0;
+			DECLARE new_split_pos INT UNSIGNED;
+
+			WHILE delimiter_list IS NOT NULL AND LENGTH(delimiter_list) > 0 DO
+				SET delim_pos = LOCATE('|', delimiter_list);
+				IF delim_pos = 0 THEN
+					SET delimiter = delimiter_list;
+					SET delimiter_list = NULL;
+				ELSE
+					SET delimiter = SUBSTRING(delimiter_list, 1, delim_pos - 1);
+					SET delimiter_list = SUBSTRING(delimiter_list, delim_pos + 1);
+				END IF;
+				SET new_split_pos = LOCATE(delimiter, input);
+				IF new_split_pos > 0 AND (split_pos = 0 OR new_split_pos < split_pos) THEN
+					SET split_pos = new_split_pos;
+					SET split_len = LENGTH(delimiter);
+				END IF;
+			END WHILE;
 			IF split_pos = 0 THEN
 				SET result = input;
 				SET rest = NULL;
 			ELSE
 				SET result = SUBSTRING(input, 1, split_pos - 1);
-				SET rest = SUBSTRING(input, split_pos + 1);
+				SET rest = SUBSTRING(input, split_pos + split_len);
 			END IF;
 		END;
 	`)
@@ -36,7 +56,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 		) BEGIN
 			SELECT id INTO rarity_id FROM rarities WHERE name = rarity_name;
 			IF rarity_id IS NULL THEN
-				INSERT INTO rarities (name) VALUES (rarity_name);
+				INSERT INTO rarities (name) VALUES (LOWER(TRIM(rarity_name)));
 				SET rarity_id = LAST_INSERT_ID();
 			END IF;
 		END;
@@ -133,7 +153,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 
 			DELETE FROM cards_x_artists WHERE card_id = p_card_id;
 			WHILE artist_text IS NOT NULL AND LENGTH(artist_text) > 0 DO
-				CALL split_string(artist_text, ' & ', artist_name, artist_text);
+				CALL split_string(artist_text, '&|/|,', artist_name, artist_text);
 				SET artist_name = TRIM(artist_name);
 				IF artist_name <> '' THEN
 					CALL get_or_add_artist(artist_name, v_artist_id);
