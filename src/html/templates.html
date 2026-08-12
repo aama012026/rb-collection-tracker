@@ -1,17 +1,33 @@
-<template id="card-table">
-	<thead>
-		<tr>
-			<th>set</th><th>nr.</th><th>count</th><th>name</th>
-			<th>stats</th><th>tags & keywords</th><th>description</th>
-		</tr>
-	</thead>
-	<tbody>
-		%{cards: string}
+<template id="collection-page">
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Riftbound Card Collection</title>
+		<link rel="stylesheet" href="src/css/style.css">
+		<script type="module" src="lib/datastar.js"></script>
+	</head>
+	<body>
+		<table>
+			<thead>
+			<tr>
+				<th>set</th><th>nr.</th><th>count</th><th>name</th>
+				<th>stats</th><th>tags & keywords</th><th>description</th>
+			</tr>
+			</thead>
+			%{tbody: string}
+		</table>
+	</body>
+</html>
+</template>
+
+<template id="cards-table-body">
+	<tbody id="cards-table-body">
+		%{rows: string}
 	</tbody>
 </template>
 
 <template id="card-table-row">
-	<tr id="%{card-id}" data-domain="%{domain: string}" data-rarity="%{rarity: string}">
+	<tr id="%{cardId: string}" data-domain="%{domain: string}" data-rarity="%{rarity: string}">
 		<td>%{setCode: string}</td>
 		<td>%{cardNumber: string}</td>
 		<td>%{count: number}</td>
