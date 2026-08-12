@@ -1,5 +1,41 @@
-<template id="card-table-row">
-	<tr>
+<template id="card-table">
+	<thead>
+		<tr>
+			<th>set</th><th>nr.</th><th>count</th><th>name</th>
+			<th>stats</th><th>tags & keywords</th><th>description</th>
+		</tr>
+	</thead>
+	<tbody>
+		%{cards: string}
+	</tbody>
+</template>
 
+<template id="card-table-row">
+	<tr id="%{card-id}" data-domain="%{domain: string}" data-rarity="%{rarity: string}">
+		<td>%{setCode: string}</td>
+		<td>%{cardNumber: string}</td>
+		<td>%{count: number}</td>
+		<td>%{name: string}</td>
+		<td class="stats">
+			<span>%{energy: string}</span>
+			<span>%{power: string}</span>
+			<span>%{migth: string}</span>
+		</td>
+		<td>
+			<span>
+				<mark class="badge">%{types: string}</mark>
+				<span>%{tags: string}</span>
+			</span>
+			<span>%{keywords: string}</span>
+		</td>
+		<td>%{description: string}</td>
 	</tr>
+</template>
+
+<template id="tag">
+	<mark class="badge">%{tag: string}</mark>
+</template>
+
+<template id="keyword">
+	<mark class="badge" data-keyword="%{text: string}"></mark>
 </template>
