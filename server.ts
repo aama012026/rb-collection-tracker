@@ -8,6 +8,7 @@ const sql = new SQL({
 	host:process.env.DB_HOST,
 	port:process.env.DB_PORT,
 	database:'riftbound',
+	bigint:true
 })
 await sql`USE riftbound`
 const cards:Array<any> = await sql`SELECT * FROM card_details`

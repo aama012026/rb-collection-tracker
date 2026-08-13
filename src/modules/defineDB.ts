@@ -4,7 +4,6 @@ import createStoredFunctions from "../schema/createFunctions";
 import createStoredProcedures from "../schema/createProcedures";
 import createTables from "../schema/createTables";
 import seedTables from "../schema/seedDB";
-import type { RiftboundContent, Set } from "../types/DTO";
 import { mockData } from "../../sets";
 import createViews from "../schema/createViews";
 import generateTableInterfaces from "./generateTableInterfaces";
@@ -18,45 +17,48 @@ const sql = new SQL({
 	host:DB_HOST,
 	port:DB_PORT,
 	database:'riftbound',
+	bigint:true
 })
+
 await createTables(sql)
 await createStoredFunctions(sql)
 await createStoredProcedures(sql)
 await createViews(sql)
 await seedTables(sql)
 
-// for(const set of mockData) {
-// 	for(const card of set.cards) {
-// 		prettyPrint(`adding ${card.id} ${card.name}`)
-// 		await sql`CALL add_card(
-// 			${card.set},
-// 			${card.id},
-// 			${card.collectorNumber},
-// 			${card.rarity},
-// 			${card.name},
-// 			${card.type},
-// 			${card.faction},
-// 			${card.art.artist},
-// 			${card.stats.energy ?? null},
-// 			${card.stats.power ?? null},
-// 			${card.stats.might ?? null},
-// 			${card.stats.cost ?? null},
-// 			${card.art.fullURL ?? null},
-// 			${card.art.thumbnailURL ?? null},
-// 			${card.description},
-// 			${card.flavorText},
-// 			@card_id
-// 			)
-// 		`
-// 		// prettyPrint(await sql`SHOW WARNINGS`)
-// 		const [{id}] = await sql`SELECT @card_id as id`
-// 		// prettyPrint(await sql`SELECT * FROM cards WHERE riot_id = ${card.id};`)
-// 		for(const tag of card.tags) {
-// 			await sql`CALL insert_card_tag(${id}, ${tag}, @got_inserted)`
-// 		}
-// 		// prettyPrint(await sql`SELECT * FROM cards_x_tags WHERE card_id = ${id};`)
-// 	}
-// }
+for(const set of mockData) {
+	for(const card of set.cards) {
+		prettyPrint(`adding ${card.id} ${card.name}`)
+		await sql`CALL add_card(
+			${card.set},
+			${card.id},
+			${card.collectorNumber},
+			${card.rarity},
+			${card.name},
+			${card.type},
+			${card.faction},
+			${card.art.artist},
+			${card.stats.energy ?? null},
+			${card.stats.power ?? null},
+			${card.stats.might ?? null},
+			${card.stats.cost ?? null},
+			${card.art.fullURL ?? null},
+			${card.art.thumbnailURL ?? null},
+			${card.description},
+			${card.flavorText},
+			@card_id
+			)
+		`
+		// prettyPrint(await sql`SHOW WARNINGS`)
+		const [{id}] = await sql`SELECT @card_id as id`
+		// prettyPrint(await sql`SELECT * FROM cards WHERE riot_id = ${card.id};`)
+		for(const tag of card.tags) {
+			await sql`CALL insert_card_tag(${id}, ${tag}, @got_inserted)`
+		}
+		// prettyPrint(await sql`SELECT * FROM cards_x_tags WHERE card_id = ${id};`)
+	}
+}
+
 prettyPrint(`artists missing home pages:\n`)
 prettyPrint(await sql`SELECT name FROM artists WHERE website IS NULL;`.values())
 

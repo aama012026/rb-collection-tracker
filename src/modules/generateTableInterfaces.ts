@@ -1,5 +1,4 @@
 import type { SQL } from "bun"
-import { prettyPrint } from "./stringify"
 
 interface Column {
 	column_name: string,
@@ -28,7 +27,6 @@ export default async function generateTableInterfaces(
 	sql: SQL, ...tableNames: string[]
 ) {
 	console.log('Generating typescript interfaces for tables...')
-	console.log(tableNames)
 	const interfaces: string[] = []
 	for(const table of tableNames) {
 		interfaces.push(await generateInterface(sql, table))
@@ -48,8 +46,6 @@ async function generateInterface(
 		WHERE table_schema = DATABASE() AND table_name = ${tableName}
 		ORDER BY ordinal_position;
 	`
-	prettyPrint(await sql`SHOW WARNINGS;`)
-	prettyPrint(columns)
 	if(columns.length === 0) {
 		throw new Error(`No columns found for ${tableName} - Does it exist?`)
 	}
