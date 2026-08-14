@@ -110,7 +110,4 @@ await generateTableInterfaces(sql,
 	'card_details'
 )
 
-prettyPrint('granting privileges to app...')
-prettyPrint(await sql`GRANT SELECT ON riftbound.card_details TO 'riftbound_app'@'localhost';`)
-
 prettyPrint('done...')
