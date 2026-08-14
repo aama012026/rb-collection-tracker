@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<title>Riftbound Card Collection</title>
-		<link rel="stylesheet" href="src/css/style.css">
+		<link rel="stylesheet" href="css/style.css">
 		<script type="module" src="lib/datastar.js"></script>
 	</head>
 	<body>
@@ -27,9 +27,9 @@
 </template>
 
 <template id="card-table-row">
-	<tr id="%{cardId: string}" data-domain="%{domain: string}" data-rarity="%{rarity: string}">
+	<tr id="%{cardId: number}" data-domain="%{domain: string}" data-rarity="%{rarity: string}">
 		<td>%{setCode: string}</td>
-		<td>%{cardNumber: string}</td>
+		<td>%{cardNumber: number|bigint}</td>
 		<td>%{count: number}</td>
 		<td>%{name: string}</td>
 		<td class="stats">
@@ -54,4 +54,17 @@
 
 <template id="keyword">
 	<mark class="badge" data-keyword="%{text: string}"></mark>
+</template>
+
+<template id="energy-svg">
+	<img class="inline-svg" src="svg/energy/e%{energy: number}.svg" alt="%{energy} energy">
+</template>
+
+<template id="power-svg">
+	<img class="inline-svg" src="svg/runes/%{domain: string}.svg" alt="%{domain} power">
+</template>
+
+<template id="might-svg">
+	<span>%{might: number}</span>
+	<img class="inline-svg" src="svg/symbols/might.svg" alt="might."
 </template>

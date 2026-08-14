@@ -49,13 +49,11 @@ for(const set of mockData) {
 			@card_id
 			)
 		`
-		// prettyPrint(await sql`SHOW WARNINGS`)
+		prettyPrint(await sql`SHOW WARNINGS`)
 		const [{id}] = await sql`SELECT @card_id as id`
-		// prettyPrint(await sql`SELECT * FROM cards WHERE riot_id = ${card.id};`)
 		for(const tag of card.tags) {
 			await sql`CALL insert_card_tag(${id}, ${tag}, @got_inserted)`
 		}
-		// prettyPrint(await sql`SELECT * FROM cards_x_tags WHERE card_id = ${id};`)
 	}
 }
 
@@ -108,7 +106,11 @@ await generateTableInterfaces(sql,
 	'cards_x_types',
 	'cards_x_tags',
 	'cards_x_keywords',
-	'cards_x_artists'
+	'cards_x_artists',
+	'card_details'
 )
+
+prettyPrint('granting privileges to app...')
+prettyPrint(await sql`GRANT SELECT ON riftbound.card_details TO 'riftbound_app'@'localhost';`)
 
 prettyPrint('done...')

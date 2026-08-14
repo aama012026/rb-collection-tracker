@@ -37,19 +37,25 @@ export default function stringify(value: unknown, tabStops = 0, keyLength = 0): 
 	// Format on same line or one separate line if possible.
 	function formatCollection(items: string[]) {
 		const itemsString = items.join(', ')
-		if(itemsString.length + keyLength + tabStops * 4 <= MAX_COLUMNS - 2) {
+		if(itemsString.length + keyLength + tabStops * TAB_SIZE <= MAX_COLUMNS - 2) {
 			return `${itemsString}`
 		}
 		else if(itemsString.length + (tabStops + 1) * TAB_SIZE <= MAX_COLUMNS) {
 			return `\n${innerTab + itemsString}\n${outerTab}`
 		}
 		else {
-			return `\n${
-				innerTab + items.join(`,\n${innerTab}`)}\n${outerTab}`
+			return `\n${innerTab + items.join(`,\n${innerTab}`)}\n${outerTab}`
 		}
 	}
 }
 
+export function isEmpty<T extends object>(obj: T): boolean {
+	return !Object.values(obj).some(v => !!v)
+}
+
 export function prettyPrint(value:unknown):void {
-	console.log('\x1b[0m'+stringify(value)+'\x1b[0m')
+	const text = stringify(value)
+	if(!(text === '' || text === '[]' || text === '{}')) {
+		console.log(`\x1b[0m${text}\x1b[0m`)
+	}
 }
