@@ -1,5 +1,6 @@
 import { SQL } from "bun"
-import { makeCardsTableBody, makeCollectionPage } from "./transpiled/templates"
+import { makeCardsTableBody, makeCardTableRow, makeCollectionPage, makeEnergySvg, makeMightSvg, makePowerSvg } from "./gen/HTMLtemplates"
+import type { CardDetails, Cards } from "./gen/dbTableInterfaces"
 
 const sql = new SQL({
 	adapter:'mariadb',
@@ -11,17 +12,33 @@ const sql = new SQL({
 	bigint:true
 })
 await sql`USE riftbound`
-const cards:Array<any> = await sql`SELECT * FROM card_details`
-const cardRows = cards.forEach()
+const cards:Array<CardDetails> = await sql`SELECT * FROM card_details`
+const cardRows = cards.map(c => makeCardTableRow(
+	c.id, c.domains ?? 'null', c.rarity, c.set_code,
+	c.collector_number, Math.floor(Math.random() * 5), c.name,
+	c.energy ? makeEnergySvg(c.energy) : '',
+	c.power ? makePowerSvg(c.domains ?? 'rainbow').repeat(c.power) : '',
+	c.might ? makeMightSvg(c.might) : '',
+	c.types ?? '',
+	c.tags ?? '',
+	c.keywords ?? '',
+	c.description ?? ''
+))
 
-const collection = makeCollectionPage(makeCardsTableBody(await sql`
-	SELECT * FROM card_details`)
-)
+const collection = makeCollectionPage(makeCardsTableBody(cardRows.join('\n')))
 
 console.log(`Riftbound collection server version: 0`)
 const server = Bun.serve({
 	routes: {
-		'/': collection,
+		'/': new Response(collection, {headers: {'Content-Type': 'text/html'}}),
+		'/*': (request) => {
+			try {
+				return new Response(Bun.file(`./assets/${new URL(request.url).pathname}`))
+			}
+			catch {
+				return Response.json({message: "Not found"}, {status: 404})
+			}
+		}
 	}
 })
 console.log(`Listening on ${server.url}`)
