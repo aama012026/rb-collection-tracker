@@ -12,7 +12,7 @@ const sql = new SQL({
 	bigint:true
 })
 await sql`USE riftbound`
-const cards:Array<CardDetails> = await sql`SELECT * FROM card_details`
+const cards:Array<CardDetails> = await sql`SELECT * FROM card_details ORDER BY riot_id`
 const cardRows = cards.map(c => makeCardTableRow(
 	c.id, c.domains ?? 'null', c.rarity, c.set_code,
 	c.collector_number, Math.floor(Math.random() * 5), c.name,

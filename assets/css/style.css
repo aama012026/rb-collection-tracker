@@ -20,8 +20,79 @@
     /* Keyword colors */
     --kw-green: #96b430; --kw-gray: #707070; --kw-magenta: #cd3971; --kw-teal: #067361;
 }
+[data-domain] {--c-hi: var(--silver-hi); --c-lo: var(--silver-lo);}
+[data-domain="fury"] {--c-hi: var(--fury-hi); --c-lo: var(--fury-lo);}
+[data-domain="calm"] {--c-hi: var(--calm-hi); --c-lo: var(--calm-lo);}
+[data-domain="mind"] {--c-hi: var(--mind-hi); --c-lo: var(--mind-lo);}
+[data-domain="body"] {--c-hi: var(--body-hi); --c-lo: var(--body-lo);}
+[data-domain="chaos"] {--c-hi: var(--chaos-hi); --c-lo: var(--chaos-lo);}
+[data-domain="order"] {--c-hi: var(--order-hi); --c-lo: var(--order-lo);}
+
+[data-rarity="common"] {--c-rarity: var(--bronze);}
+[data-rarity="uncommon"] {--c-rarity: var(--silver-hi);}
+[data-rarity="rare"] {--c-rarity: var(--gold);}
+[data-rarity="epic"] {--c-rarity: var(--body-hi);}
+[data-rarity="showcase"] {--c-rarity: var(--kw-magenta);}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: grid;
+	place-items: center;
+}
+
+.text-name {
+	font-family: Alegreya;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.text-subname {
+	font-family: Cinzel;
+	font-weight: normal;
+}
 
 body {
 	color: var(--paper-white);
 	background-color: var(--mind-lo);
+}
+
+table {
+	background-color: var(--border-black);
+	border: none;
+	border-spacing: 0 3px;
+}
+
+tr {
+	&[data-domain] {
+		background: linear-gradient( in oklab
+			105deg, var(--c-lo), var(--c-hi) 15% 60%, var(--c-lo) 90%
+		);
+	}
+
+	&:hover {
+		& td {
+			backdrop-filter: brightness(0.8);
+		}
+	}
+}
+
+td {
+	border-top: 1px solid var(--c-rarity);
+	border-bottom: 1px solid var(--c-rarity);
+
+	background: padding-box
+		linear-gradient(
+			var(--border-black), var(--border-black)
+		) top / 100% 1px no-repeat,
+		linear-gradient(
+			var(--border-black), var(--border-black)
+		) bottom / 100% 1px no-repeat
+	;
+
+	padding: 0.2em;
+	max-width: 90em;
 }
