@@ -40,21 +40,21 @@
 		</td>
 		<td>
 			<span>
-				<mark class="badge">%{types: string}</mark>
+				<mark class="badge" data-badge="type">%{types: string}</mark>
 				<span>%{tags: string}</span>
 			</span>
 			<span>%{keywords: string}</span>
 		</td>
-		<td>%{description: string}</td>
+		<td class="text-description">%{description: string}</td>
 	</tr>
 </template>
 
 <template id="tag">
-	<mark class="badge">%{tag: string}</mark>
+	<mark class="badge" data-badge="tag">%{tag: string}</mark>
 </template>
 
 <template id="keyword">
-	<mark class="badge" data-keyword="%{text: string}"></mark>
+	<mark class="badge" data-badge="keyword" data-keyword="%{text: string}"></mark>
 </template>
 
 <template id="energy-svg">
@@ -62,7 +62,7 @@
 </template>
 
 <template id="power-svg">
-	<img class="inline-svg" src="svg/runes/[%{domain: string}].svg" alt="%{domain} power">
+	<img class="inline-svg" src="gen/svg/%{domain: string}.svg" alt="%{domain} power">
 </template>
 
 <template id="might-svg">

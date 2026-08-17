@@ -19,20 +19,37 @@
 
     /* Keyword colors */
     --kw-green: #96b430; --kw-gray: #707070; --kw-magenta: #cd3971; --kw-teal: #067361;
+
+    /* Global variable defaults */
+    --c-bg: var(--border-black);
+    --c-fg: var(--paper-white);
 }
-[data-domain] {--c-hi: var(--silver-hi); --c-lo: var(--silver-lo);}
-[data-domain="fury"] {--c-hi: var(--fury-hi); --c-lo: var(--fury-lo);}
-[data-domain="calm"] {--c-hi: var(--calm-hi); --c-lo: var(--calm-lo);}
-[data-domain="mind"] {--c-hi: var(--mind-hi); --c-lo: var(--mind-lo);}
-[data-domain="body"] {--c-hi: var(--body-hi); --c-lo: var(--body-lo);}
-[data-domain="chaos"] {--c-hi: var(--chaos-hi); --c-lo: var(--chaos-lo);}
-[data-domain="order"] {--c-hi: var(--order-hi); --c-lo: var(--order-lo);}
+
+
+
+[data-domain] {--c-domain-hi: var(--silver-hi); --c-domain-lo: var(--silver-lo);}
+[data-domain="fury"] {--c-domain-hi: var(--fury-hi); --c-domain-lo: var(--fury-lo);}
+[data-domain="calm"] {--c-domain-hi: var(--calm-hi); --c-domain-lo: var(--calm-lo);}
+[data-domain="mind"] {--c-domain-hi: var(--mind-hi); --c-domain-lo: var(--mind-lo);}
+[data-domain="body"] {--c-domain-hi: var(--body-hi); --c-domain-lo: var(--body-lo);}
+[data-domain="chaos"] {--c-domain-hi: var(--chaos-hi); --c-domain-lo: var(--chaos-lo);}
+[data-domain="order"] {--c-domain-hi: var(--order-hi); --c-domain-lo: var(--order-lo);}
+
+[data-badge], [data-badge="tag"] {--c-bg: var(--border-black);}
+[data-badge="type"] {
+	--c-bg: #0002;
+	&:hover {
+		--c-bg: var(--c-domain-hi);
+	}
+}
+[data-badge="green"] {--c-bg: var(--kw-green);}
+[data-badge="gray"] {--c-bg: var(--kw-green);}
+[data-badge="magenta"] {--c-bg: var(--kw-magenta);}
+[data-badge="teal"] {--c-bg: var(--kw-teal);}
 
 [data-rarity="common"] {--c-rarity: var(--bronze);}
 [data-rarity="uncommon"] {--c-rarity: var(--silver-hi);}
-[data-rarity="rare"] {--c-rarity: var(--gold);}
-[data-rarity="epic"] {--c-rarity: var(--body-hi);}
-[data-rarity="showcase"] {--c-rarity: var(--kw-magenta);}
+[data-rarity="rare"], [data-rarity="epic"], [data-rarity="showcase"] {--c-rarity: var(--gold);}
 
 * {
 	margin: 0;
@@ -47,12 +64,17 @@ body {
 .text-name {
 	font-family: Alegreya;
 	font-size: 1rem;
-	font-weight: bold;
+	font-weight: 700;
 }
 
 .text-subname {
-	font-family: Cinzel;
+	font-family: AlegreyaSC;
 	font-weight: normal;
+}
+
+.text-description {
+	font-family: AlegreyaSans;
+	font-weight: 500;
 }
 
 body {
@@ -67,9 +89,10 @@ table {
 }
 
 tr {
+
 	&[data-domain] {
 		background: linear-gradient( in oklab
-			105deg, var(--c-lo), var(--c-hi) 15% 60%, var(--c-lo) 90%
+			105deg, var(--c-domain-lo), var(--c-domain-hi) 15% 60%, var(--c-domain-lo) 90%
 		);
 	}
 
@@ -81,6 +104,9 @@ tr {
 }
 
 td {
+	&:first-child {padding-left: 2vw;}
+	&:last-child {padding-right: 2vw;}
+
 	border-top: 1px solid var(--c-rarity);
 	border-bottom: 1px solid var(--c-rarity);
 
@@ -95,4 +121,33 @@ td {
 
 	padding: 0.2em;
 	max-width: 90em;
+}
+
+mark.badge {
+	font-size: 0.8em;
+	display: inline-block;
+	padding: 0.1em 0.7em 0.1em 0.5em;
+	font-family: AlegreyaSans;
+	font-weight: 700;
+	font-style: oblique 10deg;
+	/*font-style: italic;*/
+	text-transform: uppercase;
+	background: var(--c-bg);
+	color: var(--c-fg);
+	clip-path: polygon(
+		var(--slant, 0.25em) 0,
+		100% 0,
+		calc(100% - var(--slant, 0.25em)) 100%,
+		0 100%
+	);
+
+	[data-rarity="epic"] &, [data-rarity="showcase"] & {
+		--c-fg: var(--gold);
+		--c-bg: #0002;
+	}
+
+	&:hover:not([data-badge="type"]) {
+		color: var(--c-domain-lo);
+		background: var(--c-fg);
+	}
 }
