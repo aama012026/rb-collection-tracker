@@ -82,7 +82,7 @@ export default async function seedTables(sql: SQL): Promise<void> {
 				'While this card is in your hand or your Champion Zone on your turn during an Open State, you may pay [A] to hide this facedown at a battlefield you control that doesn''t already have a facedown card hidden there for as long as you control that battlefield. Beginning on the next turn, this gains [Reaction] and you may play this, ignoring its base cost.',
 				'Hide now for [A] to react with later for [0].'
 			), (
-				'812', 'legion', '[Legion][>][Text]', 'teal',
+				'812', 'legion', '[Legion][>] [Text]', 'teal',
 				'If you have played another card this turn, this card gains [Text].',
 				'[Text] (Get the effect if you''ve played another card this turn.)'
 			), (
