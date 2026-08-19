@@ -1,3 +1,5 @@
+# ignored files
+ignore
 # dependencies (bun install)
 node_modules
 
