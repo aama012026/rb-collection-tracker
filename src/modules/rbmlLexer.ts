@@ -1,61 +1,68 @@
-import { prettyPrint } from "./stringify"
-
 export type Token =
-| {type:'OPEN_BRACKET'}
-| {type:'CLOSE_BRACKET'}
-| {type:'OPEN_PAREN'}
-| {type:'CLOSE_PAREN'}
-| {type:'GT'}
-| {type:'HYPHEN'}
-| {type:'EN_DASH'}
-| {type:'EM_DASH'}
-| {type:'COLON'}
-| {type:'WORD', value: string}
-| {type:'NUMBER', value: number}
-| {type:'OTHER', value: string}
+| {name:'SYMBOL', value:string}
+| {name:'OPEN_BRACKET'}
+| {name:'CLOSE_BRACKET'}
+| {name:'OPEN_PAREN'}
+| {name:'CLOSE_PAREN'}
+| {name:'OP', value: string}
+| {name:'DASH', value: string}
+| {name:'COLON'}
+| {name:'COMMA'}
+| {name:'DOT'}
+| {name:'WORD', value: string}
+| {name:'NUMBER', value: number}
+| {name:'SPACE'}
+| {name:'OTHER', value: string}
 
-const regex = /(?<num>\d+)|(?<word>[a-zA-Z_]+)|(?<openBracket>\[)|(?<closeBracket>\])|(?<openParen>\()|(?<closeParen>\))|(?<gt>\>)|(?<hyphen>\-)|(?<enDash>\–)|(?<emDash>\—)|(?<colon>:)|(?<other>[\s\S])/y
-export function lex(input: string): Token[] {
+const regex = /(?<op>\[>{1,2}\])|(?<sym>\[(?:\d+|\w)\])|(?<num>\d+)|(?<word>[a-zA-Z_]+)|(?<openBracket>\[)|(?<closeBracket>\])|(?<openParen>\()|(?<closeParen>\))|(?<dash>[\-–—])|(?<colon>:)|(?<comma>,)|(?<dot>\.)|(?<space>\s+)|(?<other>[\s\S])/y
+export function tokenize(input: string): Token[] {
 	const tokens: Token[] = []
 	regex.lastIndex = 0
 	let match
 	while((match = regex.exec(input)) && match.groups) {
+		const {groups} = match
 		switch(true) {
-			case !!match.groups.num:
-				tokens.push({type:'NUMBER', value: Number(match.groups.num)})
+			case !!groups.op:
+				tokens.push({name:'OP', value: groups.op.slice(1, -1)})
 				break;
-			case !!match.groups.word:
-				tokens.push({type:'WORD', value: match.groups.word})
+			case !!groups.sym:
+				tokens.push({name:'SYMBOL', value: groups.sym.slice(1, -1)})
 				break;
-			case !!match.groups.openBracket:
-				tokens.push({type:'OPEN_BRACKET'})
+			case !!groups.num:
+				tokens.push({name:'NUMBER', value: Number(groups.num)})
 				break;
-			case !!match.groups.closeBracket:
-				tokens.push({type:'CLOSE_BRACKET'})
+			case !!groups.word:
+				tokens.push({name:'WORD', value: groups.word})
 				break;
-			case !!match.groups.openParen:
-				tokens.push({type:'OPEN_PAREN'})
+			case !!groups.openBracket:
+				tokens.push({name:'OPEN_BRACKET'})
 				break;
-			case !!match.groups.closeParen:
-				tokens.push({type:'CLOSE_PAREN'})
+			case !!groups.closeBracket:
+				tokens.push({name:'CLOSE_BRACKET'})
 				break;
-			case !!match.groups.gt:
-				tokens.push({type:'GT'})
+			case !!groups.openParen:
+				tokens.push({name:'OPEN_PAREN'})
 				break;
-			case !!match.groups.hyphen:
-				tokens.push({type:'HYPHEN'})
+			case !!groups.closeParen:
+				tokens.push({name:'CLOSE_PAREN'})
 				break;
-			case !!match.groups.enDash:
-				tokens.push({type:'EN_DASH'})
+			case !!groups.dash:
+				tokens.push({name:'DASH', value: groups.dash})
 				break;
-			case !!match.groups.emDash:
-				tokens.push({type:'EM_DASH'})
+			case !!groups.dot:
+				tokens.push({name:'DOT'})
 				break;
-			case !!match.groups.colon:
-				tokens.push({type:'COLON'})
+			case !!groups.colon:
+				tokens.push({name:'COLON'})
 				break;
-			case !!match.groups.other:
-				tokens.push({type:'OTHER', value: match.groups.other})
+			case !!groups.comma:
+				tokens.push({name:'COMMA'})
+				break;
+			case !!groups.space:
+				tokens.push({name:'SPACE'})
+				break;
+			case !!groups.other:
+				tokens.push({name:'OTHER', value: groups.other})
 				break;
 		}
 	}
@@ -64,7 +71,7 @@ export function lex(input: string): Token[] {
 
 export function reconstruct(tokens:Token[]) {
 	return tokens.reduce((output, token) => {
-		switch(token.type) {
+		switch(token.name) {
 			case 'OPEN_BRACKET':
 				return output + '['
 			case 'CLOSE_BRACKET':
@@ -73,16 +80,18 @@ export function reconstruct(tokens:Token[]) {
 				return output + '('
 			case 'CLOSE_PAREN':
 				return output + ')'
-			case 'GT':
-				return output + '>'
-			case 'HYPHEN':
-				return output + '-'
-			case 'EN_DASH':
-				return output + '–'
-			case 'EM_DASH':
-				return output + '—'
+			case 'DOT':
+				return output + '.'
 			case 'COLON':
 				return output + ':'
+			case 'COMMA':
+				return output + ','
+			case 'SPACE':
+				return output + ' '
+			case 'OP':
+			case 'SYMBOL':
+				return output + '[' + token.value + ']'
+			case 'DASH':
 			case 'NUMBER':
 			case 'WORD':
 			case 'OTHER':
