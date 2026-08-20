@@ -1,7 +1,7 @@
 import { SQL } from "bun"
 import { makeCardsTableBody, makeCardTableRow, makeCollectionPage, makeEnergySvg, makeMightSvg, makePowerSvg, makeTag } from "./gen/HTMLtemplates"
 import type { CardDetails, Cards } from "./gen/dbTableInterfaces"
-import { lex, reconstruct } from "./src/modules/rbmlLexer"
+import { tokenize, reconstruct } from "./src/modules/rbmlLexer"
 import { prettyPrint } from "./src/modules/stringify"
 
 const sql = new SQL({
@@ -17,12 +17,11 @@ await sql`USE riftbound`
 const cards:Array<CardDetails> = await sql`SELECT * FROM card_details ORDER BY riot_id`
 cards.forEach(c => {
 	if(c.description) {
-		const reconstructed = reconstruct(lex(c.description))
+		const reconstructed = reconstruct(tokenize(c.description))
 		if(reconstructed !== c.description) {
-			prettyPrint(`${c.riot_id}:\n` +
-				`original: ${c.description}\n` +
-				`reconstr: ${c.description}\n`
-			)
+			prettyPrint(`${c.riot_id}:`)
+			prettyPrint(`original: ${c.description}`)
+			prettyPrint(`reconstr: ${reconstructed}`)
 		}
 		else {
 			prettyPrint(`${c.riot_id}: OK!`)
