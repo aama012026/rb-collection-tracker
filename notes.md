@@ -72,3 +72,44 @@ Govern how parsed text resolves; not part of the text grammar itself.
 - Self-reference: Units/Legends say "I"/"me", Gear/Spells say "this", Battlefields say "here" (053).
 - "Can't" beats "can"; "only" makes a permission exclusive (054).
 - Resolve as much of an instruction as possible; ignore whatever part is impossible (055).
+
+### Grammar Doodles
+#### Hard Separation
+**Rules Text** - Always the root of the AST, Defined and identified by that.
+
+**Symbols and Keywords** - Bracket delimited. AST leaves.
+- Symbols contain either a number or a single letter.
+- Keywords contain a single word and a an optional single value. (Given the cost is written after the brackets.)
+
+**Might Count/Modifier** - (+|-)? \[M\]. Always the direct parent of a Might Node if present.
+- Make sure we capture the right glyph for minus here.
+
+**Colon** - What came before was a cost, what comes after is an effect.
+
+**—** - Ties the Node before to the node after. It might be keyword effect, like in:
+
+	"_\[Legion\] — When you play me, play two 1 [M] Recruit unit tokens here. (Get the effect if you've played another card this turn.)_"
+	
+or marking a branch like in:
+
+	"_When you attach an Equipment to me, choose one that hasn't been chosen this turn —Ready 2 runes.Channel 1 rune exhausted.Buff a friendly unit._"
+	
+or a cost like in:
+
+	"_\[Empower\] — Discard 1 (Pay the cost: Empower me. Use only if not Empowered.)\[Empowered\]\[>\] I have +1 \[M\]._"
+	
+**\[>\]** - The ability after is tied to the keyword before. Badge should render with arrow end.
+
+**\[>>\]** - The keyword after is tied to the keyword before. Badge after first should render with arrow indent beginning.
+
+**Reminder Text** - Parenthesis delimited. Belongs to whatever sibling node came before it.
+
+#### Fuzzier separation
+**Effect Text** - Unknown as not present in mock data. Separate field on riot's page but not separate prop in DTO.
+
+**Instructions** - Appr. sentence level. Begins When no text-token came before, with a capital letter, and after '.'
+
+#### Notes
+**A note on sequential symbols** - Symbols immediately following each other should be grouped. This is most commonly seen as costs, but may just be an enumeration of resources, like in \[Add\] - \[1]\[C].
+
+**A note on hyphens** - If hyphens are connected by word-tokens on either side, the hyphen is connecting the two words rather than ending a composite node and connecting it to the next.
