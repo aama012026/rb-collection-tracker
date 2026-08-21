@@ -1,4 +1,6 @@
 export default function stringify(value: unknown, tabStops = 0, keyLength = 0): string {
+	// We use real tabs for code indenting, as it may be written to a file for use.
+	// This keeps spacing configurable visually by the environment.
 	const MAX_COLUMNS = 80
 	const TAB_SIZE = 4
 	const outerTab = '\t'.repeat(tabStops)
@@ -53,8 +55,10 @@ export function isEmpty<T extends object>(obj: T): boolean {
 	return !Object.values(obj).some(v => !!v)
 }
 
-export function prettyPrint(value:unknown):void {
-	const text = stringify(value)
+
+export function prettyPrint(value:unknown, tabWidth = 4):void {
+	// We replace tabs with spaces for consistent spacing in the terminal.
+	const text = stringify(value).replace(/\t/g, ' '.repeat(tabWidth))
 	if(!(text === '' || text === '[]' || text === '{}')) {
 		console.log(`\x1b[0m${text}\x1b[0m`)
 	}
