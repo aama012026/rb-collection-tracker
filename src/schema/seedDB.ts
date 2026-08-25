@@ -66,7 +66,7 @@ export default async function seedTables(sql: SQL): Promise<void> {
 				'While I am an attacker, I have +[X][M].',
 				'+[X][M] while I''m an attacker.'
 			), (
-				'808', 'deathknell', '[Deathknell][>][Effect]', 'green',
+				'808', 'deathknell', '[Deathknell][>] [Effect]', 'green',
 				'When I die, [Effect].',
 				'When I die, get the effect.'
 			), (
@@ -82,7 +82,7 @@ export default async function seedTables(sql: SQL): Promise<void> {
 				'While this card is in your hand or your Champion Zone on your turn during an Open State, you may pay [A] to hide this facedown at a battlefield you control that doesn''t already have a facedown card hidden there for as long as you control that battlefield. Beginning on the next turn, this gains [Reaction] and you may play this, ignoring its base cost.',
 				'Hide now for [A] to react with later for [0].'
 			), (
-				'812', 'legion', '[Legion][>] [Text]', 'teal',
+				'812', 'legion', '[Legion][>] [Text]|[Legion] — [Text]', 'teal',
 				'If you have played another card this turn, this card gains [Text].',
 				'[Text] (Get the effect if you''ve played another card this turn.)'
 			), (
@@ -106,7 +106,7 @@ export default async function seedTables(sql: SQL): Promise<void> {
 				'When this is played, look at the top card of your Main Deck. You may recycle it.',
 				'When you play me, look at the top card of your Main Deck. You may recycle it.'
 			), (
-				'818', 'equip', 'Equip [Cost]', 'gray',
+				'818', 'equip', 'Equip [Cost]|Equip — [Cost]', 'gray',
 				'[Cost]: Attach this gear to a unit you control.',
 				'[Cost]: Attach this to a unit you control.'
 			), (
@@ -130,7 +130,7 @@ export default async function seedTables(sql: SQL): Promise<void> {
 				'When I Conquer or Hold, my controller gains [X] XP.',
 				'When I conquer or hold, gain [X] XP.'
 			), (
-				'824', 'level', '[Level [N]][>] [Text]', 'green',
+				'824', 'level', '[Level N][>] [Text]', 'green',
 				'While you have [N] or more XP, this card gains "[Text]"',
 				'[Text] (While you have [N]+ XP, get the effect.)'
 			), (
@@ -141,6 +141,18 @@ export default async function seedTables(sql: SQL): Promise<void> {
 				'826', 'backline', NULL, 'magenta',
 				'I must be assigned lethal damage after any other unit with the same controller as me that does not have [Backline] during the Combat Damage step.',
 				'I must be assigned combat damage last.'
+			), (
+				'827', 'empower', 'Empower [Cost]|Empower — [Cost]', 'gray',
+				'[Cost]: Empower this. Play only if not Empowered.',
+				'Pay the cost: Empower me. Use only if not Empowered.'
+			), (
+				'828', 'empowered', '[Empowered][>][Text]', 'green',
+				'While I have the Empowered status, this card gains ‘[Text]',
+				'While I have the Empowered status, this card gains ‘[Text]'
+			), (
+				'829', 'flow', 'Flow [Cost] | Flow — [Cost]', 'teal',
+				'You may play this from your trash for its Flow cost. Then banish it.',
+				'You may play this from your trash for its Flow cost. Then banish it.'
 			)
 		ON DUPLICATE KEY UPDATE
 			rules_entry = VALUE(rules_entry),
