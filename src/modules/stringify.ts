@@ -57,8 +57,14 @@ export function isEmpty<T extends object>(obj: T): boolean {
 
 
 export function prettyPrint(value:unknown, tabWidth = 4):void {
-	// We replace tabs with spaces for consistent spacing in the terminal.
-	const text = stringify(value).replace(/\t/g, ' '.repeat(tabWidth))
+	let text: string
+	if(typeof value === 'string') {
+		text = value
+	}
+	else {
+		// We replace tabs with spaces for consistent spacing in the terminal.
+		text = stringify(value).replace(/\t/g, ' '.repeat(tabWidth))
+	}
 	if(!(text === '' || text === '[]' || text === '{}')) {
 		console.log(`\x1b[0m${text}\x1b[0m`)
 	}
