@@ -16,8 +16,8 @@ export default async function createTables(sql: SQL): Promise<void> {
 			id TINYINT UNSIGNED PRIMARY KEY DEFAULT 1,
 			schema_version INT UNSIGNED NOT NULL,
 			last_synced_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-			content_version VARCHAR(32) NOT NULL,
-			content_last_updated_at VARCHAR(32) NOT NULL,
+			content_version VARCHAR(50) NOT NULL,
+			content_last_updated_at VARCHAR(50) NOT NULL,
 			CONSTRAINT single_row CHECK (id = 1)
 		);
 	`)
@@ -26,14 +26,14 @@ export default async function createTables(sql: SQL): Promise<void> {
 		CREATE TABLE IF NOT EXISTS rarities (
 			id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 			sort_order TINYINT UNSIGNED UNIQUE,
-			name VARCHAR(32) UNIQUE NOT NULL
+			name VARCHAR(50) UNIQUE NOT NULL
 		);
 	`)
 
 	await createTable('sets', sql`
 		CREATE TABLE IF NOT EXISTS sets (
 			id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-			code VARCHAR(8) UNIQUE NOT NULL,
+			code VARCHAR(10) UNIQUE NOT NULL,
 			name VARCHAR(255) UNIQUE NOT NULL,
 			cardmarket_id BIGINT UNIQUE,
 			release_date DATE,
@@ -67,8 +67,8 @@ export default async function createTables(sql: SQL): Promise<void> {
 		CREATE TABLE IF NOT EXISTS domains (
 			id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 			sort_order TINYINT UNSIGNED UNIQUE,
-			name VARCHAR(32) UNIQUE NOT NULL,
-			shorthand varchar(8) UNIQUE
+			name VARCHAR(50) UNIQUE NOT NULL,
+			shorthand varchar(10) UNIQUE
 		);
 	`)
 
@@ -86,7 +86,7 @@ export default async function createTables(sql: SQL): Promise<void> {
 		CREATE TABLE IF NOT EXISTS types (
 			id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 			sort_order TINYINT UNSIGNED UNIQUE,
-			name VARCHAR(32) UNIQUE NOT NULL
+			name VARCHAR(100) UNIQUE NOT NULL
 		);
 	`)
 
@@ -103,7 +103,7 @@ export default async function createTables(sql: SQL): Promise<void> {
 	await createTable('tags', sql`
 		CREATE TABLE IF NOT EXISTS tags (
 			id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-			name VARCHAR(32) UNIQUE NOT NULL
+			name VARCHAR(100) UNIQUE NOT NULL
 		);
 	`)
 
@@ -120,10 +120,10 @@ export default async function createTables(sql: SQL): Promise<void> {
 	await createTable('keywords', sql`
 		CREATE TABLE IF NOT EXISTS keywords (
 			id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-			name VARCHAR(32) UNIQUE NOT NULL,
-			rules_entry VARCHAR(32) UNIQUE,
-			formatting VARCHAR(32) UNIQUE,
-			color VARCHAR(8),
+			name VARCHAR(50) UNIQUE NOT NULL,
+			rules_entry VARCHAR(25) UNIQUE,
+			formatting VARCHAR(100) UNIQUE,
+			color VARCHAR(30),
 			rules_description VARCHAR(1000),
 			card_description VARCHAR(1000)
 		);
