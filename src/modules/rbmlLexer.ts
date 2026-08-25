@@ -1,69 +1,70 @@
-export type Token =
-| {name:'SYMBOL', value:string}
-| {name:'OPEN_BRACKET'}
-| {name:'CLOSE_BRACKET'}
-| {name:'OPEN_PAREN'}
-| {name:'CLOSE_PAREN'}
-| {name:'OP', value: string}
-| {name:'DASH', value: string}
-| {name:'COLON'}
-| {name:'COMMA'}
-| {name:'DOT'}
-| {name:'WORD', value: string}
-| {name:'NUMBER', value: number}
-| {name:'SPACE'}
-| {name:'OTHER', value: string}
+type OpenBracket = {name:'OPEN_BRACKET'}
+type CloseBracket = {name:'CLOSE_BRACKET'}
+type OpenParen = {name:'OPEN_PAREN'}
+type CloseParen = {name:'CLOSE_PAREN'}
+type Associator = {name:'GT'}
+type Plus = {name:'PLUS'}
+type Hyphen = {name:'HYPHEN'}
+type Infix = {name:'INFIX', value: string}
+type Dot = {name:'DOT'}
+type Word = {name:'WORD', value: string}
+type NumberLiteral = {name:'NUMBER', value: number}
+type Space = {name:'SPACE'}
+type Other = {name:'OTHER', value: string}
 
-const regex = /(?<op>\[>{1,2}\])|(?<sym>\[(?:\d+|\w)\])|(?<num>\d+)|(?<word>[a-zA-Z_]+)|(?<openBracket>\[)|(?<closeBracket>\])|(?<openParen>\()|(?<closeParen>\))|(?<dash>[\-–—])|(?<colon>:)|(?<comma>,)|(?<dot>\.)|(?<space>\s+)|(?<other>[\s\S])/y
+export type Token = OpenBracket|CloseBracket|OpenParen|CloseParen
+|Associator|Plus|Hyphen|Infix|Dot|Word|NumberLiteral|Space|Other
+
+const regex = /(?<gt>>)|(?<num>\d+)|(?<word>[a-zA-Z_]+(\-[a-zA-Z]+)*)|(?<openBracket>\[)|(?<closeBracket>\])|(?<openParen>\()|(?<closeParen>\))|(?<plus>\+)|(?<hyphen>\-)|(?<infix> [\-–—] |[:,] )|(?<dot>\.)|(?<space> +)|(?<other>[\s\S])/y
 export function tokenize(input: string): Token[] {
+	if(input === '[NO TEXT]') {
+		return []
+	}
 	const tokens: Token[] = []
 	regex.lastIndex = 0
 	let match
 	while((match = regex.exec(input)) && match.groups) {
 		const {groups} = match
 		switch(true) {
-			case !!groups.op:
-				tokens.push({name:'OP', value: groups.op.slice(1, -1)})
-				break;
-			case !!groups.sym:
-				tokens.push({name:'SYMBOL', value: groups.sym.slice(1, -1)})
-				break;
+			case !!groups.gt:
+				tokens.push({name:'GT'})
+				break
 			case !!groups.num:
 				tokens.push({name:'NUMBER', value: Number(groups.num)})
-				break;
+				break
 			case !!groups.word:
 				tokens.push({name:'WORD', value: groups.word})
-				break;
+				break
 			case !!groups.openBracket:
 				tokens.push({name:'OPEN_BRACKET'})
-				break;
+				break
 			case !!groups.closeBracket:
 				tokens.push({name:'CLOSE_BRACKET'})
-				break;
+				break
 			case !!groups.openParen:
 				tokens.push({name:'OPEN_PAREN'})
-				break;
+				break
 			case !!groups.closeParen:
 				tokens.push({name:'CLOSE_PAREN'})
-				break;
-			case !!groups.dash:
-				tokens.push({name:'DASH', value: groups.dash})
-				break;
+				break
+			case !!groups.plus:
+				tokens.push({name:'PLUS'})
+				break
+			case !!groups.hyphen:
+				tokens.push({name:'HYPHEN'})
+				break
+			case !!groups.infix:
+				tokens.push({name:'INFIX', value: groups.infix})
+				break
 			case !!groups.dot:
 				tokens.push({name:'DOT'})
-				break;
-			case !!groups.colon:
-				tokens.push({name:'COLON'})
-				break;
-			case !!groups.comma:
-				tokens.push({name:'COMMA'})
-				break;
+				break
 			case !!groups.space:
 				tokens.push({name:'SPACE'})
-				break;
+				break
 			case !!groups.other:
 				tokens.push({name:'OTHER', value: groups.other})
-				break;
+				break
 		}
 	}
 	return tokens
@@ -82,16 +83,15 @@ export function reconstruct(tokens:Token[]) {
 				return output + ')'
 			case 'DOT':
 				return output + '.'
-			case 'COLON':
-				return output + ':'
-			case 'COMMA':
-				return output + ','
 			case 'SPACE':
 				return output + ' '
-			case 'OP':
-			case 'SYMBOL':
-				return output + '[' + token.value + ']'
-			case 'DASH':
+			case 'PLUS':
+				return output + '+'
+			case 'HYPHEN':
+				return output + '-'
+			case 'GT':
+				return output + '>'
+			case 'INFIX':
 			case 'NUMBER':
 			case 'WORD':
 			case 'OTHER':
