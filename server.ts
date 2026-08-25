@@ -3,6 +3,7 @@ import { makeCardsTableBody, makeCardTableRow, makeCollectionPage, makeEnergySvg
 import type { CardDetails, Cards } from "./gen/dbTableInterfaces"
 import { tokenize, reconstruct } from "./src/modules/rbmlLexer"
 import { prettyPrint } from "./src/modules/stringify"
+import { testLexer, testParser } from "./src/modules/test"
 
 const sql = new SQL({
 	adapter:'mariadb',
@@ -15,19 +16,10 @@ const sql = new SQL({
 })
 await sql`USE riftbound`
 const cards:Array<CardDetails> = await sql`SELECT * FROM card_details ORDER BY riot_id`
-cards.forEach(c => {
-	if(c.description) {
-		const reconstructed = reconstruct(tokenize(c.description))
-		if(reconstructed !== c.description) {
-			prettyPrint(`${c.riot_id}:`)
-			prettyPrint(`original: ${c.description}`)
-			prettyPrint(`reconstr: ${reconstructed}`)
-		}
-		else {
-			prettyPrint(`${c.riot_id}: OK!`)
-		}
-	}
-})
+// Test
+// testLexer(cards)
+testParser(cards)
+
 const cardRows = cards.map(c => {
 	let frame = ''
 	switch(c.rarity) {
