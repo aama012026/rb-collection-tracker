@@ -44,7 +44,7 @@ for(const set of mockData) {
 			${card.stats.cost ?? null},
 			${card.art.fullURL ?? null},
 			${card.art.thumbnailURL ?? null},
-			${card.description},
+			${card.description === '[NO TEXT]' ? null : card.description},
 			${card.flavorText},
 			@card_id
 			)

@@ -17,9 +17,6 @@ export type Token = OpenBracket|CloseBracket|OpenParen|CloseParen
 
 const regex = /(?<gt>>)|(?<num>\d+)|(?<word>[a-zA-Z_]+(\-[a-zA-Z]+)*)|(?<openBracket>\[)|(?<closeBracket>\])|(?<openParen>\()|(?<closeParen>\))|(?<plus>\+)|(?<hyphen>\-)|(?<infix> [\-–—] |[:,] )|(?<dot>\.)|(?<space> +)|(?<other>[\s\S])/y
 export function tokenize(input: string): Token[] {
-	if(input === '[NO TEXT]') {
-		return []
-	}
 	const tokens: Token[] = []
 	regex.lastIndex = 0
 	let match
