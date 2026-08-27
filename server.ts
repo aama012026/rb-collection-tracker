@@ -1,8 +1,6 @@
 import { SQL } from "bun"
 import { makeCardsTableBody, makeCardTableRow, makeCollectionPage, makeEnergySvg, makeMightSvg, makePowerSvg, makeTag } from "./gen/HTMLtemplates"
 import type { CardDetails, Cards } from "./gen/dbTableInterfaces"
-import { tokenize, reconstruct } from "./src/modules/rbmlLexer"
-import { prettyPrint } from "./src/modules/stringify"
 import { testLexer, testParser } from "./src/modules/test"
 
 const sql = new SQL({
@@ -17,7 +15,7 @@ const sql = new SQL({
 await sql`USE riftbound`
 const cards:Array<CardDetails> = await sql`SELECT * FROM card_details ORDER BY riot_id`
 // Test
-// testLexer(cards)
+testLexer(cards)
 testParser(cards)
 
 const cardRows = cards.map(c => {
