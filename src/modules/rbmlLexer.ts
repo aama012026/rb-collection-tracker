@@ -6,6 +6,7 @@ type Associator = {name:'GT'}
 type Plus = {name:'PLUS'}
 type Hyphen = {name:'HYPHEN'}
 type Infix = {name:'INFIX', value: string}
+type Comma = {name:'COMMA'}
 type Dot = {name:'DOT'}
 type Word = {name:'WORD', value: string}
 type NumberLiteral = {name:'NUMBER', value: number}
@@ -13,9 +14,9 @@ type Space = {name:'SPACE'}
 type Other = {name:'OTHER', value: string}
 
 export type Token = OpenBracket|CloseBracket|OpenParen|CloseParen
-|Associator|Plus|Hyphen|Infix|Dot|Word|NumberLiteral|Space|Other
+|Associator|Plus|Hyphen|Infix|Comma|Dot|Word|NumberLiteral|Space|Other
 
-const regex = /(?<gt>>)|(?<num>\d+)|(?<word>[a-zA-Z_]+(\-[a-zA-Z]+)*)|(?<openBracket>\[)|(?<closeBracket>\])|(?<openParen>\()|(?<closeParen>\))|(?<plus>\+)|(?<hyphen>\-)|(?<infix> [\-–—] |[:,] )|(?<dot>\.)|(?<space> +)|(?<other>[\s\S])/y
+const regex = /(?<gt>>)|(?<num>\d+)|(?<word>[a-zA-Z_]+(\-[a-zA-Z]+)*)|(?<openBracket>\[)|(?<closeBracket>\])|(?<openParen>\()|(?<closeParen>\))|(?<plus>\+)|(?<hyphen>\-)|(?<infix> [\-–—] |: )|(?<comma>,)|(?<dot>\.)|(?<space> +)|(?<other>[\s\S])/y
 export function tokenize(input: string): Token[] {
 	const tokens: Token[] = []
 	regex.lastIndex = 0
@@ -53,6 +54,9 @@ export function tokenize(input: string): Token[] {
 			case !!groups.infix:
 				tokens.push({name:'INFIX', value: groups.infix})
 				break
+			case !!groups.comma:
+				tokens.push({name:'COMMA'})
+				break
 			case !!groups.dot:
 				tokens.push({name:'DOT'})
 				break
@@ -78,6 +82,8 @@ export function reconstruct(tokens:Token[]) {
 				return output + '('
 			case 'CLOSE_PAREN':
 				return output + ')'
+			case 'COMMA':
+				return output + ','
 			case 'DOT':
 				return output + '.'
 			case 'SPACE':
