@@ -1,7 +1,6 @@
-export default function stringify(value: unknown, tabStops = 0, keyLength = 0): string {
+export default function stringify(value: unknown, maxColumns = 80, tabStops = 0, keyLength = 0): string {
 	// We use real tabs for code indenting, as it may be written to a file for use.
 	// This keeps spacing configurable visually by the environment.
-	const MAX_COLUMNS = 80
 	const TAB_SIZE = 4
 	const outerTab = '\t'.repeat(tabStops)
 	const innerTab = '\t'.repeat(tabStops + 1)
@@ -15,7 +14,7 @@ export default function stringify(value: unknown, tabStops = 0, keyLength = 0): 
 	if(Array.isArray(value)) {
 		if(value.length === 0) return '[]'
 		const items = value.map(i =>
-			`${stringify(i, tabStops + 1)}`
+			`${stringify(i, maxColumns, tabStops + 1)}`
 		)
 		return `[${formatCollection(items)}]`
 	}
@@ -28,7 +27,7 @@ export default function stringify(value: unknown, tabStops = 0, keyLength = 0): 
 			}
 			// Unquoted key if valid, quoted if not
 			const key = /^\w+$/.test(k) ? k : JSON.stringify(k)
-			entries.push (`${key}: ${stringify(v, tabStops + 1, key.length)}`)
+			entries.push (`${key}: ${stringify(v, maxColumns, tabStops + 1, key.length)}`)
 		})
 		return `{${formatCollection(entries)}}`
 	}
@@ -39,10 +38,10 @@ export default function stringify(value: unknown, tabStops = 0, keyLength = 0): 
 	// Format on same line or one separate line if possible.
 	function formatCollection(items: string[]) {
 		const itemsString = items.join(', ')
-		if(itemsString.length + keyLength + tabStops * TAB_SIZE <= MAX_COLUMNS - 2) {
+		if(itemsString.length + keyLength + tabStops * TAB_SIZE <= maxColumns - 2) {
 			return `${itemsString}`
 		}
-		else if(itemsString.length + (tabStops + 1) * TAB_SIZE <= MAX_COLUMNS) {
+		else if(itemsString.length + (tabStops + 1) * TAB_SIZE <= maxColumns) {
 			return `\n${innerTab + itemsString}\n${outerTab}`
 		}
 		else {
