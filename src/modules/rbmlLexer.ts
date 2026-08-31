@@ -1,4 +1,5 @@
 type OpenBracket = {name:'OPEN_BRACKET'}
+type NewLine = {name:'NEW_LINE'}
 type CloseBracket = {name:'CLOSE_BRACKET'}
 type OpenParen = {name:'OPEN_PAREN'}
 type CloseParen = {name:'CLOSE_PAREN'}
@@ -14,9 +15,9 @@ type Space = {name:'SPACE'}
 type Other = {name:'OTHER', value: string}
 
 export type Token = OpenBracket|CloseBracket|OpenParen|CloseParen
-|Associator|Plus|Hyphen|Infix|Comma|Dot|Word|NumberLiteral|Space|Other
+|Associator|Plus|Hyphen|Infix|Comma|Dot|Word|NumberLiteral|Space|Other|NewLine
 
-const regex = /(?<gt>>)|(?<num>\d+)|(?<word>[a-zA-Z_]+(\-[a-zA-Z]+)*)|(?<openBracket>\[)|(?<closeBracket>\])|(?<openParen>\()|(?<closeParen>\))|(?<plus>\+)|(?<hyphen>\-)|(?<infix> [\-–—] |: )|(?<comma>,)|(?<dot>\.)|(?<space> +)|(?<other>[\s\S])/y
+const regex = /(?<gt>>)|(?<num>\d+)|(?<word>[a-zA-Z_]+(\-[a-zA-Z]+)*)|(?<openBracket>\[)|(?<closeBracket>\])|(?<openParen>\()|(?<closeParen>\))|(?<newline>\n)|(?<plus>\+)|(?<hyphen>\-)|(?<infix> [\-–—] |: )|(?<comma>,)|(?<dot>\.)|(?<space> +)|(?<other>[\s\S])/y
 export function tokenize(input: string): Token[] {
 	const tokens: Token[] = []
 	regex.lastIndex = 0
@@ -44,6 +45,9 @@ export function tokenize(input: string): Token[] {
 				break
 			case !!groups.closeParen:
 				tokens.push({name:'CLOSE_PAREN'})
+				break
+			case !!groups.newline:
+				tokens.push({name:'NEW_LINE'})
 				break
 			case !!groups.plus:
 				tokens.push({name:'PLUS'})
@@ -88,6 +92,8 @@ export function reconstruct(tokens:Token[]) {
 				return output + '.'
 			case 'SPACE':
 				return output + ' '
+			case 'NEW_LINE':
+				return output + '\n'
 			case 'PLUS':
 				return output + '+'
 			case 'HYPHEN':

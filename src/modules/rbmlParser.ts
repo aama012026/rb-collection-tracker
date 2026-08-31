@@ -31,8 +31,10 @@ type Keyword = {
 	kind: 'keyword',
 	name: string,
 	param?: number,
-	associated?: boolean,
-	isNested?: boolean
+	cost?: Symbol[],
+	associated?: Node,
+	isNested?: boolean,
+	reminderText?: Reminder
 }
 type Group = {kind: 'group', value: Node[]}
 type SymbolRun = {kind: 'symbol_run', value:Node[]}
@@ -45,10 +47,10 @@ type ActivatedAbility = {
 	cost:Node[],
 	effect:Node[]
 }
-type DelimitedList = {kind:'list', value: Node[][], separator:', '}
+type DelimitedList = {kind:'list', value: Node[][], separator:','}
 type Root = {kind: 'root', value: Node[]}
 type Symbol = {kind: 'symbol', value: string|number}
-const resourceSymbols = ['R', 'G', 'B', 'O', 'P', 'Y', 'C', 'A'] as const
+const resourceSymbols: string[] = ['R', 'G', 'B', 'O', 'P', 'Y', 'C', 'A']
 type Text = {kind: 'text', value: string}
 type Ability = {kind: 'ability', activated?:false, value: Node[]}
 type Reminder = {kind: 'reminder_text', value: Node[]}
@@ -114,6 +116,10 @@ export class TokenStream {
 		this._pos += distance
 		return this.peek()
 	}
+	skipTo(pos:number): Token|undefined {
+		this._pos = pos
+		return this.peek()
+	}
 
 	prev(): Token|undefined {
 		this._pos--
@@ -122,17 +128,16 @@ export class TokenStream {
 }
 
 
-export function parseBrackets(stream: TokenStream): Node {
+export function parseBrackets(stream: TokenStream): SymbolRun|Keyword {
+	stream.prev()
+	const symbols = tryParseSymbols(stream)
+	if(symbols) {
+		return {kind: 'symbol_run', value: symbols}
+	}
+	stream.next()
+	// Keyword
 	stream.skipSpace()
 	let t = stream.peekExisting()
-	if(t.name === 'NUMBER' || (t.name === 'WORD' && t.value.length === 1)) {
-		// Symbol
-		stream.next()
-		stream.assertType('CLOSE_BRACKET')
-		stream.next()
-		return {kind:'symbol', 'value':t.value}
-	}
-	// Keyword
 	let isNested
 	if(t.name === 'GT') {
 		// Should be [>>]
@@ -161,11 +166,40 @@ export function parseBrackets(stream: TokenStream): Node {
 	stream.assertType('CLOSE_BRACKET')
 	stream.next()
 
+	// Check and parse if associated.
 	if(stream.peek()?.name === 'OPEN_BRACKET' && stream.peek(1)?.name === 'GT') {
 		stream.skip(2)
 		stream.assertType('CLOSE_BRACKET')
 		stream.next()
-		node.associated = true
+		node.associated = parse(stream, 'ability')
+	}
+
+	// Try to add inside badge-cost.
+	else if(!node.associated && !node.cost && node.name !== 'Add'){
+		const prevPos = stream.pos
+		if(stream.peek()?.name !== 'SPACE') {
+			return node
+		}
+		stream.skipSpace()
+		const symbols = tryParseSymbols(stream)
+		const nextToken = stream.peek()?.name
+		// Valid inside badge-cost terminators: NEW_LINE | DOT | SPACE OPEN_PAREN | EOS (undefined)
+		if(symbols && (!nextToken || nextToken === 'NEW_LINE' || nextToken === 'DOT' || (nextToken === 'SPACE' && stream.peek(1)?.name === 'OPEN_PAREN'))) {
+			if(symbols.every(symbol => typeof symbol.value ===  'number' || resourceSymbols.includes(symbol.value))) {
+				node.cost = symbols
+			}
+		}
+		else {
+			stream.skipTo(prevPos)
+		}
+		if(stream.peek(1)?.name === 'OPEN_PAREN') {
+			stream.skip(2)
+			const reminderText = parse(stream, 'reminder_text')
+			if(reminderText.kind !== 'reminder_text') {
+				throw new Error("Bug in parser! parseBrackets did not get reminder_text on return.")
+			}
+			node.reminderText = reminderText
+		}
 	}
 	return node
 }
@@ -181,6 +215,17 @@ function tryParseSymbol(stream: TokenStream): Symbol|null {
 		}
 	}
 	return null
+}
+
+function tryParseSymbols(stream:TokenStream, startSymbol?:Symbol): Symbol[]| null {
+	let symbol:Symbol|null = startSymbol ?? tryParseSymbol(stream)
+	const symbolRun:Symbol[] = []
+
+	while(symbol) {
+		symbolRun.push(symbol)
+		symbol = tryParseSymbol(stream)
+	}
+	return symbolRun.length !== 0 ? symbolRun : null
 }
 
 function isMightSymbol(stream: TokenStream, offset: number): boolean {
@@ -221,12 +266,12 @@ function tryParseCount(stream: TokenStream): Might|Experience|null {
 }
 
 function parseListItem(stream: TokenStream): Node[] {
-	const item = parseCardRulesText(stream, 'list_item')
+	const item = parse(stream, 'list_item')
 	return item.kind === 'group' ? item.value : [item]
 }
 
 function parseAbilityContent(stream: TokenStream): Node[] {
-	const node = parseCardRulesText(stream, 'ability')
+	const node = parse(stream, 'ability')
 	return node.kind === 'ability' && !node.activated ? node.value : [node]
 }
 
@@ -244,47 +289,42 @@ function parseText(stream:TokenStream): Text {
 	return {kind:'text', value}
 }
 
-export function parseCardRulesText(stream:TokenStream, kind:'root'|'reminder_text'|'ability'|'list_item' = 'root'): Node {
+export function parseCardRulesText(tokens:Token[]):Node[] {
+	const stream = new TokenStream(tokens)
+	const ast: Node[] = []
+	let prevPos = -1
+	while(stream.peek() && stream.pos !== prevPos) {
+		prevPos = stream.pos
+		ast.push(parse(stream))
+	}
+	if(stream.pos === prevPos) {
+		throw new Error(`Broke out of infinite loop.\nTokens: ${stringify(tokens)}\n Partial AST: ${stringify(ast)}`)
+	}
+	return ast
+}
+
+export function parse(stream:TokenStream, kind:'reminder_text'|'ability'|'list_item' = 'ability'): Node {
 	let token = stream.next()
 	const children:Node[] = []
 	while(token) {
 		const {name} = token
 		// Return a bracketed node or groups of bracketed nodes.
 		if(name === 'OPEN_BRACKET') {
-			let bracketNode:Node|null = parseBrackets(stream)
-			if(bracketNode.kind === 'symbol') {
-				const symbols:Node[] = []
-				while(bracketNode) {
-					symbols.push(bracketNode)
-					bracketNode = tryParseSymbol(stream)
-				}
-				if(symbols.length === 1) {
-					children.push(symbols[0]!)
-				}
-				else {
-					children.push({kind:'symbol_run', value:symbols})
-				}
-
-				const prevToken = children[children.length - 2]
-				if(prevToken?.kind === 'keyword' && !prevToken.associated) {
-
-				}
-			}
-			else if(bracketNode.kind === 'keyword' && bracketNode.associated) {
-				children.push({kind:'ability', value:[bracketNode, parseCardRulesText(stream, 'ability')]})
+			const node = parseBrackets(stream)
+			if(node.kind === 'symbol_run' && node.value.length === 1) {
+				children.push(node.value.pop()!)
 			}
 			else {
-				children.push(bracketNode)
+				children.push(node)
 			}
 		}
 		// Start new group.
 		else if(name === 'OPEN_PAREN') {
-			children.push(parseCardRulesText(stream, 'reminder_text'))
+			children.push(parse(stream, 'reminder_text'))
 		}
 		// Close group.
 		else if(name === 'CLOSE_PAREN') {
-			const prevNode = children[children.length-1]
-			if(prevNode?.kind === 'text' && prevNode.value === '.') {
+			if((stream.peek(-2)?.name === 'DOT')) {
 				return {kind:'reminder_text', value:children}
 			}
 			else {
@@ -298,23 +338,39 @@ export function parseCardRulesText(stream:TokenStream, kind:'root'|'reminder_tex
 				return children.length === 1 ? children.pop()! : {kind:'group', value:children}
 			}
 			else {
+				const sentenceStart = children.findLastIndex(c => c.kind === 'list' || (c.kind === 'text' && c.value === '.')) + 1
 				const listItems:Node[][] = []
-				listItems.push(children.splice(0))
+				listItems.push(children.splice(sentenceStart))
 				while(stream.peek(-1)?.name === 'COMMA') {
 					listItems.push(parseListItem(stream))
 				}
-				stream.prev()
-				children.push({kind:'list', separator:', ', value: listItems})
+				children.push({kind:'list', separator:',', value: listItems})
+				if(kind === 'ability' && stream.peek(-1)?.name === 'DOT') {
+					if(stream.peek()?.name !== 'SPACE') {
+						return {kind, value: children}
+					}
+				}
+				else {
+					stream.prev()
+				}
 			}
 		}
 		else if(name === 'DOT') {
+			children.push({kind:'text', value:'.'})
 			if((kind === 'ability') && stream.peek()?.name !== 'SPACE') {
-				children.push({kind:'text', value:'.'})
 				const node:Ability = {kind, value: children}
 				return node
 			}
 			else if(kind === 'list_item') {
 				return {kind: 'group', value: children}
+			}
+		}
+		else if(name === 'NEW_LINE') {
+			if(children.length === 1) {
+				return children.pop()!
+			}
+			else if(kind === 'ability') {
+				return {kind, value: children}
 			}
 		}
 		// Try to group might & xp with its amount.
@@ -335,16 +391,17 @@ export function parseCardRulesText(stream:TokenStream, kind:'root'|'reminder_tex
 		}
 		else if(name === 'WORD' || name === 'SPACE' || name === 'OTHER') {
 			stream.prev()
-			if(kind !== 'ability' && kind !== 'list_item') {
-				if(name === 'SPACE') {
-					stream.next()
-				}
-				else {
-					children.push(parseCardRulesText(stream, 'ability'))
-				}
+			if(kind === 'ability' || kind === 'list_item') {
+				children.push(parseText(stream))
+			}
+			else if(kind === 'reminder_text') {
+				children.push(...parseAbilityContent(stream))
+			}
+			else if(name === 'SPACE') {
+				stream.next()
 			}
 			else {
-				children.push(parseText(stream))
+				children.push(parse(stream, 'ability'))
 			}
 		}
 		else if(name === 'INFIX') {
@@ -381,7 +438,12 @@ export function parseCardRulesText(stream:TokenStream, kind:'root'|'reminder_tex
 		}
 		token = stream.next()
 	}
-	return {kind: kind === 'list_item' ? 'group' : kind, value:children} as Node
+	if(children.length === 1) {
+		return children.pop()!
+	}
+	else {
+		return {kind: kind === 'list_item' ? 'group' : kind, value:children} as Node
+	}
 }
 
 /* --- AI generated code -------------------------------------------------------
@@ -487,7 +549,7 @@ fits within `columns` at its current indentation collapses onto a single
 line -- pass a narrower value for side-by-side viewing, or a wider one for a
 full-width terminal.
 */
-export function formatAst(node: Node, columns = 100): string {
+export function formatAst(nodes: Node[], columns = 100): string {
 	const lines: string[] = []
 	function walk(node: Node, prefix: string, connector: string, childPrefix: string, label?: string) {
 		const {text, children} = describeNode(node)
@@ -508,7 +570,13 @@ export function formatAst(node: Node, columns = 100): string {
 			)
 		})
 	}
-	walk(node, '', '', '')
+	// Top-level results are now a flat Node[] with no shared Root wrapper --
+	// treated the same way a Root's own children would be, just without a
+	// node to hang them off of.
+	nodes.forEach((node, i) => {
+		const isLast = i === nodes.length - 1
+		walk(node, '', isLast ? '└─ ' : '├─ ', isLast ? '   ' : '│  ')
+	})
 	return lines.join('\n')
 }
 // -----------------------------------------------------------------------------
@@ -542,6 +610,6 @@ if (import.meta.main) {
 	for (const c of cases) {
 		console.log('\n### ' + c)
 		const tokens = tokenize(c)
-		prettyPrint(parseCardRulesText(new TokenStream(tokens)))
+		prettyPrint(parse(new TokenStream(tokens)))
 	}
 }

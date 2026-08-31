@@ -1,4 +1,4 @@
-export default [
+export const mockData = [
 	{
 		id: "UNL",
 		name: "Unleashed",
@@ -7726,7 +7726,7 @@ export default [
 				}
 			},
 			{
-				id: "sfd/t03",
+				id: "sfd-t03",
 				set: "Spiritforged",
 				collectorNumber: 3,
 				rarity: "Common",
@@ -12908,7 +12908,7 @@ export default [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Mount Targon"],
 				keywords: [],
-				description: "[Shield 2] (+2 [S] while I'm a defender.)\nYour hold effects for holding here trigger an additional time.\nWhen I hold, [Add] [A] at the start of your next Main Phase. (Abilities that add resources can't be reacted to.)",
+				description: "[Shield 2] (+2 [M] while I'm a defender.)\nYour hold effects for holding here trigger an additional time.\nWhen I hold, [Add] [A] at the start of your next Main Phase. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bec7e8f108fac2d9c94db01c85cf143133d13325-744x1039.png?accountingTag=RB",
@@ -12976,7 +12976,7 @@ export default [
 				}
 			},
 			{
-				id: "ven/r01",
+				id: "ven-r01",
 				set: "Vendetta",
 				collectorNumber: 1,
 				rarity: "Common",
@@ -12994,7 +12994,7 @@ export default [
 				}
 			},
 			{
-				id: "ven/r01",
+				id: "ven-r01",
 				set: "Vendetta",
 				collectorNumber: 1,
 				rarity: "Common",
@@ -13030,7 +13030,7 @@ export default [
 				}
 			},
 			{
-				id: "ven/r02",
+				id: "ven-r02",
 				set: "Vendetta",
 				collectorNumber: 2,
 				rarity: "Common",
@@ -13066,7 +13066,7 @@ export default [
 				}
 			},
 			{
-				id: "ven/r02",
+				id: "ven-r02",
 				set: "Vendetta",
 				collectorNumber: 2,
 				rarity: "Common",
@@ -13120,7 +13120,7 @@ export default [
 				}
 			},
 			{
-				id: "ven/r03",
+				id: "ven-r03",
 				set: "Vendetta",
 				collectorNumber: 3,
 				rarity: "Common",
@@ -13156,7 +13156,7 @@ export default [
 				}
 			},
 			{
-				id: "ven/r03",
+				id: "ven-r03",
 				set: "Vendetta",
 				collectorNumber: 3,
 				rarity: "Common",
@@ -13264,7 +13264,7 @@ export default [
 				}
 			},
 			{
-				id: "ven/r04",
+				id: "ven-r04",
 				set: "Vendetta",
 				collectorNumber: 4,
 				rarity: "Common",
@@ -13282,7 +13282,7 @@ export default [
 				}
 			},
 			{
-				id: "ven/r04",
+				id: "ven-r04",
 				set: "Vendetta",
 				collectorNumber: 4,
 				rarity: "Common",
@@ -13318,7 +13318,7 @@ export default [
 				}
 			},
 			{
-				id: "ven/r05",
+				id: "ven-r05",
 				set: "Vendetta",
 				collectorNumber: 5,
 				rarity: "Common",
@@ -13336,7 +13336,7 @@ export default [
 				}
 			},
 			{
-				id: "ven/r05",
+				id: "ven-r05",
 				set: "Vendetta",
 				collectorNumber: 5,
 				rarity: "Common",
@@ -13426,7 +13426,7 @@ export default [
 				}
 			},
 			{
-				id: "ven/r06",
+				id: "ven-r06",
 				set: "Vendetta",
 				collectorNumber: 6,
 				rarity: "Common",
@@ -13444,7 +13444,7 @@ export default [
 				}
 			},
 			{
-				id: "ven/r06",
+				id: "ven-r06",
 				set: "Vendetta",
 				collectorNumber: 6,
 				rarity: "Common",
@@ -21542,7 +21542,7 @@ export default [
 				stats: {energy: 8, might: 6, power: 2},
 				tags: ["Dr. Mundo", "Zaun"],
 				keywords: [],
-				description: "Mundo, Expert. My Might is increased by the number of cards in your trash.\nAt the start of your Beginning Phase, recycle 3 from your trash.",
+				description: "My Might is increased by the number of cards in your trash.\nAt the start of your Beginning Phase, recycle 3 from your trash.",
 				flavorText: "This not hurt a bit!",
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/cf51fe8bedf5139e8cc1fc062969949ea7b121f0-744x1039.png?accountingTag=RB",

@@ -1,7 +1,8 @@
 import type { CardDetails } from "../../gen/dbTableInterfaces"
+import { TEST_ASTS } from "../data/parserTestASTs"
 import { reconstruct, tokenize } from "./rbmlLexer"
-import { parseCardRulesText, TokenStream, formatAst } from "./rbmlParser"
-import { prettyPrint } from "./stringify"
+import { parse, TokenStream, formatAst, parseCardRulesText } from "./rbmlParser"
+import stringify, { prettyPrint } from "./stringify"
 
 export function testLexer(cards:CardDetails[]) {
 	cards.forEach(c => {
@@ -21,14 +22,20 @@ export function testParser(cards:CardDetails[]) {
 	cards.forEach(c => {
 		if(c.description) {
 			try {
-				const ast = parseCardRulesText(new TokenStream(tokenize(c.description)))
-				count++
-				prettyPrint(`\n\x1b[34m${c.riot_id}: ${c.name}`)
-				prettyPrint(c.description)
-				prettyPrint(formatAst(ast))
+				const ast = parseCardRulesText(tokenize(c.description))
+				const testAst = TEST_ASTS[c.riot_id]
+				if(testAst?.verified && stringify(testAst.tree) === stringify(ast)) {
+					count++
+					prettyPrint(`\n\x1b[32m${c.riot_id}: ${c.name} OK!`)
+				}
+				else {
+					// prettyPrint(`\n\x1b[34m${c.riot_id}: ${c.name}`)
+					// prettyPrint(c.description)
+					// prettyPrint(formatAst(ast))
+				}
 			}
 			catch(e) {
-				prettyPrint(`\n\x1b[34m${c.riot_id}: ${c.name}`)
+				prettyPrint(`\n\x1b[32m${c.riot_id}: ${c.name}`)
 				prettyPrint(c.description)
 				console.log(e)
 			}
