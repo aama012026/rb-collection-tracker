@@ -29,9 +29,9 @@ Ability = Keyword | ActivatedAbility | TriggeredAbility | PassiveAbility
 
 const resourceSymbols: string[] = ['R', 'G', 'B', 'O', 'P', 'Y', 'C', 'A']
 
-type Symbol = {kind: 'symbol', value: string|number}
-type SymbolRun = {kind: 'symbol_run', value:Node[]}
-type Keyword = {
+export type Symbol = {kind: 'symbol', value: string|number}
+export type SymbolRun = {kind: 'symbol_run', value:Node[]}
+export type Keyword = {
 	kind: 'keyword',
 	name: string,
 	param?: number,
@@ -41,32 +41,32 @@ type Keyword = {
 	reminderText?: Node[]
 }
 
-type Ability = {
+export type Ability = {
 	kind: 'ability',
 	activated?:false,
 	value: Node[],
 	reminderText?: Node[]
 }
-type ActivatedAbility = {
+export type ActivatedAbility = {
 	kind:'ability',
 	activated:true,
 	cost:Node[],
 	effect:Node[],
 	reminderText?: Node[]
 }
-type InfixGroup = {
+export type InfixGroup = {
 	kind:'infix_group',
 	operator:string,
 	lefthand:Node[],
 	righthand:Node[],
 	reminderText?: Node[]
 }
-type DelimitedList = {kind:'list', value: Node[][], separator:','}
+export type DelimitedList = {kind:'list', value: Node[][], separator:','}
 type Group = {kind: 'group', value: Node[]}
-type Text = {kind: 'text', value: string}
-type Reminder = {kind: 'reminder_text', value: Node[]}
-type Might = {kind: 'might', amount: number, sign?: '+'|'-'}
-type Experience = {kind: 'xp', amount: number, sign?: '+'|'-'}
+export type Text = {kind: 'text', value: string}
+export type Reminder = {kind: 'reminder_text', value: Node[]}
+export type Might = {kind: 'might', amount: number, sign?: '+'|'-'}
+export type Experience = {kind: 'xp', amount: number, sign?: '+'|'-'}
 
 
 export type Node =

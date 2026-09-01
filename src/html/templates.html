@@ -54,18 +54,53 @@
 </template>
 
 <template id="keyword">
-	<mark class="badge" data-badge="keyword" data-keyword="%{text: string}"></mark>
+	<mark class="badge" data-badge="keyword" data-nested="%{isNested:boolean}"
+		data-associated="%{isAssociated:boolean}" data-keyword="%{keyword: string}"
+	>%{keyword}%{param: number}%{cost: string}
+	</mark>
+	%{reminder: string}
 </template>
 
-<template id="energy-svg">
-	<img class="inline-svg" src="svg/energy/e%{energy: number}.svg" alt="%{energy} energy">
+<template id="ability">
+	<span class="ability">%{ability: string}</span>
+	%{reminder: string}
 </template>
 
-<template id="power-svg">
-	<img class="inline-svg" src="gen/svg/%{domain: string}.svg" alt="%{domain} power">
+<template id="activated-ability">
+	<span class="ability">
+		<span class="ability-cost">%{cost:string}</span>
+		:
+		<span class="ability-effect">%{effect:string}</span>
+	</span>
+	%{reminder:string}
 </template>
 
-<template id="might-svg">
-	<span>%{might: number}</span>
-	<img class="inline-svg" src="svg/symbols/might.svg" alt="might."
+<template id="infix-group">
+	<span class="lefthand">%{lefthand: string}</span>
+	%{operator: string}
+	<span class="righthand">%{righthand: string}</span>
+	%{reminder:string}
+</template>
+
+<template id="comma-list-item">
+	<span class="comma-list-item">%{list-item: string}</span>
+</template>
+
+<template id="might-count">
+	<span class="might-count">
+		<span class="amount">%{sign: string}%{amount: number}</span>
+		<img class="inline-svg" src="svg/symbols/symbol-M.svg" alt="[M]"
+	</span>
+</template>
+
+<template id="xp-count">
+	<span class="xp-count">%{amount: number}%{sign: string} %{XP}</span>
+</template>
+
+<template id="inline-symbol">
+	<img class="inline-svg" src="svg/symbols/symbol-%{value: string|number}.svg" alt="[%{value}]">
+</template>
+
+<template id="reminder">
+	<span class="reminder">(<i>%{text: string}</i>)</span>
 </template>
