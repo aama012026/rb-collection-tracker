@@ -8,28 +8,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 1},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 1},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -53,21 +50,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"jdg-087/219": {
-		verified: false,
+		verified: true,
 		description: "[Shield 2] (+2 [M] while I'm a defender.)\nYour hold effects for holding here trigger an additional time.\nWhen I hold, [Add] [A] at the start of your next Main Phase. (Abilities that add resources can't be reacted to.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Shield",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -79,7 +73,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -101,17 +94,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Abilities that add resources can't be reacted to"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "Abilities that add resources can't be reacted to"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -153,23 +143,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -217,14 +199,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Assault",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -252,13 +231,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -267,15 +243,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Assault", param: 3},
 					{kind: "text", value: " this turn"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 3, sign: "+"},
-							{kind: "text", value: " while it's an attacker"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 3, sign: "+"},
+					{kind: "text", value: " while it's an attacker"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -287,13 +260,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -349,13 +319,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -368,14 +335,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						value: " Deal its Energy cost as damage to a unit at a battlefield"
 					},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Ignore its Power cost"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Ignore its Power cost"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -387,13 +351,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -413,23 +374,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -459,17 +412,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "symbol", value: 2},
 					{kind: "text", value: " less"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Get the effect if you've played another card this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "Get the effect if you've played another card this turn"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -481,15 +431,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -500,13 +447,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -518,7 +462,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -531,7 +474,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-015/298": {
-		verified: false,
+		verified: true,
 		description: "Other friendly units here have [Assault]. (+1 [M] while they're attackers.)",
 		tree: [
 			{
@@ -540,21 +483,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Other friendly units here have "},
 					{kind: "keyword", name: "Assault"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " while they're attackers"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while they're attackers"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
 	},
 	"ogn-016/298": {
-		verified: false,
+		verified: true,
 		description: "[Legion] — When you play me, give a unit +2 [M] this turn. (Get the effect if you've played another card this turn.)",
 		tree: [
 			{
@@ -575,23 +515,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Get the effect if you've played another card this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "Get the effect if you've played another card this turn"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
 	},
 	"ogn-017/298": {
-		verified: false,
+		verified: true,
 		description: "This enters exhausted.\n[E]: Deal 2 to a unit at a battlefield.",
 		tree: [
 			{
@@ -601,7 +538,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -631,7 +567,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-019/298": {
-		verified: false,
+		verified: true,
 		description: "If you've discarded a card this turn, I have [Assault] and [Ganking]. (+1 [M] while I'm an attacker. I can move from battlefield to battlefield.)",
 		tree: [
 			{
@@ -656,26 +592,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " while I'm an attacker"},
-							{kind: "text", value: "."},
-							{
-								kind: "text",
-								value: " I can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
 	},
 	"ogn-020/298": {
-		verified: false,
+		verified: true,
 		description: "[Legion] — When you play me, discard 2, then draw 2. (Get the effect if you've played another card this turn.)",
 		tree: [
 			{
@@ -699,23 +629,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Get the effect if you've played another card this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "Get the effect if you've played another card this turn"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
 	},
 	"ogn-021/298": {
-		verified: false,
+		verified: true,
 		description: "[E]: [Legion] — The next unit you play this turn enters ready. (Get the effect if you've played another card this turn.)",
 		tree: [
 			{
@@ -733,17 +660,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 								value: "The next unit you play this turn enters ready"
 							},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Get the effect if you've played another card this turn"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Get the effect if you've played another card this turn"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -757,13 +681,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -772,7 +693,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-023/298": {
-		verified: false,
+		verified: true,
 		description: "Discard 1, [E]: Choose a friendly unit. The next time it dies this turn, you may pay [C] to recall it exhausted instead. (Send it to base. This isn't a move.)",
 		tree: [
 			{
@@ -807,16 +728,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -828,13 +746,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -857,13 +772,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -988,7 +900,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-029/298": {
-		verified: false,
+		verified: true,
 		description: "Deal 3 to a unit.\nDeal 3 to a unit.",
 		tree: [
 			{
@@ -1000,7 +912,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -1019,36 +930,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Assault",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -1076,36 +976,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Assault",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -1154,7 +1043,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-032/298": {
-		verified: false,
+		verified: true,
 		description: "[E]: The next spell you play this turn deals 1 Bonus Damage. (Each instance of damage the spell deals is increased by 1.)",
 		tree: [
 			{
@@ -1166,18 +1055,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "1"},
 					{kind: "text", value: " Bonus Damage"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Each instance of damage the spell deals is increased by "
-							},
-							{kind: "text", value: "1"},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "Each instance of damage the spell deals is increased by "
+					},
+					{kind: "text", value: "1"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -1189,25 +1075,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -1256,21 +1139,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-035/298": {
-		verified: false,
+		verified: true,
 		description: "[Assault 3] (+3 [M] while I'm an attacker.)\nIf an opponent controls a battlefield, I enter ready.\nWhen I conquer, you may pay [1] to return me to my owner's hand.",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Assault",
 				param: 3,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 3, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 3, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -1293,7 +1173,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -1321,16 +1200,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -1357,14 +1230,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Assault",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -1393,7 +1263,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-038/298": {
-		verified: false,
+		verified: true,
 		description: "When you play me, draw 1 for each of your [Mighty] units. (A unit is Mighty while it has 5+ [M].)",
 		tree: [
 			{
@@ -1414,15 +1284,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "A unit is Mighty while it has "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "A unit is Mighty while it has "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -1434,23 +1301,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -1478,23 +1337,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -1516,7 +1367,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-040/298": {
-		verified: false,
+		verified: true,
 		description: "[E]: [Reaction] — [Add] [C]. (Abilities that add resources can't be reacted to.)",
 		tree: [
 			{
@@ -1533,17 +1384,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: "C"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -1558,20 +1406,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Deflect",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}
-							]
-						},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}]
+					},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -1604,20 +1447,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Deflect",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}
-							]
-						},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}]
+					},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -1698,25 +1536,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -1737,25 +1572,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -1785,19 +1617,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-047/298": {
-		verified: false,
+		verified: true,
 		description: "[Action] (Play on your turn or in showdowns.)\nIf an opponent's score is within 3 points of the Victory Score, this costs [2] less.\nDraw 1 and channel 1 rune exhausted.",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -1821,7 +1650,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -1842,25 +1670,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -1916,30 +1741,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
 				value: [
 					{kind: "text", value: "Stun a unit"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -1962,17 +1778,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -1984,45 +1794,36 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Shield",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
 	"ogn-053/298": {
-		verified: false,
+		verified: true,
 		description: "[Hidden] (Hide now for [A] to react with later for [0].)\n[Action] (Play on your turn or in showdowns.)\nBuff a friendly unit. Buffs give an additional +1 [M] to friendly units this turn. (To buff a unit, give it a +1 [M] buff if it doesn't already have one.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -2033,26 +1834,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "might", amount: 1, sign: "+"},
 					{kind: "text", value: " to friendly units this turn"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "To buff a unit"}],
-									[
-										{kind: "text", value: " give it a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{
-											kind: "text",
-											value: " buff if it doesn't already have one"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "To buff a unit"}],
+							[
+								{kind: "text", value: " give it a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{
+									kind: "text",
+									value: " buff if it doesn't already have one"
+								},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -2066,25 +1864,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Shield",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -2117,7 +1909,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-056/298": {
-		verified: false,
+		verified: true,
 		description: "When I conquer, you may kill a gear. If you do, buff me. (If I don't have a buff, I get a +1 [M] buff.)",
 		tree: [
 			{
@@ -2145,23 +1937,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If I don't have a buff"}],
-									[
-										{kind: "text", value: " I get a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If I don't have a buff"}],
+							[
+								{kind: "text", value: " I get a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -2175,27 +1964,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -2206,20 +1989,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Tank"},
 					{kind: "text", value: " this turn"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 3, sign: "+"},
-							{kind: "text", value: " while it's a defender"},
-							{kind: "text", value: "."},
-							{
-								kind: "text",
-								value: " It must be assigned combat damage first"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 3, sign: "+"},
+					{kind: "text", value: " while it's a defender"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " It must be assigned combat damage first"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -2231,25 +2008,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -2319,7 +2093,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-061/298": {
-		verified: false,
+		verified: true,
 		description: "When you play me, if you control a Poro, buff me and draw 1. (If I don't have a buff, I get a +1 [M] buff.)",
 		tree: [
 			{
@@ -2338,23 +2112,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If I don't have a buff"}],
-									[
-										{kind: "text", value: " I get a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If I don't have a buff"}],
+							[
+								{kind: "text", value: " I get a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -2397,7 +2168,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-063/298": {
-		verified: false,
+		verified: true,
 		description: "When you play this, buff a friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)\nFriendly buffed units have [Deflect] if they didn't already. (Opponents must pay [A] to choose those units with a spell or ability.)",
 		tree: [
 			{
@@ -2414,23 +2185,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -2442,19 +2210,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Deflect"},
 					{kind: "text", value: " if they didn't already"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
 					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Opponents must pay "},
-							{kind: "symbol", value: "A"},
-							{
-								kind: "text",
-								value: " to choose those units with a spell or ability"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: " to choose those units with a spell or ability"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -2466,25 +2231,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -2566,19 +2328,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-067/298": {
-		verified: false,
+		verified: true,
 		description: "[Tank] (I must be assigned combat damage first.)\nWhen you play me to a battlefield, you may move an enemy unit to here.\nWhen I hold, return me to my owner's hand.",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -2599,7 +2358,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -2619,7 +2377,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-068/298": {
-		verified: false,
+		verified: true,
 		description: "I must be assigned combat damage last.\n[E]: Deal damage equal to my Might to a unit at a battlefield. Use this ability only while I'm at a battlefield.",
 		tree: [
 			{
@@ -2629,7 +2387,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -2650,19 +2407,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-069/298": {
-		verified: false,
+		verified: true,
 		description: "[Action] (Play on your turn or in showdowns.)\nDouble a friendly unit's Might this turn. Give it [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -2672,26 +2426,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: " Give it "},
 					{kind: "keyword", name: "Temporary"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{
-											kind: "text",
-											value: "Kill it at the start of its controller's Beginning Phase"
-										}
-									],
-									[
-										{kind: "text", value: " before scoring"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{
+									kind: "text",
+									value: "Kill it at the start of its controller's Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -2699,7 +2450,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-070/298": {
-		verified: false,
+		verified: true,
 		description: "While I'm at a battlefield, opponents can only play units to their base.\nWhile I'm at a battlefield, spells and abilities can't ready enemy units and gear.",
 		tree: [
 			{
@@ -2721,7 +2472,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -2856,25 +2606,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Shield",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -2893,23 +2637,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "infix_group",
@@ -2921,21 +2657,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: " runes exhausted and draw "},
 					{kind: "text", value: "1"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I die"}],
-									[
-										{kind: "text", value: " get the effect"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "When I die"}],
+							[
+								{kind: "text", value: " get the effect"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -2993,22 +2726,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-077/298": {
-		verified: false,
+		verified: true,
 		description: "[Hidden] (Hide now for [A] to react with later for [0].)\nThe next time a friendly unit would die, kill this instead. Recall that unit exhausted. (Send it to base. This isn't a move.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -3031,35 +2761,29 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					},
 					{kind: "text", value: " Recall that unit exhausted"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
 	},
 	"ogn-078/298": {
-		verified: false,
+		verified: true,
 		description: "[Shield] (+1 [M] while I'm a defender.)\n[E]: Buff me. (I get a +1 [M] buff.)\nI can have any number of buffs.",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Shield",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -3068,16 +2792,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				effect: [
 					{kind: "text", value: "Buff me"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "I get a "},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I get a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -3090,20 +2811,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-078a/298": {
-		verified: false,
+		verified: true,
 		description: "[Shield] (+1 [M] while I'm a defender.)\n[E]: Buff me. (I get a +1 [M] buff.)\nI can have any number of buffs.",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Shield",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -3112,16 +2830,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				effect: [
 					{kind: "text", value: "Buff me"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "I get a "},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I get a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -3134,7 +2849,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-079/298": {
-		verified: false,
+		verified: true,
 		description: "If an opponent's score is within 3 points of the Victory Score, I enter ready.\nStunned enemy units here have -8 [M], to a minimum of 1 [M].",
 		tree: [
 			{
@@ -3157,7 +2872,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -3181,7 +2895,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-079a/298": {
-		verified: false,
+		verified: true,
 		description: "If an opponent's score is within 3 points of the Victory Score, I enter ready.\nStunned enemy units here have -8 [M], to a minimum of 1 [M].",
 		tree: [
 			{
@@ -3204,7 +2918,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -3234,25 +2947,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -3266,7 +2976,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-081/298": {
-		verified: false,
+		verified: true,
 		description: "[E]: [Reaction] — [Add] [C]. (Abilities that add resources can't be reacted to.)",
 		tree: [
 			{
@@ -3283,17 +2993,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: "C"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -3331,39 +3038,33 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -3412,13 +3113,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -3438,39 +3136,33 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Vision",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{
-										kind: "text",
-										value: " look at the top card of your Main Deck"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{
+									kind: "text",
+									value: " look at the top card of your Main Deck"
+								},
+								{kind: "text", value: "."}
 							]
-						},
-						{kind: "text", value: " You may recycle it"},
-						{kind: "text", value: "."}
-					]
-				}
+						]
+					},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Shield",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -3481,13 +3173,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -3593,25 +3282,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -3637,33 +3323,27 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-094/298": {
-		verified: false,
+		verified: true,
 		description: "[Hidden] (Hide now for [A] to react with later for [0].)\n[Action] (Play on your turn or in showdowns.)\nPlay a ready 3 [M] Sprite unit token with [Temporary]. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -3673,26 +3353,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: " Sprite unit token with "},
 					{kind: "keyword", name: "Temporary"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{
-											kind: "text",
-											value: "Kill it at the start of its controller's Beginning Phase"
-										}
-									],
-									[
-										{kind: "text", value: " before scoring"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{
+									kind: "text",
+									value: "Kill it at the start of its controller's Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -3706,25 +3383,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -3753,7 +3427,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-096/298": {
-		verified: false,
+		verified: true,
 		description: "[Deathknell] — Draw 1. (When I die, get the effect.)",
 		tree: [
 			{
@@ -3764,21 +3438,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Draw "},
 					{kind: "text", value: "1"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I die"}],
-									[
-										{kind: "text", value: " get the effect"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "When I die"}],
+							[
+								{kind: "text", value: " get the effect"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -3792,16 +3463,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -3828,7 +3496,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-098/298": {
-		verified: false,
+		verified: true,
 		description: "[E]: [Reaction] — [Add] [1]. (Abilities that add resources can't be reacted to.)",
 		tree: [
 			{
@@ -3845,17 +3513,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: 1},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -3899,27 +3564,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Vision",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{
-										kind: "text",
-										value: " look at the top card of your Main Deck"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{
+									kind: "text",
+									value: " look at the top card of your Main Deck"
+								},
+								{kind: "text", value: "."}
 							]
-						},
-						{kind: "text", value: " You may recycle it"},
-						{kind: "text", value: "."}
-					]
-				}
+						]
+					},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -3972,13 +3634,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -4030,25 +3689,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -4079,7 +3735,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-106/298": {
-		verified: false,
+		verified: true,
 		description: "When you play me, play a ready 3 [M] Sprite unit token with [Temporary] here. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
 		tree: [
 			{
@@ -4100,26 +3756,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{
-											kind: "text",
-											value: "Kill it at the start of its controller's Beginning Phase"
-										}
-									],
-									[
-										{kind: "text", value: " before scoring"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{
+									kind: "text",
+									value: "Kill it at the start of its controller's Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -4162,25 +3815,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -4206,7 +3856,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-109/298": {
-		verified: false,
+		verified: true,
 		description: "My Might is increased by the number of cards in your trash.\nAt the start of your Beginning Phase, recycle 3 from your trash.",
 		tree: [
 			{
@@ -4219,7 +3869,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -4246,29 +3895,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-110/298": {
-		verified: false,
+		verified: true,
 		description: "[Accelerate] (You may pay [1][C] as an additional cost to have me enter ready.)\n[Deathknell] — Recycle me to ready your runes. (When I die, get the effect.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "infix_group",
@@ -4277,21 +3918,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				righthand: [
 					{kind: "text", value: "Recycle me to ready your runes"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I die"}],
-									[
-										{kind: "text", value: " get the effect"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "When I die"}],
+							[
+								{kind: "text", value: " get the effect"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -4329,22 +3967,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-112/298": {
-		verified: false,
+		verified: true,
 		description: "[Ganking] (I can move from battlefield to battlefield.)\nWhen I conquer, you may play a spell from your trash with Energy cost less than your points without paying its Energy cost. Then recycle it. (You must still pay its Power cost.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -4365,35 +3997,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					},
 					{kind: "text", value: " Then recycle it"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "You must still pay its Power cost"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "You must still pay its Power cost"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
 	},
 	"ogn-112a/298": {
-		verified: false,
+		verified: true,
 		description: "[Ganking] (I can move from battlefield to battlefield.)\nWhen I conquer, you may play a spell from your trash with Energy cost less than your points without paying its Energy cost. Then recycle it. (You must still pay its Power cost.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -4414,20 +4037,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					},
 					{kind: "text", value: " Then recycle it"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "You must still pay its Power cost"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "You must still pay its Power cost"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
 	},
 	"ogn-113/298": {
-		verified: false,
+		verified: true,
 		description: "Kill a friendly unit or gear, [E]: [Action] — [Add] [A][A]. (Use on your turn or in showdowns. Abilities that add resources can't be reacted to.)",
 		tree: [
 			{
@@ -4459,22 +4079,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 								]
 							},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
+							{kind: "text", value: "Use on your turn or in showdowns"},
+							{kind: "text", value: "."},
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Use on your turn or in showdowns"
-									},
-									{kind: "text", value: "."},
-									{
-										kind: "text",
-										value: " Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: " Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -4496,7 +4110,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-115/298": {
-		verified: false,
+		verified: true,
 		description: "Each player looks at the top 5 cards of their Main Deck, chooses one, then recycles the rest. Starting with the next player, each player plays those cards, ignoring Energy costs. (They must still pay Power costs.)",
 		tree: [
 			{
@@ -4530,14 +4144,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "They must still pay Power costs"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "They must still pay Power costs"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -4549,23 +4160,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -4734,7 +4337,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-120/298": {
-		verified: false,
+		verified: true,
 		description: "[E]: [Reaction] — [Add] [C]. (Abilities that add resources can't be reacted to.)",
 		tree: [
 			{
@@ -4751,17 +4354,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: "C"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -4775,16 +4375,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -4835,16 +4432,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -4928,7 +4522,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-124/298": {
-		verified: false,
+		verified: true,
 		description: "[E]: Buff an exhausted friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 		tree: [
 			{
@@ -4938,23 +4532,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				effect: [
 					{kind: "text", value: "Buff an exhausted friendly unit"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -4962,7 +4553,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-125/298": {
-		verified: false,
+		verified: true,
 		description: "While I'm buffed, I have [Ganking]. (I can move from battlefield to battlefield.)",
 		tree: [
 			{
@@ -4980,17 +4571,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "I can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -5002,25 +4587,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -5040,13 +4622,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -5069,13 +4648,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -5169,25 +4745,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -5234,21 +4807,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
 	"ogn-136/298": {
-		verified: false,
+		verified: true,
 		description: "When you play me, buff another friendly unit. (If it doesn't have a buff, it gets a +1 [M] buff.)",
 		tree: [
 			{
@@ -5265,23 +4835,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -5295,13 +4862,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -5355,7 +4919,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-139/298": {
-		verified: false,
+		verified: true,
 		description: "When you play another unit, buff me. (If I don't have a buff, I get a +1 [M] buff.)",
 		tree: [
 			{
@@ -5372,23 +4936,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If I don't have a buff"}],
-									[
-										{kind: "text", value: " I get a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If I don't have a buff"}],
+							[
+								{kind: "text", value: " I get a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -5425,7 +4986,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-141/298": {
-		verified: false,
+		verified: true,
 		description: "When you play me, buff up to two other friendly units. (Each one that doesn't have a buff gets a +1 [M] buff.)",
 		tree: [
 			{
@@ -5445,19 +5006,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Each one that doesn't have a buff gets a "
-							},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Each one that doesn't have a buff gets a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -5487,31 +5042,28 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-144/298": {
-		verified: false,
+		verified: true,
 		description: "[Reaction] (Play any time, even before spells and abilities resolve.)\nIf an enemy unit has died this turn, this costs [2] less.\nDraw 2.",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -5536,7 +5088,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -5554,25 +5105,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -5587,19 +5135,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-146/298": {
-		verified: false,
+		verified: true,
 		description: "[Action] (Play on your turn or in showdowns.)\nAs you play this, you may spend a buff as an additional cost. If you do, ignore this spell's cost.\nReady a unit.",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -5631,7 +5176,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [{kind: "text", value: "Ready a unit"}, {kind: "text", value: "."}]
@@ -5639,7 +5183,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ogn-147/298": {
-		verified: false,
+		verified: true,
 		description: "When you play me, you may spend a buff to buff me and ready me. (If I don't have a buff, I get a +1 [M] buff.)",
 		tree: [
 			{
@@ -5659,23 +5203,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If I don't have a buff"}],
-									[
-										{kind: "text", value: " I get a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If I don't have a buff"}],
+							[
+								{kind: "text", value: " I get a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -5743,35 +5284,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Assault",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -5804,23 +5334,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -5841,23 +5363,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -5901,13 +5415,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -5928,19 +5439,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					},
 					{kind: "text", value: " Then buff all friendly units"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Each one that doesn't have a buff gets a "
-							},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Each one that doesn't have a buff gets a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -5951,13 +5456,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -5976,15 +5478,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -6051,7 +5550,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -6059,12 +5557,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [{kind: "text", value: "* Ready me"}, {kind: "text", value: "."}]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -6083,25 +5579,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Shield",
 				param: 3,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 3, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 3, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -6123,14 +5613,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Bases are not battlefield"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Bases are not battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -6142,25 +5629,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Shield",
 				param: 3,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 3, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 3, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -6182,14 +5663,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Bases are not battlefield"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Bases are not battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -6201,7 +5679,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "ability",
 				value: [{kind: "text", value: "I enter ready"}, {kind: "text", value: "."}]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -6265,15 +5742,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -6293,37 +5767,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -6352,37 +5812,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -6422,17 +5868,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: "C"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -6461,23 +5904,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If I don't have a buff"}],
-									[
-										{kind: "text", value: " I get a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If I don't have a buff"}],
+							[
+								{kind: "text", value: " I get a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -6517,23 +5957,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If I don't have a buff"}],
-									[
-										{kind: "text", value: " I get a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If I don't have a buff"}],
+							[
+								{kind: "text", value: " I get a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -6607,27 +6044,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -6644,25 +6075,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -6681,13 +6109,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -6704,27 +6129,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Vision",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{
-										kind: "text",
-										value: " look at the top card of your Main Deck"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{
+									kind: "text",
+									value: " look at the top card of your Main Deck"
+								},
+								{kind: "text", value: "."}
 							]
-						},
-						{kind: "text", value: " You may recycle it"},
-						{kind: "text", value: "."}
-					]
-				}
+						]
+					},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -6734,13 +6156,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -6760,13 +6179,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -6783,27 +6199,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Vision",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{
-										kind: "text",
-										value: " look at the top card of your Main Deck"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{
+									kind: "text",
+									value: " look at the top card of your Main Deck"
+								},
+								{kind: "text", value: "."}
 							]
-						},
-						{kind: "text", value: " You may recycle it"},
-						{kind: "text", value: "."}
-					]
-				}
+						]
+					},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -6875,21 +6288,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I die"}],
-									[
-										{kind: "text", value: " get the effect"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "When I die"}],
+							[
+								{kind: "text", value: " get the effect"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -6902,13 +6312,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -6928,26 +6335,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Give a unit at a battlefield or a gear "},
 					{kind: "keyword", name: "Temporary"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{
-											kind: "text",
-											value: "Kill it at the start of its controller's Beginning Phase"
-										}
-									],
-									[
-										{kind: "text", value: " before scoring"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{
+									kind: "text",
+									value: "Kill it at the start of its controller's Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -7010,13 +6414,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -7108,7 +6509,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -7180,16 +6580,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -7221,21 +6615,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "4"},
 					{kind: "text", value: " to all units at my battlefield"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I die"}],
-									[
-										{kind: "text", value: " get the effect"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "When I die"}],
+							[
+								{kind: "text", value: " get the effect"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -7248,13 +6639,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -7363,47 +6751,33 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
 				value: [
 					{
-						kind: "text",
-						value: "When you look at cards from the top of your deck "
-					},
-					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "group",
-								value: [
-									{kind: "text", value: "("},
-									{kind: "text", value: "and don't draw them"},
-									{kind: "text", value: ")"}
-								]
-							},
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: " and see me"}],
-									[
-										{kind: "text", value: " you may play me for "},
-										{kind: "symbol", value: "A"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{
+									kind: "text",
+									value: "When you look at cards from the top of your deck "
+								},
+								{kind: "text", value: "("},
+								{kind: "text", value: "and don't draw them"},
+								{kind: "text", value: ")"},
+								{kind: "text", value: " and see me"}
+							],
+							[
+								{kind: "text", value: " you may play me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -7447,14 +6821,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "You must still pay its Power cost"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "You must still pay its Power cost"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -7465,16 +6836,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -7502,16 +6870,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -7550,14 +6915,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "You must still pay its Power cost"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "You must still pay its Power cost"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -7568,16 +6930,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -7641,7 +7000,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "infix_group",
 				lefthand: [{kind: "text", value: "* "}, {kind: "symbol", value: "B"}],
@@ -7652,7 +7010,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "infix_group",
 				lefthand: [{kind: "text", value: "* "}, {kind: "symbol", value: "Y"}],
@@ -7748,13 +7105,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -7763,16 +7117,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."},
 					{kind: "text", value: " Take control of it and recall it"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to your base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to your base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -7794,17 +7145,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: "C"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -7817,16 +7165,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -7854,16 +7196,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -7891,25 +7227,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -7928,25 +7261,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -7978,7 +7308,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -8029,14 +7358,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Assault",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -8084,7 +7410,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -8104,27 +7429,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -8144,14 +7463,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Assault",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -8167,21 +7483,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "1"},
 					{kind: "text", value: " rune exhausted"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I die"}],
-									[
-										{kind: "text", value: " get the effect"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "When I die"}],
+							[
+								{kind: "text", value: " get the effect"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -8207,30 +7520,27 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If I don't have a buff"}],
-									[
-										{kind: "text", value: " I get a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{
-								kind: "text",
-								value: " Get the effect if you've played another card this turn"
-							},
-							{kind: "text", value: "."}
+							[{kind: "text", value: "If I don't have a buff"}],
+							[
+								{kind: "text", value: " I get a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
-					}
+					},
+					{
+						kind: "text",
+						value: " Get the effect if you've played another card this turn"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -8256,17 +7566,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Get the effect if you've played another card this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "Get the effect if you've played another card this turn"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -8277,27 +7584,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -8307,17 +7608,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						value: "Stun a friendly unit and an enemy unit at the same battlefield"
 					},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "They don't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "They don't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -8328,13 +7623,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -8378,14 +7670,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "It is also at the battlefield"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It is also at the battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -8422,26 +7711,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "To buff a unit"}],
-									[
-										{kind: "text", value: " give it a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{
-											kind: "text",
-											value: " buff if it doesn't already have one"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "To buff a unit"}],
+							[
+								{kind: "text", value: " give it a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{
+									kind: "text",
+									value: " buff if it doesn't already have one"
+								},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -8454,13 +7740,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -8513,17 +7796,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -8581,21 +7858,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send them to base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."},
 					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send them to base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."},
-							{
-								kind: "text",
-								value: " Ties are calculated after combat damage is dealt"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: " Ties are calculated after combat damage is dealt"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -8617,23 +7891,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -8709,33 +7980,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -8768,15 +8029,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "I'm Mighty while I have "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I'm Mighty while I have "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -8787,13 +8045,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -8833,27 +8088,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Vision",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{
-										kind: "text",
-										value: " look at the top card of your Main Deck"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{
+									kind: "text",
+									value: " look at the top card of your Main Deck"
+								},
+								{kind: "text", value: "."}
 							]
-						},
-						{kind: "text", value: " You may recycle it"},
-						{kind: "text", value: "."}
-					]
-				}
+						]
+					},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -8874,27 +8126,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{kind: "text", value: " Runes aren't cards"},
-							{kind: "text", value: "."}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
-					}
+					},
+					{kind: "text", value: " Runes aren't cards"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -8945,14 +8194,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Shield",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -8968,17 +8214,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -8989,14 +8229,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Shield",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -9012,17 +8249,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -9039,21 +8270,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "might", amount: 1},
 					{kind: "text", value: " Recruit unit tokens into your base"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I die"}],
-									[
-										{kind: "text", value: " get the effect"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "When I die"}],
+							[
+								{kind: "text", value: " get the effect"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -9066,13 +8294,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -9094,13 +8319,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -9122,55 +8344,46 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									}
-								],
-								[
-									{
-										kind: "text",
-										value: " including to a battlefield you control"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								}
+							],
+							[
+								{
+									kind: "text",
+									value: " including to a battlefield you control"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Shield",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -9252,17 +8465,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						]
 					},
 					{kind: "text", value: " "},
+					{kind: "text", value: "("},
 					{
-						kind: "group",
-						value: [
-							{kind: "text", value: "("},
-							{
-								kind: "text",
-								value: "Get the effect if you've played another card this turn"
-							},
-							{kind: "text", value: ")"}
-						]
+						kind: "text",
+						value: "Get the effect if you've played another card this turn"
 					},
+					{kind: "text", value: ")"}
+				]
+			},
+			{
+				kind: "ability",
+				value: [
 					{kind: "text", value: "Other friendly units have "},
 					{kind: "might", amount: 1, sign: "+"},
 					{kind: "text", value: " here"},
@@ -9291,17 +8504,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						]
 					},
 					{kind: "text", value: " "},
+					{kind: "text", value: "("},
 					{
-						kind: "group",
-						value: [
-							{kind: "text", value: "("},
-							{
-								kind: "text",
-								value: "Get the effect if you've played another card this turn"
-							},
-							{kind: "text", value: ")"}
-						]
+						kind: "text",
+						value: "Get the effect if you've played another card this turn"
 					},
+					{kind: "text", value: ")"}
+				]
+			},
+			{
+				kind: "ability",
+				value: [
 					{kind: "text", value: "Other friendly units have "},
 					{kind: "might", amount: 1, sign: "+"},
 					{kind: "text", value: " here"},
@@ -9366,17 +8579,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: "C"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -9464,17 +8674,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: "."},
 							{kind: "text", value: " Use only to play spells"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -9493,7 +8700,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -9503,7 +8709,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -9513,7 +8718,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -9523,7 +8727,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -9533,7 +8736,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -9568,15 +8770,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "A unit is Mighty while it has "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "A unit is Mighty while it has "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -9647,7 +8846,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -9700,22 +8898,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: 1},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."},
-									{
-										kind: "text",
-										value: " Get the effect if you've played a card this turn"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."},
+							{
+								kind: "text",
+								value: " Get the effect if you've played a card this turn"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -9728,13 +8923,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -9748,7 +8940,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "infix_group",
 				lefthand: [{kind: "keyword", name: "Legion"}],
@@ -9756,17 +8947,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				righthand: [
 					{kind: "text", value: "Kill it now instead"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Get the effect if you've played another card this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "Get the effect if you've played another card this turn"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -9809,27 +8997,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -9864,23 +9046,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				effect: [
 					{kind: "text", value: "Buff a friendly unit"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -9938,13 +9117,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -9982,23 +9158,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -10011,13 +9184,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -10029,17 +9199,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						value: " You may move a friendly unit to that enemy unit's battlefield"
 					},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "A stunned unit doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "A stunned unit doesn't deal combat damage this turn"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -10059,7 +9226,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -10130,25 +9296,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -10189,17 +9352,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Ganking"},
 					{kind: "text", value: " this turn"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -10210,13 +9367,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -10259,16 +9413,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -10306,23 +9457,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -10335,27 +9483,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Temporary",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[
-									{
-										kind: "text",
-										value: "Kill me at the start of your Beginning Phase"
-									}
-								],
-								[
-									{kind: "text", value: " before scoring"},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[
+								{
+									kind: "text",
+									value: "Kill me at the start of your Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -10454,15 +9599,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Shield", param: 2},
 					{kind: "text", value: " this combat"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 2, sign: "+"},
-							{kind: "text", value: " while it's a defender"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while it's a defender"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -10552,23 +9694,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -10837,14 +9976,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Units here have "},
 					{kind: "might", amount: 1, sign: "+"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "This includes attackers"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "This includes attackers"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -10874,18 +10010,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "1"},
 					{kind: "text", value: " Bonus Damage"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Each instance of damage the spell deals is increased by "
-							},
-							{kind: "text", value: "1"},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "Each instance of damage the spell deals is increased by "
+					},
+					{kind: "text", value: "1"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -10899,17 +10032,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Units here have "},
 					{kind: "keyword", name: "Ganking"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "They can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "They can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -10959,17 +10086,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: "."},
 							{kind: "text", value: " Use only to play spells"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -10995,17 +10119,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: "."},
 							{kind: "text", value: " Use only to play spells"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -11035,15 +10156,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "A unit is Mighty while it has "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "A unit is Mighty while it has "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -11071,15 +10189,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "A unit is Mighty while it has "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "A unit is Mighty while it has "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -11165,22 +10280,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: 1},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."},
-									{
-										kind: "text",
-										value: " Get the effect if you've played a card this turn"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."},
+							{
+								kind: "text",
+								value: " Get the effect if you've played a card this turn"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -11216,22 +10328,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: 1},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."},
-									{
-										kind: "text",
-										value: " Get the effect if you've played a card this turn"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."},
+							{
+								kind: "text",
+								value: " Get the effect if you've played a card this turn"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -11321,23 +10430,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				effect: [
 					{kind: "text", value: "Buff a friendly unit"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -11363,23 +10469,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				effect: [
 					{kind: "text", value: "Buff a friendly unit"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -11454,23 +10557,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -11499,23 +10599,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -11537,7 +10634,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -11576,7 +10672,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -11662,17 +10757,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Ganking"},
 					{kind: "text", value: " this turn"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -11689,17 +10778,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Ganking"},
 					{kind: "text", value: " this turn"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -11731,16 +10814,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -11788,16 +10868,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -11828,18 +10905,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "1"},
 					{kind: "text", value: " Bonus Damage"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Each instance of damage the spell deals is increased by "
-							},
-							{kind: "text", value: "1"},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "Each instance of damage the spell deals is increased by "
+					},
+					{kind: "text", value: "1"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -11864,13 +10938,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -11916,14 +10987,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Shield",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -11968,17 +11036,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							kind: "keyword",
 							name: "Shield",
 							param: 2,
-							reminderText: {
-								kind: "reminder_text",
-								value: [
-									{kind: "might", amount: 2, sign: "+"},
-									{
-										kind: "text",
-										value: " while I'm an attacker or defender"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+							reminderText: [
+								{kind: "might", amount: 2, sign: "+"},
+								{
+									kind: "text",
+									value: " while I'm an attacker or defender"
+								},
+								{kind: "text", value: "."}
+							]
 						}
 					]
 				]
@@ -11991,13 +11056,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -12023,16 +11085,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -12070,25 +11126,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -12107,13 +11160,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -12157,17 +11207,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: "."},
 							{kind: "text", value: " Use only to play spells"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -12180,13 +11227,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -12195,17 +11239,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "might", amount: 1},
 					{kind: "text", value: " Recruit unit tokens"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "They can be played to your base or to battlefields you control"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "They can be played to your base or to battlefields you control"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -12298,25 +11339,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -12334,16 +11372,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -12380,13 +11415,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -12433,13 +11465,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -12462,18 +11491,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "1"},
 					{kind: "text", value: " Bonus Damage"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Each instance of damage the spell deals is increased by "
-							},
-							{kind: "text", value: "1"},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "Each instance of damage the spell deals is increased by "
+					},
+					{kind: "text", value: "1"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -12485,7 +11511,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "ability",
 				value: [{kind: "text", value: "I enter ready"}, {kind: "text", value: "."}]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -12505,23 +11530,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -12593,17 +11610,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							kind: "keyword",
 							name: "Shield",
 							param: 2,
-							reminderText: {
-								kind: "reminder_text",
-								value: [
-									{kind: "might", amount: 2, sign: "+"},
-									{
-										kind: "text",
-										value: " while I'm an attacker or defender"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+							reminderText: [
+								{kind: "might", amount: 2, sign: "+"},
+								{
+									kind: "text",
+									value: " while I'm an attacker or defender"
+								},
+								{kind: "text", value: "."}
+							]
 						}
 					]
 				]
@@ -12629,17 +11643,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -12650,16 +11658,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -12674,16 +11676,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -12698,20 +11697,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -12745,25 +11741,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -12805,7 +11798,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -12833,15 +11825,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -12880,23 +11869,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Hunt",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 2},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 2},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -12909,24 +11895,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "might", amount: 1, sign: "+"},
 						{kind: "text", value: " and enter ready"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[
-											{kind: "text", value: "While you have "},
-											{kind: "xp", amount: 3, sign: "+"}
-										],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								}
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 3, sign: "+"}
+								],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
 						}
 					]
@@ -13013,25 +11996,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -13049,16 +12029,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -13095,13 +12072,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -13148,13 +12122,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -13173,13 +12144,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -13202,20 +12170,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -13257,25 +12222,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Shield",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -13285,15 +12244,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -13304,20 +12260,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -13328,23 +12281,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Hunt",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 2},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 2},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -13358,32 +12308,29 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " and "},
 						{kind: "keyword", name: "Deflect"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[
-											{kind: "text", value: "While you have "},
-											{kind: "xp", amount: 3, sign: "+"}
-										],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								},
-								{kind: "text", value: " Opponents must pay "},
-								{kind: "symbol", value: "A"},
-								{kind: "text", value: " to choose a "},
-								{kind: "keyword", name: "Deflect"},
-								{kind: "text", value: " unit with a spell or ability"},
-								{kind: "text", value: "."}
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 3, sign: "+"}
+								],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
-						}
+						},
+						{kind: "text", value: " Opponents must pay "},
+						{kind: "symbol", value: "A"},
+						{kind: "text", value: " to choose a "},
+						{kind: "keyword", name: "Deflect"},
+						{kind: "text", value: " unit with a spell or ability"},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -13417,14 +12364,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Shield",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -13479,17 +12423,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It must be assigned combat damage first"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It must be assigned combat damage first"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -13515,24 +12453,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
 					{kind: "text", value: "Your token units have "},
 					{kind: "keyword", name: "Tank"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "They must be assigned combat damage first"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "They must be assigned combat damage first"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -13543,25 +12474,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -13583,40 +12511,34 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -13634,47 +12556,38 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Quick-Draw",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "This has "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: "."},
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: " When you play it"}],
-								[
-									{
-										kind: "text",
-										value: " attach it to a unit you control"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{kind: "text", value: "This has "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: "."},
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: " When you play it"}],
+							[
+								{kind: "text", value: " attach it to a unit you control"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -13715,7 +12628,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -13743,13 +12655,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -13770,7 +12679,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -13796,23 +12704,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Hunt",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 2},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 2},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -13826,33 +12731,30 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " and "},
 						{kind: "keyword", name: "Ganking"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[
-											{kind: "text", value: "While you have "},
-											{kind: "xp", amount: 3, sign: "+"}
-										],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								},
-								{kind: "text", value: " A "},
-								{kind: "keyword", name: "Ganking"},
-								{
-									kind: "text",
-									value: " unit can move from battlefield to battlefield"
-								},
-								{kind: "text", value: "."}
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 3, sign: "+"}
+								],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
-						}
+						},
+						{kind: "text", value: " A "},
+						{kind: "keyword", name: "Ganking"},
+						{
+							kind: "text",
+							value: " unit can move from battlefield to battlefield"
+						},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -13870,7 +12772,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -13880,7 +12781,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -13897,14 +12797,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Shield",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -13913,16 +12810,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				effect: [
 					{kind: "text", value: "Buff me"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "I get a "},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I get a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -13940,39 +12834,33 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -14061,20 +12949,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -14119,17 +13004,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " "},
 						{kind: "symbol", value: 1},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
-							value: [
-								{
-									kind: "text",
-									value: "Abilities that add resources can't be reacted to"
-								},
-								{kind: "text", value: "."}
-							]
-						}
+							kind: "text",
+							value: "Abilities that add resources can't be reacted to"
+						},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -14142,20 +13024,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -14171,7 +13050,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -14187,16 +13065,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Give me a "},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff if I don't already have one"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Give me a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff if I don't already have one"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -14208,23 +13083,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Hunt",
 				param: 3,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 3},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 3},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -14245,16 +13117,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Give each a "},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff if it doesn't have one"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Give each a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff if it doesn't have one"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -14324,35 +13193,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -14387,28 +13247,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 1},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 1},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -14435,20 +13292,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -14458,25 +13312,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -14506,23 +13357,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -14549,13 +13392,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -14598,16 +13438,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -14666,13 +13503,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -14701,20 +13535,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -14739,28 +13570,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 								]
 							]
 						},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[{kind: "text", value: "When I die"}],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								},
-								{
-									kind: "text",
-									value: " I wasn't alone if there were other friendly units here"
-								},
-								{kind: "text", value: "."}
+								[{kind: "text", value: "When I die"}],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
-						}
+						},
+						{
+							kind: "text",
+							value: " I wasn't alone if there were other friendly units here"
+						},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -14773,14 +13601,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Assault",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -14804,18 +13629,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						value: " Use this ability only while I'm at a battlefield"
 					},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Opponents must pay "},
-							{kind: "symbol", value: "A"},
-							{kind: "text", value: " to choose a "},
-							{kind: "keyword", name: "Deflect"},
-							{kind: "text", value: " unit with a spell or ability"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose a "},
+					{kind: "keyword", name: "Deflect"},
+					{kind: "text", value: " unit with a spell or ability"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -14843,26 +13665,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I die"}],
-									[
-										{kind: "text", value: " get the effect"},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{kind: "text", value: " I'm Mighty while I have "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
+							[{kind: "text", value: "When I die"}],
+							[
+								{kind: "text", value: " get the effect"},
+								{kind: "text", value: "."}
+							]
 						]
-					}
+					},
+					{kind: "text", value: " I'm Mighty while I have "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -14892,7 +13711,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -14951,23 +13769,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							[{kind: "text", value: " When they hold"}],
 							[
 								{kind: "text", value: " return it to their hand "},
+								{kind: "text", value: "("},
 								{
-									kind: "reminder_text",
-									value: [
-										{
-											kind: "group",
-											value: [
-												{kind: "text", value: "("},
-												{
-													kind: "text",
-													value: "even if I'm no longer on the board"
-												},
-												{kind: "text", value: ")"}
-											]
-										},
-										{kind: "text", value: "."}
-									]
-								}
+									kind: "text",
+									value: "even if I'm no longer on the board"
+								},
+								{kind: "text", value: ")"},
+								{kind: "text", value: "."}
 							]
 						]
 					}
@@ -15026,30 +13834,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -15062,15 +13863,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Your Mechs have "},
 					{kind: "keyword", name: "Shield"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " while they're defenders"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while they're defenders"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -15084,15 +13882,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Your Equipment each give "},
 					{kind: "keyword", name: "Assault"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " while equipped unit is an attacker"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while equipped unit is an attacker"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -15103,13 +13898,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -15144,17 +13936,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "You win if only your units remain after combat"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "You win if only your units remain after combat"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -15211,17 +14000,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 								value: " Use only to play gear or use gear abilities"
 							},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -15252,7 +14038,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -15311,7 +14096,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -15343,7 +14127,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -15377,16 +14160,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -15457,7 +14237,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -15533,7 +14312,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -15574,15 +14352,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "A unit is Mighty while it has "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "A unit is Mighty while it has "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -15593,14 +14368,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Assault",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -15625,17 +14397,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Get the effect if you've played another card this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "Get the effect if you've played another card this turn"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -15699,17 +14468,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: "."},
 							{kind: "text", value: " Use only to play spells"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -15739,15 +14505,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "A unit is Mighty while it has "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "A unit is Mighty while it has "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -15807,22 +14570,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: 1},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."},
-									{
-										kind: "text",
-										value: " Get the effect if you've played a card this turn"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."},
+							{
+								kind: "text",
+								value: " Get the effect if you've played a card this turn"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -15880,23 +14640,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				effect: [
 					{kind: "text", value: "Buff a friendly unit"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -15948,23 +14705,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -15986,7 +14740,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -16047,17 +14800,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Ganking"},
 					{kind: "text", value: " this turn"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -16089,16 +14836,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -16173,7 +14917,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -16229,7 +14972,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "ability",
 				value: [{kind: "text", value: "I enter ready"}, {kind: "text", value: "."}]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -16257,16 +14999,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -16393,7 +15132,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -16479,25 +15217,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -16517,88 +15252,65 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			}
 		]
 	},
 	"sfd-003/221": {
-		verified: false,
+		verified: true,
 		description: "[Action] (Play on your turn or in showdowns.)\n[Repeat] [1] (You may pay the additional cost to repeat this spell's effect.)\nGive a unit [Assault 2]. (+2 [M] while it's an attacker.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 1}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -16606,15 +15318,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Give a unit "},
 					{kind: "keyword", name: "Assault", param: 2},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 2, sign: "+"},
-							{kind: "text", value: " while it's an attacker"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while it's an attacker"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -16626,16 +15335,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -16675,7 +15381,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"sfd-007/221": {
-		verified: false,
+		verified: true,
 		description: "When you play me, give a unit [Ganking] this turn. (It can move from battlefield to battlefield.)",
 		tree: [
 			{
@@ -16694,17 +15400,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -16716,35 +15416,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -16756,20 +15447,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -16798,25 +15486,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -16869,7 +15554,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"sfd-013/221": {
-		verified: false,
+		verified: true,
 		description: "You may pay [1][C] as an additional cost to play me.\nWhen you play me, if you paid the additional cost, deal 2 to a unit at a battlefield.",
 		tree: [
 			{
@@ -16884,7 +15569,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -16920,7 +15604,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"sfd-015/221": {
-		verified: false,
+		verified: true,
 		description: "Play me only to a battlefield you conquered this turn. (You can't play me anywhere else.)",
 		tree: [
 			{
@@ -16931,14 +15615,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						value: "Play me only to a battlefield you conquered this turn"
 					},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "You can't play me anywhere else"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "You can't play me anywhere else"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -16951,20 +15632,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -16975,27 +15653,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -17088,7 +15760,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"sfd-020/221": {
-		verified: false,
+		verified: true,
 		description: "When I win a combat, play a Gold gear token exhausted.\nWhen I attack or defend, you may pay [C]. If you do, give me +2 [M] this turn.",
 		tree: [
 			{
@@ -17107,7 +15779,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -17141,7 +15812,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"sfd-020a/221": {
-		verified: false,
+		verified: true,
 		description: "When I win a combat, play a Gold gear token exhausted.\nWhen I attack or defend, you may pay [C]. If you do, give me +2 [M] this turn.",
 		tree: [
 			{
@@ -17160,7 +15831,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -17205,21 +15875,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "might", amount: 3},
 					{kind: "text", value: " Mech unit tokens to your base"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I die"}],
-									[
-										{kind: "text", value: " get the effect"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "When I die"}],
+							[
+								{kind: "text", value: " get the effect"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -17232,47 +15899,38 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Quick-Draw",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "This has "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: "."},
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: " When you play it"}],
-								[
-									{
-										kind: "text",
-										value: " attach it to a unit you control"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{kind: "text", value: "This has "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: "."},
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: " When you play it"}],
+							[
+								{kind: "text", value: " attach it to a unit you control"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -17283,16 +15941,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 2}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -17324,13 +15979,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -17364,44 +16016,38 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									}
-								],
-								[
-									{
-										kind: "text",
-										value: " including to a battlefield you control"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								}
+							],
+							[
+								{
+									kind: "text",
+									value: " including to a battlefield you control"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Assault",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -17424,15 +16070,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Your Mechs each have "},
 					{kind: "keyword", name: "Assault"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " while we're attackers"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while we're attackers"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -17470,15 +16113,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Your Mechs each have "},
 					{kind: "keyword", name: "Assault"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " while we're attackers"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while we're attackers"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -17531,7 +16171,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -17557,14 +16196,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Assault",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -17592,14 +16228,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Assault",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -17627,35 +16260,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Assault",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -17676,35 +16298,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Assault",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -17726,28 +16337,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 1},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 1},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -17758,16 +16366,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -17808,20 +16413,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -17831,40 +16433,34 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -17921,28 +16517,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I die"}],
-									[
-										{kind: "text", value: " get the effect"},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{
-								kind: "text",
-								value: " I'm alone if there are no other friendly units here"
-							},
-							{kind: "text", value: "."}
+							[{kind: "text", value: "When I die"}],
+							[
+								{kind: "text", value: " get the effect"},
+								{kind: "text", value: "."}
+							]
 						]
-					}
+					},
+					{
+						kind: "text",
+						value: " I'm alone if there are no other friendly units here"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -17953,15 +16546,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -18015,45 +16605,33 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
 				value: [
 					{kind: "text", value: "Stun an attacking unit"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -18111,20 +16689,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -18134,27 +16709,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -18198,25 +16767,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -18250,7 +16816,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -18350,7 +16915,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -18361,7 +16925,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -18463,20 +17026,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -18502,31 +17062,28 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									}
-								],
-								[
-									{
-										kind: "text",
-										value: " including to a battlefield you control"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								}
+							],
+							[
+								{
+									kind: "text",
+									value: " including to a battlefield you control"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -18556,15 +17113,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -18572,27 +17126,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Each Equipment in your hand has "},
 					{kind: "keyword", name: "Quick-Draw"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It gains "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: "."},
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{kind: "text", value: "It gains "},
-							{kind: "keyword", name: "Reaction"},
-							{kind: "text", value: "."},
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: " When you play it"}],
-									[
-										{
-											kind: "text",
-											value: " attach it to a unit you control"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: " When you play it"}],
+							[
+								{kind: "text", value: " attach it to a unit you control"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -18605,15 +17153,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -18621,27 +17166,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Each Equipment in your hand has "},
 					{kind: "keyword", name: "Quick-Draw"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It gains "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: "."},
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{kind: "text", value: "It gains "},
-							{kind: "keyword", name: "Reaction"},
-							{kind: "text", value: "."},
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: " When you play it"}],
-									[
-										{
-											kind: "text",
-											value: " attach it to a unit you control"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: " When you play it"}],
+							[
+								{kind: "text", value: " attach it to a unit you control"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -18655,25 +17194,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Shield",
 				param: 5,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 5, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -18698,47 +17231,38 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Quick-Draw",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "This has "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: "."},
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: " When you play it"}],
-								[
-									{
-										kind: "text",
-										value: " attach it to a unit you control"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{kind: "text", value: "This has "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: "."},
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: " When you play it"}],
+							[
+								{kind: "text", value: " attach it to a unit you control"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -18748,15 +17272,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -18784,15 +17305,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -18881,28 +17399,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 1},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 1},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -18931,15 +17446,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -19039,47 +17551,38 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Quick-Draw",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "This has "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: "."},
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: " When you play it"}],
-								[
-									{
-										kind: "text",
-										value: " attach it to a unit you control"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{kind: "text", value: "This has "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: "."},
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: " When you play it"}],
+							[
+								{kind: "text", value: " attach it to a unit you control"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -19092,28 +17595,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Your Mechs have "},
 					{kind: "keyword", name: "Vision"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When you play us"}],
-									[
-										{
-											kind: "text",
-											value: " look at the top card of your Main Deck"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{kind: "text", value: " You may recycle it"},
-							{kind: "text", value: "."}
+							[{kind: "text", value: "When you play us"}],
+							[
+								{
+									kind: "text",
+									value: " look at the top card of your Main Deck"
+								},
+								{kind: "text", value: "."}
+							]
 						]
-					}
+					},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -19124,40 +17624,34 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -19182,7 +17676,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -19210,23 +17703,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -19267,27 +17752,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -19313,21 +17792,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: " and "},
 					{kind: "keyword", name: "Ganking"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Opponents must pay "},
-							{kind: "symbol", value: "A"},
-							{kind: "text", value: " to choose us with a spell or ability"},
-							{kind: "text", value: "."},
-							{
-								kind: "text",
-								value: " We can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose us with a spell or ability"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " We can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -19368,20 +17841,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -19461,7 +17931,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -19471,7 +17940,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -19489,30 +17957,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 4}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[
-									{
-										kind: "text",
-										value: "You may pay the additional cost to repeat this spell's effect"
-									}
-								],
-								[
-									{
-										kind: "text",
-										value: " and may make different choices"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[
+								{
+									kind: "text",
+									value: "You may pay the additional cost to repeat this spell's effect"
+								}
+							],
+							[
+								{kind: "text", value: " and may make different choices"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{kind: "text", value: "Choose one —"},
 			{
@@ -19525,7 +17987,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -19557,17 +18018,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Repeat"},
 					{kind: "text", value: " equal to its cost"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "You may pay the additional cost to repeat the spell's effect"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "You may pay the additional cost to repeat the spell's effect"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -19585,7 +18043,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -19614,28 +18071,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -19708,7 +18159,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -19716,7 +18166,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -19757,7 +18206,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -19765,7 +18213,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -19803,17 +18250,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "keyword", name: "Add"},
 							{kind: "text", value: " that much Energy"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -19856,14 +18300,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "You must still pay its Power cost"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "You must still pay its Power cost"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -19875,53 +18316,39 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Deflect",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}
-							]
-						},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}]
+					},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -19941,53 +18368,39 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Deflect",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}
-							]
-						},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}]
+					},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -20007,20 +18420,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -20030,25 +18440,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -20078,7 +18485,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -20141,7 +18547,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -20195,34 +18600,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Your Mechs have "},
 					{kind: "might", amount: 1, sign: "+"},
 					{kind: "text", value: " "},
+					{kind: "text", value: "("},
+					{kind: "text", value: "including me"},
+					{kind: "text", value: ")"},
+					{kind: "text", value: "."}
+				]
+			},
+			{
+				kind: "ability",
+				value: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "group",
-								value: [
-									{kind: "text", value: "("},
-									{kind: "text", value: "including me"},
-									{kind: "text", value: ")"}
-								]
-							},
-							{kind: "text", value: "."},
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I hold"}],
-									[
-										{kind: "text", value: " play a "},
-										{kind: "might", amount: 3},
-										{
-											kind: "text",
-											value: " Mech unit token to your base"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "When I hold"}],
+							[
+								{kind: "text", value: " play a "},
+								{kind: "might", amount: 3},
+								{kind: "text", value: " Mech unit token to your base"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -20238,34 +18635,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Your Mechs have "},
 					{kind: "might", amount: 1, sign: "+"},
 					{kind: "text", value: " "},
+					{kind: "text", value: "("},
+					{kind: "text", value: "including me"},
+					{kind: "text", value: ")"},
+					{kind: "text", value: "."}
+				]
+			},
+			{
+				kind: "ability",
+				value: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "group",
-								value: [
-									{kind: "text", value: "("},
-									{kind: "text", value: "including me"},
-									{kind: "text", value: ")"}
-								]
-							},
-							{kind: "text", value: "."},
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I hold"}],
-									[
-										{kind: "text", value: " play a "},
-										{kind: "might", amount: 3},
-										{
-											kind: "text",
-											value: " Mech unit token to your base"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "When I hold"}],
+							[
+								{kind: "text", value: " play a "},
+								{kind: "might", amount: 3},
+								{kind: "text", value: " Mech unit token to your base"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -20279,28 +18668,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 1},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 1},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -20335,14 +18721,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Use only if unattached"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Use only if unattached"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -20366,26 +18749,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "To buff a unit"}],
-									[
-										{kind: "text", value: " give it a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{
-											kind: "text",
-											value: " buff if it doesn't already have one"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "To buff a unit"}],
+							[
+								{kind: "text", value: " give it a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{
+									kind: "text",
+									value: " buff if it doesn't already have one"
+								},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -20398,35 +18778,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -20464,20 +18835,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -20486,18 +18854,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		tree: [
 			{
 				kind: "ability",
-				value: [
-					{kind: "text", value: "Ganking "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "I can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+				value: [{kind: "text", value: "Ganking "}],
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -20508,13 +18868,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -20539,7 +18896,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -20555,16 +18911,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Give me a "},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff if I don't already have one"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Give me a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff if I don't already have one"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -20575,35 +18928,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -20659,16 +19003,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Give each a "},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff if it doesn't have one"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Give each a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff if it doesn't have one"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -20696,20 +19037,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -20719,23 +19057,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -20746,15 +19076,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Mighty"},
 					{kind: "text", value: " units"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "A unit is Mighty while it has "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "A unit is Mighty while it has "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -20765,27 +19092,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Temporary",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[
-									{
-										kind: "text",
-										value: "Kill this at the start of its controller's Beginning Phase"
-									}
-								],
-								[
-									{kind: "text", value: " before scoring"},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[
+								{
+									kind: "text",
+									value: "Kill this at the start of its controller's Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -20793,19 +19117,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Friendly units have "},
 					{kind: "keyword", name: "Deflect"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Opponents must pay "},
-							{kind: "symbol", value: "A"},
-							{
-								kind: "text",
-								value: " to choose them with a spell or ability"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose them with a spell or ability"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -20831,25 +19149,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -20860,15 +19175,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Mighty"},
 					{kind: "text", value: " units"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "A unit is Mighty while it has "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "A unit is Mighty while it has "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -20899,20 +19211,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -20932,7 +19241,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -21023,27 +19331,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -21075,15 +19377,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -21115,35 +19414,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -21174,35 +19464,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -21233,28 +19514,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 3}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -21280,20 +19555,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -21303,35 +19575,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -21377,17 +19640,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " that much "},
 							{kind: "symbol", value: "A"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -21401,28 +19661,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 1},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 1},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -21432,35 +19689,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -21494,35 +19742,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -21557,20 +19796,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Deflect",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}
-							]
-						},
-						{kind: "text", value: " to choose me with a spell or Ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}]
+					},
+					{kind: "text", value: " to choose me with a spell or Ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -21608,20 +19842,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Deflect",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}
-							]
-						},
-						{kind: "text", value: " to choose me with a spell or Ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}]
+					},
+					{kind: "text", value: " to choose me with a spell or Ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -21684,28 +19913,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -21740,7 +19963,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -21767,20 +19989,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -21837,35 +20056,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -21900,16 +20110,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -21950,23 +20157,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -21975,18 +20174,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Assault"},
 					{kind: "text", value: " equal to the number of enemy units here"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
 					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{
-								kind: "text",
-								value: " while I'm an attacker for each instance of Assault"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: " while I'm an attacker for each instance of Assault"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -22022,20 +20218,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -22046,20 +20239,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -22069,13 +20259,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -22092,40 +20279,34 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -22165,18 +20346,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		tree: [
 			{
 				kind: "ability",
-				value: [
-					{kind: "text", value: "Hidden "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Hide now for "},
-							{kind: "symbol", value: "A"},
-							{kind: "text", value: " to react with later for "},
-							{kind: "symbol", value: 0},
-							{kind: "text", value: "."}
-						]
-					}
+				value: [{kind: "text", value: "Hidden "}],
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -22208,16 +20384,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -22238,25 +20411,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -22286,14 +20455,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					},
 					{kind: "text", value: " Recycle that spell after you play it"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "You must still pay its Power cost"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "You must still pay its Power cost"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -22358,23 +20524,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -22403,17 +20561,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "I can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -22424,23 +20576,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -22469,17 +20613,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "I can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -22514,27 +20652,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -22610,15 +20742,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -22643,7 +20772,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -22672,15 +20800,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -22705,7 +20830,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -22752,7 +20876,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -22790,7 +20913,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -22851,40 +20973,34 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -22928,20 +21044,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -22951,16 +21064,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -22987,21 +21097,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				righthand: [
 					{kind: "text", value: "Play a Gold gear token exhausted"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I die"}],
-									[
-										{kind: "text", value: " get the effect"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "When I die"}],
+							[
+								{kind: "text", value: " get the effect"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -23015,14 +21122,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Assault",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -23107,7 +21211,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -23141,23 +21244,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						kind: "keyword",
 						name: "Equip",
 						cost: [{kind: "symbol", value: "C"}],
-						reminderText: {
-							kind: "reminder_text",
-							value: [
-								{
-									kind: "ability",
-									activated: true,
-									cost: [{kind: "symbol", value: "C"}],
-									effect: [
-										{
-											kind: "text",
-											value: "Attach this to a unit you control"
-										},
-										{kind: "text", value: "."}
-									]
-								}
-							]
-						}
+						reminderText: [
+							{
+								kind: "ability",
+								activated: true,
+								cost: [{kind: "symbol", value: "C"}],
+								effect: [
+									{
+										kind: "text",
+										value: "Attach this to a unit you control"
+									},
+									{kind: "text", value: "."}
+								]
+							}
+						]
 					}
 				]
 			}
@@ -23169,13 +21269,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -23219,25 +21316,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -23263,13 +21357,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -23283,7 +21374,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -23321,21 +21411,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I die"}],
-									[
-										{kind: "text", value: " get the effect"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "When I die"}],
+							[
+								{kind: "text", value: " get the effect"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -23348,13 +21435,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -23375,23 +21459,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -23429,26 +21510,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When I die"}],
-									[
-										{kind: "text", value: " get the effect"},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{kind: "text", value: " I'm Mighty while I have "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
+							[{kind: "text", value: "When I die"}],
+							[
+								{kind: "text", value: " get the effect"},
+								{kind: "text", value: "."}
+							]
 						]
-					}
+					},
+					{kind: "text", value: " I'm Mighty while I have "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -23465,17 +21543,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "might", amount: 1},
 					{kind: "text", value: " Recruit unit tokens"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "You may play them to different locations"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "You may play them to different locations"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -23615,20 +21687,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -23642,7 +21711,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -23665,16 +21733,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -23724,7 +21789,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -23752,13 +21816,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -23778,23 +21839,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -23823,23 +21876,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -23907,23 +21952,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -23967,15 +22004,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "A unit is Mighty while it has "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "A unit is Mighty while it has "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -24002,15 +22036,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "A unit is Mighty while it has "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "A unit is Mighty while it has "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -24024,15 +22055,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Your Mechs have "},
 					{kind: "keyword", name: "Shield"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " while they're defenders"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while they're defenders"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -24043,40 +22071,34 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -24098,15 +22120,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Your Equipment each give "},
 					{kind: "keyword", name: "Assault"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " while equipped unit is an attacker"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while equipped unit is an attacker"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -24117,13 +22136,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -24170,17 +22186,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "You win if only your units remain after combat"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "You win if only your units remain after combat"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -24191,73 +22204,61 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Quick-Draw",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "This has "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: "."},
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: " When you play it"}],
-								[
-									{
-										kind: "text",
-										value: " attach it to a unit you control"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{kind: "text", value: "This has "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: "."},
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: " When you play it"}],
+							[
+								{kind: "text", value: " attach it to a unit you control"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Temporary",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "If this is unattached"}],
-								[
-									{
-										kind: "text",
-										value: " kill it at the start of its controller's Beginning Phase"
-									}
-								],
-								[
-									{kind: "text", value: " before scoring"},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "If this is unattached"}],
+							[
+								{
+									kind: "text",
+									value: " kill it at the start of its controller's Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -24341,17 +22342,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 								value: " Use only to play gear or use gear abilities"
 							},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -24364,34 +22362,28 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Unique",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Your deck can have only "},
-						{kind: "text", value: "1"},
-						{kind: "text", value: " card with this name"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Your deck can have only "},
+					{kind: "text", value: "1"},
+					{kind: "text", value: " card with this name"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -24401,34 +22393,28 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Unique",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Your deck can have only "},
-						{kind: "text", value: "1"},
-						{kind: "text", value: " card with this name"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Your deck can have only "},
+					{kind: "text", value: "1"},
+					{kind: "text", value: " card with this name"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -24438,34 +22424,28 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Unique",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Your deck can have only "},
-						{kind: "text", value: "1"},
-						{kind: "text", value: " card with this name"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Your deck can have only "},
+					{kind: "text", value: "1"},
+					{kind: "text", value: " card with this name"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -24509,7 +22489,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -24530,25 +22509,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -24599,7 +22575,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -24626,25 +22601,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -24670,7 +22642,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -24750,13 +22721,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -24805,7 +22773,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -24837,16 +22804,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -24858,26 +22822,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."},
 					{kind: "text", value: " Ready it"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Start a combat if other enemies are there"},
+					{kind: "text", value: "."},
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "text",
-								value: "Start a combat if other enemies are there"
-							},
-							{kind: "text", value: "."},
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: " Otherwise"}],
-									[
-										{kind: "text", value: " conquer"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: " Otherwise"}],
+							[
+								{kind: "text", value: " conquer"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -24890,16 +22848,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						value: "Lose control of that unit and recall it at end of turn"
 					},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -24926,7 +22881,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -24978,15 +22932,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "A unit is Mighty while it has "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "A unit is Mighty while it has "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -24997,25 +22948,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -25375,15 +23323,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "A unit is Mighty while it has "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "A unit is Mighty while it has "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -25486,17 +23431,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: "C"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -25510,14 +23452,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Assault",
 				param: 3,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 3, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 3, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -25540,7 +23479,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -25568,14 +23506,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Assault",
 				param: 3,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 3, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 3, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -25598,7 +23533,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -25645,7 +23579,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -25656,7 +23589,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -25693,7 +23625,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -25704,7 +23635,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -25721,15 +23651,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -25757,15 +23684,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -25804,17 +23728,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: "C"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -25888,7 +23809,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -25924,7 +23844,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -25964,17 +23883,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: "C"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -25987,16 +23903,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -26046,16 +23959,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -26116,17 +24026,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: "C"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -26155,23 +24062,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If I don't have a buff"}],
-									[
-										{kind: "text", value: " I get a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If I don't have a buff"}],
+							[
+								{kind: "text", value: " I get a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -26211,23 +24115,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If I don't have a buff"}],
-									[
-										{kind: "text", value: " I get a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "If I don't have a buff"}],
+							[
+								{kind: "text", value: " I get a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -26251,35 +24152,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -26313,35 +24205,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -26386,17 +24269,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: "C"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -26409,16 +24289,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -26446,16 +24320,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -26497,17 +24365,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						]
 					},
 					{kind: "text", value: " "},
+					{kind: "text", value: "("},
 					{
-						kind: "group",
-						value: [
-							{kind: "text", value: "("},
-							{
-								kind: "text",
-								value: "Get the effect if you've played another card this turn"
-							},
-							{kind: "text", value: ")"}
-						]
+						kind: "text",
+						value: "Get the effect if you've played another card this turn"
 					},
+					{kind: "text", value: ")"}
+				]
+			},
+			{
+				kind: "ability",
+				value: [
 					{kind: "text", value: "Other friendly units have "},
 					{kind: "might", amount: 1, sign: "+"},
 					{kind: "text", value: " here"},
@@ -26536,17 +24404,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						]
 					},
 					{kind: "text", value: " "},
+					{kind: "text", value: "("},
 					{
-						kind: "group",
-						value: [
-							{kind: "text", value: "("},
-							{
-								kind: "text",
-								value: "Get the effect if you've played another card this turn"
-							},
-							{kind: "text", value: ")"}
-						]
+						kind: "text",
+						value: "Get the effect if you've played another card this turn"
 					},
+					{kind: "text", value: ")"}
+				]
+			},
+			{
+				kind: "ability",
+				value: [
 					{kind: "text", value: "Other friendly units have "},
 					{kind: "might", amount: 1, sign: "+"},
 					{kind: "text", value: " here"},
@@ -26561,27 +24429,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Vision",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{
-										kind: "text",
-										value: " look at the top card of your Main Deck"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{
+									kind: "text",
+									value: " look at the top card of your Main Deck"
+								},
+								{kind: "text", value: "."}
 							]
-						},
-						{kind: "text", value: " You may recycle it"},
-						{kind: "text", value: "."}
-					]
-				}
+						]
+					},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -26602,27 +24467,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{kind: "text", value: " Runes aren't cards"},
-							{kind: "text", value: "."}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
-					}
+					},
+					{kind: "text", value: " Runes aren't cards"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -26633,27 +24495,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Vision",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{
-										kind: "text",
-										value: " look at the top card of your Main Deck"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{
+									kind: "text",
+									value: " look at the top card of your Main Deck"
+								},
+								{kind: "text", value: "."}
 							]
-						},
-						{kind: "text", value: " You may recycle it"},
-						{kind: "text", value: "."}
-					]
-				}
+						]
+					},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -26674,27 +24533,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "If it doesn't have a buff"}],
-									[
-										{kind: "text", value: " it gets a "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " buff"},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{kind: "text", value: " Runes aren't cards"},
-							{kind: "text", value: "."}
+							[{kind: "text", value: "If it doesn't have a buff"}],
+							[
+								{kind: "text", value: " it gets a "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " buff"},
+								{kind: "text", value: "."}
+							]
 						]
-					}
+					},
+					{kind: "text", value: " Runes aren't cards"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -26716,17 +24572,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: "C"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -26743,7 +24596,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -26766,16 +24618,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -26790,7 +24639,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -26813,16 +24661,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -26836,15 +24681,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Your Mechs have "},
 					{kind: "keyword", name: "Shield"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " while they're defenders"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while they're defenders"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -26858,15 +24700,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Your Equipment each give "},
 					{kind: "keyword", name: "Assault"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " while equipped unit is an attacker"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while equipped unit is an attacker"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -26889,17 +24728,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "You win if only your units remain after combat"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "You win if only your units remain after combat"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -26965,17 +24801,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 								value: " Use only to play gear or use gear abilities"
 							},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -27006,7 +24839,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -27042,7 +24874,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -27072,28 +24903,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Sand Soldiers you play have "},
 					{kind: "keyword", name: "Weaponmaster"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "When they're played"}],
-									[
-										{kind: "text", value: " you may "},
-										{kind: "keyword", name: "Equip"},
-										{
-											kind: "text",
-											value: " one of your Equipment to them for "
-										},
-										{kind: "symbol", value: "A"},
-										{kind: "text", value: " less"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "When they're played"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{
+									kind: "text",
+									value: " one of your Equipment to them for "
+								},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -27174,7 +25002,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -27222,7 +25049,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -27263,15 +25089,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "A unit is Mighty while it has "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "A unit is Mighty while it has "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -27302,17 +25125,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: " "},
 							{kind: "symbol", value: "A"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
-								value: [
-									{
-										kind: "text",
-										value: "Abilities that add resources can't be reacted to"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+								kind: "text",
+								value: "Abilities that add resources can't be reacted to"
+							},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -27326,7 +25146,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "ability",
 				value: [{kind: "text", value: "I enter ready"}, {kind: "text", value: "."}]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -27346,28 +25165,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Assault",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -27377,16 +25190,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -27443,16 +25253,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -27483,36 +25287,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Assault",
 				param: 4,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 4, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 4, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -27522,13 +25315,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -27558,14 +25348,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Assault",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -27592,16 +25379,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -27615,13 +25399,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -27632,20 +25413,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Ganking"},
 					{kind: "text", value: " this turn"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 2, sign: "+"},
-							{kind: "text", value: " while it's an attacker"},
-							{kind: "text", value: "."},
-							{
-								kind: "text",
-								value: " It can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while it's an attacker"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " It can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -27683,15 +25458,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -27709,15 +25481,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " while they're attackers"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while they're attackers"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -27728,39 +25497,33 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -27782,13 +25545,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -27847,23 +25607,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Hunt",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 2},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 2},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -27876,24 +25633,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "might", amount: 1, sign: "+"},
 						{kind: "text", value: " and enter ready"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[
-											{kind: "text", value: "While you have "},
-											{kind: "xp", amount: 3, sign: "+"}
-										],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								}
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 3, sign: "+"}
+								],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
 						}
 					]
@@ -27911,17 +25665,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				righthand: [
 					{kind: "text", value: "Discard "},
 					{kind: "text", value: "1"},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "You may pay the additional cost to repeat this spell's effect"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -27931,15 +25682,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Assault", param: 4},
 					{kind: "text", value: " this turn"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 4, sign: "+"},
-							{kind: "text", value: " while it's an attacker"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 4, sign: "+"},
+					{kind: "text", value: " while it's an attacker"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -27969,43 +25717,38 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "They have \""},
 					{
-						kind: "group",
-						value: [
-							{kind: "text", value: "("},
-							{kind: "text", value: "They have \""},
-							{
-								kind: "keyword",
-								name: "Reaction",
-								associated: {
-									kind: "ability",
-									activated: true,
-									cost: [
-										{
-											kind: "list",
-											separator: ",",
-											value: [
-												[{kind: "text", value: " Kill this"}],
-												[
-													{kind: "text", value: " "},
-													{kind: "symbol", value: "E"}
-												]
-											]
-										}
-									],
-									effect: [
-										{kind: "keyword", name: "Add"},
-										{kind: "text", value: " "},
-										{kind: "symbol", value: "A"},
-										{kind: "text", value: "."}
+						kind: "keyword",
+						name: "Reaction",
+						associated: {
+							kind: "ability",
+							activated: true,
+							cost: [
+								{
+									kind: "list",
+									separator: ",",
+									value: [
+										[{kind: "text", value: " Kill this"}],
+										[
+											{kind: "text", value: " "},
+											{kind: "symbol", value: "E"}
+										]
 									]
 								}
-							},
-							{kind: "text", value: "\""},
-							{kind: "text", value: ")"}
-						]
-					}
+							],
+							effect: [
+								{kind: "keyword", name: "Add"},
+								{kind: "text", value: " "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: "."}
+							]
+						}
+					},
+					{kind: "text", value: "\""}
 				]
 			}
 		]
@@ -28017,28 +25760,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 1},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 1},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -28084,15 +25824,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -28121,29 +25858,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -28168,17 +25896,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Abilities that add resources can't be reacted to"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "Abilities that add resources can't be reacted to"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -28234,7 +25959,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -28266,63 +25990,43 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Assault",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -28352,17 +26056,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
-							value: [
-								{
-									kind: "text",
-									value: "Get the effect if you've played another card this turn"
-								},
-								{kind: "text", value: "."}
-							]
-						}
+							kind: "text",
+							value: "Get the effect if you've played another card this turn"
+						},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -28427,30 +26128,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -28461,7 +26153,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -28497,7 +26188,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -28525,23 +26215,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -28553,7 +26235,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -28570,16 +26251,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Give it a "},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff if it doesn't have one"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Give it a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff if it doesn't have one"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -28598,7 +26276,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -28625,15 +26302,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -28677,25 +26351,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -28706,7 +26377,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Level",
@@ -28718,24 +26388,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "might", amount: 3, sign: "+"},
 						{kind: "text", value: " this turn instead"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[
-											{kind: "text", value: "While you have "},
-											{kind: "xp", amount: 6, sign: "+"}
-										],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								}
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 6, sign: "+"}
+								],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
 						}
 					]
@@ -28750,16 +26417,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -28800,16 +26464,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Opponents must pay "},
-							{kind: "symbol", value: "A"},
-							{kind: "text", value: " to choose it with a spell or ability"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose it with a spell or ability"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -28820,23 +26481,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hunt",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 1},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 1},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -28892,25 +26550,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Shield",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -28950,7 +26602,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Level",
@@ -28962,31 +26613,28 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "keyword", name: "Stun"},
 						{kind: "text", value: " an enemy unit"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[
-											{kind: "text", value: "While you have "},
-											{kind: "xp", amount: 6, sign: "+"}
-										],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								},
-								{
-									kind: "text",
-									value: " A stunned unit doesn't deal combat damage this turn"
-								},
-								{kind: "text", value: "."}
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 6, sign: "+"}
+								],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
-						}
+						},
+						{
+							kind: "text",
+							value: " A stunned unit doesn't deal combat damage this turn"
+						},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -28999,20 +26647,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -29022,23 +26667,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hunt",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 1},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 1},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -29059,24 +26701,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 								]
 							]
 						},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[
-											{kind: "text", value: "While you have "},
-											{kind: "xp", amount: 6, sign: "+"}
-										],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								}
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 6, sign: "+"}
+								],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
 						}
 					]
@@ -29090,15 +26729,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -29125,27 +26761,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -29153,17 +26783,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Stun"},
 					{kind: "text", value: " a unit"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -29191,13 +26815,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Backline",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage last"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage last"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -29215,16 +26836,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Give each a "},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff if it doesn't have one"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Give each a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff if it doesn't have one"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -29242,7 +26860,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -29252,19 +26869,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: " Bird unit tokens with "},
 					{kind: "keyword", name: "Deflect"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Opponents must pay "},
-							{kind: "symbol", value: "A"},
-							{
-								kind: "text",
-								value: " to choose them with a spell or ability"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose them with a spell or ability"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -29305,25 +26916,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "infix_group",
@@ -29363,23 +26971,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Hunt",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 2},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 2},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -29393,32 +26998,29 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " and "},
 						{kind: "keyword", name: "Deflect"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[
-											{kind: "text", value: "While you have "},
-											{kind: "xp", amount: 3, sign: "+"}
-										],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								},
-								{kind: "text", value: " Opponents must pay "},
-								{kind: "symbol", value: "A"},
-								{kind: "text", value: " to choose a "},
-								{kind: "keyword", name: "Deflect"},
-								{kind: "text", value: " unit with a spell or ability"},
-								{kind: "text", value: "."}
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 3, sign: "+"}
+								],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
-						}
+						},
+						{kind: "text", value: " Opponents must pay "},
+						{kind: "symbol", value: "A"},
+						{kind: "text", value: " to choose a "},
+						{kind: "keyword", name: "Deflect"},
+						{kind: "text", value: " unit with a spell or ability"},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -29430,14 +27032,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Shield",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -29457,26 +27056,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{
-											kind: "text",
-											value: "Kill it at the start of its controller's next Beginning Phase"
-										}
-									],
-									[
-										{kind: "text", value: " before scoring"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{
+									kind: "text",
+									value: "Kill it at the start of its controller's next Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -29493,85 +27089,73 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
-				kind: "ability",
-				value: [
-					{
-						kind: "keyword",
-						name: "Reaction",
-						associated: {
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "text", value: " "}, {kind: "symbol", value: "E"}],
-							effect: [
-								{kind: "keyword", name: "Add"},
-								{kind: "text", value: " "},
-								{kind: "symbol", value: "A"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " "},
-								{
-									kind: "reminder_text",
-									value: [
-										{
-											kind: "text",
-											value: "Abilities that add resources can't be reacted to"
-										},
-										{kind: "text", value: "."}
-									]
-								}
-							]
-						}
-					},
-					{
-						kind: "keyword",
-						name: "Level",
-						param: 6,
-						associated: {
-							kind: "ability",
-							value: [
-								{kind: "text", value: " "},
-								{
-									kind: "keyword",
-									name: "Reaction",
-									isNested: true,
-									associated: {
-										kind: "ability",
-										activated: true,
-										cost: [
-											{kind: "text", value: " "},
-											{kind: "symbol", value: "E"}
-										],
-										effect: [
-											{kind: "keyword", name: "Add"},
-											{kind: "text", value: " "},
-											{
-												kind: "symbol_run",
-												value: [
-													{kind: "symbol", value: 1},
-													{kind: "symbol", value: "A"}
-												]
-											},
-											{kind: "text", value: "."},
-											{kind: "text", value: " "},
-											{
-												kind: "reminder_text",
-												value: [
-													{
-														kind: "text",
-														value: "Use this ability only while you have "
-													},
-													{kind: "xp", amount: 6, sign: "+"},
-													{kind: "text", value: "."}
-												]
-											}
+				kind: "keyword",
+				name: "Reaction",
+				associated: {
+					kind: "ability",
+					activated: true,
+					cost: [{kind: "text", value: " "}, {kind: "symbol", value: "E"}],
+					effect: [
+						{kind: "keyword", name: "Add"},
+						{kind: "text", value: " "},
+						{kind: "symbol", value: "A"},
+						{kind: "text", value: "."},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
+						{
+							kind: "text",
+							value: "Abilities that add resources can't be reacted to"
+						},
+						{kind: "text", value: "."}
+					]
+				}
+			},
+			{
+				kind: "keyword",
+				name: "Level",
+				param: 6,
+				associated: {
+					kind: "ability",
+					value: [
+						{kind: "text", value: " "},
+						{
+							kind: "keyword",
+							name: "Reaction",
+							isNested: true,
+							associated: {
+								kind: "ability",
+								activated: true,
+								cost: [
+									{kind: "text", value: " "},
+									{kind: "symbol", value: "E"}
+								],
+								effect: [
+									{kind: "keyword", name: "Add"},
+									{kind: "text", value: " "},
+									{
+										kind: "symbol_run",
+										value: [
+											{kind: "symbol", value: 1},
+											{kind: "symbol", value: "A"}
 										]
-									}
-								}
-							]
+									},
+									{kind: "text", value: "."},
+									{kind: "text", value: " "}
+								],
+								reminderText: [
+									{
+										kind: "text",
+										value: "Use this ability only while you have "
+									},
+									{kind: "xp", amount: 6, sign: "+"},
+									{kind: "text", value: "."}
+								]
+							}
 						}
-					}
-				]
+					]
+				}
 			}
 		]
 	},
@@ -29648,16 +27232,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Buff"},
 					{kind: "text", value: " a friendly unit"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Give it a "},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff if it doesn't have one"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Give it a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff if it doesn't have one"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -29721,7 +27302,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -29739,17 +27319,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -29782,12 +27356,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		description: "(Units with 0 [M] can conquer and hold.)\nWhen you play me, draw 1.\n[Deathknell][>] Choose an opponent. They reveal their hand. You can look at their facedown cards this turn. Gain 1 XP. (When I die, get the effects.)",
 		tree: [
 			{
-				kind: "reminder_text",
-				value: [
+				kind: "ability",
+				value: [],
+				reminderText: [
 					{kind: "text", value: "Units with "},
-					{kind: "text", value: "0"},
-					{kind: "text", value: " "},
-					{kind: "symbol", value: "M"},
+					{kind: "might", amount: 0},
 					{kind: "text", value: " can conquer and hold"},
 					{kind: "text", value: "."}
 				]
@@ -29809,7 +27382,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Deathknell",
@@ -29828,21 +27400,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " Gain "},
 						{kind: "xp", amount: 1},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[{kind: "text", value: "When I die"}],
-										[
-											{kind: "text", value: " get the effects"},
-											{kind: "text", value: "."}
-										]
-									]
-								}
+								[{kind: "text", value: "When I die"}],
+								[
+									{kind: "text", value: " get the effects"},
+									{kind: "text", value: "."}
+								]
 							]
 						}
 					]
@@ -29873,25 +27442,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Shield",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -29972,17 +27535,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It must be assigned combat damage first"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It must be assigned combat damage first"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -29993,13 +27550,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -30034,24 +27588,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
 					{kind: "text", value: "Your token units have "},
 					{kind: "keyword", name: "Tank"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "They must be assigned combat damage first"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "They must be assigned combat damage first"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -30077,7 +27624,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -30092,76 +27638,61 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		description: "[Level 3][>] I cost [2][C] less. (While you have 3+ XP, get the effect.)\n[Level 6][>] I cost [4][C][C] less instead.\n[Level 11][>] I cost [6][C][C][C] less instead.\n[Level 16][>] I can't be chosen by enemy spells and abilities.",
 		tree: [
 			{
-				kind: "ability",
-				value: [
-					{
-						kind: "keyword",
-						name: "Level",
-						param: 3,
-						associated: {
-							kind: "ability",
+				kind: "keyword",
+				name: "Level",
+				param: 3,
+				associated: {
+					kind: "ability",
+					value: [
+						{kind: "text", value: " I cost "},
+						{
+							kind: "symbol_run",
 							value: [
-								{kind: "text", value: " I cost "},
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 2},
-										{kind: "symbol", value: "C"}
-									]
-								},
-								{kind: "text", value: " less"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " "},
-								{
-									kind: "reminder_text",
-									value: [
-										{
-											kind: "list",
-											separator: ",",
-											value: [
-												[
-													{
-														kind: "text",
-														value: "While you have "
-													},
-													{kind: "xp", amount: 3, sign: "+"}
-												],
-												[
-													{
-														kind: "text",
-														value: " get the effect"
-													},
-													{kind: "text", value: "."}
-												]
-											]
-										}
-									]
-								}
+								{kind: "symbol", value: 2}, {kind: "symbol", value: "C"}
+							]
+						},
+						{kind: "text", value: " less"},
+						{kind: "text", value: "."},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
+						{
+							kind: "list",
+							separator: ",",
+							value: [
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 3, sign: "+"}
+								],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
 						}
-					},
-					{
-						kind: "keyword",
-						name: "Level",
-						param: 6,
-						associated: {
-							kind: "ability",
+					]
+				}
+			},
+			{
+				kind: "keyword",
+				name: "Level",
+				param: 6,
+				associated: {
+					kind: "ability",
+					value: [
+						{kind: "text", value: " I cost "},
+						{
+							kind: "symbol_run",
 							value: [
-								{kind: "text", value: " I cost "},
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 4},
-										{kind: "symbol", value: "C"},
-										{kind: "symbol", value: "C"}
-									]
-								},
-								{kind: "text", value: " less instead"},
-								{kind: "text", value: "."}
+								{kind: "symbol", value: 4},
+								{kind: "symbol", value: "C"},
+								{kind: "symbol", value: "C"}
 							]
-						}
-					}
-				]
+						},
+						{kind: "text", value: " less instead"},
+						{kind: "text", value: "."}
+					]
+				}
 			},
 			{
 				kind: "keyword",
@@ -30290,15 +27821,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -30310,7 +27838,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -30344,7 +27871,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -30370,40 +27896,34 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -30427,31 +27947,28 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " "},
 						{kind: "keyword", name: "Predict", param: 2},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[{kind: "text", value: "When I die"}],
-										[
-											{
-												kind: "text",
-												value: " look at the top two cards of your Main Deck"
-											},
-											{kind: "text", value: "."}
-										]
-									]
-								},
-								{
-									kind: "text",
-									value: " Recycle any of them and put the rest back in any order"
-								},
-								{kind: "text", value: "."}
+								[{kind: "text", value: "When I die"}],
+								[
+									{
+										kind: "text",
+										value: " look at the top two cards of your Main Deck"
+									},
+									{kind: "text", value: "."}
+								]
 							]
-						}
+						},
+						{
+							kind: "text",
+							value: " Recycle any of them and put the rest back in any order"
+						},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -30463,25 +27980,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -30492,25 +28006,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
 					{kind: "keyword", name: "Predict"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Look at the top card of your Main Deck"
-							},
-							{kind: "text", value: "."},
-							{kind: "text", value: " You may recycle it"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Look at the top card of your Main Deck"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -30575,25 +28082,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -30619,21 +28123,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: "4"},
 						{kind: "text", value: " to an enemy unit"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[{kind: "text", value: "When I die"}],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								}
+								[{kind: "text", value: "When I die"}],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
 						}
 					]
@@ -30675,26 +28176,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: " Sprite unit tokens with "},
 					{kind: "keyword", name: "Temporary"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{
-											kind: "text",
-											value: "Kill each at the start of its controller's Beginning Phase"
-										}
-									],
-									[
-										{kind: "text", value: " before scoring"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{
+									kind: "text",
+									value: "Kill each at the start of its controller's Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -30710,26 +28208,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "Give a gear "},
 					{kind: "keyword", name: "Temporary"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{
-											kind: "text",
-											value: "Kill it at the start of its controller's Beginning Phase"
-										}
-									],
-									[
-										{kind: "text", value: " before scoring"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{
+									kind: "text",
+									value: "Kill it at the start of its controller's Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -30742,15 +28237,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -30768,15 +28260,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " while they're defenders"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while they're defenders"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -30787,13 +28276,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -30831,43 +28317,38 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It has \""},
 					{
-						kind: "group",
-						value: [
-							{kind: "text", value: "("},
-							{kind: "text", value: "It has \""},
-							{
-								kind: "keyword",
-								name: "Reaction",
-								associated: {
-									kind: "ability",
-									activated: true,
-									cost: [
-										{
-											kind: "list",
-											separator: ",",
-											value: [
-												[{kind: "text", value: " Kill this"}],
-												[
-													{kind: "text", value: " "},
-													{kind: "symbol", value: "E"}
-												]
-											]
-										}
-									],
-									effect: [
-										{kind: "keyword", name: "Add"},
-										{kind: "text", value: " "},
-										{kind: "symbol", value: "A"},
-										{kind: "text", value: "."}
+						kind: "keyword",
+						name: "Reaction",
+						associated: {
+							kind: "ability",
+							activated: true,
+							cost: [
+								{
+									kind: "list",
+									separator: ",",
+									value: [
+										[{kind: "text", value: " Kill this"}],
+										[
+											{kind: "text", value: " "},
+											{kind: "symbol", value: "E"}
+										]
 									]
 								}
-							},
-							{kind: "text", value: "\""},
-							{kind: "text", value: ")"}
-						]
-					}
+							],
+							effect: [
+								{kind: "keyword", name: "Add"},
+								{kind: "text", value: " "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: "."}
+							]
+						}
+					},
+					{kind: "text", value: "\""}
 				]
 			}
 		]
@@ -30907,23 +28388,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Hunt",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 2},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 2},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -30937,33 +28415,30 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " and "},
 						{kind: "keyword", name: "Ganking"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[
-											{kind: "text", value: "While you have "},
-											{kind: "xp", amount: 3, sign: "+"}
-										],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								},
-								{kind: "text", value: " A "},
-								{kind: "keyword", name: "Ganking"},
-								{
-									kind: "text",
-									value: " unit can move from battlefield to battlefield"
-								},
-								{kind: "text", value: "."}
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 3, sign: "+"}
+								],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
-						}
+						},
+						{kind: "text", value: " A "},
+						{kind: "keyword", name: "Ganking"},
+						{
+							kind: "text",
+							value: " unit can move from battlefield to battlefield"
+						},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -31004,27 +28479,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Temporary",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[
-									{
-										kind: "text",
-										value: "Kill this at the start of its controller's Beginning Phase"
-									}
-								],
-								[
-									{kind: "text", value: " before scoring"},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[
+								{
+									kind: "text",
+									value: "Kill this at the start of its controller's Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -31046,7 +28518,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Deathknell",
@@ -31055,21 +28526,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					value: [
 						{kind: "text", value: " Repeat this gear's play effect"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[{kind: "text", value: "When this dies"}],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								}
+								[{kind: "text", value: "When this dies"}],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
 						}
 					]
@@ -31124,28 +28592,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "To Predict"}],
-									[
-										{
-											kind: "text",
-											value: " look at the top card of your Main Deck"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{kind: "text", value: " You may recycle it"},
-							{kind: "text", value: "."}
+							[{kind: "text", value: "To Predict"}],
+							[
+								{
+									kind: "text",
+									value: " look at the top card of your Main Deck"
+								},
+								{kind: "text", value: "."}
+							]
 						]
-					}
+					},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -31245,7 +28710,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "infix_group",
 				lefthand: [{kind: "text", value: "* Gear"}],
@@ -31257,7 +28721,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "infix_group",
 				lefthand: [{kind: "text", value: "* Unit"}],
@@ -31277,41 +28740,35 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Temporary",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[
-									{
-										kind: "text",
-										value: "Kill me at the start of my controller's Beginning Phase"
-									}
-								],
-								[
-									{kind: "text", value: " before scoring"},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[
+								{
+									kind: "text",
+									value: "Kill me at the start of my controller's Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -31342,23 +28799,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -31378,26 +28827,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{
-											kind: "text",
-											value: "Kill it at the start of its controller's Beginning Phase"
-										}
-									],
-									[
-										{kind: "text", value: " before scoring"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{
+									kind: "text",
+									value: "Kill it at the start of its controller's Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -31436,27 +28882,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -31516,26 +28956,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{
-											kind: "text",
-											value: "Kill them at the start of their controller's next Beginning Phase"
-										}
-									],
-									[
-										{kind: "text", value: " before scoring"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{
+									kind: "text",
+									value: "Kill them at the start of their controller's next Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -31548,50 +28985,44 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Temporary",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[
-									{
-										kind: "text",
-										value: "Kill this at the start of its controller's Beginning Phase"
-									}
-								],
-								[
-									{kind: "text", value: " before scoring"},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[
+								{
+									kind: "text",
+									value: "Kill this at the start of its controller's Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -31649,14 +29080,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Shield",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -31668,7 +29096,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -31690,17 +29117,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Abilities that add resources can't be reacted to"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "Abilities that add resources can't be reacted to"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -31719,7 +29143,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -31776,7 +29199,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -31799,16 +29221,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: " Bird unit token with "},
 					{kind: "keyword", name: "Deflect"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Opponents must pay "},
-							{kind: "symbol", value: "A"},
-							{kind: "text", value: " to choose it with a spell or ability"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose it with a spell or ability"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -31819,27 +29238,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Vision",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{
-										kind: "text",
-										value: " look at the top card of your Main Deck"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{
+									kind: "text",
+									value: " look at the top card of your Main Deck"
+								},
+								{kind: "text", value: "."}
 							]
-						},
-						{kind: "text", value: " You may recycle it"},
-						{kind: "text", value: "."}
-					]
-				}
+						]
+					},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -31903,13 +29319,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Backline",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage last"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage last"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -31948,65 +29361,50 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
-				kind: "ability",
-				value: [
-					{
-						kind: "keyword",
-						name: "Level",
-						param: 6,
-						associated: {
-							kind: "ability",
+				kind: "keyword",
+				name: "Level",
+				param: 6,
+				associated: {
+					kind: "ability",
+					value: [
+						{kind: "text", value: " This costs "},
+						{kind: "symbol", value: 2},
+						{kind: "text", value: " less"},
+						{kind: "text", value: "."},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
+						{
+							kind: "list",
+							separator: ",",
 							value: [
-								{kind: "text", value: " This costs "},
-								{kind: "symbol", value: 2},
-								{kind: "text", value: " less"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " "},
-								{
-									kind: "reminder_text",
-									value: [
-										{
-											kind: "list",
-											separator: ",",
-											value: [
-												[
-													{
-														kind: "text",
-														value: "While you have "
-													},
-													{kind: "xp", amount: 6, sign: "+"}
-												],
-												[
-													{
-														kind: "text",
-														value: " get the effect"
-													},
-													{kind: "text", value: "."}
-												]
-											]
-										}
-									]
-								}
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 6, sign: "+"}
+								],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
 						}
-					},
-					{
-						kind: "keyword",
-						name: "Level",
-						param: 11,
-						associated: {
-							kind: "ability",
-							value: [
-								{kind: "text", value: " This costs "},
-								{kind: "symbol", value: 4},
-								{kind: "text", value: " less instead"},
-								{kind: "text", value: "."}
-							]
-						}
-					}
-				]
+					]
+				}
+			},
+			{
+				kind: "keyword",
+				name: "Level",
+				param: 11,
+				associated: {
+					kind: "ability",
+					value: [
+						{kind: "text", value: " This costs "},
+						{kind: "symbol", value: 4},
+						{kind: "text", value: " less instead"},
+						{kind: "text", value: "."}
+					]
+				}
 			}
 		]
 	},
@@ -32047,17 +29445,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " "},
 						{kind: "symbol", value: 1},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
-							value: [
-								{
-									kind: "text",
-									value: "Abilities that add resources can't be reacted to"
-								},
-								{kind: "text", value: "."}
-							]
-						}
+							kind: "text",
+							value: "Abilities that add resources can't be reacted to"
+						},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -32069,38 +29464,37 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hunt",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 1},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 1},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
-				kind: "keyword",
-				name: "Level",
-				param: 6,
-				associated: {
-					kind: "ability",
-					value: [
-						{kind: "text", value: " I have "},
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: "."},
-						{kind: "text", value: " "},
-						{
-							kind: "reminder_text",
+				kind: "ability",
+				value: [
+					{
+						kind: "keyword",
+						name: "Level",
+						param: 6,
+						associated: {
+							kind: "ability",
 							value: [
+								{kind: "text", value: " I have "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: "."},
+								{kind: "text", value: " "}
+							],
+							reminderText: [
 								{
 									kind: "list",
 									separator: ",",
@@ -32116,10 +29510,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 									]
 								}
 							]
-						},
-						{kind: "text", value: "ambush"}
-					]
-				}
+						}
+					},
+					{kind: "text", value: "ambush"}
+				]
 			}
 		]
 	},
@@ -32129,13 +29523,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -32167,20 +29558,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -32225,24 +29613,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " I have "},
 						{kind: "might", amount: 4, sign: "+"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[
-											{kind: "text", value: "While you have "},
-											{kind: "xp", amount: 11, sign: "+"}
-										],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								}
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 11, sign: "+"}
+								],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
 						}
 					]
@@ -32257,25 +29642,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Shield",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 2, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -32286,23 +29665,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Hunt",
 				param: 3,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 3},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 3},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -32343,23 +29719,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hunt",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 1},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 1},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -32369,16 +29742,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Buff"},
 					{kind: "text", value: " me"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Give me a "},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff if I don't have one"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Give me a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff if I don't have one"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -32389,25 +29759,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{kind: "text", value: "Choose one —"},
 			{
@@ -32422,7 +29789,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -32492,25 +29858,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -32566,17 +29929,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "I can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -32603,7 +29960,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -32681,23 +30037,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Hunt",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 2},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 2},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -32711,29 +30064,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " and "},
 						{kind: "keyword", name: "Ganking"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[
-											{kind: "text", value: "While you have "},
-											{kind: "xp", amount: 6, sign: "+"}
-										],
-										[
-											{kind: "text", value: " opponents must pay "},
-											{kind: "symbol", value: "A"},
-											{
-												kind: "text",
-												value: " to choose me with a spell or ability and I can move from battlefield to battlefield"
-											},
-											{kind: "text", value: "."}
-										]
-									]
-								}
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 6, sign: "+"}
+								],
+								[
+									{kind: "text", value: " opponents must pay "},
+									{kind: "symbol", value: "A"},
+									{
+										kind: "text",
+										value: " to choose me with a spell or ability and I can move from battlefield to battlefield"
+									},
+									{kind: "text", value: "."}
+								]
 							]
 						}
 					]
@@ -32768,15 +30118,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -32793,14 +30140,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "I win if I remain after combat"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I win if I remain after combat"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -32811,37 +30155,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -32868,15 +30198,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -32943,23 +30270,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Hunt",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 2},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 2},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -32971,7 +30295,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -32997,7 +30320,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -33036,7 +30358,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -33068,23 +30389,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hunt",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 1},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 1},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -33142,15 +30460,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -33159,23 +30474,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						kind: "text",
 						value: "I can be played to a battlefield where there are enemy units "
 					},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "group",
-								value: [
-									{kind: "text", value: "("},
-									{
-										kind: "text",
-										value: "even if you don't have units there"
-									},
-									{kind: "text", value: ")"}
-								]
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: "("},
+					{kind: "text", value: "even if you don't have units there"},
+					{kind: "text", value: ")"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -33324,25 +30626,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -33378,17 +30677,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Ganking"},
 					{kind: "text", value: " this turn"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "We can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "We can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -33399,23 +30692,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -33442,25 +30727,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -33502,15 +30784,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -33541,25 +30820,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -33573,25 +30849,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
 					{kind: "keyword", name: "Predict"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Look at the top card of your Main Deck"
-							},
-							{kind: "text", value: "."},
-							{kind: "text", value: " You may recycle it"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Look at the top card of your Main Deck"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -33638,7 +30907,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -33655,17 +30923,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -33676,28 +30938,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Repeat",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may pay the additional cost to repeat this spell's effect"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may pay the additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -33719,17 +30975,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "A stunned unit doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "A stunned unit doesn't deal combat damage this turn"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -33783,7 +31036,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -33814,34 +31066,31 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: " Gain "},
 					{kind: "xp", amount: 1},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{kind: "text", value: "To Predict "},
-										{kind: "text", value: "2"}
-									],
-									[
-										{
-											kind: "text",
-											value: " look at the top two cards of your Main Deck"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{
-								kind: "text",
-								value: " Recycle any of them and put the rest back in any order"
-							},
-							{kind: "text", value: "."}
+							[
+								{kind: "text", value: "To Predict "},
+								{kind: "text", value: "2"}
+							],
+							[
+								{
+									kind: "text",
+									value: " look at the top two cards of your Main Deck"
+								},
+								{kind: "text", value: "."}
+							]
 						]
-					}
+					},
+					{
+						kind: "text",
+						value: " Recycle any of them and put the rest back in any order"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -33889,23 +31138,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "For example"}],
-									[{kind: "text", value: " Miss Fortune"}],
-									[{kind: "text", value: " Demacia"}],
-									[
-										{kind: "text", value: " and Poro are tags"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[{kind: "text", value: "For example"}],
+							[{kind: "text", value: " Miss Fortune"}],
+							[{kind: "text", value: " Demacia"}],
+							[
+								{kind: "text", value: " and Poro are tags"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -33929,16 +31175,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -33978,17 +31221,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -34005,7 +31242,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -34049,27 +31285,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Backline",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage last"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage last"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -34103,25 +31333,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -34144,7 +31371,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -34174,15 +31400,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -34242,7 +31465,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -34263,27 +31485,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Backline",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage last"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage last"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -34305,43 +31521,38 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It has \""},
 					{
-						kind: "group",
-						value: [
-							{kind: "text", value: "("},
-							{kind: "text", value: "It has \""},
-							{
-								kind: "keyword",
-								name: "Reaction",
-								associated: {
-									kind: "ability",
-									activated: true,
-									cost: [
-										{
-											kind: "list",
-											separator: ",",
-											value: [
-												[{kind: "text", value: " Kill this"}],
-												[
-													{kind: "text", value: " "},
-													{kind: "symbol", value: "E"}
-												]
-											]
-										}
-									],
-									effect: [
-										{kind: "keyword", name: "Add"},
-										{kind: "text", value: " "},
-										{kind: "symbol", value: "A"},
-										{kind: "text", value: "."}
+						kind: "keyword",
+						name: "Reaction",
+						associated: {
+							kind: "ability",
+							activated: true,
+							cost: [
+								{
+									kind: "list",
+									separator: ",",
+									value: [
+										[{kind: "text", value: " Kill this"}],
+										[
+											{kind: "text", value: " "},
+											{kind: "symbol", value: "E"}
+										]
 									]
 								}
-							},
-							{kind: "text", value: "\""},
-							{kind: "text", value: ")"}
-						]
-					}
+							],
+							effect: [
+								{kind: "keyword", name: "Add"},
+								{kind: "text", value: " "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: "."}
+							]
+						}
+					},
+					{kind: "text", value: "\""}
 				]
 			}
 		]
@@ -34400,17 +31611,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "You may pay the additional cost to repeat the spell's effect"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "You may pay the additional cost to repeat the spell's effect"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -34446,33 +31654,30 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It has \"Units can move here from anywhere"},
+					{kind: "text", value: "."},
+					{kind: "text", value: "\""}
+				]
+			},
+			{
+				kind: "ability",
+				value: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It has \"Units can move here from anywhere"
-							},
-							{kind: "text", value: "."},
-							{
-								kind: "group",
-								value: [
-									{kind: "text", value: "("},
-									{kind: "text", value: "\""},
-									{kind: "text", value: ")"}
-								]
-							},
-							{
-								kind: "text",
-								value: "I can't be chosen by enemy spells and abilities"
-							},
-							{kind: "text", value: "."},
-							{kind: "text", value: "Other friendly units have "},
-							{kind: "might", amount: 2, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "I can't be chosen by enemy spells and abilities"
+					},
+					{kind: "text", value: "."}
+				]
+			},
+			{
+				kind: "ability",
+				value: [
+					{kind: "text", value: "Other friendly units have "},
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -34510,7 +31715,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -34521,7 +31725,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -34533,7 +31736,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"unl-148/219": {
-		verified: false,
+		verified: true,
 		description: "When you play this, banish all units from your trash.\n[E]: Play a unit banished with this. (You must pay its costs.)",
 		tree: [
 			{
@@ -34552,7 +31755,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -34560,14 +31762,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				effect: [
 					{kind: "text", value: "Play a unit banished with this"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "You must pay its costs"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "You must pay its costs"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -34579,15 +31778,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -34635,21 +31831,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"unl-150/219": {
-		verified: false,
+		verified: true,
 		description: "[Deflect] (Opponents must pay [A] to choose me with a spell or ability.)\nWhen an opponent plays a unit while I'm at a battlefield, [Stun] it. They can't move it this turn. (It doesn't deal combat damage this turn.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -34674,17 +31867,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					},
 					{kind: "text", value: " They can't move it this turn"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -34722,7 +31909,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"unl-151/219": {
-		verified: false,
+		verified: true,
 		description: "[Level 3][>] I enter ready. (While you have 3+ XP, get the effect.)",
 		tree: [
 			{
@@ -34734,24 +31921,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					value: [
 						{kind: "text", value: " I enter ready"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[
-											{kind: "text", value: "While you have "},
-											{kind: "xp", amount: 3, sign: "+"}
-										],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								}
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 3, sign: "+"}
+								],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
 						}
 					]
@@ -34760,20 +31944,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"unl-152/219": {
-		verified: false,
+		verified: true,
 		description: "[Assault] (+1 [M] while I'm an attacker.)\n[Deathknell][>] Channel 1 rune exhausted. (When I die, get the effect.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Assault",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
@@ -34785,21 +31966,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: "1"},
 						{kind: "text", value: " rune exhausted"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[{kind: "text", value: "When I die"}],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								}
+								[{kind: "text", value: "When I die"}],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
 						}
 					]
@@ -34808,7 +31986,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"unl-153/219": {
-		verified: false,
+		verified: true,
 		description: "[Deathknell][>] Play a 1 [M] Bird unit token with [Deflect] to your base. (When I die, get the effect. Opponents must pay [A] to choose a [Deflect] unit with a spell or ability.)",
 		tree: [
 			{
@@ -34823,29 +32001,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "keyword", name: "Deflect"},
 						{kind: "text", value: " to your base"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[{kind: "text", value: "When I die"}],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								},
-								{kind: "text", value: " Opponents must pay "},
-								{kind: "symbol", value: "A"},
-								{kind: "text", value: " to choose a "},
-								{kind: "keyword", name: "Deflect"},
-								{kind: "text", value: " unit with a spell or ability"},
-								{kind: "text", value: "."}
+								[{kind: "text", value: "When I die"}],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
-						}
+						},
+						{kind: "text", value: " Opponents must pay "},
+						{kind: "symbol", value: "A"},
+						{kind: "text", value: " to choose a "},
+						{kind: "keyword", name: "Deflect"},
+						{kind: "text", value: " unit with a spell or ability"},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -34867,19 +32042,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"unl-155/219": {
-		verified: false,
+		verified: true,
 		description: "[Action] (Play on your turn or in showdowns.)\nGive a friendly unit +1 [M] this turn and [Stun] an enemy unit at its location. (A stunned unit doesn't deal combat damage this turn.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -34890,23 +32062,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Stun"},
 					{kind: "text", value: " an enemy unit at its location"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "A stunned unit doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "A stunned unit doesn't deal combat damage this turn"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
 	},
 	"unl-156/219": {
-		verified: false,
+		verified: true,
 		description: "[Deathknell][>] If I didn't die alone, draw 1. (When I die, get the effect. I wasn't alone if there were other friendly units here.)",
 		tree: [
 			{
@@ -34927,28 +32096,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 								]
 							]
 						},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[{kind: "text", value: "When I die"}],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								},
-								{
-									kind: "text",
-									value: " I wasn't alone if there were other friendly units here"
-								},
-								{kind: "text", value: "."}
+								[{kind: "text", value: "When I die"}],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
-						}
+						},
+						{
+							kind: "text",
+							value: " I wasn't alone if there were other friendly units here"
+						},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -34979,7 +32145,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"unl-158/219": {
-		verified: false,
+		verified: true,
 		description: "When you play this, gain 1 XP.\n[Equip] — Spend 1 XP (Pay the cost: Attach this to a unit you control.)",
 		tree: [
 			{
@@ -34999,7 +32165,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "infix_group",
 				lefthand: [{kind: "keyword", name: "Equip"}],
@@ -35007,22 +32172,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				righthand: [
 					{kind: "text", value: "Spend "},
 					{kind: "xp", amount: 1},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "ability",
-								activated: true,
-								cost: [{kind: "text", value: "Pay the cost"}],
-								effect: [
-									{
-										kind: "text",
-										value: "Attach this to a unit you control"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "text", value: "Pay the cost"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -35065,18 +32224,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						value: " Use this ability only while I'm at a battlefield"
 					},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Opponents must pay "},
-							{kind: "symbol", value: "A"},
-							{kind: "text", value: " to choose a "},
-							{kind: "keyword", name: "Deflect"},
-							{kind: "text", value: " unit with a spell or ability"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose a "},
+					{kind: "keyword", name: "Deflect"},
+					{kind: "text", value: " unit with a spell or ability"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -35088,27 +32244,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Vision",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play this"}],
-								[
-									{
-										kind: "text",
-										value: " look at the top card of your Main Deck"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play this"}],
+							[
+								{
+									kind: "text",
+									value: " look at the top card of your Main Deck"
+								},
+								{kind: "text", value: "."}
 							]
-						},
-						{kind: "text", value: " You may recycle it"},
-						{kind: "text", value: "."}
-					]
-				}
+						]
+					},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
@@ -35137,29 +32290,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"unl-162/219": {
-		verified: false,
+		verified: true,
 		description: "[Hunt] (When I conquer or hold, gain 1 XP.)\nSpend 2 XP: [Buff] me. (Give me a +1 [M] buff if I don't have one.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Hunt",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When I conquer or hold"}],
-								[
-									{kind: "text", value: " gain "},
-									{kind: "xp", amount: 1},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When I conquer or hold"}],
+							[
+								{kind: "text", value: " gain "},
+								{kind: "xp", amount: 1},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -35169,16 +32319,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Buff"},
 					{kind: "text", value: " me"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Give me a "},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff if I don't have one"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Give me a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff if I don't have one"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -35202,7 +32349,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"unl-164/219": {
-		verified: false,
+		verified: true,
 		description: "You may spend 3 XP as an additional cost to play me.\nWhen you play me, each player must kill one of their units. If you paid my additional cost, you don't kill a unit this way.",
 		tree: [
 			{
@@ -35214,7 +32361,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -35248,7 +32394,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"unl-165/219": {
-		verified: false,
+		verified: true,
 		description: "Choose a friendly unit without [Temporary]. Give it [Temporary]. Draw 2. (Kill it at the start of its controller's Beginning Phase, before scoring.)",
 		tree: [
 			{
@@ -35263,26 +32409,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: " Draw "},
 					{kind: "text", value: "2"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{
-											kind: "text",
-											value: "Kill it at the start of its controller's Beginning Phase"
-										}
-									],
-									[
-										{kind: "text", value: " before scoring"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{
+									kind: "text",
+									value: "Kill it at the start of its controller's Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -35290,21 +32433,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"unl-166/219": {
-		verified: false,
+		verified: true,
 		description: "[Ambush] (You may play me as a [Reaction] to a battlefield where you have units.)\nAs an additional cost to play me, kill a Bird, Cat, Dog, or Poro you control. You may play me to its battlefield (even if you don't have other units there).",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -35324,23 +32464,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						]
 					},
 					{kind: "text", value: " You may play me to its battlefield "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "group",
-								value: [
-									{kind: "text", value: "("},
-									{
-										kind: "text",
-										value: "even if you don't have other units there"
-									},
-									{kind: "text", value: ")"}
-								]
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: "("},
+					{kind: "text", value: "even if you don't have other units there"},
+					{kind: "text", value: ")"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -35374,7 +32501,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"unl-168/219": {
-		verified: false,
+		verified: true,
 		description: "This costs [2] less if you choose a Bird, Cat, Dog, or Poro.\nPlay a unit with cost no more than [2] and no more than [A] from your trash, ignoring its cost.",
 		tree: [
 			{
@@ -35399,7 +32526,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -35428,7 +32554,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"unl-169/219": {
-		verified: false,
+		verified: true,
 		description: "When you play me, choose an opponent. They reveal their hand. Choose a card revealed this way and banish it. When they hold, return it to their hand (even if I'm no longer on the board).",
 		tree: [
 			{
@@ -35459,23 +32585,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							[{kind: "text", value: " When they hold"}],
 							[
 								{kind: "text", value: " return it to their hand "},
+								{kind: "text", value: "("},
 								{
-									kind: "reminder_text",
-									value: [
-										{
-											kind: "group",
-											value: [
-												{kind: "text", value: "("},
-												{
-													kind: "text",
-													value: "even if I'm no longer on the board"
-												},
-												{kind: "text", value: ")"}
-											]
-										},
-										{kind: "text", value: "."}
-									]
-								}
+									kind: "text",
+									value: "even if I'm no longer on the board"
+								},
+								{kind: "text", value: ")"},
+								{kind: "text", value: "."}
 							]
 						]
 					}
@@ -35484,7 +32600,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"unl-170/219": {
-		verified: false,
+		verified: true,
 		description: "You may kill a friendly unit as an additional cost to play me. If you do, I cost [1] less for each Energy it costs and [Y] less for each Power it costs.\n[Ganking] (I can move from battlefield to battlefield.)\nWhen I attack, the defender must kill one of their units here.",
 		tree: [
 			{
@@ -35515,20 +32631,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Ganking",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "I can move from battlefield to battlefield"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -35558,26 +32667,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -35595,14 +32698,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Assault",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm an attacker"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
@@ -35626,21 +32726,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 								]
 							]
 						},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[{kind: "text", value: "When I die"}],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								}
+								[{kind: "text", value: "When I die"}],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
 						}
 					]
@@ -35686,25 +32783,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -35727,15 +32821,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "A unit is Mighty while it has "},
-							{kind: "might", amount: 5, sign: "+"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "A unit is Mighty while it has "},
+					{kind: "might", amount: 5, sign: "+"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -35786,25 +32877,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -35829,16 +32917,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to base"},
-							{kind: "text", value: "."},
-							{kind: "text", value: " This isn't a move"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to base"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " This isn't a move"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -35849,15 +32934,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -35875,17 +32957,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -35938,7 +33014,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "infix_group",
 				lefthand: [
@@ -36001,7 +33076,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "infix_group",
 				lefthand: [
@@ -36065,30 +33139,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -36117,7 +33184,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{kind: "keyword", name: "Ambush"},
 			{kind: "keyword", name: "Tank"}
 		]
@@ -36150,7 +33216,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Deathknell",
@@ -36173,28 +33238,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 								]
 							]
 						},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
+							kind: "list",
+							separator: ",",
 							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[{kind: "text", value: "When I die"}],
-										[
-											{kind: "text", value: " get the effect"},
-											{kind: "text", value: "."}
-										]
-									]
-								},
-								{
-									kind: "text",
-									value: " You must still pay its Power cost"
-								},
-								{kind: "text", value: "."}
+								[{kind: "text", value: "When I die"}],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
-						}
+						},
+						{kind: "text", value: " You must still pay its Power cost"},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -36228,7 +33287,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Deathknell",
@@ -36331,17 +33389,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						kind: "symbol_run",
 						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "A"}]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "You may pay each additional cost to repeat this spell's effect"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "You may pay each additional cost to repeat this spell's effect"
+					},
+					{kind: "text", value: "."}
 				]
 			},
 			{kind: "text", value: "Choose one you haven't already chosen —"},
@@ -36354,7 +33409,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -36365,7 +33419,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -36376,7 +33429,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -36418,25 +33470,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -36486,43 +33535,38 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."},
 					{kind: "text", value: " Play a Gold gear token exhausted"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It has \""},
 					{
-						kind: "group",
-						value: [
-							{kind: "text", value: "("},
-							{kind: "text", value: "It has \""},
-							{
-								kind: "keyword",
-								name: "Reaction",
-								associated: {
-									kind: "ability",
-									activated: true,
-									cost: [
-										{
-											kind: "list",
-											separator: ",",
-											value: [
-												[{kind: "text", value: " Kill this"}],
-												[
-													{kind: "text", value: " "},
-													{kind: "symbol", value: "E"}
-												]
-											]
-										}
-									],
-									effect: [
-										{kind: "keyword", name: "Add"},
-										{kind: "text", value: " "},
-										{kind: "symbol", value: "A"},
-										{kind: "text", value: "."}
+						kind: "keyword",
+						name: "Reaction",
+						associated: {
+							kind: "ability",
+							activated: true,
+							cost: [
+								{
+									kind: "list",
+									separator: ",",
+									value: [
+										[{kind: "text", value: " Kill this"}],
+										[
+											{kind: "text", value: " "},
+											{kind: "symbol", value: "E"}
+										]
 									]
 								}
-							},
-							{kind: "text", value: "\""},
-							{kind: "text", value: ")"}
-						]
-					}
+							],
+							effect: [
+								{kind: "keyword", name: "Add"},
+								{kind: "text", value: " "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: "."}
+							]
+						}
+					},
+					{kind: "text", value: "\""}
 				]
 			}
 		]
@@ -36605,22 +33649,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						value: " This ability's Energy cost is reduced by the Might of the unit you choose"
 					},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "ability",
-								activated: true,
-								cost: [{kind: "text", value: "Pay the cost"}],
-								effect: [
-									{
-										kind: "text",
-										value: "Attach this to a unit you control"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "text", value: "Pay the cost"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -36664,25 +33702,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -36699,60 +33734,46 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		description: "[Level 6][>] Your units have +1 [M]. (While you have 6+ XP, get the effect.)\n[Level 11][>] Your units enter ready.",
 		tree: [
 			{
-				kind: "ability",
-				value: [
-					{
-						kind: "keyword",
-						name: "Level",
-						param: 6,
-						associated: {
-							kind: "ability",
+				kind: "keyword",
+				name: "Level",
+				param: 6,
+				associated: {
+					kind: "ability",
+					value: [
+						{kind: "text", value: " Your units have "},
+						{kind: "might", amount: 1, sign: "+"},
+						{kind: "text", value: "."},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
+						{
+							kind: "list",
+							separator: ",",
 							value: [
-								{kind: "text", value: " Your units have "},
-								{kind: "might", amount: 1, sign: "+"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " "},
-								{
-									kind: "reminder_text",
-									value: [
-										{
-											kind: "list",
-											separator: ",",
-											value: [
-												[
-													{
-														kind: "text",
-														value: "While you have "
-													},
-													{kind: "xp", amount: 6, sign: "+"}
-												],
-												[
-													{
-														kind: "text",
-														value: " get the effect"
-													},
-													{kind: "text", value: "."}
-												]
-											]
-										}
-									]
-								}
+								[
+									{kind: "text", value: "While you have "},
+									{kind: "xp", amount: 6, sign: "+"}
+								],
+								[
+									{kind: "text", value: " get the effect"},
+									{kind: "text", value: "."}
+								]
 							]
 						}
-					},
-					{
-						kind: "keyword",
-						name: "Level",
-						param: 11,
-						associated: {
-							kind: "ability",
-							value: [
-								{kind: "text", value: " Your units enter ready"},
-								{kind: "text", value: "."}
-							]
-						}
-					}
-				]
+					]
+				}
+			},
+			{
+				kind: "keyword",
+				name: "Level",
+				param: 11,
+				associated: {
+					kind: "ability",
+					value: [
+						{kind: "text", value: " Your units enter ready"},
+						{kind: "text", value: "."}
+					]
+				}
 			}
 		]
 	},
@@ -36762,13 +33783,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -36839,7 +33857,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Action",
@@ -36869,17 +33886,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "keyword", name: "Stun"},
 						{kind: "text", value: " an enemy unit attacking here"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
-						{
-							kind: "reminder_text",
-							value: [
-								{
-									kind: "text",
-									value: "It doesn't deal combat damage this turn"
-								},
-								{kind: "text", value: "."}
-							]
-						}
+						{kind: "text", value: " "}
+					],
+					reminderText: [
+						{kind: "text", value: "It doesn't deal combat damage this turn"},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -36905,30 +33916,27 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "Bird"}],
-									[{kind: "text", value: " Cat"}],
-									[{kind: "text", value: " Dog"}],
-									[{kind: "text", value: " Poro"}],
-									[
-										{kind: "text", value: " and Ivern units have "},
-										{kind: "might", amount: 1, sign: "+"},
-										{kind: "text", value: " in Brush"},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{kind: "text", value: " It can be swapped back when scored"},
-							{kind: "text", value: "."}
+							[{kind: "text", value: "Bird"}],
+							[{kind: "text", value: " Cat"}],
+							[{kind: "text", value: " Dog"}],
+							[{kind: "text", value: " Poro"}],
+							[
+								{kind: "text", value: " and Ivern units have "},
+								{kind: "might", amount: 1, sign: "+"},
+								{kind: "text", value: " in Brush"},
+								{kind: "text", value: "."}
+							]
 						]
-					}
+					},
+					{kind: "text", value: " It can be swapped back when scored"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -36940,7 +33948,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "ability",
 				value: [{kind: "text", value: "I enter ready"}, {kind: "text", value: "."}]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "infix_group",
 				lefthand: [
@@ -36968,7 +33975,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -36992,17 +33998,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -37024,17 +34024,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: "."},
 						{kind: "text", value: " Spend this Energy only during showdowns"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
-							value: [
-								{
-									kind: "text",
-									value: "Abilities that add resources can't be reacted to"
-								},
-								{kind: "text", value: "."}
-							]
-						}
+							kind: "text",
+							value: "Abilities that add resources can't be reacted to"
+						},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -37046,13 +34043,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -37121,26 +34115,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: " Give it "},
 					{kind: "keyword", name: "Temporary"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{
-											kind: "text",
-											value: "Kill it at the start of its controller's Beginning Phase"
-										}
-									],
-									[
-										{kind: "text", value: " before scoring"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{
+									kind: "text",
+									value: "Kill it at the start of its controller's Beginning Phase"
+								}
+							],
+							[
+								{kind: "text", value: " before scoring"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -37167,7 +34158,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -37187,7 +34177,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -37228,26 +34217,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{
-											kind: "text",
-											value: "If they both move to a battlefield you don't control"
-										}
-									],
-									[
-										{kind: "text", value: " you're the attacker"},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{
+									kind: "text",
+									value: "If they both move to a battlefield you don't control"
+								}
+							],
+							[
+								{kind: "text", value: " you're the attacker"},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -37274,7 +34260,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -37302,13 +34287,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -37424,15 +34406,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: " have "},
 					{kind: "keyword", name: "Shield"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " while they're defenders"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while they're defenders"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -37463,14 +34442,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "This happens before scoring"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "This happens before scoring"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -37498,17 +34474,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It's alone if there are no other friendly units here"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "It's alone if there are no other friendly units here"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -37542,19 +34515,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Look at the top card of your Main Deck"
-							},
-							{kind: "text", value: "."},
-							{kind: "text", value: " You may recycle it"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Look at the top card of your Main Deck"},
+					{kind: "text", value: "."},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -37583,14 +34550,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "This happens before scoring"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "This happens before scoring"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -37692,17 +34656,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "You may pay the additional cost to repeat the spell's effect"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "You may pay the additional cost to repeat the spell's effect"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -37757,16 +34718,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Give it a "},
-							{kind: "might", amount: 1, sign: "+"},
-							{kind: "text", value: " buff if it doesn't have one"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Give it a "},
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " buff if it doesn't have one"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -38447,7 +35405,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -38467,7 +35424,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -38511,7 +35467,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -38531,7 +35486,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -38575,7 +35529,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -38617,7 +35570,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -38672,7 +35624,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -38683,7 +35634,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -38708,21 +35658,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "4"},
 					{kind: "text", value: " or fewer runes"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "ability",
-								activated: true,
-								cost: [{kind: "text", value: "Pay the cost"}],
-								effect: [
-									{kind: "text", value: "Empower me"},
-									{kind: "text", value: "."},
-									{kind: "text", value: " Use only if not Empowered"},
-									{kind: "text", value: "."}
-								]
-							}
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "text", value: "Pay the cost"}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -38738,23 +35685,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " and "},
 						{kind: "keyword", name: "Assault", param: 2},
 						{kind: "text", value: "."},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
+						{kind: "text", value: "Opponents must pay "},
+						{kind: "symbol", value: "A"},
+						{kind: "text", value: " to choose me with a spell or ability"},
+						{kind: "text", value: "."},
 						{kind: "text", value: " "},
-						{
-							kind: "reminder_text",
-							value: [
-								{kind: "text", value: "Opponents must pay "},
-								{kind: "symbol", value: "A"},
-								{
-									kind: "text",
-									value: " to choose me with a spell or ability"
-								},
-								{kind: "text", value: "."},
-								{kind: "text", value: " "},
-								{kind: "might", amount: 2, sign: "+"},
-								{kind: "text", value: " while I'm an attacker"},
-								{kind: "text", value: "."}
-							]
-						}
+						{kind: "might", amount: 2, sign: "+"},
+						{kind: "text", value: " while I'm an attacker"},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -38780,17 +35721,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: " They "},
 					{kind: "keyword", name: "Burn", param: 1},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "They put the top card of their Main Deck into their trash"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "They put the top card of their Main Deck into their trash"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -38802,23 +35740,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "ability",
 				value: [{kind: "text", value: "Kill a gear"}, {kind: "text", value: "."}]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Flow",
 				cost: [{kind: "symbol", value: 4}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may play this from your trash for its Flow cost"
-						},
-						{kind: "text", value: "."},
-						{kind: "text", value: " Then banish it"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -38890,17 +35824,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "I can move from battlefield to battlefield"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I can move from battlefield to battlefield"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -38915,21 +35843,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				righthand: [
 					{kind: "text", value: "Discard "},
 					{kind: "text", value: "1"},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "ability",
-								activated: true,
-								cost: [{kind: "text", value: "Pay the cost"}],
-								effect: [
-									{kind: "text", value: "Empower me"},
-									{kind: "text", value: "."},
-									{kind: "text", value: " Use only if not Empowered"},
-									{kind: "text", value: "."}
-								]
-							}
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "text", value: "Pay the cost"}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -38954,13 +35879,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -38984,7 +35906,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -39030,15 +35951,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 2, sign: "+"},
-							{kind: "text", value: " while I'm an attacker"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while I'm an attacker"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -39049,13 +35967,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -39082,20 +35997,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -39109,33 +36021,27 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Assault", param: 3},
 					{kind: "text", value: " this turn"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 3, sign: "+"},
-							{kind: "text", value: " while it's an attacker"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 3, sign: "+"},
+					{kind: "text", value: " while it's an attacker"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
 				kind: "keyword",
 				name: "Flow",
 				cost: [{kind: "symbol", value: 3}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may play this from your trash for its Flow cost"
-						},
-						{kind: "text", value: "."},
-						{kind: "text", value: " Then banish it"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -39161,30 +36067,27 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 2}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 2},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 2},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -39195,15 +36098,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " I have "},
 						{kind: "keyword", name: "Assault", param: 3},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
-						{
-							kind: "reminder_text",
-							value: [
-								{kind: "might", amount: 3, sign: "+"},
-								{kind: "text", value: " while I'm an attacker"},
-								{kind: "text", value: "."}
-							]
-						}
+						{kind: "text", value: " "}
+					],
+					reminderText: [
+						{kind: "might", amount: 3, sign: "+"},
+						{kind: "text", value: " while I'm an attacker"},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -39215,13 +36115,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -39230,21 +36127,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
 					{kind: "text", value: "Deal "},
 					{kind: "text", value: "4"},
 					{kind: "text", value: " to an enemy Calm "},
-					{
-						kind: "group",
-						value: [
-							{kind: "text", value: "("},
-							{kind: "symbol", value: "G"},
-							{kind: "text", value: ")"}
-						]
-					},
+					{kind: "text", value: "("},
+					{kind: "symbol", value: "G"},
+					{kind: "text", value: ")"},
 					{kind: "text", value: " unit"},
 					{kind: "text", value: "."}
 				]
@@ -39257,23 +36148,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -39305,15 +36188,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -39343,30 +36223,27 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 6}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 6},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower this"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 6},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower this"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -39400,23 +36277,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Accelerate",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
-							]
-						},
-						{
-							kind: "text",
-							value: " as an additional cost to have me enter ready"
-						},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}]
+					},
+					{kind: "text", value: " as an additional cost to have me enter ready"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -39500,30 +36369,27 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 2}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 2},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 2},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -39562,7 +36428,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Empowered",
@@ -39622,7 +36487,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -39664,7 +36528,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -39672,7 +36535,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -39680,7 +36542,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -39716,7 +36577,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -39728,55 +36588,43 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							[{kind: "text", value: " if you paid the additional cost"}],
 							[
 								{kind: "text", value: " play a "},
-								{kind: "text", value: "0"},
-								{kind: "text", value: " "},
-								{kind: "symbol", value: "M"},
+								{kind: "might", amount: 0},
 								{kind: "text", value: " Shadow Clone unit token"},
 								{kind: "text", value: "."}
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "It has \"When I attack"}],
-									[
-										{
-											kind: "text",
-											value: " you may banish a unit from your trash"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: " If you do"}],
-									[
-										{kind: "text", value: " give me "},
-										{kind: "keyword", name: "Assault", param: 4},
-										{kind: "text", value: " this turn"},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{
-								kind: "group",
-								value: [
-									{kind: "text", value: "("},
-									{kind: "text", value: "\""},
-									{kind: "text", value: ")"}
-								]
-							}
+							[{kind: "text", value: "It has \"When I attack"}],
+							[
+								{
+									kind: "text",
+									value: " you may banish a unit from your trash"
+								},
+								{kind: "text", value: "."}
+							]
 						]
-					}
+					},
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: " If you do"}],
+							[
+								{kind: "text", value: " give me "},
+								{kind: "keyword", name: "Assault", param: 4},
+								{kind: "text", value: " this turn"},
+								{kind: "text", value: "."}
+							]
+						]
+					},
+					{kind: "text", value: "\""}
 				]
 			}
 		]
@@ -39793,7 +36641,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -39805,9 +36652,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							[{kind: "text", value: " if you paid the additional cost"}],
 							[
 								{kind: "text", value: " play a "},
-								{kind: "text", value: "0"},
-								{kind: "text", value: " "},
-								{kind: "symbol", value: "M"},
+								{kind: "might", amount: 0},
 								{kind: "text", value: " Shadow Clone unit token"},
 								{kind: "text", value: "."}
 							]
@@ -39903,20 +36748,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: "C"}],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			}
 		]
 	},
@@ -39937,14 +36779,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "I become Empowered if I'm not already"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I become Empowered if I'm not already"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -39990,22 +36829,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 3}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: 3}],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: 3}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -40018,22 +36854,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " and "},
 						{kind: "keyword", name: "Shield", param: 3},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
-						{
-							kind: "reminder_text",
-							value: [
-								{kind: "text", value: "Opponents must pay "},
-								{kind: "symbol", value: "A"},
-								{
-									kind: "text",
-									value: " to choose me with a spell or ability"
-								},
-								{kind: "text", value: "."},
-								{kind: "might", amount: 3, sign: "+"},
-								{kind: "text", value: " while I'm a defender"},
-								{kind: "text", value: "."}
-							]
-						}
+						{kind: "text", value: " "}
+					],
+					reminderText: [
+						{kind: "text", value: "Opponents must pay "},
+						{kind: "symbol", value: "A"},
+						{kind: "text", value: " to choose me with a spell or ability"},
+						{kind: "text", value: "."},
+						{kind: "might", amount: 3, sign: "+"},
+						{kind: "text", value: " while I'm a defender"},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -40056,23 +36886,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Flow",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may play this from your trash for its Flow cost"
-						},
-						{kind: "text", value: "."},
-						{kind: "text", value: " Then banish it"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -40092,21 +36918,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "symbol", value: 1},
 					{kind: "text", value: " less for each rune you control"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "ability",
-								activated: true,
-								cost: [{kind: "text", value: "Pay the cost"}],
-								effect: [
-									{kind: "text", value: "Empower me"},
-									{kind: "text", value: "."},
-									{kind: "text", value: " Use only if not Empowered"},
-									{kind: "text", value: "."}
-								]
-							}
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "text", value: "Pay the cost"}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -40182,27 +37005,21 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -40229,25 +37046,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{kind: "text", value: "Choose one —"},
 			{
@@ -40260,7 +37074,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -40364,7 +37177,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -40398,7 +37210,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -40425,25 +37236,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -40463,25 +37271,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -40490,14 +37295,9 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						kind: "text",
 						value: "Choose a friendly unit that's in combat with an enemy Fury "
 					},
-					{
-						kind: "group",
-						value: [
-							{kind: "text", value: "("},
-							{kind: "symbol", value: "R"},
-							{kind: "text", value: ")"}
-						]
-					},
+					{kind: "text", value: "("},
+					{kind: "symbol", value: "R"},
+					{kind: "text", value: ")"},
 					{
 						kind: "text",
 						value: " unit or that's being chosen by an enemy Fury spell"
@@ -40517,35 +37317,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Weaponmaster",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{kind: "text", value: " you may "},
-									{kind: "keyword", name: "Equip"},
-									{
-										kind: "text",
-										value: " one of your Equipment to me for "
-									},
-									{kind: "symbol", value: "A"},
-									{kind: "text", value: " less"}
-								],
-								[
-									{
-										kind: "text",
-										value: " even if it's already attached"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{kind: "text", value: " you may "},
+								{kind: "keyword", name: "Equip"},
+								{kind: "text", value: " one of your Equipment to me for "},
+								{kind: "symbol", value: "A"},
+								{kind: "text", value: " less"}
+							],
+							[
+								{kind: "text", value: " even if it's already attached"},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -40631,36 +37422,30 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 7}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: 7}],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: 7}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -40719,30 +37504,27 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 4}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 4},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower this"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 4},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower this"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -40784,41 +37566,33 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Deflect",
 				param: 2,
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{
-							kind: "symbol_run",
-							value: [
-								{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}
-							]
-						},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{
+						kind: "symbol_run",
+						value: [{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}]
+					},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 8}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: 8}],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: 8}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -40880,22 +37654,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: 2}],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: 2}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -40915,21 +37686,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Look at the top "},
+					{kind: "text", value: "2"},
+					{kind: "text", value: " cards of your Main Deck"},
+					{kind: "text", value: "."},
 					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Look at the top "},
-							{kind: "text", value: "2"},
-							{kind: "text", value: " cards of your Main Deck"},
-							{kind: "text", value: "."},
-							{
-								kind: "text",
-								value: " Recycle any of them and put the rest back in any order"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: " Recycle any of them and put the rest back in any order"
+					},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -40979,23 +37747,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Flow",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may play this from your trash for its Flow cost"
-						},
-						{kind: "text", value: "."},
-						{kind: "text", value: " Then banish it"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -41015,21 +37779,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "symbol", value: 1},
 					{kind: "text", value: " less for each rune you control"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "ability",
-								activated: true,
-								cost: [{kind: "text", value: "Pay the cost"}],
-								effect: [
-									{kind: "text", value: "Empower me"},
-									{kind: "text", value: "."},
-									{kind: "text", value: " Use only if not Empowered"},
-									{kind: "text", value: "."}
-								]
-							}
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "text", value: "Pay the cost"}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -41045,22 +37806,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " and "},
 						{kind: "keyword", name: "Shield", param: 3},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
-						{
-							kind: "reminder_text",
-							value: [
-								{kind: "text", value: "Opponents must pay "},
-								{kind: "symbol", value: "A"},
-								{
-									kind: "text",
-									value: " to choose me with a spell or ability"
-								},
-								{kind: "text", value: "."},
-								{kind: "might", amount: 3, sign: "+"},
-								{kind: "text", value: " while I'm a defender"},
-								{kind: "text", value: "."}
-							]
-						}
+						{kind: "text", value: " "}
+					],
+					reminderText: [
+						{kind: "text", value: "Opponents must pay "},
+						{kind: "symbol", value: "A"},
+						{kind: "text", value: " to choose me with a spell or ability"},
+						{kind: "text", value: "."},
+						{kind: "might", amount: 3, sign: "+"},
+						{kind: "text", value: " while I'm a defender"},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -41078,23 +37833,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Flow",
 				cost: [{kind: "symbol", value: 2}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may play this from your trash for its Flow cost"
-						},
-						{kind: "text", value: "."},
-						{kind: "text", value: " Then banish it"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -41104,25 +37855,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{kind: "text", value: "Choose one —"},
 			{
@@ -41133,7 +37881,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -41186,21 +37933,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				righthand: [
 					{kind: "text", value: " "},
 					{kind: "symbol", value: "E"},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "ability",
-								activated: true,
-								cost: [{kind: "text", value: "Pay the cost"}],
-								effect: [
-									{kind: "text", value: "Empower me"},
-									{kind: "text", value: "."},
-									{kind: "text", value: " Use only if not Empowered"},
-									{kind: "text", value: "."}
-								]
-							}
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "text", value: "Pay the cost"}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -41234,22 +37978,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 3}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: 3}],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: 3}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -41290,46 +38031,40 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
 				value: [
 					{kind: "keyword", name: "Predict", param: 5},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Look at the top "},
+					{kind: "text", value: "5"},
+					{kind: "text", value: " cards of your Main Deck"},
+					{kind: "text", value: "."},
 					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Look at the top "},
-							{kind: "text", value: "5"},
-							{kind: "text", value: " cards of your Main Deck"},
-							{kind: "text", value: "."},
-							{
-								kind: "text",
-								value: " Recycle any of them and put the rest back in any order"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: " Recycle any of them and put the rest back in any order"
+					},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -41349,22 +38084,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 3}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: 3}],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: 3}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -41393,8 +38125,9 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		description: "(I enter exhausted.)\nWhen you play me, if you control 3 or more other gear, draw 1.",
 		tree: [
 			{
-				kind: "reminder_text",
-				value: [
+				kind: "ability",
+				value: [],
+				reminderText: [
 					{kind: "text", value: "I enter exhausted"}, {kind: "text", value: "."}
 				]
 			},
@@ -41428,13 +38161,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -41446,7 +38176,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -41490,25 +38219,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -41519,19 +38245,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
 					{kind: "text", value: "Give an enemy Body "},
-					{
-						kind: "group",
-						value: [
-							{kind: "text", value: "("},
-							{kind: "symbol", value: "O"},
-							{kind: "text", value: ")"}
-						]
-					},
+					{kind: "text", value: "("},
+					{kind: "symbol", value: "O"},
+					{kind: "text", value: ")"},
 					{kind: "text", value: " unit "},
 					{kind: "might", amount: 5, sign: "-"},
 					{kind: "text", value: " this turn"},
@@ -41550,7 +38270,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -41558,17 +38277,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				effect: [
 					{kind: "text", value: "Empower another gear"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It becomes Empowered if it's not already"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It becomes Empowered if it's not already"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -41633,19 +38346,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Deflect",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Opponents must pay "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to choose me with a spell or ability"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Opponents must pay "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to choose me with a spell or ability"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -41655,27 +38364,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Vision",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "When you play me"}],
-								[
-									{
-										kind: "text",
-										value: " look at the top card of your Main Deck"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "When you play me"}],
+							[
+								{
+									kind: "text",
+									value: " look at the top card of your Main Deck"
+								},
+								{kind: "text", value: "."}
 							]
-						},
-						{kind: "text", value: " You may recycle it"},
-						{kind: "text", value: "."}
-					]
-				}
+						]
+					},
+					{kind: "text", value: " You may recycle it"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -41711,16 +38417,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -41852,27 +38555,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 3}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: 3}],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: 3}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -41930,7 +38629,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{kind: "keyword", name: "Empower", cost: [{kind: "symbol", value: 3}]},
 			{
 				kind: "keyword",
@@ -41975,22 +38673,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 3}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: 3}],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: 3}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -42003,17 +38698,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " and "},
 						{kind: "keyword", name: "Ganking"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
-							value: [
-								{
-									kind: "text",
-									value: "I can move from battlefield to battlefield"
-								},
-								{kind: "text", value: "."}
-							]
-						}
+							kind: "text",
+							value: "I can move from battlefield to battlefield"
+						},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -42048,13 +38740,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -42091,22 +38780,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				value: [
 					{kind: "text", value: "Equip "},
 					{kind: "symbol", value: "C"},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "ability",
-								activated: true,
-								cost: [{kind: "symbol", value: "C"}],
-								effect: [
-									{
-										kind: "text",
-										value: "Attach this to a unit you control"
-									},
-									{kind: "text", value: "."}
-								]
-							}
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: "C"}],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -42124,21 +38807,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "symbol", value: 1},
 					{kind: "text", value: " or "},
 					{kind: "symbol", value: "C"},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "ability",
-								activated: true,
-								cost: [{kind: "text", value: "Pay either cost"}],
-								effect: [
-									{kind: "text", value: "Empower me"},
-									{kind: "text", value: "."},
-									{kind: "text", value: " Use only if not Empowered"},
-									{kind: "text", value: "."}
-								]
-							}
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "text", value: "Pay either cost"}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -42167,7 +38847,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "infix_group",
 				lefthand: [{kind: "keyword", name: "Empower"}],
@@ -42260,18 +38939,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "keyword", name: "Assault"},
 					{kind: "text", value: " equal to the number of gear you control"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
 					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 1, sign: "+"},
-							{
-								kind: "text",
-								value: " while I'm an attacker for each instance of Assault"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: " while I'm an attacker for each instance of Assault"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -42283,22 +38959,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: 2}],
-							effect: [
-								{kind: "text", value: "Empower this"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: 2}],
+						effect: [
+							{kind: "text", value: "Empower this"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -42340,31 +39013,28 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "symbol", value: "A"},
 					{kind: "symbol", value: "A"}
 				],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 1},
-										{kind: "symbol", value: "A"},
-										{kind: "symbol", value: "A"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 1},
+									{kind: "symbol", value: "A"},
+									{kind: "symbol", value: "A"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -42392,26 +39062,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "text", value: "2"},
 							{kind: "text", value: " runes exhausted"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
+								kind: "list",
+								separator: ",",
 								value: [
-									{
-										kind: "list",
-										separator: ",",
-										value: [
-											[
-												{
-													kind: "text",
-													value: "When I die while Empowered"
-												}
-											],
-											[
-												{kind: "text", value: " get the effect"},
-												{kind: "text", value: "."}
-											]
-										]
-									}
+									[
+										{
+											kind: "text",
+											value: "When I die while Empowered"
+										}
+									],
+									[
+										{kind: "text", value: " get the effect"},
+										{kind: "text", value: "."}
+									]
 								]
 							}
 						]
@@ -42427,30 +39094,27 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 5}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 5},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 5},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -42528,23 +39192,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Flow",
 				cost: [{kind: "symbol", value: 4}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may play this from your trash for its Flow cost"
-						},
-						{kind: "text", value: "."},
-						{kind: "text", value: " Then banish it"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -42597,7 +39257,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -42632,30 +39291,27 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 3}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 3},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 3},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -42713,14 +39369,9 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						kind: "text",
 						value: " They reveal their hand and you choose a Mind "
 					},
-					{
-						kind: "group",
-						value: [
-							{kind: "text", value: "("},
-							{kind: "symbol", value: "B"},
-							{kind: "text", value: ")"}
-						]
-					},
+					{kind: "text", value: "("},
+					{kind: "symbol", value: "B"},
+					{kind: "text", value: ")"},
 					{kind: "text", value: " card from it"},
 					{kind: "text", value: "."},
 					{kind: "text", value: " They recycle that card"},
@@ -42736,30 +39387,27 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: "C"}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: "C"},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: "C"},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -42803,23 +39451,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "infix_group",
 				lefthand: [{kind: "keyword", name: "Empower"}],
 				operator: " — ",
-				righthand: [
-					{kind: "symbol", value: "E"},
-					{kind: "text", value: " "},
+				righthand: [{kind: "symbol", value: "E"}, {kind: "text", value: " "}],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "ability",
-								activated: true,
-								cost: [{kind: "text", value: "Pay the cost"}],
-								effect: [
-									{kind: "text", value: "Empower this"},
-									{kind: "text", value: "."},
-									{kind: "text", value: " Use only if not Empowered"},
-									{kind: "text", value: "."}
-								]
-							}
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "text", value: "Pay the cost"}],
+						effect: [
+							{kind: "text", value: "Empower this"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -42867,14 +39509,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						kind: "keyword",
 						name: "Assault",
 						param: 2,
-						reminderText: {
-							kind: "reminder_text",
-							value: [
-								{kind: "might", amount: 2, sign: "+"},
-								{kind: "text", value: " while I'm an attacker"},
-								{kind: "text", value: "."}
-							]
-						}
+						reminderText: [
+							{kind: "might", amount: 2, sign: "+"},
+							{kind: "text", value: " while I'm an attacker"},
+							{kind: "text", value: "."}
+						]
 					}
 				]
 			},
@@ -42887,24 +39526,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						kind: "keyword",
 						name: "Deflect",
 						param: 2,
-						reminderText: {
-							kind: "reminder_text",
-							value: [
-								{kind: "text", value: "Opponents must pay "},
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: "A"},
-										{kind: "symbol", value: "A"}
-									]
-								},
-								{
-									kind: "text",
-									value: " to choose me with a spell or ability"
-								},
-								{kind: "text", value: "."}
-							]
-						}
+						reminderText: [
+							{kind: "text", value: "Opponents must pay "},
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: "A"},
+									{kind: "symbol", value: "A"}
+								]
+							},
+							{kind: "text", value: " to choose me with a spell or ability"},
+							{kind: "text", value: "."}
+						]
 					}
 				]
 			},
@@ -42916,16 +39549,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{
 						kind: "keyword",
 						name: "Ganking",
-						reminderText: {
-							kind: "reminder_text",
-							value: [
-								{
-									kind: "text",
-									value: "I can move from battlefield to battlefield"
-								},
-								{kind: "text", value: "."}
-							]
-						}
+						reminderText: [
+							{
+								kind: "text",
+								value: "I can move from battlefield to battlefield"
+							},
+							{kind: "text", value: "."}
+						]
 					}
 				]
 			}
@@ -43003,17 +39633,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				effect: [
 					{kind: "text", value: "Empower it"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It becomes Empowered if it's not already"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It becomes Empowered if it's not already"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -43055,7 +39679,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -43093,7 +39716,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -43112,14 +39734,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "I become Empowered if I'm not already"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I become Empowered if I'm not already"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -43133,24 +39752,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " and "},
 						{kind: "keyword", name: "Ganking"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
+						{kind: "text", value: "Opponents must pay "},
+						{kind: "symbol", value: "A"},
+						{kind: "text", value: " to choose me with a spell or ability"},
+						{kind: "text", value: "."},
 						{
-							kind: "reminder_text",
-							value: [
-								{kind: "text", value: "Opponents must pay "},
-								{kind: "symbol", value: "A"},
-								{
-									kind: "text",
-									value: " to choose me with a spell or ability"
-								},
-								{kind: "text", value: "."},
-								{
-									kind: "text",
-									value: " I can move from battlefield to battlefield"
-								},
-								{kind: "text", value: "."}
-							]
-						}
+							kind: "text",
+							value: " I can move from battlefield to battlefield"
+						},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -43170,7 +39783,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -43191,7 +39803,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Empowered",
@@ -43215,22 +39826,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: 2}],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: 2}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -43243,17 +39851,14 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " and "},
 						{kind: "keyword", name: "Ganking"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
 						{
-							kind: "reminder_text",
-							value: [
-								{
-									kind: "text",
-									value: "I can move from battlefield to battlefield"
-								},
-								{kind: "text", value: "."}
-							]
-						}
+							kind: "text",
+							value: "I can move from battlefield to battlefield"
+						},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -43305,27 +39910,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{kind: "text", value: "To Burn "},
-										{kind: "text", value: "1"}
-									],
-									[
-										{
-											kind: "text",
-											value: " put the top card of your Main Deck into your trash"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{kind: "text", value: "To Burn "},
+								{kind: "text", value: "1"}
+							],
+							[
+								{
+									kind: "text",
+									value: " put the top card of your Main Deck into your trash"
+								},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -43355,16 +39957,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -43378,7 +39977,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -43425,16 +40023,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -43468,23 +40063,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Flow",
 				cost: [{kind: "symbol", value: 3}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may play this from your trash for its Flow cost"
-						},
-						{kind: "text", value: "."},
-						{kind: "text", value: " Then banish it"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -43500,7 +40091,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -43521,15 +40111,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 2, sign: "+"},
-							{kind: "text", value: " while it's an attacker"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 2, sign: "+"},
+					{kind: "text", value: " while it's an attacker"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -43576,30 +40163,27 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 2}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 2},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 2},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -43651,23 +40235,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Flow",
 				cost: [{kind: "symbol", value: 4}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may play this from your trash for its Flow cost"
-						},
-						{kind: "text", value: "."},
-						{kind: "text", value: " Then banish it"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -43677,13 +40257,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -43727,14 +40304,9 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "ability",
 				value: [
 					{kind: "text", value: "Return any number of enemy Order "},
-					{
-						kind: "group",
-						value: [
-							{kind: "text", value: "("},
-							{kind: "symbol", value: "Y"},
-							{kind: "text", value: ")"}
-						]
-					},
+					{kind: "text", value: "("},
+					{kind: "symbol", value: "Y"},
+					{kind: "text", value: ")"},
 					{kind: "text", value: " units with total Might "},
 					{kind: "text", value: "5"},
 					{kind: "text", value: " or less to their owners' hands"},
@@ -43782,27 +40354,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "symbol", value: "M"},
 					{kind: "text", value: " equal to the burned card's Might this turn"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{kind: "text", value: "To Burn "},
-										{kind: "text", value: "1"}
-									],
-									[
-										{
-											kind: "text",
-											value: " put the top card of your Main Deck into your trash"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{kind: "text", value: "To Burn "},
+								{kind: "text", value: "1"}
+							],
+							[
+								{
+									kind: "text",
+									value: " put the top card of your Main Deck into your trash"
+								},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -43835,7 +40404,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -43854,22 +40422,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "infix_group",
 				lefthand: [{kind: "keyword", name: "Empower"}],
 				operator: " — ",
-				righthand: [
-					{kind: "text", value: "Discard a spell "},
+				righthand: [{kind: "text", value: "Discard a spell "}],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "ability",
-								activated: true,
-								cost: [{kind: "text", value: "Pay the cost"}],
-								effect: [
-									{kind: "text", value: "Empower me"},
-									{kind: "text", value: "."},
-									{kind: "text", value: " Use only if not Empowered"},
-									{kind: "text", value: "."}
-								]
-							}
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "text", value: "Pay the cost"}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -43955,7 +40518,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -43980,9 +40542,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							[{kind: "text", value: "When I conquer"}],
 							[
 								{kind: "text", value: " play a "},
-								{kind: "text", value: "0"},
-								{kind: "text", value: " "},
-								{kind: "symbol", value: "M"},
+								{kind: "might", amount: 0},
 								{
 									kind: "text",
 									value: " Shadow Clone unit token to your base"
@@ -43991,73 +40551,62 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "It has \"When I attack"}],
-									[
-										{
-											kind: "text",
-											value: " you may banish a unit from your trash"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: " If you do"}],
-									[
-										{kind: "text", value: " give me "},
-										{kind: "keyword", name: "Assault", param: 4},
-										{kind: "text", value: " this turn"},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{
-								kind: "group",
-								value: [
-									{kind: "text", value: "("},
-									{kind: "text", value: "\""},
-									{kind: "text", value: ")"}
-								]
-							},
-							{
-								kind: "keyword",
-								name: "Action",
-								associated: {
-									kind: "ability",
-									activated: true,
-									cost: [
-										{kind: "text", value: " "},
-										{
-											kind: "symbol_run",
-											value: [
-												{kind: "symbol", value: 1},
-												{kind: "symbol", value: "C"}
-											]
-										}
-									],
-									effect: [
-										{
-											kind: "text",
-											value: "Move me and a Shadow Clone you control to each other's locations"
-										},
-										{kind: "text", value: "."}
-									]
-								}
-							}
+							[{kind: "text", value: "It has \"When I attack"}],
+							[
+								{
+									kind: "text",
+									value: " you may banish a unit from your trash"
+								},
+								{kind: "text", value: "."}
+							]
 						]
-					}
+					},
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: " If you do"}],
+							[
+								{kind: "text", value: " give me "},
+								{kind: "keyword", name: "Assault", param: 4},
+								{kind: "text", value: " this turn"},
+								{kind: "text", value: "."}
+							]
+						]
+					},
+					{kind: "text", value: "\""}
 				]
+			},
+			{
+				kind: "keyword",
+				name: "Action",
+				associated: {
+					kind: "ability",
+					activated: true,
+					cost: [
+						{kind: "text", value: " "},
+						{
+							kind: "symbol_run",
+							value: [
+								{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}
+							]
+						}
+					],
+					effect: [
+						{
+							kind: "text",
+							value: "Move me and a Shadow Clone you control to each other's locations"
+						},
+						{kind: "text", value: "."}
+					]
+				}
 			}
 		]
 	},
@@ -44074,9 +40623,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							[{kind: "text", value: "When I conquer"}],
 							[
 								{kind: "text", value: " play a "},
-								{kind: "text", value: "0"},
-								{kind: "text", value: " "},
-								{kind: "symbol", value: "M"},
+								{kind: "might", amount: 0},
 								{
 									kind: "text",
 									value: " Shadow Clone unit token to your base"
@@ -44087,7 +40634,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Action",
@@ -44132,19 +40678,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Put the top "},
-							{kind: "text", value: "2"},
-							{
-								kind: "text",
-								value: " cards of your Main Deck into your trash"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Put the top "},
+					{kind: "text", value: "2"},
+					{kind: "text", value: " cards of your Main Deck into your trash"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -44163,19 +40703,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "You may play it from your trash for its Flow cost"
-							},
-							{kind: "text", value: "."},
-							{kind: "text", value: " Then banish it"},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "You may play it from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -44200,7 +40737,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -44232,31 +40768,28 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "symbol", value: "C"},
 					{kind: "symbol", value: "C"}
 				],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 6},
-										{kind: "symbol", value: "C"},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 6},
+									{kind: "symbol", value: "C"},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -44298,29 +40831,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[
-										{kind: "text", value: "To Burn "},
-										{kind: "text", value: "3"}
-									],
-									[
-										{kind: "text", value: " they put the top "},
-										{kind: "text", value: "3"},
-										{
-											kind: "text",
-											value: " cards of their Main Deck into their trash"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							}
+							[
+								{kind: "text", value: "To Burn "},
+								{kind: "text", value: "3"}
+							],
+							[
+								{kind: "text", value: " they put the top "},
+								{kind: "text", value: "3"},
+								{
+									kind: "text",
+									value: " cards of their Main Deck into their trash"
+								},
+								{kind: "text", value: "."}
+							]
 						]
 					}
 				]
@@ -44337,7 +40867,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -44373,23 +40902,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Flow",
 				cost: [{kind: "symbol", value: 3}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may play this from your trash for its Flow cost"
-						},
-						{kind: "text", value: "."},
-						{kind: "text", value: " Then banish it"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -44399,16 +40924,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -44420,15 +40942,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						value: " while I'm at a battlefield with exactly one other unit you control"
 					},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "might", amount: 3, sign: "+"},
-							{kind: "text", value: " while I'm a defender"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "might", amount: 3, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -44439,13 +40958,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Tank",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "I must be assigned combat damage first"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "I must be assigned combat damage first"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -44470,7 +40986,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-120/166": {
-		verified: false,
+		verified: true,
 		description: "You may pay [C] as an additional cost to play me. \nWhen you play me, if you paid the additional cost, [Stun] an enemy unit at a battlefield. (It doesn't deal combat damage this turn.)",
 		tree: [
 			{
@@ -44500,17 +41016,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -44540,29 +41050,26 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-122/166": {
-		verified: false,
+		verified: true,
 		description: "[Empower] [2] ([2]: Empower me. Use only if not Empowered.)\n[Empowered][>] I have +1 [M] and [Deflect 2]. (Opponents must pay [A][A] to choose me with a spell or ability.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 2}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: 2}],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: 2}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -44575,25 +41082,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " and "},
 						{kind: "keyword", name: "Deflect", param: 2},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
+						{kind: "text", value: "Opponents must pay "},
 						{
-							kind: "reminder_text",
+							kind: "symbol_run",
 							value: [
-								{kind: "text", value: "Opponents must pay "},
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: "A"},
-										{kind: "symbol", value: "A"}
-									]
-								},
-								{
-									kind: "text",
-									value: " to choose me with a spell or ability"
-								},
-								{kind: "text", value: "."}
+								{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}
 							]
-						}
+						},
+						{kind: "text", value: " to choose me with a spell or ability"},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -44606,15 +41106,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Ambush",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "You may play me as a "},
-						{kind: "keyword", name: "Reaction"},
-						{kind: "text", value: " to a battlefield where you have units"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "You may play me as a "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: " to a battlefield where you have units"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -44626,22 +41123,17 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "infix_group",
 				lefthand: [{kind: "keyword", name: "Empower"}],
 				operator: " — ",
-				righthand: [
-					{kind: "text", value: "Kill a friendly unit "},
+				righthand: [{kind: "text", value: "Kill a friendly unit "}],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "ability",
-								activated: true,
-								cost: [{kind: "text", value: "Pay the cost"}],
-								effect: [
-									{kind: "text", value: "Empower me"},
-									{kind: "text", value: "."},
-									{kind: "text", value: " Use only if not Empowered"},
-									{kind: "text", value: "."}
-								]
-							}
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "text", value: "Pay the cost"}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
 						]
 					}
 				]
@@ -44683,31 +41175,28 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-126/166": {
-		verified: false,
+		verified: true,
 		description: "[Reaction] (Play any time, even before spells and abilities resolve.)\nChoose a unit. Prevent the next 7 damage that would be dealt to it this turn. (Opponents can assign it extra combat damage to kill it.)",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -44718,23 +41207,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "7"},
 					{kind: "text", value: " damage that would be dealt to it this turn"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "Opponents can assign it extra combat damage to kill it"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+						kind: "text",
+						value: "Opponents can assign it extra combat damage to kill it"
+					},
+					{kind: "text", value: "."}
 				]
 			}
 		]
 	},
 	"ven-127/166": {
-		verified: false,
+		verified: true,
 		description: "Choose a unit. If it's [Empowered], disempower it. Then kill it if it has 3 [M] or less.\n[Flow] [4][C][C] (You may play this from your trash for its Flow cost. Then banish it.)",
 		tree: [
 			{
@@ -44762,7 +41248,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Flow",
@@ -44771,18 +41256,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "symbol", value: "C"},
 					{kind: "symbol", value: "C"}
 				],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may play this from your trash for its Flow cost"
-						},
-						{kind: "text", value: "."},
-						{kind: "text", value: " Then banish it"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -44794,30 +41276,27 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 1},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 1},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -44833,26 +41312,23 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							{kind: "might", amount: 1},
 							{kind: "text", value: " Recruit unit tokens to your base"},
 							{kind: "text", value: "."},
-							{kind: "text", value: " "},
+							{kind: "text", value: " "}
+						],
+						reminderText: [
 							{
-								kind: "reminder_text",
+								kind: "list",
+								separator: ",",
 								value: [
-									{
-										kind: "list",
-										separator: ",",
-										value: [
-											[
-												{
-													kind: "text",
-													value: "When I die while Empowered"
-												}
-											],
-											[
-												{kind: "text", value: " get the effect"},
-												{kind: "text", value: "."}
-											]
-										]
-									}
+									[
+										{
+											kind: "text",
+											value: "When I die while Empowered"
+										}
+									],
+									[
+										{kind: "text", value: " get the effect"},
+										{kind: "text", value: "."}
+									]
 								]
 							}
 						]
@@ -44862,7 +41338,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-129/166": {
-		verified: false,
+		verified: true,
 		description: "I don't deal combat damage unless I'm at a battlefield with exactly one other unit you control.",
 		tree: [
 			{
@@ -44878,37 +41354,34 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-130/166": {
-		verified: false,
+		verified: true,
 		description: "[Empower] [3][C] ([3][C]: Empower me. Use only if not Empowered.)\n[Empowered][>] Your units that are [Empowered] have +2 [M] (including me).",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 3}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 3},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 3},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -44921,20 +41394,10 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "text", value: " have "},
 						{kind: "might", amount: 2, sign: "+"},
 						{kind: "text", value: " "},
-						{
-							kind: "reminder_text",
-							value: [
-								{
-									kind: "group",
-									value: [
-										{kind: "text", value: "("},
-										{kind: "text", value: "including me"},
-										{kind: "text", value: ")"}
-									]
-								},
-								{kind: "text", value: "."}
-							]
-						}
+						{kind: "text", value: "("},
+						{kind: "text", value: "including me"},
+						{kind: "text", value: ")"},
+						{kind: "text", value: "."}
 					]
 				}
 			}
@@ -44948,14 +41411,9 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "ability",
 				value: [
 					{kind: "text", value: "Kill an enemy Chaos "},
-					{
-						kind: "group",
-						value: [
-							{kind: "text", value: "("},
-							{kind: "symbol", value: "P"},
-							{kind: "text", value: ")"}
-						]
-					},
+					{kind: "text", value: "("},
+					{kind: "symbol", value: "P"},
+					{kind: "text", value: ")"},
 					{kind: "text", value: " unit or gear"},
 					{kind: "text", value: "."}
 				]
@@ -44963,7 +41421,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-132/166": {
-		verified: false,
+		verified: true,
 		description: "When you play me, name a spell.\nWhile I'm at a battlefield, opponents can't play spells with that name.",
 		tree: [
 			{
@@ -44982,7 +41440,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -45005,37 +41462,34 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-133/166": {
-		verified: false,
+		verified: true,
 		description: "[Empower] [A][A] ([A][A]: Empower me. Use only if not Empowered.)\nDisempower this, [E]: Choose a player. They gain control of this and recall it. (Send it to their base.)\nAt the end of your turn, kill this and deal 5 to all units you control.",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: "A"}, {kind: "symbol", value: "A"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: "A"},
-										{kind: "symbol", value: "A"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: "A"},
+									{kind: "symbol", value: "A"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -45055,14 +41509,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."},
 					{kind: "text", value: " They gain control of this and recall it"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Send it to their base"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Send it to their base"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -45086,27 +41537,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-134/166": {
-		verified: false,
+		verified: true,
 		description: "[Empower] [3] ([3]: Empower me.)\nI can be [Empowered] up to three times.\nI have +2 [M] for each time I'm [Empowered].\nWhile I'm [Empowered] three times, I have [Deflect 3] and [Ganking].",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 3}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: 3}],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: 3}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -45117,7 +41565,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -45128,7 +41575,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -45155,22 +41601,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-135/166": {
-		verified: false,
+		verified: true,
 		description: "[Hidden] (Hide now for [A] to react with later for [0].)\nWhen you play me or I attack, you may pay [2] to [Stun] a unit. (It doesn't deal combat damage this turn.)\nWhile there's a stunned enemy unit here, I have +2 [M].",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Hidden",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Hide now for "},
-						{kind: "symbol", value: "A"},
-						{kind: "text", value: " to react with later for "},
-						{kind: "symbol", value: 0},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Hide now for "},
+					{kind: "symbol", value: "A"},
+					{kind: "text", value: " to react with later for "},
+					{kind: "symbol", value: 0},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -45190,17 +41633,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{
-								kind: "text",
-								value: "It doesn't deal combat damage this turn"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "It doesn't deal combat damage this turn"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -45228,7 +41665,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-135a/166": {
-		verified: false,
+		verified: true,
 		description: "[Hidden]\nWhen you play me or I attack, you may pay [2] to [Stun] a unit.\nWhile there's a stunned enemy unit here, I have +2 [M].",
 		tree: [
 			{kind: "keyword", name: "Hidden"},
@@ -45252,7 +41689,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -45289,80 +41725,69 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "symbol", value: "C"},
 					{kind: "symbol", value: "C"}
 				],
-				reminderText: {
-					kind: "reminder_text",
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 1},
+									{kind: "symbol", value: "C"},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
+			},
+			{
+				kind: "keyword",
+				name: "Empowered",
+				associated: {
+					kind: "ability",
 					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 1},
-										{kind: "symbol", value: "C"},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
+						{kind: "text", value: " I have "},
+						{kind: "keyword", name: "Assault", param: 2},
+						{kind: "text", value: "."},
+						{kind: "text", value: " "}
+					],
+					reminderText: [
+						{kind: "might", amount: 2, sign: "+"},
+						{kind: "text", value: " while I'm an attacker"},
+						{kind: "text", value: "."}
 					]
 				}
 			},
 			{
-				kind: "ability",
-				value: [
-					{
-						kind: "keyword",
-						name: "Empowered",
-						associated: {
-							kind: "ability",
+				kind: "keyword",
+				name: "Empowered",
+				associated: {
+					kind: "ability",
+					value: [
+						{
+							kind: "list",
+							separator: ",",
 							value: [
-								{kind: "text", value: " I have "},
-								{kind: "keyword", name: "Assault", param: 2},
-								{kind: "text", value: "."},
-								{kind: "text", value: " "},
-								{
-									kind: "reminder_text",
-									value: [
-										{kind: "might", amount: 2, sign: "+"},
-										{kind: "text", value: " while I'm an attacker"},
-										{kind: "text", value: "."}
-									]
-								}
+								[{kind: "text", value: " When I attack"}],
+								[
+									{
+										kind: "text",
+										value: " kill an enemy unit here with less Might than me"
+									},
+									{kind: "text", value: "."}
+								]
 							]
 						}
-					},
-					{
-						kind: "keyword",
-						name: "Empowered",
-						associated: {
-							kind: "ability",
-							value: [
-								{
-									kind: "list",
-									separator: ",",
-									value: [
-										[{kind: "text", value: " When I attack"}],
-										[
-											{
-												kind: "text",
-												value: " kill an enemy unit here with less Might than me"
-											},
-											{kind: "text", value: "."}
-										]
-									]
-								}
-							]
-						}
-					}
-				]
+					]
+				}
 			}
 		]
 	},
@@ -45424,28 +41849,25 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Equip",
 				cost: [{kind: "symbol", value: 1}, {kind: "symbol", value: "C"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 1},
-										{kind: "symbol", value: "C"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Attach this to a unit you control"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 1},
+									{kind: "symbol", value: "C"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Attach this to a unit you control"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -45477,14 +41899,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Shield",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "might", amount: 1, sign: "+"},
-						{kind: "text", value: " while I'm a defender"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "might", amount: 1, sign: "+"},
+					{kind: "text", value: " while I'm a defender"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -45551,30 +41970,27 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 3}, {kind: "symbol", value: "A"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 3},
-										{kind: "symbol", value: "A"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower this"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 3},
+									{kind: "symbol", value: "A"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower this"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "keyword",
@@ -45608,7 +42024,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-140/166": {
-		verified: false,
+		verified: true,
 		description: "Deal 2 to up to one enemy unit at a battlefield, then move a friendly unit.\n[Flow] [3][A] (You may play this from your trash for its Flow cost. Then banish it.)",
 		tree: [
 			{
@@ -45634,23 +42050,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Flow",
 				cost: [{kind: "symbol", value: 3}, {kind: "symbol", value: "A"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may play this from your trash for its Flow cost"
-						},
-						{kind: "text", value: "."},
-						{kind: "text", value: " Then banish it"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -45699,19 +42111,16 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-142/166": {
-		verified: false,
+		verified: true,
 		description: "[Action] (Play on your turn or in showdowns.)\nThis turn, double a unit's Might and give it \"[A][A]: Ready me.\"",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Action",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{kind: "text", value: "Play on your turn or in showdowns"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{kind: "text", value: "Play on your turn or in showdowns"},
+					{kind: "text", value: "."}
+				]
 			},
 			{
 				kind: "ability",
@@ -45744,7 +42153,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-143/166": {
-		verified: false,
+		verified: true,
 		description: "When you banish a card you own, empower me. (I become Empowered if I'm not already.)\n[Action][>] Disempower me, [E]: Discard 1, then draw 1.",
 		tree: [
 			{
@@ -45761,14 +42170,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "I become Empowered if I'm not already"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I become Empowered if I'm not already"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -45809,7 +42215,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-144/166": {
-		verified: false,
+		verified: true,
 		description: "[Burn 3]. (Put the top 3 cards of your Main Deck into your trash.)\nPlay a 0 [M] Shadow Clone unit token. (It has \"When I attack, you may banish a unit from your trash. If you do, give me [Assault 4] this turn.\")\n[Flow] [1][A][A] (You may play this from your trash for its Flow cost. Then banish it.)",
 		tree: [
 			{
@@ -45817,92 +42223,71 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 				value: [
 					{kind: "keyword", name: "Burn", param: 3},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Put the top "},
-							{kind: "text", value: "3"},
-							{
-								kind: "text",
-								value: " cards of your Main Deck into your trash"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Put the top "},
+					{kind: "text", value: "3"},
+					{kind: "text", value: " cards of your Main Deck into your trash"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
 				kind: "ability",
 				value: [
 					{kind: "text", value: "Play a "},
-					{kind: "text", value: "0"},
-					{kind: "text", value: " "},
-					{kind: "symbol", value: "M"},
+					{kind: "might", amount: 0},
 					{kind: "text", value: " Shadow Clone unit token"},
 					{kind: "text", value: "."},
-					{kind: "text", value: " "},
+					{kind: "text", value: " "}
+				],
+				reminderText: [
 					{
-						kind: "reminder_text",
+						kind: "list",
+						separator: ",",
 						value: [
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: "It has \"When I attack"}],
-									[
-										{
-											kind: "text",
-											value: " you may banish a unit from your trash"
-										},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{
-								kind: "list",
-								separator: ",",
-								value: [
-									[{kind: "text", value: " If you do"}],
-									[
-										{kind: "text", value: " give me "},
-										{kind: "keyword", name: "Assault", param: 4},
-										{kind: "text", value: " this turn"},
-										{kind: "text", value: "."}
-									]
-								]
-							},
-							{
-								kind: "group",
-								value: [
-									{kind: "text", value: "("},
-									{kind: "text", value: "\""},
-									{kind: "text", value: ")"}
-								]
-							},
-							{
-								kind: "keyword",
-								name: "Flow",
-								cost: [
-									{kind: "symbol", value: 1},
-									{kind: "symbol", value: "A"},
-									{kind: "symbol", value: "A"}
-								],
-								reminderText: {
-									kind: "reminder_text",
-									value: [
-										{
-											kind: "text",
-											value: "You may play this from your trash for its Flow cost"
-										},
-										{kind: "text", value: "."},
-										{kind: "text", value: " Then banish it"},
-										{kind: "text", value: "."}
-									]
-								}
-							}
+							[{kind: "text", value: "It has \"When I attack"}],
+							[
+								{
+									kind: "text",
+									value: " you may banish a unit from your trash"
+								},
+								{kind: "text", value: "."}
+							]
 						]
-					}
+					},
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: " If you do"}],
+							[
+								{kind: "text", value: " give me "},
+								{kind: "keyword", name: "Assault", param: 4},
+								{kind: "text", value: " this turn"},
+								{kind: "text", value: "."}
+							]
+						]
+					},
+					{kind: "text", value: "\""}
+				]
+			},
+			{
+				kind: "keyword",
+				name: "Flow",
+				cost: [
+					{kind: "symbol", value: 1},
+					{kind: "symbol", value: "A"},
+					{kind: "symbol", value: "A"}
+				],
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -45989,7 +42374,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-147/166": {
-		verified: false,
+		verified: true,
 		description: "[Action][>] [E]: Give a friendly unit [Tank] this turn. (It must be assigned combat damage first.)",
 		tree: [
 			{
@@ -46004,24 +42389,18 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "keyword", name: "Tank"},
 						{kind: "text", value: " this turn"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
-						{
-							kind: "reminder_text",
-							value: [
-								{
-									kind: "text",
-									value: "It must be assigned combat damage first"
-								},
-								{kind: "text", value: "."}
-							]
-						}
+						{kind: "text", value: " "}
+					],
+					reminderText: [
+						{kind: "text", value: "It must be assigned combat damage first"},
+						{kind: "text", value: "."}
 					]
 				}
 			}
 		]
 	},
 	"ven-148/166": {
-		verified: false,
+		verified: true,
 		description: "Move an enemy unit to a battlefield where you have units. If you have exactly two units there, they each get +1 [M] this turn.\n[Flow] [5][A][A] (You may play this from your trash for its Flow cost. Then banish it.)",
 		tree: [
 			{
@@ -46052,7 +42431,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Flow",
@@ -46061,18 +42439,15 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "symbol", value: "A"},
 					{kind: "symbol", value: "A"}
 				],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may play this from your trash for its Flow cost"
-						},
-						{kind: "text", value: "."},
-						{kind: "text", value: " Then banish it"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -46088,31 +42463,28 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "symbol", value: "A"},
 					{kind: "symbol", value: "A"}
 				],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [
-								{
-									kind: "symbol_run",
-									value: [
-										{kind: "symbol", value: 2},
-										{kind: "symbol", value: "A"},
-										{kind: "symbol", value: "A"}
-									]
-								}
-							],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."},
-								{kind: "text", value: " Use only if not Empowered"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [
+							{
+								kind: "symbol_run",
+								value: [
+									{kind: "symbol", value: 2},
+									{kind: "symbol", value: "A"},
+									{kind: "symbol", value: "A"}
+								]
+							}
+						],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."},
+							{kind: "text", value: " Use only if not Empowered"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -46187,7 +42559,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-151/166": {
-		verified: false,
+		verified: true,
 		description: "When you empower something else, empower me. (I become Empowered if I'm not already.)\nDisempower me, [E]: Give a unit at a battlefield -2 [M] this turn.",
 		tree: [
 			{
@@ -46204,14 +42576,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "I become Empowered if I'm not already"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I become Empowered if I'm not already"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -46243,25 +42612,22 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 			{
 				kind: "keyword",
 				name: "Reaction",
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "list",
-							separator: ",",
-							value: [
-								[{kind: "text", value: "Play any time"}],
-								[
-									{
-										kind: "text",
-										value: " even before spells and abilities resolve"
-									},
-									{kind: "text", value: "."}
-								]
+				reminderText: [
+					{
+						kind: "list",
+						separator: ",",
+						value: [
+							[{kind: "text", value: "Play any time"}],
+							[
+								{
+									kind: "text",
+									value: " even before spells and abilities resolve"
+								},
+								{kind: "text", value: "."}
 							]
-						}
-					]
-				}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -46302,7 +42668,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-153/166": {
-		verified: false,
+		verified: true,
 		description: "When you empower something else, empower me. (I become Empowered if I'm not already.)\nDisempower me, [A], [E]: Ready a unit.",
 		tree: [
 			{
@@ -46319,14 +42685,11 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "I become Empowered if I'm not already"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "I become Empowered if I'm not already"},
+					{kind: "text", value: "."}
 				]
 			},
 			{
@@ -46348,7 +42711,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-154/166": {
-		verified: false,
+		verified: true,
 		description: "Choose a friendly unit. Kill an enemy unit with less Might than it.\n[Flow] [5][A][A] (You may play this from your trash for its Flow cost. Then banish it.)",
 		tree: [
 			{
@@ -46360,7 +42723,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Flow",
@@ -46369,23 +42731,20 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "symbol", value: "A"},
 					{kind: "symbol", value: "A"}
 				],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may play this from your trash for its Flow cost"
-						},
-						{kind: "text", value: "."},
-						{kind: "text", value: " Then banish it"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
 	"ven-155/166": {
-		verified: false,
+		verified: true,
 		description: "When you play a card from anywhere other than your hand, empower me.\n[Action][>] Disempower me, [E]: Give a unit [Assault 2] this turn. (+2 [M] while it's an attacker.)",
 		tree: [
 			{
@@ -46409,7 +42768,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Action",
@@ -46431,22 +42789,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 						{kind: "keyword", name: "Assault", param: 2},
 						{kind: "text", value: " this turn"},
 						{kind: "text", value: "."},
-						{kind: "text", value: " "},
-						{
-							kind: "reminder_text",
-							value: [
-								{kind: "might", amount: 2, sign: "+"},
-								{kind: "text", value: " while it's an attacker"},
-								{kind: "text", value: "."}
-							]
-						}
+						{kind: "text", value: " "}
+					],
+					reminderText: [
+						{kind: "might", amount: 2, sign: "+"},
+						{kind: "text", value: " while it's an attacker"},
+						{kind: "text", value: "."}
 					]
 				}
 			}
 		]
 	},
 	"ven-156/166": {
-		verified: false,
+		verified: true,
 		description: "Look at the top 3 cards of your Main Deck. You may choose a card from among them and draw it. Put the rest into your trash.\n[Flow] [2][A] (You may play this from your trash for its Flow cost. Then banish it.)",
 		tree: [
 			{
@@ -46465,23 +42820,19 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Flow",
 				cost: [{kind: "symbol", value: 2}, {kind: "symbol", value: "A"}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "text",
-							value: "You may play this from your trash for its Flow cost"
-						},
-						{kind: "text", value: "."},
-						{kind: "text", value: " Then banish it"},
-						{kind: "text", value: "."}
-					]
-				}
+				reminderText: [
+					{
+						kind: "text",
+						value: "You may play this from your trash for its Flow cost"
+					},
+					{kind: "text", value: "."},
+					{kind: "text", value: " Then banish it"},
+					{kind: "text", value: "."}
+				]
 			}
 		]
 	},
@@ -46549,7 +42900,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-160/166": {
-		verified: false,
+		verified: true,
 		description: "During showdowns here, cards with [Reaction] cost [A] more to play. (Hidden cards have [Reaction].)",
 		tree: [
 			{
@@ -46570,15 +42921,12 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Hidden cards have "},
-							{kind: "keyword", name: "Reaction"},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Hidden cards have "},
+					{kind: "keyword", name: "Reaction"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -46682,7 +43030,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-165/166": {
-		verified: false,
+		verified: true,
 		description: "When you hold here, [Burn 3]. (Put the top 3 cards of your Main Deck into your trash.)",
 		tree: [
 			{
@@ -46700,19 +43048,13 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							]
 						]
 					},
-					{kind: "text", value: " "},
-					{
-						kind: "reminder_text",
-						value: [
-							{kind: "text", value: "Put the top "},
-							{kind: "text", value: "3"},
-							{
-								kind: "text",
-								value: " cards of your Main Deck into your trash"
-							},
-							{kind: "text", value: "."}
-						]
-					}
+					{kind: "text", value: " "}
+				],
+				reminderText: [
+					{kind: "text", value: "Put the top "},
+					{kind: "text", value: "3"},
+					{kind: "text", value: " cards of your Main Deck into your trash"},
+					{kind: "text", value: "."}
 				]
 			}
 		]
@@ -46790,7 +43132,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-169/166": {
-		verified: false,
+		verified: true,
 		description: "You may discard 1 as an additional cost to play me.\nWhen you play me, if you paid the additional cost, play a 0 [M] Shadow Clone unit token.",
 		tree: [
 			{
@@ -46802,7 +43144,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -46814,9 +43155,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 							[{kind: "text", value: " if you paid the additional cost"}],
 							[
 								{kind: "text", value: " play a "},
-								{kind: "text", value: "0"},
-								{kind: "text", value: " "},
-								{kind: "symbol", value: "M"},
+								{kind: "might", amount: 0},
 								{kind: "text", value: " Shadow Clone unit token"},
 								{kind: "text", value: "."}
 							]
@@ -47024,7 +43363,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-177/166": {
-		verified: false,
+		verified: true,
 		description: "[1]: Give me +1 [M] this turn.\nWhen my Might becomes 10 or more, empower me.\n[Empowered][>] I have [Ganking] and [Deflect].",
 		tree: [
 			{
@@ -47038,7 +43377,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -47059,7 +43397,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Empowered",
@@ -47191,7 +43528,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-182/166": {
-		verified: false,
+		verified: true,
 		description: "When you play me or when I score, play a [1] [M] Tentacle unit token from Bilgewater.\nI have +1 [M] for each token unit you control.",
 		tree: [
 			{
@@ -47217,7 +43554,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -47278,27 +43614,24 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-185/166": {
-		verified: false,
+		verified: true,
 		description: "[Empower] [3] ([3]: Empower me.)\nI can be [Empowered] up to three times.\nI have +2 [M] for each time I’m [Empowered].\nWhile I'm [Empowered] three times, I have [Deflect 3] and [Ganking].",
 		tree: [
 			{
 				kind: "keyword",
 				name: "Empower",
 				cost: [{kind: "symbol", value: 3}],
-				reminderText: {
-					kind: "reminder_text",
-					value: [
-						{
-							kind: "ability",
-							activated: true,
-							cost: [{kind: "symbol", value: 3}],
-							effect: [
-								{kind: "text", value: "Empower me"},
-								{kind: "text", value: "."}
-							]
-						}
-					]
-				}
+				reminderText: [
+					{
+						kind: "ability",
+						activated: true,
+						cost: [{kind: "symbol", value: 3}],
+						effect: [
+							{kind: "text", value: "Empower me"},
+							{kind: "text", value: "."}
+						]
+					}
+				]
 			},
 			{
 				kind: "ability",
@@ -47309,7 +43642,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -47320,7 +43652,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					{kind: "text", value: "."}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [
@@ -47543,7 +43874,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-191/166": {
-		verified: false,
+		verified: true,
 		description: "When you banish a card you own, empower me.\n[Action][>] Disempower me, [E]: Discard 1, then draw 1.",
 		tree: [
 			{
@@ -47562,7 +43893,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Action",
@@ -47716,7 +44046,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-195/166": {
-		verified: false,
+		verified: true,
 		description: "When you empower something else, empower me.\nDisempower me, [E]: Give a unit at a battlefield -2 [M] this turn.",
 		tree: [
 			{
@@ -47735,7 +44065,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -47759,7 +44088,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-196/166": {
-		verified: false,
+		verified: true,
 		description: "When you empower something else, empower me.\nDisempower me, [A], [E]: Ready a unit.",
 		tree: [
 			{
@@ -47778,7 +44107,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -47798,7 +44126,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-197/166": {
-		verified: false,
 		description: "When you play a card from anywhere other than your hand, empower me.\n[Action][>] Disempower me, [E]: Give a unit [Assault 2] this turn.",
 		tree: [
 			{
@@ -47822,7 +44149,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "keyword",
 				name: "Action",
@@ -47927,7 +44253,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-sp4/006": {
-		verified: false,
+		verified: true,
 		description: "When you play me or when I conquer, buff me.\nSpend my buff: Give me +4 [M] this turn.",
 		tree: [
 			{
@@ -47951,7 +44277,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				activated: true,
@@ -47966,7 +44291,7 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 		]
 	},
 	"ven-sp5/006": {
-		verified: false,
+		verified: true,
 		description: "When you play me, discard 1, then draw 2.\nOptional additional costs you pay cost [1] or [A] less.",
 		tree: [
 			{
@@ -47990,7 +44315,6 @@ export const TEST_ASTS: Record<string, {verified?: boolean, description: string,
 					}
 				]
 			},
-			{kind: "ability", value: []},
 			{
 				kind: "ability",
 				value: [

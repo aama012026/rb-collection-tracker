@@ -1,4 +1,4 @@
-import { tokenize, reconstruct, type Token } from "./rbmlLexer"
+import { tokenize, type Token } from "./rbmlLexer"
 import stringify, { prettyPrint } from "./stringify"
 
 /*
@@ -27,6 +27,10 @@ RulesText = Ability*
 Ability = Keyword | ActivatedAbility | TriggeredAbility | PassiveAbility
 */
 
+const resourceSymbols: string[] = ['R', 'G', 'B', 'O', 'P', 'Y', 'C', 'A']
+
+type Symbol = {kind: 'symbol', value: string|number}
+type SymbolRun = {kind: 'symbol_run', value:Node[]}
 type Keyword = {
 	kind: 'keyword',
 	name: string,
@@ -34,32 +38,38 @@ type Keyword = {
 	cost?: Symbol[],
 	associated?: Node,
 	isNested?: boolean,
-	reminderText?: Reminder
+	reminderText?: Node[]
 }
-type Group = {kind: 'group', value: Node[]}
-type SymbolRun = {kind: 'symbol_run', value:Node[]}
-type InfixGroup = {
-	kind:'infix_group', operator:string, lefthand:Node[], righthand:Node[]
+
+type Ability = {
+	kind: 'ability',
+	activated?:false,
+	value: Node[],
+	reminderText?: Node[]
 }
 type ActivatedAbility = {
 	kind:'ability',
 	activated:true,
 	cost:Node[],
-	effect:Node[]
+	effect:Node[],
+	reminderText?: Node[]
+}
+type InfixGroup = {
+	kind:'infix_group',
+	operator:string,
+	lefthand:Node[],
+	righthand:Node[],
+	reminderText?: Node[]
 }
 type DelimitedList = {kind:'list', value: Node[][], separator:','}
-type Root = {kind: 'root', value: Node[]}
-type Symbol = {kind: 'symbol', value: string|number}
-const resourceSymbols: string[] = ['R', 'G', 'B', 'O', 'P', 'Y', 'C', 'A']
+type Group = {kind: 'group', value: Node[]}
 type Text = {kind: 'text', value: string}
-type Ability = {kind: 'ability', activated?:false, value: Node[]}
 type Reminder = {kind: 'reminder_text', value: Node[]}
 type Might = {kind: 'might', amount: number, sign?: '+'|'-'}
 type Experience = {kind: 'xp', amount: number, sign?: '+'|'-'}
 
 
 export type Node =
-| Root
 | Symbol
 | Might
 | Experience
@@ -126,7 +136,6 @@ export class TokenStream {
 		return this.peek()
 	}
 }
-
 
 export function parseBrackets(stream: TokenStream): SymbolRun|Keyword {
 	stream.prev()
@@ -198,7 +207,7 @@ export function parseBrackets(stream: TokenStream): SymbolRun|Keyword {
 			if(reminderText.kind !== 'reminder_text') {
 				throw new Error("Bug in parser! parseBrackets did not get reminder_text on return.")
 			}
-			node.reminderText = reminderText
+			node.reminderText = reminderText.value
 		}
 	}
 	return node
@@ -251,7 +260,7 @@ function tryParseCount(stream: TokenStream): Might|Experience|null {
 		}
 	})
 	const unitStartPos = sign ? 2 : 1
-	if(amount && stream.peek(unitStartPos - 1)?.name === 'SPACE') {
+	if(amount !== undefined && stream.peek(unitStartPos - 1)?.name === 'SPACE') {
 		const identifierStart = stream.peek(unitStartPos)
 		if (identifierStart?.name === 'WORD' && identifierStart.value.toLowerCase() === 'xp') {
 			stream.skip(unitStartPos + 1)
@@ -270,9 +279,14 @@ function parseListItem(stream: TokenStream): Node[] {
 	return item.kind === 'group' ? item.value : [item]
 }
 
-function parseAbilityContent(stream: TokenStream): Node[] {
+function parseAbilityContent(stream: TokenStream): {value: Node[], reminderText?:Node[]} {
 	const node = parse(stream, 'ability')
-	return node.kind === 'ability' && !node.activated ? node.value : [node]
+	if(node.kind === 'ability' && !node.activated) {
+		return {value: node.value, reminderText: node.reminderText}
+	}
+	else {
+		return {value: [node]}
+	}
 }
 
 function parseText(stream:TokenStream): Text {
@@ -295,7 +309,12 @@ export function parseCardRulesText(tokens:Token[]):Node[] {
 	let prevPos = -1
 	while(stream.peek() && stream.pos !== prevPos) {
 		prevPos = stream.pos
-		ast.push(parse(stream))
+		if(stream.peek()?.name === 'NEW_LINE') {
+			stream.next()
+		}
+		else {
+			ast.push(parse(stream))
+		}
 	}
 	if(stream.pos === prevPos) {
 		throw new Error(`Broke out of infinite loop.\nTokens: ${stringify(tokens)}\n Partial AST: ${stringify(ast)}`)
@@ -320,11 +339,28 @@ export function parse(stream:TokenStream, kind:'reminder_text'|'ability'|'list_i
 		}
 		// Start new group.
 		else if(name === 'OPEN_PAREN') {
-			children.push(parse(stream, 'reminder_text'))
+			const parenthesisText = parse(stream, 'reminder_text')
+			if(parenthesisText.kind === 'reminder_text') {
+				if(kind === 'ability' && parenthesisText.kind === 'reminder_text') {
+					return {kind, value: children, reminderText: parenthesisText.value}
+				}
+				children.push(parenthesisText)
+			}
+			else if(parenthesisText.kind === 'group') {
+				children.push(...parenthesisText.value)
+			}
+			else {
+				children.push(parenthesisText)
+			}
 		}
 		// Close group.
 		else if(name === 'CLOSE_PAREN') {
-			if((stream.peek(-2)?.name === 'DOT')) {
+			if(kind !== 'reminder_text') {
+				stream.prev()
+				return {kind: kind === 'list_item' ? 'group' : kind, value:children} as Node
+			}
+			const precedingToken = stream.peek(-2)
+			if(precedingToken?.name === 'DOT' || (precedingToken?.name === 'OTHER' && precedingToken.value === '"' && stream.peek(-3)?.name === 'DOT')) {
 				return {kind:'reminder_text', value:children}
 			}
 			else {
@@ -357,7 +393,8 @@ export function parse(stream:TokenStream, kind:'reminder_text'|'ability'|'list_i
 		}
 		else if(name === 'DOT') {
 			children.push({kind:'text', value:'.'})
-			if((kind === 'ability') && stream.peek()?.name !== 'SPACE') {
+			const nextToken = stream.peek()?.name
+			if((kind === 'ability') && nextToken !== 'SPACE') {
 				const node:Ability = {kind, value: children}
 				return node
 			}
@@ -395,7 +432,11 @@ export function parse(stream:TokenStream, kind:'reminder_text'|'ability'|'list_i
 				children.push(parseText(stream))
 			}
 			else if(kind === 'reminder_text') {
-				children.push(...parseAbilityContent(stream))
+				const {value, reminderText} = parseAbilityContent(stream)
+				children.push(...value)
+				if(reminderText) {
+					children.push({kind:'reminder_text', value:reminderText})
+				}
 			}
 			else if(name === 'SPACE') {
 				stream.next()
@@ -413,12 +454,14 @@ export function parse(stream:TokenStream, kind:'reminder_text'|'ability'|'list_i
 			}
 			const lefthand:Node[] = children.splice(0)
 			let infixGroup:InfixGroup|ActivatedAbility
+			const {value, reminderText} = parseAbilityContent(stream)
 			if(token.value === ': ') {
 				infixGroup = {
 					kind:'ability',
 					activated:true,
 					cost:lefthand,
-					effect: parseAbilityContent(stream)
+					effect: value,
+					reminderText: reminderText
 				}
 			}
 			else {
@@ -426,7 +469,8 @@ export function parse(stream:TokenStream, kind:'reminder_text'|'ability'|'list_i
 					kind: 'infix_group',
 					lefthand,
 					operator: token.value,
-					righthand: parseAbilityContent(stream)
+					righthand: value,
+					reminderText: reminderText
 				}
 			}
 			if(kind === 'ability') {
@@ -446,140 +490,61 @@ export function parse(stream:TokenStream, kind:'reminder_text'|'ability'|'list_i
 	}
 }
 
-/* --- AI generated code -------------------------------------------------------
-	(Code inside this block are utility functions generated by LLMs.
-	They are purely tooling and has no functionality relating to the program.)
-*/
-// Signed: Claude Sonnet 5 (Anthropic), 2026-08-26.
-// Generalized below so new Node kinds/fields never need a matching case here:
-// it reads each node's own properties instead of switching on `kind`.
-type DescribedNode = {text: string, children: {label?: string, node: Node}[]}
-
-function isNode(value: unknown): value is Node {
-	return typeof value === 'object' && value !== null && !Array.isArray(value)
-		&& typeof (value as {kind?: unknown}).kind === 'string'
+// Same literal object/array shape stringify would print (real field names,
+// quoted strings, real brackets -- comparable to what's stored in
+// parserTestASTs.ts) but drawn as a branch outline instead of brace/comma
+// nesting, so an over-budget value never costs a line that's just "{" or "[".
+function renderInline(value: unknown): string {
+	if(value === null || typeof value === 'number' || typeof value === 'boolean') {
+		return `${value}`
+	}
+	if(Array.isArray(value)) {
+		return `[${value.map(renderInline).join(', ')}]`
+	}
+	if(typeof value === 'object') {
+		const entries = Object.entries(value).filter(([, v]) => v !== undefined)
+		return `{${entries.map(([k, v]) => `${k}: ${renderInline(v)}`).join(', ')}}`
+	}
+	return JSON.stringify(value)
 }
 
-function describeNode(node: Node): DescribedNode {
-	// Each entry is one child-bearing field on this node, already reduced to
-	// the Node[] it contributes (a single Node becomes a one-element array,
-	// and a DelimitedList-style Node[][] becomes one synthetic 'item' node
-	// per inner array -- `{kind: 'item', ...}` is a display-only shape, not
-	// a real Node variant).
-	const childFields: [string, Node[]][] = []
-	const scalars: [string, unknown][] = []
-
-	for(const [key, value] of Object.entries(node)) {
-		if(key === 'kind') continue
-		if(isNode(value)) {
-			childFields.push([key, [value]])
-		}
-		else if(Array.isArray(value) && value.every(isNode)) {
-			childFields.push([key, value])
-		}
-		else if(Array.isArray(value) && value.every(v => Array.isArray(v) && v.every(isNode))) {
-			childFields.push([key, value.map(itemNodes => ({kind: 'item', value: itemNodes} as unknown as Node))])
-		}
-		else if(value !== undefined && value !== false) {
-			scalars.push([key, value])
-		}
-	}
-
-	const children: {label?: string, node: Node}[] = []
-	if(childFields.length === 1) {
-		// Only one child-bearing field (e.g. Root/Group/Ability's `value`):
-		// no label needed, the parent's own kind already gives it context.
-		childFields[0]![1].forEach(n => children.push({node: n}))
-	}
-	else {
-		// More than one (e.g. InfixGroup's lefthand/righthand, or
-		// ActivatedAbility's cost/effect): each field needs its own label so
-		// they don't bleed into each other. A single-element field is
-		// labeled directly; a multi-element one gets a small synthetic
-		// wrapper (its own `kind` is the field name) so its several
-		// children stay visually grouped under that label.
-		for(const [key, nodes] of childFields) {
-			if(nodes.length === 1) {
-				children.push({label: key, node: nodes[0]!})
-			}
-			else {
-				// Empty `kind`: this wrapper contributes no text of its own,
-				// just its (labeled) children -- see withLabel below.
-				children.push({label: key, node: {kind: '', value: nodes} as unknown as Node})
-			}
-		}
-	}
-
-	const scalarText = (value: unknown) => typeof value === 'string' ? value : JSON.stringify(value)
-	const display = ([key, value]: [string, unknown]) =>
-		value === true ? key : `${key}: ${scalarText(value)}`
-	const summary = scalars.length === 1 && scalars[0]![1] !== true
-		? scalarText(scalars[0]![1])
-		: scalars.map(display).join(', ')
-
-	return {text: summary ? `${node.kind}: ${summary}` : node.kind, children}
-}
-
-// Joins a label onto a value with a colon, e.g. `righthand: keyword: Add`,
-// or just `righthand:` when there's no text to follow it (the value is
-// purely a list of further children, rendered on the next lines instead).
 function withLabel(label: string|undefined, value: string): string {
-	if(!label) return value
+	if(label === undefined) return value
 	return value ? `${label}: ${value}` : `${label}:`
 }
 
-// Recursively renders a whole subtree as one line, e.g. `symbol_run: [symbol: 2, symbol: R]`
-// nested arbitrarily deep -- used by formatAst to decide what fits before falling back to
-// one-line-per-node.
-function renderInline(node: Node): string {
-	const {text, children} = describeNode(node)
-	if(children.length === 0) return text
-	const inner = children
-		.map(c => withLabel(c.label, renderInline(c.node)))
-		.join(', ')
-	return withLabel(text, `[${inner}]`)
-}
-
-/*
-Prints an AST as an indented outline instead of a JS-object dump: one node
-per line, with only the fields that carry information for that kind (a
-Keyword's `isNested: false` or an unset `associated` don't add anything when
-scanning for bugs, so they're dropped rather than printed). Any subtree that
-fits within `columns` at its current indentation collapses onto a single
-line -- pass a narrower value for side-by-side viewing, or a wider one for a
-full-width terminal.
-*/
 export function formatAst(nodes: Node[], columns = 100): string {
 	const lines: string[] = []
-	function walk(node: Node, prefix: string, connector: string, childPrefix: string, label?: string) {
-		const {text, children} = describeNode(node)
-		const inlineLine = `${prefix}${connector}${withLabel(label, renderInline(node))}`
-		if(children.length === 0 || inlineLine.length <= columns) {
+	function walk(value: unknown, prefix: string, connector: string, childPrefix: string, label?: string) {
+		const inlineLine = `${prefix}${connector}${withLabel(label, renderInline(value))}`
+		const isArray = Array.isArray(value)
+		const isObject = !isArray && typeof value === 'object' && value !== null
+		const expandable = (isArray && value.length > 0) || isObject
+		if(!expandable || inlineLine.length <= columns) {
 			lines.push(inlineLine)
 			return
 		}
-		lines.push(`${prefix}${connector}${withLabel(label, text)}`)
-		children.forEach((child, i) => {
-			const isLast = i === children.length - 1
+		lines.push(`${prefix}${connector}${withLabel(label, isArray ? '[' : '{')}`)
+		const items: {label?: string, value: unknown}[] = isArray
+			? value.map(v => ({value: v}))
+			: Object.entries(value as object).filter(([, v]) => v !== undefined).map(([k, v]) => ({label: k, value: v}))
+		items.forEach((item, i) => {
+			const isLast = i === items.length - 1
 			walk(
-				child.node,
+				item.value,
 				childPrefix,
 				isLast ? '└─ ' : '├─ ',
 				childPrefix + (isLast ? '   ' : '│  '),
-				child.label
+				item.label
 			)
 		})
 	}
-	// Top-level results are now a flat Node[] with no shared Root wrapper --
-	// treated the same way a Root's own children would be, just without a
-	// node to hang them off of.
 	nodes.forEach((node, i) => {
 		const isLast = i === nodes.length - 1
 		walk(node, '', isLast ? '└─ ' : '├─ ', isLast ? '   ' : '│  ')
 	})
 	return lines.join('\n')
 }
-// -----------------------------------------------------------------------------
 
 if (import.meta.main) {
 	const cases = [

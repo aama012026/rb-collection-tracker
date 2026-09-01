@@ -50,14 +50,14 @@ function testParser(cards:CardDetails[]): Record<string, TestAST> {
 			}
 			switch(currentAst?.verified) {
 				case undefined:
-					otherCards.push(`\x1b[34m${riot_id}: ${name}}`)
+					otherCards.push(`\x1b[34m${riot_id}: ${name}`)
 					break
 				case false:
-					wrongTests.push(`\x1b[33m${riot_id}: ${name}\n\x1b[0m${formatAst(tree)}`)
+					wrongTests.push(`\x1b[33m${riot_id}: ${name}`)
 					break
 				case true:
 					if(stringify(currentAst.tree) === stringify(tree)) {
-						rightCards.push(`\n\x1b[32m${riot_id}: ${name} OK!`)
+						rightCards.push(`\x1b[32m${riot_id}: ${name} OK!`)
 						}
 						else {
 							wrongCards.push(`\n\x1b[31m${riot_id}: ${name}\n` +
@@ -68,14 +68,14 @@ function testParser(cards:CardDetails[]): Record<string, TestAST> {
 			}
 		}
 		else {
-			noTxtCards.push(`\x1b[46m${riot_id}: ${name} No description`)
+			noTxtCards.push(`\x1b[35m${riot_id}: ${name} - No description`)
 		}
 	})
 	noTxtCards.forEach(c => prettyPrint(c))
 	otherCards.forEach(c => prettyPrint(c))
 	rightCards.forEach(c => prettyPrint(c))
-	wrongCards.forEach(c => prettyPrint(c))
 	wrongTests.forEach(c => prettyPrint(c))
+	wrongCards.forEach(c => prettyPrint(c))
 	prettyPrint(`Right cards: \x1b[32m${rightCards.length}/${cards.length}`)
 	prettyPrint(`Wrong cards: \x1b[31m${wrongCards.length}/${cards.length}`)
 	prettyPrint(`Wrong tests: \x1b[33m${wrongTests.length}/${cards.length}`)
