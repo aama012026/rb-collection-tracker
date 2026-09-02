@@ -56,8 +56,9 @@
 <template id="keyword">
 	<mark class="badge" data-badge="keyword" data-nested="%{isNested:boolean}"
 		data-associated="%{isAssociated:boolean}" data-keyword="%{keyword: string}"
-	>%{keyword}%{param: number}%{cost: string}
+	>%{keyword}%{param: number|''}%{cost: string}
 	</mark>
+	%{associated: string}
 	%{reminder: string}
 </template>
 
@@ -83,7 +84,7 @@
 </template>
 
 <template id="comma-list-item">
-	<span class="comma-list-item">%{list-item: string}</span>
+	<span class="comma-list-item">%{listItem: string}</span>
 </template>
 
 <template id="might-count">
@@ -94,7 +95,7 @@
 </template>
 
 <template id="xp-count">
-	<span class="xp-count">%{amount: number}%{sign: string} %{XP}</span>
+	<span class="xp-count">%{amount: number}%{sign: string} XP</span>
 </template>
 
 <template id="inline-symbol">
@@ -103,4 +104,8 @@
 
 <template id="reminder">
 	<span class="reminder">(<i>%{text: string}</i>)</span>
+</template>
+
+<template id="card-description">
+	<p class="description">%{content: string}</p>
 </template>

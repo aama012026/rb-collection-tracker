@@ -3,6 +3,7 @@ import { makeCardsTableBody, makeCardTableRow, makeCollectionPage, makeInlineSym
 import type { CardDetails, Cards } from "./gen/dbTableInterfaces"
 import { testLexer } from "./src/modules/test"
 import { testParser } from "./testParser"
+import { getDescriptionHtml } from "./src/modules/rbmlHtmlRenderer"
 
 const sql = new SQL({
 	adapter:'mariadb',
@@ -41,7 +42,7 @@ const cardRows = cards.map(c => {
 		c.types ?? '',
 		c.tags?.split(', ').map(makeTag).join('\n') ?? '',
 		c.keywords ?? '',
-		c.description ?? ''
+		getDescriptionHtml(c.description ?? '')
 	)
 })
 

@@ -30,7 +30,7 @@ Ability = Keyword | ActivatedAbility | TriggeredAbility | PassiveAbility
 const resourceSymbols: string[] = ['R', 'G', 'B', 'O', 'P', 'Y', 'C', 'A']
 
 export type Symbol = {kind: 'symbol', value: string|number}
-export type SymbolRun = {kind: 'symbol_run', value:Node[]}
+export type SymbolRun = {kind: 'symbol_run', value:Symbol[]}
 export type Keyword = {
 	kind: 'keyword',
 	name: string,
