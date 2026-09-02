@@ -1,7 +1,8 @@
 import { SQL } from "bun"
-import { makeCardsTableBody, makeCardTableRow, makeCollectionPage, makeEnergySvg, makeMightSvg, makePowerSvg, makeTag } from "./gen/HTMLtemplates"
+import { makeCardsTableBody, makeCardTableRow, makeCollectionPage, makeInlineSymbol, makeMightCount, makeTag } from "./gen/HTMLtemplates"
 import type { CardDetails, Cards } from "./gen/dbTableInterfaces"
-import { testLexer, testParser } from "./src/modules/test"
+import { testLexer } from "./src/modules/test"
+import { testParser } from "./testParser"
 
 const sql = new SQL({
 	adapter:'mariadb',
@@ -34,9 +35,9 @@ const cardRows = cards.map(c => {
 	return makeCardTableRow(
 		c.id, c.domains ?? 'null', c.rarity, c.set_code,
 		c.collector_number, Math.floor(Math.random() * 5), c.name,
-		c.energy ? makeEnergySvg(c.energy) : '',
-		c.power ? makePowerSvg(c.domains?.split(', ').join('-') + `-${frame}`).repeat(c.power) : '',
-		c.might ? makeMightSvg(c.might) : '',
+		c.energy ? makeInlineSymbol(c.energy) : '',
+		c.power ? makeInlineSymbol(c.domains?.split(', ').join('-') + `-${frame}`).repeat(c.power) : '',
+		c.might ? makeMightCount('', c.might) : '',
 		c.types ?? '',
 		c.tags?.split(', ').map(makeTag).join('\n') ?? '',
 		c.keywords ?? '',

@@ -26,7 +26,7 @@ const file = `import type { Node } from "../modules/rbmlParser"\n`
 + stringify(targets, 90)
 await Bun.write('src/data/parserTestASTs.ts', file, {createPath:true})
 
-function testParser(cards:CardDetails[]): Record<string, TestAST> {
+export function testParser(cards:CardDetails[]): Record<string, TestAST> {
 	const targets:Record<string, TestAST> = {}
 
 	const rightCards: string[] = []
