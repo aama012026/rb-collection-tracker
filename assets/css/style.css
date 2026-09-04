@@ -42,10 +42,43 @@
 		--c-bg: var(--c-domain-hi);
 	}
 }
-[data-badge="green"] {--c-bg: var(--kw-green);}
-[data-badge="gray"] {--c-bg: var(--kw-green);}
-[data-badge="magenta"] {--c-bg: var(--kw-magenta);}
-[data-badge="teal"] {--c-bg: var(--kw-teal);}
+[data-badge="keyword"] {
+	&[data-keyword="Deathknell"],
+	&[data-keyword="Deflect"],
+	&[data-keyword="Ganking"],
+	&[data-keyword="Temporary"],
+	&[data-keyword="Hunt"],
+	&[data-keyword="Level"],
+	&[data-keyword="Empowered"] {
+		--c-bg: var(--kw-green);
+		--c-fg: var(--border-black);
+	}
+	&[data-keyword="Vision"],
+	&[data-keyword="Equip"],
+	&[data-keyword="Weaponmaster"],
+	&[data-keyword="Unique"],
+	&[data-keyword="Add"],
+	&[data-keyword="Empower"] {
+		--c-bg: var(--kw-gray);
+	}
+	&[data-keyword="Assault"],
+	&[data-keyword="Shield"],
+	&[data-keyword="Tank"],
+	&[data-keyword="Backline"] {
+		--c-bg: var(--kw-magenta);
+	}
+	&[data-keyword="Accelerate"],
+	&[data-keyword="Action"],
+	&[data-keyword="Reaction"],
+	&[data-keyword="Hidden"],
+	&[data-keyword="Legion"],
+	&[data-keyword="Quick-Draw"],
+	&[data-keyword="Repeat"],
+	&[data-keyword="Ambush"],
+	&[data-keyword="Flow"] {
+		--c-bg: var(--kw-teal);
+	}
+}
 
 [data-rarity="common"] {--c-rarity: var(--bronze);}
 [data-rarity="uncommon"] {--c-rarity: var(--silver-hi);}
@@ -75,6 +108,7 @@ body {
 .text-description {
 	font-family: AlegreyaSans;
 	font-weight: 500;
+	font-feature-settings: "lnum";
 }
 
 body {
@@ -126,28 +160,64 @@ td {
 mark.badge {
 	font-size: 0.8em;
 	display: inline-block;
-	padding: 0.1em 0.7em 0.1em 0.5em;
+	padding: 0 0.5em 0 0.3em;
 	font-family: AlegreyaSans;
 	font-weight: 700;
-	font-style: oblique 10deg;
+	font-style: oblique 12deg;
 	/*font-style: italic;*/
 	text-transform: uppercase;
 	background: var(--c-bg);
 	color: var(--c-fg);
 	clip-path: polygon(
-		var(--slant, 0.25em) 0,
+		var(--slant, 0.3em) 0,
 		100% 0,
-		calc(100% - var(--slant, 0.25em)) 100%,
+		calc(100% - var(--slant, 0.3em)) 100%,
 		0 100%
 	);
 
-	[data-rarity="epic"] &, [data-rarity="showcase"] & {
+	&[data-associated="true"][data-nested="false"] {
+		clip-path: polygon(
+			0.3em 0, calc(100% - 0.4em) 0, 100% 50%, calc(100% - 0.4em) 100%, 0 100%
+		);
+	}
+	&[data-associated="true"][data-nested="true"] {
+		clip-path: polygon(
+			0 0, calc(100% - 0.4em) 0, 100% 50%, calc(100% - 0.4em) 100%, 0 100%, 0.4em 50%
+		);
+	}
+	[data-rarity="epic"] &:not([data-badge="keyword"]),
+	[data-rarity="showcase"] &:not([data-badge="keyword"]) {
 		--c-fg: var(--gold);
 		--c-bg: #0002;
 	}
 
-	&:hover:not([data-badge="type"]) {
-		color: var(--c-domain-lo);
-		background: var(--c-fg);
+	&:hover {
+		cursor: pointer;
+		&:not([data-badge="type"]) {
+			background-color: var(--c-fg);
+		}
+		&[data-badge="tag"] {
+			color: var(--c-domain-lo);
+		}
+		&[data-badge="keyword"] {
+			color:var(--c-bg);
+		}
+	}
+}
+
+.kw-name:has( ~ .kw-param),
+.kw-name:has( ~ .kw-cost) {
+	margin-right: 0.2em;
+}
+
+img.inline-svg {
+	max-height: 1em;
+	vertical-align:text-top;
+	padding: 0 0.1em;
+}
+
+.xp-count, .might-count {
+	&:hover {
+		background: #0002;
 	}
 }
