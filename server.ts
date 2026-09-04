@@ -1,9 +1,9 @@
 import { SQL } from "bun"
 import { makeCardsTableBody, makeCardTableRow, makeCollectionPage, makeInlineSymbol, makeMightCount, makeTag } from "./gen/HTMLtemplates"
-import type { CardDetails, Cards } from "./gen/dbTableInterfaces"
+import type { CardDetails, Cards, Keywords } from "./gen/dbTableInterfaces"
 import { testLexer } from "./src/modules/test"
-import { testParser } from "./testParser"
-import { getDescriptionHtml } from "./src/modules/rbmlHtmlRenderer"
+import { testParser, updateParserASTs } from "./testParser"
+import { getCardTableRowHtml, getDescriptionHtml } from "./src/modules/rbmlHtmlRenderer"
 
 const sql = new SQL({
 	adapter:'mariadb',
@@ -15,43 +15,19 @@ const sql = new SQL({
 	bigint:true
 })
 await sql`USE riftbound`
-const cards:Array<CardDetails> = await sql`SELECT * FROM card_details ORDER BY riot_id`
+const cards:CardDetails[] = await sql`SELECT * FROM card_details ORDER BY riot_id`
 // Test
 testLexer(cards)
 testParser(cards)
 
-const cardRows = cards.map(c => {
-	let frame = ''
-	switch(c.rarity) {
-		case 'common':
-			frame='bronze'
-			break
-		case 'uncommon':
-			frame='silver'
-			break
-		default:
-			frame='gold'
-			break
-	}
-	return makeCardTableRow(
-		c.id, c.domains ?? 'null', c.rarity, c.set_code,
-		c.collector_number, Math.floor(Math.random() * 5), c.name,
-		c.energy ? makeInlineSymbol(c.energy) : '',
-		c.power ? makeInlineSymbol(c.domains?.split(', ').join('-') + `-${frame}`).repeat(c.power) : '',
-		c.might ? makeMightCount('', c.might) : '',
-		c.types ?? '',
-		c.tags?.split(', ').map(makeTag).join('\n') ?? '',
-		c.keywords ?? '',
-		getDescriptionHtml(c.description ?? '')
-	)
-})
+const cardRows = cards.map(c => getCardTableRowHtml(c))
 
 const collection = makeCollectionPage(makeCardsTableBody(cardRows.join('\n')))
 
 console.log(`Riftbound collection server version: 0`)
 const server = Bun.serve({
 	routes: {
-		'/': new Response(collection, {headers: {'Content-Type': 'text/html'}}),
+		'/': new Response(collection, {headers: {'Content-Type': 'text/html; charset=utf-8',}}),
 		'/fonts': (request) => {
 			const fontName = new URL(request.url).pathname
 			try {

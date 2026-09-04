@@ -1,32 +1,21 @@
-import { SQL } from "bun";
 import type { CardDetails } from "./gen/dbTableInterfaces";
 import { tokenize } from "./src/modules/rbmlLexer";
-import { formatAst, parse, parseCardRulesText, TokenStream, type Node } from "./src/modules/rbmlParser";
+import { formatAst, parseCardRulesText, type Node } from "./src/modules/rbmlParser";
 import stringify, { prettyPrint } from "./src/modules/stringify";
 import { TEST_ASTS } from "./src/data/parserTestASTs";
 
-const sql = new SQL({
-	adapter:'mariadb',
-	username:process.env.DB_APP_USER,
-	password:process.env.DB_APP_PASS,
-	host:process.env.DB_HOST,
-	port:process.env.DB_PORT,
-	database:'riftbound',
-	bigint:true
-})
-await sql`USE riftbound`
-
 type TestAST = {description:string, verified?:boolean, tree:Node[]}
 
-const cards:Array<CardDetails> = await sql`SELECT * FROM card_details ORDER BY riot_id`
-const targets = testParser(cards)
-const file = `import type { Node } from "../modules/rbmlParser"\n`
-+ `export const TEST_ASTS: `
-+ `Record<string, {verified?: boolean, description: string, tree: Node[]}> = `
-+ stringify(targets, 90)
-await Bun.write('src/data/parserTestASTs.ts', file, {createPath:true})
+export async function testParser(cards:CardDetails[]) {
+	const targets = updateParserASTs(cards)
+	const file = `import type { Node } from "../modules/rbmlParser"\n`
+	+ `export const TEST_ASTS: `
+	+ `Record<string, {verified?: boolean, description: string, tree: Node[]}> = `
+	+ stringify(targets, 90)
+	await Bun.write('src/data/parserTestASTs.ts', file, {createPath:true})
+}
 
-export function testParser(cards:CardDetails[]): Record<string, TestAST> {
+export function updateParserASTs(cards:CardDetails[]): Record<string, TestAST> {
 	const targets:Record<string, TestAST> = {}
 
 	const rightCards: string[] = []
