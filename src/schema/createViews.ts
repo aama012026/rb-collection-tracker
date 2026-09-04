@@ -24,6 +24,11 @@ export default async function createViews(sql:SQL): Promise<void> {
 			FROM cards_x_domains cxd
 			JOIN domains ON domains.id = cxd.domain_id
 			WHERE cxd.card_id = cards.id) AS domains,
+			(SELECT GROUP_CONCAT(domains.shorthand
+				ORDER BY domains.sort_order SEPARATOR ', ')
+			FROM cards_x_domains cxd
+			JOIN domains ON domains.id = cxd.domain_id
+			WHERE cxd.card_id = cards.id) AS domain_shorthands,
 			(SELECT GROUP_CONCAT(tags.name ORDER BY tags.name SEPARATOR ', ')
 			FROM cards_x_tags cxtg JOIN tags ON tags.id = cxtg.tag_id
 			WHERE cxtg.card_id = cards.id) AS tags,

@@ -26,7 +26,8 @@ export default async function createTables(sql: SQL): Promise<void> {
 		CREATE TABLE IF NOT EXISTS rarities (
 			id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 			sort_order TINYINT UNSIGNED UNIQUE,
-			name VARCHAR(50) UNIQUE NOT NULL
+			name VARCHAR(50) UNIQUE NOT NULL,
+			frame_color INT UNSIGNED
 		);
 	`)
 
@@ -68,7 +69,9 @@ export default async function createTables(sql: SQL): Promise<void> {
 			id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 			sort_order TINYINT UNSIGNED UNIQUE,
 			name VARCHAR(50) UNIQUE NOT NULL,
-			shorthand varchar(10) UNIQUE
+			shorthand VARCHAR(10) UNIQUE,
+			color_hi INT UNSIGNED UNIQUE,
+			color_lo INT UNSIGNED UNIQUE
 		);
 	`)
 

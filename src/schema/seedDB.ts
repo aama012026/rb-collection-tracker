@@ -1,4 +1,4 @@
-import type { SQL } from "bun"
+import { color, type SQL } from "bun"
 import { prettyPrint } from "../modules/stringify"
 
 export default async function seedTables(sql: SQL): Promise<void> {
@@ -24,12 +24,12 @@ export default async function seedTables(sql: SQL): Promise<void> {
 	`)
 
 	await seedTable('rarities', sql`
-		INSERT INTO rarities (sort_order, name) VALUES
-			(1, 'common'),
-			(2, 'uncommon'),
-			(3, 'rare'),
-			(4, 'epic'),
-			(5, 'showcase')
+		INSERT INTO rarities (sort_order, name, frame_color) VALUES
+			(1, 'common', ${color('#9F5E13', 'number')}),
+			(2, 'uncommon', ${color('#A1A1A1', 'number')}),
+			(3, 'rare', ${color('#E2B73E', 'number')}),
+			(4, 'epic', ${color('#E2B73E', 'number')}),
+			(5, 'showcase', ${color('#E2B73E', 'number')})
 		ON DUPLICATE KEY UPDATE
 			sort_order = VALUE(sort_order),
 			name = VALUE(name)
@@ -37,13 +37,14 @@ export default async function seedTables(sql: SQL): Promise<void> {
 	`)
 
 	await seedTable('domains', sql`
-		INSERT INTO domains (sort_order, name, shorthand) VALUES
-			(1, 'fury', '[R]'),
-			(2, 'calm', '[G]'),
-			(3, 'mind', '[B]'),
-			(4, 'body', '[O]'),
-			(5, 'chaos', '[P]'),
-			(6, 'order', '[Y]')
+		INSERT INTO domains (sort_order, name, shorthand, color_hi, color_lo) VALUES
+			(1, 'fury', 'R', ${color('#DF1620', 'number')}, ${color('#8E0308', 'number')}),
+			(2, 'calm', 'G', ${color('#488C38', 'number')}, ${color('#295D24', 'number')}),
+			(3, 'mind', 'B', ${color('#0F6FA6', 'number')}, ${color('#003F6B', 'number')}),
+			(4, 'body', 'O', ${color('#E87600', 'number')}, ${color('#BD3E19', 'number')}),
+			(5, 'chaos', 'P', ${color('#6A4094', 'number')}, ${color('#421A79', 'number')}),
+			(6, 'order', 'Y', ${color('#D2B400', 'number')}, ${color('#A27521', 'number')}),
+			(7, 'colorless', 'A', ${color('#A1A1A1', 'number')}, ${color('#727272', 'number')})
 		ON DUPLICATE KEY UPDATE
 			sort_order = VALUE(sort_order),
 			name = VALUE(name),
@@ -78,7 +79,7 @@ export default async function seedTables(sql: SQL): Promise<void> {
 				'I may move to a battlefield from another battlefield with a standard move.',
 				'I can move from battlefield to battlefield.'
 			), (
-				'811', 'hidden', NULL, 'magenta',
+				'811', 'hidden', NULL, 'teal',
 				'While this card is in your hand or your Champion Zone on your turn during an Open State, you may pay [A] to hide this facedown at a battlefield you control that doesn''t already have a facedown card hidden there for as long as you control that battlefield. Beginning on the next turn, this gains [Reaction] and you may play this, ignoring its base cost.',
 				'Hide now for [A] to react with later for [0].'
 			), (
