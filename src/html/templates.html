@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8">
 		<title>Riftbound Card Collection</title>
 		<link rel="stylesheet" href="css/font-faces.css">
 		<link rel="stylesheet" href="css/style.css">
@@ -39,11 +40,11 @@
 			<span>%{migth: string}</span>
 		</td>
 		<td>
-			<span>
-				<mark class="badge" data-badge="type">%{types: string}</mark>
-				<span>%{tags: string}</span>
-			</span>
-			<span>%{keywords: string}</span>
+			<span><mark
+				class="badge" data-badge="type">%{types: string}</mark
+				><span>%{tags: string}</span
+			></span><span
+			>%{keywords: string}</span>
 		</td>
 		<td class="text-description">%{description: string}</td>
 	</tr>
@@ -54,33 +55,33 @@
 </template>
 
 <template id="keyword">
-	<mark class="badge" data-badge="keyword" data-nested="%{isNested:boolean}"
-		data-associated="%{isAssociated:boolean}" data-keyword="%{keyword: string}"
-	>%{keyword}%{param: number|''}%{cost: string}
-	</mark>
-	%{associated: string}
-	%{reminder: string}
+	<mark class="badge" data-badge="keyword"
+		data-nested="%{isNested:boolean}"
+		data-associated="%{isAssociated:boolean}"
+		data-keyword="%{keyword: string}"
+	><span class="kw-name">%{keyword}</span>%{param: string}%{cost: string}</mark
+	>%{associated: string}%{reminder: string}
+</template>
+
+<template id="span">
+	<span class="%{classString: string}">%{textContent: string}</span>
 </template>
 
 <template id="ability">
-	<span class="ability">%{ability: string}</span>
-	%{reminder: string}
+	<span class="ability">%{ability: string}</span>%{reminder: string}
 </template>
 
 <template id="activated-ability">
-	<span class="ability">
-		<span class="ability-cost">%{cost:string}</span>
-		:
-		<span class="ability-effect">%{effect:string}</span>
-	</span>
-	%{reminder:string}
+	<span class="ability"
+		><span class="ability-cost">%{cost:string}</span
+		>:<span class="ability-effect">%{effect:string}</span
+	></span>%{reminder:string}
 </template>
 
 <template id="infix-group">
-	<span class="lefthand">%{lefthand: string}</span>
-	%{operator: string}
-	<span class="righthand">%{righthand: string}</span>
-	%{reminder:string}
+	<span class="lefthand"
+	>%{lefthand: string}</span>%{operator: string}<span class="righthand"
+	>%{righthand: string}</span>%{reminder:string}
 </template>
 
 <template id="comma-list-item">
@@ -88,10 +89,10 @@
 </template>
 
 <template id="might-count">
-	<span class="might-count">
-		<span class="amount">%{sign: string}%{amount: number}</span>
-		<img class="inline-svg" src="svg/symbols/symbol-M.svg" alt="[M]"
-	</span>
+	<span class="might-count"
+		><span class="amount">%{sign: string}%{amount: number}</span
+		><img class="inline-svg" src="svg/symbols/symbol-M.svg" alt="[M]"
+	></span>
 </template>
 
 <template id="xp-count">

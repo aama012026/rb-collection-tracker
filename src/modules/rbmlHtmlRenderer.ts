@@ -1,7 +1,37 @@
-import { makeAbility, makeActivatedAbility, makeCardDescription, makeCommaListItem, makeInfixGroup, makeInlineSymbol, makeKeyword, makeMightCount, makeReminder, makeXpCount } from "../../gen/HTMLtemplates";
+import type { CardDetails, Keywords } from "../../gen/dbTableInterfaces";
+import { makeAbility, makeActivatedAbility, makeCardDescription, makeCardTableRow, makeCommaListItem, makeInfixGroup, makeInlineSymbol, makeKeyword, makeMightCount, makeReminder, makeSpan, makeTag, makeXpCount } from "../../gen/HTMLtemplates";
 import { tokenize } from "./rbmlLexer";
-import { parseCardRulesText, type Experience, type Might, type Node, type Symbol, type Text } from "./rbmlParser";
-import stringify, { prettyPrint } from "./stringify";
+import { parseCardRulesText, type Node, type Symbol } from "./rbmlParser";
+import stringify from "./stringify";
+
+export function getCardTableRowHtml(c:CardDetails): string {
+	const html = makeCardTableRow(
+		c.id, c.domains ?? 'null', c.rarity, c.set_code,
+		c.collector_number, Math.floor(Math.random() * 5), c.name,
+		c.energy ? makeInlineSymbol(c.energy) : '',
+		getPowerCostHtml(c),
+		c.might ? makeMightCount('', c.might) : '',
+		c.types ?? '',
+		c.tags?.split(', ').map(makeTag).join('') ?? '',
+		c.keywords ?? '',
+		getDescriptionHtml(c.description ?? '')
+	)
+	if(c.domain_shorthands) {
+		const domainString = c.domain_shorthands.split(', ').join('-')
+		return html.replace(/symbol-C/g, `symbol-${domainString}`)
+	}
+	else {
+		return html
+	}
+}
+
+function getPowerCostHtml(card: CardDetails): string {
+	if(!card.domain_shorthands || !card.power) {
+		return ''
+	}
+	const domainString = card.domain_shorthands.split(', ').join('-')
+	return makeInlineSymbol(`${domainString}-${card.rarity}`).repeat(card.power)
+}
 
 export function getDescriptionHtml(description: string): string {
 	const ast = parseCardRulesText(tokenize(description))
@@ -42,8 +72,8 @@ function translateASTnode(node:Node): string {
 			!!node.isNested,
 			!!node.associated,
 			node.name,
-			node.param ?? '',
-			node.cost ? getSymbolRunHtml(node.cost) : '',
+			node.param ? makeSpan('kw-param', `${node.param}`) : '',
+			node.cost ? makeSpan('kw-cost', getSymbolRunHtml(node.cost)) : '',
 			node.associated ? translateASTnode(node.associated) : '',
 			node.reminderText ? getReminderHtml(node.reminderText) : ''
 		)
