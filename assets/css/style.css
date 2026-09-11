@@ -390,7 +390,10 @@ i.reminder {
 	flex-flow: row;
 	align-items: center;
 	justify-content: space-between;
-	background: linear-gradient(in oklab, var(--bronze), 30%, var(--gold));
+	background: linear-gradient(
+		color-mix(in oklab, var(--ogn-orange) 50%, var(--paper-white)),
+		30%, var(--ogn-orange)
+	);
 	border-bottom: 0.1em solid var(--gold);
 }
 
@@ -402,9 +405,10 @@ i.reminder {
 	font-family: Alegreya;
 	font-weight: 700;
 	font-size: 1.2rem;
-	color: var(--gold);
+	color: transparent;
 	background-color: var(--text-black);
-
+	border-top: 1px solid transparent;
+	border-bottom: 1px solid transparent;
 
 	clip-path: polygon(
 		var(--slant, 0.3em) 0, 100% 0, calc(100% - var(--slant, 0.3em)) 100%, 0 100%
@@ -420,9 +424,36 @@ i.reminder {
 			var(--slant, 0.3em) 0, 100% 0, 100% 100%, 0 100%
 		);
 	}
-	&:hover{cursor: grab;}
+
+	& span {
+		background: linear-gradient(
+			color-mix(in oklab, var(--ogn-orange) 50%, var(--paper-white)),
+			var(--ogn-orange)
+		) text;
+	}
+	&:hover {
+		border-top: none;
+		border-bottom: 2px solid var(--gold);
+		& span {
+			background: linear-gradient(
+				var(--paper-white), 30%, var(--gold), 75%, var(--order-lo)
+			) text;
+		}
+		cursor: grab;
+	}
+	&:active {
+		border-bottom: 1px solid var(--mind-hi);
+		border-top: 1px solid var(--mind-hi);
+		filter: brightness(0.9) saturate(0.8);
+		& span {
+			background: var(--ogn-orange) text;
+		}
+		cursor: grabbing;
+	}
 }
 
 .sticky {
 	position: sticky;
+	top: 0;
+	z-index: 2;
 }
