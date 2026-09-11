@@ -1,9 +1,9 @@
 import { SQL } from "bun"
-import { makeCardsTableBody, makeCardTableRow, makeCollectionPage, makeInlineSymbol, makeMightCount, makeTag } from "./gen/HTMLtemplates"
+import { makeCardsTableBody, makeCollectionPage} from "./gen/HTMLtemplates"
 import type { CardDetails, Cards, Keywords } from "./gen/dbTableInterfaces"
 import { testLexer } from "./src/modules/test"
-import { testParser, updateParserASTs } from "./testParser"
-import { getCardTableRowHtml, getDescriptionHtml } from "./src/modules/rbmlHtmlRenderer"
+import { testParser } from "./testParser"
+import { getCardTableRowHtml } from "./src/modules/rbmlHtmlRenderer"
 
 const sql = new SQL({
 	adapter:'mariadb',
