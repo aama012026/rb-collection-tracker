@@ -1,5 +1,5 @@
-import type { CardDetails, Keywords } from "../../gen/dbTableInterfaces";
-import { makeAbility, makeActivatedAbility, makeCardDescription, makeCardTableRow, makeCommaListItem, makeInfixGroup, makeInlineSymbol, makeKeyword, makeMightCount, makeReminder, makeSpan, makeTag, makeXpCount } from "../../gen/HTMLtemplates";
+import type { CardDetails } from "../../gen/dbTableInterfaces";
+import { makeAbility, makeActivatedAbility, makeBadge, makeCardDescription, makeCardTableRow, makeCommaListItem, makeInfixGroup, makeInlineSymbol, makeKeyword, makeMightCount, makeReminder, makeShortNameAndSubtitle, makeSpan, makeXpCount } from "../../gen/HTMLtemplates";
 import { tokenize } from "./rbmlLexer";
 import { parseCardRulesText, type Node, type Symbol } from "./rbmlParser";
 import stringify from "./stringify";
@@ -7,21 +7,32 @@ import stringify from "./stringify";
 export function getCardTableRowHtml(c:CardDetails): string {
 	const html = makeCardTableRow(
 		c.id, c.domains ?? 'null', c.rarity, c.set_code,
-		c.collector_number, Math.floor(Math.random() * 5), c.name,
+		c.riot_id.split('-')[1]!.split('/')[0]!, Math.floor(Math.random() * 5),
+		getNameHtml(c.name),
 		c.energy ? makeInlineSymbol(c.energy) : '',
 		getPowerCostHtml(c),
 		c.might ? makeMightCount('', c.might) : '',
-		c.types ?? '',
-		c.tags?.split(', ').map(makeTag).join('') ?? '',
-		c.keywords ?? '',
+		makeBadge('type', c.types ?? ''),
+		c.tags?.split(', ').map(tag => makeBadge('tag', tag)).join('') ?? '',
 		getDescriptionHtml(c.description ?? '')
 	)
-	if(c.domain_shorthands) {
-		const domainString = c.domain_shorthands.split(', ').join('-')
-		return html.replace(/symbol-C/g, `symbol-${domainString}`)
+	if(c.domain_shorthands && c.domain_shorthands.split(', ').length === 1) {
+		const domains = c.domain_shorthands.split(', ')
+		return html.replace(/symbol-C/g, `symbol-${domains[0]!}`)
+		.replace(/data-symbol="C"/g, `data-symbol="${domains[0]!}"`)
 	}
 	else {
 		return html
+	}
+}
+
+function getNameHtml(cardName: string): string {
+	const [shortName, subtitle] = cardName.split(', ')
+	if(shortName && subtitle) {
+		return makeShortNameAndSubtitle(shortName, subtitle.replace(/\s/g, '&nbsp;'))
+	}
+	else {
+		return makeSpan('short-name', cardName)
 	}
 }
 
@@ -29,8 +40,16 @@ function getPowerCostHtml(card: CardDetails): string {
 	if(!card.domain_shorthands || !card.power) {
 		return ''
 	}
-	const domainString = card.domain_shorthands.split(', ').join('-')
-	return makeInlineSymbol(`${domainString}-${card.rarity}`).repeat(card.power)
+	const domains = card.domain_shorthands.split(', ')
+	if(domains.length > 1) {
+		return makeInlineSymbol('C').repeat(card.power)
+	}
+	else if(domains.length === 1){
+		return makeInlineSymbol(domains.pop()!).repeat(card.power)
+	}
+	else {
+		return `[${card.domain_shorthands}]`
+	}
 }
 
 export function getDescriptionHtml(description: string): string {
@@ -38,7 +57,7 @@ export function getDescriptionHtml(description: string): string {
 	const htmlFragments = ast.map(branch => {
 		return translateASTnode(branch)
 	})
-	return makeCardDescription(htmlFragments.join('<br>'))
+	return makeCardDescription(htmlFragments.join(''))
 }
 
 function translateASTnode(node:Node): string {
