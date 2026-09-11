@@ -4,6 +4,7 @@ import type { CardDetails, Cards, Keywords } from "./gen/dbTableInterfaces"
 import { testLexer } from "./src/modules/test"
 import { testParser } from "./testParser"
 import { getCardTableRowHtml } from "./src/modules/rbmlHtmlRenderer"
+import stringify, { prettyPrint } from "./src/modules/stringify"
 
 const sql = new SQL({
 	adapter:'mariadb',
@@ -28,6 +29,11 @@ console.log(`Riftbound collection server version: 0`)
 const server = Bun.serve({
 	routes: {
 		'/': new Response(collection, {headers: {'Content-Type': 'text/html; charset=utf-8',}}),
+		'/cards': (request) => {
+			const signals = new URL(request.url).searchParams.get('datastar') as {sortOrder: string[], draggedIdx: number}|null
+			prettyPrint(signals)
+			return new Response(cardRows.join('\n'))
+		},
 		'/fonts': (request) => {
 			const fontName = new URL(request.url).pathname
 			try {

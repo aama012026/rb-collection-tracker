@@ -27,10 +27,10 @@
 <template id="sortbox">
 	<div class="sortbox" draggable="true"
 		data-on:dragstart="$draggedIdx = %{idx:number}"
+		data-on:dragend="@get('/cards')"
 		data-on:dragover="evt.preventDefault()"
 		data-on:dragenter="const targetValue = $sortOrder[%{idx}]; $sortOrder[%{idx}] = $sortOrder[$draggedIdx]; $sortOrder[$draggedIdx] = targetValue; $draggedIdx = %{idx}"
-		data-text="$sortOrder[%{idx}]"
-	></div>
+	><span data-text="$sortOrder[%{idx}]"></span></div>
 </template>
 
 <template id="sticky-sort">
