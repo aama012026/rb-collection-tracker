@@ -2,6 +2,7 @@
 	/* Card colors */
 	--paper-white: #ffffff;
 	--border-black: #080000;
+	--text-black: #013951;
     /* Set colors */
     --ogn-orange:#ef7d01;
     --sfd-magenta:#d12379;
@@ -23,26 +24,40 @@
     /* Global variable defaults */
     --c-bg: var(--border-black);
     --c-fg: var(--paper-white);
+
+    /* Global attribute defaults */
+    font-family: AlegreyaSans;
+    font-size: 1rem;
+    font-weight: 400;
+    font-feature-settings: "lnum";
 }
 
-
-
-[data-domain] {--c-domain-hi: var(--silver-hi); --c-domain-lo: var(--silver-lo);}
-[data-domain="fury"] {--c-domain-hi: var(--fury-hi); --c-domain-lo: var(--fury-lo);}
-[data-domain="calm"] {--c-domain-hi: var(--calm-hi); --c-domain-lo: var(--calm-lo);}
-[data-domain="mind"] {--c-domain-hi: var(--mind-hi); --c-domain-lo: var(--mind-lo);}
-[data-domain="body"] {--c-domain-hi: var(--body-hi); --c-domain-lo: var(--body-lo);}
-[data-domain="chaos"] {--c-domain-hi: var(--chaos-hi); --c-domain-lo: var(--chaos-lo);}
-[data-domain="order"] {--c-domain-hi: var(--order-hi); --c-domain-lo: var(--order-lo);}
+[data-domain] {
+	--c-domain-a-hi: var(--silver-hi); --c-domain-a-lo: var(--silver-lo);
+	--c-domain-b-hi: var(--silver-hi); --c-domain-b-lo: var(--silver-lo);
+}
+[data-domain^="fury"] {--c-domain-a-hi: var(--fury-hi); --c-domain-a-lo: var(--fury-lo);}
+[data-domain^="calm"] {--c-domain-a-hi: var(--calm-hi); --c-domain-a-lo: var(--calm-lo);}
+[data-domain^="mind"] {--c-domain-a-hi: var(--mind-hi); --c-domain-a-lo: var(--mind-lo);}
+[data-domain^="body"] {--c-domain-a-hi: var(--body-hi); --c-domain-a-lo: var(--body-lo);}
+[data-domain^="chaos"] {--c-domain-a-hi: var(--chaos-hi); --c-domain-a-lo: var(--chaos-lo);}
+[data-domain^="order"] {--c-domain-a-hi: var(--order-hi); --c-domain-a-lo: var(--order-lo);}
+[data-domain$="fury"] {--c-domain-b-hi: var(--fury-hi); --c-domain-b-lo: var(--fury-lo);}
+[data-domain$="calm"] {--c-domain-b-hi: var(--calm-hi); --c-domain-b-lo: var(--calm-lo);}
+[data-domain$="mind"] {--c-domain-b-hi: var(--mind-hi); --c-domain-b-lo: var(--mind-lo);}
+[data-domain$="body"] {--c-domain-b-hi: var(--body-hi); --c-domain-b-lo: var(--body-lo);}
+[data-domain$="chaos"] {--c-domain-b-hi: var(--chaos-hi); --c-domain-b-lo: var(--chaos-lo);}
+[data-domain$="order"] {--c-domain-b-hi: var(--order-hi); --c-domain-b-lo: var(--order-lo);}
 
 [data-badge], [data-badge="tag"] {--c-bg: var(--border-black);}
 [data-badge="type"] {
 	--c-bg: #0002;
 	&:hover {
-		--c-bg: var(--c-domain-hi);
+		--c-bg: var(--c-domain-a-hi);
 	}
 }
 [data-badge="keyword"] {
+	--c-bg: var(--kw-gray);
 	&[data-keyword="Deathknell"],
 	&[data-keyword="Deflect"],
 	&[data-keyword="Ganking"],
@@ -94,21 +109,68 @@ body {
 	place-items: center;
 }
 
-.text-name {
-	font-family: Alegreya;
-	font-size: 1rem;
-	font-weight: 700;
-}
-
-.text-subname {
-	font-family: AlegreyaSC;
-	font-weight: normal;
-}
-
-.text-description {
-	font-family: AlegreyaSans;
+.set-code, .card-idx, .collection-count, .stats {
+	font-size: 1.2rem;
 	font-weight: 500;
-	font-feature-settings: "lnum";
+}
+
+.card-name {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: baseline;
+	column-gap: 0.5em;
+	line-height: 1.1;
+	padding: 0.1em 0;
+}
+
+.badge-list {
+	display: flex;
+	flex-flow: row wrap;
+	align-items: baseline;
+	gap: 0.2em 0;
+}
+
+.short-name {
+	font-family: Alegreya;
+	font-size: 1.2rem;
+	font-weight: 800;
+	letter-spacing: 3%;
+}
+
+.small-caps {
+	font-family: Alegreya;
+	font-weight: 600;
+	font-style: italic;
+	text-transform: uppercase;
+
+	i&{font-size: 1rem;}
+}
+
+.small-caps-sans {
+	font-family: AlegreyaSans;
+	font-size: 0.8em;
+	font-weight: 700;
+	font-style: oblique 12deg;
+	text-transform: uppercase;
+}
+
+
+.description {
+	font-family: AlegreyaSans;
+	font-weight: 400;
+	display: flex;
+	flex-flow: row wrap;
+	align-items: baseline;
+	column-gap: 0.5em;
+	& > :not(:has(> .badge)) {
+		clip-path: polygon(
+			var(--slant, 0.3em) 0, 100% 0,
+			calc(100% - var(--slant, 0.3em)) 100%, 0 100%
+		);
+		border-radius: 1em;
+		padding: 0.1em 0.5em;
+		background-color: color-mix(in oklab, var(--c-domain-a-lo), #0001 80%);
+	}
 }
 
 body {
@@ -123,16 +185,16 @@ table {
 }
 
 tr {
-
 	&[data-domain] {
-		background: linear-gradient( in oklab
-			105deg, var(--c-domain-lo), var(--c-domain-hi) 15% 60%, var(--c-domain-lo) 90%
+		background: linear-gradient( in oklab 105deg,
+			var(--c-domain-a-lo), var(--c-domain-a-hi) 15% 40%,
+			var(--c-domain-b-hi) 60%, var(--c-domain-b-lo) 85%
 		);
 	}
 
 	&:hover {
 		& td {
-			backdrop-filter: brightness(0.8);
+			backdrop-filter: brightness(0.9);
 		}
 	}
 }
@@ -141,6 +203,9 @@ td {
 	&:first-child {padding-left: 2vw;}
 	&:last-child {padding-right: 2vw;}
 
+	box-sizing: border-box;
+	min-height: 100%;
+	height: 2.5lh;
 	border-top: 1px solid var(--c-rarity);
 	border-bottom: 1px solid var(--c-rarity);
 
@@ -158,31 +223,27 @@ td {
 }
 
 mark.badge {
-	font-size: 0.8em;
+	--arrow-slant: 0.5em;
 	display: inline-block;
-	padding: 0 0.5em 0 0.3em;
-	font-family: AlegreyaSans;
-	font-weight: 700;
-	font-style: oblique 12deg;
-	/*font-style: italic;*/
-	text-transform: uppercase;
+	padding: 0.1rem 0.6em 0.1em 0.4em;
 	background: var(--c-bg);
 	color: var(--c-fg);
 	clip-path: polygon(
-		var(--slant, 0.3em) 0,
-		100% 0,
-		calc(100% - var(--slant, 0.3em)) 100%,
-		0 100%
+		var(--slant, 0.3em) 0, 100% 0,
+		calc(100% - var(--slant, 0.3em)) 100%, 0 100%
 	);
 
 	&[data-associated="true"][data-nested="false"] {
 		clip-path: polygon(
-			0.3em 0, calc(100% - 0.4em) 0, 100% 50%, calc(100% - 0.4em) 100%, 0 100%
+			0.3em 0, calc(100% - var(--arrow-slant)) 0,
+			100% 50%, calc(100% - var(--arrow-slant)) 100%, 0 100%
 		);
 	}
 	&[data-associated="true"][data-nested="true"] {
 		clip-path: polygon(
-			0 0, calc(100% - 0.4em) 0, 100% 50%, calc(100% - 0.4em) 100%, 0 100%, 0.4em 50%
+			0 0, calc(100% - var(--arrow-slant)) 0,
+			100% 50%, calc(100% - var(--arrow-slant)) 100%,
+			0 100%, var(--arrow-slant) 50%
 		);
 	}
 	[data-rarity="epic"] &:not([data-badge="keyword"]),
@@ -197,10 +258,22 @@ mark.badge {
 			background-color: var(--c-fg);
 		}
 		&[data-badge="tag"] {
-			color: var(--c-domain-lo);
+			color: var(--c-domain-a-lo);
 		}
 		&[data-badge="keyword"] {
 			color:var(--c-bg);
+			& .inline-svg {
+				--c-energy-txt: var(--paper-white);
+				--c-rune-glyph: var(--text-black);
+				--c-rune-orb: var(--text-black);
+				&[data-symbol="R"] {--c-rune-glyph: var(--fury-hi);}
+				&[data-symbol="G"] {--c-rune-glyph: var(--calm-hi);}
+				&[data-symbol="B"] {--c-rune-glyph: var(--mind-hi);}
+				&[data-symbol="O"] {--c-rune-glyph: var(--body-hi);}
+				&[data-symbol="P"] {--c-rune-glyph: var(--chaos-hi);}
+				&[data-symbol="Y"] {--c-rune-glyph: var(--order-hi);}
+				&[data-symbol='C'] {--c-rune-glyph: var(--c-domain-a-hi);}
+			}
 		}
 	}
 }
@@ -210,14 +283,146 @@ mark.badge {
 	margin-right: 0.2em;
 }
 
-img.inline-svg {
+.inline-svg {
+	--c-energy-txt: var(--text-black);
+	--c-rune-glyph: var(--text-black);
+	--c-rune-orb: var(--paper-white);
+	--c-rune-edge: var(--c-rarity);
+	--rune-edge-width: 0;
 	max-height: 1em;
-	vertical-align:text-top;
-	padding: 0 0.1em;
+	display: inline-block;
+	position: relative;
+	height: 1em;
+	width: 1em;
+	vertical-align: text-top;
+	/*margin-top: 0.1em;*/
+
+	&:is(
+		[data-symbol='R'], [data-symbol='G'],
+		[data-symbol='B'], [data-symbol='O'],
+		[data-symbol='P'], [data-symbol='Y'],
+		[data-symbol='C'], [data-symbol='A']
+	) {
+		--c-rune-glyph: var(--paper-white);
+		--c-rune-orb: var(--c-domain-hi);
+		.badge & {
+			transform-origin: center;
+			transform: scale(1.7);
+		}
+	}
+
+	& svg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
 }
 
-.xp-count, .might-count {
-	&:hover {
-		background: #0002;
+.inline-svg:not(
+	[data-symbol='R'], [data-symbol='G'], [data-symbol='B'],
+	[data-symbol='O'], [data-symbol='P'], [data-symbol='Y'],
+	[data-symbol='C'], [data-symbol*='0'],
+	[data-symbol*='1'], [data-symbol*='2'], [data-symbol*='3'],
+	[data-symbol*='4'], [data-symbol*='5'], [data-symbol*='6'],
+	[data-symbol*='7'], [data-symbol*='8'], [data-symbol*='9']
+) .rune-orb,
+.badge .inline-svg:is(
+	[data-symbol='R'], [data-symbol='G'], [data-symbol='B'], [data-symbol='O'],
+	[data-symbol='P'], [data-symbol='Y'], [data-symbol='C'], [data-symbol='A']
+) .rune-orb {
+	display: none;
+}
+
+/*.description .xp-count:hover, .description .might-count:hover {
+	border-bottom: 2px solid var(--c-domain-hi);
+	text-shadow: 0 0 1px var(--c-fg);
+}*/
+
+i.reminder {
+	font-style: oblique 12deg;
+	&::before {content: '( ';}
+	&::after {content: ' )';}
+}
+
+.hoverable {
+	position: relative;
+	display: inline-block;
+	overflow:visible;
+	&:not(:has(> .badge)):has(> .reminder) {
+		clip-path: polygon(
+			var(--slant, 0.3em) 0, 100% 0, calc(100% - var(--slant, 0.3em)) 100%, 0 100%
+		);
+		background: color-mix(in oklab, var(--c-domain-a-hi), #FFF4 80%);
+		&:hover {background: color-mix(in oklab, var(--c-domain-a-lo), #0001 80%);}
+		padding: 0.1em 0.5em;
 	}
+	& > .reminder {
+		display: none;
+		position: absolute;
+		right: 100%;
+		bottom: calc(50% - 0.7em);
+		padding: 0.1em 0.5em 0.1em 0.3em;
+		clip-path: polygon(
+			var(--slant, 0.3em) 0, 100% 0, calc(100% - var(--slant, 0.3em)) 100%, 0 100%
+		);
+		background-color: var(--c-domain-a-hi);
+		border: 1px solid var(--paper-white);
+		border-left: none;
+		border-right: none;
+		backdrop-filter: blur(4px);
+		z-index: 1;
+		min-width: max-content;
+		max-width: 90em;
+	}
+	&:hover > .reminder {
+		display: block;
+		overflow: auto;
+	}
+}
+
+#sort-order {
+	box-sizing: border-box;
+	min-width: 100%;
+	max-width: 100vw;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: space-between;
+	background: linear-gradient(in oklab, var(--bronze), 30%, var(--gold));
+	border-bottom: 0.1em solid var(--gold);
+}
+
+.sortbox {
+	padding: 0.3em 0;
+	text-align: center;
+	flex: auto;
+
+	font-family: Alegreya;
+	font-weight: 700;
+	font-size: 1.2rem;
+	color: var(--gold);
+	background-color: var(--text-black);
+
+
+	clip-path: polygon(
+		var(--slant, 0.3em) 0, 100% 0, calc(100% - var(--slant, 0.3em)) 100%, 0 100%
+	);
+
+	&:first-child {
+		clip-path: polygon(
+			0 0, 100% 0, calc(100% - var(--slant, 0.3em)) 100%, 0 100%
+			);
+	}
+	&:last-child {
+		clip-path: polygon(
+			var(--slant, 0.3em) 0, 100% 0, 100% 100%, 0 100%
+		);
+	}
+	&:hover{cursor: grab;}
+}
+
+.sticky {
+	position: sticky;
 }
