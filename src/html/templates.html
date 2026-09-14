@@ -20,6 +20,7 @@
 			</thead>
 			%{tbody: string}
 		</table>
+		%{filterBar: string}
 	</body>
 </html>
 </template>
@@ -132,6 +133,79 @@
 		><use href="#symbol-%{shorthand}"></use>
 		</svg>
 	</span>
+</template>
+
+<template id="filter-bar">
+	<div class="flex-row sticky" data-sticky="bot" data-signals="{
+		sets: %{setsFilters: string},
+		domains: %{domainsFilters: string},
+		types: %{typesFilters: string},
+		tags: %{tagsFilters: string}
+	}">
+		%{setsPopup: string}
+		%{domainsPopup: string}
+		<input type="search" name="card-search"
+			placeholder="Search card names or text"
+		>
+		%{typesPopup: string}
+		%{tagsPopup: string}
+	</div>
+</template>
+
+<template id="popup-menu">
+	<div class="popup-menu">
+		<button popovertarget="%{name:string}-popup">%{name}</button>
+		<dialog id="%{name}-popup" popover="auto">%{content:string}</dialog>
+	</div>
+</template>
+
+<template id="radio-filter">
+	<fieldset class="radio-filter">
+		<legend>%{name: string}</legend>
+		<div class="radio-filter">
+			<label for="%{name}-include">include</label>
+			<input type="radio"
+				name="filter-%{name}" id="%{name}-include" value="include"
+			>
+
+			<label for="%{name}-exclude">exclude</label>
+			<input type="radio"
+				name="filter-%{name}" id="%{name}-exclude" value="exclude"
+			>
+
+			<input type="radio" checked
+				name="filter-%{name}" id="%{name}-unset" value="include"
+			>
+			<label for="%{name}-unset">unset</label>
+		</div>
+	</fieldset>
+</template>
+
+<template id="range-filter">
+	<div id="range-%{name:string}">
+		<label for="%{name}-min">min</label>
+		<input type="range" id="%{name}-min" name="%{name}-min"
+			data-bind:_%{name}-min
+			min="%{min:number}" max="%{max:number}" value="%{min}"
+		>
+		<output for="%{name}-min" data-text="$%{name}Min"></output>
+		<label for="%{name}-max">max</label>
+		<input type="range" id="%{name}-max" name="%{name}-max"
+			data-bind:_%{name}-max
+			min="%{min}" max="%{max}" value="%{max}"
+		>
+		<output for="%{name}-min" data-text="$%{name}Max"></output>
+	</div>
+</template>
+
+<template id="cycle-button">
+	<button type="button" data-attr:state="%{stateSignal:string}"
+		data-on:click="switch(%stateSignal) {
+			case 'include': %{stateSignal} = 'require'; break;
+			case 'require': %{stateSignal} = 'exclude'; break;
+			case 'exclude': %{stateSignal} = 'include'; break;
+		}"
+	>%{buttonText: string}</button>
 </template>
 
 <template id="reminder">

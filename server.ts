@@ -1,6 +1,6 @@
 import { SQL } from "bun"
-import { makeCardsTableBody, makeCollectionPage} from "./gen/HTMLtemplates"
-import type { CardDetails, Cards, Keywords } from "./gen/dbTableInterfaces"
+import { makeCardsTableBody, makeCollectionPage, makeCycleButton, makeFilterBar, makePopupMenu, makeRadioFilter} from "./gen/HTMLtemplates"
+import type { CardDetails, Cards, Domains, Keywords, Sets, Tags, Types } from "./gen/dbTableInterfaces"
 import { testLexer } from "./src/modules/test"
 import { testParser } from "./testParser"
 import { getCardTableRowHtml } from "./src/modules/rbmlHtmlRenderer"
@@ -17,14 +17,43 @@ const sql = new SQL({
 	bigint:true
 })
 await sql`USE riftbound`
+const sets:Pick<Sets, 'name'>[] = await sql`SELECT name FROM sets ORDER BY release_date`
+const domains:Pick<Domains, 'name'>[] = await sql`SELECT name FROM domains ORDER BY sort_order`
+const types:Pick<Types, 'name'>[] = await sql`SELECT name FROM types ORDER BY name`
+const tags:Pick<Tags, 'name'>[] = await sql`SELECT name FROM tags ORDER BY name`
 const cards:CardDetails[] = await sql`SELECT * FROM card_details ORDER BY riot_id`
 // Test
 testLexer(cards)
 testParser(cards)
 
 const cardRows = cards.map(c => getCardTableRowHtml(c))
+const setsFilters:Record<string, 'include'> = {}
+sets.forEach(set => setsFilters[set.name] = 'include')
+const domainsFilters:Record<string, 'include'> = {}
+domains.forEach(domain => domainsFilters[domain.name] = 'include')
+const typesFilters:Record<string, 'include'> = {}
+types.forEach(type => typesFilters[type.name] = 'include')
+const tagsFilters:Record<string, 'include'> = {}
+tags.forEach(tag => tagsFilters[tag.name] = 'include')
 
-const collection = makeCollectionPage(makeCardsTableBody(cardRows.join('\n')))
+const collection = makeCollectionPage(
+	makeCardsTableBody(cardRows.join('\n')),
+	makeFilterBar(
+		stringify(setsFilters), stringify(domainsFilters), stringify(typesFilters), stringify(tagsFilters),
+		makePopupMenu('sets', sets.map(
+			s => makeCycleButton(`$setsFilters[${s.name}]`, s.name)).join('\n')
+		),
+		makePopupMenu('domains', domains.map(
+			d => makeCycleButton(`$domainsFilters[${d.name}]`, d.name)).join('\n')
+		),
+		makePopupMenu('types', types.map(
+			t => makeCycleButton(`$typesFilters[${t.name}]`, t.name)).join('\n')
+		),
+		makePopupMenu('tags', tags.map(
+			t => makeCycleButton(`$tagsFilters[${t.name}]`, t.name)).join('\n')
+		),
+	)
+)
 
 console.log(`Riftbound collection server version: 0`)
 const server = Bun.serve({
