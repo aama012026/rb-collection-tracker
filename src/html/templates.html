@@ -30,12 +30,17 @@
 		data-on:dragstart="$draggedIdx = %{idx:number}"
 		data-on:dragend="@get('/cards')"
 		data-on:dragover="evt.preventDefault()"
-		data-on:dragenter="const targetValue = $sortOrder[%{idx}]; $sortOrder[%{idx}] = $sortOrder[$draggedIdx]; $sortOrder[$draggedIdx] = targetValue; $draggedIdx = %{idx}"
-	><span data-text="$sortOrder[%{idx}]"></span></div>
+		data-on:dragenter="
+			const targetValue = $sortOrder[%{idx}];
+			$sortOrder[%{idx}] = $sortOrder[$draggedIdx];
+			$sortOrder[$draggedIdx] = targetValue;
+			$draggedIdx = %{idx}
+		"
+	><span class="text-gradient" data-text="$sortOrder[%{idx}]"></span></div>
 </template>
 
 <template id="sticky-sort">
-	<div id="sort-order" class="sticky"
+	<div id="sort-order" class="sticky" data-sticky="top"
 		data-signals:sort-order="['set', 'domain', 'number', 'name', 'energy', 'power', 'might', 'type', 'tags']">${
 			makeSortbox(0) + makeSortbox(1) + makeSortbox(2) + makeSortbox(3) +
 			makeSortbox(4) + makeSortbox(5) + makeSortbox(6) + makeSortbox(7) +
@@ -45,9 +50,7 @@
 </template>
 
 <template id="cards-table-body">
-	<tbody id="cards-table-body">
-		%{rows: string}
-	</tbody>
+	<tbody id="cards-table-body">%{rows: string}</tbody>
 </template>
 
 <template id="card-table-row">
@@ -136,11 +139,11 @@
 </template>
 
 <template id="filter-bar">
-	<div class="flex-row sticky" data-sticky="bot" data-signals="{
-		sets: %{setsFilters: string},
-		domains: %{domainsFilters: string},
-		types: %{typesFilters: string},
-		tags: %{tagsFilters: string}
+	<div id="filter-bar" class="flex-row sticky" data-sticky="bot" data-signals="{
+		setsFilters: %{setsFilters: string},
+		domainsFilters: %{domainsFilters: string},
+		typesFilters: %{typesFilters: string},
+		tagsFilters: %{tagsFilters: string}
 	}">
 		%{setsPopup: string}
 		%{domainsPopup: string}
@@ -153,10 +156,22 @@
 </template>
 
 <template id="popup-menu">
-	<div class="popup-menu">
-		<button popovertarget="%{name:string}-popup">%{name}</button>
-		<dialog id="%{name}-popup" popover="auto">%{content:string}</dialog>
+	<div class="popup-menu" data-signals:%{name:string}-popup="false">
+		<button data-on:click="$%{name}Popup = !$%{name}Popup"
+		><span class="text-gradient">%{name}</span></button>
+		<div class="popup badge-list" data-show="$%{name}Popup">%{content:string}</div>
 	</div>
+</template>
+
+<template id="cycle-button">
+	<button class="badge small-caps-sans" type="button"
+		data-attr:data-state="%{stateSignal:string}"
+		data-on:click="switch(%{stateSignal}) {
+			case 'include': %{stateSignal} = 'require'; break;
+			case 'require': %{stateSignal} = 'exclude'; break;
+			case 'exclude': %{stateSignal} = 'include'; break;
+		}"
+	>%{buttonText: string}</button>
 </template>
 
 <template id="radio-filter">
@@ -196,16 +211,6 @@
 		>
 		<output for="%{name}-min" data-text="$%{name}Max"></output>
 	</div>
-</template>
-
-<template id="cycle-button">
-	<button type="button" data-attr:state="%{stateSignal:string}"
-		data-on:click="switch(%stateSignal) {
-			case 'include': %{stateSignal} = 'require'; break;
-			case 'require': %{stateSignal} = 'exclude'; break;
-			case 'exclude': %{stateSignal} = 'include'; break;
-		}"
-	>%{buttonText: string}</button>
 </template>
 
 <template id="reminder">
