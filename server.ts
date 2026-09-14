@@ -5,6 +5,7 @@ import { testLexer } from "./src/modules/test"
 import { testParser } from "./testParser"
 import { getCardTableRowHtml } from "./src/modules/rbmlHtmlRenderer"
 import stringify, { prettyPrint } from "./src/modules/stringify"
+import { patchElements } from "./src/modules/sse"
 
 const sql = new SQL({
 	adapter:'mariadb',
@@ -29,10 +30,31 @@ console.log(`Riftbound collection server version: 0`)
 const server = Bun.serve({
 	routes: {
 		'/': new Response(collection, {headers: {'Content-Type': 'text/html; charset=utf-8',}}),
-		'/cards': (request) => {
-			const signals = new URL(request.url).searchParams.get('datastar') as {sortOrder: string[], draggedIdx: number}|null
+		'/cards': async (request) => {
+			const signalsString = new URL(request.url).searchParams.get('datastar')
+		 	if(!signalsString) {
+				return new Response('Missing datastar signals', {status:404})
+			}
+			const signals = JSON.parse(signalsString) as {sortOrder: string[], draggedIdx: number}
 			prettyPrint(signals)
-			return new Response(cardRows.join('\n'))
+			const sortOrder = signals.sortOrder.join(', ')
+				.replace(/set/g, 'set_code')
+				.replace(/number/g, 'collector_number')
+				.replace(/domain/g, 'domains')
+				.replace(/type/g, 'types')
+
+			prettyPrint(sortOrder)
+			const sortedCards:CardDetails[] = await sql`SELECT * FROM card_details ORDER BY ${sortOrder};`
+			const sse = patchElements(
+				makeCardsTableBody(sortedCards.map(getCardTableRowHtml).join('\n')).split( '\n')
+			)
+			const stream = new ReadableStream({
+				start(c) {Promise.all([c.enqueue(sse)]).finally(() => c.close())},
+				cancel() {}
+			})
+			return new Response(stream, {
+				headers:{"Content-Type": "text/event-stream", "Cache-Control": "no-cache"}
+			})
 		},
 		'/fonts': (request) => {
 			const fontName = new URL(request.url).pathname
