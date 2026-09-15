@@ -320,8 +320,8 @@ td {
 		[data-symbol='P'], [data-symbol='Y'],
 		[data-symbol='C'], [data-symbol='A']
 	) {
-		--c-rune-glyph: var(--paper-white);
-		--c-rune-orb: var(--c-domain-hi);
+		--c-rune-glyph: var(--c-domain-a-hi);
+		--c-rune-orb: var(--paper-white);
 		.badge & {
 			transform-origin: center;
 			transform: scale(1.7);
