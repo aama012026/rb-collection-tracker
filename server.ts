@@ -62,6 +62,7 @@ const collection = makeCollectionPage(
 
 console.log(`Riftbound collection server version: 0.7`)
 const server = Bun.serve({
+	port: 3005,
 	routes: {
 		'/': new Response(collection, {headers: {'Content-Type': 'text/html; charset=utf-8',}}),
 		'/cards': async (request) => {
