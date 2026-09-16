@@ -27,14 +27,14 @@
 
 <template id="sortbox">
 	<div class="sortbox" draggable="true"
-		data-on:dragstart="$draggedIdx = %{idx:number}"
+		data-on:dragstart="$_draggedIdx = %{idx:number}"
 		data-on:dragend="@get('/cards')"
 		data-on:dragover="evt.preventDefault()"
 		data-on:dragenter="
 			const targetValue = $sortOrder[%{idx}];
-			$sortOrder[%{idx}] = $sortOrder[$draggedIdx];
-			$sortOrder[$draggedIdx] = targetValue;
-			$draggedIdx = %{idx}
+			$sortOrder[%{idx}] = $sortOrder[$_draggedIdx];
+			$sortOrder[$_draggedIdx] = targetValue;
+			$_draggedIdx = %{idx}
 		"
 	><span class="text-gradient" data-text="$sortOrder[%{idx}]"></span></div>
 </template>
@@ -156,10 +156,10 @@
 </template>
 
 <template id="popup-menu">
-	<div class="popup-menu" data-signals:%{name:string}-popup="false">
-		<button data-on:click="$%{name}Popup = !$%{name}Popup"
+	<div class="popup-menu" data-signals:_%{name:string}-popup="false">
+		<button data-on:click="$_%{name}Popup = !$_%{name}Popup"
 		><span class="text-gradient">%{name}</span></button>
-		<div class="popup badge-list" data-show="$%{name}Popup">%{content:string}</div>
+		<div class="popup badge-list" data-show="$_%{name}Popup">%{content:string}</div>
 	</div>
 </template>
 
