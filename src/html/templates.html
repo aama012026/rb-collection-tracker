@@ -140,11 +140,32 @@
 
 <template id="filter-bar">
 	<div id="filter-bar" class="flex-row sticky" data-sticky="bot" data-signals="{
-		setsFilters: %{setsFilters: string},
-		domainsFilters: %{domainsFilters: string},
-		typesFilters: %{typesFilters: string},
-		tagsFilters: %{tagsFilters: string}
-	}">
+		filters: {
+			sets: {require:[], exclude:[]},
+			domains: {require: [], exclude: []},
+			types: {require: [], exclude: []},
+			tags: {require: [], exclude: []}
+		},
+	}"
+	data-on:click="
+		const button = evt.target.closest('button[data-id]');
+		if (!button) {
+			return;
+		}
+		const category = button.dataset.category, id = button.dataset.id;
+		if ($filters[category].require.includes(id)) {
+			$filters[category].require = $filters[category].require.filter(v => v !== id);
+			$filters[category].exclude = [...$filters[category].exclude, id];
+		}
+		else if($filters[category].exclude.includes(id)) {
+			$filters[category].exclude = filters[category].exclude.filter(v => v !== id);
+		}
+		else {
+			$filters[category].require = [...$filters[category].require, id];
+		}
+		@get('/cards')
+	"
+	>
 		%{setsPopup: string}
 		%{domainsPopup: string}
 		<input type="search" name="card-search"
@@ -165,13 +186,14 @@
 
 <template id="cycle-button">
 	<button class="badge small-caps-sans" type="button"
-		data-attr:data-state="%{stateSignal:string}"
-		data-on:click="switch(%{stateSignal}) {
-			case 'include': %{stateSignal} = 'require'; break;
-			case 'require': %{stateSignal} = 'exclude'; break;
-			case 'exclude': %{stateSignal} = 'include'; break;
-		}"
-	>%{buttonText: string}</button>
+		data-category="%{category:string}",
+		data-id="%{id:number}"
+		data-attr:data-state="
+			$filters.%{category}.require.includes('%{id}') ? 'require' : (
+				$filters.%{category}.exclude.includes('%{id}') ? 'exclude' : 'include'
+			);
+		"
+	>%{name: string}</button>
 </template>
 
 <template id="radio-filter">

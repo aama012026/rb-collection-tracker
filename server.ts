@@ -4,8 +4,10 @@ import type { CardDetails, Domains, Sets, Tags, Types } from "./gen/dbTableInter
 import { testLexer } from "./src/modules/test"
 import { testParser } from "./testParser"
 import { getCardTableRowHtml } from "./src/modules/rbmlHtmlRenderer"
-import stringify, { prettyPrint } from "./src/modules/stringify"
+import { prettyPrint } from "./src/modules/stringify"
 import { patchElements } from "./src/modules/sse"
+import type { FilterState } from "./src/types/DomainTypes"
+import { WhereIn } from "./src/modules/query"
 
 const sql = new SQL({
 	adapter:'mariadb',
@@ -28,35 +30,21 @@ testParser(cards)
 
 const cardRows = cards.map(c => getCardTableRowHtml(c))
 
-const setsFilters:Record<number, 'include'> = {}
-const domainsFilters:Record<number, 'include'> = {}
-const typesFilters:Record<number, 'include'> = {}
-const tagsFilters:Record<number, 'include'> = {}
-
-sets.forEach(set => setsFilters[set.id] = 'include')
-domains.forEach(domain => domainsFilters[domain.id] = 'include')
-types.forEach(type => typesFilters[type.id] = 'include')
-tags.forEach(tag => tagsFilters[tag.id] = 'include')
-
 const collection = makeCollectionPage(
 	makeCardsTableBody(cardRows.join('\n')),
 	makeFilterBar(
-		Bun.escapeHTML(stringify(setsFilters)),
-		Bun.escapeHTML(stringify(domainsFilters)),
-		Bun.escapeHTML(stringify(typesFilters)),
-		Bun.escapeHTML(stringify(tagsFilters)),
 		makePopupMenu('sets', sets.map(set =>
-			makeCycleButton(`$setsFilters[${set.id}]`, set.name)).join('\n')
-		),
+			makeCycleButton('sets', set.id, set.name)
+		).join('\n')),
 		makePopupMenu('domains', domains.map(domain =>
-			makeCycleButton(`$domainsFilters[${domain.id}]`, domain.name)).join('\n')
-		),
+			makeCycleButton('domains', domain.id, domain.name)
+		).join('\n')),
 		makePopupMenu('types', types.map(type =>
-			makeCycleButton(`$typesFilters[${type.id}]`, type.name)).join('\n')
-		),
+			makeCycleButton('types', type.id, type.name)
+		).join('\n')),
 		makePopupMenu('tags', tags.map(tag =>
-			makeCycleButton(`$tagsFilters[${tag.id}]`, tag.name)).join('\n')
-		),
+			makeCycleButton('tags', tag.id, tag.name)
+		).join('\n')),
 	)
 )
 
@@ -70,8 +58,16 @@ const server = Bun.serve({
 		 	if(!signalsString) {
 				return new Response('Missing datastar signals', {status:404})
 			}
-			const signals = JSON.parse(signalsString) as {sortOrder: string[], draggedIdx: number}
-			prettyPrint(signals)
+			const signals = JSON.parse(signalsString) as {
+				sortOrder: string[],
+				filters: {
+					sets:{require:string[], exclude:string[]},
+					domains:{require:string[], exclude:string[]},
+					types:{require:string[], exclude:string[]},
+					tags:{require:string[], exclude:string[]}
+				}
+			}
+			prettyPrint(signals, 140)
 			const sortOrder = signals.sortOrder.map(s => s
 				.replace('set', 'set_code')
 				.replace('number', 'collector_number')
@@ -81,8 +77,17 @@ const server = Bun.serve({
 			// We escape each column name as a quoted identifier.
 			.map(column => sql(column))
 			.reduce((accumulated, column) => sql`${accumulated}, ${column}`)
-
-			prettyPrint(sortOrder)
+			const setsFilterQueryFragment = WhereIn(
+				{column: 'sets', filterList: signals.filters.sets.require, exclude: false},
+				{column: 'sets', filterList: signals.filters.sets.exclude, exclude: true},
+				{column: 'domains', filterList: signals.filters.domains.require, exclude: false},
+				{column: 'domains', filterList: signals.filters.domains.exclude, exclude: true},
+				{column: 'types', filterList: signals.filters.types.require, exclude: false},
+				{column: 'types', filterList: signals.filters.types.exclude, exclude: true},
+				{column: 'tags', filterList: signals.filters.tags.require, exclude: false},
+				{column: 'tags', filterList: signals.filters.tags.exclude, exclude: true},
+			)
+			prettyPrint(setsFilterQueryFragment)
 			const sortedCards:CardDetails[] = await sql`SELECT * FROM card_details ORDER BY ${sortOrder};`
 			const sse = patchElements(
 				makeCardsTableBody(sortedCards.map(getCardTableRowHtml).join('\n')).split( '\n')
@@ -115,3 +120,20 @@ const server = Bun.serve({
 	}
 })
 console.log(`Listening on ${server.url}`)
+
+function getFilters(
+	values:Record<string, FilterState>
+): {required: string[], excluded: string[]} {
+	const required: string[] = []
+	const excluded: string[] = []
+	for(const prop in values) {
+		const filterState = values[prop]
+		if(filterState === 'require') {
+			required.push(prop)
+		}
+		else if(filterState === 'exclude') {
+			excluded.push(prop)
+		}
+	}
+	return {required, excluded}
+}
