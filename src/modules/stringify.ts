@@ -1,3 +1,5 @@
+import { sql } from "bun"
+
 export default function stringify(value: unknown, maxColumns = 80, tabStops = 0, keyLength = 0): string {
 	// We use real tabs for code indenting, as it may be written to a file for use.
 	// This keeps spacing configurable visually by the environment.
@@ -55,14 +57,14 @@ export function isEmpty<T extends object>(obj: T): boolean {
 }
 
 
-export function prettyPrint(value:unknown, tabWidth = 4):void {
+export function prettyPrint(value:unknown, screenWidthColumns = 80, tabWidth = 4):void {
 	let text: string
 	if(typeof value === 'string') {
 		text = value
 	}
 	else {
 		// We replace tabs with spaces for consistent spacing in the terminal.
-		text = stringify(value).replace(/\t/g, ' '.repeat(tabWidth))
+		text = stringify(value, screenWidthColumns).replace(/\t/g, ' '.repeat(tabWidth))
 	}
 	if(!(text === '' || text === '[]' || text === '{}')) {
 		console.log(`\x1b[0m${text}\x1b[0m`)
