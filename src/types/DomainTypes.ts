@@ -1,0 +1,1 @@
+export type FilterState = 'include'|'require'|'exclude'
