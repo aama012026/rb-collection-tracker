@@ -7,7 +7,7 @@ import { getCardTableRowHtml } from "./src/modules/rbmlHtmlRenderer"
 import { prettyPrint } from "./src/modules/stringify"
 import { patchElements } from "./src/modules/sse"
 import type { FilterState } from "./src/types/DomainTypes"
-import { WhereIn } from "./src/modules/query"
+import { whereIn } from "./src/modules/query"
 
 const sql = new SQL({
 	adapter:'mariadb',
@@ -77,18 +77,22 @@ const server = Bun.serve({
 			// We escape each column name as a quoted identifier.
 			.map(column => sql(column))
 			.reduce((accumulated, column) => sql`${accumulated}, ${column}`)
-			const setsFilterQueryFragment = WhereIn(
-				{column: 'sets', filterList: signals.filters.sets.require, exclude: false},
-				{column: 'sets', filterList: signals.filters.sets.exclude, exclude: true},
-				{column: 'domains', filterList: signals.filters.domains.require, exclude: false},
-				{column: 'domains', filterList: signals.filters.domains.exclude, exclude: true},
-				{column: 'types', filterList: signals.filters.types.require, exclude: false},
-				{column: 'types', filterList: signals.filters.types.exclude, exclude: true},
-				{column: 'tags', filterList: signals.filters.tags.require, exclude: false},
-				{column: 'tags', filterList: signals.filters.tags.exclude, exclude: true},
+			const {filters} = signals
+			const subCond = {outerColumn: 'id', innerColumn: 'card_id'}
+			const filterClause = whereIn(sql,
+				{column: 'set_id', filterList: filters.sets},
+				{column: 'domain_id', filterList: filters.domains, subClause:
+					{...subCond, innerTable:'cards_x_domains'}
+				},
+				{column: 'type_id', filterList: filters.types, subClause:
+					{...subCond, innerTable:'cards_x_types'}
+				},
+				{column: 'tag_id', filterList: filters.tags, subClause:
+					{...subCond, innerTable:'cards_x_tags'}
+				},
 			)
-			prettyPrint(setsFilterQueryFragment)
-			const sortedCards:CardDetails[] = await sql`SELECT * FROM card_details ORDER BY ${sortOrder};`
+			const query = sql`SELECT * FROM card_details WHERE ${filterClause} ORDER BY ${sortOrder};`
+			const sortedCards:CardDetails[] = await query
 			const sse = patchElements(
 				makeCardsTableBody(sortedCards.map(getCardTableRowHtml).join('\n')).split( '\n')
 			)
@@ -120,20 +124,3 @@ const server = Bun.serve({
 	}
 })
 console.log(`Listening on ${server.url}`)
-
-function getFilters(
-	values:Record<string, FilterState>
-): {required: string[], excluded: string[]} {
-	const required: string[] = []
-	const excluded: string[] = []
-	for(const prop in values) {
-		const filterState = values[prop]
-		if(filterState === 'require') {
-			required.push(prop)
-		}
-		else if(filterState === 'exclude') {
-			excluded.push(prop)
-		}
-	}
-	return {required, excluded}
-}
