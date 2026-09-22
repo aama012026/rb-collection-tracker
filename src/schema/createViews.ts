@@ -12,7 +12,7 @@ export default async function createViews(sql:SQL): Promise<void> {
 		CREATE OR REPLACE VIEW card_details AS
 		SELECT cards.id, cards.riot_id, cards.collector_number, cards.name,
 			rarities.name AS rarity,
-			sets.code AS set_code, sets.name AS set_name,
+			sets.id AS set_id, sets.code AS set_code, sets.name AS set_name,
 			cards.energy, cards.might, cards.power, cards.cost,
 			cards.img, cards.thumbnail, cards.description, cards.flavor_text,
 			(SELECT GROUP_CONCAT(types.name ORDER BY types.name SEPARATOR ', ')
