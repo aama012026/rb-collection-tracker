@@ -6,7 +6,7 @@ import { testParser } from "./testParser"
 import { getCardTableRowHtml } from "./src/modules/rbmlHtmlRenderer"
 import { prettyPrint } from "./src/modules/stringify"
 import { patchElements } from "./src/modules/sse"
-import type { FilterState } from "./src/types/DomainTypes"
+import type { CardCollectionSignals, FilterState } from "./src/types/DomainTypes"
 import { whereIn } from "./src/modules/query"
 
 const sql = new SQL({
@@ -59,16 +59,7 @@ const server = Bun.serve({
 		 	if(!signalsString) {
 				return new Response('Missing datastar signals', {status:404})
 			}
-			const signals = JSON.parse(signalsString) as {
-				searchTerm: string
-				sortOrder: string[],
-				filters: {
-					sets:{require:string[], exclude:string[]},
-					domains:{require:string[], exclude:string[]},
-					types:{require:string[], exclude:string[]},
-					tags:{require:string[], exclude:string[]}
-				},
-			}
+			const signals = JSON.parse(signalsString) as CardCollectionSignals
 			prettyPrint(signals, 140)
 			const sortOrder = signals.sortOrder.map(s => s
 				.replace('set', 'set_code')
@@ -108,6 +99,10 @@ const server = Bun.serve({
 			return new Response(stream, {
 				headers:{"Content-Type": "text/event-stream", "Cache-Control": "no-cache"}
 			})
+		},
+		'/card-details/:cardId': (request) => {
+			console.log(`selected card id: ${request.params.cardId}`)
+			return Response.json({message: "Not Implemented", status: 404})
 		},
 		'/fonts': (request) => {
 			const fontName = new URL(request.url).pathname
