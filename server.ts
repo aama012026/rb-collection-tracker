@@ -1,5 +1,5 @@
 import { SQL } from "bun"
-import { makeCardsTableBody, makeCollectionPage, makeCycleButton, makeFilterBar, makePopupMenu } from "./gen/HTMLtemplates"
+import { makeCardsTableBody, makeCardTable, makeCollectionPage, makeCycleButton, makeFilterBar, makePopupMenu, makeStickySort } from "./gen/HTMLtemplates"
 import type { CardDetails, Domains, Sets, Tags, Types } from "./gen/dbTableInterfaces"
 import { testLexer } from "./src/modules/test"
 import { testParser } from "./testParser"
@@ -30,7 +30,8 @@ testParser(cards)
 
 const cardRows = cards.map(c => getCardTableRowHtml(c))
 
-const collection = makeCollectionPage(
+const collection = makeCollectionPage(makeCardTable(
+	makeStickySort(),
 	makeCardsTableBody(cardRows.join('\n')),
 	makeFilterBar(
 		makePopupMenu('sets', sets.map(set =>
@@ -45,7 +46,7 @@ const collection = makeCollectionPage(
 		makePopupMenu('tags', tags.map(tag =>
 			makeCycleButton('tags', tag.id, tag.name)
 		).join('\n')),
-	)
+	))
 )
 
 console.log(`Riftbound collection server version: 0.7`)
@@ -91,8 +92,10 @@ const server = Bun.serve({
 					{...subCond, innerTable:'cards_x_tags'}
 				},
 			)
-			const query = sql`SELECT * FROM card_details WHERE ${filterClause} ORDER BY ${sortOrder};`
-			const sortedCards:CardDetails[] = await query
+			const sortedCards:CardDetails[] = await sql`
+				SELECT * FROM card_details
+				WHERE ${filterClause} ORDER BY ${sortOrder};
+			`
 			const sse = patchElements(
 				makeCardsTableBody(sortedCards.map(getCardTableRowHtml).join('\n')).split( '\n')
 			)
