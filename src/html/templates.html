@@ -175,6 +175,8 @@
 		%{domainsPopup: string}
 		<input type="search" name="card-search"
 			placeholder="Search card names or text"
+			data-bind:search-term
+			data-on:change="@get('/cards')"
 		>
 		%{typesPopup: string}
 		%{tagsPopup: string}

@@ -60,13 +60,14 @@ const server = Bun.serve({
 				return new Response('Missing datastar signals', {status:404})
 			}
 			const signals = JSON.parse(signalsString) as {
+				searchTerm: string
 				sortOrder: string[],
 				filters: {
 					sets:{require:string[], exclude:string[]},
 					domains:{require:string[], exclude:string[]},
 					types:{require:string[], exclude:string[]},
 					tags:{require:string[], exclude:string[]}
-				}
+				},
 			}
 			prettyPrint(signals, 140)
 			const sortOrder = signals.sortOrder.map(s => s
@@ -94,7 +95,8 @@ const server = Bun.serve({
 			)
 			const sortedCards:CardDetails[] = await sql`
 				SELECT * FROM card_details
-				WHERE ${filterClause} ORDER BY ${sortOrder};
+				WHERE ${filterClause
+				} AND CONCAT_WS('', riot_id, name, description) LIKE ${'%' + signals.searchTerm + '%'} ORDER BY ${sortOrder};
 			`
 			const sse = patchElements(
 				makeCardsTableBody(sortedCards.map(getCardTableRowHtml).join('\n')).split( '\n')
