@@ -22,24 +22,30 @@ export function whereIn(sql:SQL, ...filters:{
 	subClause?: {outerColumn:string, innerColumn:string, innerTable: string}
 }[]) {
 	const clauses: SQL.Query<any>[] = []
+
 	filters.forEach(({column, filterList, subClause}) => {
-		const parts: SQL.Query<any>[] = []
 		if(filterList.require.length > 0) {
-			parts.push(sql`${sql(column)} IN ${sql(filterList.require)}`)
-		}
-		if(filterList.exclude.length > 0) {
-			parts.push(sql`${sql(column)} NOT IN ${sql(filterList.exclude)}`)
-		}
-		if(parts.length === 0) {
-			return []
-		}
-		const clause = parts.reduce((accumulator, part) => sql`${accumulator} AND ${part}`)
-		subClause ? clauses.push(
-			sql`${sql(subClause.outerColumn)
+			subClause ? clauses.push(sql`
+				${sql(subClause.outerColumn)
 				} IN (SELECT ${sql(subClause.innerColumn)
 				} FROM ${sql(subClause.innerTable)
-				} WHERE ${clause})`
-		) : clauses.push(clause)
+				} WHERE ${sql(column)} IN ${sql(filterList.require)})
+			`) : clauses.push(sql`
+				${sql(column)} IN ${sql(filterList.require)}
+			`)
+		}
+		if(filterList.exclude.length > 0) {
+			subClause ? clauses.push(sql`
+				${sql(subClause.outerColumn)
+				} NOT IN (SELECT ${sql(subClause.innerColumn)
+				} FROM ${sql(subClause.innerTable)
+				} WHERE ${sql(column)} IN ${sql(filterList.exclude)})
+			`) : clauses.push(sql`
+				${sql(column)} IN ${sql(filterList.exclude)}
+			`)
+		}
 	})
-	return clauses.length > 0 ? clauses.reduce((accumulator, clause) => sql`${accumulator} AND ${clause}`) : ``
+	return clauses.length > 0 ? clauses.reduce((accumulator, clause) => sql`
+		${accumulator} AND ${clause}
+	`) : sql`1=1`
 }
