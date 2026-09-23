@@ -37,6 +37,10 @@
 	%{filterBar: string}
 </template>
 
+<template id="card-details">
+		<img src="%{url: string}" alt="%{altText:string}">
+</template>
+
 <template id="sortbox">
 	<div class="sortbox" draggable="true"
 		data-on:dragstart="$_draggedIdx = %{idx:number}"

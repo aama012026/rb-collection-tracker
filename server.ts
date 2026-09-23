@@ -1,5 +1,5 @@
 import { SQL } from "bun"
-import { makeCardsTableBody, makeCardTable, makeCollectionPage, makeCycleButton, makeFilterBar, makePopupMenu, makeStickySort } from "./gen/HTMLtemplates"
+import { makeCardDetails, makeCardsTableBody, makeCardTable, makeCollectionPage, makeCycleButton, makeFilterBar, makePopupMenu, makeStickySort } from "./gen/HTMLtemplates"
 import type { CardDetails, Domains, Sets, Tags, Types } from "./gen/dbTableInterfaces"
 import { testLexer } from "./src/modules/test"
 import { testParser } from "./testParser"
@@ -100,9 +100,20 @@ const server = Bun.serve({
 				headers:{"Content-Type": "text/event-stream", "Cache-Control": "no-cache"}
 			})
 		},
-		'/card-details/:cardId': (request) => {
+		'/card-details/:cardId': async (request) => {
 			console.log(`selected card id: ${request.params.cardId}`)
-			return Response.json({message: "Not Implemented", status: 404})
+			const {riot_id, name, img, artists} = (await sql`SELECT riot_id, name, img, artists FROM card_details WHERE id = ${request.params.cardId}`)[0]
+			console.log(riot_id, name, img, artists)
+			const sse = patchElements(
+				makeCardDetails(img ?? '', `${name} (${riot_id})`).split('\n'), {selector:'#card-details', mode: 'inner'}
+			)
+			const stream = new ReadableStream({
+				start(c) {Promise.all([c.enqueue(sse)]).finally(() => c.close())},
+				cancel() {}
+			})
+			return new Response(stream, {
+				headers:{"Content-Type": "text/event-stream", "Cache-Control": "no-cache"}
+			})
 		},
 		'/fonts': (request) => {
 			const fontName = new URL(request.url).pathname
