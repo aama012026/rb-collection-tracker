@@ -6,16 +6,6 @@ export async function update<O extends object, K extends keyof O> (
 	await sql`UPDATE ${table} SET ${sql(row)} WHERE id = ${row[pkColumn]}`
 }
 
-// export function WhereIn(...filters:{column:string, filterList:string[], exclude: boolean}[]) {
-// 	const conditions: string[] = []
-// 	filters.forEach(({column, filterList, exclude}) => {
-// 		if(filterList.length > 0) {
-// 			conditions.push(`${column}${exclude ? ' NOT' : ''} IN ('${filterList.join(`','`)}')`)
-// 		}
-// 	})
-// 	return conditions.length > 0 ? `WHERE ${conditions.join(' AND ')}` : ``
-// }
-
 export function whereIn(sql:SQL, ...filters:{
 	column:string,
 	filterList: {require:string[], exclude:string[]},
