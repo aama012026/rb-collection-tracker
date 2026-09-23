@@ -158,7 +158,7 @@
 			$filters[category].exclude = [...$filters[category].exclude, id];
 		}
 		else if($filters[category].exclude.includes(id)) {
-			$filters[category].exclude = filters[category].exclude.filter(v => v !== id);
+			$filters[category].exclude = $filters[category].exclude.filter(v => v !== id);
 		}
 		else {
 			$filters[category].require = [...$filters[category].require, id];
@@ -186,12 +186,12 @@
 
 <template id="cycle-button">
 	<button class="badge small-caps-sans" type="button"
-		data-category="%{category:string}",
+		data-category="%{category:string}"
 		data-id="%{id:number}"
 		data-attr:data-state="
 			$filters.%{category}.require.includes('%{id}') ? 'require' : (
 				$filters.%{category}.exclude.includes('%{id}') ? 'exclude' : 'include'
-			);
+			)
 		"
 	>%{name: string}</button>
 </template>
