@@ -9,20 +9,24 @@
 		<script type="module" src="lib/datastar.js"></script>
 	</head>
 	<body>
-		${makeSvgSymbols()}
-		${makeStickySort()}
-		<table>
-			<thead>
-			<tr>
-				<th>set</th><th>nr.</th><th>count</th><th>name</th>
-				<th>stats</th><th>tags & keywords</th><th>description</th>
-			</tr>
-			</thead>
-			%{tbody: string}
-		</table>
-		%{filterBar: string}
+		<main id="card-table" class="flex" data-flex="col fill">
+			%{cardTable: string}
+		</main>
 	</body>
 </html>
+</template>
+
+<template id="card-table">
+	%{sortBar: string}
+	<table>
+		<thead><tr>
+			<th>set</th><th>nr.</th><th>count</th><th>name</th>
+			<th>stats</th><th>tags & keywords</th><th>description</th>
+		</tr></thead>
+		%{tbody: string}
+	</table>
+	<div data-flex-item="grow"></div>
+	%{filterBar: string}
 </template>
 
 <template id="sortbox">
@@ -40,13 +44,13 @@
 </template>
 
 <template id="sticky-sort">
-	<div id="sort-order" class="sticky" data-sticky="top"
+	<header id="sort-order" class="sticky" data-sticky="top"
 		data-signals:sort-order="['set', 'domain', 'number', 'name', 'energy', 'power', 'might', 'type', 'tags']">${
 			makeSortbox(0) + makeSortbox(1) + makeSortbox(2) + makeSortbox(3) +
 			makeSortbox(4) + makeSortbox(5) + makeSortbox(6) + makeSortbox(7) +
 			makeSortbox(8)
 		}
-	</div>
+	</header>
 </template>
 
 <template id="cards-table-body">
@@ -139,7 +143,7 @@
 </template>
 
 <template id="filter-bar">
-	<div id="filter-bar" class="flex-row sticky" data-sticky="bot" data-signals="{
+	<footer id="filter-bar" class="flex-row sticky" data-sticky="bot" data-signals="{
 		filters: {
 			sets: {require:[], exclude:[]},
 			domains: {require: [], exclude: []},
@@ -173,7 +177,7 @@
 		>
 		%{typesPopup: string}
 		%{tagsPopup: string}
-	</div>
+	</footer>
 </template>
 
 <template id="popup-menu">
