@@ -52,7 +52,11 @@ async function generateInterface(
 	const props = columns.map(
 		col => `\t${col.column_name}: ${tsType(col)}`
 	).join(',\n')
-	return `export interface ${toPascalCase(tableName)} {\n${props}\n}`
+	const typeName = toPascalCase(tableName)
+	return (
+		`export type ${typeName} = Array<{\n${props}\n}>\n\n` +
+		`export type ${typeName}Row = ${typeName}[number]`
+	)
 }
 
 

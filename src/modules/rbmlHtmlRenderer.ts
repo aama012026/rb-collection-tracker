@@ -1,10 +1,10 @@
-import type { CardDetails } from "../../gen/dbTableInterfaces";
+import type { CardDetails, CardDetailsRow } from "../../gen/dbTableInterfaces";
 import { makeAbility, makeActivatedAbility, makeBadge, makeCardDescription, makeCardTableRow, makeCommaListItem, makeInfixGroup, makeInlineSymbol, makeKeyword, makeMightCount, makeReminder, makeShortNameAndSubtitle, makeSpan, makeXpCount } from "../../gen/HTMLtemplates";
 import { tokenize } from "./rbmlLexer";
 import { parseCardRulesText, type Node, type Symbol } from "./rbmlParser";
 import stringify from "./stringify";
 
-export function getCardTableRowHtml(c:CardDetails): string {
+export function getCardTableRowHtml(c:CardDetailsRow): string {
 	const html = makeCardTableRow(
 		c.id, c.domains ?? 'null', c.rarity, c.set_code,
 		c.riot_id.split('-')[1]!.split('/')[0]!, Math.floor(Math.random() * 5),
@@ -36,7 +36,14 @@ function getNameHtml(cardName: string): string {
 	}
 }
 
-function getPowerCostHtml(card: CardDetails): string {
+function linkArtistPage(name: string, url?: string|null): string {
+	if(!url) {
+		return `<span>${name}</span>`
+	}
+	return `<a href="${url}" target="_blank">${name}</a>`
+}
+
+function getPowerCostHtml(card: CardDetailsRow): string {
 	if(!card.domain_shorthands || !card.power) {
 		return ''
 	}

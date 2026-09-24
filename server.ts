@@ -1,12 +1,12 @@
 import { SQL } from "bun"
 import { makeCardDetails, makeCardsTableBody, makeCardTable, makeCollectionPage, makeCycleButton, makeFilterBar, makePopupMenu, makeStickySort } from "./gen/HTMLtemplates"
-import type { CardDetails, Domains, Sets, Tags, Types } from "./gen/dbTableInterfaces"
+import type { CardDetails, DomainsRow, SetsRow, TagsRow, TypesRow } from "./gen/dbTableInterfaces"
 import { testLexer } from "./src/modules/test"
 import { testParser } from "./testParser"
 import { getCardTableRowHtml } from "./src/modules/rbmlHtmlRenderer"
 import { prettyPrint } from "./src/modules/stringify"
 import { patchElements } from "./src/modules/sse"
-import type { CardCollectionSignals, FilterState } from "./src/types/DomainTypes"
+import type { CardCollectionSignals } from "./src/types/DomainTypes"
 import { whereIn } from "./src/modules/query"
 
 const sql = new SQL({
@@ -19,11 +19,11 @@ const sql = new SQL({
 	bigint:true
 })
 await sql`USE riftbound`
-const sets:Pick<Sets, 'name'|'id'>[] = await sql`SELECT id, name FROM sets ORDER BY release_date`
-const domains:Pick<Domains, 'name'|'id'>[] = await sql`SELECT id, name FROM domains ORDER BY sort_order`
-const types:Pick<Types, 'name'|'id'>[] = await sql`SELECT id, name FROM types ORDER BY name`
-const tags:Pick<Tags, 'name'|'id'>[] = await sql`SELECT id, name FROM tags ORDER BY name`
-const cards:CardDetails[] = await sql`SELECT * FROM card_details ORDER BY riot_id`
+const sets:Pick<SetsRow, 'name'|'id'>[] = await sql`SELECT id, name FROM sets ORDER BY release_date`
+const domains:Pick<DomainsRow, 'name'|'id'>[] = await sql`SELECT id, name FROM domains ORDER BY sort_order`
+const types:Pick<TypesRow, 'name'|'id'>[] = await sql`SELECT id, name FROM types ORDER BY name`
+const tags:Pick<TagsRow, 'name'|'id'>[] = await sql`SELECT id, name FROM tags ORDER BY name`
+const cards:CardDetails = await sql`SELECT * FROM card_details ORDER BY riot_id`
 // Test
 testLexer(cards)
 testParser(cards)
@@ -84,7 +84,7 @@ const server = Bun.serve({
 					{...subCond, innerTable:'cards_x_tags'}
 				},
 			)
-			const sortedCards:CardDetails[] = await sql`
+			const sortedCards:CardDetails = await sql`
 				SELECT * FROM card_details
 				WHERE ${filterClause
 				} AND CONCAT_WS('', riot_id, name, description) LIKE ${'%' + signals.searchTerm + '%'} ORDER BY ${sortOrder};

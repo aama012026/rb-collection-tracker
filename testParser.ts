@@ -6,7 +6,7 @@ import { TEST_ASTS } from "./src/data/parserTestASTs";
 
 type TestAST = {description:string, verified?:boolean, tree:Node[]}
 
-export async function testParser(cards:CardDetails[]) {
+export async function testParser(cards:CardDetails) {
 	const targets = updateParserASTs(cards)
 	const file = `import type { Node } from "../modules/rbmlParser"\n`
 	+ `export const TEST_ASTS: `
@@ -15,7 +15,7 @@ export async function testParser(cards:CardDetails[]) {
 	await Bun.write('src/data/parserTestASTs.ts', file, {createPath:true})
 }
 
-export function updateParserASTs(cards:CardDetails[]): Record<string, TestAST> {
+export function updateParserASTs(cards:CardDetails): Record<string, TestAST> {
 	const targets:Record<string, TestAST> = {}
 
 	const rightCards: string[] = []

@@ -2,7 +2,7 @@ import type { CardDetails } from "../../gen/dbTableInterfaces"
 import { reconstruct, tokenize } from "./rbmlLexer"
 import { prettyPrint } from "./stringify"
 
-export function testLexer(cards:CardDetails[]) {
+export function testLexer(cards:CardDetails) {
 	cards.forEach(c => {
 		if(c.description) {
 			const reconstructed = reconstruct(tokenize(c.description))
