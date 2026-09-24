@@ -273,7 +273,7 @@ body {
 	min-height: 100dvh;
 }
 
-.card-name {
+table .card-name {
 	display: flex;
 	flex-flow: column wrap;
 	align-items: start;
@@ -337,6 +337,8 @@ body {
 		flex-direction: row;
 		&[data-flex~="stretch"] {min-width: 100%; max-width: 100vw;}
 	}
+	&[data-flex~="start"] {justify-content: start;}
+	&[data-flex~="grow"] {flex: auto;}
 }
 
 [data-flex-item~="grow"] {flex: auto;}
@@ -499,6 +501,40 @@ td {
 
 	padding: 0.2em;
 	max-width: 90em;
+}
+
+/* Card Details section */
+#card-details {
+	padding: 0.5em;
+	background-color: var(--text-black);
+	display: grid;
+	gap: 0.5em;
+	grid-template-columns: auto 1fr;
+	max-height: 50dvh;
+	& figure.card {
+		display: block;
+		height: 50dvh;
+		max-height: max-content;
+		& img {
+			height: 80%;
+		}
+	}
+	& ul {
+		height: fit-content;
+		width: fit-content;
+		max-height: 100%;
+		max-width: 100%;
+		gap: 1rem;
+		& li .flex {
+			gap: 1rem;
+			align-items: baseline;
+		}
+	}
+	& .card-name {
+		& .short-name::after {
+			content: ',';
+		}
+	}
 }
 
 /* Sort and filter bars */

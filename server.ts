@@ -1,13 +1,13 @@
 import { SQL } from "bun"
-import { makeCardDetails, makeCardsTableBody, makeCardTable, makeCollectionPage, makeCycleButton, makeFilterBar, makePopupMenu, makeStickySort } from "./gen/HTMLtemplates"
-import type { CardDetails, DomainsRow, SetsRow, TagsRow, TypesRow } from "./gen/dbTableInterfaces"
+import { makeCardDetailsInner, makeCardsTableBody, makeCardTable, makeCardVersion, makeCollectionPage, makeCycleButton, makeFilterBar, makePopupMenu, makeStickySort } from "./gen/HTMLtemplates"
+import type { Artists, CardDetails, CardDetailsRow, DomainsRow, SetsRow, TagsRow, TypesRow } from "./gen/dbTableInterfaces"
 import { testLexer } from "./src/modules/test"
 import { testParser } from "./testParser"
-import { getCardTableRowHtml } from "./src/modules/rbmlHtmlRenderer"
+import { getArtistLine, getCardTableRowHtml, getNameHtml } from "./src/modules/rbmlHtmlRenderer"
 import { prettyPrint } from "./src/modules/stringify"
 import { patchElements } from "./src/modules/sse"
 import type { CardCollectionSignals } from "./src/types/DomainTypes"
-import { whereIn } from "./src/modules/query"
+import { getCardArtists, whereIn } from "./src/modules/query"
 
 const sql = new SQL({
 	adapter:'mariadb',
@@ -72,22 +72,28 @@ const server = Bun.serve({
 			.reduce((accumulated, column) => sql`${accumulated}, ${column}`)
 			const {filters} = signals
 			const subCond = {outerColumn: 'id', innerColumn: 'card_id'}
-			const filterClause = whereIn(sql,
-				{column: 'set_id', filterList: filters.sets},
-				{column: 'domain_id', filterList: filters.domains, subClause:
-					{...subCond, innerTable:'cards_x_domains'}
-				},
-				{column: 'type_id', filterList: filters.types, subClause:
-					{...subCond, innerTable:'cards_x_types'}
-				},
-				{column: 'tag_id', filterList: filters.tags, subClause:
-					{...subCond, innerTable:'cards_x_tags'}
-				},
-			)
 			const sortedCards:CardDetails = await sql`
 				SELECT * FROM card_details
-				WHERE ${filterClause
-				} AND CONCAT_WS('', riot_id, name, description) LIKE ${'%' + signals.searchTerm + '%'} ORDER BY ${sortOrder};
+				${whereIn(sql,
+					{
+						column: 'set_id',
+						filterList: filters.sets
+					}, {
+						column: 'domain_id',
+						filterList: filters.domains,
+						subClause: {...subCond, innerTable:'cards_x_domains'}
+					}, {
+						column: 'type_id',
+						filterList: filters.types,
+						subClause: {...subCond, innerTable:'cards_x_types'}
+					}, {
+						column: 'tag_id',
+						filterList: filters.tags,
+						subClause: {...subCond, innerTable:'cards_x_tags'}
+					}
+				)} AND CONCAT_WS('', riot_id, name, description
+				) LIKE ${'%' + signals.searchTerm + '%'}
+				ORDER BY ${sortOrder};
 			`
 			const sse = patchElements(
 				makeCardsTableBody(sortedCards.map(getCardTableRowHtml).join('\n')).split( '\n')
@@ -102,17 +108,55 @@ const server = Bun.serve({
 		},
 		'/card-details/:cardId': async (request) => {
 			console.log(`selected card id: ${request.params.cardId}`)
-			const {riot_id, name, img, artists} = (await sql`SELECT riot_id, name, img, artists FROM card_details WHERE id = ${request.params.cardId}`)[0]
-			console.log(riot_id, name, img, artists)
+			if(request.params.cardId === '-1') {
+				return Response.json({success: true})
+			}
+
+			const cardVersions: Pick<
+				CardDetailsRow, 'id'|'riot_id'|'name'|'rarity'|'img'
+			>[] = await sql`
+				SELECT id, riot_id, name, rarity, img FROM card_details
+				WHERE name IN (
+					SELECT name FROM cards
+					WHERE id = ${request.params.cardId}
+				)
+			`
+			const cards = await Promise.all(cardVersions.map(async (v) => {
+				const artists: Artists = await getCardArtists(sql, v.id)
+				return {...v, artists}
+			}))
+			const selectedCard = cards.find(
+				c => c.id === Number(request.params.cardId)
+			)
+
+			if(!(selectedCard)) {
+				return Response.json({message: "Not found"}, {status: 404})
+			}
+
 			const sse = patchElements(
-				makeCardDetails(img ?? '', `${name} (${riot_id})`).split('\n'), {selector:'#card-details', mode: 'inner'}
+				makeCardDetailsInner(
+					selectedCard.img ?? '',
+					`${selectedCard.riot_id} ${selectedCard.name}`,
+					getArtistLine(selectedCard.artists),
+					cards.map(card => makeCardVersion(
+						card.riot_id,
+						getNameHtml(card.name),
+						card.rarity,
+						card.rarity,
+						getArtistLine(card.artists)
+					)).join('')
+				).split('\n'),
+				{selector:'#card-details', mode: 'inner'}
 			)
 			const stream = new ReadableStream({
 				start(c) {Promise.all([c.enqueue(sse)]).finally(() => c.close())},
 				cancel() {}
 			})
 			return new Response(stream, {
-				headers:{"Content-Type": "text/event-stream", "Cache-Control": "no-cache"}
+				headers:{
+					"Content-Type": "text/event-stream",
+					"Cache-Control": "no-cache"
+				}
 			})
 		},
 		'/fonts': (request) => {

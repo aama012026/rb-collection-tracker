@@ -27,18 +27,38 @@
 		%{tbody: string}
 	</table>
 	<div data-flex-item="grow"></div>
-	<section id="card-details" style="display: none;"
-		data-signals="{selectedCard: -1}"
-		data-effect="@get('/card-details/' + $selectedCard)"
-		data-show="$selectedCard !== -1"
-	>
-
-	</section>
-	%{filterBar: string}
+	<footer class="sticky" data-sticky="bot">
+		<section id="card-details" style="display: none;"
+			data-signals="{selectedCard: -1}"
+			data-effect="@get('/card-details/' + $selectedCard)"
+			data-show="$selectedCard !== -1"
+		>
+		</section>
+		%{filterBar: string}
+	</footer>
 </template>
 
-<template id="card-details">
+<template id="card-details-inner">
+	<figure class="card">
 		<img src="%{url: string}" alt="%{altText:string}">
+		<figcaption>%{artistsLine: string}</figcaption>
+	</figure>
+	<ul class="flex" data-flex="col">%{versions:string}</ul>
+</template>
+
+<template id="card-version">
+	<li class="flex" data-flex="col">
+		<div class="flex" data-flex="row">
+			<span class="card-idx">%{cardIndex: string}</span>
+			<button class="card-name">%{name: string}</button>
+		</div>
+		<div class="flex" data-flex="row">
+			<span>Rarity: %{rarityString: string} <img
+				src="icons/rarity/%{rarityName: string}.avif"
+			></span>
+			<span>%{artistLine: string}</span>
+		</div>
+	</li>
 </template>
 
 <template id="sortbox">
@@ -50,13 +70,13 @@
 			const targetValue = $sortOrder[%{idx}];
 			$sortOrder[%{idx}] = $sortOrder[$_draggedIdx];
 			$sortOrder[$_draggedIdx] = targetValue;
-			$_draggedIdx = %{idx}
+			$_draggedIdx = %{idx};
 		"
 	><span class="text-gradient" data-text="$sortOrder[%{idx}]"></span></div>
 </template>
 
 <template id="sticky-sort">
-	<header id="sort-order" class="sticky" data-sticky="top"
+	<header id="sort-bar" class="sticky" data-sticky="top"
 		data-signals:sort-order="['set', 'domain', 'number', 'name', 'energy', 'power', 'might', 'type', 'tags']">${
 			makeSortbox(0) + makeSortbox(1) + makeSortbox(2) + makeSortbox(3) +
 			makeSortbox(4) + makeSortbox(5) + makeSortbox(6) + makeSortbox(7) +
@@ -111,6 +131,13 @@
 	<span class="%{classString: string}">%{textContent: string}</span>
 </template>
 
+<template id="anchor">
+	<a href="%{href:string}"
+		target="%{target:'_blank'|'_parent'|'_self'|'_top'}"
+		%{attributes: string}
+	>%{textContent: string}</a>
+</template>
+
 <template id="ability">
 	<span class="ability hoverable">%{ability: string}%{reminder: string}</span>
 </template>
@@ -156,8 +183,16 @@
 	</span>
 </template>
 
+<template id="reminder">
+	<i class="reminder">%{text: string}</i>
+</template>
+
+<template id="card-description">
+	<p class="description">%{content: string}</p>
+</template>
+
 <template id="filter-bar">
-	<footer id="filter-bar" class="flex-row sticky" data-sticky="bot" data-signals="{
+	<section id="filter-bar" class="flex" data-flex="row" data-signals="{
 		filters: {
 			sets: {require:[], exclude:[]},
 			domains: {require: [], exclude: []},
@@ -193,7 +228,7 @@
 		>
 		%{typesPopup: string}
 		%{tagsPopup: string}
-	</footer>
+	</section>
 </template>
 
 <template id="popup-menu">
@@ -256,14 +291,6 @@
 		>
 		<output for="%{name}-min" data-text="$%{name}Max"></output>
 	</div>
-</template>
-
-<template id="reminder">
-	<i class="reminder">%{text: string}</i>
-</template>
-
-<template id="card-description">
-	<p class="description">%{content: string}</p>
 </template>
 
 <template id="svg-symbols">
