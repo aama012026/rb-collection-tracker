@@ -35,7 +35,15 @@ export function whereIn(sql:SQL, ...filters:{
 			`)
 		}
 	})
-	return clauses.length > 0 ? clauses.reduce((accumulator, clause) => sql`
+	return clauses.length > 0 ? sql`WHERE ${clauses.reduce((accumulator, clause) => sql`
 		${accumulator} AND ${clause}
-	`) : sql`1=1`
+	`)}` : ``
+}
+
+export async function getCardArtists(sql:SQL, cardId:number) {
+	return await sql`
+		SELECT name, website FROM artists WHERE id IN (
+			SELECT artist_id FROM cards_x_artists WHERE card_id = ${cardId}
+		)
+	`
 }
