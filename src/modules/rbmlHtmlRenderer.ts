@@ -1,5 +1,5 @@
-import type { CardDetails, CardDetailsRow } from "../../gen/dbTableInterfaces";
-import { makeAbility, makeActivatedAbility, makeBadge, makeCardDescription, makeCardTableRow, makeCommaListItem, makeInfixGroup, makeInlineSymbol, makeKeyword, makeMightCount, makeReminder, makeShortNameAndSubtitle, makeSpan, makeXpCount } from "../../gen/HTMLtemplates";
+import type { Artists, ArtistsRow, CardDetails, CardDetailsRow } from "../../gen/dbTableInterfaces";
+import { makeAbility, makeActivatedAbility, makeAnchor, makeBadge, makeCardDescription, makeCardTableRow, makeCommaListItem, makeInfixGroup, makeInlineSymbol, makeKeyword, makeMightCount, makeReminder, makeShortNameAndSubtitle, makeSpan, makeXpCount } from "../../gen/HTMLtemplates";
 import { tokenize } from "./rbmlLexer";
 import { parseCardRulesText, type Node, type Symbol } from "./rbmlParser";
 import stringify from "./stringify";
@@ -26,7 +26,7 @@ export function getCardTableRowHtml(c:CardDetailsRow): string {
 	}
 }
 
-function getNameHtml(cardName: string): string {
+export function getNameHtml(cardName: string): string {
 	const [shortName, subtitle] = cardName.split(', ')
 	if(shortName && subtitle) {
 		return makeShortNameAndSubtitle(shortName, subtitle.replace(/\s/g, '&nbsp;'))
@@ -36,11 +36,18 @@ function getNameHtml(cardName: string): string {
 	}
 }
 
-function linkArtistPage(name: string, url?: string|null): string {
-	if(!url) {
-		return `<span>${name}</span>`
+export function getArtistLine(artists: Artists): string {
+	const artistsHtml = artists.map(linkArtistPage).join(', ')
+	return `${artists.length > 1 ? 'Artists' : 'Artist'}: ${artistsHtml}`
+}
+
+function linkArtistPage(artist: ArtistsRow): string {
+	if(!artist.website) {
+		return makeSpan('artist', artist.name)
 	}
-	return `<a href="${url}" target="_blank">${name}</a>`
+	else {
+		return makeAnchor(artist.website, '_blank', 'class="artist"', artist.name)
+	}
 }
 
 function getPowerCostHtml(card: CardDetailsRow): string {
