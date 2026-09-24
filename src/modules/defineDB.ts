@@ -6,7 +6,7 @@ import createTables from "../schema/createTables";
 import seedTables from "../schema/seedDB";
 import { mockData } from "../../sets";
 import createViews from "../schema/createViews";
-import generateTableInterfaces from "./generateTableInterfaces";
+import generateTableInterfaces from "./generateTableTypes";
 
 const {DB_ADMIN_USER, DB_ADMIN_PASS, DB_HOST, DB_PORT} = process.env
 
