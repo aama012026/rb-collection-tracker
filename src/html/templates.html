@@ -200,7 +200,10 @@
 	<div class="popup-menu" data-signals:_%{name:string}-popup="false">
 		<button data-on:click="$_%{name}Popup = !$_%{name}Popup"
 		><span class="text-gradient">%{name}</span></button>
-		<div class="popup badge-list" data-show="$_%{name}Popup">%{content:string}</div>
+		<div class="popup badge-list"
+			style="display: none;"
+			data-show="$_%{name}Popup"
+		>%{content:string}</div>
 	</div>
 </template>
 
