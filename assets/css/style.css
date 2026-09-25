@@ -79,6 +79,16 @@ body {
 	background-color: var(--mind-lo);
 }
 
+a {
+	color: var(--gold);
+	&:visited {
+		color: var(--silver-hi);
+	}
+	&:hover {
+		text-decoration-thickness: 0.15em;
+	}
+}
+
 [data-domain] {
 	--c-domain-a-hi: var(--silver-hi); --c-domain-a-lo: var(--silver-lo);
 	--c-domain-b-hi: var(--silver-hi); --c-domain-b-lo: var(--silver-lo);
