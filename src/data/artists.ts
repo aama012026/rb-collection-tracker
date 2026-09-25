@@ -94,8 +94,8 @@ export const artists: {name: string, website: string}[] = [
     // {name: "Peter Kim", website: ""},
     {name: "Airi Pan", website: "https://www.airipan.com/"},
     {name: "Su Ke", website: "https://sukeart.artstation.com/"},
-    {name: "Jordan Yoon", website: ""},
+    // {name: "Jordan Yoon", website: ""},
     {name: "Rudy Siswanto", website: "https://crutz.artstation.com/"},
-    {name: "Mindy Kang", website: ""},
+    // {name: "Mindy Kang", website: ""},
     {name: "Gem Lim", website:"https://lonewingy.artstation.com/" }
 ]

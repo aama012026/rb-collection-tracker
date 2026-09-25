@@ -143,6 +143,16 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 		END;
 	`)
 
+	await createStoredProcedure('set_artist_website', sql`
+		CREATE PROCEDURE IF NOT EXISTS set_artist_website(
+			IN artist_name VARCHAR(255),
+			IN artist_website VARCHAR(255)
+		) BEGIN
+			UPDATE artists
+			SET website = artist_website WHERE name = artist_name;
+		END;
+	`)
+
 	await createStoredProcedure('set_card_artists', sql`
 		CREATE PROCEDURE IF NOT EXISTS set_card_artists(
 			IN p_card_id INT UNSIGNED,

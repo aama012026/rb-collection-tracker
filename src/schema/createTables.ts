@@ -146,7 +146,7 @@ export default async function createTables(sql: SQL): Promise<void> {
 		CREATE TABLE IF NOT EXISTS artists (
 			id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 			name VARCHAR(255) UNIQUE NOT NULL,
-			website VARCHAR(255) UNIQUE DEFAULT NULL
+			website VARCHAR(255) DEFAULT NULL
 		);
 	`)
 

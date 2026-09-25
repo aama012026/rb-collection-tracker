@@ -7,6 +7,7 @@ import seedTables from "../schema/seedDB";
 import { mockData } from "../../sets";
 import createViews from "../schema/createViews";
 import generateTableInterfaces from "./generateTableTypes";
+import { artists } from "../data/artists";
 
 const {DB_ADMIN_USER, DB_ADMIN_PASS, DB_HOST, DB_PORT} = process.env
 
@@ -55,6 +56,12 @@ for(const set of mockData) {
 			await sql`CALL insert_card_tag(${id}, ${tag}, @got_inserted)`
 		}
 	}
+}
+
+for(const artist of artists) {
+	prettyPrint(`setting artist ${artist.name} website to ${artist.website}`)
+	await sql`CALL set_artist_website(${artist.name}, ${artist.website})`
+	prettyPrint(await sql`SHOW WARNINGS`)
 }
 
 prettyPrint(`artists missing home pages:\n`)
