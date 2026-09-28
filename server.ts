@@ -1,5 +1,5 @@
 import { SQL } from "bun"
-import { makeCardDetailsInner, makeCardsTableBody, makeCardTable, makeCardVersion, makeCollectionPage, makeCycleButton, makeFilterBar, makePopupMenu, makeStickySort } from "./gen/HTMLtemplates"
+import { makeCardDetails, makeCardsTableBody, makeCardTable, makeCardVersion, makeCollectionPage, makeCycleButton, makeFilterBar, makePopupMenu, makeStickySort } from "./gen/HTMLtemplates"
 import type { Artists, CardDetails, CardDetailsRow, DomainsRow, SetsRow, TagsRow, TypesRow } from "./gen/dbTableInterfaces"
 import { testLexer } from "./src/modules/test"
 import { testParser } from "./testParser"
@@ -134,7 +134,7 @@ const server = Bun.serve({
 			}
 
 			const sse = patchElements(
-				makeCardDetailsInner(
+				makeCardDetails(
 					selectedCard.img ?? '',
 					`${selectedCard.riot_id} ${selectedCard.name}`,
 					getArtistLine(selectedCard.artists),

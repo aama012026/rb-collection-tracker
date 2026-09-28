@@ -95,12 +95,56 @@ body {
 }
 
 a {
-	color: var(--gold);
+	font-weight: 500;
+	transition: all 90ms;
+	color: transparent;
+	background:
+		linear-gradient(transparent, transparent),
+		linear-gradient(
+			in oklab 90deg, transparent, 5% , var(--order-lo), 20%,var(--gold), 99% ,var(--paper-white)
+		) border-box,
+		linear-gradient(
+			var(--paper-white), 20%, var(--gold)
+		) text;
+	background-size: 100% 1px, 0 1px, 100%;
+	background-position: 100% 100%, 0 100%;
+	background-repeat: no-repeat;
+	text-decoration: none;
 	&:visited {
 		color: var(--silver-hi);
 	}
 	&:hover {
-		text-decoration-thickness: 0.15em;
+		background-size: 0 1px, 100% 1px, 100%;
+	}
+}
+
+button {
+	font-size: 1em;
+	transition: all 120ms;
+	&:hover {
+		cursor: pointer;
+	}
+	&[data-variant="transparent"] {
+		background: transparent;
+		border: none;
+	}
+	&[data-variant="gold"] {
+		padding: 0.2em 0.5em;
+		font-weight: 500;
+		color: var(--gold);
+		background: var(--text-black);
+		border: 2px solid var(--gold);
+		border-radius: 0.25em;
+		&:hover, &:focus-visible {
+			outline: 1px solid var(--gold);
+			/*outline-offset: 1px;*/
+			border-color: var(--text-black);
+			color: var(--text-black);
+			background: var(--gold);
+		}
+		&:active {
+			background-color: color-mix(in oklab, var(--gold), var(--bronze) 30%);
+		}
 	}
 }
 
@@ -368,11 +412,27 @@ table .card-name {
 
 [data-flex-item~="grow"] {flex: auto;}
 
-
+[data-pos~="absolute"] {position: absolute;}
+[data-pos~="top"] {top: var(--padding);}
+[data-pos~="right"] {right: var(--padding);}
 
 .kw-name:has( ~ .kw-param),
 .kw-name:has( ~ .kw-cost) {
 	margin-right: 0.2em;
+}
+
+li.grid {
+	display: grid;
+	place-items: start;
+	grid-template-columns: auto 1fr;
+	gap: 0 1em;
+}
+
+.icon {
+	margin: 0 0.3em;
+	height: 0.8em;
+	max-height: 0.8em;
+	vertical-align: middle;
 }
 
 .inline-svg {
@@ -530,18 +590,37 @@ td {
 
 /* Card Details section */
 #card-details {
-	padding: 0.5em;
-	background-color: var(--text-black);
+	position: relative;
+	border-top: 1px solid var(--gold);
+	--padding: 0.75em;
+	padding: var(--padding);
+	background: var(--text-black);
+	backdrop-filter: blur(4px);
 	display: grid;
+	place-items: start;
 	gap: 0.5em;
-	grid-template-columns: auto 1fr;
-	max-height: 50dvh;
+	grid-template-columns: 1fr 1.2fr;
+	& > :nth-child(odd) {
+		justify-self: right;
+	}
+	& > :nth-child(even) {
+		justify-self: left;
+	}
 	& figure.card {
 		display: block;
-		height: 50dvh;
 		max-height: max-content;
-		& img {
-			height: 80%;
+		& button {
+			background: transparent;
+			border: none;
+			height: 32rem;
+			max-height: 50dvh;
+			border-radius: 1.8dvh;
+			&:hover {
+				cursor: zoom-in;
+				filter: brightness(1.1);
+				outline: 2px solid var(--gold);
+			}
+			& img {height: 100%;}
 		}
 	}
 	& ul {
@@ -558,6 +637,26 @@ td {
 	& .card-name .short-name:has( ~ *)::after {
 		content: ',';
 	}
+}
+
+.faux-modal {
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: none;
+	&::backdrop {
+		backdrop-filter: blur(2px) brightness(0.8);
+	}
+	& img {
+		&:hover {cursor: initial;}
+		height: 90dvh;
+	}
+}
+.center-box {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	place-items: center;
 }
 
 /* Sort and filter bars */
@@ -679,7 +778,6 @@ td {
 		);
 
 		&:hover {
-			cursor: pointer;
 			border-top: 2px solid var(--gold);
 			border-bottom: none;
 			& span.text-gradient {

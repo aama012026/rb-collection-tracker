@@ -38,26 +38,30 @@
 	</footer>
 </template>
 
-<template id="card-details-inner">
+<template id="card-details">
 	<figure class="card">
-		<img src="%{url: string}" alt="%{altText:string}">
+		<button popovertarget="card-dialog"><img src="%{url: string}" alt="%{altText:string}"></button>
 		<figcaption>%{artistsLine: string}</figcaption>
 	</figure>
 	<ul class="flex" data-flex="col">%{versions:string}</ul>
+	<button data-pos="absolute top right" data-variant="gold">close</button>
+	<dialog id="card-dialog" class="faux-modal" popover closedby="any">
+		<button class="center-box" data-variant="transparent"
+			popovertarget="card-dialog" popovertargetaction="hide"
+		>
+			<img src="%{url}" alt="%{altText}">
+		</button>
+	</dialog>
 </template>
 
 <template id="card-version">
-	<li class="flex" data-flex="col">
-		<div class="flex" data-flex="row">
-			<span class="card-idx">%{cardIndex: string}</span>
-			<button class="card-name">%{name: string}</button>
-		</div>
-		<div class="flex" data-flex="row">
-			<span>Rarity: %{rarityString: string} <img
-				src="icons/rarity/%{rarityName: string}.avif"
-			></span>
-			<span>%{artistLine: string}</span>
-		</div>
+	<li class="grid" data-flex="col">
+		<span class="card-idx">%{cardIndex: string}</span>
+		<button class="card-name">%{name: string}</button>
+		<span>Rarity: %{rarityString: string} <img class="icon"
+			src="icons/rarity/%{rarityName: string}.avif"
+		></span>
+		<span>%{artistLine: string}</span>
 	</li>
 </template>
 
