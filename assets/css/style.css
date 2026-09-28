@@ -7,13 +7,28 @@
     --ogn-orange:#ef7d01;
     --sfd-magenta:#d12379;
 
-    /* Domain colors*/
+    /* Domain colors */
     --fury-hi: #df1620; --fury-lo: #8e0308;
     --calm-hi: #488c38; --calm-lo: #295d24;
     --mind-hi: #0f6fa6; --mind-lo: #003f6b;
     --body-hi: #e87600; --body-lo: #bd3e19;
     --chaos-hi: #6a4094; --chaos-lo: #421a79;
     --order-hi: #d2b400; --order-lo: #a27521;
+
+    /* Rarity Colors */
+    --common-green: #B0C083;
+    --common-yellow: #CFC406;
+    --common-brown: #D0B599;
+    --common-blue: #94A7B5;
+
+    --uncommon-hi: #3FB9B9;
+    --uncommon-lo: #20706F;
+    --rare-hi: #CD0081;
+    --rare-lo: #60276C;
+    --epic-hi: #F2B001;
+    --epic-lo: #811F23;
+    --showcase-hi: #FEEE00;
+    --showcase-lo: #693916;
 
     /* Frame colors */
     --bronze: #9f5e13; --silver-hi: #a1a1a1; --silver-lo: #727272; --gold: #e2b73e;
@@ -540,10 +555,8 @@ td {
 			align-items: baseline;
 		}
 	}
-	& .card-name {
-		& .short-name::after {
-			content: ',';
-		}
+	& .card-name .short-name:has( ~ *)::after {
+		content: ',';
 	}
 }
 
