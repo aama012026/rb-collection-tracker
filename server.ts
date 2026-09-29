@@ -72,27 +72,41 @@ const server = Bun.serve({
 			.reduce((accumulated, column) => sql`${accumulated}, ${column}`)
 			const {filters} = signals
 			const subCond = {outerColumn: 'id', innerColumn: 'card_id'}
+			const filtersClause = whereIn(sql,
+				{
+					column: 'set_id',
+					filterList: filters.sets
+				}, {
+					column: 'domain_id',
+					filterList: filters.domains,
+					subClause: {...subCond, innerTable:'cards_x_domains'}
+				}, {
+					column: 'type_id',
+					filterList: filters.types,
+					subClause: {...subCond, innerTable:'cards_x_types'}
+				}, {
+					column: 'tag_id',
+					filterList: filters.tags,
+					subClause: {...subCond, innerTable:'cards_x_tags'}
+				}
+			)
+
+			const whereSubClauses = []
+			if(!!filtersClause) {
+				whereSubClauses.push(filtersClause)
+			}
+			if(!!signals.searchTerm) {
+				whereSubClauses.push(sql`
+					CONCAT_WS(' ', riot_id, name, description) LIKE ${'%' + signals.searchTerm + '%'}
+				`)
+			}
 			const sortedCards:CardDetails = await sql`
 				SELECT * FROM card_details
-				${whereIn(sql,
-					{
-						column: 'set_id',
-						filterList: filters.sets
-					}, {
-						column: 'domain_id',
-						filterList: filters.domains,
-						subClause: {...subCond, innerTable:'cards_x_domains'}
-					}, {
-						column: 'type_id',
-						filterList: filters.types,
-						subClause: {...subCond, innerTable:'cards_x_types'}
-					}, {
-						column: 'tag_id',
-						filterList: filters.tags,
-						subClause: {...subCond, innerTable:'cards_x_tags'}
-					}
-				)} AND CONCAT_WS('', riot_id, name, description
-				) LIKE ${'%' + signals.searchTerm + '%'}
+				${whereSubClauses.length === 0 ? sql`` : sql`
+					WHERE ${whereSubClauses.reduce((accumulator, clause) =>
+						sql`${accumulator} AND ${clause}`
+					)}
+				`}
 				ORDER BY ${sortOrder};
 			`
 			const sse = patchElements(
