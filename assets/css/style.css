@@ -95,16 +95,17 @@ body {
 }
 
 a {
-	font-weight: 500;
+	font-family: AlegreyaSC;
+	font-weight: 400;
 	transition: all 90ms;
 	color: transparent;
 	background:
 		linear-gradient(transparent, transparent),
 		linear-gradient(
-			in oklab 90deg, transparent, 5% , var(--order-lo), 20%,var(--gold), 99% ,var(--paper-white)
+			in oklab 90deg, var(--order-lo), 20%,var(--gold)
 		) border-box,
 		linear-gradient(
-			var(--paper-white), 20%, var(--gold)
+			var(--paper-white), 10%, var(--gold), 90%, var(--order-lo)
 		) text;
 	background-size: 100% 1px, 0 1px, 100%;
 	background-position: 100% 100%, 0 100%;
@@ -130,13 +131,14 @@ button {
 	}
 	&[data-variant="gold"] {
 		padding: 0.2em 0.5em;
-		font-weight: 500;
+		font-weight: 400;
 		color: var(--gold);
 		background: var(--text-black);
 		border: 2px solid var(--gold);
+		outline: 1px solid transparent;
 		border-radius: 0.25em;
 		&:hover, &:focus-visible {
-			outline: 1px solid var(--gold);
+			outline-color: var(--gold);
 			/*outline-offset: 1px;*/
 			border-color: var(--text-black);
 			color: var(--text-black);
@@ -612,13 +614,14 @@ td {
 		& button {
 			background: transparent;
 			border: none;
+			outline: 2px solid transparent;
 			height: 32rem;
 			max-height: 50dvh;
 			border-radius: 1.8dvh;
 			&:hover {
 				cursor: zoom-in;
 				filter: brightness(1.1);
-				outline: 2px solid var(--gold);
+				outline-color: var(--gold);
 			}
 			& img {height: 100%;}
 		}
