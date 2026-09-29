@@ -29,8 +29,8 @@
 	<div data-flex-item="grow"></div>
 	<footer class="sticky" data-sticky="bot">
 		<section id="card-details" style="display: none;"
-			data-signals="{selectedCard: -1}"
-			data-effect="@get('/card-details/' + $selectedCard)"
+			data-signals:selected-card="-1"
+			data-effect="if($selectedCard !== -1) {@get('/card-details/' + $selectedCard)}"
 			data-show="$selectedCard !== -1"
 		>
 		</section>
@@ -44,7 +44,9 @@
 		<figcaption>%{artistsLine: string}</figcaption>
 	</figure>
 	<ul class="flex" data-flex="col">%{versions:string}</ul>
-	<button data-pos="absolute top right" data-variant="gold">close</button>
+	<button data-pos="absolute top right" data-variant="gold"
+		data-on:click="$selectedCard = -1"
+	>close</button>
 	<dialog id="card-dialog" class="faux-modal" popover closedby="any">
 		<button class="center-box" data-variant="transparent"
 			popovertarget="card-dialog" popovertargetaction="hide"
@@ -99,7 +101,7 @@
 		<td class="card-idx">%{cardIndex: string}</td>
 		<td class="collection-count">%{count: number}</td>
 		<td><button
-			class="card-name" data-on:click="$selectedCard = %{cardId}"
+			class="card-name" data-on:click="$selectedCard = $selectedCard === %{cardId} ? -1 : %{cardId}"
 		>%{name: string}</button></td>
 		<td class="stats">
 			<span>%{energy: string}</span
