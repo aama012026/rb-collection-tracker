@@ -19,11 +19,22 @@ const sql = new SQL({
 	bigint:true
 })
 await sql`USE riftbound`
-const sets:Pick<SetsRow, 'name'|'id'>[] = await sql`SELECT id, name FROM sets ORDER BY release_date`
-const domains:Pick<DomainsRow, 'name'|'id'>[] = await sql`SELECT id, name FROM domains ORDER BY sort_order`
-const types:Pick<TypesRow, 'name'|'id'>[] = await sql`SELECT id, name FROM types ORDER BY name`
-const tags:Pick<TagsRow, 'name'|'id'>[] = await sql`SELECT id, name FROM tags ORDER BY name`
-const cards:CardDetails = await sql`SELECT * FROM card_details ORDER BY riot_id`
+const sets:Pick<SetsRow, 'name'|'id'>[] = await sql`
+	SELECT id, name FROM sets ORDER BY release_date
+`
+const domains:Pick<DomainsRow, 'name'|'id'>[] = await sql`
+	SELECT id, name FROM domains ORDER BY sort_order
+`
+const types:Pick<TypesRow, 'name'|'id'>[] = await sql`
+	SELECT id, name FROM types ORDER BY name
+`
+const tags:Pick<TagsRow, 'name'|'id'>[] = await sql`
+	SELECT id, name FROM tags ORDER BY name
+`
+const cards:CardDetails = await sql`
+	SELECT * FROM card_details ORDER BY riot_id
+`
+
 // Test
 testLexer(cards)
 testParser(cards)
@@ -35,16 +46,16 @@ const collection = makeCollectionPage(makeCardTable(
 	makeCardsTableBody(cardRows.join('\n')),
 	makeFilterBar(
 		makePopupMenu('sets', sets.map(set =>
-			makeCycleButton('sets', set.id, set.name)
+			makeCycleButton('set', set.id, set.name)
 		).join('\n')),
 		makePopupMenu('domains', domains.map(domain =>
-			makeCycleButton('domains', domain.id, domain.name)
+			makeCycleButton('domain', domain.id, domain.name)
 		).join('\n')),
 		makePopupMenu('types', types.map(type =>
-			makeCycleButton('types', type.id, type.name)
+			makeCycleButton('type', type.id, type.name)
 		).join('\n')),
 		makePopupMenu('tags', tags.map(tag =>
-			makeCycleButton('tags', tag.id, tag.name)
+			makeCycleButton('tag', tag.id, tag.name)
 		).join('\n')),
 	))
 )
@@ -53,9 +64,12 @@ console.log(`Riftbound collection server version: 0.7`)
 const server = Bun.serve({
 	port: 3005,
 	routes: {
-		'/': new Response(collection, {headers: {'Content-Type': 'text/html; charset=utf-8',}}),
+		'/': new Response(
+			collection, {headers: {'Content-Type': 'text/html; charset=utf-8'}}
+		),
 		'/cards': async (request) => {
-			const signalsString = new URL(request.url).searchParams.get('datastar')
+			const signalsString = new URL(request.url)
+			.searchParams.get('datastar')
 		 	if(!signalsString) {
 				return new Response('Missing datastar signals', {status:404})
 			}
@@ -75,18 +89,18 @@ const server = Bun.serve({
 			const filtersClause = whereIn(sql,
 				{
 					column: 'set_id',
-					filterList: filters.sets
+					filterList: filters.set
 				}, {
 					column: 'domain_id',
-					filterList: filters.domains,
+					filterList: filters.domain,
 					subClause: {...subCond, innerTable:'cards_x_domains'}
 				}, {
 					column: 'type_id',
-					filterList: filters.types,
+					filterList: filters.type,
 					subClause: {...subCond, innerTable:'cards_x_types'}
 				}, {
 					column: 'tag_id',
-					filterList: filters.tags,
+					filterList: filters.tag,
 					subClause: {...subCond, innerTable:'cards_x_tags'}
 				}
 			)
@@ -97,7 +111,9 @@ const server = Bun.serve({
 			}
 			if(!!signals.searchTerm) {
 				whereSubClauses.push(sql`
-					CONCAT_WS(' ', riot_id, name, description) LIKE ${'%' + signals.searchTerm + '%'}
+					CONCAT_WS(' ', riot_id, name, description) LIKE ${
+						'%' + signals.searchTerm + '%'
+					}
 				`)
 			}
 			const sortedCards:CardDetails = await sql`

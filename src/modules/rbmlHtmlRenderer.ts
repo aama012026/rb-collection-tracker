@@ -1,10 +1,12 @@
-import type { Artists, ArtistsRow, CardDetails, CardDetailsRow } from "../../gen/dbTableInterfaces";
-import { makeAbility, makeActivatedAbility, makeAnchor, makeBadge, makeCardDescription, makeCardTableRow, makeCommaListItem, makeInfixGroup, makeInlineSymbol, makeKeyword, makeMightCount, makeReminder, makeShortNameAndSubtitle, makeSpan, makeXpCount } from "../../gen/HTMLtemplates";
+import type { Artists, ArtistsRow, CardDetailsRow } from "../../gen/dbTableInterfaces";
+import { makeAbility, makeActivatedAbility, makeAnchor, makeBadge, makeCardDescription, makeCardTableRow, makeCommaListItem, makeCycleButton, makeInfixGroup, makeInlineSymbol, makeKeyword, makeMightCount, makeReminder, makeShortNameAndSubtitle, makeSpan, makeTypingBadge, makeXpCount } from "../../gen/HTMLtemplates";
 import { tokenize } from "./rbmlLexer";
 import { parseCardRulesText, type Node, type Symbol } from "./rbmlParser";
 import stringify from "./stringify";
 
 export function getCardTableRowHtml(c:CardDetailsRow): string {
+	const tags = c.tags ? JSON.parse(c.tags) as [number, string][] : []
+	const types = c.types ? JSON.parse(c.types) as [number, string][] : []
 	const html = makeCardTableRow(
 		c.id, c.domains ?? 'null', c.rarity, c.set_code,
 		c.riot_id.split('-')[1]!.split('/')[0]!, Math.floor(Math.random() * 5),
@@ -12,8 +14,13 @@ export function getCardTableRowHtml(c:CardDetailsRow): string {
 		c.energy ? makeInlineSymbol(c.energy) : '',
 		getPowerCostHtml(c),
 		c.might ? makeMightCount('', c.might) : '',
-		makeBadge('type', c.types ?? ''),
-		c.tags?.split(', ').map(tag => makeBadge('tag', tag)).join('') ?? '',
+		types.length > 0 ? makeTypingBadge(
+			types.map(([id, name]) => name).join(' '),
+			types.map(([id, name]) => makeCycleButton('type', id, name)).join('')
+		) : '',
+		tags.length > 0 ? tags.map(
+			([id, name]) => makeCycleButton('tag', id, name)
+		).join('') : '',
 		getDescriptionHtml(c.description ?? '')
 	)
 	if(c.domain_shorthands && c.domain_shorthands.split(', ').length === 1) {
