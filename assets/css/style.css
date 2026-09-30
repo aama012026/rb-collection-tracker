@@ -21,14 +21,10 @@
     --common-brown: #D0B599;
     --common-blue: #94A7B5;
 
-    --uncommon-hi: #3FB9B9;
-    --uncommon-lo: #20706F;
-    --rare-hi: #CD0081;
-    --rare-lo: #60276C;
-    --epic-hi: #F2B001;
-    --epic-lo: #811F23;
-    --showcase-hi: #FEEE00;
-    --showcase-lo: #693916;
+    --uncommon-hi: #3FB9B9; --uncommon-lo: #20706F;
+    --rare-hi: #CD0081; --rare-lo: #60276C;
+    --epic-hi: #F2B001; --epic-lo: #811F23;
+    --showcase-hi: #FEEE00; --showcase-lo: #693916;
 
     /* Frame colors */
     --bronze: #9f5e13; --silver-hi: #a1a1a1; --silver-lo: #727272; --gold: #e2b73e;
@@ -59,7 +55,7 @@
 
 .small-caps-sans {
 	font-family: AlegreyaSans;
-	font-size: 0.8em;
+	font-size: 0.8rem;
 	font-weight: 700;
 	font-style: oblique 12deg;
 	text-transform: uppercase;
@@ -124,6 +120,25 @@ button {
 	transition: all 120ms;
 	&:hover {
 		cursor: pointer;
+	}
+	&.badge {border: none;}
+	&.card-name {
+		color: var(--c-fg);
+		border: none;
+		outline: 1px solid transparent;
+		outline-offset: -1px;
+		border-radius: 0.5em;
+		background: transparent;
+		&:hover {
+			transition: none;
+			background-color: var(--c-bg);
+			outline-color: #fff1;
+		}
+		&:active {
+			transition: none;
+			color: var(--c-bg);
+			background: #fffd;
+		}
 	}
 	&[data-variant="transparent"] {
 		background: transparent;
@@ -193,14 +208,14 @@ button {
 	--c-domain-b-hi: var(--order-hi); --c-domain-b-lo: var(--order-lo);
 }
 
-[data-badge], [data-badge="tag"] {--c-bg: var(--border-black);}
-[data-badge="type"] {
+[data-category], [data-category="tag"] {--c-bg: var(--border-black);}
+[data-category="type"], [data-category="card-typing"], button.card-name {
 	--c-bg: #0002;
 	&:hover {
 		--c-bg: var(--c-domain-a-hi);
 	}
 }
-[data-badge="keyword"] {
+[data-category="keyword"] {
 	--c-bg: var(--kw-gray);
 	&[data-keyword="Deathknell"],
 	&[data-keyword="Deflect"],
@@ -240,13 +255,29 @@ button {
 }
 
 [data-rarity="common"] {
-	--c-rarity: var(--bronze);
+	--c-frame: var(--bronze);
+	--c-rarity-hi: var(--common-blue);
+	--c-rarity-lo: var(--common-green);
 }
 [data-rarity="uncommon"] {
-	--c-rarity: var(--silver-hi);
+	--c-frame: var(--silver-hi);
+	--c-rarity-hi: var(--uncommon-hi);
+	--c-rarity-lo: var(--uncommon-lo);
 }
-[data-rarity="rare"], [data-rarity="epic"], [data-rarity="showcase"] {
-	--c-rarity: var(--gold);
+[data-rarity="rare"] {
+	--c-frame: var(--gold);
+	--c-rarity-hi: var(--rare-hi);
+	--c-rarity-lo: var(--rare-lo);
+}
+[data-rarity="epic"] {
+	--c-frame: var(--gold);
+	--c-rarity-hi: var(--epic-hi);
+	--c-rarity-lo: var(--epic-lo);
+}
+[data-rarity="showcase"] {
+	--c-frame: var(--gold);
+	--c-rarity-hi: var(--showcase-hi);
+	--c-rarity-lo: var(--showcase-lo);
 }
 
 .badge {
@@ -273,29 +304,83 @@ button {
 			0 100%, var(--arrow-slant) 50%
 		);
 	}
-	[data-rarity="epic"] &:not([data-badge="keyword"]),
-	[data-rarity="showcase"] &:not([data-badge="keyword"]),
+
+	&[data-category="card-typing"] {
+		clip-path: polygon(
+			0 0, 100% 0,
+			calc(100% - var(--slant, 0.3em)) 100%, 0 100%
+		);
+		& :first-child {
+			padding-left: 0.3em;
+			clip-path: polygon(
+				0 0, 100% 0,
+				calc(100% - var(--slant, 0.3em)) 100%, 0 100%
+			);
+		}
+		&[data-icon~="champion"]::before {
+			content: url("/icons/type/champion.avif");
+			display: inline-block;
+			height: 1lh;
+		}
+
+		padding: 0;
+		--c-bg: #0002;
+		&:hover {
+			--c-bg: #0002;
+		}
+		& > .badge[data-state="include"] {
+			background: none;
+			&:hover {background: var(--c-bg);}
+		}
+	}
+
 	&[data-state="include"] {
-		--c-fg: var(--gold);
-		--c-bg: #0003;
+		--c-fg: var(--paper-white);
+		--c-bg: var(--border-black);
+		&:hover {
+			--c-bg: var(--c-domain-a-hi);
+		}
+		&:active {
+			--c-bg: var(--c-domain-a-lo);
+		}
 	}
-
 	&[data-state="require"] {
-		--c-fg: var(--mind-lo);
-		--c-bg: var(--gold);
+		--c-fg: var(--c-domain-a-lo);
+		--c-bg: var(--paper-white);
 	}
-
 	&[data-state="exclude"] {
 		--c-fg: var(--silver-lo);
 		--c-bg: var(--silver-hi);
 		text-decoration: line-through 2px var(--c-fg);
 	}
 
+	[data-rarity="epic"] &:not([data-category="keyword"]),
+	[data-rarity="showcase"] &:not([data-category="keyword"]),
+	#filter-bar & {
+		&[data-state="include"] {
+			--c-bg: #0003;
+			--c-fg: var(--gold);
+			&:hover {
+				--c-bg: var(--paper-white);
+				--c-fg: var(--c-domain-a-lo);
+				#filter-bar & {--c-fg: var(--text-black);}
+			}
+			&:active {--c-bg: var(--order-lo);}
+		}
+
+		&[data-state="require"] {
+			--c-bg: var(--gold);
+			--c-fg: var(--c-domain-a-lo);
+
+			#filter-bar & {--c-fg: var(--text-black);}
+			&:hover, #filter-bar &:hover {--c-fg: var(--paper-white);}
+		}
+	}
+
 	&:hover {
 		cursor: pointer;
-		&:not([data-badge="type"], [data-state]) {background-color: var(--c-fg);}
-		&[data-badge="tag"] {color: var(--c-domain-a-lo);}
-		&[data-badge="keyword"] {
+		&:not([data-category="card-typing"] ,[data-state]) {background-color: var(--c-fg);}
+		&[data-category="keyword"] {
 			color:var(--c-bg);
 			& .inline-svg {
 				--c-energy-txt: var(--paper-white);
@@ -310,17 +395,6 @@ button {
 				&[data-symbol='C'] {--c-rune-glyph: var(--c-domain-a-hi);}
 			}
 		}
-		&[data-state] {filter: brightness(1.2);}
-	}
-	&:active[data-state] {filter: brightness(0.8);}
-}
-
-button.card-name {
-	color: var(--c-fg);
-	background: transparent;
-	border: none;
-	&:hover {
-		text-shadow: 0 0 1px var(--c-fg);
 	}
 }
 
@@ -353,7 +427,7 @@ table .card-name {
 	height: 100%;
 	line-height: 1.1;
 	column-gap: 0.5em;
-	padding: 0.1em 0;
+	padding: 0.1em 0 0.1em 1em;
 }
 
 .badge-list {
@@ -441,7 +515,7 @@ li.grid {
 	--c-energy-txt: var(--text-black);
 	--c-rune-glyph: var(--text-black);
 	--c-rune-orb: var(--paper-white);
-	--c-rune-edge: var(--c-rarity);
+	--c-rune-edge: var(--c-frame);
 	--rune-edge-width: 0;
 	max-height: 1em;
 	display: inline-block;
@@ -545,7 +619,7 @@ i.reminder {
 table {
 	background-color: var(--border-black);
 	border: none;
-	border-spacing: 0 3px;
+	border-spacing: 0 4px;
 }
 
 tbody {
@@ -560,11 +634,8 @@ tr {
 		);
 	}
 
-	&:hover {
-		& td {
-			backdrop-filter: brightness(0.9);
-		}
-	}
+	&.selected td {backdrop-filter: brightness(0.8);}
+	&:hover td {backdrop-filter: brightness(0.9);}
 }
 
 td {
@@ -574,8 +645,8 @@ td {
 	box-sizing: border-box;
 	min-height: 100%;
 	height: 2.5lh;
-	border-top: 1px solid var(--c-rarity);
-	border-bottom: 1px solid var(--c-rarity);
+	border-top: 1px solid var(--c-frame);
+	border-bottom: 1px solid var(--c-frame);
 
 	background: padding-box
 		linear-gradient(
@@ -764,7 +835,6 @@ td {
 		border-top-right-radius: 0.3em;
 		backdrop-filter: blur(3px);
 	}
-	& button {border: none;}
 	& > button {
 		width: 100%;
 		height: 100%;
