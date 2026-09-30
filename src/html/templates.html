@@ -8,7 +8,34 @@
 		<link rel="stylesheet" href="css/style.css">
 		<script type="module" src="lib/datastar.js"></script>
 	</head>
-	<body>
+	<body
+		data-signals="{
+			filters: {
+				set: {require:[], exclude:[]},
+				domain: {require: [], exclude: []},
+				type: {require: [], exclude: []},
+				tag: {require: [], exclude: []}
+			}
+		}"
+		data-on:click="
+			const button = evt.target.closest('button[data-id]');
+			if (!button) {
+				return;
+			}
+			const category = button.dataset.category, id = button.dataset.id;
+			if ($filters[category].require.includes(id)) {
+				$filters[category].require = $filters[category].require.filter(v => v !== id);
+				$filters[category].exclude = [...$filters[category].exclude, id];
+			}
+			else if($filters[category].exclude.includes(id)) {
+				$filters[category].exclude = $filters[category].exclude.filter(v => v !== id);
+			}
+			else {
+				$filters[category].require = [...$filters[category].require, id];
+			}
+			@get('/cards')
+		"
+	>
 		${makeSvgSymbols()}
 		<main id="card-table" class="flex" data-flex="col fill">
 			%{cardTable: string}
@@ -83,7 +110,11 @@
 
 <template id="sticky-sort">
 	<header id="sort-bar" class="sticky" data-sticky="top"
-		data-signals:sort-order="['set', 'domain', 'number', 'name', 'energy', 'power', 'might', 'type', 'tags']">${
+		data-signals:sort-order="[
+			'set', 'domain', 'number', 'name', 'energy',
+			'power', 'might', 'type', 'tags'
+		]"
+	>${
 			makeSortbox(0) + makeSortbox(1) + makeSortbox(2) + makeSortbox(3) +
 			makeSortbox(4) + makeSortbox(5) + makeSortbox(6) + makeSortbox(7) +
 			makeSortbox(8)
@@ -96,7 +127,11 @@
 </template>
 
 <template id="card-table-row">
-	<tr id="card-%{cardId: number}" data-domain="%{domain: string}" data-rarity="%{rarity: string}">
+	<tr id="card-%{cardId: number}"
+		data-domain="%{domain: string}"
+		data-rarity="%{rarity: string}"
+		data-class:selected="$selectedCard === %{cardId}"
+	>
 		<td class="set-code">%{setCode: string}</td>
 		<td class="card-idx">%{cardIndex: string}</td>
 		<td class="collection-count">%{count: number}</td>
@@ -119,13 +154,18 @@
 </template>
 
 <template id="badge">
-	<mark class="badge small-caps-sans"	data-badge="%{badgeType:'type'|'tag'}"
+	<mark class="badge small-caps-sans"	data-category="%{badgeType:'type'|'tag'}"
 	>%{tag: string}</mark>
+</template>
+
+<template id="typing-badge">
+	<mark class="badge small-caps-sans"	data-category="card-typing" data-icon="%{icon: string}"
+	>%{tags:string}</mark>
 </template>
 
 <template id="keyword">
 	<span class="hoverable"><mark class="badge small-caps-sans"
-		data-badge="keyword"
+		data-category="keyword"
 		data-nested="%{isNested:boolean}"
 		data-associated="%{isAssociated:boolean}"
 		data-keyword="%{keyword: string}"
@@ -198,33 +238,7 @@
 </template>
 
 <template id="filter-bar">
-	<section id="filter-bar" class="flex" data-flex="row" data-signals="{
-		filters: {
-			sets: {require:[], exclude:[]},
-			domains: {require: [], exclude: []},
-			types: {require: [], exclude: []},
-			tags: {require: [], exclude: []}
-		},
-	}"
-	data-on:click="
-		const button = evt.target.closest('button[data-id]');
-		if (!button) {
-			return;
-		}
-		const category = button.dataset.category, id = button.dataset.id;
-		if ($filters[category].require.includes(id)) {
-			$filters[category].require = $filters[category].require.filter(v => v !== id);
-			$filters[category].exclude = [...$filters[category].exclude, id];
-		}
-		else if($filters[category].exclude.includes(id)) {
-			$filters[category].exclude = $filters[category].exclude.filter(v => v !== id);
-		}
-		else {
-			$filters[category].require = [...$filters[category].require, id];
-		}
-		@get('/cards')
-	"
-	>
+	<section id="filter-bar" class="flex" data-flex="row">
 		%{setsPopup: string}
 		%{domainsPopup: string}
 		<input type="search" name="card-search"
@@ -250,14 +264,24 @@
 
 <template id="cycle-button">
 	<button class="badge small-caps-sans" type="button"
-		data-category="%{category:string}"
-		data-id="%{id:number}"
+		data-category="%{category:string}" data-id="%{id:number}"
 		data-attr:data-state="
 			$filters.%{category}.require.includes('%{id}') ? 'require' : (
 				$filters.%{category}.exclude.includes('%{id}') ? 'exclude' : 'include'
 			)
 		"
-	>%{name: string}</button>
+	>%{content: string}</button>
+</template>
+
+<template id="toggle-button">
+	<button class="badge small-caps-sans" type="button"
+		data-category="%{category:string}" data-id="%{id:number}"
+		data-attr:data-state="
+			$filters.%{category}.require.includes('%{id}') ? 'require' : (
+				$filters.%{category}.exclude.includes('%{id}') ? 'exclude' : 'include'
+			)
+		"
+	>%{content: string}</button>
 </template>
 
 <template id="radio-filter">

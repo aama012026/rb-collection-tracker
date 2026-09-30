@@ -4,9 +4,9 @@ export type CardCollectionSignals = {
 	searchTerm: string,
 	sortOrder: string[],
 	filters: {
-		sets:{require:string[], exclude:string[]},
-		domains:{require:string[], exclude:string[]},
-		types:{require:string[], exclude:string[]},
-		tags:{require:string[], exclude:string[]}
+		set:{require:string[], exclude:string[]},
+		domain:{require:string[], exclude:string[]},
+		type:{require:string[], exclude:string[]},
+		tag:{require:string[], exclude:string[]}
 	},
 }
