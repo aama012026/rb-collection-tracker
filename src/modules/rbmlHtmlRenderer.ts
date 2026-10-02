@@ -1,5 +1,11 @@
 import type { Artists, ArtistsRow, CardDetailsRow } from "../../gen/dbTableInterfaces";
-import { makeAbility, makeActivatedAbility, makeAnchor, makeBadge, makeCardDescription, makeCardTableRow, makeCommaListItem, makeCycleButton, makeInfixGroup, makeInlineSymbol, makeKeyword, makeMightCount, makeReminder, makeShortNameAndSubtitle, makeSpan, makeTypingBadge, makeXpCount } from "../../gen/HTMLtemplates";
+import {
+	makeAbility, makeActivatedAbility, makeAnchor,
+	makeCardDescription, makeCardMight,	makeCardTableRow, makeCommaListItem,
+	makeCycleButton, makeEnergyCost, makeInfixGroup, makeInlineOrbSymbol, makeInlineSymbol,
+	makeKeyword, makeMightCount, makePowerCost, makeReminder, makeShortNameAndSubtitle,
+	makeSpan, makeXpCount
+} from "../../gen/HTMLtemplates";
 import { tokenize } from "./rbmlLexer";
 import { parseCardRulesText, type Node, type Symbol } from "./rbmlParser";
 import stringify from "./stringify";
@@ -11,13 +17,13 @@ export function getCardTableRowHtml(c:CardDetailsRow): string {
 		c.id, c.domains ?? 'null', c.rarity, c.set_code,
 		c.riot_id.split('-')[1]!.split('/')[0]!, Math.floor(Math.random() * 5),
 		getNameHtml(c.name),
-		c.energy ? makeInlineSymbol(c.energy) : '',
-		getPowerCostHtml(c),
-		c.might ? makeMightCount('', c.might) : '',
-		types.length > 0 ? makeTypingBadge(
-			types.map(([id, name]) => name).join(' '),
-			types.map(([id, name]) => makeCycleButton('type', id, name)).join('')
-		) : '',
+		c.energy ? makeEnergyCost(makeInlineOrbSymbol(c.energy)) : '',
+		c.power ? makePowerCost(getPowerCostHtml(c)) : '',
+		c.might ? makeCardMight(c.might) : '',
+		getTypeSymbol(types),
+		types.length > 0 ? types.map(
+			([id, name]) => makeCycleButton('type', id, name)
+		).join('') : '',
 		tags.length > 0 ? tags.map(
 			([id, name]) => makeCycleButton('tag', id, name)
 		).join('') : '',
@@ -46,6 +52,20 @@ export function getNameHtml(cardName: string): string {
 export function getArtistLine(artists: Artists): string {
 	const artistsHtml = artists.map(linkArtistPage).join(', ')
 	return `${artists.length > 1 ? 'Artists' : 'Artist'}: ${artistsHtml}`
+}
+
+function getTypeSymbol(types:[number, string][]): string {
+	if(types.length === 0) {
+		return ''
+	}
+	const typeNames = types.map(([_, name]) => name)
+	if(typeNames.length === 1) {
+		return typeNames.pop()!
+	}
+	if(typeNames.includes('champion')) {
+		return 'champion'
+	}
+	return typeNames[0] === 'signature' ? typeNames[1]! : typeNames[0]!
 }
 
 function linkArtistPage(artist: ArtistsRow): string {
@@ -93,7 +113,7 @@ function translateASTnode(node:Node): string {
 		return makeXpCount(node.amount, node.sign ?? '')
 	}
 	else if(node.kind === 'symbol') {
-		return makeInlineSymbol(node.value)
+		return makeInlineOrbSymbol(node.value)
 	}
 	// Branches
 	else if(node.kind === 'symbol_run') {
@@ -157,7 +177,7 @@ function getReminderHtml(reminder:Node[]) {
 
 function getSymbolRunHtml(symbols:Symbol[]) {
 	return symbols.reduce(
-		(html, child) => html += makeInlineSymbol(child.value), ''
+		(html, child) => html += makeInlineOrbSymbol(child.value), ''
 	)
 }
 
