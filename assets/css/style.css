@@ -35,6 +35,7 @@
     /* Global variable defaults */
     --c-bg: var(--border-black);
     --c-fg: var(--paper-white);
+    --c-frame: var(--paper-white);
 
     /* Global attribute defaults */
     font-family: AlegreyaSans;
@@ -273,22 +274,68 @@ button {
 	--c-frame: var(--gold);
 	--c-rarity-hi: var(--epic-hi);
 	--c-rarity-lo: var(--epic-lo);
+	--c-bg: #0002;
 }
 [data-rarity="showcase"] {
 	--c-frame: var(--gold);
 	--c-rarity-hi: var(--showcase-hi);
 	--c-rarity-lo: var(--showcase-lo);
+	--c-bg: #0002;
+}
+
+.type-symbol {
+	text-align: center;
+	z-index: 1;
+	height: 1lh;
+	width: 1lh;
+	background-color: var(--c-bg);
+	--c-type-symbol: var(--c-frame, var(--paper-white));
+	border: 2px solid var(--c-frame, var(--paper-white));
+	outline: 2px solid var(--c-bg);
+	border-radius: 0.7lh;
+	padding: 0.25lh 0;
+}
+
+div.energy-cost {
+	box-sizing: border-box;
+	display: flex;
+	font-size: 1.7rem;
+	background: var(--c-frame);
+	border: 1px solid var(--c-frame);
+	outline: 2px solid var(--c-bg);
+	border-radius: 2em;
+}
+
+div.power-cost {
+	font-size: 1rem;
+	margin: 0.2em 0.4em;
+	box-sizing: border-box;
+	display: flex;
+	flex-flow: column wrap;
+	padding: 0.25lh 0;
+	width: 1lh;
+	border-radius: 0.7lh;
+	border: 2px solid var(--c-frame);
+	outline: 2px solid var(--c-bg);
+	background: linear-gradient(in oklab 90deg, var(--c-domain-a-hi) 50%, var(--c-domain-b-hi) 50%);
+	& .inline-svg {
+		--c-rune-glyph: var(--paper-white);
+		[data-domain="order"] & {
+			--c-rune-glyph: var(--border-black);
+		}
+	}
 }
 
 .badge {
+	--slant: 0.3em;
 	--arrow-slant: 0.5em;
-	display: inline-block;
+	display: flex;
 	padding: 0.1rem 0.6em 0.1em 0.4em;
 	background: var(--c-bg);
 	color: var(--c-fg);
 	clip-path: polygon(
-		var(--slant, 0.3em) 0, 100% 0,
-		calc(100% - var(--slant, 0.3em)) 100%, 0 100%
+		var(--slant) 0, 100% 0,
+		calc(100% - var(--slant)) 100%, 0 100%
 	);
 
 	&[data-associated="true"][data-nested="false"] {
@@ -307,20 +354,13 @@ button {
 
 	&[data-category="card-typing"] {
 		clip-path: polygon(
-			0 0, 100% 0,
-			calc(100% - var(--slant, 0.3em)) 100%, 0 100%
+			0 0, 100% 0, calc(100% - var(--slant)) 100%, 0 100%
 		);
 		& :first-child {
-			padding-left: 0.3em;
+			padding-left: 0.2em;
 			clip-path: polygon(
-				0 0, 100% 0,
-				calc(100% - var(--slant, 0.3em)) 100%, 0 100%
+				0 0, 100% 0, calc(100% - var(--slant)) 100%, 0 100%
 			);
-		}
-		&[data-icon~="champion"]::before {
-			content: url("/icons/type/champion.avif");
-			display: inline-block;
-			height: 1lh;
 		}
 
 		padding: 0;
@@ -381,7 +421,7 @@ button {
 		cursor: pointer;
 		&:not([data-category="card-typing"] ,[data-state]) {background-color: var(--c-fg);}
 		&[data-category="keyword"] {
-			color:var(--c-bg);
+			color: var(--c-bg);
 			& .inline-svg {
 				--c-energy-txt: var(--paper-white);
 				--c-rune-glyph: var(--text-black);
@@ -430,6 +470,50 @@ table .card-name {
 	padding: 0.1em 0 0.1em 1em;
 }
 
+div.might-box {
+	font-size: 1rem;
+	outline: 2px solid var(--c-bg);
+	border: 2px solid var(--c-frame);
+	& div.frame {
+		border: 2px solid var(--c-bg);
+		display: flex;
+		align-items: center;
+		flex-flow: row;
+		background-color: var(--c-bg);
+		& div {
+			width: 1lh;
+			max-width: 1lh;
+			height: 1lh;
+			max-height: 1lh;
+			text-align: center;
+			vertical-align: middle;
+		}
+		& div.mask {
+			background-color: var(--c-frame);
+			mask-image:
+				url("/svg/symbol-M.svg"), linear-gradient(#000, #000)
+			;
+			mask-size: 0.85em 0.85em, 100% 100%;
+			mask-position: center;
+			mask-repeat: no-repeat;
+			mask-composite: exclude;
+		}
+		div.base-might {
+			[data-rarity="epic"] &, [data-rarity="showcase"] & {
+				color: var(--gold);
+			}
+			position: relative;
+			& span {
+				position: absolute;
+				font-size: 1.3em;
+				font-feature-settings: "lnum";
+				top: -0.15em;
+				left: 0.25em;
+				font-weight: 800;
+			}
+		}
+	}
+}
 .badge-list {
 	display: flex;
 	flex-flow: row wrap;
@@ -482,8 +566,11 @@ table .card-name {
 		flex-direction: row;
 		&[data-flex~="stretch"] {min-width: 100%; max-width: 100vw;}
 	}
-	&[data-flex~="start"] {justify-content: start;}
+	&[data-flex~="align-center"] {align-items: center;}
+	&[data-flex~="justify-start"] {justify-content: start;}
 	&[data-flex~="grow"] {flex: auto;}
+	&[data-flex~="wrap"] {flex-wrap: wrap;}
+	&[data-flex~="nowrap"]{flex-wrap: nowrap;}
 }
 
 [data-flex-item~="grow"] {flex: auto;}
@@ -658,7 +745,7 @@ td {
 	;
 
 	padding: 0.2em;
-	max-width: 90em;
+	max-width: 40rem;
 }
 
 /* Card Details section */
