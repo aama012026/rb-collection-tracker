@@ -13,22 +13,28 @@ import stringify from "./stringify";
 export function getCardTableRowHtml(c:CardDetailsRow): string {
 	const tags = c.tags ? JSON.parse(c.tags) as [number, string][] : []
 	const types = c.types ? JSON.parse(c.types) as [number, string][] : []
-	const html = makeCardTableRow(
-		c.id, c.domains ?? 'null', c.rarity, c.set_code,
-		c.riot_id.split('-')[1]!.split('/')[0]!, Math.floor(Math.random() * 5),
-		getNameHtml(c.name),
-		c.energy ? makeEnergyCost(makeInlineOrbSymbol(c.energy)) : '',
-		c.power ? makePowerCost(getPowerCostHtml(c)) : '',
-		c.might ? makeCardMight(c.might) : '',
-		getTypeSymbol(types),
-		types.length > 0 ? types.map(
-			([id, name]) => makeCycleButton('type', id, name)
-		).join('') : '',
-		tags.length > 0 ? tags.map(
-			([id, name]) => makeCycleButton('tag', id, name)
-		).join('') : '',
-		getDescriptionHtml(c.description ?? '')
-	)
+	const html = makeCardTableRow({
+		cardId: c.id,
+		cardIndex: c.riot_id.split('-')[1]!.split('/')[0]!,
+		count: Math.floor(Math.random() * 5),
+		setCode: c.set_code,
+		name: getNameHtml(c.name),
+		domain: c.domains ?? 'null',
+		rarity: c.rarity,
+		energyHtml: c.energy ? makeEnergyCost(
+			makeInlineOrbSymbol(c.energy)
+		) : '',
+		powerHtml: c.power ? makePowerCost(getPowerCostHtml(c)) : '',
+		mightHtml: c.might ? makeCardMight(c.might) : '',
+		typeSymbol: getTypeSymbol(types),
+		typeBadges: types.length > 0 ? types.map(([id, name]) => makeCycleButton(
+			{id, content: name, category: 'type', statesCount: 2}
+		)).join('') : '',
+		tagBadges: tags.length > 0 ? tags.map(([id, name]) => makeCycleButton(
+			{id, content: name, category: 'tag', statesCount: 2}
+		)).join('') : '',
+		description: getDescriptionHtml(c.description ?? '')
+	})
 	if(c.domain_shorthands && c.domain_shorthands.split(', ').length === 1) {
 		const domains = c.domain_shorthands.split(', ')
 		return html.replace(/symbol-C/g, `symbol-${domains[0]!}`)
@@ -42,10 +48,12 @@ export function getCardTableRowHtml(c:CardDetailsRow): string {
 export function getNameHtml(cardName: string): string {
 	const [shortName, subtitle] = cardName.split(', ')
 	if(shortName && subtitle) {
-		return makeShortNameAndSubtitle(shortName, subtitle.replace(/\s/g, '&nbsp;'))
+		return makeShortNameAndSubtitle(
+			{shortName, subtitle: subtitle.replace(/\s/g, '&nbsp;')}
+		)
 	}
 	else {
-		return makeSpan('short-name', cardName)
+		return makeSpan({classString: 'short-name', textContent: cardName})
 	}
 }
 
@@ -70,10 +78,15 @@ function getTypeSymbol(types:[number, string][]): string {
 
 function linkArtistPage(artist: ArtistsRow): string {
 	if(!artist.website) {
-		return makeSpan('artist', artist.name)
+		return makeSpan({classString: 'artist', textContent: artist.name})
 	}
 	else {
-		return makeAnchor(artist.website, '_blank', 'class="artist"', artist.name)
+		return makeAnchor({
+			href: artist.website,
+			target:'_blank',
+			attributes:'class="artist"',
+			textContent:artist.name
+		})
 	}
 }
 
@@ -107,10 +120,10 @@ function translateASTnode(node:Node): string {
 		return node.value
 	}
 	else if(node.kind === 'might') {
-		return makeMightCount(node.sign ?? '', node.amount)
+		return makeMightCount({sign: node.sign ?? '', amount: node.amount})
 	}
 	else if(node.kind === 'xp') {
-		return makeXpCount(node.amount, node.sign ?? '')
+		return makeXpCount({amount: node.amount, sign: node.sign ?? ''})
 	}
 	else if(node.kind === 'symbol') {
 		return makeInlineOrbSymbol(node.value)
@@ -128,38 +141,45 @@ function translateASTnode(node:Node): string {
 		))).join(node.separator)
 	}
 	else if(node.kind === 'keyword') {
-		return makeKeyword(
-			!!node.isNested,
-			!!node.associated,
-			node.name,
-			node.param ? makeSpan('kw-param', `${node.param}`) : '',
-			node.cost ? makeSpan('kw-cost', getSymbolRunHtml(node.cost)) : '',
-			node.associated ? translateASTnode(node.associated) : '',
-			node.reminderText ? getReminderHtml(node.reminderText) : ''
-		)
+		return makeKeyword({
+			isNested: !!node.isNested,
+			isAssociated: !!node.associated,
+			keyword: node.name,
+			param: node.param ? makeSpan({
+				classString: 'kw-param', textContent:`${node.param}`
+			}) : '',
+			cost: node.cost ? makeSpan({
+				classString: 'kw-cost',
+				textContent: getSymbolRunHtml(node.cost)
+			}) : '',
+			associated: node.associated ? translateASTnode(node.associated) : '',
+			reminder: node.reminderText ? getReminderHtml(node.reminderText) : ''
+		})
 	}
 	else if(node.kind === 'ability') {
 		if(node.activated) {
-			return makeActivatedAbility(
-				translateASTnodes(node.cost),
-				translateASTnodes(node.effect),
-				node.reminderText ? getReminderHtml(node.reminderText) : ''
-			)
+			return makeActivatedAbility({
+				cost: translateASTnodes(node.cost),
+				effect: translateASTnodes(node.effect),
+				reminder: node.reminderText ? getReminderHtml(
+					node.reminderText
+				) : ''
+			})
 		}
 		else {
-			return makeAbility(
-				translateASTnodes(node.value),
-				node.reminderText ? getReminderHtml(node.reminderText) : ''
-			)
+			return makeAbility({
+				ability: translateASTnodes(node.value),
+				reminder: node.reminderText ? getReminderHtml(node.reminderText) : ''
+			})
 		}
 	}
 	else if(node.kind === 'infix_group') {
-		return makeInfixGroup(
-			translateASTnodes(node.lefthand),
-			node.operator,
-			translateASTnodes(node.righthand),
-			node.reminderText ? getReminderHtml(node.reminderText) : ''
-		)
+		return makeInfixGroup({
+			lefthand: translateASTnodes(node.lefthand),
+			righthand: translateASTnodes(node.righthand),
+			operator: node.operator,
+			reminder: node.reminderText ? getReminderHtml(node.reminderText) : ''
+		})
 	}
 	else if(node.kind === 'group') {
 		throw new Error(`Should groups be in the output ast?`)

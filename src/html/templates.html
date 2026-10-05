@@ -22,10 +22,12 @@
 			if (!button) {
 				return;
 			}
-			const category = button.dataset.category, id = button.dataset.id;
+			const id = button.dataset.id, category = button.dataset.category;
 			if ($filters[category].require.includes(id)) {
 				$filters[category].require = $filters[category].require.filter(v => v !== id);
-				$filters[category].exclude = [...$filters[category].exclude, id];
+				if(button.dataset.statesCount === '3') {
+					$filters[category].exclude = [...$filters[category].exclude, id];
+				}
 			}
 			else if($filters[category].exclude.includes(id)) {
 				$filters[category].exclude = $filters[category].exclude.filter(v => v !== id);
@@ -45,14 +47,14 @@
 </template>
 
 <template id="card-table">
-	%{sortBar: string}
+	%{sortBar}
 	<table>
 		<thead><tr>
 			<th>set</th><th>nr.</th><th>count</th><th>name</th>
 			<th>[E]</th><th>[C]</th><th>[M]</th>
 			<th>tags & keywords</th><th>description</th>
 		</tr></thead>
-		%{tbody: string}
+		%{tbody}
 	</table>
 	<div data-flex-item="grow"></div>
 	<footer class="sticky" data-sticky="bot">
@@ -62,16 +64,16 @@
 			data-show="$selectedCard !== -1"
 		>
 		</section>
-		%{filterBar: string}
+		%{filterBar}
 	</footer>
 </template>
 
 <template id="card-details">
 	<figure class="card">
-		<button popovertarget="card-dialog"><img src="%{url: string}" alt="%{altText:string}"></button>
-		<figcaption>%{artistsLine: string}</figcaption>
+		<button popovertarget="card-dialog"><img src="%{url}" alt="%{altText}"></button>
+		<figcaption>%{artistsLine}</figcaption>
 	</figure>
-	<ul class="flex" data-flex="col">%{versions:string}</ul>
+	<ul class="flex" data-flex="col">%{versions}</ul>
 	<button data-pos="absolute top right" data-variant="gold"
 		data-on:click="$selectedCard = -1"
 	>close</button>
@@ -86,12 +88,12 @@
 
 <template id="card-version">
 	<li class="grid" data-flex="col">
-		<span class="card-idx">%{cardIndex: string}</span>
-		<button class="card-name">%{name: string}</button>
-		<span>Rarity: %{rarityString: string} <img class="icon"
-			src="icons/rarity/%{rarityName: string}.avif"
+		<span class="card-idx">%{index}</span>
+		<button class="card-name">%{name}</button>
+		<span>Rarity: %{rarityString} <img class="icon"
+			src="icons/rarity/%{rarityName}.avif"
 		></span>
-		<span>%{artistLine: string}</span>
+		<span>%{artistLine}</span>
 	</li>
 </template>
 
@@ -124,24 +126,24 @@
 </template>
 
 <template id="cards-table-body">
-	<tbody id="cards-table-body">%{rows: string}</tbody>
+	<tbody id="cards-table-body">%{rows}</tbody>
 </template>
 
 <template id="card-table-row">
 	<tr id="card-%{cardId: number}"
-		data-domain="%{domain: string}"
-		data-rarity="%{rarity: string}"
+		data-domain="%{domain}"
+		data-rarity="%{rarity}"
 		data-class:selected="$selectedCard === %{cardId}"
 	>
-		<td class="set-code">%{setCode: string}</td>
-		<td class="card-idx">%{cardIndex: string}</td>
+		<td class="set-code">%{setCode}</td>
+		<td class="card-idx">%{cardIndex}</td>
 		<td class="collection-count">%{count: number}</td>
 		<td><button
 			class="card-name" data-on:click="$selectedCard = $selectedCard === %{cardId} ? -1 : %{cardId}"
-		>%{name: string}</button></td>
-		<td>%{energyHtml:string}</td>
-		<td>%{powerHtml:string}</td>
-		<td>%{mightHtml:string}</td>
+		>%{name}</button></td>
+		<td>%{energyHtml}</td>
+		<td>%{powerHtml}</td>
+		<td>%{mightHtml}</td>
 		<td class="flex" data-flex="row justify-start align-center">
 			<div class="type-row flex"
 				data-flex="row nowrap justify-start align-center"
@@ -149,30 +151,28 @@
 				<span class="type-symbol"><svg class="inline-svg"
 					viewBox="0 0 24 24"	width="24" height="24"
 				>
-					<use href="#symbol-%{typeSymbol: string}"></use>
+					<use href="#symbol-%{typeSymbol}"></use>
 				</svg></span>
 				<mark class="badge small-caps-sans"	data-category="card-typing"
-				>%{typeBadges: string}</mark>
+				>%{typeBadges}</mark>
 			</div>
-			<div class="badge-list">
-				%{tagBadges: string}
-			</div>
+			<div class="badge-list">%{tagBadges}</div>
 		</td>
 		<td>%{description: string}</td>
 	</tr>
 </template>
 
 <template id="short-name-and-subtitle">
-	<span class="short-name">%{shortName: string}</span>
-	<i class="small-caps">%{subtitle: string}</i>
+	<span class="short-name">%{shortName}</span>
+	<i class="small-caps">%{subtitle}</i>
 </template>
 
 <template id="energy-cost">
-	<div class="energy-cost">%{energySymbol: string}</div>
+	<div class="energy-cost">%{energySymbol}</div>
 </template>
 
 <template id="power-cost">
-	<div class="power-cost">%{powerSymbols: string}</div>
+	<div class="power-cost">%{powerSymbols}</div>
 </template>
 
 <template id="card-might">
@@ -194,46 +194,46 @@
 		data-category="keyword"
 		data-nested="%{isNested:boolean}"
 		data-associated="%{isAssociated:boolean}"
-		data-keyword="%{keyword: string}"
-	><span class="kw-name">%{keyword}</span>%{param: string}%{cost: string}</mark
-	>%{associated: string}%{reminder: string}</span>
+		data-keyword="%{keyword}"
+	><span class="kw-name">%{keyword}</span>%{param}%{cost}</mark
+	>%{associated}%{reminder}</span>
 </template>
 
 <template id="span">
-	<span class="%{classString: string}">%{textContent: string}</span>
+	<span class="%{classString}">%{textContent: string}</span>
 </template>
 
 <template id="anchor">
-	<a href="%{href:string}"
+	<a href="%{href}"
 		target="%{target:'_blank'|'_parent'|'_self'|'_top'}"
-		%{attributes: string}
+		%{attributes}
 	>%{textContent: string}</a>
 </template>
 
 <template id="ability">
-	<span class="ability hoverable">%{ability: string}%{reminder: string}</span>
+	<span class="ability hoverable">%{ability}%{reminder}</span>
 </template>
 
 <template id="activated-ability">
 	<span class="ability hoverable"
-		><span class="ability-cost">%{cost:string}</span
-		>: <span class="ability-effect">%{effect:string}</span
-	>%{reminder:string}</span>
+		><span class="ability-cost">%{cost}</span
+		>: <span class="ability-effect">%{effect}</span
+	>%{reminder}</span>
 </template>
 
 <template id="infix-group">
 	<span class="infix-group hoverable"><span class="lefthand"
-	>%{lefthand: string}</span>%{operator: string}<span class="righthand"
-	>%{righthand: string}</span>%{reminder:string}</span>
+	>%{lefthand}</span>%{operator}<span class="righthand"
+	>%{righthand}</span>%{reminder}</span>
 </template>
 
 <template id="comma-list-item">
-	<span class="comma-list-item">%{listItem: string}</span>
+	<span class="comma-list-item">%{listItem}</span>
 </template>
 
 <template id="might-count">
 	<span class="might-count"
-		><span class="amount">%{sign: string}%{amount: number}</span
+		><span class="amount">%{sign}%{amount: number}</span
 		><svg class="inline-svg" data-symbol="M" viewBox="0 0 24 24"
 			width="24" height="24" role="img" aria-label="[M]"
 		><use href="#symbol-M"></use></svg
@@ -266,34 +266,34 @@
 
 <template id="type-symbol">
 	<span class="type-symbol"><svg viewBox="0 0 24 24" width="24" height="25"
-		><use href="#symbol-%{type: string}"></use></svg
+		><use href="#symbol-%{type}"></use></svg
 	></span>
 </template>
 
 <template id="reminder">
-	<i class="reminder">%{text: string}</i>
+	<i class="reminder">%{content}</i>
 </template>
 
 <template id="card-description">
-	<p class="description">%{content: string}</p>
+	<p class="description">%{content}</p>
 </template>
 
 <template id="filter-bar">
 	<section id="filter-bar" class="flex" data-flex="row">
-		%{setsPopup: string}
-		%{domainsPopup: string}
+		%{setsPopup}
+		%{domainsPopup}
 		<input type="search" name="card-search"
 			placeholder="Search card names or text"
 			data-bind:search-term
 			data-on:change="@get('/cards')"
 		>
-		%{typesPopup: string}
-		%{tagsPopup: string}
+		%{typesPopup}
+		%{tagsPopup}
 	</section>
 </template>
 
 <template id="popup-menu">
-	<div class="popup-menu" data-signals:_%{name:string}-popup="false">
+	<div class="popup-menu" data-signals:_%{name}-popup="false">
 		<button data-on:click="$_%{name}Popup = !$_%{name}Popup"
 		><span class="text-gradient">%{name}</span></button>
 		<div class="popup badge-list"
@@ -305,29 +305,30 @@
 
 <template id="cycle-button">
 	<button class="badge small-caps-sans" type="button"
-		data-category="%{category:string}" data-id="%{id:number}"
+		data-category="%{category}" data-id="%{id: number}"
+		data-states-count="%{statesCount: number}"
 		data-attr:data-state="
 			$filters.%{category}.require.includes('%{id}') ? 'require' : (
 				$filters.%{category}.exclude.includes('%{id}') ? 'exclude' : 'include'
 			)
 		"
-	>%{content: string}</button>
+	>%{content}</button>
 </template>
 
 <template id="toggle-button">
 	<button class="badge small-caps-sans" type="button"
-		data-category="%{category:string}" data-id="%{id:number}"
+		data-category="%{category}" data-id="%{id:number}"
 		data-attr:data-state="
 			$filters.%{category}.require.includes('%{id}') ? 'require' : (
 				$filters.%{category}.exclude.includes('%{id}') ? 'exclude' : 'include'
 			)
 		"
-	>%{content: string}</button>
+	>%{content}</button>
 </template>
 
 <template id="radio-filter">
 	<fieldset class="radio-filter">
-		<legend>%{name: string}</legend>
+		<legend>%{name}</legend>
 		<div class="radio-filter">
 			<label for="%{name}-include">include</label>
 			<input type="radio"
@@ -348,7 +349,7 @@
 </template>
 
 <template id="range-filter">
-	<div id="range-%{name:string}">
+	<div id="range-%{name}">
 		<label for="%{name}-min">min</label>
 		<input type="range" id="%{name}-min" name="%{name}-min"
 			data-bind:_%{name}-min
