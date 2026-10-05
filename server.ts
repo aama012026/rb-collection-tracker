@@ -41,24 +41,33 @@ testParser(cards)
 
 const cardRows = cards.map(c => getCardTableRowHtml(c))
 
-const collection = makeCollectionPage(makeCardTable(
-	makeStickySort(),
-	makeCardsTableBody(cardRows.join('\n')),
-	makeFilterBar(
-		makePopupMenu('sets', sets.map(set =>
-			makeCycleButton('set', set.id, set.name)
-		).join('\n')),
-		makePopupMenu('domains', domains.map(domain =>
-			makeCycleButton('domain', domain.id, domain.name)
-		).join('\n')),
-		makePopupMenu('types', types.map(type =>
-			makeCycleButton('type', type.id, type.name)
-		).join('\n')),
-		makePopupMenu('tags', tags.map(tag =>
-			makeCycleButton('tag', tag.id, tag.name)
-		).join('\n')),
-	))
-)
+const collection = makeCollectionPage(makeCardTable({
+	sortBar: makeStickySort(),
+	tbody: makeCardsTableBody(cardRows.join('\n')),
+	filterBar: makeFilterBar({
+		setsPopup: makePopupMenu({
+			name: 'sets', content: sets.map(set =>	makeCycleButton({
+				id: set.id, category: 'set', content: set.name, statesCount: 3
+			})
+		).join('\n')}),
+		domainsPopup: makePopupMenu({
+			name: 'domains', content: domains.map(domain => makeCycleButton({
+				id: domain.id, category: 'domain', content: domain.name, statesCount: 3
+			})
+		).join('\n')}),
+		typesPopup: makePopupMenu({
+			name: 'types', content: types.map(type =>
+			makeCycleButton({
+				id: type.id, category: 'type', content: type.name, statesCount: 3
+			})
+		).join('\n')}),
+		tagsPopup: makePopupMenu({name: 'tags', content: tags.map(tag =>
+		makeCycleButton({
+			id: tag.id, category: 'tag', content: tag.name, statesCount: 3
+		})
+		).join('\n')}),
+	})
+}))
 
 console.log(`Riftbound collection server version: 0.7`)
 const server = Bun.serve({
@@ -164,18 +173,18 @@ const server = Bun.serve({
 			}
 
 			const sse = patchElements(
-				makeCardDetails(
-					selectedCard.img ?? '',
-					`${selectedCard.riot_id} ${selectedCard.name}`,
-					getArtistLine(selectedCard.artists),
-					cards.map(card => makeCardVersion(
-						card.riot_id,
-						getNameHtml(card.name),
-						card.rarity,
-						card.rarity,
-						getArtistLine(card.artists)
-					)).join('')
-				).split('\n'),
+				makeCardDetails({
+					url: selectedCard.img ?? '',
+					altText: `${selectedCard.riot_id} ${selectedCard.name}`,
+					artistsLine: getArtistLine(selectedCard.artists),
+					versions: cards.map(card => makeCardVersion({
+						index: card.riot_id,
+						name: getNameHtml(card.name),
+						rarityName: card.rarity,
+						rarityString: card.rarity,
+						artistLine: getArtistLine(card.artists)
+					})).join('')
+				}).split('\n'),
 				{selector:'#card-details', mode: 'inner'}
 			)
 			const stream = new ReadableStream({
