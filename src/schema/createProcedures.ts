@@ -230,6 +230,16 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 		END;
 	`)
 
+	// WIP
+	// await createStoredProcedure('get_card_version', sql`
+	// 	CREATE PROCEDURE IF NOT EXISTS get_card_version(
+	// 		IN p_riot_id VARCHAR(255),
+	// 		OUT p_version_id TINYINT UNSIGNED
+	// 	) BEGIN
+	//
+	// 	END
+	// `)
+
 	await createStoredProcedure('add_card', sql`
 		CREATE PROCEDURE IF NOT EXISTS add_card(
 			IN p_set_name VARCHAR(255),

@@ -143,17 +143,6 @@ button {
 			background: #fffd;
 		}
 	}
-	/*#card-details &.card-name {
-		&:hover {
-			color: var(--text-black);
-			background-color: var(--gold);
-			outline-color: transparent;
-		}
-		&:active {
-			color: var(--text-black);
-			background-color: #fffd;
-		}
-	}*/
 	&[data-variant="transparent"] {
 		background: transparent;
 		border: none;

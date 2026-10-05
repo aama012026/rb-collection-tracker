@@ -164,4 +164,17 @@ export default async function seedTables(sql: SQL): Promise<void> {
 			card_description = VALUE(card_description)
 		RETURNING *;
 	`)
+
+	await seedTable('card_versions', sql`
+		INSERT INTO card_versions (sort_order, name) VALUES
+			(1, 'Base'),
+			(2, 'Alternate Art'),
+			(3, 'Overnumber'),
+			(4, 'Signature Overnumber'),
+			(5, 'Ultimate Rare')
+		ON DUPLICATE KEY UPDATE
+			sort_order = VALUE(sort_order),
+			name = VALUE(name)
+		RETURNING *;
+	`)
 }

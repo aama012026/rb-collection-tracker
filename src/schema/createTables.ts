@@ -159,4 +159,12 @@ export default async function createTables(sql: SQL): Promise<void> {
 			PRIMARY KEY(card_id, artist_id)
 		);
 	`)
+
+	await createTable('card_versions', sql`
+		CREATE TABLE IF NOT EXISTS card_versions (
+			id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+			sort_order TINYINT UNSIGNED UNIQUE,
+			name VARCHAR(100) UNIQUE NOT NULL
+		);
+	`)
 }
