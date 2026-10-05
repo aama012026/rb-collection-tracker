@@ -69,28 +69,34 @@
 </template>
 
 <template id="card-details">
-	<figure class="card">
-		<button popovertarget="card-dialog"><img src="%{url}" alt="%{altText}"></button>
-		<figcaption>%{artistsLine}</figcaption>
-	</figure>
-	<ul class="flex" data-flex="col">%{versions}</ul>
+	<article class="card">
+		<h1 class="card-name">%{nameHtml}</h1>
+		<ul class="flex" data-flex="col">%{versions}</ul>
+		<figure class="card">
+			<button	popovertarget="card-dialog"
+			><img src="%{url}" alt="%{altText}"></button>
+			<figcaption>%{artistsLine}</figcaption>
+		</figure>
+		<dialog id="card-dialog" class="faux-modal" popover closedby="any">
+			<button class="center-box" data-variant="transparent"
+				popovertarget="card-dialog" popovertargetaction="hide"
+			><img src="%{url}" alt="%{altText}">
+			</button>
+		</dialog>
+	</article>
 	<button data-pos="absolute top right" data-variant="gold"
 		data-on:click="$selectedCard = -1"
 	>close</button>
-	<dialog id="card-dialog" class="faux-modal" popover closedby="any">
-		<button class="center-box" data-variant="transparent"
-			popovertarget="card-dialog" popovertargetaction="hide"
-		>
-			<img src="%{url}" alt="%{altText}">
-		</button>
-	</dialog>
 </template>
 
 <template id="card-version">
 	<li class="grid" data-flex="col">
 		<span class="card-idx">%{index}</span>
-		<button class="card-name">%{name}</button>
-		<span>Rarity: %{rarityString} <img class="icon"
+		<button class="card-name"
+			data-on:click="$selectedCard = %{id: number}"
+			data-class:selected="$selectedCard === %{id}"
+		>%{name}</button>
+		<span>Rarity: %{rarityString}<img class="icon"
 			src="icons/rarity/%{rarityName}.avif"
 		></span>
 		<span>%{artistLine}</span>

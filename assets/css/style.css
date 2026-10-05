@@ -51,7 +51,7 @@
 	font-style: italic;
 	text-transform: uppercase;
 
-	i&{font-size: 1rem;}
+	i&{font-size: 1em;}
 }
 
 .small-caps-sans {
@@ -64,7 +64,7 @@
 
 .short-name {
 	font-family: Alegreya;
-	font-size: 1.2rem;
+	font-size: 1.2em;
 	font-weight: 800;
 	letter-spacing: 3%;
 }
@@ -85,6 +85,11 @@
 	font-weight: 700;
 }
 
+a, span.artist {
+	font-family: AlegreyaSC;
+	font-weight: 400;
+}
+
 /* STYLING */
 body {
 	color: var(--paper-white);
@@ -92,8 +97,6 @@ body {
 }
 
 a {
-	font-family: AlegreyaSC;
-	font-weight: 400;
 	transition: all 90ms;
 	color: transparent;
 	background:
@@ -115,7 +118,6 @@ a {
 		background-size: 0 1px, 100% 1px, 100%;
 	}
 }
-
 button {
 	font-size: 1em;
 	transition: all 120ms;
@@ -132,15 +134,26 @@ button {
 		background: transparent;
 		&:hover {
 			transition: none;
-			background-color: var(--c-bg);
+			background-color: var(--c-bg,#fff1);
 			outline-color: #fff1;
 		}
 		&:active {
 			transition: none;
-			color: var(--c-bg);
+			color: var(--c-bg, var(--text-black));
 			background: #fffd;
 		}
 	}
+	/*#card-details &.card-name {
+		&:hover {
+			color: var(--text-black);
+			background-color: var(--gold);
+			outline-color: transparent;
+		}
+		&:active {
+			color: var(--text-black);
+			background-color: #fffd;
+		}
+	}*/
 	&[data-variant="transparent"] {
 		background: transparent;
 		border: none;
@@ -163,6 +176,15 @@ button {
 		&:active {
 			background-color: color-mix(in oklab, var(--gold), var(--bronze) 30%);
 		}
+	}
+}
+
+
+.selected {
+	& td{backdrop-filter: brightness(0.8);}
+	button.card-name&, button&:hover {
+		color: var(--text-black);
+		background: var(--gold);
 	}
 }
 
@@ -514,6 +536,7 @@ div.might-box {
 		}
 	}
 }
+
 .badge-list {
 	display: flex;
 	flex-flow: row wrap;
@@ -586,9 +609,10 @@ div.might-box {
 
 li.grid {
 	display: grid;
-	place-items: start;
-	grid-template-columns: auto 1fr;
-	gap: 0 1em;
+	place-items: baseline start;
+	grid-template-columns: 8.7em 1fr;
+	> * {padding: 0 0.5em;}
+	> .card-name {padding-top: 0.2em;}
 }
 
 .icon {
@@ -721,7 +745,6 @@ tr {
 		);
 	}
 
-	&.selected td {backdrop-filter: brightness(0.8);}
 	&:hover td {backdrop-filter: brightness(0.9);}
 }
 
@@ -750,23 +773,46 @@ td {
 
 /* Card Details section */
 #card-details {
+	display: grid;
+	place-items: center;
 	position: relative;
 	border-top: 1px solid var(--gold);
 	--padding: 0.75em;
 	padding: var(--padding);
 	background: var(--text-black);
 	backdrop-filter: blur(4px);
+}
+
+article.card {
 	display: grid;
-	place-items: start;
+	grid-template-columns: auto 1fr;
+	grid-template-rows: auto 1fr;
+	grid-template-areas:
+		"card name"
+		"card vers"
+	;
 	gap: 0.5em;
-	grid-template-columns: 1fr 1.2fr;
-	& > :nth-child(odd) {
-		justify-self: right;
+	& h1 {
+		font-size: 1.5rem;
+		grid-area: name;
 	}
-	& > :nth-child(even) {
-		justify-self: left;
+	& .card-name .short-name:has( ~ *)::after {
+		content: ',';
 	}
-	& figure.card {
+	& ul {
+		grid-area: vers;
+		height: fit-content;
+		width: fit-content;
+		max-height: 100%;
+		max-width: 100%;
+		gap: 1rem;
+		& li .flex {
+			gap: 1rem;
+			align-items: baseline;
+		}
+	}
+	& > figure {
+		grid-area: card;
 		display: block;
 		max-height: max-content;
 		& button {
@@ -783,20 +829,6 @@ td {
 			}
 			& img {height: 100%;}
 		}
-	}
-	& ul {
-		height: fit-content;
-		width: fit-content;
-		max-height: 100%;
-		max-width: 100%;
-		gap: 1rem;
-		& li .flex {
-			gap: 1rem;
-			align-items: baseline;
-		}
-	}
-	& .card-name .short-name:has( ~ *)::after {
-		content: ',';
 	}
 }
 

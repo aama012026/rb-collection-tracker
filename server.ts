@@ -174,11 +174,13 @@ const server = Bun.serve({
 
 			const sse = patchElements(
 				makeCardDetails({
+					nameHtml: getNameHtml(selectedCard.name),
 					url: selectedCard.img ?? '',
 					altText: `${selectedCard.riot_id} ${selectedCard.name}`,
 					artistsLine: getArtistLine(selectedCard.artists),
 					versions: cards.map(card => makeCardVersion({
 						index: card.riot_id,
+						id: card.id,
 						name: getNameHtml(card.name),
 						rarityName: card.rarity,
 						rarityString: card.rarity,
