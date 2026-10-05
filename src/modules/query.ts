@@ -31,7 +31,7 @@ export function whereIn(sql:SQL, ...filters:{
 				} FROM ${sql(subClause.innerTable)
 				} WHERE ${sql(column)} IN ${sql(filterList.exclude)})
 			`) : clauses.push(sql`
-				${sql(column)} IN ${sql(filterList.exclude)}
+				${sql(column)} NOT IN ${sql(filterList.exclude)}
 			`)
 		}
 	})
