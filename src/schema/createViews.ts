@@ -15,7 +15,7 @@ export default async function createViews(sql:SQL): Promise<void> {
 			sets.id AS set_id, sets.code AS set_code, sets.name AS set_name,
 			cards.energy, cards.might, cards.power, cards.cost,
 			cards.img, cards.thumbnail, cards.description, cards.flavor_text,
-			card_versions.name AS version,
+			card_versions.sort_order AS version_sort_order, card_versions.name AS version_name,
 			(SELECT JSON_OBJECT_TO_ARRAY(JSON_OBJECTAGG(types.id, types.name))
 			FROM cards_x_types cxt
 			JOIN types ON types.id = cxt.type_id
@@ -46,6 +46,7 @@ export default async function createViews(sql:SQL): Promise<void> {
 		JOIN rarities ON rarities.id = cards.rarity_id
 		JOIN sets ON sets.id = cards.set_id
 		JOIN card_versions ON card_versions.id = cards.version_id
+		ORDER BY cards.id
 		;
 	`)
 }

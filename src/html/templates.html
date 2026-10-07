@@ -92,10 +92,10 @@
 <template id="card-version">
 	<li class="grid" data-flex="col">
 		<span class="card-idx">%{index}</span>
-		<button class="card-name"
+		<button class="card-version"
 			data-on:click="$selectedCard = %{id: number}"
 			data-class:selected="$selectedCard === %{id}"
-		>%{name}</button>
+		>%{version}</button>
 		<span>Rarity: %{rarityString}<img class="icon"
 			src="icons/rarity/%{rarityName}.avif"
 		></span>

@@ -152,13 +152,13 @@ const server = Bun.serve({
 			}
 
 			const cardVersions: Pick<
-				CardDetailsRow, 'id'|'riot_id'|'name'|'rarity'|'img'
+				CardDetailsRow, 'id'|'riot_id'|'name'|'rarity'|'img'|'version_sort_order'|'version_name'
 			>[] = await sql`
-				SELECT id, riot_id, name, rarity, img FROM card_details
+				SELECT id, riot_id, name, rarity, img, version_sort_order, version_name FROM card_details
 				WHERE name IN (
 					SELECT name FROM cards
 					WHERE id = ${request.params.cardId}
-				)
+				) ORDER BY version_sort_order
 			`
 			const cards = await Promise.all(cardVersions.map(async (v) => {
 				const artists: Artists = await getCardArtists(sql, v.id)
@@ -181,7 +181,7 @@ const server = Bun.serve({
 					versions: cards.map(card => makeCardVersion({
 						index: card.riot_id,
 						id: card.id,
-						name: getNameHtml(card.name),
+						version: card.version_name,
 						rarityName: card.rarity,
 						rarityString: card.rarity,
 						artistLine: getArtistLine(card.artists)

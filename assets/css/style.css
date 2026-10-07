@@ -69,6 +69,12 @@
 	letter-spacing: 3%;
 }
 
+.card-version {
+	font-family: Alegreya;
+	font-weight: 700;
+	font-size: 1.2rem;
+}
+
 .set-code, .card-idx, .collection-count, .stats {
 	font-size: 1.2rem;
 	font-weight: 500;
@@ -118,6 +124,7 @@ a {
 		background-size: 0 1px, 100% 1px, 100%;
 	}
 }
+
 button {
 	font-size: 1em;
 	transition: all 120ms;
@@ -134,13 +141,31 @@ button {
 		background: transparent;
 		&:hover {
 			transition: none;
-			background-color: var(--c-bg,#fff1);
+			background-color: var(--c-bg, #fff1);
 			outline-color: #fff1;
 		}
 		&:active {
 			transition: none;
 			color: var(--c-bg, var(--text-black));
 			background: #fffd;
+		}
+	}
+	&.card-version {
+		color: var(--c-fg);
+		border: none;
+		outline: 1px solid transparent;
+		outline-offset: -1px;
+		border-radius: 0.5em;
+		background: transparent;
+		&:hover {
+			transition: none;
+			background-color: #fff1;
+			outline-color: #fff1;
+		}
+		&:active {
+			transition: none;
+			color: var(--text-black);
+			background-color: #fffd;
 		}
 	}
 	&[data-variant="transparent"] {
@@ -171,7 +196,7 @@ button {
 
 .selected {
 	& td{backdrop-filter: brightness(0.8);}
-	button.card-name&, button&:hover {
+	button.card-version&, button.card-version&:hover {
 		color: var(--text-black);
 		background: var(--gold);
 	}
@@ -601,7 +626,7 @@ li.grid {
 	place-items: baseline start;
 	grid-template-columns: 8.7em 1fr;
 	> * {padding: 0 0.5em;}
-	> .card-name {padding-top: 0.2em;}
+	> .card-version {padding-top: 0.2em;}
 }
 
 .icon {
