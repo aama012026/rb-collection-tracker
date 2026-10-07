@@ -147,6 +147,7 @@ const server = Bun.serve({
 		},
 		'/card-details/:cardId': async (request) => {
 			console.log(`selected card id: ${request.params.cardId}`)
+
 			if(request.params.cardId === '-1') {
 				return Response.json({success: true})
 			}
@@ -160,10 +161,23 @@ const server = Bun.serve({
 					WHERE id = ${request.params.cardId}
 				) ORDER BY version_sort_order
 			`
+
 			const cards = await Promise.all(cardVersions.map(async (v) => {
 				const artists: Artists = await getCardArtists(sql, v.id)
 				return {...v, artists}
 			}))
+
+			cards.forEach((c, i) => {
+				if(c.version_name.toLowerCase() === 'base' && (
+					c.rarity.toLowerCase() === 'common' ||
+					c.rarity.toLowerCase() === 'uncommon'
+				)) {
+					const foil = {...c}
+					foil.version_name = 'Foil'
+					cards.splice(i + 1, 0, foil)
+				}
+			})
+
 			const selectedCard = cards.find(
 				c => c.id === Number(request.params.cardId)
 			)
