@@ -11,7 +11,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 
 	prettyPrint('\n\x1b[34mCREATING STORED PROCEDURES:')
 	await createStoredProcedure('split_string', sql`
-		CREATE PROCEDURE IF NOT EXISTS split_string(
+		CREATE OR REPLACE PROCEDURE split_string(
 			IN input VARCHAR(1000),
 			-- '|' separated list of delimiters, whitespace included.
 			IN delimiter_list VARCHAR(1000),
@@ -50,7 +50,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 	`)
 
 	await createStoredProcedure('get_or_add_rarity', sql`
-		CREATE PROCEDURE IF NOT EXISTS get_or_add_rarity(
+		CREATE OR REPLACE PROCEDURE get_or_add_rarity(
 			IN rarity_name VARCHAR(32),
 			OUT rarity_id TINYINT UNSIGNED
 		) BEGIN
@@ -63,7 +63,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 	`)
 
 	await createStoredProcedure('get_or_add_type', sql`
-		CREATE PROCEDURE IF NOT EXISTS get_or_add_type(
+		CREATE OR REPLACE PROCEDURE get_or_add_type(
 			IN type_name VARCHAR(32),
 			OUT type_id TINYINT UNSIGNED
 		) BEGIN
@@ -76,7 +76,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 	`)
 
 	await createStoredProcedure('set_card_types', sql`
-		CREATE PROCEDURE IF NOT EXISTS set_card_types(
+		CREATE OR REPLACE PROCEDURE set_card_types(
 			IN p_card_id INT UNSIGNED,
 			IN type_text VARCHAR(1000)
 		) BEGIN
@@ -97,7 +97,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 	`)
 
 	await createStoredProcedure('get_or_add_domain', sql`
-		CREATE PROCEDURE IF NOT EXISTS get_or_add_domain(
+		CREATE OR REPLACE PROCEDURE get_or_add_domain(
 			IN domain_name VARCHAR(32),
 			OUT domain_id TINYINT UNSIGNED
 		) BEGIN
@@ -110,7 +110,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 	`)
 
 	await createStoredProcedure('set_card_domains', sql`
-		CREATE PROCEDURE IF NOT EXISTS set_card_domains(
+		CREATE OR REPLACE PROCEDURE set_card_domains(
 			IN p_card_id INT UNSIGNED,
 			IN domain_text VARCHAR(1000)
 		) BEGIN
@@ -131,7 +131,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 	`)
 
 	await createStoredProcedure('get_or_add_artist', sql`
-		CREATE PROCEDURE IF NOT EXISTS get_or_add_artist(
+		CREATE OR REPLACE PROCEDURE get_or_add_artist(
 			IN artist_name VARCHAR(255),
 			OUT artist_id INT UNSIGNED
 		) BEGIN
@@ -144,7 +144,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 	`)
 
 	await createStoredProcedure('set_artist_website', sql`
-		CREATE PROCEDURE IF NOT EXISTS set_artist_website(
+		CREATE OR REPLACE PROCEDURE set_artist_website(
 			IN artist_name VARCHAR(255),
 			IN artist_website VARCHAR(255)
 		) BEGIN
@@ -154,7 +154,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 	`)
 
 	await createStoredProcedure('set_card_artists', sql`
-		CREATE PROCEDURE IF NOT EXISTS set_card_artists(
+		CREATE OR REPLACE PROCEDURE set_card_artists(
 			IN p_card_id INT UNSIGNED,
 			IN artist_text VARCHAR(1000)
 		) BEGIN
@@ -175,7 +175,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 	`)
 
 	await createStoredProcedure('get_or_add_tag', sql`
-		CREATE PROCEDURE IF NOT EXISTS get_or_add_tag(
+		CREATE OR REPLACE PROCEDURE get_or_add_tag(
 			IN tag_name VARCHAR(32),
 			OUT tag_id SMALLINT UNSIGNED
 		) BEGIN
@@ -188,7 +188,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 	`)
 
 	await createStoredProcedure('insert_card_tag', sql`
-		CREATE PROCEDURE IF NOT EXISTS insert_card_tag(
+		CREATE OR REPLACE PROCEDURE insert_card_tag(
 			IN p_card_id INT UNSIGNED,
 			IN tag_name VARCHAR(32),
 			OUT got_inserted BOOLEAN
@@ -209,7 +209,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 	`)
 
 	await createStoredProcedure('get_or_add_set', sql`
-		CREATE PROCEDURE IF NOT EXISTS get_or_add_set(
+		CREATE OR REPLACE PROCEDURE get_or_add_set(
 			IN set_name VARCHAR(255),
 			IN p_code VARCHAR(8),
 			IN p_count_denominator SMALLINT UNSIGNED,
@@ -230,18 +230,61 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 		END;
 	`)
 
-	// WIP
-	// await createStoredProcedure('get_card_version', sql`
-	// 	CREATE PROCEDURE IF NOT EXISTS get_card_version(
-	// 		IN p_riot_id VARCHAR(255),
-	// 		OUT p_version_id TINYINT UNSIGNED
-	// 	) BEGIN
-	//
-	// 	END
-	// `)
+	// TODO: Ultimate Rares.
+	await createStoredProcedure('get_card_version', sql`
+		CREATE OR REPLACE PROCEDURE get_card_version(
+			IN p_riot_id VARCHAR(255),
+			IN p_rarity VARCHAR(32),
+			OUT p_version_id TINYINT UNSIGNED
+		) BEGIN
+			DECLARE v_collector_part VARCHAR(32);
+			DECLARE v_count_denom SMALLINT UNSIGNED;
+			DECLARE v_name VARCHAR(64);
+			DECLARE v_err_msg VARCHAR(255);
+
+			SET v_collector_part = get_collector_part(p_riot_id);
+			SET v_count_denom = extract_count_denom(p_riot_id);
+			SET v_name = CASE
+				WHEN p_rarity = 'promo'
+				THEN 'Promo'
+
+				WHEN v_collector_part REGEXP '^(SP)[[:digit:]]+$'
+				THEN 'Special Alt Art'
+
+				WHEN v_collector_part REGEXP '^[[:alpha:]]*[[:digit:]]+a$'
+				THEN 'Alternate Art'
+
+				WHEN v_collector_part REGEXP '^[[:digit:]]+[*]$'
+				THEN 'Signature Overnumber'
+
+				WHEN v_collector_part REGEXP '^[[:digit:]]+$'
+				AND CAST(v_collector_part AS UNSIGNED) > v_count_denom
+				THEN 'Overnumber'
+
+				WHEN v_collector_part REGEXP '^[[:alpha:]]{0,2}[[:digit:]]+'
+				THEN 'Base'
+			END;
+
+			SELECT id INTO p_version_id FROM card_versions WHERE name = v_name;
+			IF p_version_id IS NULL THEN
+				SET v_err_msg = CONCAT(
+					'get_card_version: no version for ',
+					p_riot_id,
+					' (part=',
+					IFNULL(v_collector_part, 'NULL'),
+					', rarity=',
+					IFNULL(p_rarity, 'NULL'),
+					', version name=',
+					IFNULL(v_name, 'NULL'),
+					')'
+				);
+				SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = v_err_msg;
+			END IF;
+		END;
+	`)
 
 	await createStoredProcedure('add_card', sql`
-		CREATE PROCEDURE IF NOT EXISTS add_card(
+		CREATE OR REPLACE PROCEDURE add_card(
 			IN p_set_name VARCHAR(255),
 			IN p_riot_id VARCHAR(255),
 			IN p_collector_number BIGINT,
@@ -262,6 +305,7 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 		) BEGIN
 			DECLARE v_rarity_id TYPE OF cards.rarity_id;
 			DECLARE v_set_id TYPE OF cards.set_id;
+			DECLARE v_version_id TYPE OF cards.version_id;
 
 			CALL get_or_add_rarity(p_rarity, v_rarity_id);
 			CALL get_or_add_set(
@@ -270,13 +314,15 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 				extract_count_denom(p_riot_id),
 				v_set_id
 			);
+			CALL get_card_version(p_riot_id, p_rarity, v_version_id);
+
 			INSERT INTO cards (
 				riot_id, collector_number, name, rarity_id, set_id,
-				energy, might, power, cost, img, thumbnail, description, flavor_text
+				energy, might, power, cost, img, thumbnail, description, flavor_text, version_id
 			) VALUES (
 				p_riot_id, p_collector_number, card_name, v_rarity_id, v_set_id,
 				p_energy, p_might, p_power, p_cost, p_img, p_thumbnail,
-				p_description, p_flavor_text
+				p_description, p_flavor_text, v_version_id
 			) ON DUPLICATE KEY UPDATE
 				riot_id          = VALUE(riot_id),
 				collector_number = VALUE(collector_number),
@@ -290,7 +336,8 @@ export default async function createStoredProcedures(sql: SQL): Promise<void> {
 				img              = COALESCE(VALUE(img), img),
 				thumbnail        = COALESCE(VALUE(thumbnail), thumbnail),
 				description      = COALESCE(VALUE(description), description),
-				flavor_text      = COALESCE(VALUE(flavor_text), flavor_text)
+				flavor_text      = COALESCE(VALUE(flavor_text), flavor_text),
+				version_id       = VALUE(version_id)
 			;
 			SELECT id INTO p_card_id FROM cards WHERE riot_id = p_riot_id;
 			CALL set_card_types(p_card_id, type_text);

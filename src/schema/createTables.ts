@@ -42,6 +42,14 @@ export default async function createTables(sql: SQL): Promise<void> {
 		);
 	`)
 
+	await createTable('card_versions', sql`
+		CREATE TABLE IF NOT EXISTS card_versions (
+			id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+			sort_order TINYINT UNSIGNED UNIQUE,
+			name VARCHAR(100) UNIQUE NOT NULL
+		);
+	`)
+
 	await createTable('cards', sql`
 		CREATE TABLE IF NOT EXISTS cards (
 			id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
@@ -60,7 +68,9 @@ export default async function createTables(sql: SQL): Promise<void> {
 			img VARCHAR(255),
 			thumbnail VARCHAR(255),
 			description VARCHAR(1000),
-			flavor_text VARCHAR(1000)
+			flavor_text VARCHAR(1000),
+			version_id TINYINT UNSIGNED NOT NULL,
+			FOREIGN KEY(version_id) REFERENCES card_versions(id)
 		);
 	`)
 
@@ -157,14 +167,6 @@ export default async function createTables(sql: SQL): Promise<void> {
 			artist_id INT UNSIGNED NOT NULL,
 			FOREIGN KEY(artist_id) REFERENCES artists(id),
 			PRIMARY KEY(card_id, artist_id)
-		);
-	`)
-
-	await createTable('card_versions', sql`
-		CREATE TABLE IF NOT EXISTS card_versions (
-			id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-			sort_order TINYINT UNSIGNED UNIQUE,
-			name VARCHAR(100) UNIQUE NOT NULL
 		);
 	`)
 }

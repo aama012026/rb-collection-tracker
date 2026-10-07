@@ -168,10 +168,12 @@ export default async function seedTables(sql: SQL): Promise<void> {
 	await seedTable('card_versions', sql`
 		INSERT INTO card_versions (sort_order, name) VALUES
 			(1, 'Base'),
-			(2, 'Alternate Art'),
-			(3, 'Overnumber'),
-			(4, 'Signature Overnumber'),
-			(5, 'Ultimate Rare')
+			(2, 'Promo'),
+			(3, 'Alternate Art'),
+			(4, 'Special Alt Art'),
+			(5, 'Overnumber'),
+			(6, 'Signature Overnumber'),
+			(7, 'Ultimate Rare')
 		ON DUPLICATE KEY UPDATE
 			sort_order = VALUE(sort_order),
 			name = VALUE(name)

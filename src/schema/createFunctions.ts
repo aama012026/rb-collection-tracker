@@ -11,7 +11,7 @@ export default async function createStoredFunctions(sql: SQL): Promise<void> {
 
 	prettyPrint('\n\x1b[34mCREATING STORED FUNCTIONS:')
 	await createStoredFunction('extract_set_code', sql`
-		CREATE FUNCTION IF NOT EXISTS extract_set_code (riot_id VARCHAR(255))
+		CREATE OR REPLACE FUNCTION extract_set_code (riot_id VARCHAR(255))
 		RETURNS VARCHAR(8) DETERMINISTIC
 		RETURN SUBSTRING_INDEX(riot_id, '-', 1);
 	`)
@@ -19,7 +19,7 @@ export default async function createStoredFunctions(sql: SQL): Promise<void> {
 	await createStoredFunction('extract_count_denom', sql`
 		-- We use locate here to filter out ids without a denominator.
 		-- (ex. VEN-R01)
-		CREATE FUNCTION IF NOT EXISTS extract_count_denom (riot_id VARCHAR(255))
+		CREATE OR REPLACE FUNCTION extract_count_denom (riot_id VARCHAR(255))
 		RETURNS SMALLINT UNSIGNED
 		DETERMINISTIC
 		BEGIN
@@ -33,7 +33,7 @@ export default async function createStoredFunctions(sql: SQL): Promise<void> {
 	`)
 
 	await createStoredFunction('get_collector_part', sql`
-		CREATE FUNCTION IF NOT EXISTS get_collector_part (riot_id VARCHAR(255))
+		CREATE OR REPLACE FUNCTION get_collector_part (riot_id VARCHAR(255))
 		RETURNS VARCHAR(32) DETERMINISTIC
 		RETURN SUBSTRING_INDEX(SUBSTRING_INDEX(riot_id, '-', -1), '/', 1);
 	`)
