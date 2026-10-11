@@ -57,7 +57,7 @@
 		%{tbody}
 	</table>
 	<div data-flex-item="grow"></div>
-	<footer class="sticky" data-sticky="bot">
+	<footer data-sticky="bot">
 		<section id="card-details" style="display: none;"
 			data-signals:selected-card="-1"
 			data-effect="if($selectedCard !== -1) {@get('/card-details/' + $selectedCard)}"
@@ -104,7 +104,7 @@
 </template>
 
 <template id="sortbox">
-	<div class="sortbox" draggable="true"
+	<button class="sortbox badge" draggable="true"
 		data-on:dragstart="$_draggedIdx = %{idx:number}"
 		data-on:dragend="@get('/cards')"
 		data-on:dragover="evt.preventDefault()"
@@ -114,11 +114,12 @@
 			$sortOrder[$_draggedIdx] = targetValue;
 			$_draggedIdx = %{idx};
 		"
-	><span class="text-gradient" data-text="$sortOrder[%{idx}]"></span></div>
+	><span data-text="$sortOrder[%{idx}]" data-gradient="text"></span></button>
 </template>
 
 <template id="sticky-sort">
-	<header id="sort-bar" class="sticky" data-sticky="top"
+	<header id="sort-bar" class="gold-on-blue"
+		data-sticky="top" data-gradient="background border"
 		data-signals:sort-order="[
 			'set', 'domain', 'number', 'name', 'energy',
 			'power', 'might', 'type', 'tags'
@@ -285,7 +286,9 @@
 </template>
 
 <template id="filter-bar">
-	<section id="filter-bar" class="flex" data-flex="row">
+	<section id="filter-bar" class="flex gold-on-blue"
+		data-flex="row" data-gradient="background border"
+	>
 		%{setsPopup}
 		%{domainsPopup}
 		<input type="search" name="card-search"
@@ -300,8 +303,10 @@
 
 <template id="popup-menu">
 	<div class="popup-menu" data-signals:_%{name}-popup="false">
-		<button data-on:click="$_%{name}Popup = !$_%{name}Popup"
-		><span class="text-gradient">%{name}</span></button>
+		<button class="popup-control badge"
+			data-on:click="$_%{name}Popup = !$_%{name}Popup"
+			data-attr:data-state=" $_%{name}Popup ? 'active' : 'neutral'"
+		><span data-gradient="text">%{name}</span></button>
 		<div class="popup badge-list"
 			style="display: none;"
 			data-show="$_%{name}Popup"
@@ -314,8 +319,8 @@
 		data-category="%{category}" data-id="%{id: number}"
 		data-states-count="%{statesCount: number}"
 		data-attr:data-state="
-			$filters.%{category}.require.includes('%{id}') ? 'require' : (
-				$filters.%{category}.exclude.includes('%{id}') ? 'exclude' : 'include'
+			$filters.%{category}.require.includes('%{id}') ? 'active' : (
+				$filters.%{category}.exclude.includes('%{id}') ? 'inactive' : 'neutral'
 			)
 		"
 	>%{content}</button>
@@ -325,8 +330,8 @@
 	<button class="badge small-caps-sans" type="button"
 		data-category="%{category}" data-id="%{id:number}"
 		data-attr:data-state="
-			$filters.%{category}.require.includes('%{id}') ? 'require' : (
-				$filters.%{category}.exclude.includes('%{id}') ? 'exclude' : 'include'
+			$filters.%{category}.require.includes('%{id}') ? 'active' : (
+				$filters.%{category}.exclude.includes('%{id}') ? 'inactive' : 'neutral'
 			)
 		"
 	>%{content}</button>
