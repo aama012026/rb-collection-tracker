@@ -92,7 +92,7 @@
 <template id="card-version">
 	<li class="grid" data-flex="col">
 		<span class="card-idx">%{index}</span>
-		<button class="card-version"
+		<button class="card-version" data-variant="glass"
 			data-on:click="$selectedCard = %{id: number}"
 			data-class:selected="$selectedCard === %{id}"
 		>%{version}</button>
@@ -118,8 +118,7 @@
 </template>
 
 <template id="sticky-sort">
-	<header id="sort-bar" class="gold-on-blue"
-		data-sticky="top" data-gradient="background border"
+	<header id="sort-bar" class="gold-on-blue" data-sticky="top"
 		data-signals:sort-order="[
 			'set', 'domain', 'number', 'name', 'energy',
 			'power', 'might', 'type', 'tags'
@@ -145,8 +144,8 @@
 		<td class="set-code">%{setCode}</td>
 		<td class="card-idx">%{cardIndex}</td>
 		<td class="collection-count">%{count: number}</td>
-		<td><button
-			class="card-name" data-on:click="$selectedCard = $selectedCard === %{cardId} ? -1 : %{cardId}"
+		<td><button class="card-name" data-variant="glass"
+			data-on:click="$selectedCard = $selectedCard === %{cardId} ? -1 : %{cardId}"
 		>%{name}</button></td>
 		<td>%{energyHtml}</td>
 		<td>%{powerHtml}</td>
@@ -286,9 +285,7 @@
 </template>
 
 <template id="filter-bar">
-	<section id="filter-bar" class="flex gold-on-blue"
-		data-flex="row" data-gradient="background border"
-	>
+	<section id="filter-bar" class="flex gold-on-blue" data-flex="row">
 		%{setsPopup}
 		%{domainsPopup}
 		<input type="search" name="card-search"
@@ -303,10 +300,12 @@
 
 <template id="popup-menu">
 	<div class="popup-menu" data-signals:_%{name}-popup="false">
-		<button class="popup-control badge"
-			data-on:click="$_%{name}Popup = !$_%{name}Popup"
-			data-attr:data-state=" $_%{name}Popup ? 'active' : 'neutral'"
-		><span data-gradient="text">%{name}</span></button>
+		<div class="badge-frame">
+			<button class="popup-control badge"
+				data-on:click="$_%{name}Popup = !$_%{name}Popup"
+				data-attr:data-state=" $_%{name}Popup ? 'active' : 'neutral'"
+			><span data-gradient="text">%{name}</span></button>
+		</div>
 		<div class="popup badge-list"
 			style="display: none;"
 			data-show="$_%{name}Popup"
