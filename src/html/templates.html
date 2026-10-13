@@ -104,24 +104,43 @@
 </template>
 
 <template id="sortbox">
-	<button class="sortbox badge" draggable="true"
-		data-on:dragstart="$_draggedIdx = %{idx:number}"
+	<div class="sortbox badge-frame" draggable="true"
+		data-on:dragstart="$_draggedIdx = %{idx: number}"
 		data-on:dragend="@get('/cards')"
 		data-on:dragover="evt.preventDefault()"
 		data-on:dragenter="
-			const targetValue = $sortOrder[%{idx}];
-			$sortOrder[%{idx}] = $sortOrder[$_draggedIdx];
-			$sortOrder[$_draggedIdx] = targetValue;
+			const targetValue = {...$sortOrder[%{idx}]};
+			$sortOrder[%{idx}] = {...$sortOrder[$_draggedIdx]};
+			$sortOrder[$_draggedIdx] = {...targetValue};
 			$_draggedIdx = %{idx};
 		"
-	><span data-text="$sortOrder[%{idx}]" data-gradient="text"></span></button>
+	>
+		<div class="badge" data-flex="align-center">
+			<span data-text="$sortOrder[%{idx}].col" data-gradient="text">
+			</span>
+			<button class="symbol" data-gradient="text"
+				data-text="$sortOrder[%{idx}].dir === 'ASC' ? '&#x25BC;' : '&#x25B2;'"
+				data-on:click="
+					if($sortOrder[%{idx}].dir === 'ASC') {
+						$sortOrder[%{idx}].dir = 'DESC'
+					}
+					else {
+						$sortOrder[%{idx}].dir = 'ASC'
+					}
+				"
+			>
+			</button>
+		</div>
+	</div>
 </template>
 
 <template id="sticky-sort">
 	<header id="sort-bar" class="gold-on-blue" data-sticky="top"
-		data-signals:sort-order="[
-			'set', 'domain', 'number', 'name', 'energy',
-			'power', 'might', 'type', 'tags'
+		data-signals:sort-order="[ {col: 'set', dir: 'ASC'},
+			{col: 'domain', dir: 'ASC'}, {col: 'number', dir: 'ASC'},
+			{col: 'name', dir: 'ASC'}, {col: 'energy', dir: 'ASC'},
+			{col: 'power', dir: 'ASC'}, {col: 'might', dir: 'ASC'},
+			{col: 'type', dir: 'ASC'}, {col: 'tags', dir: 'ASC'}
 		]"
 	>${
 			makeSortbox(0) + makeSortbox(1) + makeSortbox(2) + makeSortbox(3) +

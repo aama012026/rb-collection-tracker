@@ -84,14 +84,15 @@ const server = Bun.serve({
 			}
 			const signals = JSON.parse(signalsString) as CardCollectionSignals
 			prettyPrint(signals, 140)
-			const sortOrder = signals.sortOrder.map(s => s
-				.replace('set', 'set_code')
-				.replace('number', 'collector_number')
-				.replace('domain', 'domains')
-				.replace('type', 'types')
+			const sortOrder = signals.sortOrder.map(s => sql`
+				${sql(s.col
+					.replace('set', 'set_code')
+					.replace('number', 'collector_number')
+					.replace('domain', 'domains')
+					.replace('type', 'types')
+				)} ${s.dir === 'ASC' ? sql`ASC` : sql`DESC`}`
 			)
 			// We escape each column name as a quoted identifier.
-			.map(column => sql(column))
 			.reduce((accumulated, column) => sql`${accumulated}, ${column}`)
 			const {filters} = signals
 			const subCond = {outerColumn: 'id', innerColumn: 'card_id'}
