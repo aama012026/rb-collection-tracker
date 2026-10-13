@@ -12908,7 +12908,7 @@ export const mockData = [
 				stats: {energy: 4, might: 4, power: 1},
 				tags: ["Mount Targon"],
 				keywords: [],
-				description: "[Shield 2] (+2 [M] while I'm a defender.)\nYour hold effects for holding here trigger an additional time.\nWhen I hold, [Add] [A] at the start of your next Main Phase. (Abilities that add resources can't be reacted to.)",
+				description: "[Shield 2] (+2 [S] while I'm a defender.)\nYour hold effects for holding here trigger an additional time.\nWhen I hold, [Add] [A] at the start of your next Main Phase. (Abilities that add resources can't be reacted to.)",
 				flavorText: null,
 				art: {
 					fullURL: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data_live/bec7e8f108fac2d9c94db01c85cf143133d13325-744x1039.png?accountingTag=RB",
