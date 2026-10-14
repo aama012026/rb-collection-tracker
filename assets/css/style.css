@@ -65,6 +65,18 @@
 		var(--ogn-orange)
 	);
 
+	--s-brd-s: 1px;
+	--s-brd-r: 2px;
+
+	--s-txt-sort: 1.2rem;
+	--s-pad-sort: calc(var(--s-txt-sort) * 0.3);
+	--s-brd-sort: calc(var(--s-txt-sort) * 0.1);
+	--s-lh-sort: 1.5;
+	--s-hgt-sort: calc(
+		var(--s-txt-sort) * var(--s-lh-sort)
+		+ var(--s-pad-sort) * 2
+	);
+
     /* Global attribute defaults */
     font-family: AlegreyaSans;
     font-size: 1rem;
@@ -159,7 +171,7 @@ button {
 	font-size: 1em;
 	color: var(--c-txt-reg);
 	background: var(--c-bgr-reg);
-	&.badge, &.sortbox, &.popup-control {border: none;}
+	&.badge, &.sortbox, &.popup-control, &.symbol {border: none;}
 	&:hover {
 		cursor: pointer;
 		transition: none;
@@ -180,6 +192,9 @@ button {
 			:active > & {color: transparent;}
 		}
 	}
+	&[data-state="drag-target"] {
+		background: green;
+	}
 	&[data-state="inactive"] {
 		--c-txt-reg: var(--c-txt-off);
 		--c-bgr-reg: var(--c-bgr-off);
@@ -195,6 +210,12 @@ button {
 		width: 1lh;
 		padding: 0;
 		vertical-align: top;
+		border-radius: 0.5em;
+		outline: var(--s-brd-r) solid transparent;
+		--c-bgr-hov: #fff1;
+		&:hover {
+			outline-color: var(--c-brd-reg);
+		}
 	}
 	&[data-variant="glass"] {
 		border: none;
@@ -217,8 +238,8 @@ button {
 		font-weight: 400;
 		color: var(--gold);
 		background: var(--crd-blue);
-		border: 2px solid var(--gold);
-		outline: 1px solid transparent;
+		border: var(--s-brd-r) solid var(--gold);
+		outline: var(--s-brd-s) solid transparent;
 		border-radius: 0.25em;
 		&:hover, &:focus-visible {
 			outline-color: var(--gold);
@@ -337,27 +358,6 @@ div.power-cost {
 			&:active {background: var(--c-bgr-act);}
 		}
 	}
-
-	&:hover {
-		&:not([data-category="card-typing"] ,[data-state]) {
-			background-color: var(--c-txt-reg);
-		}
-		&[data-category="keyword"] {
-			color: var(--c-bgr-reg);
-			& .inline-svg {
-				--c-energy-txt: var(--crd-white);
-				--c-rune-glyph: var(--crd-blue);
-				--c-rune-orb: var(--crd-blue);
-				&[data-symbol="R"] {--c-rune-glyph: var(--fury-hi);}
-				&[data-symbol="G"] {--c-rune-glyph: var(--calm-hi);}
-				&[data-symbol="B"] {--c-rune-glyph: var(--mind-hi);}
-				&[data-symbol="O"] {--c-rune-glyph: var(--body-hi);}
-				&[data-symbol="P"] {--c-rune-glyph: var(--chaos-hi);}
-				&[data-symbol="Y"] {--c-rune-glyph: var(--order-hi);}
-				&[data-symbol='C'] {--c-rune-glyph: var(--c-domain-a-hi);}
-			}
-		}
-	}
 }
 
 [data-gradient~="border"] {border-image: var(--g-bgr) 1;}
@@ -420,7 +420,26 @@ div.power-cost {
 }
 
 [data-category="keyword"] {
-	--c-bgr-reg: var(--kw-gray);
+	& .inline-svg {
+		--c-rune-glyph: var(--c-txt-reg);
+	}
+	&:hover {
+		color: var(--c-bgr-reg);
+		background-color: var(--c-txt-reg);
+		& .inline-svg {
+			--c-energy-txt: var(--crd-white);
+			--c-rune-glyph: var(--crd-blue);
+			--c-rune-orb: var(--crd-blue);
+			&[data-symbol="R"] {--c-rune-glyph: var(--fury-hi);}
+			&[data-symbol="G"] {--c-rune-glyph: var(--calm-hi);}
+			&[data-symbol="B"] {--c-rune-glyph: var(--mind-hi);}
+			&[data-symbol="O"] {--c-rune-glyph: var(--body-hi);}
+			&[data-symbol="P"] {--c-rune-glyph: var(--chaos-hi);}
+			&[data-symbol="Y"] {--c-rune-glyph: var(--order-hi);}
+			&[data-symbol='C'] {--c-rune-glyph: var(--c-domain-a-hi);}
+		}
+	}
+
 	&[data-keyword="Deathknell"],
 	&[data-keyword="Deflect"],
 	&[data-keyword="Ganking"],
@@ -436,7 +455,8 @@ div.power-cost {
 	&[data-keyword="Weaponmaster"],
 	&[data-keyword="Unique"],
 	&[data-keyword="Add"],
-	&[data-keyword="Empower"] {
+	&[data-keyword="Empower"],
+	&[data-keyword="Mighty"]{
 		--c-bgr-reg: var(--kw-gray);
 	}
 	&[data-keyword="Assault"],
@@ -497,6 +517,10 @@ div.power-cost {
 body {
 	display: grid;
 	min-height: 100dvh;
+}
+
+#card-table {
+	position: relative;
 }
 
 table .card-name {
@@ -563,31 +587,6 @@ table .card-name {
 	flex-flow: row wrap;
 	align-items: baseline;
 	gap: 0.2em 0;
-}
-
-.description {
-	display: flex;
-	flex-flow: row wrap;
-	align-items: baseline;
-	column-gap: 0.5em;
-	& > :not(:has(> .badge)) {
-		position: relative;
-		z-index: 1;
-		padding: 0.1em 0.5em;
-		&::before {
-			content: '';
-			position: absolute;
-			inset: 0;
-			z-index: -1;
-			clip-path: polygon(
-				var(--slant, 0.3em) 0, 100% 0,
-				calc(100% - var(--slant, 0.3em)) 100%, 0 100%
-			);
-			background-color: color-mix(
-				in oklab, var(--c-domain-a-lo), #0001 80%
-			);
-		}
-	}
 }
 
 [data-sticky] {
@@ -701,30 +700,24 @@ i.reminder {
 	&::after {content: ' )';}
 }
 
+.ability, .infix-group {
+	padding: 0.1em 0.5em;
+	border-radius: calc(0.5lh + 0.1em);
+	border: 1px solid #fff1;
+	background: #0001;
+	margin: 0.1em 0.25em;
+}
+
 .hoverable {
 	position: relative;
 	display: inline-block;
 	overflow:visible;
 
 	&:not(:has(> .badge)):has(> .reminder) {
-		position: relative;
-		z-index: 1;
-		padding: 0.1em 0.5em;
-
-		&::before {
-			content: '';
-			position: absolute;
-			inset: 0;
-			z-index: -1;
-			clip-path: polygon(
-				var(--slant, 0.3em) 0, 100% 0,
-				calc(100% - var(--slant, 0.3em)) 100%, 0 100%
-			);
-			background: color-mix(in oklab, var(--c-domain-a-hi), #FFF4 80%);
-
-		}
-		&:hover::before {
-			background: color-mix(in oklab, var(--c-domain-a-lo), #0001 80%);
+		background: color-mix(in oklab, var(--c-domain-a-hi) 30%, #fff2);
+		&:hover {
+			cursor: help;
+			background: #0001;
 		}
 	}
 	& > .reminder {
@@ -749,9 +742,28 @@ i.reminder {
 
 /* Table components */
 table {
+	--td-pad: 0.2em;
 	background-color: var(--crd-black);
 	border: none;
 	border-spacing: 0 4px;
+}
+
+thead {
+	box-sizing: border-box;
+	position: sticky;
+	top: calc(var(--s-hgt-sort));
+	z-index: 5;
+	& tr {
+		background-color: var(--crd-black);
+		box-shadow: 0 0.1em #0004;
+	}
+}
+
+th {
+	&:first-child {padding-left: 2vw;}
+	&:last-child {padding-right: 2vw;}
+	padding: 0.2em;
+	border-bottom: 1px solid var(--c-brd-reg);
 }
 
 tbody {
@@ -759,6 +771,7 @@ tbody {
 }
 
 tr {
+	box-sizing: border-box;
 	&[data-domain] {
 		background: linear-gradient( in oklab 105deg,
 			var(--c-domain-a-lo), var(--c-domain-a-hi) 15% 40%,
@@ -896,13 +909,15 @@ article.card {
 
 #sort-bar {
 	box-sizing: border-box;
+	height: var(--s-hgt-sort);
+	line-height: var(--s-lh-sort);
 	min-width: 100%;
 	max-width: 100vw;
 	display: flex;
 	flex-flow: row;
 	align-items: center;
 	justify-content: space-between;
-	border-bottom: 0.1em solid var(--c-brd-reg);
+	border-bottom: var(--s-brd-sort) solid var(--c-brd-reg);
 	background: var(--c-grd);
 }
 
@@ -944,7 +959,7 @@ article.card {
 }
 
 #filter-bar {
-	border-top: 0.1em solid color-mix(in oklab, var(--c-grd), white 25%);
+	border-top: var(--s-brd-sort) solid color-mix(in oklab, var(--c-grd), white 25%);
 	background: var(--c-brd-reg);
 	& > input[type="search"] {
 		box-sizing: border-box;
