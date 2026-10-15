@@ -166,6 +166,14 @@ a {
 	}
 }
 
+[data-variant="glass"] {
+	--c-txt-act: var(--c-domain-a-hi, var(--crd-blue));
+	--c-bdr-reg: #FFF1;
+	--c-bgr-reg: #FFF1;
+	--c-bgr-hov: #FFF1;
+	--c-bgr-act: #FFFD;
+}
+
 button {
 	transition: all 120ms;
 	font-size: 1em;
@@ -192,9 +200,6 @@ button {
 			:active > & {color: transparent;}
 		}
 	}
-	&[data-state="drag-target"] {
-		background: green;
-	}
 	&[data-state="inactive"] {
 		--c-txt-reg: var(--c-txt-off);
 		--c-bgr-reg: var(--c-bgr-off);
@@ -219,19 +224,19 @@ button {
 	}
 	&[data-variant="glass"] {
 		border: none;
-		outline: 1px solid transparent;
-		outline-offset: -1px;
+		outline: var(--s-brd-s) solid transparent;
+		outline-offset: calc(-1 * var(--s-brd-s));
 		border-radius: 0.5em;
-		background: transparent;
+		--c-bgr-reg: transparent;
 		&:hover {
-			transition: none;
-			background: var(--c-bgr-hov);
-			outline-color: #fff1;
+			outline-color: var(--c-bdr-reg);
 		}
-		&:active {
-			transition: none;
-			background: var(--c-bgr-act);
-		}
+	}
+	&[data-variant="transparent"] {
+		--c-bgr-reg: transparent;
+		--c-bgr-hov: transparent;
+		--c-bgr-act: transparent;
+		border: none;
 	}
 	&[data-variant="gold"] {
 		padding: 0.2em 0.5em;
@@ -256,11 +261,7 @@ button {
 	}
 }
 
-&[data-variant="glass"] {
-	--c-txt-act: var(--c-bgr-reg);
-	--c-bdr-reg: #fff1;
-	--c-bgr-reg: #fff1;
-}
+
 
 .selected {
 	& td{backdrop-filter: brightness(0.8);}
@@ -464,6 +465,7 @@ div.power-cost {
 		--c-txt-reg: var(--crd-black);
 	}
 	&[data-keyword="Vision"],
+	&[data-keyword="Stun"],
 	&[data-keyword="Equip"],
 	&[data-keyword="Weaponmaster"],
 	&[data-keyword="Unique"],
@@ -662,8 +664,8 @@ li.grid {
 }
 
 .inline-svg {
-	--c-energy-txt: var(--crd-blue);
-	--c-rune-glyph: var(--crd-blue);
+	--c-energy-txt: var(--crd-black);
+	--c-rune-glyph: var(--crd-black);
 	--c-rune-orb: var(--crd-white);
 	--c-rune-edge: var(--c-brd-reg);
 	--rune-edge-width: 0;
@@ -674,15 +676,18 @@ li.grid {
 	width: 1em;
 	vertical-align: text-top;
 	/*margin-top: 0.1em;*/
-
-	&:is(
-		[data-symbol='R'], [data-symbol='G'],
-		[data-symbol='B'], [data-symbol='O'],
-		[data-symbol='P'], [data-symbol='Y'],
-		[data-symbol='C'], [data-symbol='A']
-	) {
+	&[data-symbol="R"] {--c-rune-glyph: var(--fury-hi);}
+	&[data-symbol="G"] {--c-rune-glyph: var(--calm-hi);}
+	&[data-symbol="B"] {--c-rune-glyph: var(--mind-hi);}
+	&[data-symbol="O"] {--c-rune-glyph: var(--body-hi);}
+	&[data-symbol="P"] {--c-rune-glyph: var(--chaos-hi);}
+	&[data-symbol="Y"] {--c-rune-glyph: var(--order-hi);}
+	&[data-symbol='C'], &[data-symbol='A'] {
 		--c-rune-glyph: var(--c-domain-a-hi);
-		--c-rune-orb: var(--crd-white);
+	}
+	&[data-symbol='R'], &[data-symbol='G'],	&[data-symbol='B'], &[data-symbol='O'],
+	&[data-symbol='P'], &[data-symbol='Y'],	&[data-symbol='C'], &[data-symbol='A'] {
+		[data-keyword] & {--c-rune-glyph: var(--c-txt-reg);}
 		.badge & {
 			transform-origin: center;
 			transform: scale(1.7);
