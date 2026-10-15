@@ -256,6 +256,12 @@ button {
 	}
 }
 
+&[data-variant="glass"] {
+	--c-txt-act: var(--c-bgr-reg);
+	--c-bdr-reg: #fff1;
+	--c-bgr-reg: #fff1;
+}
+
 .selected {
 	& td{backdrop-filter: brightness(0.8);}
 	button.card-version&, button.card-version&:hover {
@@ -371,6 +377,11 @@ div.power-cost {
 }
 
 /* We use starts | ends with attribute selectors to handle dual domains. */
+[data-domain] {
+	--c-domain-a-hi: var(--silver-hi); --c-domain-a-lo: var(--silver-lo);
+	--c-domain-b-hi: var(--silver-hi); --c-domain-b-lo: var(--silver-lo);
+}
+
 [data-domain^="fury"] {
 	--c-domain-a-hi: var(--fury-hi); --c-domain-a-lo: var(--fury-lo);
 }
@@ -414,7 +425,9 @@ div.power-cost {
 	--c-txt-sel: var(--c-domain-a-lo);
 }
 
-[data-category], [data-category="tag"] {--c-bgr-reg: var(--crd-black);}
+[data-category], [data-category="tag"] {
+	--c-bgr-reg: var(--crd-black);
+}
 [data-category="type"], [data-category="card-typing"] {
 	--c-bgr-reg: #0002;
 }
@@ -456,13 +469,17 @@ div.power-cost {
 	&[data-keyword="Unique"],
 	&[data-keyword="Add"],
 	&[data-keyword="Empower"],
-	&[data-keyword="Mighty"]{
+	&[data-keyword="Mighty"],
+	&[data-keyword="Burn"],
+	&[data-keyword="Predict"],
+	&[data-keyword="Buff"] {
 		--c-bgr-reg: var(--kw-gray);
 	}
 	&[data-keyword="Assault"],
 	&[data-keyword="Shield"],
 	&[data-keyword="Tank"],
-	&[data-keyword="Backline"] {
+	&[data-keyword="Backline"],
+	&[data-keyword="Disarm"] {
 		--c-bgr-reg: var(--kw-magenta);
 	}
 	&[data-keyword="Accelerate"],
@@ -473,7 +490,9 @@ div.power-cost {
 	&[data-keyword="Quick-Draw"],
 	&[data-keyword="Repeat"],
 	&[data-keyword="Ambush"],
-	&[data-keyword="Flow"] {
+	&[data-keyword="Flow"],
+	&[data-keyword="Deploy"],
+	&[data-keyword="Show Off"] {
 		--c-bgr-reg: var(--kw-teal);
 	}
 }
