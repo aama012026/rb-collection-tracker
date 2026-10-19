@@ -91,6 +91,7 @@ const server = Bun.serve({
 			collection, {headers: {'Content-Type': 'text/html; charset=utf-8'}}
 		),
 		'/cards': async (request) => {
+			const reqStart = Bun.nanoseconds()
 			const signalsString = new URL(request.url)
 			.searchParams.get('datastar')
 		 	if(!signalsString) {
@@ -162,6 +163,7 @@ const server = Bun.serve({
 				start(c) {Promise.all([c.enqueue(sse)]).finally(() => c.close())},
 				cancel() {}
 			})
+			console.log(`Elapsed ms - cards request: ${(Bun.nanoseconds() - reqStart) / 1000000}`)
 			return new Response(stream, {
 				headers:{"Content-Type": "text/event-stream", "Cache-Control": "no-cache"}
 			})
