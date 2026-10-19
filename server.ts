@@ -36,7 +36,7 @@ const cardDetailsQueryStart = Bun.nanoseconds()
 const cards:CardDetails = await sql`
 	SELECT * FROM card_details ORDER BY riot_id
 `
-console.log(`Elapsed ns - card details query: ${Bun.nanoseconds() - cardDetailsQueryStart}`)
+const cardDetailsQueryDuration = Bun.nanoseconds() - cardDetailsQueryStart
 const symbolLookup:Record<string, string> = {}
 const shorthands:Shorthands = await sql`SELECT * FROM shorthands;`
 shorthands.forEach(s => {
@@ -51,7 +51,9 @@ testParser(cards)
 
 const cardMappingStart = Bun.nanoseconds()
 const cardRows = cards.map(c => getCardTableRowHtml(c, shorthands))
-console.log(`Elapsed ns - card mapping: ${Bun.nanoseconds() - cardMappingStart}`)
+const cardMappingDuration = Bun.nanoseconds() - cardMappingStart
+console.log(`Elapsed ns - card details query: ${cardDetailsQueryDuration}`)
+console.log(`Elapsed ns - card mapping: ${cardMappingDuration}`)
 
 const collection = makeCollectionPage(makeCardTable({
 	sortBar: makeStickySort(),
