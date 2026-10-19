@@ -839,6 +839,8 @@ tbody {
 }
 
 tr {
+	content-visibility: auto;
+	contain-intrinsic-size: auto 2.5lh;
 	box-sizing: border-box;
 	&[data-domain] {
 		background: linear-gradient( in oklab 105deg,
