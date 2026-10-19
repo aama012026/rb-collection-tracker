@@ -151,21 +151,25 @@ const server = Bun.serve({
 				`}
 				ORDER BY ${sortOrder};
 			`
-			console.log(`Elapsed ms - sorted cards query: ${(Bun.nanoseconds() - sortedCardsQueryStart) / 1000000}`)
+		 	const queryDuration = (Bun.nanoseconds() - sortedCardsQueryStart) / 1000000
 			const sseStart = Bun.nanoseconds()
 			const sse = patchElements(
 				makeCardsTableBody(sortedCards.map(c =>
 					getCardTableRowHtml(c, shorthands)).join('\n')
 				).split( '\n')
 			)
-			console.log(`Elapsed ms - mapping cards and patching elements: ${(Bun.nanoseconds() - sseStart) / 1000000}`)
+			const markupDuration = (Bun.nanoseconds() - sseStart) / 1000000
 			const stream = new ReadableStream({
 				start(c) {Promise.all([c.enqueue(sse)]).finally(() => c.close())},
 				cancel() {}
 			})
-			console.log(`Elapsed ms - cards request: ${(Bun.nanoseconds() - reqStart) / 1000000}`)
+			const reqDuration = (Bun.nanoseconds() - reqStart) / 1000000
 			return new Response(stream, {
-				headers:{"Content-Type": "text/event-stream", "Cache-Control": "no-cache"}
+				headers:{
+					"Content-Type": "text/event-stream",
+					"Cache-Control": "no-cache",
+					"Server-Timing": `request: ${reqDuration}, query: ${queryDuration}, markup: ${markupDuration}`
+				}
 			})
 		},
 		'/card-details/:cardId': async (request) => {
