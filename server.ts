@@ -52,8 +52,8 @@ testParser(cards)
 const cardMappingStart = Bun.nanoseconds()
 const cardRows = cards.map(c => getCardTableRowHtml(c, shorthands))
 const cardMappingDuration = Bun.nanoseconds() - cardMappingStart
-console.log(`Elapsed ns - card details query: ${cardDetailsQueryDuration}`)
-console.log(`Elapsed ns - card mapping: ${cardMappingDuration}`)
+console.log(`Elapsed ms - card details query: ${cardDetailsQueryDuration / 1000000}`)
+console.log(`Elapsed ms - card mapping: ${cardMappingDuration / 1000000}`)
 
 const collection = makeCollectionPage(makeCardTable({
 	sortBar: makeStickySort(),
@@ -150,14 +150,14 @@ const server = Bun.serve({
 				`}
 				ORDER BY ${sortOrder};
 			`
-			console.log(`Elapsed ns - sorted cards query: ${Bun.nanoseconds() - sortedCardsQueryStart}`)
+			console.log(`Elapsed ms - sorted cards query: ${(Bun.nanoseconds() - sortedCardsQueryStart) / 1000000}`)
 			const sseStart = Bun.nanoseconds()
 			const sse = patchElements(
 				makeCardsTableBody(sortedCards.map(c =>
 					getCardTableRowHtml(c, shorthands)).join('\n')
 				).split( '\n')
 			)
-			console.log(`Elapsed ns - mapping cards and patching elements: ${Bun.nanoseconds() - sseStart}`)
+			console.log(`Elapsed ms - mapping cards and patching elements: ${(Bun.nanoseconds() - sseStart) / 1000000}`)
 			const stream = new ReadableStream({
 				start(c) {Promise.all([c.enqueue(sse)]).finally(() => c.close())},
 				cancel() {}
