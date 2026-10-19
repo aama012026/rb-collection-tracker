@@ -164,10 +164,12 @@ const server = Bun.serve({
 				cancel() {}
 			})
 			const reqDuration = (Bun.nanoseconds() - reqStart) / 1000000
-			return new Response(stream, {
+			return new Response(Bun.gzipSync(new TextEncoder().encode(sse)), {
 				headers:{
 					"Content-Type": "text/event-stream",
 					"Cache-Control": "no-cache",
+					"Vary": 'Accept-Encoding',
+					"Content-Encoding": "gzip",
 					"Server-Timing": `request;dur=${reqDuration}, query;dur=${queryDuration}, markup;dur=${markupDuration}`
 				}
 			})
