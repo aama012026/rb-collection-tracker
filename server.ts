@@ -31,9 +31,12 @@ const types:Pick<TypesRow, 'name'|'id'>[] = await sql`
 const tags:Pick<TagsRow, 'name'|'id'>[] = await sql`
 	SELECT id, name FROM tags ORDER BY name
 `
+
+const cardDetailsQueryStart = Bun.nanoseconds()
 const cards:CardDetails = await sql`
 	SELECT * FROM card_details ORDER BY riot_id
 `
+console.log(`Elapsed ns - card details query: ${Bun.nanoseconds() - cardDetailsQueryStart}`)
 const symbolLookup:Record<string, string> = {}
 const shorthands:Shorthands = await sql`SELECT * FROM shorthands;`
 shorthands.forEach(s => {
@@ -46,7 +49,9 @@ shorthands.forEach(s => {
 testLexer(cards)
 testParser(cards)
 
+const cardMappingStart = Bun.nanoseconds()
 const cardRows = cards.map(c => getCardTableRowHtml(c, shorthands))
+console.log(`Elapsed ns - card mapping: ${Bun.nanoseconds() - cardMappingStart}`)
 
 const collection = makeCollectionPage(makeCardTable({
 	sortBar: makeStickySort(),
@@ -90,7 +95,7 @@ const server = Bun.serve({
 				return new Response('Missing datastar signals', {status:404})
 			}
 			const signals = JSON.parse(signalsString) as CardCollectionSignals
-			prettyPrint(signals, 140)
+			// prettyPrint(signals, 140)
 			const sortOrder = signals.sortOrder.map(s => sql`
 				${sql(s.col
 					.replace('set', 'set_code')
@@ -133,6 +138,7 @@ const server = Bun.serve({
 					}
 				`)
 			}
+			const sortedCardsQueryStart = Bun.nanoseconds()
 			const sortedCards:CardDetails = await sql`
 				SELECT * FROM card_details
 				${whereSubClauses.length === 0 ? sql`` : sql`
@@ -142,11 +148,14 @@ const server = Bun.serve({
 				`}
 				ORDER BY ${sortOrder};
 			`
+			console.log(`Elapsed ns - sorted cards query: ${Bun.nanoseconds() - sortedCardsQueryStart}`)
+			const sseStart = Bun.nanoseconds()
 			const sse = patchElements(
 				makeCardsTableBody(sortedCards.map(c =>
 					getCardTableRowHtml(c, shorthands)).join('\n')
 				).split( '\n')
 			)
+			console.log(`Elapsed ns - mapping cards and patching elements: ${Bun.nanoseconds() - sseStart}`)
 			const stream = new ReadableStream({
 				start(c) {Promise.all([c.enqueue(sse)]).finally(() => c.close())},
 				cancel() {}
