@@ -838,13 +838,6 @@ tbody {
 	min-height: 100%;
 }
 
-tr, tr * {
-	clip-path: none !important;
-	mask: none !important;
-	backdrop-filter: none !important;
-}
-tr[data-domain] {background: #333 !important;}
-
 tr {
 	content-visibility: auto;
 	contain-intrinsic-size: auto 2.5lh;
