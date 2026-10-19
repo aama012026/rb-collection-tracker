@@ -114,7 +114,8 @@ await generateTableInterfaces(sql,
 	'cards_x_tags',
 	'cards_x_keywords',
 	'cards_x_artists',
-	'card_details'
+	'card_details',
+	'shorthands'
 )
 
 prettyPrint('done...')

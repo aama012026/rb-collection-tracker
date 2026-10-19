@@ -36,6 +36,15 @@ export default async function seedTables(sql: SQL): Promise<void> {
 		RETURNING *;
 	`)
 
+	await seedTable('symbols', sql`
+		INSERT INTO symbols (shorthand, name) VALUES
+			('E', 'exhaust'), ('M', 'might'), ('C', 'power')
+		ON DUPLICATE KEY UPDATE
+			shorthand = VALUE(shorthand),
+			name = VALUE(name)
+		RETURNING *;
+	`)
+
 	await seedTable('domains', sql`
 		INSERT INTO domains (sort_order, name, shorthand, color_hi, color_lo) VALUES
 			(1, 'fury', 'R', ${color('#DF1620', 'number')}, ${color('#8E0308', 'number')}),

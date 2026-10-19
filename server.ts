@@ -1,6 +1,6 @@
 import { SQL } from "bun"
 import { makeCardDetails, makeCardsTableBody, makeCardTable, makeCardVersion, makeCollectionPage, makeCycleButton, makeFilterBar, makePopupMenu, makeStickySort } from "./gen/HTMLtemplates"
-import type { Artists, CardDetails, CardDetailsRow, DomainsRow, SetsRow, TagsRow, TypesRow } from "./gen/dbTableInterfaces"
+import type { Artists, CardDetails, CardDetailsRow, DomainsRow, SetsRow, Shorthands, TagsRow, TypesRow } from "./gen/dbTableInterfaces"
 import { testLexer } from "./src/modules/test"
 import { testParser } from "./testParser"
 import { getArtistLine, getCardTableRowHtml, getNameHtml } from "./src/modules/rbmlHtmlRenderer"
@@ -34,12 +34,19 @@ const tags:Pick<TagsRow, 'name'|'id'>[] = await sql`
 const cards:CardDetails = await sql`
 	SELECT * FROM card_details ORDER BY riot_id
 `
+const symbolLookup:Record<string, string> = {}
+const shorthands:Shorthands = await sql`SELECT * FROM shorthands;`
+shorthands.forEach(s => {
+	if(s.shorthand) {
+		symbolLookup[s.shorthand] = s.name
+	}
+})
 
 // Test
 testLexer(cards)
 testParser(cards)
 
-const cardRows = cards.map(c => getCardTableRowHtml(c))
+const cardRows = cards.map(c => getCardTableRowHtml(c, shorthands))
 
 const collection = makeCollectionPage(makeCardTable({
 	sortBar: makeStickySort(),
@@ -136,7 +143,9 @@ const server = Bun.serve({
 				ORDER BY ${sortOrder};
 			`
 			const sse = patchElements(
-				makeCardsTableBody(sortedCards.map(getCardTableRowHtml).join('\n')).split( '\n')
+				makeCardsTableBody(sortedCards.map(c =>
+					getCardTableRowHtml(c, shorthands)).join('\n')
+				).split( '\n')
 			)
 			const stream = new ReadableStream({
 				start(c) {Promise.all([c.enqueue(sse)]).finally(() => c.close())},

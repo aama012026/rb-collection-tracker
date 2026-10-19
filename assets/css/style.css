@@ -168,10 +168,17 @@ a {
 
 [data-variant="glass"] {
 	--c-txt-act: var(--c-domain-a-hi, var(--crd-blue));
-	--c-bdr-reg: #FFF1;
-	--c-bgr-reg: #FFF1;
-	--c-bgr-hov: #FFF1;
+	--c-brd-reg: #FFF1;
+	--c-bgr-reg: #FFF2;
+	--c-bgr-hov: #0001;
 	--c-bgr-act: #FFFD;
+}
+[data-variant="gold"] {
+	--c-txt-reg: var(--crd-white);
+	--c-txt-acc: var(--gold);
+	--c-brd-reg: var(--gold);
+	--c-bgr-reg: var(--crd-blue);
+	--c-bgr-hov: var(--crd-blue);
 }
 
 button {
@@ -223,13 +230,11 @@ button {
 		}
 	}
 	&[data-variant="glass"] {
-		border: none;
-		outline: var(--s-brd-s) solid transparent;
-		outline-offset: calc(-1 * var(--s-brd-s));
+		border: var(--s-brd-s) solid transparent;
 		border-radius: 0.5em;
 		--c-bgr-reg: transparent;
 		&:hover {
-			outline-color: var(--c-bdr-reg);
+			border-color: var(--c-brd-reg);
 		}
 	}
 	&[data-variant="transparent"] {
@@ -529,6 +534,14 @@ div.power-cost {
 	--c-bgr-reg: #0002;
 }
 
+mark.badge:has(+ i.reminder) {cursor: help;}
+
+/* STYLE OVERRIDES */
+td button.card-name[data-variant="glass"] {
+	--c-bgr-hov: var(--c-domain-a-hi);
+}
+
+
 /* LAYOUT */
 * {
 	margin: 0;
@@ -718,50 +731,81 @@ li.grid {
 	display: none;
 }
 
+.bubble {
+	margin: 0.1em 0.25em;
+	padding: 0.1em 0.5em;
+	border-radius: calc(0.5lh + 0.2em);
+	border: var(--s-brd-s) solid var(--c-brd-reg);
+	background: var(--c-bgr-hov);
+	& .bubble:not(.tooltip) {
+		margin: 0;
+		background: transparent;
+	}
+	&:has(+ .tooltip, > .reminder) {
+		cursor: help;
+		background: var(--c-bgr-reg);
+		&:hover {
+			background: var(--c-bgr-hov);
+		}
+	}
+}
+
+
+.tooltip {
+	color: var(--c-txt-reg);
+	font-size: 1rem;
+	padding: 0.1em 0.3em;
+	background: var(--c-bgr-reg);
+	border-width: 0.1em;
+
+	display: none;
+	position: absolute;
+	right: 100%;
+	bottom: calc(50% - 0.7em);
+	min-width: max-content;
+	max-width: 90em;
+	z-index: 3;
+}
+
 i.reminder {
+	padding: 0.1em 0.5em 0.1em 0.3em;
 	font-style: oblique 12deg;
 	&::before {content: '( ';}
 	&::after {content: ' )';}
 }
 
-.ability, .infix-group {
-	padding: 0.1em 0.5em;
-	border-radius: calc(0.5lh + 0.1em);
-	border: 1px solid #fff1;
-	background: #0001;
-	margin: 0.1em 0.25em;
+.description > abbr,
+.ability > abbr,
+.ability-cost > abbr,
+.infix-group > abbr,
+.comma-list-item > abbr,
+.ability-effect > abbr,
+.lefthand > abbr,
+.righthand > abbr {
+	text-decoration: none;
+	border: none;
+	border-bottom: 2px dotted var(--c-txt-reg);
+	&:hover {border-bottom-style: solid;}
 }
 
-.hoverable {
+abbr:hover:has(+ .tooltip), mark.badge:hover:has(+ .tooltip) {
+	cursor: help;
+}
+
+abbr:hover + .tooltip, mark.badge:hover + .tooltip,
+:is(.ability, .infix-group):hover:not(
+	:has(abbr:hover + .tooltip, mark.badge:hover + .tooltip)
+) > i.reminder {
+	display: block;
+	overflow: auto;
+}
+
+.description .badge {display: inline-flex;}
+
+.ability, .infix-group {
 	position: relative;
 	display: inline-block;
 	overflow:visible;
-
-	&:not(:has(> .badge)):has(> .reminder) {
-		background: color-mix(in oklab, var(--c-domain-a-hi) 30%, #fff2);
-		&:hover {
-			cursor: help;
-			background: #0001;
-		}
-	}
-	& > .reminder {
-		display: none;
-		position: absolute;
-		right: 100%;
-		bottom: calc(50% - 0.7em);
-		padding: 0.1em 0.5em 0.1em 0.3em;
-		clip-path: polygon(
-			var(--slant, 0.3em) 0, 100% 0, calc(100% - var(--slant, 0.3em)) 100%, 0 100%
-		);
-		background-color: var(--crd-blue);
-		z-index: 1;
-		min-width: max-content;
-		max-width: 90em;
-	}
-	&:hover > .reminder {
-		display: block;
-		overflow: auto;
-	}
 }
 
 /* Table components */
@@ -776,7 +820,7 @@ thead {
 	box-sizing: border-box;
 	position: sticky;
 	top: calc(var(--s-hgt-sort));
-	z-index: 5;
+	z-index: 2;
 	& tr {
 		background-color: var(--crd-black);
 		box-shadow: 0 0.1em #0004;

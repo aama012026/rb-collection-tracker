@@ -216,13 +216,13 @@
 </template>
 
 <template id="keyword">
-	<span class="hoverable"><mark class="badge small-caps-sans"
+	<mark class="badge small-caps-sans"
 		data-category="keyword"
 		data-nested="%{isNested:boolean}"
 		data-associated="%{isAssociated:boolean}"
 		data-keyword="%{keyword}"
 	><span class="kw-name">%{keyword}</span>%{param}%{cost}</mark
-	>%{associated}%{reminder}</span>
+	>%{associated}%{reminder}
 </template>
 
 <template id="span">
@@ -237,18 +237,18 @@
 </template>
 
 <template id="ability">
-	<span class="ability hoverable">%{ability}%{reminder}</span>
+	<span class="ability bubble" data-variant="glass">%{ability}%{reminder}</span>
 </template>
 
 <template id="activated-ability">
-	<span class="ability hoverable"
+	<span class="ability bubble" data-variant="glass"
 		><span class="ability-cost">%{cost}</span
 		>: <span class="ability-effect">%{effect}</span
 	>%{reminder}</span>
 </template>
 
 <template id="infix-group">
-	<span class="infix-group hoverable"><span class="lefthand"
+	<span class="infix-group bubble" data-variant="glass"><span class="lefthand"
 	>%{lefthand}</span>%{operator}<span class="righthand"
 	>%{righthand}</span>%{reminder}</span>
 </template>
@@ -258,12 +258,13 @@
 </template>
 
 <template id="might-count">
-	<span class="might-count"
-		><span class="amount">%{sign}%{amount: number}</span
+	<abbr class="might-count" title="%{sign}%{amount: number} Might"
+		><span class="amount">%{sign}%{amount}</span
 		><svg class="inline-svg" data-symbol="M" viewBox="0 0 24 24"
-			width="24" height="24" role="img" aria-label="[M]"
+			width="24" height="24" role="img" aria-label="Might"
 		><use href="#symbol-M"></use></svg
-	></span>
+	></abbr>
+	%{tooltipHtml}
 </template>
 
 <template id="xp-count">
@@ -271,33 +272,44 @@
 </template>
 
 <template id="inline-orb-symbol">
-	<span class="inline-svg" data-symbol="%{shorthand:string|number}">
-		<svg class="rune-orb" viewBox="-1 -1 26 26"
+	<abbr class="inline-svg" title="%{name}"
+		data-symbol="%{shorthand:string|number}"
+	>
+		<svg class="rune-orb" viewBox="0 0 24 24"
 			width="26" height="26"><use href="#rune-orb"></use></svg>
-		<svg class="symbol-glyph" viewBox="-1 -1 26 26"
-			width="26" height="26" role="img" aria-label="[%{shorthand}]"
+		<svg class="symbol-glyph" viewBox="0 0 24 24"
+			width="26" height="26" role="img" aria-label="%{name}"
 		><use href="#symbol-%{shorthand}"></use>
 		</svg>
-	</span>
+	</abbr>
+	%{tooltipHtml}
 </template>
 
 <template id="inline-symbol">
-	<span class="inline-svg" data-symbol="%{shorthand:string|number}">
-		<svg class="symbol-glyph" viewBox="-1 -1 26 26"
-			width="26" height="26" role="img" aria-label="[%{shorthand}]"
+	<abbr class="inline-svg" title="%{name}"
+		data-symbol="%{shorthand:string|number}"
+	>
+		<svg class="symbol-glyph" viewBox="0 0 24 24"
+			width="26" height="26" role="img" aria-label="%{name}"
 		><use href="#symbol-%{shorthand}"></use>
 		</svg>
-	</span>
+	</abbr>
+	%{tooltipHtml}
 </template>
 
 <template id="type-symbol">
-	<span class="type-symbol"><svg viewBox="0 0 24 24" width="24" height="25"
+	<span class="type-symbol"><svg viewBox="0 0 24 24"
+		width="24" height="24" role="img" aria-label="%{type}"
 		><use href="#symbol-%{type}"></use></svg
 	></span>
 </template>
 
 <template id="reminder">
-	<i class="reminder">%{content}</i>
+	<i class="tooltip reminder bubble" data-variant="gold">%{content}</i>
+</template>
+
+<template id="tooltip">
+	<span class="tooltip bubble" data-variant="gold">%{content}</span>
 </template>
 
 <template id="card-description">
@@ -305,11 +317,12 @@
 </template>
 
 <template id="filter-bar">
-	<section id="filter-bar" class="flex gold-on-blue" data-flex="row">
+	<section id="filter-bar" class="flex" data-flex="row">
 		%{setsPopup}
 		%{domainsPopup}
 		<input type="search" name="card-search"
 			placeholder="Search card names or text"
+			data-signals:search-term="''"
 			data-bind:search-term
 			data-on:change="@get('/cards')"
 		>

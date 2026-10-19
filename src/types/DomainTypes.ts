@@ -1,5 +1,4 @@
 export type FilterState = 'include'|'require'|'exclude'
-
 export type CardCollectionSignals = {
 	searchTerm: string,
 	sortOrder: {col:string, dir:'ASC'|'DESC'}[],

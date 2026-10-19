@@ -49,4 +49,11 @@ export default async function createViews(sql:SQL): Promise<void> {
 		ORDER BY cards.id
 		;
 	`)
+
+	await createView('shorthands', sql`
+		CREATE OR REPLACE VIEW shorthands AS
+		SELECT name, shorthand FROM symbols
+		UNION
+		SELECT name, shorthand FROM domains;
+	`)
 }

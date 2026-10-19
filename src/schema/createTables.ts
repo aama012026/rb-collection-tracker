@@ -74,6 +74,14 @@ export default async function createTables(sql: SQL): Promise<void> {
 		);
 	`)
 
+	await createTable('symbols', sql`
+		CREATE TABLE IF NOT EXISTS symbols (
+			id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+			name VARCHAR(50) UNIQUE NOT NULL,
+			shorthand VARCHAR(10) UNIQUE NOT NULL
+		);
+	`)
+
 	await createTable('domains', sql`
 		CREATE TABLE IF NOT EXISTS domains (
 			id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,

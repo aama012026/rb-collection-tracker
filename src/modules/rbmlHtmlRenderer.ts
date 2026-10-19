@@ -1,16 +1,18 @@
-import type { Artists, ArtistsRow, CardDetailsRow } from "../../gen/dbTableInterfaces";
+import type { Artists, ArtistsRow, CardDetailsRow, Shorthands } from "../../gen/dbTableInterfaces";
 import {
 	makeAbility, makeActivatedAbility, makeAnchor,
 	makeCardDescription, makeCardMight,	makeCardTableRow, makeCommaListItem,
 	makeCycleButton, makeEnergyCost, makeInfixGroup, makeInlineOrbSymbol, makeInlineSymbol,
 	makeKeyword, makeMightCount, makePowerCost, makeReminder, makeShortNameAndSubtitle,
-	makeSpan, makeXpCount
+	makeSpan, makeTooltip, makeXpCount
 } from "../../gen/HTMLtemplates";
 import { tokenize } from "./rbmlLexer";
 import { parseCardRulesText, type Node, type Symbol } from "./rbmlParser";
 import stringify from "./stringify";
 
-export function getCardTableRowHtml(c:CardDetailsRow): string {
+export function getCardTableRowHtml(
+	c:CardDetailsRow, symbolLookup:Shorthands
+): string {
 	const tags = c.tags ? JSON.parse(c.tags) as [number, string][] : []
 	const types = c.types ? JSON.parse(c.types) as [number, string][] : []
 	const html = makeCardTableRow({
@@ -22,7 +24,11 @@ export function getCardTableRowHtml(c:CardDetailsRow): string {
 		domain: c.domains ?? 'null',
 		rarity: c.rarity,
 		energyHtml: c.energy ? makeEnergyCost(
-			makeInlineOrbSymbol(c.energy)
+			makeInlineOrbSymbol({
+				shorthand: c.energy,
+				name: `${c.energy} energy`,
+				tooltipHtml: makeTooltip(`${c.energy} energy`)
+			})
 		) : '',
 		powerHtml: c.power ? makePowerCost(getPowerCostHtml(c)) : '',
 		mightHtml: c.might ? makeCardMight(c.might) : '',
@@ -33,7 +39,7 @@ export function getCardTableRowHtml(c:CardDetailsRow): string {
 		tagBadges: tags.length > 0 ? tags.map(([id, name]) => makeCycleButton(
 			{id, content: name, category: 'tag', statesCount: 2}
 		)).join('') : '',
-		description: getDescriptionHtml(c.description ?? '')
+		description: getDescriptionHtml(c.description ?? '', symbolLookup)
 	})
 	if(c.domain_shorthands && c.domain_shorthands.split(', ').length === 1) {
 		const domains = c.domain_shorthands.split(', ')
@@ -91,53 +97,67 @@ function linkArtistPage(artist: ArtistsRow): string {
 }
 
 function getPowerCostHtml(card: CardDetailsRow): string {
-	if(!card.domain_shorthands || !card.power) {
+	if(!card.domains || !card.domain_shorthands || !card.power) {
 		return ''
 	}
-	const domains = card.domain_shorthands.split(', ')
+	const domain_shorthands = card.domain_shorthands.split(', ')
+	const domains = card.domains.split(', ')
 	if(domains.length > 1) {
-		return makeInlineSymbol('C').repeat(card.power)
+		return makeInlineSymbol({
+			shorthand: 'C',
+			name: 'Power',
+			tooltipHtml: makeTooltip(`Power (${card.domains})`)
+		}).repeat(card.power)
 	}
 	else if(domains.length === 1){
-		return makeInlineSymbol(domains.pop()!).repeat(card.power)
+		const domain = domains.pop()!
+		return makeInlineSymbol({
+			shorthand: domain_shorthands.pop()!,
+			name: domain,
+			tooltipHtml: makeTooltip(domain)
+		}).repeat(card.power)
 	}
 	else {
 		return `[${card.domain_shorthands}]`
 	}
 }
 
-export function getDescriptionHtml(description: string): string {
+export function getDescriptionHtml(description: string, symbolLookup:Shorthands): string {
 	const ast = parseCardRulesText(tokenize(description))
 	const htmlFragments = ast.map(branch => {
-		return translateASTnode(branch)
+		return translateASTnode(branch, symbolLookup)
 	})
 	return makeCardDescription(htmlFragments.join(''))
 }
 
-function translateASTnode(node:Node): string {
+function translateASTnode(node:Node, symbolLookup:Shorthands): string {
 	// Leaves
 	if(node.kind === 'text') {
 		return node.value
 	}
 	else if(node.kind === 'might') {
-		return makeMightCount({sign: node.sign ?? '', amount: node.amount})
+		return makeMightCount({
+			sign: node.sign ?? '',
+			amount: node.amount,
+			tooltipHtml: makeTooltip(`${node.sign ?? ''}${node.amount} might`)
+		})
 	}
 	else if(node.kind === 'xp') {
 		return makeXpCount({amount: node.amount, sign: node.sign ?? ''})
 	}
 	else if(node.kind === 'symbol') {
-		return makeInlineOrbSymbol(node.value)
+		return getSymbolHtml(node, symbolLookup)
 	}
 	// Branches
 	else if(node.kind === 'symbol_run') {
-		return getSymbolRunHtml(node.value)
+		return getSymbolRunHtml(node.value, symbolLookup)
 	}
 	else if(node.kind === 'reminder_text') {
-		return getReminderHtml(node.value)
+		return getReminderHtml(node.value, symbolLookup)
 	}
 	else if(node.kind === 'list') {
 		return node.value.map(child => makeCommaListItem(child.reduce(
-			(html, content) => html += translateASTnode(content), ''
+			(html, content) => html += translateASTnode(content, symbolLookup), ''
 		))).join(node.separator)
 	}
 	else if(node.kind === 'keyword') {
@@ -150,35 +170,43 @@ function translateASTnode(node:Node): string {
 			}) : '',
 			cost: node.cost ? makeSpan({
 				classString: 'kw-cost',
-				textContent: getSymbolRunHtml(node.cost)
+				textContent: getSymbolRunHtml(node.cost, symbolLookup)
 			}) : '',
-			associated: node.associated ? translateASTnode(node.associated) : '',
-			reminder: node.reminderText ? getReminderHtml(node.reminderText) : ''
+			associated: node.associated ? translateASTnode(
+				node.associated, symbolLookup
+			) : '',
+			reminder: node.reminderText ? getReminderHtml(
+				node.reminderText, symbolLookup
+			) : ''
 		})
 	}
 	else if(node.kind === 'ability') {
 		if(node.activated) {
 			return makeActivatedAbility({
-				cost: translateASTnodes(node.cost),
-				effect: translateASTnodes(node.effect),
+				cost: translateASTnodes(node.cost, symbolLookup),
+				effect: translateASTnodes(node.effect, symbolLookup),
 				reminder: node.reminderText ? getReminderHtml(
-					node.reminderText
+					node.reminderText, symbolLookup
 				) : ''
 			})
 		}
 		else {
 			return makeAbility({
-				ability: translateASTnodes(node.value),
-				reminder: node.reminderText ? getReminderHtml(node.reminderText) : ''
+				ability: translateASTnodes(node.value, symbolLookup),
+				reminder: node.reminderText ? getReminderHtml(
+					node.reminderText, symbolLookup
+				) : ''
 			})
 		}
 	}
 	else if(node.kind === 'infix_group') {
 		return makeInfixGroup({
-			lefthand: translateASTnodes(node.lefthand),
-			righthand: translateASTnodes(node.righthand),
+			lefthand: translateASTnodes(node.lefthand, symbolLookup),
+			righthand: translateASTnodes(node.righthand, symbolLookup),
 			operator: node.operator,
-			reminder: node.reminderText ? getReminderHtml(node.reminderText) : ''
+			reminder: node.reminderText ? getReminderHtml(
+				node.reminderText, symbolLookup
+			) : ''
 		})
 	}
 	else if(node.kind === 'group') {
@@ -189,20 +217,38 @@ function translateASTnode(node:Node): string {
 	}
 }
 
-function getReminderHtml(reminder:Node[]) {
-	return makeReminder(
-		reminder.reduce((html, child) => html += translateASTnode(child), '')
-	)
+function getReminderHtml(reminder:Node[], symbolLookup:Shorthands) {
+	return makeReminder(reminder.reduce(
+		(html, child) => html += translateASTnode(child, symbolLookup), ''
+	))
 }
 
-function getSymbolRunHtml(symbols:Symbol[]) {
+function getSymbolHtml(symbol:Symbol, symbolLookup:Shorthands) {
+	let name = `${symbol.value}`
+	if(typeof symbol.value === 'number') {
+		name = `${symbol.value} energy`
+	}
+	else {
+		name = symbolLookup.find(
+			({shorthand}) => shorthand === symbol.value
+		)?.name ?? `${symbol.value}`
+	}
+
+	return makeInlineOrbSymbol({
+		shorthand: symbol.value,
+		name,
+		tooltipHtml: makeTooltip(name)
+	})
+}
+
+function getSymbolRunHtml(symbols:Symbol[], symbolLookup:Shorthands) {
 	return symbols.reduce(
-		(html, child) => html += makeInlineOrbSymbol(child.value), ''
+		(html, child) => html += getSymbolHtml(child, symbolLookup), ''
 	)
 }
 
-function translateASTnodes(nodes:Node[]): string {
+function translateASTnodes(nodes:Node[], symbolLookup:Shorthands): string {
 	return nodes.reduce(
-		(html, node) => html += translateASTnode(node), ''
+		(html, node) => html += translateASTnode(node, symbolLookup), ''
 	)
 }
