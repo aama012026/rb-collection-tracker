@@ -168,7 +168,7 @@ const server = Bun.serve({
 				headers:{
 					"Content-Type": "text/event-stream",
 					"Cache-Control": "no-cache",
-					"Server-Timing": `request: ${reqDuration}, query: ${queryDuration}, markup: ${markupDuration}`
+					"Server-Timing": `request;dur=${reqDuration}, query;dur=${queryDuration}, markup;dur=${markupDuration}`
 				}
 			})
 		},
