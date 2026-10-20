@@ -77,6 +77,15 @@
 		+ var(--s-pad-sort) * 2
 	);
 
+	--td-pad: 0.2rem;
+	--s-txt-col-set: 1.2rem;
+	--s-txt-col-num: 1.2rem;
+	--s-txt-col-amt: 1.2rem;
+	--s-txt-subtitle: 1rem;
+	/*--s-energy-cost: 1.7rem;*/
+	/*--s-power-cost: 1.7lh;*/
+	/*--s-card-might: 1lh;*/
+
     /* Global attribute defaults */
     font-family: AlegreyaSans;
     font-size: 1rem;
@@ -810,11 +819,21 @@ abbr:hover + .tooltip, mark.badge:hover + .tooltip,
 
 /* Table components */
 table {
-	--td-pad: 0.2em;
 	background-color: var(--crd-black);
 	border: none;
 	border-spacing: 0 4px;
+	table-layout: fixed;
 }
+
+col#col-set {width: calc(2vw + 2 * var(--s-txt-col-set) + var(--td-pad) * 2);}
+col#col-num {width: calc(2 * var(--s-txt-col-num) + var(--td-pad) * 2);}
+col#col-amt {width: calc(1 * var(--s-txt-col-amt) + var(--td-pad) * 2)}
+col#col-nam {width: calc(17 * var(--s-txt-subtitle));}
+col#col-enr {width: calc(1 * var(--s-energy-cost) + var(--td-pad) * 2);}
+col#col-pow {width: calc(1 * var(--s-power-cost) + var(--td-pad) * 2);}
+col#col-mgt {width: calc(2 * var(--s-card-might) + var(--td-pad) * 2)}
+/*col#col-tgs {width: 80%;}*/
+col#col-txt {width: calc(2vw + 40rem + var(--td-pad) * 2);}
 
 thead {
 	box-sizing: border-box;
@@ -830,7 +849,7 @@ thead {
 th {
 	&:first-child {padding-left: 2vw;}
 	&:last-child {padding-right: 2vw;}
-	padding: 0.2em;
+	padding: var(--td-pad);
 	border-bottom: 1px solid var(--c-brd-reg);
 }
 
@@ -871,8 +890,7 @@ td {
 		) bottom / 100% 1px no-repeat
 	;
 
-	padding: 0.2em;
-	max-width: 40rem;
+	padding: var(--td-pad);
 }
 
 /* Card Details section */
