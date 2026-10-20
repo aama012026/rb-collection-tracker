@@ -18,7 +18,7 @@ export function getCardTableRowHtml(
 	const html = makeCardTableRow({
 		cardId: c.id,
 		cardIndex: c.riot_id.split('-')[1]!.split('/')[0]!,
-		count: Math.floor(Math.random() * 5),
+		count: 0,
 		setCode: c.set_code,
 		name: getNameHtml(c.name),
 		domain: c.domains ?? 'null',
