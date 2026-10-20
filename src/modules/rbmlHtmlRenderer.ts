@@ -2,9 +2,9 @@ import type { Artists, ArtistsRow, CardDetailsRow, Shorthands } from "../../gen/
 import {
 	makeAbility, makeActivatedAbility, makeAnchor,
 	makeCardDescription, makeCardMight,	makeCardTableRow, makeCommaListItem,
-	makeCycleButton, makeEnergyCost, makeInfixGroup, makeInlineOrbSymbol, makeInlineSymbol,
-	makeKeyword, makeMightCount, makePowerCost, makeReminder, makeShortNameAndSubtitle,
-	makeSpan, makeTooltip, makeXpCount
+	makeCycleButton, makeEnergyCost, makeInfixGroup, makeInlineOrbSymbol,
+	makeInlineSymbol, makeKeyword, makeMightCount, makePowerCost, makeReminder,
+	makeShortNameAndSubtitle, makeSpan, makeTooltip, makeXpCount
 } from "../../gen/HTMLtemplates";
 import { tokenize } from "./rbmlLexer";
 import { parseCardRulesText, type Node, type Symbol } from "./rbmlParser";

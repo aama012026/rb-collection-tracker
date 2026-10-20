@@ -152,11 +152,14 @@
 </template>
 
 <template id="cards-table-body">
-	<tbody id="cards-table-body">%{rows}</tbody>
+	<tbody id="cards-table-body" data-ignore data-on:click="evt.target.tagName === 'BUTTON'
+		&& evt.target.classList.contains('card-name')
+		&& ($selectedCard = $selectedCard === evt.dataset.id ? -1 : evt.dataset.id)
+		">%{rows}</tbody>
 </template>
 
 <template id="card-table-row">
-	<tr id="card-%{cardId: number}"
+	<tr id="%{cardId: number}"
 		data-domain="%{domain}"
 		data-rarity="%{rarity}"
 		data-class:selected="$selectedCard === %{cardId}"
@@ -165,7 +168,6 @@
 		<td class="card-idx">%{cardIndex}</td>
 		<td class="collection-count">%{count: number}</td>
 		<td><button class="card-name" data-variant="glass"
-			data-on:click="$selectedCard = $selectedCard === %{cardId} ? -1 : %{cardId}"
 		>%{name}</button></td>
 		<td>%{energyHtml}</td>
 		<td>%{powerHtml}</td>
