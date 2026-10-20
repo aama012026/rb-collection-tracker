@@ -184,6 +184,7 @@
 	<tr id="card-%{cardId: number}"
 		data-domain="%{domain}"
 		data-rarity="%{rarity}"
+		data-ignore-morph
 	>
 		<td class="set-code">%{setCode}</td>
 		<td class="card-idx">%{cardIndex}</td>
@@ -372,7 +373,6 @@
 
 <template id="cycle-button">
 	<button class="badge small-caps-sans" type="button"
-		data-ignore-morph
 		data-category="%{category}" data-id="%{id: number}"
 		data-states-count="%{statesCount: number}"
 		data-state="neutral"
