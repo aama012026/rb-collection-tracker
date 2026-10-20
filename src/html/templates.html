@@ -18,22 +18,29 @@
 			}
 		}"
 		data-on:click="
-			const button = evt.target.closest('button[data-id]');
+			const button = evt.target.closest('button.badge[data-id]');
 			if (!button) {
 				return;
 			}
 			const id = button.dataset.id, category = button.dataset.category;
+			const buttons = document.querySelectorAll(&grave;button.badge[data-category='&dollar;{category}'][data-id='&dollar;{id}']&grave;);
 			if ($filters[category].require.includes(id)) {
 				$filters[category].require = $filters[category].require.filter(v => v !== id);
 				if(button.dataset.statesCount === '3') {
 					$filters[category].exclude = [...$filters[category].exclude, id];
+					buttons.forEach(b => b.attributes['data-state'].value = 'inactive');
+				}
+				else {
+					buttons.forEach(b => b.attributes['data-state'].value = 'neutral');
 				}
 			}
 			else if($filters[category].exclude.includes(id)) {
 				$filters[category].exclude = $filters[category].exclude.filter(v => v !== id);
+				buttons.forEach(b => b.attributes['data-state'].value = 'neutral');
 			}
 			else {
 				$filters[category].require = [...$filters[category].require, id];
+				buttons.forEach(b => b.attributes['data-state'].value = 'active');
 			}
 			@get('/cards')
 		"
@@ -152,22 +159,37 @@
 </template>
 
 <template id="cards-table-body">
-	<tbody id="cards-table-body" data-ignore data-on:click="evt.target.tagName === 'BUTTON'
-		&& evt.target.classList.contains('card-name')
-		&& ($selectedCard = $selectedCard === evt.dataset.id ? -1 : evt.dataset.id)
-		">%{rows}</tbody>
+	<tbody id="cards-table-body" data-on:click="
+		const cardButton = evt.target.closest('button.card-name');
+		if(cardButton) {
+			const id = Number(cardButton.dataset.cardId);
+			const cardRow = cardButton.closest('tr#card-' + id);
+			if($selectedCard === id) {
+				$selectedCard = -1;
+				cardRow.classList.remove('selected');
+			}
+			else {
+				if($selectedCard !== -1) {
+					const selectedCardRow = document.querySelector('tr#card-'+$selectedCard);
+					selectedCardRow.classList.remove('selected');
+				}
+				cardRow.classList.add('selected');
+				$selectedCard = id;
+			}
+		}
+	">%{rows}</tbody>
 </template>
 
 <template id="card-table-row">
-	<tr id="%{cardId: number}"
+	<tr id="card-%{cardId: number}"
 		data-domain="%{domain}"
 		data-rarity="%{rarity}"
-		data-class:selected="$selectedCard === %{cardId}"
 	>
 		<td class="set-code">%{setCode}</td>
 		<td class="card-idx">%{cardIndex}</td>
 		<td class="collection-count">%{count: number}</td>
-		<td><button class="card-name" data-variant="glass"
+		<td><button class="card-name"
+			data-variant="glass" data-card-id="%{cardId}"
 		>%{name}</button></td>
 		<td>%{energyHtml}</td>
 		<td>%{powerHtml}</td>
@@ -350,13 +372,10 @@
 
 <template id="cycle-button">
 	<button class="badge small-caps-sans" type="button"
+		data-ignore-morph
 		data-category="%{category}" data-id="%{id: number}"
 		data-states-count="%{statesCount: number}"
-		data-attr:data-state="
-			$filters.%{category}.require.includes('%{id}') ? 'active' : (
-				$filters.%{category}.exclude.includes('%{id}') ? 'inactive' : 'neutral'
-			)
-		"
+		data-state="neutral"
 	>%{content}</button>
 </template>
 
