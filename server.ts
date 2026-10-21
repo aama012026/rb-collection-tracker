@@ -4,9 +4,10 @@ import type { Artists, CardDetails, CardDetailsRow, DomainsRow, SetsRow, TagsRow
 import { testLexer } from "./src/modules/test"
 import { testParser } from "./testParser"
 import { getArtistLine, getCardTableRowHtml, getNameHtml } from "./src/modules/rbmlHtmlRenderer"
-import { patchElements} from "./src/modules/sse"
+import { once, patchElements, sseResponse} from "./src/modules/sse"
 import { queryCardArtists, queryShorthands} from "./src/modules/query"
-import routeCards from "./src/modules/routeCards"
+import routeCards from "./src/modules/routes/routeCards"
+import routeCardDetails from "./src/modules/routes/routeCardDetails"
 
 const sql = new SQL({
 	adapter:'mariadb',
@@ -84,75 +85,7 @@ const server = Bun.serve({
 			collection, {headers: {'Content-Type': 'text/html; charset=utf-8'}}
 		),
 		'/cards': async (req) => routeCards(req, sql),
-		'/card-details/:cardId': async (request) => {
-			console.log(`selected card id: ${request.params.cardId}`)
-
-			if(request.params.cardId === '-1') {
-				return Response.json({success: true})
-			}
-
-			const cardVersions: Pick<
-				CardDetailsRow, 'id'|'riot_id'|'name'|'rarity'|'img'|'version_sort_order'|'version_name'
-			>[] = await sql`
-				SELECT id, riot_id, name, rarity, img, version_sort_order, version_name FROM card_details
-				WHERE name IN (
-					SELECT name FROM cards
-					WHERE id = ${request.params.cardId}
-				) ORDER BY version_sort_order
-			`
-
-			const cards = await Promise.all(cardVersions.map(async (v) => {
-				const artists = await queryCardArtists(sql, v.id)
-				return {...v, artists}
-			}))
-
-			cards.forEach((c, i) => {
-				if(c.version_name.toLowerCase() === 'base' && (
-					c.rarity.toLowerCase() === 'common' ||
-					c.rarity.toLowerCase() === 'uncommon'
-				)) {
-					const foil = {...c}
-					foil.version_name = 'Foil'
-					cards.splice(i + 1, 0, foil)
-				}
-			})
-
-			const selectedCard = cards.find(
-				c => c.id === Number(request.params.cardId)
-			)
-
-			if(!(selectedCard)) {
-				return Response.json({message: "Not found"}, {status: 404})
-			}
-
-			const sse = patchElements(
-				makeCardDetails({
-					nameHtml: getNameHtml(selectedCard.name),
-					url: selectedCard.img ?? '',
-					altText: `${selectedCard.riot_id} ${selectedCard.name}`,
-					artistsLine: getArtistLine(selectedCard.artists),
-					versions: cards.map(card => makeCardVersion({
-						index: card.riot_id,
-						id: card.id,
-						version: card.version_name,
-						rarityName: card.rarity,
-						rarityString: card.rarity,
-						artistLine: getArtistLine(card.artists)
-					})).join('')
-				}),
-				{selector:'#card-details', mode: 'inner'}
-			)
-			const stream = new ReadableStream({
-				start(c) {Promise.all([c.enqueue(sse)]).finally(() => c.close())},
-				cancel() {}
-			})
-			return new Response(stream, {
-				headers:{
-					"Content-Type": "text/event-stream",
-					"Cache-Control": "no-cache"
-				}
-			})
-		},
+		'/card-details/:cardId': async (req) => routeCardDetails(req, sql),
 		'/fonts': (request) => {
 			const fontName = new URL(request.url).pathname
 			try {

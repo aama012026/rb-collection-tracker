@@ -1,10 +1,10 @@
 import type { SQL } from "bun"
-import type { CardCollectionSignals } from "../types/DomainTypes"
-import type { Encoding } from "./pickEncoding"
-import { patchElements, sseResponse } from "../modules/sse"
-import { queryCards, queryShorthands} from "../modules/query"
-import { makeCardsTableBody } from "../../gen/HTMLtemplates"
-import { getCardTableRowHtml } from "./rbmlHtmlRenderer"
+import type { CardCollectionSignals } from "../../types/DomainTypes"
+import type { Encoding } from "../pickEncoding"
+import { patchElements, sseResponse } from "../sse"
+import { queryCards, queryShorthands} from "../query"
+import { makeCardsTableBody } from "../../../gen/HTMLtemplates"
+import { getCardTableRowHtml } from "../rbmlHtmlRenderer"
 
 const CHUNK_SIZE = 100
 const PREFERRED_ENCODING: Encoding[] = ['br','gzip']
