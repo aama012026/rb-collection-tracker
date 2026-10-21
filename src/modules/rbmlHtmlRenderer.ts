@@ -63,9 +63,23 @@ export function getNameHtml(cardName: string): string {
 	}
 }
 
-export function getArtistLine(artists: Artists): string {
+export function getArtistLine(artists: Pick<ArtistsRow, 'name'|'website'>[]): string {
 	const artistsHtml = artists.map(linkArtistPage).join(', ')
 	return `${artists.length > 1 ? 'Artists' : 'Artist'}: ${artistsHtml}`
+}
+
+function linkArtistPage(artist: Pick<ArtistsRow, 'name'|'website'>): string {
+	if(!artist.website) {
+		return makeSpan({classString: 'artist', textContent: artist.name})
+	}
+	else {
+		return makeAnchor({
+			href: artist.website,
+			target:'_blank',
+			attributes:'class="artist"',
+			textContent:artist.name
+		})
+	}
 }
 
 function getTypeSymbol(types:[number, string][]): string {
@@ -80,20 +94,6 @@ function getTypeSymbol(types:[number, string][]): string {
 		return 'champion'
 	}
 	return typeNames[0] === 'signature' ? typeNames[1]! : typeNames[0]!
-}
-
-function linkArtistPage(artist: ArtistsRow): string {
-	if(!artist.website) {
-		return makeSpan({classString: 'artist', textContent: artist.name})
-	}
-	else {
-		return makeAnchor({
-			href: artist.website,
-			target:'_blank',
-			attributes:'class="artist"',
-			textContent:artist.name
-		})
-	}
 }
 
 function getPowerCostHtml(card: CardDetailsRow): string {

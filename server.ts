@@ -1,13 +1,12 @@
 import { SQL } from "bun"
 import { makeCardDetails, makeCardsTableBody, makeCardTable, makeCardVersion, makeCollectionPage, makeCycleButton, makeFilterBar, makePopupMenu, makeStickySort } from "./gen/HTMLtemplates"
-import type { Artists, CardDetails, CardDetailsRow, DomainsRow, SetsRow, Shorthands, TagsRow, TypesRow } from "./gen/dbTableInterfaces"
+import type { Artists, CardDetails, CardDetailsRow, DomainsRow, SetsRow, TagsRow, TypesRow } from "./gen/dbTableInterfaces"
 import { testLexer } from "./src/modules/test"
 import { testParser } from "./testParser"
 import { getArtistLine, getCardTableRowHtml, getNameHtml } from "./src/modules/rbmlHtmlRenderer"
-import { prettyPrint } from "./src/modules/stringify"
-import { patchElements } from "./src/modules/sse"
-import type { CardCollectionSignals } from "./src/types/DomainTypes"
-import { getCardArtists, whereIn } from "./src/modules/query"
+import { patchElements} from "./src/modules/sse"
+import { queryCardArtists, queryShorthands} from "./src/modules/query"
+import routeCards from "./src/modules/routeCards"
 
 const sql = new SQL({
 	adapter:'mariadb',
@@ -37,13 +36,7 @@ const cards:CardDetails = await sql`
 	SELECT * FROM card_details ORDER BY riot_id
 `
 const cardDetailsQueryDuration = Bun.nanoseconds() - cardDetailsQueryStart
-const symbolLookup:Record<string, string> = {}
-const shorthands:Shorthands = await sql`SELECT * FROM shorthands;`
-shorthands.forEach(s => {
-	if(s.shorthand) {
-		symbolLookup[s.shorthand] = s.name
-	}
-})
+const shorthands = await queryShorthands(sql)
 
 // Test
 testLexer(cards)
@@ -90,90 +83,7 @@ const server = Bun.serve({
 		'/': new Response(
 			collection, {headers: {'Content-Type': 'text/html; charset=utf-8'}}
 		),
-		'/cards': async (request) => {
-			const reqStart = Bun.nanoseconds()
-			const signalsString = new URL(request.url)
-			.searchParams.get('datastar')
-		 	if(!signalsString) {
-				return new Response('Missing datastar signals', {status:404})
-			}
-			const signals = JSON.parse(signalsString) as CardCollectionSignals
-			// prettyPrint(signals, 140)
-			const sortOrder = signals.sortOrder.map(s => sql`
-				${sql(s.col
-					.replace('set', 'set_code')
-					.replace('number', 'collector_number')
-					.replace('domain', 'domains')
-					.replace('type', 'types')
-				)} ${s.dir === 'ASC' ? sql`ASC` : sql`DESC`}`
-			)
-			// We escape each column name as a quoted identifier.
-			.reduce((accumulated, column) => sql`${accumulated}, ${column}`)
-			const {filters} = signals
-			const subCond = {outerColumn: 'id', innerColumn: 'card_id'}
-			const filtersClause = whereIn(sql,
-				{
-					column: 'set_id',
-					filterList: filters.set
-				}, {
-					column: 'domain_id',
-					filterList: filters.domain,
-					subClause: {...subCond, innerTable:'cards_x_domains'}
-				}, {
-					column: 'type_id',
-					filterList: filters.type,
-					subClause: {...subCond, innerTable:'cards_x_types'}
-				}, {
-					column: 'tag_id',
-					filterList: filters.tag,
-					subClause: {...subCond, innerTable:'cards_x_tags'}
-				}
-			)
-
-			const whereSubClauses = []
-			if(!!filtersClause) {
-				whereSubClauses.push(filtersClause)
-			}
-			if(!!signals.searchTerm) {
-				whereSubClauses.push(sql`
-					CONCAT_WS(' ', riot_id, name, description) LIKE ${
-						'%' + signals.searchTerm + '%'
-					}
-				`)
-			}
-			const sortedCardsQueryStart = Bun.nanoseconds()
-			const sortedCards:CardDetails = await sql`
-				SELECT * FROM card_details
-				${whereSubClauses.length === 0 ? sql`` : sql`
-					WHERE ${whereSubClauses.reduce((accumulator, clause) =>
-						sql`${accumulator} AND ${clause}`
-					)}
-				`}
-				ORDER BY ${sortOrder};
-			`
-		 	const queryDuration = (Bun.nanoseconds() - sortedCardsQueryStart) / 1000000
-			const sseStart = Bun.nanoseconds()
-			const sse = patchElements(
-				makeCardsTableBody(sortedCards.map(c =>
-					getCardTableRowHtml(c, shorthands)).join('\n')
-				).split( '\n')
-			)
-			const markupDuration = (Bun.nanoseconds() - sseStart) / 1000000
-			const stream = new ReadableStream({
-				start(c) {Promise.all([c.enqueue(sse)]).finally(() => c.close())},
-				cancel() {}
-			})
-			const reqDuration = (Bun.nanoseconds() - reqStart) / 1000000
-			return new Response(Bun.gzipSync(new TextEncoder().encode(sse)), {
-				headers:{
-					"Content-Type": "text/event-stream",
-					"Cache-Control": "no-cache",
-					"Vary": 'Accept-Encoding',
-					"Content-Encoding": "gzip",
-					"Server-Timing": `request;dur=${reqDuration}, query;dur=${queryDuration}, markup;dur=${markupDuration}`
-				}
-			})
-		},
+		'/cards': async (req) => routeCards(req, sql),
 		'/card-details/:cardId': async (request) => {
 			console.log(`selected card id: ${request.params.cardId}`)
 
@@ -192,7 +102,7 @@ const server = Bun.serve({
 			`
 
 			const cards = await Promise.all(cardVersions.map(async (v) => {
-				const artists: Artists = await getCardArtists(sql, v.id)
+				const artists = await queryCardArtists(sql, v.id)
 				return {...v, artists}
 			}))
 
@@ -229,7 +139,7 @@ const server = Bun.serve({
 						rarityString: card.rarity,
 						artistLine: getArtistLine(card.artists)
 					})).join('')
-				}).split('\n'),
+				}),
 				{selector:'#card-details', mode: 'inner'}
 			)
 			const stream = new ReadableStream({
