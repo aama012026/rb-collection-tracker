@@ -1073,7 +1073,8 @@ article.card {
 			box-sizing: border-box;
 			position: absolute;
 			bottom: 100%;
-			width: 100%;
+			width: 50vw;
+			max-width: max-content;
 			background: color-mix(in oklab, var(--crd-blue) 90%, transparent);
 			padding: 1em;
 			border: 1px solid var(--gold);
@@ -1081,6 +1082,8 @@ article.card {
 			border-top-right-radius: 0.3em;
 			backdrop-filter: blur(3px);
 		}
+		&:is(:nth-of-type(1), :nth-of-type(2)) > .popup {left: 0;}
+		&:is(:nth-of-type(3), :nth-of-type(4)) > .popup {right: 0;}
 		& > .badge-frame {
 			background: linear-gradient(in oklab 90deg,
 				var(--c-shd) 50%,
