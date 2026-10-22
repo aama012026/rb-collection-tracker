@@ -352,7 +352,9 @@
 </template>
 
 <template id="filter-bar">
-	<section id="filter-bar" class="flex" data-flex="row">
+	<section id="filter-bar" class="flex" data-flex="row"
+		data-signals:_open-popup="'none'"
+	>
 		%{setsPopup}
 		%{domainsPopup}
 		<input type="search" name="card-search"
@@ -367,16 +369,16 @@
 </template>
 
 <template id="popup-menu">
-	<div class="popup-menu" data-signals:_%{name}-popup="false">
+	<div class="popup-menu">
 		<div class="badge-frame">
 			<button class="popup-control badge"
-				data-on:click="$_%{name}Popup = !$_%{name}Popup"
-				data-attr:data-state=" $_%{name}Popup ? 'active' : 'neutral'"
+				data-on:click="$_openPopup = $_openPopup === '%{name}' ? 'none' : '%{name}'"
+				data-attr:data-state="$_openPopup === '%{name}' ? 'active' : 'neutral'"
 			><span data-gradient="text">%{name}</span></button>
 		</div>
 		<div class="popup badge-list"
 			style="display: none;"
-			data-show="$_%{name}Popup"
+			data-show="$_openPopup === '%{name}'"
 		>%{content:string}</div>
 	</div>
 </template>
