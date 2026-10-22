@@ -6,10 +6,21 @@ To install dependencies:
 bun install
 ```
 
-To run:
+To build generated content:
+*(Keep in mind that you need to also set up the DB)*
 
 ```bash
-bun run index.ts
+bun run build
 ```
 
-This project was created using `bun init` in bun v1.3.14. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.
+To (re-)generate html-templates and run:
+
+```bash
+bun run dev
+```
+
+To run server without regenerating:
+
+```bash
+bun server.ts
+```
