@@ -66,9 +66,20 @@
 	<div data-flex-item="grow"></div>
 	<footer data-sticky="bot">
 		<section id="card-details" style="display: none;"
-			data-signals:selected-card="-1"
-			data-effect="if($selectedCard !== -1) {@get('/card-details/' + $selectedCard)}"
-			data-show="$selectedCard !== -1"
+			data-signals:selected-card="{new:-1, old:-1}"
+			data-effect="
+				if(@peek(() => $selectedCard.old) !== -1) {
+					const cardRow = document.querySelector('tr#card-'+ $selectedCard.old);
+					cardRow.classList.remove('selected');
+				}
+				if($selectedCard.new !== -1) {
+					const cardRow = document.querySelector('tr#card-'+ $selectedCard.new);
+					cardRow.classList.add('selected');
+					@get('/card-details/' + $selectedCard.new)
+				}
+				$selectedCard.old = $selectedCard.new;
+			"
+			data-show="$selectedCard.new !== -1"
 		>
 		</section>
 		%{filterBar}
@@ -92,7 +103,7 @@
 		</dialog>
 	</article>
 	<button data-pos="absolute top right" data-variant="gold"
-		data-on:click="$selectedCard = -1"
+		data-on:click="$selectedCard.new = -1"
 	>close</button>
 </template>
 
@@ -100,8 +111,8 @@
 	<li class="grid" data-flex="col">
 		<span class="card-idx">%{index}</span>
 		<button class="card-version" data-variant="glass"
-			data-on:click="$selectedCard = %{id: number}"
-			data-class:selected="$selectedCard === %{id}"
+			data-on:click="$selectedCard.new = %{id: number}"
+			data-class:selected="$selectedCard.new === %{id}"
 		>%{version}</button>
 		<span>Rarity: %{rarityString}<img class="icon"
 			src="icons/rarity/%{rarityName}.avif"
@@ -163,19 +174,7 @@
 		const cardButton = evt.target.closest('button.card-name');
 		if(cardButton) {
 			const id = Number(cardButton.dataset.cardId);
-			const cardRow = cardButton.closest('tr#card-' + id);
-			if($selectedCard === id) {
-				$selectedCard = -1;
-				cardRow.classList.remove('selected');
-			}
-			else {
-				if($selectedCard !== -1) {
-					const selectedCardRow = document.querySelector('tr#card-'+$selectedCard);
-					selectedCardRow.classList.remove('selected');
-				}
-				cardRow.classList.add('selected');
-				$selectedCard = id;
-			}
+			$selectedCard.new = $selectedCard.new === id ? -1 : id;
 		}
 	">%{rows}</tbody>
 </template>
