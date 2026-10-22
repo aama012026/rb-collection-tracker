@@ -6,7 +6,7 @@ import { queryCards, queryShorthands} from "../query"
 import { makeCardsTableBody } from "../../../gen/HTMLtemplates"
 import { getCardTableRowHtml } from "../rbmlHtmlRenderer"
 
-const CHUNK_SIZE = 100
+const CHUNK_SIZE = 50
 const PREFERRED_ENCODING: Encoding[] = ['br','gzip']
 async function* streamCardRows(rows: string[]) {
 	if(rows.length === 0) {
