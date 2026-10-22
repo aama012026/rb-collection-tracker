@@ -1080,7 +1080,7 @@ article.card {
 		& > .popup {
 			box-sizing: border-box;
 			position: absolute;
-			bottom: calc(100% + var(--gap-rel-m));
+			bottom: calc(100% + var(--gap-rel-r));
 			width: 50vw;
 			max-width: max-content;
 			background: color-mix(in oklab, var(--crd-blue) 90%, transparent);
