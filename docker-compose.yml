@@ -1,0 +1,62 @@
+x-app: &app
+  build: .
+  image: rb-collection-tracker
+
+services:
+  db:
+    image: mariadb:lts
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: ${DB_NAME}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASS}
+      MARIADB_USER: ${DB_MIGRATE_USER}
+      MARIADB_PASSWORD: ${DB_MIGRATE_PASS}
+    volumes:
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  migrate:
+    <<: *app
+    command: ["bun", "run", "migrate"]
+    depends_on: {db: {condition: service_healthy}}
+    environment:
+      DB_HOST: db
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_ROOT_PASS: ${DB_ROOT_PASS}
+      DB_MIGRATE_USER: ${DB_MIGRATE_USER}
+      DB_MIGRATE_PASS: ${DB_MIGRATE_PASS}
+
+      DB_SERVER_USER: ${DB_SERVER_USER}
+      DB_SERVER_PASS: ${DB_SERVER_PASS}
+      DB_UPDATE_USER: ${DB_UPDATE_USER}
+      DB_UPDATE_PASS: ${DB_UPDATE_PASS}
+  update:
+    <<: *app
+    command: ["bun", "run", "update"]
+    restart: on-failure
+    depends_on: {migrate: {condition: service_completed_successfully}}
+    environment:
+      DB_HOST: db
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_UPDATE_USER: ${DB_UPDATE_USER}
+      DB_UPDATE_PASS: ${DB_UPDATE_PASS}
+  server:
+    <<: *app
+    command: ["bun", "run", "server"]
+    restart: on-failure
+    depends_on: {migrate: {condition: service_completed_successfully}}
+    environment:
+      DB_HOST: db
+      DB_PORT: ${DB_PORT}
+      DB_NAME: ${DB_NAME}
+      DB_SERVER_USER: ${DB_SERVER_USER}
+      DB_SERVER_PASS: ${DB_SERVER_PASS}
+    ports: ["127.0.0.1:3005:3000"] # loopback to avoid firewall punchthrough
+
+volumes:
+  db-data:

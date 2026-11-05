@@ -6,7 +6,7 @@ import createTables from "../schema/createTables";
 import seedTables from "../schema/seedDB";
 import { mockData } from "../../sets";
 import createViews from "../schema/createViews";
-import generateTableInterfaces from "./generateTableTypes";
+import generateTableTypes from "./generateTableTypes";
 import { artists } from "../data/artists";
 
 const {DB_ADMIN_USER, DB_ADMIN_PASS, DB_HOST, DB_PORT} = process.env
@@ -99,7 +99,7 @@ prettyPrint(`Cards in dataset: ${
 	mockData.reduce((cardCount, set) => cardCount + set.cards.length, 0)
 }`)
 
-await generateTableInterfaces(sql,
+await generateTableTypes(sql,
 	'metadata',
 	'rarities',
 	'sets',

@@ -1,21 +1,20 @@
 import { SQL } from "bun"
 import { makeCardDetails, makeCardsTableBody, makeCardTable, makeCardVersion, makeCollectionPage, makeCycleButton, makeFilterBar, makePopupMenu, makeStickySort } from "./gen/HTMLtemplates"
-import type { Artists, CardDetails, CardDetailsRow, DomainsRow, SetsRow, TagsRow, TypesRow } from "./gen/dbTableInterfaces"
+import type { CardDetails, DomainsRow, SetsRow, TagsRow, TypesRow } from "./gen/dbTableInterfaces"
 import { testLexer } from "./src/modules/test"
 import { testParser } from "./testParser"
-import { getArtistLine, getCardTableRowHtml, getNameHtml } from "./src/modules/rbmlHtmlRenderer"
-import { once, patchElements, sseResponse} from "./src/modules/sse"
-import { queryCardArtists, queryShorthands} from "./src/modules/query"
+import { getCardTableRowHtml } from "./src/modules/rbmlHtmlRenderer"
+import { queryShorthands } from "./src/modules/query"
 import routeCards from "./src/modules/routes/routeCards"
 import routeCardDetails from "./src/modules/routes/routeCardDetails"
 
 const sql = new SQL({
 	adapter:'mariadb',
-	username:process.env.DB_APP_USER,
-	password:process.env.DB_APP_PASS,
+	username:process.env.DB_SERVER_USER,
+	password:process.env.DB_SERVER_PASS,
 	host:process.env.DB_HOST,
 	port:process.env.DB_PORT,
-	database:'riftbound',
+	database:process.env.DB_NAME,
 	bigint:true
 })
 await sql`USE riftbound`
@@ -40,8 +39,8 @@ const cardDetailsQueryDuration = Bun.nanoseconds() - cardDetailsQueryStart
 const shorthands = await queryShorthands(sql)
 
 // Test
-testLexer(cards)
-testParser(cards)
+// testLexer(cards)
+// testParser(cards)
 
 const cardMappingStart = Bun.nanoseconds()
 const cardRows = cards.map(c => getCardTableRowHtml(c, shorthands))
@@ -79,7 +78,7 @@ const collection = makeCollectionPage(makeCardTable({
 
 console.log(`Riftbound collection server version: 0.7`)
 const server = Bun.serve({
-	port: 3005,
+	port: 3000,
 	routes: {
 		'/': new Response(
 			collection, {headers: {'Content-Type': 'text/html; charset=utf-8'}}

@@ -7,8 +7,11 @@
 		"@types/bun": "latest"
 	},
 	"scripts": {
-		"build": "bun buildHTMLtemplates.ts && bun src/modules/defineDB.ts",
-		"dev": "bun buildHTMLtemplates.ts && bun server.ts"
+		"dev": "bun buildHTMLtemplates.ts && bun server.ts",
+		"build": "bun buildHTMLtemplates.ts",
+		"migrate":"bun src/modules/services/migrate.ts",
+		"update": "bun src/modules/services/update.ts",
+		"server": "bun server.ts"
 	},
 	"peerDependencies": {
 		"typescript": "^5"

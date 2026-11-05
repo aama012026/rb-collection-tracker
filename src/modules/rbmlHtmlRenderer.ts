@@ -13,8 +13,8 @@ import stringify from "./stringify";
 export function getCardTableRowHtml(
 	c:CardDetailsRow, symbolLookup:Shorthands
 ): string {
-	const tags = c.tags ? JSON.parse(c.tags) as [number, string][] : []
-	const types = c.types ? JSON.parse(c.types) as [number, string][] : []
+	const tags = c.tags ? c.tags as unknown as [number, string][] : []
+	const types = c.types ? c.types as unknown as [number, string][] : []
 	const html = makeCardTableRow({
 		cardId: c.id,
 		cardIndex: c.riot_id.split('-')[1]!.split('/')[0]!,
