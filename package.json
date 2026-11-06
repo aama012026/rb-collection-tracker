@@ -9,11 +9,11 @@
 	"scripts": {
 		"dev": "bun buildHTMLtemplates.ts && bun server.ts",
 		"build": "bun buildHTMLtemplates.ts",
-		"migrate":"bun src/modules/services/migrate.ts",
+		"migrate": "bun src/modules/services/migrate.ts",
 		"update": "bun src/modules/services/update.ts",
 		"server": "bun server.ts"
 	},
 	"peerDependencies": {
-		"typescript": "^5"
+		"typescript": "^5.9.3"
 	}
 }

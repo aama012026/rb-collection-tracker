@@ -94,14 +94,7 @@ const server = Bun.serve({
 				return Response.json({message: `Could not find font: ${fontName}`})
 			}
 		},
-		'/*': (request) => {
-			try {
-				return new Response(Bun.file(`./assets/${new URL(request.url).pathname}`))
-			}
-			catch {
-				return Response.json({message: "Not found"}, {status: 404})
-			}
-		}
+		'/*': {dir: './assets'}
 	}
 })
 console.log(`Listening on ${server.url}`)
