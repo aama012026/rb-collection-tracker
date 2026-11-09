@@ -17,7 +17,31 @@ type Other = {name:'OTHER', value: string}
 export type Token = OpenBracket|CloseBracket|OpenParen|CloseParen
 |Associator|Plus|Hyphen|Infix|Comma|Dot|Word|NumberLiteral|Space|Other|NewLine
 
-const regex = /(?<gt>>)|(?<num>\d+)|(?<word>[a-zA-Z_]+(\-[a-zA-Z]+)*)|(?<openBracket>\[)|(?<closeBracket>\])|(?<openParen>\()|(?<closeParen>\))|(?<newline>\n)|(?<plus>\+)|(?<hyphen>\-)|(?<infix> [\-–—] |: )|(?<comma>,)|(?<dot>\.)|(?<space> +)|(?<other>[\s\S])/y
+const tokens = {
+  gt:           />/,
+  num:          /\d+/,
+  word:         /[a-zA-Z_]+(?:-[a-zA-Z]+)*/,
+  openBracket:  /\[/,
+  closeBracket: /\]/,
+  openParen:    /\(/,
+  closeParen:   /\)/,
+  newline:      /\n/,
+  plus:         /\+/,
+  hyphen:       /-/,
+  infix:        / [\-–—] |: /,
+  comma:        /,/,
+  dot:          /\./,
+  space:        / +/,
+  other:        /[\s\S]/,
+} as const;
+
+const regex = new RegExp(
+  Object.entries(tokens)
+    .map(([name, re]) => `(?<${name}>${re.source})`)
+    .join("|"),
+  "y",
+);
+
 export function tokenize(input: string): Token[] {
 	const tokens: Token[] = []
 	regex.lastIndex = 0
